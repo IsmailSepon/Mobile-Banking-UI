@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.retrofit;
+package com.cloudwell.paywell.consumer.network;
 
 import java.io.IOException;
 

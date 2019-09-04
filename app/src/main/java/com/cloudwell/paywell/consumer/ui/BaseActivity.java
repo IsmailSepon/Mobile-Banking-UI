@@ -7,9 +7,6 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
@@ -19,10 +16,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.cloudwell.paywell.consumer.R;
 import com.cloudwell.paywell.consumer.appController.AllConstant;
-import com.cloudwell.paywell.consumer.appController.AppController;
 import com.cloudwell.paywell.consumer.utils.ConnectionDetector;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.Locale;
 
@@ -39,7 +39,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         isFlowFromFavorite = getIntent().getBooleanExtra(AllConstant.IS_FLOW_FROM_FAVORITE, false);
-        mCd = new ConnectionDetector(AppController.getContext());
+//        mCd = new ConnectionDetector(AppController.getContext());
     }
 
     public void setToolbar(String title, int color) {
@@ -95,7 +95,7 @@ public class BaseActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
 //        if (isFlowFromFavorite){
-//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
 //            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 //            startActivity(intent);
 //            return;

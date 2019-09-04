@@ -1,4 +1,17 @@
-package com.cloudwell.paywell.consumer.retrofit;
+package com.cloudwell.paywell.consumer.network
+
+import com.cloudwell.paywell.consumer.BuildConfig
+import com.cloudwell.paywell.consumer.network.interceptor.NetworkConnectionInterceptor
+import com.cloudwell.paywell.consumer.ui.auth.model.UserLoginResponse
+import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
+import retrofit2.http.POST
 
 
 /**
@@ -260,6 +273,39 @@ public interface APIService {
 //                                              @Field("customerGender") String customerGender,
 //                                              @Field("password") String password);
 
+
+
+    companion object{
+        operator fun invoke(networkConnectionInterceptor: NetworkConnectionInterceptor
+        ) : APIService{
+
+            val okkHttpclient = OkHttpClient.Builder()
+                .addInterceptor(networkConnectionInterceptor)
+
+            if (BuildConfig.DEBUG) {
+                val logging = HttpLoggingInterceptor()
+                logging.setLevel(HttpLoggingInterceptor.Level.BODY)
+                okkHttpclient.addInterceptor(logging)
+                okkHttpclient.addInterceptor(OkHttpProfilerInterceptor())
+            }
+
+
+            return Retrofit.Builder()
+                .client(okkHttpclient.build())
+                .baseUrl("https://api.simplifiedcoding.in/course-apis/mvvm/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(APIService::class.java)
+        }
+    }
+
+
+    @FormUrlEncoded
+    @POST("login")
+    suspend fun userLogin(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ) : Response<UserLoginResponse>
+
+
 }
-
-

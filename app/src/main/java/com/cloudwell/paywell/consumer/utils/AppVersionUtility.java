@@ -12,7 +12,6 @@ import android.util.Log;
  */
 public class AppVersionUtility {
     private static final String KEY_LOG = AppVersionUtility.class.getName();
-    // TODO: 25/11/18 app release time update the version code
     private static final String LAST_APP_VERSION = "36";
 
     public enum AppStart {
