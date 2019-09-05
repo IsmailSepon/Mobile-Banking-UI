@@ -2,7 +2,7 @@ package com.cloudwell.paywell.consumer.ui.auth.authViewModelFactory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.cloudwell.paywell.consumer.repository.UserRepository
+import com.cloudwell.paywell.consumer.data.repository.UserRepository
 import com.cloudwell.paywell.consumer.ui.auth.AuthViewModel
 
 /**

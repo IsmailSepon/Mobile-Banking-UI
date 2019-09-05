@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.network.interceptor
+package com.cloudwell.paywell.consumer.data.network.interceptor
 
 import android.content.Context
 import android.net.ConnectivityManager

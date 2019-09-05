@@ -1,11 +1,11 @@
 package com.cloudwell.paywell.consumer.appController
 
 import android.app.Application
-import com.cloudwell.paywell.consumer.db.entities.AppDatabase
-import com.cloudwell.paywell.consumer.network.APIService
-import com.cloudwell.paywell.consumer.network.interceptor.HeaderTokenInterceptor
-import com.cloudwell.paywell.consumer.network.interceptor.NetworkConnectionInterceptor
-import com.cloudwell.paywell.consumer.repository.UserRepository
+import com.cloudwell.paywell.consumer.data.db.AppDatabase
+import com.cloudwell.paywell.consumer.data.network.APIService
+import com.cloudwell.paywell.consumer.data.network.interceptor.HeaderTokenInterceptor
+import com.cloudwell.paywell.consumer.data.network.interceptor.NetworkConnectionInterceptor
+import com.cloudwell.paywell.consumer.data.repository.UserRepository
 import com.cloudwell.paywell.consumer.ui.auth.authViewModelFactory.AuthViewModelFactory
 import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
 import org.kodein.di.Kodein

@@ -1,9 +1,10 @@
-package com.cloudwell.paywell.consumer.db.entities
+package com.cloudwell.paywell.consumer.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.cloudwell.paywell.consumer.data.db.entities.User
 
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2019-09-03.
@@ -22,8 +23,12 @@ abstract class AppDatabase : RoomDatabase() {
         private var instance: AppDatabase? = null
         private val LOCK = Any()
 
-        operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
-            instance ?: buildDatabase(context).also {
+        operator fun invoke(context: Context) = instance
+            ?: synchronized(LOCK) {
+            instance
+                ?: buildDatabase(
+                    context
+                ).also {
                 instance = it
             }
         }

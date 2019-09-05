@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.network
+package com.cloudwell.paywell.consumer.data.network
 
 import com.cloudwell.paywell.consumer.utils.exception.ApiException
 import org.json.JSONException

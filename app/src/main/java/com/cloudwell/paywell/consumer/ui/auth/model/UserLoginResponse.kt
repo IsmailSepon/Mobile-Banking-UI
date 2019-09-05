@@ -1,6 +1,6 @@
 package com.cloudwell.paywell.consumer.ui.auth.model
 
-import com.cloudwell.paywell.consumer.db.entities.User
+import com.cloudwell.paywell.consumer.data.db.entities.User
 
 class UserLoginResponse {
     var userName:String= ""

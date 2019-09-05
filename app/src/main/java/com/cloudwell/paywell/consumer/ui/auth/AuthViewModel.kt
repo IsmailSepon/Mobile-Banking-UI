@@ -2,7 +2,7 @@ package com.cloudwell.paywell.consumer.ui.auth
 
 import android.view.View
 import androidx.lifecycle.ViewModel
-import com.cloudwell.paywell.consumer.repository.UserRepository
+import com.cloudwell.paywell.consumer.data.repository.UserRepository
 import com.cloudwell.paywell.consumer.ui.auth.view.IAuthViewListener.IAuthListener
 import com.cloudwell.paywell.consumer.utils.Coroutines
 import com.cloudwell.paywell.consumer.utils.exception.ApiException

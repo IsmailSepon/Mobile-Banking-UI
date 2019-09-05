@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.db.entities
+package com.cloudwell.paywell.consumer.data.db.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

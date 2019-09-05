@@ -1,9 +1,9 @@
-package com.cloudwell.paywell.consumer.repository
+package com.cloudwell.paywell.consumer.data.repository
 
-import com.cloudwell.paywell.consumer.db.entities.AppDatabase
-import com.cloudwell.paywell.consumer.db.entities.User
-import com.cloudwell.paywell.consumer.network.APIService
-import com.cloudwell.paywell.consumer.network.SafeApiRequest
+import com.cloudwell.paywell.consumer.data.db.AppDatabase
+import com.cloudwell.paywell.consumer.data.db.entities.User
+import com.cloudwell.paywell.consumer.data.network.APIService
+import com.cloudwell.paywell.consumer.data.network.SafeApiRequest
 import com.cloudwell.paywell.consumer.ui.auth.model.UserLoginResponse
 
 /**
@@ -11,7 +11,7 @@ import com.cloudwell.paywell.consumer.ui.auth.model.UserLoginResponse
  */
 class UserRepository(
     private val apiService: APIService,
-    private val db:AppDatabase
+    private val db: AppDatabase
 
 ) : SafeApiRequest() {
 

@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.network;
+package com.cloudwell.paywell.consumer.data.network;
 
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 7/29/18.

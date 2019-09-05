@@ -42,6 +42,9 @@ ext {
     rxJava = '2.1.6'
     kodein = '6.2.1'
 
+    security_version = "1.0.0-alpha02"
+
+
 
 }
 
@@ -109,4 +112,9 @@ dependencies {
 
     implementation "org.apache.commons:commons-lang3:3.8.1"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+    implementation "androidx.security:security-crypto:$security_version"
+
+    implementation 'com.orhanobut:hawk:2.0.1'
+
 }

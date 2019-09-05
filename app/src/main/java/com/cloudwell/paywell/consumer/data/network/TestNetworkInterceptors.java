@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.network;
+package com.cloudwell.paywell.consumer.data.network;
 
 import java.io.IOException;
 

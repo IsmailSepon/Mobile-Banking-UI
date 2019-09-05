@@ -1,7 +1,7 @@
-package com.cloudwell.paywell.consumer.network
+package com.cloudwell.paywell.consumer.data.network
 
 import com.cloudwell.paywell.consumer.BuildConfig
-import com.cloudwell.paywell.consumer.network.interceptor.NetworkConnectionInterceptor
+import com.cloudwell.paywell.consumer.data.network.interceptor.NetworkConnectionInterceptor
 import com.cloudwell.paywell.consumer.ui.auth.model.UserLoginResponse
 import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
 import okhttp3.OkHttpClient
