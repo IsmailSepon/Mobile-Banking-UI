@@ -113,7 +113,6 @@ dependencies {
     implementation "org.apache.commons:commons-lang3:3.8.1"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
 
-    implementation "androidx.security:security-crypto:$security_version"
 
     implementation 'com.orhanobut:hawk:2.0.1'
 
