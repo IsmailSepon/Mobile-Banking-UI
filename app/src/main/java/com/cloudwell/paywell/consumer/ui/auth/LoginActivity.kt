@@ -42,7 +42,7 @@ class LoginActivity : AppCompatActivity(), IAuthListener, KodeinAware {
         //showProgressDialog()
     }
 
-    override fun HiddenProgress() {
+    override fun hiddenProgress() {
 
         //dismissProgressDialog()
     }

@@ -24,7 +24,7 @@ class AuthViewModel(
         iAuthListener?.showProgress()
 
         if (userName.isEmpty() || password.isEmpty()) {
-            iAuthListener?.HiddenProgress()
+            iAuthListener?.hiddenProgress()
             iAuthListener?.onFailure("Invalid userName or password")
 
         }else{

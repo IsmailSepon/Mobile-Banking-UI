@@ -8,7 +8,8 @@ import com.cloudwell.paywell.consumer.ui.auth.model.UserLoginResponse;
 public interface IView {
     void noInternetConnectionFound();
     void showProgress();
-    void HiddenProgress();
+
+    void hiddenProgress();
     void onSuccess(UserLoginResponse userLoginResponse);
     void onFailure(String message);
 }

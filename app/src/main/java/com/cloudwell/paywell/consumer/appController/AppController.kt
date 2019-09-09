@@ -39,19 +39,4 @@ class AppController : Application(), KodeinAware {
 
 
 
-//    companion object {
-//
-//        private val APONA_LOHIT = "fonts/AponaLohit.ttf"
-//        private val OXYGEN_LIGHT = "fonts/Oxygen-Light.ttf"
-//        @get:Synchronized
-//        var instance: AppController? = null
-//            private set
-//        private val preference: SharedPreferences? = null
-//
-//        private val sPref: SharedPreferences? = null
-//        var context: AppController? = null
-//            private set
-//    }
-
-
 }
