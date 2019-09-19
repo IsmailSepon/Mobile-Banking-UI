@@ -17,4 +17,17 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+    <!--    custom-->
+    <style name="BanglaAppTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/apona_lohit</item>
+    </style>
+
+    <style name="EnglishAppTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/oxygen_light</item>
+    </style>
+
+
 </resources>

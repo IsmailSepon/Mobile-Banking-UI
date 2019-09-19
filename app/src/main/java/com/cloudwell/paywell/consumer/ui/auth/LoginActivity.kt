@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.consumer.R
+import com.cloudwell.paywell.consumer.base.customView.BusTicketStatusFragment
 import com.cloudwell.paywell.consumer.databinding.ActivityLoginBinding
 import com.cloudwell.paywell.consumer.ui.auth.authViewModelFactory.AuthViewModelFactory
 import com.cloudwell.paywell.consumer.ui.auth.model.UserLoginResponse
@@ -30,7 +31,9 @@ class LoginActivity : AppCompatActivity(), IAuthListener, KodeinAware {
         viewModel.iAuthListener= this
 
 
-
+        val t = BusTicketStatusFragment()
+        BusTicketStatusFragment.message = "test"
+        t.show(supportFragmentManager, "dialog")
 
 
        // setSupportActionBar(toolbar)

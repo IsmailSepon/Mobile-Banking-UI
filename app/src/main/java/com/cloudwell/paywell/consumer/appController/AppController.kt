@@ -37,6 +37,4 @@ class AppController : Application(), KodeinAware {
     }
 
 
-
-
 }
