@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "314784672818",
+    "firebase_url": "https://paywell-consumer.firebaseio.com",
+    "project_id": "paywell-consumer",
+    "storage_bucket": "paywell-consumer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314784672818:android:ab00f38180e3f1a428e02b",
+        "android_client_info": {
+          "package_name": "com.cloudwell.paywell.consumer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314784672818-7krroff23blorl1ntmpv1oqlko8rcgb0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cloudwell.paywell.consumer",
+            "certificate_hash": "737e1deaa4fc224f5153cae1a1d7434e1e9235dc"
+          }
+        },
+        {
+          "client_id": "314784672818-9rtije63o6s1o1lj7s9n1atj8hueenji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl_0q7-_faDLn67oNfH9VZ66izWs0XOx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314784672818-9rtije63o6s1o1lj7s9n1atj8hueenji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
