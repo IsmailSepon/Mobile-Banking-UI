@@ -1,5 +1,6 @@
 package com.cloudwell.paywell.consumer.base
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.text.Spannable
@@ -7,6 +8,7 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.MenuItem
+import android.view.Window
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
@@ -18,13 +20,14 @@ import com.cloudwell.paywell.consumer.appController.AppController
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2019-09-08.
  */
 open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener{
-
     val class_Name : String = this.javaClass.simpleName
 
         override fun onStart() {
                 super.onStart()
             LogOutTimerUtil.startLogoutTimer(this, this);
             Log.e(class_Name, "OnStart () &&& Starting timer");
+            //disable screenShoot..........
+            this.window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
         }
 
 
@@ -42,10 +45,6 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener{
         startActivity(intent)
 
     }
-
-
-
-
 
 
     fun setToolbar(title: String, color: Int) {
