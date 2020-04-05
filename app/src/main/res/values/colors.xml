@@ -6,4 +6,5 @@
     <color name="background">#FAFAFA</color>
     <color name="color_red">#E00201</color>
     <color name="white">#FFFFFF</color>
+    <color name="common_clr">#8ea0b6</color>
 </resources>

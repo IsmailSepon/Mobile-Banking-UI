@@ -1,6 +1,7 @@
 package com.cloudwell.paywell.consumer.appController
 
 import android.app.Application
+import com.cloudwell.paywell.consumer.base.ApplockManager
 import com.cloudwell.paywell.consumer.data.db.AppDatabase
 import com.cloudwell.paywell.consumer.data.network.APIService
 import com.cloudwell.paywell.consumer.data.network.interceptor.HeaderTokenInterceptor
@@ -52,5 +53,10 @@ class AppController : Application(), KodeinAware {
         })
     }
 
+
+
+     fun touch(){
+        ApplockManager.getInstance().updateTouch();
+    }
 
 }

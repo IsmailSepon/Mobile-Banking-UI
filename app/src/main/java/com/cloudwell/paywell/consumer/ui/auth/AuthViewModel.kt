@@ -1,6 +1,11 @@
 package com.cloudwell.paywell.consumer.ui.auth
 
+import android.content.Intent
+import android.util.Log
 import android.view.View
+import androidx.biometric.BiometricManager
+import com.cloudwell.paywell.consumer.activity.registation.FingerAuthActivity
+import com.cloudwell.paywell.consumer.activity.thirdActivity
 import com.cloudwell.paywell.consumer.base.BaseViewModel
 import com.cloudwell.paywell.consumer.data.repository.UserRepository
 import com.cloudwell.paywell.consumer.ui.auth.view.IAuthViewListener.IAuthListener
@@ -45,5 +50,31 @@ class AuthViewModel(
         }
     }
 
+    fun onSignupClick(view: View){
+        Intent(view.context, thirdActivity::class.java).also {
+            view.context.startActivity(it)
+        }
+    }
 
+
+    fun onFingerClick(view: View){
+
+        val biometricManager = BiometricManager.from(view.context)
+        when (biometricManager.canAuthenticate()) {
+            BiometricManager.BIOMETRIC_SUCCESS ->   // do success======
+                Intent(view.context, FingerAuthActivity::class.java).also {
+                    view.context.startActivity(it)
+                    Log.d("PayWell Consumer", "App can authenticate using biometrics.")
+                }
+            BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE ->
+                Log.e("PayWell Consumer", "No biometric features available on this device.")
+            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE ->
+                Log.e("PayWell Consumer", "Biometric features are currently unavailable.")
+            BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED ->
+                Log.e("PayWell Consumer", "The user hasn't associated " +
+                        "any biometric credentials with their account.")
+        }
+
+
+    }
 }

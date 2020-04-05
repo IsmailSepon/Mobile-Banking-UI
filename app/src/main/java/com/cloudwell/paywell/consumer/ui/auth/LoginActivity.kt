@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.consumer.R
+import com.cloudwell.paywell.consumer.base.BaseActivity
 import com.cloudwell.paywell.consumer.base.customView.BusTicketStatusFragment
 import com.cloudwell.paywell.consumer.databinding.ActivityLoginBinding
 import com.cloudwell.paywell.consumer.ui.auth.authViewModelFactory.AuthViewModelFactory
@@ -15,7 +16,7 @@ import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
 
-class LoginActivity : AppCompatActivity(), IAuthListener, KodeinAware {
+class LoginActivity : BaseActivity(), IAuthListener, KodeinAware {
 
     override val kodein by kodein()
     private val authViewModelFactory : AuthViewModelFactory by instance()
@@ -37,7 +38,6 @@ class LoginActivity : AppCompatActivity(), IAuthListener, KodeinAware {
 
 
        // setSupportActionBar(toolbar)
-
 
     }
 

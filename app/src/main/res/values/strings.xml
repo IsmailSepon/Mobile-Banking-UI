@@ -4,4 +4,5 @@
     <string name="loading_msg" />
     <string name="connection_error_msg">No Internet connection found</string>
     <string name="ok">OK</string>
+    <string name="sign_activity_name">SignupActivity</string>
 </resources>
