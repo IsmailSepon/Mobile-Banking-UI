@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_account">
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.cloudwell.paywell.consumer.activity.home.ui.account.AccountFragment"
+        android:label="Account" />
+
+    <fragment
+        android:id="@+id/navigation_budget"
+        android:name="com.cloudwell.paywell.consumer.activity.home.ui.dashboard.DashboardFragment"
+        android:label="Budget"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_pay"
+        android:name="com.cloudwell.paywell.consumer.activity.home.ui.notifications.NotificationsFragment"
+        android:label="Pay"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_cards"
+        android:name="com.cloudwell.paywell.consumer.activity.home.ui.notifications.NotificationsFragment"
+        android:label="Cards"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_control"
+        android:name="com.cloudwell.paywell.consumer.activity.home.ui.dashboard.DashboardFragment"
+        android:label="Control"
+        tools:layout="@layout/fragment_dashboard" />
+</navigation>

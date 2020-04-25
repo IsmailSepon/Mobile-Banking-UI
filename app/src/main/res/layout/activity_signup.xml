@@ -4,18 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".activity.registation.SignupActivity">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -28,25 +20,156 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/splash_logo" />
 
-    <TextView
-        android:textColor="@color/common_clr"
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
-        android:text="Country"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="login"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/round_btn"
+        android:elevation="5dp"
+        android:text="@string/continue_txt"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lost_access_to_your_number"
+        android:textAlignment="center"
+        android:textColor="@color/keypad_text_clr"
+        app:layout_constraintBottom_toTopOf="@+id/login_btn"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.932"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="40dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:textSize="12sp"
+                android:layout_marginStart="3dp"
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:textColor="@color/common_clr" />
+
+            <Spinner
+                android:id="@+id/country_code_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:background="@drawable/spinner_bg"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+
+            <ImageView
+                android:background="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrowspinner"
+                tools:ignore="ContentDescription" />
+
+<!--            <view-->
+<!--                android:background="@color/keypad_text_clr"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"/>-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight=".28"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/country_code_spinner"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:gravity="center"-->
+<!--                    android:spinnerMode="dropdown" />-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginRight="8dp"-->
+<!--                    android:src="@drawable/drop" />-->
+<!--                -->
+<!--            </RelativeLayout>-->
+
+
+
+            <!--            <Spinner-->
+<!--                android:background="@drawable/spinner_bg"-->
+<!--                android:spinnerMode="dropdown"-->
+<!--                android:id="@+id/country_code_spinner"-->
+<!--                style="@style/Base.Widget.AppCompat.Spinner.Underlined"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="12sp"
+                android:layout_marginStart="3dp"
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PhoneNumber"
+                android:visibility="invisible"
+                android:textColor="@color/colorPrimaryDark" />
+
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:ems="10"
+                android:hint="Enter your mobile number"
+                android:inputType="number"
+                android:textColorHint="#8ea0b6" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

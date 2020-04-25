@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.home.ui.home.HomeFragment">
+
+
+        <TextView
+            android:text="৳0.00"
+            android:textSize="26dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
+            android:id="@+id/homeBtnTopup"
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/p"
+            android:text="@string/add_money_btn"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/homeBtnUtility"
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/p"
+            android:text="@string/send_money"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <Button
+            android:id="@+id/homeBtnEticket"
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/p"
+            android:text="@string/request_money"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/p"
+            android:text="@string/add_money_btn"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/p"
+            android:text="@string/send_money"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <Button
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/p"
+            android:text="@string/request_money"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/p"
+            android:text="@string/add_money_btn"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/p"
+            android:text="@string/send_money"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <Button
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/p"
+            android:text="@string/request_money"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+<!--    <ss.com.bannerslider.Slider-->
+<!--        android:id="@+id/view_pager_auto"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_margin="24dp"-->
+<!--        android:visibility="visible"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtHeading"-->
+<!--        tools:layout_conversion_absoluteHeight="150dp"-->
+<!--        tools:layout_conversion_absoluteWidth="379dp" />-->
+
+</LinearLayout>

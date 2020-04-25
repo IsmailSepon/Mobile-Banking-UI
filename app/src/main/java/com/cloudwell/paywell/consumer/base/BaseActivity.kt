@@ -47,6 +47,7 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener{
     }
 
 
+
     fun setToolbar(title: String, color: Int) {
         assert(supportActionBar != null)
         if (supportActionBar != null) {

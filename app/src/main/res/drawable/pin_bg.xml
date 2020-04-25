@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Space contains text -->
+    <item android:state_focused="true" android:state_checked="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/colorPrimaryDark"/>
+            <size
+                android:width="120dp"
+                android:height="120dp"/>
+        </shape>
+    </item>
+
+    <item android:state_focused="true">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/darker_gray"/>
+            <size
+                android:width="120dp"
+                android:height="120dp"/>
+        </shape>
+    </item>
+    <!-- PinEntryEditText is not focused -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@android:color/darker_gray"/>
+            <size
+                android:width="120dp"
+                android:height="120dp"/>
+        </shape>
+    </item>
+</selector>

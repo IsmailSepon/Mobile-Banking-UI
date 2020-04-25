@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#00203F</color>
+    <color name="colorPrimaryDark">#F15A24</color>
     <color name="colorAccent">#D81B60</color>
     <color name="background">#FAFAFA</color>
     <color name="color_red">#E00201</color>
     <color name="white">#FFFFFF</color>
     <color name="common_clr">#8ea0b6</color>
+    <color name="keypad_text_clr">#00203f</color>
+    <color name="status_bar_clr">#f6f6f6</color>
+    <color name="black">#000</color>
+    <color name="text_link_clr">#0066CB</color>
+    <color name="transparent">#00000000</color>
 </resources>
