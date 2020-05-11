@@ -62,6 +62,15 @@
     <string name="and_what_s_your_primary_email">And what’s your primary email?</string>
     <string name="we_will_only_use_it_to_advise_you_for_any_important_change">We will only use it to advise you for any important change</string>
     <string name="top_up">Top up</string>
+    <string name="withdraw_cash">Withdraw cash</string>
+    <string name="bank_transfer">Bank transfer</string>
+    <string name="schedule_transfer">Schedule transfer</string>
+    <string name="linked_account_s">Linked account(s)</string>
+    <string name="statement">Statement</string>
+    <string name="control">Control</string>
+    <string name="cards">Cards</string>
+    <string name="pay">Pay</string>
+    <string name="budget">Budget</string>
 
 
 </resources>

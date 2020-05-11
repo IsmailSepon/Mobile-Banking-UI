@@ -10,6 +10,7 @@
 
 
         <TextView
+            android:layout_marginTop="10dp"
             android:text="৳0.00"
             android:textSize="26dp"
             android:layout_gravity="center_horizontal"
@@ -28,7 +29,7 @@
             android:id="@+id/homeBtnTopup"
             style="@style/HomeButton"
             android:layout_weight="1"
-            android:drawableTop="@drawable/p"
+            android:drawableTop="@drawable/add_money"
             android:text="@string/add_money_btn"
             android:textAllCaps="false"
             android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -39,7 +40,7 @@
             android:id="@+id/homeBtnUtility"
             style="@style/HomeButton"
             android:layout_weight="1"
-            android:drawableTop="@drawable/p"
+            android:drawableTop="@drawable/send_money"
             android:text="@string/send_money"
             android:textAllCaps="false"
             android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -49,7 +50,7 @@
             android:id="@+id/homeBtnEticket"
             style="@style/HomeButton"
             android:layout_weight="1"
-            android:drawableTop="@drawable/p"
+            android:drawableTop="@drawable/request_money"
             android:text="@string/request_money"
             android:textAllCaps="false"
             android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -66,8 +67,8 @@
         <Button
             style="@style/HomeButton"
             android:layout_weight="1"
-            android:drawableTop="@drawable/p"
-            android:text="@string/add_money_btn"
+            android:drawableTop="@drawable/cash_withdoaw"
+            android:text="@string/withdraw_cash"
             android:textAllCaps="false"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -76,8 +77,8 @@
             android:layout_marginRight="20dp"
             style="@style/HomeButton"
             android:layout_weight="1"
-            android:drawableTop="@drawable/p"
-            android:text="@string/send_money"
+            android:drawableTop="@drawable/bank_transfer"
+            android:text="@string/bank_transfer"
             android:textAllCaps="false"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -85,8 +86,8 @@
         <Button
             style="@style/HomeButton"
             android:layout_weight="1"
-            android:drawableTop="@drawable/p"
-            android:text="@string/request_money"
+            android:drawableTop="@drawable/schedule_transfer"
+            android:text="@string/schedule_transfer"
             android:textAllCaps="false"
             android:textAppearance="?android:attr/textAppearanceSmall" />
     </LinearLayout>
@@ -102,8 +103,8 @@
         <Button
             style="@style/HomeButton"
             android:layout_weight="1"
-            android:drawableTop="@drawable/p"
-            android:text="@string/add_money_btn"
+            android:drawableTop="@drawable/vault"
+            android:text="@string/vault"
             android:textAllCaps="false"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -112,8 +113,8 @@
             android:layout_marginRight="20dp"
             style="@style/HomeButton"
             android:layout_weight="1"
-            android:drawableTop="@drawable/p"
-            android:text="@string/send_money"
+            android:drawableTop="@drawable/linked_account"
+            android:text="@string/linked_account_s"
             android:textAllCaps="false"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -121,8 +122,8 @@
         <Button
             style="@style/HomeButton"
             android:layout_weight="1"
-            android:drawableTop="@drawable/p"
-            android:text="@string/request_money"
+            android:drawableTop="@drawable/statement"
+            android:text="@string/statement"
             android:textAllCaps="false"
             android:textAppearance="?android:attr/textAppearanceSmall" />
     </LinearLayout>
