@@ -46,7 +46,7 @@ public class Reg_three_Feg extends Fragment {
             @Override
             public void afterTextChanged(Editable s) {
 
-                if (etMobileOrRID.getText().length() == 4){
+                if (etMobileOrRID.getText().length() == 6){
                     RegistationMainActivity parent = (RegistationMainActivity) getActivity();
                     parent.setPagerFragment(3);
                 }

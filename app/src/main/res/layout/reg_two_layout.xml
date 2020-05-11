@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
-        android:text="@string/create_passcode"
+        android:text="@string/confirm_passcode"
         android:textAlignment="center"
         android:textColor="@color/keypad_text_clr"
         android:textSize="16sp"

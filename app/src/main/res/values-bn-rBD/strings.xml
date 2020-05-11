@@ -29,6 +29,7 @@
     <string name="ac_created">আপনার পেওয়েল অ্যাকাউন্ট তৈরি করা হয়েছে</string>
     <string name="done">সম্পন্ন</string>
     <string name="create_passcode">একটি পাসকোড তৈরি করুন</string>
+    <string name="confirm_passcode">পাসকোড নিশ্চিত করুন</string>
     <string name="paywell_account">আপনার পেওয়েল অ্যাকাউন্টের জন্য</string>
     <string name="type_document">ডকুমেন্ট ধরণ</string>
     <string name="pass_doc">আপনি বাংলাদেশে থাকেন তা প্রমাণ করে এমন নথি জমা দিন</string>
@@ -62,6 +63,6 @@
     <string name="postal_code">পোস্ট অফিসের নাম্বার</string>
     <string name="and_what_s_your_primary_email">এবং আপনার প্রাথমিক ইমেলটি কী?</string>
     <string name="we_will_only_use_it_to_advise_you_for_any_important_change">আমরা এটি কোনও গুরুত্বপূর্ণ পরিবর্তনের জন্য আপনাকে পরামর্শ দেওয়ার জন্যই ব্যবহার করব</string>
-
+    <string name="top_up">টপ আপ</string>
 
 </resources>

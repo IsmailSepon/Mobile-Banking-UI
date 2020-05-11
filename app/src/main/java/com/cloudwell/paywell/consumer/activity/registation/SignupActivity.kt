@@ -1,23 +1,14 @@
 package com.cloudwell.paywell.consumer.activity.registation
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.Paint
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.view.WindowManager
 import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.consumer.R
 import com.cloudwell.paywell.consumer.activity.home.MainHomeActivity
-import com.cloudwell.paywell.consumer.activity.login.CustomLoginActivity
-import com.cloudwell.paywell.consumer.base.ApplockManager
-import com.cloudwell.paywell.consumer.ui.auth.LoginActivity
 import kotlinx.android.synthetic.main.activity_signup.*
 
 
@@ -28,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_signup.*
 
 class SignupActivity : AppCompatActivity() {
 
-    var country = arrayOf("+088", "+9715", "+966", "+699", "+778")
+    var country = arrayOf("+880", "+9715", "+966", "+699", "+778")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

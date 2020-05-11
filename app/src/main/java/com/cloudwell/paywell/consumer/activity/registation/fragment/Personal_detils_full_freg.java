@@ -26,7 +26,7 @@ import java.util.ArrayList;
 public class Personal_detils_full_freg extends Fragment {
 
     EditText name_et, dateofbirth_et;
-    String[] country = { "India", "USA", "China", "Japan", "Other"};
+    String[] country = { "Select Country","Bangladesh","India", "USA", "China", "Japan", "Other"};
     String[] district = { "Dhaka", "Barisal"};
     String[] thana = { "Badda", "Kalabagan"};
     String[] city = { "Dhaka", "Barisal"};

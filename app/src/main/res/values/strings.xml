@@ -20,13 +20,14 @@
     <string name="btn_clear">Clear</string>
     <string name="btn_backspace">Back</string>
     <string name="btn_forgot">FORGOT?</string>
-    <string name="condition">by creating a passcode you agree to our terms condition and privacy policy</string>
+    <string name="condition">By Creating a passcode, you agree to our Terms &amp; Condition and Privacy Policy</string>
     <string name="add_money_btn">Add money</string>
     <string name="send_money">Send money</string>
     <string name="request_money">Request money</string>
     <string name="ac_created">Your PayWell account has been created</string>
     <string name="done">Done</string>
     <string name="create_passcode">Create a passcode</string>
+    <string name="confirm_passcode">Confirm a passcode</string>
     <string name="paywell_account">for your PayWell account</string>
     <string name="type_document">Type of Document</string>
     <string name="pass_doc">Submit document which proves that you live in Bangladesh</string>
@@ -53,13 +54,14 @@
     <string name="what_are_your_personal_details">What are your personal details?</string>
     <string name="what_s_your_home_address">What’s your home address</string>
     <string name="no_po_boxes_please">No PO Boxes, please</string>
-    <string name="present_address">Present Address</string>
+    <string name="present_address">Present Address </string>
     <string name="permanent_address">Permanent address</string>
     <string name="house_holding_no">House/Holding No.</string>
     <string name="village_road">Village/Road</string>
     <string name="postal_code">Postal code</string>
     <string name="and_what_s_your_primary_email">And what’s your primary email?</string>
     <string name="we_will_only_use_it_to_advise_you_for_any_important_change">We will only use it to advise you for any important change</string>
+    <string name="top_up">Top up</string>
 
 
 </resources>

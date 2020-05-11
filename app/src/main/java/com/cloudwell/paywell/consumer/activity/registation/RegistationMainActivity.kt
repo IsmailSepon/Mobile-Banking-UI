@@ -23,7 +23,6 @@ class RegistationMainActivity() : AppCompatActivity() {
         setContentView(R.layout.activity_registation_main)
 
 
-
         val adapter = ScreenSlidePagerAdapter(this)
         reg_view_pager.adapter = adapter
         reg_view_pager.setUserInputEnabled(false);
@@ -36,8 +35,6 @@ class RegistationMainActivity() : AppCompatActivity() {
                 val t = 100 / adapter.itemCount
                 val p = position + 1
                 registation_progressBar.progress = p*t
-                Toast.makeText(this@RegistationMainActivity, ""+p*t, Toast.LENGTH_SHORT).show()
-
 
             }
         })

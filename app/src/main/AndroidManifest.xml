@@ -17,8 +17,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
-        <activity android:name=".activity.registation.NID_verification.IdentyOptionActivity"></activity>
-        <activity android:name=".activity.registation.NID_verification.NIDfrontSecondActivity" />
+        <activity android:name=".activity.registation.NID_verification.IdentyOptionActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.registation.NID_verification.NIDfrontSecondActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.registation.NID_verification.NIDfrontsideActivity"
             android:parentActivityName=".activity.registation.NID_verification.DocumentSubmitActivity"
@@ -30,11 +32,16 @@
         <activity
             android:name=".activity.home.MainHomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.registation.PassportVerificationActivity" />
-        <activity android:name=".activity.registation.RegTopUpSecondActivity" />
-        <activity android:name=".activity.registation.RegTopUpActivity" />
-        <activity android:name=".activity.registation.AccountCreattionActivity" />
-        <activity android:name=".activity.registation.EmailVerificationActivity" />
+        <activity android:name=".activity.registation.PassportVerificationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.registation.RegTopUpSecondActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.registation.RegTopUpActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.registation.AccountCreattionActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.registation.EmailVerificationActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.registation.RegistationMainActivity"
             android:parentActivityName=".activity.registation.SignupActivity"

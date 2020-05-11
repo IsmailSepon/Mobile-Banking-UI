@@ -42,15 +42,17 @@ public class PinEntryEditText extends AppCompatEditText {
     };
 
     int[] mColors = new int[]{
-            Color.GREEN,
-            Color.BLACK,
-            Color.GRAY
+            Color.CYAN,
+            Color.BLUE,
+            Color.GRAY,
+
     };
 
     ColorStateList mColorStates = new ColorStateList(mStates, mColors);
 
     public PinEntryEditText(Context context) {
         super(context);
+
     }
 
     public PinEntryEditText(Context context, AttributeSet attrs) {
@@ -80,22 +82,22 @@ public class PinEntryEditText extends AppCompatEditText {
             context.getTheme().resolveAttribute(R.attr.colorControlActivated,
                     outValue, true);
             final int colorActivated = outValue.data;
-            mColors[0] = colorActivated;
+            mColors[0] = getResources().getColor(R.color.keypad_text_clr);
 
             context.getTheme().resolveAttribute(R.attr.colorPrimaryDark,
                     outValue, true);
             final int colorDark = outValue.data;
-            mColors[1] = colorDark;
+            mColors[1] = getResources().getColor(R.color.common_clr);
 
             context.getTheme().resolveAttribute(R.attr.colorControlHighlight,
                     outValue, true);
             final int colorHighlight = outValue.data;
-            mColors[2] = colorHighlight;
+            mColors[2] = getResources().getColor(R.color.keypad_text_clr);
         }
         setBackgroundResource(0);
         mSpace = multi * mSpace; //convert to pixels for our density
         mLineSpacing = multi * mLineSpacing; //convert to pixels for our density
-        mMaxLength = attrs.getAttributeIntValue(XML_NAMESPACE_ANDROID, "maxLength", 4);
+        mMaxLength = attrs.getAttributeIntValue(XML_NAMESPACE_ANDROID, "maxLength", 6);
         mNumChars = mMaxLength;
 
         //Disable copy paste
@@ -176,7 +178,7 @@ public class PinEntryEditText extends AppCompatEditText {
 
 
     private int getColorForState(int... states) {
-        return mColorStates.getColorForState(states, Color.GRAY);
+        return mColorStates.getColorForState(states, Color.CYAN);
     }
 
     /**
