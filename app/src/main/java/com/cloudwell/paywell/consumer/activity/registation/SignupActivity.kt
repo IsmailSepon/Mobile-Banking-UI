@@ -29,7 +29,7 @@ class SignupActivity : AppCompatActivity() {
         val aa: ArrayAdapter<*> =
             ArrayAdapter<Any?>(this, android.R.layout.simple_spinner_item, country)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        country_code_spinner.setAdapter(aa)
+        country_code_spinner.adapter = aa
 
         et_phone.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {}
@@ -39,13 +39,13 @@ class SignupActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             var phone : String = et_phone.text.toString()
                if (phone.length >= 4){
-                   login_btn.setBackgroundResource(R.drawable.round_btn_visable);
+                   login_btn.setBackgroundResource(R.drawable.round_btn_visable)
                    login_btn.setOnClickListener(View.OnClickListener {
                        finish()
                        startActivity(Intent(applicationContext, MainHomeActivity::class.java))
                    })
                }else{
-                   login_btn.setBackgroundResource(R.drawable.round_btn);
+                   login_btn.setBackgroundResource(R.drawable.round_btn)
                    //et_phone.setError("Input Field!")
                }
             }

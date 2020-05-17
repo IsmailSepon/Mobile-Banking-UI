@@ -18,7 +18,7 @@ class RegTopUpSecondActivity : AppCompatActivity() {
         amount_et.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
              if (amount_et.text.length == 3){
-                 reg_second_topup_btn.setBackgroundResource(R.drawable.round_btn_visable);
+                 reg_second_topup_btn.setBackgroundResource(R.drawable.round_btn_visable)
                  reg_second_topup_btn.setOnClickListener(object : View.OnClickListener{
                      override fun onClick(v: View?) {
                          startActivity(Intent(this@RegTopUpSecondActivity, PassportVerificationActivity::class.java))

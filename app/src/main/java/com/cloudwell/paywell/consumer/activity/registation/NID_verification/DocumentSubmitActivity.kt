@@ -21,12 +21,12 @@ class DocumentSubmitActivity : AppCompatActivity() {
 
         val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(this, android.R.layout.simple_spinner_item, country)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        country_spinner.setAdapter(aa)
+        country_spinner.adapter = aa
 
 
         val aa2: ArrayAdapter<*> = ArrayAdapter<Any?>(this, android.R.layout.simple_spinner_item, doc)
         aa2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        document_spinner.setAdapter(aa2)
+        document_spinner.adapter = aa2
 
 
         document_spinner?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{

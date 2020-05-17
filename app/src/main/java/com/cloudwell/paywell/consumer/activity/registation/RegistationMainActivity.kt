@@ -14,7 +14,7 @@ import com.cloudwell.paywell.consumer.activity.registation.fragment.*
 import kotlinx.android.synthetic.main.activity_registation_main.*
 
 
-class RegistationMainActivity() : AppCompatActivity() {
+class RegistationMainActivity : AppCompatActivity() {
 
     var pager: ViewPager2? = null
 
@@ -25,7 +25,7 @@ class RegistationMainActivity() : AppCompatActivity() {
 
         val adapter = ScreenSlidePagerAdapter(this)
         reg_view_pager.adapter = adapter
-        reg_view_pager.setUserInputEnabled(false);
+        reg_view_pager.isUserInputEnabled = false
 
         reg_view_pager.registerOnPageChangeCallback(object : OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
@@ -69,7 +69,7 @@ class RegistationMainActivity() : AppCompatActivity() {
     }
 
     fun setPagerFragment(a: Int) {
-        reg_view_pager.setCurrentItem(a)
+        reg_view_pager.currentItem = a
     }
 
 
