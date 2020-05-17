@@ -17,10 +17,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
-        <activity android:name=".activity.registation.NID_verification.IdentyOptionActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activity.registation.NID_verification.NIDfrontSecondActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.home.ui.beneficiary.BeneficeryHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.home.ui.send_money.SendMoneyHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.registation.NID_verification.IdentyOptionActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.registation.NID_verification.NIDfrontSecondActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.registation.NID_verification.NIDfrontsideActivity"
             android:parentActivityName=".activity.registation.NID_verification.DocumentSubmitActivity"
@@ -30,18 +38,23 @@
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="InnerclassSeparator" />
         <activity
-            android:name=".activity.home.MainHomeActivity"
+            android:name=".ui.home.MainHomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.registation.PassportVerificationActivity"
+        <activity
+            android:name=".activity.registation.PassportVerificationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.registation.RegTopUpSecondActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activity.registation.RegTopUpActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activity.registation.AccountCreattionActivity"
+        <activity
+            android:name=".activity.registation.RegTopUpSecondActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.registation.EmailVerificationActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.registation.RegTopUpActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.registation.AccountCreattionActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.registation.EmailVerificationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.registation.RegistationMainActivity"
             android:parentActivityName=".activity.registation.SignupActivity"
@@ -66,6 +79,10 @@
             android:name=".ui.auth.LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

@@ -71,6 +71,15 @@
     <string name="cards">Cards</string>
     <string name="pay">Pay</string>
     <string name="budget">Budget</string>
+    <string name="select_a_beneficiary">Select a beneficiary</string>
+    <string name="choose_transfer_type">Choose transfer type</string>
+    <string name="transfer_type">Transfer type</string>
+    <string name="to_myself">To myself</string>
+    <string name="to_another_person">To another person</string>
+    <string name="to_a_business">To a business</string>
+    <string name="to_a_credit_card">To a credit card</string>
+    <string name="beneficiary_first_name">Beneficiary first name</string>
+    <string name="beneficiary_last_name">Beneficiary last name</string>
 
 
 </resources>

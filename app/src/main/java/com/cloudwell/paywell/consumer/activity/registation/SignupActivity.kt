@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.consumer.R
-import com.cloudwell.paywell.consumer.activity.home.MainHomeActivity
+import com.cloudwell.paywell.consumer.ui.home.MainHomeActivity
 import kotlinx.android.synthetic.main.activity_signup.*
 
 

@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.home.ui.home.HomeFragment">
+    tools:context=".ui.home.ui.home.HomeFragment">
 
+    <data>
+
+        <variable
+            name="viewmode"
+            type="com.cloudwell.paywell.consumer.ui.home.ui.account.AccountViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <TextView
             android:layout_marginTop="10dp"
@@ -26,6 +34,7 @@
         android:weightSum="5">
 
         <Button
+            android:onClick="@{viewmode::sendMoney}"
             android:id="@+id/homeBtnTopup"
             style="@style/HomeButton"
             android:layout_weight="1"
@@ -35,9 +44,10 @@
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <Button
+            android:id="@+id/send"
+            android:onClick="@{viewmode::sendMoney}"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:id="@+id/homeBtnUtility"
             style="@style/HomeButton"
             android:layout_weight="1"
             android:drawableTop="@drawable/send_money"
@@ -145,5 +155,5 @@
 <!--        app:layout_constraintTop_toBottomOf="@+id/txtHeading"-->
 <!--        tools:layout_conversion_absoluteHeight="150dp"-->
 <!--        tools:layout_conversion_absoluteWidth="379dp" />-->
-
-</LinearLayout>
+    </LinearLayout>
+</layout>

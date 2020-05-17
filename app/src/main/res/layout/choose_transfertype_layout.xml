@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="chooseViewmodelXml"
+            type="com.cloudwell.paywell.consumer.ui.home.ui.beneficiary.ChooseTransferViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:id="@+id/textView26"
+            style="@style/medium_text_style"
+            android:layout_marginTop="70dp"
+            android:text="@string/choose_transfer_type"
+            android:textColor="@color/keypad_text_clr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView27"
+            style="@style/text_style"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/transfer_type"
+            android:textColor="@color/common_clr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+
+        <Button
+
+            android:id="@+id/transferBtn"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="76dp"
+            android:background="@drawable/round_btn_visable"
+            android:onClick="@{chooseViewmodelXml::transferSelectBtn}"
+            android:text="@string/continue_txt"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/transfertype_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27"
+            tools:ignore="MissingConstraints">
+
+            <RadioButton
+                android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
+                android:theme="@style/RadioButtonStyle"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/keypad_text_clr"
+                android:id="@+id/radiomyselt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/to_myself" />
+
+            <RadioButton
+                android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
+                android:theme="@style/RadioButtonStyle"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/keypad_text_clr"
+                android:id="@+id/radioanother_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_another_person" />
+
+            <RadioButton
+                android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
+                android:theme="@style/RadioButtonStyle"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/keypad_text_clr"
+                android:id="@+id/radio_business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_a_business" />
+
+            <RadioButton
+                android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
+                android:theme="@style/RadioButtonStyle"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/keypad_text_clr"
+                android:id="@+id/radio_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_a_credit_card" />
+
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
