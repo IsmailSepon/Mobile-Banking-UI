@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.consumer.R
 import com.cloudwell.paywell.consumer.databinding.AddaccountLayoutBinding
-import com.cloudwell.paywell.consumer.ui.home.ui.send_money.SendMoneyFragment
-import kotlinx.android.synthetic.main.addaccount_layout.*
-import kotlinx.android.synthetic.main.beneficery_done.*
+import com.cloudwell.paywell.consumer.ui.home.ui.sendMoney.SendMoneyFragment
 import kotlinx.android.synthetic.main.beneficery_done.view.*
 
 class BeneficeryDone : Fragment() {

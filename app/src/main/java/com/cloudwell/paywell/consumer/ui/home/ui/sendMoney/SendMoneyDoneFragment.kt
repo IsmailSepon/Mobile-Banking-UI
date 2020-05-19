@@ -1,15 +1,15 @@
-package com.cloudwell.paywell.consumer.ui.home.ui.send_money
+package com.cloudwell.paywell.consumer.ui.home.ui.sendMoney
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.NumberPicker
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.consumer.R
-import kotlinx.android.synthetic.main.send_money.view.*
+import com.cloudwell.paywell.consumer.databinding.AddaccountLayoutBinding
+import kotlinx.android.synthetic.main.send_money_done.view.*
 
-class SendMoneyFragment : Fragment() {
+class SendMoneyDoneFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -17,20 +17,9 @@ class SendMoneyFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.send_money, container, false)
+        val view = inflater.inflate(R.layout.send_money_done, container, false)
 
-        view.np.minValue = 0
-        val values = arrayOf("100", "200", "300", "500", "1000", "2000")
-        view.np.maxValue = values.size - 1
-        view.np.displayedValues = values
-        view.np.wrapSelectorWheel = true
-        view.np.setOnValueChangedListener(NumberPicker.OnValueChangeListener { picker, oldVal, newVal ->
-
-            view.textView29.text = values[newVal]
-
-        })
-
-        view.send_money_submit.setOnClickListener(View.OnClickListener {
+        view.send_money_done.setOnClickListener(View.OnClickListener {
             val done = SendMoneyDoneFragment()
             val manager = activity?.supportFragmentManager
             val transaction = manager?.beginTransaction()
@@ -48,5 +37,4 @@ class SendMoneyFragment : Fragment() {
 
         return view
     }
-
 }

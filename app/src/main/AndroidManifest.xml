@@ -21,20 +21,20 @@
             android:name=".ui.home.ui.beneficiary.BeneficeryHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.home.ui.send_money.SendMoneyHostActivity"
+            android:name=".ui.home.ui.sendMoney.SendMoneyHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.NID_verification.IdentyOptionActivity"
+            android:name=".activity.registation.nidVerification.IdentyOptionActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.NID_verification.NIDfrontSecondActivity"
+            android:name=".activity.registation.nidVerification.NIDfrontSecondActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.NID_verification.NIDfrontsideActivity"
-            android:parentActivityName=".activity.registation.NID_verification.DocumentSubmitActivity"
+            android:name=".activity.registation.nidVerification.NIDfrontsideActivity"
+            android:parentActivityName=".activity.registation.nidVerification.DocumentSubmitActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.NID_verification.DocumentSubmitActivity"
+            android:name=".activity.registation.nidVerification.DocumentSubmitActivity"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="InnerclassSeparator" />
         <activity

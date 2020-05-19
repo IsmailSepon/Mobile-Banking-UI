@@ -1,13 +1,9 @@
 package com.cloudwell.paywell.consumer.ui.home.ui.beneficiary
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProviders
+import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.consumer.R
-import com.cloudwell.paywell.consumer.databinding.ChooseTransfertypeLayoutBinding
-import kotlinx.android.synthetic.main.choose_transfertype_layout.*
+import com.cloudwell.paywell.consumer.utils.FragmentHelper
 
 class BeneficeryHostActivity : AppCompatActivity() {
 
@@ -15,13 +11,30 @@ class BeneficeryHostActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beneficery_host)
 
-        val beneficiaryFragment = ChooseTransferTypeFragment()
-        val manager = supportFragmentManager
-        val transaction = manager.beginTransaction()
-        transaction.replace(R.id.beneficery_host_container, beneficiaryFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+        val type: Int =
+            intent.getIntExtra(applicationContext.getString(R.string.beneficery_type), 0)
 
+        if (type == 1) {
+            FragmentHelper.replaceFragment(
+                ChooseTransferTypeFragment(),
+                supportFragmentManager,
+                R.id.beneficery_host_container
+            )
+        } else {
+
+            FragmentHelper.replaceFragment(
+                FindPayWellUserFrg(),
+                supportFragmentManager,
+                R.id.beneficery_host_container
+            )
+        }
+
+//        val beneficiaryFragment = ChooseTransferTypeFragment()
+//        val manager = supportFragmentManager
+//        val transaction = manager.beginTransaction()
+//        transaction.replace(R.id.beneficery_host_container, beneficiaryFragment)
+//        transaction.addToBackStack(null)
+//        transaction.commit()
 
 //        val binding :  ChooseTransfertypeLayoutBinding  = DataBindingUtil.setContentView(this, R.layout.choose_transfertype_layout)
 //        val viewModel = ViewModelProviders.of(this).get(ChooseTransferViewModel::class.java)

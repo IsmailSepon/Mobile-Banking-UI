@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.consumer.R
 import com.cloudwell.paywell.consumer.databinding.BenefuceryBottomSheetBinding
 import com.cloudwell.paywell.consumer.databinding.FragmentBeneficiaryBinding
-import com.cloudwell.paywell.consumer.ui.home.ui.send_money.SendMoneyViewModel
+import com.cloudwell.paywell.consumer.ui.home.ui.sendMoney.SendMoneyViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class BottomSheetFragment : BottomSheetDialogFragment() {

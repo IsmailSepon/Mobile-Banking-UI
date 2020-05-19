@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.ui.home.ui.send_money
+package com.cloudwell.paywell.consumer.ui.home.ui.sendMoney
 
 
 import android.os.Bundle

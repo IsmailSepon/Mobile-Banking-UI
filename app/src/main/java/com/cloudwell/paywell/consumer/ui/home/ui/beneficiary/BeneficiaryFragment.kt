@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.consumer.R
 import com.cloudwell.paywell.consumer.databinding.FragmentBeneficiaryBinding
-import com.cloudwell.paywell.consumer.ui.home.ui.send_money.SendMoneyViewModel
+import com.cloudwell.paywell.consumer.ui.home.ui.sendMoney.SendMoneyViewModel
 
 class BeneficiaryFragment : Fragment() {
 

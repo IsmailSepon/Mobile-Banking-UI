@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.activity.registation.NID_verification
+package com.cloudwell.paywell.consumer.activity.registation.nidVerification
 
 import android.content.Intent
 import android.os.Bundle

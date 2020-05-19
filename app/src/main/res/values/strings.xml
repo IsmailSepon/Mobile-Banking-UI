@@ -80,6 +80,8 @@
     <string name="to_a_credit_card">To a credit card</string>
     <string name="beneficiary_first_name">Beneficiary first name</string>
     <string name="beneficiary_last_name">Beneficiary last name</string>
+    <string name="beneficery_type">beneficery_type</string>
+    <string name="find_paywell_user">Find PayWell user</string>
 
 
 </resources>

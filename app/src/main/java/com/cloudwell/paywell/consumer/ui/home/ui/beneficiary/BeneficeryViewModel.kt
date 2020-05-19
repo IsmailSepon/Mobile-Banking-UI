@@ -32,7 +32,7 @@ class BeneficeryViewModel : ViewModel() {
     }
 
 
-    fun findPayWellUser(view: View) {}
+
 
 
     fun transferSelectBtn(view: View) {
@@ -41,6 +41,10 @@ class BeneficeryViewModel : ViewModel() {
     }
 
     fun transferTypeRadiobtnSelected(view: View) {}
+    fun findPayWellUser(view: View) {}
+    fun getPaywellUser(view: View) {
+
+    }
 
 
 }

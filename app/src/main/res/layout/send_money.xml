@@ -44,26 +44,24 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--    <androidx.recyclerview.widget.RecyclerView-->
-    <!--        android:layout_marginTop="50dp"-->
-    <!--        android:orientation="horizontal"-->
-    <!--        android:id="@+id/rv_horizontal_picker"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="40dp"-->
-    <!--        android:clipToPadding="false"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />-->
-
-
-    <NumberPicker
-        android:id="@+id/np"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
-        tools:ignore="MissingConstraints" />
+        android:id="@+id/rv_horizontal_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/polygon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_horizontal_picker" />
 
     <Button
         android:id="@+id/send_money_submit"

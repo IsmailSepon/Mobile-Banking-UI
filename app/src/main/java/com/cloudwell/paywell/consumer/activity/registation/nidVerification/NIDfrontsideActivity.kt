@@ -1,12 +1,9 @@
-package com.cloudwell.paywell.consumer.activity.registation.NID_verification
+package com.cloudwell.paywell.consumer.activity.registation.nidVerification
 
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.style.ForegroundColorSpan
 import android.view.View
 import androidx.annotation.RequiresApi
 import com.cloudwell.paywell.consumer.R

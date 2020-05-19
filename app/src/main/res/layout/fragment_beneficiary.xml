@@ -8,7 +8,7 @@
 
         <variable
             name="beneficeryViewModelxml"
-            type="com.cloudwell.paywell.consumer.ui.home.ui.send_money.SendMoneyViewModel" />
+            type="com.cloudwell.paywell.consumer.ui.home.ui.sendMoney.SendMoneyViewModel" />
 
         <!--        <variable-->
         <!--            name="beneficeryViewModelxml"-->

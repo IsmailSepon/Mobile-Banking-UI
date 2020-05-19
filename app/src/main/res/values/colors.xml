@@ -12,4 +12,5 @@
     <color name="black">#000</color>
     <color name="text_link_clr">#0066CB</color>
     <color name="transparent">#00000000</color>
+    <color name="recyclerview_title">#7e8996</color>
 </resources>
