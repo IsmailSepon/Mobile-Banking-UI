@@ -2,7 +2,6 @@ package com.cloudwell.paywell.consumer.data.network
 
 import com.cloudwell.paywell.consumer.BuildConfig
 import com.cloudwell.paywell.consumer.data.network.interceptor.NetworkConnectionInterceptor
-import com.cloudwell.paywell.consumer.ui.auth.model.UserLoginResponse
 import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -300,12 +299,6 @@ public interface APIService {
     }
 
 
-    @FormUrlEncoded
-    @POST("login")
-    suspend fun userLogin(
-        @Field("email") email: String,
-        @Field("password") password: String
-    ) : Response<UserLoginResponse>
 
 
 }

@@ -6,10 +6,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModel
 import com.cloudwell.paywell.consumer.R
+import com.cloudwell.paywell.consumer.data.repository.UserRepository
 import com.cloudwell.paywell.consumer.ui.home.ui.beneficiary.BeneficeryHostActivity
 import com.cloudwell.paywell.consumer.ui.home.ui.beneficiary.BottomSheetFragment
+import com.cloudwell.paywell.consumer.ui.home.ui.sendMoney.view.IsendMoneyVIew
 
-class SendMoneyViewModel : ViewModel() {
+class SendMoneyViewModel(val repository: UserRepository) : ViewModel() {
+
+    // var view: IsendMoneyVIew? = null
+    var mView: IsendMoneyVIew? = null
+
+
     val bottomSheetFragment = BottomSheetFragment()
     fun addBeneficery(view: View) {
         bottomSheetFragment.show(
@@ -23,18 +30,17 @@ class SendMoneyViewModel : ViewModel() {
     }
 
     fun addBankAccount(view: View) {
-        startActivity(view, 1)
+        mView?.startBeneficeryHostActivity(1)
+
     }
 
     fun findPayWellUser(view: View) {
-        startActivity(view, 2)
+        //startActivity(view, 2)
+        mView?.startBeneficeryHostActivity(2)
     }
 
-    fun startActivity(view: View, type: Int) {
-        val intent = Intent(view.context, BeneficeryHostActivity::class.java)
-        intent.putExtra(view.context.getString(R.string.beneficery_type), type)
-        view.context.startActivity(intent)
 
-
+    fun setView(view: IsendMoneyVIew) {
+        this.mView = view
     }
 }

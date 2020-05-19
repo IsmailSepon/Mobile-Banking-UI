@@ -1,0 +1,25 @@
+package com.cloudwell.paywell.consumer.base
+
+import androidx.fragment.app.Fragment
+
+class BaseFragment : Fragment(), IView {
+    override fun noInternetConnectionFound() {
+
+    }
+
+    override fun showProgress() {
+
+
+    }
+
+    override fun hiddenProgress() {
+
+    }
+
+
+    override fun onFailure(message: String?) {
+
+    }
+
+
+}

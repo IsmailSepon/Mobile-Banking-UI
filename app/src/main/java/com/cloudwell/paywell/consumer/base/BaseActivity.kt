@@ -19,7 +19,7 @@ import com.cloudwell.paywell.consumer.appController.AppController
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2019-09-08.
  */
-open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener{
+open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, IBaseView {
     val class_Name : String = this.javaClass.simpleName
 
         override fun onStart() {
@@ -104,7 +104,18 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener{
         return this.application as AppController
     }
 
+    override fun noInternetConnectionFound() {
 
+    }
+
+    override fun showProgress() {
+    }
+
+    override fun hiddenProgress() {
+    }
+
+    override fun onFailure(message: String?) {
+    }
 
 
 //    override fun onUserInteraction() {

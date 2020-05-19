@@ -7,7 +7,7 @@ import com.cloudwell.paywell.consumer.data.network.APIService
 import com.cloudwell.paywell.consumer.data.network.interceptor.HeaderTokenInterceptor
 import com.cloudwell.paywell.consumer.data.network.interceptor.NetworkConnectionInterceptor
 import com.cloudwell.paywell.consumer.data.repository.UserRepository
-import com.cloudwell.paywell.consumer.ui.auth.authViewModelFactory.AuthViewModelFactory
+import com.cloudwell.paywell.consumer.ui.home.ui.sendMoney.view.SendMoneyFactory
 import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
@@ -40,7 +40,7 @@ class AppController : Application(), KodeinAware {
         bind() from singleton { AppDatabase(instance()) }
         bind() from singleton { UserRepository(instance(), instance()) }
 
-        bind() from provider { AuthViewModelFactory(instance()) }
+        bind() from provider { SendMoneyFactory(instance()) }
     }
 
     private fun initilizationLogger() {
