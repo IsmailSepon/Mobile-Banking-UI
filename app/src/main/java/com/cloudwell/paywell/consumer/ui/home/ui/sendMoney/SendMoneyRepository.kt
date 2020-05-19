@@ -1,5 +1,7 @@
 package com.cloudwell.paywell.consumer.ui.home.ui.sendMoney
 
-class SendMoneyRepository {
+import com.cloudwell.paywell.consumer.data.repository.BaseRepository
+
+class SendMoneyRepository : BaseRepository() {
 
 }

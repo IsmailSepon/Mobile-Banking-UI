@@ -1,17 +1,13 @@
 package com.cloudwell.paywell.consumer.ui.home.ui.sendMoney
 
-import android.content.Intent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModel
-import com.cloudwell.paywell.consumer.R
-import com.cloudwell.paywell.consumer.data.repository.UserRepository
-import com.cloudwell.paywell.consumer.ui.home.ui.beneficiary.BeneficeryHostActivity
+import com.cloudwell.paywell.consumer.data.repository.BaseRepository
 import com.cloudwell.paywell.consumer.ui.home.ui.beneficiary.BottomSheetFragment
 import com.cloudwell.paywell.consumer.ui.home.ui.sendMoney.view.IsendMoneyVIew
 
-class SendMoneyViewModel(val repository: UserRepository) : ViewModel() {
+class SendMoneyViewModel(val repository: BaseRepository) : ViewModel() {
 
     // var view: IsendMoneyVIew? = null
     var mView: IsendMoneyVIew? = null
