@@ -18,10 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
         <activity
-            android:name=".ui.home.ui.beneficiary.BeneficeryHostActivity"
+            android:name=".ui.beneficiary.BeneficeryHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.home.ui.sendMoney.SendMoneyHostActivity"
+            android:name="com.cloudwell.paywell.consumer.ui.sendMoney.SendMoneyHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.registation.nidVerification.IdentyOptionActivity"

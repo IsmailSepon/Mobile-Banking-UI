@@ -6,10 +6,7 @@
 
         <variable
             name="bottomsheetModel"
-            type="com.cloudwell.paywell.consumer.ui.home.ui.sendMoney.SendMoneyViewModel" />
-        <!--        <variable-->
-        <!--            name="bottomsheetModel"-->
-        <!--            type="com.cloudwell.paywell.consumer.ui.home.ui.beneficiary.BeneficeryViewModel" />-->
+            type="com.cloudwell.paywell.consumer.ui.beneficiary.viewModel.BeneficeryViewModel" />
     </data>
 
     <LinearLayout

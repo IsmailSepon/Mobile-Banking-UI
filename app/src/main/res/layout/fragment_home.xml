@@ -2,13 +2,13 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.home.ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment">
 
     <data>
 
         <variable
             name="viewmode"
-            type="com.cloudwell.paywell.consumer.ui.home.ui.account.AccountViewModel" />
+            type="com.cloudwell.paywell.consumer.ui.account.AccountViewModel" />
     </data>
 
 

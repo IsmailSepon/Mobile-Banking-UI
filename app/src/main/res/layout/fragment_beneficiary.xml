@@ -8,11 +8,8 @@
 
         <variable
             name="beneficeryViewModelxml"
-            type="com.cloudwell.paywell.consumer.ui.home.ui.sendMoney.SendMoneyViewModel" />
+            type="com.cloudwell.paywell.consumer.ui.beneficiary.viewModel.BeneficeryViewModel" />
 
-        <!--        <variable-->
-        <!--            name="beneficeryViewModelxml"-->
-        <!--            type="com.cloudwell.paywell.consumer.ui.home.ui.beneficiary.BeneficeryViewModel" />-->
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
