@@ -47,9 +47,10 @@
 
     <Button
         android:id="@+id/email_verification_btn"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="72dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:textSize="15sp"
+        android:layout_marginBottom="80dp"
         android:background="@drawable/round_btn_visable"
         android:text="@string/add_money_btn"
         android:textAllCaps="false"
