@@ -84,6 +84,7 @@
     <string name="find_paywell_user">Find PayWell user</string>
     <string name="add_money">Add money</string>
     <string name="bdt">BDT</string>
+    <string name="add_a_new_beneficiary">Add a new beneficiary</string>
 
 
 </resources>
