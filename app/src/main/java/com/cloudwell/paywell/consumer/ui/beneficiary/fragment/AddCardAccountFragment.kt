@@ -19,7 +19,7 @@ class AddCardAccountFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.addcompanyaccount_layout, container, false)
+        val view = inflater.inflate(R.layout.addcardaccount_layout, container, false)
 
         view.address_btn.setOnClickListener(View.OnClickListener {
 

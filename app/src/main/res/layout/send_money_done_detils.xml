@@ -32,8 +32,9 @@
 
     <Button
         android:id="@+id/send_money_done"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:textSize="15sp"
         android:background="@drawable/round_btn_visable"
         android:text="@string/done"
         android:textAllCaps="false"
