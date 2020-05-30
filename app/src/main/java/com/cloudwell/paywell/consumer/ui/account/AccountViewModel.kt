@@ -4,6 +4,8 @@ import android.content.Intent
 import android.view.View
 import androidx.lifecycle.ViewModel
 import com.cloudwell.paywell.consumer.activity.registation.RegistationMainActivity
+import com.cloudwell.paywell.consumer.activity.registation.SignupActivity
+import com.cloudwell.paywell.consumer.ui.addMoney.AddMoneyHostActivity
 import com.cloudwell.paywell.consumer.ui.sendMoney.SendMoneyHostActivity
 
 class AccountViewModel : ViewModel() {
@@ -15,7 +17,13 @@ class AccountViewModel : ViewModel() {
     }
 
     fun addMoney(view: View) {
-        Intent(view.context, RegistationMainActivity::class.java).also {
+        Intent(view.context, AddMoneyHostActivity::class.java).also {
+            view.context.startActivity(it)
+        }
+    }
+
+    fun requestMoney(view: View) {
+        Intent(view.context, SignupActivity::class.java).also {
             view.context.startActivity(it)
         }
     }

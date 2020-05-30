@@ -34,7 +34,7 @@
         android:weightSum="5">
 
         <Button
-            android:onClick="@{viewmode::sendMoney}"
+            android:onClick="@{viewmode::addMoney}"
             android:id="@+id/homeBtnTopup"
             style="@style/HomeButton"
             android:layout_weight="1"
@@ -57,6 +57,7 @@
 
 
         <Button
+            android:onClick="@{viewmode::requestMoney}"
             android:id="@+id/homeBtnEticket"
             style="@style/HomeButton"
             android:layout_weight="1"

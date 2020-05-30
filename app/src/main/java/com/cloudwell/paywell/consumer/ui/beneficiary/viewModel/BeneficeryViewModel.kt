@@ -5,13 +5,16 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import com.cloudwell.paywell.consumer.ui.beneficiary.fragment.BottomSheetFragment
+import com.cloudwell.paywell.consumer.ui.beneficiary.view.IbeneficeryVIew
 import com.cloudwell.paywell.consumer.ui.sendMoney.view.IsendMoneyVIew
 import kotlinx.android.synthetic.main.choose_transfertype_layout.view.*
 
 
 class BeneficeryViewModel : ViewModel() {
 
-    var mView: IsendMoneyVIew? = null
+    var mView: IbeneficeryVIew? = null
+    //var mView: IsendMoneyVIew? = null
+
     fun addBeneficery(view: View) {
 
         val bottomSheetFragment = BottomSheetFragment()
@@ -47,7 +50,7 @@ class BeneficeryViewModel : ViewModel() {
     }
 
 
-    fun setView(view: IsendMoneyVIew) {
+    fun setView(view: IbeneficeryVIew) {
         this.mView = view
     }
 

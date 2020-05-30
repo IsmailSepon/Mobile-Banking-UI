@@ -42,7 +42,13 @@ class SignupActivity : AppCompatActivity() {
                    login_btn.setBackgroundResource(R.drawable.round_btn_visable)
                    login_btn.setOnClickListener(View.OnClickListener {
                        finish()
-                       startActivity(Intent(applicationContext, MainHomeActivity::class.java))
+                       //startActivity(Intent(applicationContext, MainHomeActivity::class.java))
+                       startActivity(
+                           Intent(
+                               applicationContext,
+                               RegistationMainActivity::class.java
+                           )
+                       )
                    })
                }else{
                    login_btn.setBackgroundResource(R.drawable.round_btn)

@@ -27,10 +27,10 @@ class BeneficiaryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        beneficeryViewModel =
-            ViewModelProviders.of(this).get(BeneficeryViewModel::class.java)
+        beneficeryViewModel = ViewModelProviders.of(this).get(BeneficeryViewModel::class.java)
         val binding: FragmentBeneficiaryBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_beneficiary, container, false)
+        //beneficeryViewModel.setView(this)
         binding.beneficeryViewModelxml = beneficeryViewModel
         binding.lifecycleOwner = this
 

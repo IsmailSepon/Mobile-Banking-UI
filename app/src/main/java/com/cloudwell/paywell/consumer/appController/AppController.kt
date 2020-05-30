@@ -6,6 +6,7 @@ import com.cloudwell.paywell.consumer.data.db.AppDatabase
 import com.cloudwell.paywell.consumer.data.network.APIService
 import com.cloudwell.paywell.consumer.data.network.interceptor.HeaderTokenInterceptor
 import com.cloudwell.paywell.consumer.data.network.interceptor.NetworkConnectionInterceptor
+import com.cloudwell.paywell.consumer.ui.addMoney.view.AddMoneyRepository
 import com.cloudwell.paywell.consumer.ui.sendMoney.view.SendMoneyRepository
 import com.cloudwell.paywell.consumer.ui.sendMoney.view.SendMoneyFactory
 import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
@@ -41,6 +42,12 @@ class AppController : Application(), KodeinAware {
 //        bind() from singleton { BaseRepository(instance(), instance()) }
         bind() from singleton {
             SendMoneyRepository(
+                instance(),
+                instance()
+            )
+        }
+        bind() from singleton {
+            AddMoneyRepository(
                 instance(),
                 instance()
             )

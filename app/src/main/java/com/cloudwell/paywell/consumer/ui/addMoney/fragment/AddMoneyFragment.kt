@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.ui.sendMoney.fragment
+package com.cloudwell.paywell.consumer.ui.addMoney.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,23 +11,25 @@ import com.cloudwell.paywell.consumer.R
 import com.example.nbtk.slider.ScreenUtils
 import com.example.nbtk.slider.SliderAdapter
 import com.example.nbtk.slider.SliderLayoutManager
+import kotlinx.android.synthetic.main.add_money.*
+import kotlinx.android.synthetic.main.add_money.view.*
 import kotlinx.android.synthetic.main.send_money.view.*
 
-class SendMoneyFragment : Fragment() {
+class AddMoneyFragment : Fragment() {
 
     private lateinit var rvHorizontalPicker: RecyclerView
     private lateinit var tvSelectedItem: TextView
 
-    // private val data = (1..10).toList().map { it.toString() } as ArrayList<String>
+    // private val data = (100..2000).toList().map { it.toString() } as ArrayList<String>
     private val data: ArrayList<String> = ArrayList()
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.send_money, container, false)
+        val view = inflater.inflate(R.layout.add_money, container, false)
+
         data.add("300")
         data.add("500")
         data.add("1000")
@@ -35,18 +37,22 @@ class SendMoneyFragment : Fragment() {
         data.add("2000")
         data.add("2500")
         data.add("3000")
+
         setTvSelectedItem(view)
         setHorizontalPicker(view)
 
-        view.send_money_submit.setOnClickListener(View.OnClickListener {
-            val done =
-                SendMoneyDoneFragment()
-            val manager = activity?.supportFragmentManager
-            val transaction = manager?.beginTransaction()
-            transaction?.replace(R.id.beneficery_host_container, done)
-            transaction?.addToBackStack(null)
-            transaction?.commit()
+        view.add_money_submit.setOnClickListener(View.OnClickListener {
+
         })
+
+//        view.send_money_submit.setOnClickListener(View.OnClickListener {
+//            val done = SendMoneyDoneFragment()
+//            val manager = activity?.supportFragmentManager
+//            val transaction = manager?.beginTransaction()
+//            transaction?.replace(R.id.beneficery_host_container, done)
+//            transaction?.addToBackStack(null)
+//            transaction?.commit()
+//        })
 
 //        beneficeryViewModel =
 //            ViewModelProviders.of(this).get(BeneficeryViewModel::class.java)

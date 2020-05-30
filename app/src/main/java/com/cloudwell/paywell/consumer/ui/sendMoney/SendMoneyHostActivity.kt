@@ -25,7 +25,7 @@ class SendMoneyHostActivity : BaseActivity(), IsendMoneyVIew, KodeinAware {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_send_money_host)
+        //setContentView(R.layout.activity_send_money_host)
 
         val binding: ActivitySendMoneyHostBinding =
             DataBindingUtil.setContentView(this, R.layout.activity_send_money_host)
@@ -34,8 +34,7 @@ class SendMoneyHostActivity : BaseActivity(), IsendMoneyVIew, KodeinAware {
         binding.viewModel = viewModel
 
 
-        val beneficiaryFragment =
-            BeneficiaryFragment()
+        val beneficiaryFragment = BeneficiaryFragment()
         val manager = supportFragmentManager
         val transaction = manager.beginTransaction()
         transaction.replace(R.id.send_money_container, beneficiaryFragment)
