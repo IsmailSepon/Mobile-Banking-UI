@@ -1,82 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/billViewLL"
             android:layout_width="match_parent"
-            android:layout_height="397dp"
+            android:layout_height="match_parent"
             android:layout_margin="10dp">
 
             <ImageView
                 android:layout_width="15dp"
                 android:layout_height="2dp"
+                android:layout_marginTop="152dp"
                 android:background="@color/keypad_text_clr"
-                app:layout_constraintBottom_toTopOf="@+id/etMobileOrRID"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintTop_toBottomOf="@+id/tvOtpMessage"
+                tools:ignore="MissingConstraints"
+                android:id="@+id/imageView34" />
 
             <com.cloudwell.paywell.consumer.activity.customview.PinEntryEditText
                 android:id="@+id/etMobileOrRID"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
-                android:layout_marginBottom="96dp"
                 android:background="@drawable/rect_text_edit"
+                android:backgroundTint="@color/keypad_text_clr"
                 android:cursorVisible="false"
                 android:digits="1234567890"
                 android:inputType="number"
                 android:maxLength="6"
-                android:backgroundTint="@color/keypad_text_clr"
                 android:textColor="@color/keypad_text_clr"
                 android:textCursorDrawable="@null"
                 android:textIsSelectable="false"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView34" />
 
             <TextView
                 android:id="@+id/otpVerificationTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="66dp"
                 android:padding="5dp"
                 android:text="Enter the 6-digit code"
                 android:textColor="@color/keypad_text_clr"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/tvOtpMessage"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvOtpMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="136dp"
+                android:layout_marginTop="4dp"
                 android:gravity="center"
                 android:padding="2dp"
                 android:text="We’ve sent it to +88001758712950"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/etMobileOrRID"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/otpVerificationTV" />
+
+            <TextView
+                android:id="@+id/textView65"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="93dp"
+                android:text="No verification code received?"
+                android:textColor="@color/keypad_text_clr"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etMobileOrRID"
+                app:layout_constraintVertical_bias="1.0" />
 
             <!--            <Button-->
             <!--                android:visibility="gone"-->
@@ -129,5 +136,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
-</ScrollView>
+

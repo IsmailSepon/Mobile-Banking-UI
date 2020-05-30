@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Full Name*"
+            android:text="Full name*"
             android:textColor="@color/common_clr"
             android:textSize="10sp"
             tools:ignore="MissingConstraints" />
@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/common_et_bg"
             android:ems="13"
-            android:hint="name"
+            android:hint="Name"
             android:inputType="textPersonName"
             android:textColor="@color/keypad_text_clr" />
 
@@ -96,18 +96,19 @@
 
     <Button
         android:id="@+id/nect_btn"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="244dp"
+        android:layout_marginBottom="80dp"
         android:background="@drawable/round_btn"
         android:elevation="5dp"
         android:text="@string/continue_txt"
         android:textAllCaps="false"
         android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

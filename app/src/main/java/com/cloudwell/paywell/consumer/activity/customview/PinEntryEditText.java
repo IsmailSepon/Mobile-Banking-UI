@@ -24,10 +24,10 @@ import com.cloudwell.paywell.consumer.R;
 public class PinEntryEditText extends AppCompatEditText {
     public static final String XML_NAMESPACE_ANDROID = "http://schemas.android.com/apk/res/android";
 
-    private float mSpace = 24; //24 dp by default, space between the lines
+    private float mSpace = 12; //24 dp by default, space between the lines
     private float mCharSize;
     private float mNumChars = 6;
-    private float mLineSpacing = 8; //8dp by default, height of the text from our lines
+    private float mLineSpacing = 4; //8dp by default, height of the text from our lines
     private int mMaxLength = 6;
 
     private OnClickListener mClickListener;
