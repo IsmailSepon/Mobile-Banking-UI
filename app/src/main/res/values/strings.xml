@@ -85,6 +85,7 @@
     <string name="add_money">Add money</string>
     <string name="bdt">BDT</string>
     <string name="add_a_new_beneficiary">Add a new beneficiary</string>
+    <string name="confirm">Confirm</string>
 
 
 </resources>

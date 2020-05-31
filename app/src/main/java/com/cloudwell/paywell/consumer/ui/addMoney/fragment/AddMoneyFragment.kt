@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.consumer.R
+import com.cloudwell.paywell.consumer.utils.FragmentHelper
 import com.example.nbtk.slider.ScreenUtils
 import com.example.nbtk.slider.SliderAdapter
 import com.example.nbtk.slider.SliderLayoutManager
@@ -45,14 +46,13 @@ class AddMoneyFragment : Fragment() {
 
         })
 
-//        view.send_money_submit.setOnClickListener(View.OnClickListener {
-//            val done = SendMoneyDoneFragment()
-//            val manager = activity?.supportFragmentManager
-//            val transaction = manager?.beginTransaction()
-//            transaction?.replace(R.id.beneficery_host_container, done)
-//            transaction?.addToBackStack(null)
-//            transaction?.commit()
-//        })
+        view.type_change.setOnClickListener(View.OnClickListener {
+            FragmentHelper.replaceFragment(
+                AddMoneySelectionFragment(),
+                activity?.supportFragmentManager,
+                R.id.add_money_container
+            )
+        })
 
 //        beneficeryViewModel =
 //            ViewModelProviders.of(this).get(BeneficeryViewModel::class.java)
