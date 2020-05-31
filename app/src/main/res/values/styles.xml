@@ -113,13 +113,7 @@
     </style>
 
 
-    <!--    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">-->
-    <!--        <item name="bottomSheetStyle">@style/AppModalStyle</item>-->
-    <!--    </style>-->
 
-    <!--    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">-->
-    <!--        <item name="android:background">@drawable/bottomsheet_bg</item>-->
-    <!--    </style>-->
 
     <style name="SheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
         <!--<item name="android:windowCloseOnTouchOutside">false</item>-->
@@ -130,6 +124,10 @@
         <item name="android:backgroundDimAmount">0.3</item>
         <item name="android:windowFrame">@null</item>
         <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="DatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
     </style>
 
 </resources>
