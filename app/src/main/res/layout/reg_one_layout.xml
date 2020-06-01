@@ -71,12 +71,27 @@
         app:pinCharacterSpacing="13dp"
         app:pinLineColors="@color/colorPrimaryDark" />
 
+    <com.cloudwell.paywell.consumer.base.CustomKeyboard
+        android:id="@+id/creat_pass_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/agrement_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <TextView
+        android:id="@+id/agrement_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="57dp"
         android:text="@string/condition"
         android:textAlignment="center"
         android:textColor="@color/keypad_text_clr"

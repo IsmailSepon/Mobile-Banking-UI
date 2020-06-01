@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
 
 import androidx.annotation.NonNull;
@@ -14,12 +16,13 @@ import androidx.fragment.app.Fragment;
 import com.alimuzaffar.lib.pin.PinEntryEditText;
 import com.cloudwell.paywell.consumer.R;
 import com.cloudwell.paywell.consumer.activity.registation.RegistationMainActivity;
+import com.cloudwell.paywell.consumer.base.CustomKeyboard;
 
 /**
  * Created by Sepon on 4/15/2020.
  */
 public class Reg_two_Feg extends Fragment {
-
+    CustomKeyboard keyboard;
     public static Reg_One_Feg newInstance() {
         return new Reg_One_Feg();
     }
@@ -29,15 +32,17 @@ public class Reg_two_Feg extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.reg_two_layout, container, false);
 
-
+        keyboard = view.findViewById(R.id.confirm_pass_keyboard);
         confirm_pin_et = view.findViewById(R.id.confirm_pin_et);
         confirm_pin_et.requestFocus();
+        InputConnection ic = confirm_pin_et.onCreateInputConnection(new EditorInfo());
+        keyboard.setInputConnection(ic);
         confirm_pin_et.post(new Runnable() {
             @Override
             public void run() {
                 confirm_pin_et.requestFocus();
                 InputMethodManager imgr = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                imgr.showSoftInput(confirm_pin_et, InputMethodManager.SHOW_IMPLICIT);
+                imgr.hideSoftInputFromWindow(confirm_pin_et.getWindowToken(), 0);
             }
         });
         if (confirm_pin_et != null) {
