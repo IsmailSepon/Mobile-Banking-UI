@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -21,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.cloudwell.paywell.consumer.R;
 import com.cloudwell.paywell.consumer.appController.AllConstant;
+import com.cloudwell.paywell.consumer.appController.AppController;
 import com.cloudwell.paywell.consumer.utils.ConnectionDetector;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -212,6 +214,23 @@ public class BaseActivity extends AppCompatActivity {
         builder.show();
 
     }
+
+    public AppController getApp() {
+        return (AppController) this.getApplication();
+    }
+
+    @Override
+    public void onUserInteraction() {
+        super.onUserInteraction();
+        getApp().touch();
+        Log.d("TAG", "User interaction to " + this.toString());
+    }
+
+//    override fun onUserInteraction() {
+//        super.onUserInteraction()
+//        getApp().touch()
+//        Log.d("TAG", "User interaction to $this")
+//    }
 
 }
 

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/white"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.login.CustomLoginActivity">
+
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:id="@+id/imageView"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/splash_logo" />
+
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:text="@string/create_passcode"
+        android:textColor="@color/keypad_text_clr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:text="@string/paywell_account"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <com.alimuzaffar.lib.pin.PinEntryEditText
+        android:id="@+id/creat_pin_et"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:inputType="number"
+        android:maxLength="4"
+        android:digits="1234567890"
+        android:textColor="@android:color/transparent"
+        android:textIsSelectable="false"
+        android:textSize="0px"
+        android:visibility="visible"
+        app:pinBackgroundDrawable="@drawable/pin_bg"
+        app:pinLineColors="@color/colorPrimaryDark"
+        app:pinBackgroundIsSquare="true"
+        app:pinCharacterSpacing="13dp" />
+
+<!--    <include layout="@layout/custom_keyboard" />-->
+</LinearLayout>

@@ -1,18 +1,53 @@
 package com.cloudwell.paywell.consumer.base
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.MenuItem
+import android.view.Window
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
+import com.cloudwell.paywell.consumer.activity.registation.SignupActivity
+import com.cloudwell.paywell.consumer.appController.AppController
+
 
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2019-09-08.
  */
-open class BaseActivity : AppCompatActivity() {
+open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, IBaseView {
+
+    val class_Name : String = this.javaClass.simpleName
+
+        override fun onStart() {
+                super.onStart()
+            LogOutTimerUtil.startLogoutTimer(this, this);
+            Log.e(class_Name, "OnStart () &&& Starting timer");
+            //disable screenShoot..........
+            this.window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
+        }
+
+
+    override fun onUserInteraction() {
+        super.onUserInteraction()
+        LogOutTimerUtil.startLogoutTimer(this, this)
+        Log.e(class_Name, "User interacting with screen")
+    }
+
+    override fun doLogout() {
+        Log.e(class_Name, "Time Out + log out")
+        val intent = Intent(this, SignupActivity::class.java)
+        finishAffinity();
+        this.finish()
+        startActivity(intent)
+
+    }
+
+
 
     fun setToolbar(title: String, color: Int) {
         assert(supportActionBar != null)
@@ -63,4 +98,30 @@ open class BaseActivity : AppCompatActivity() {
     fun hiddenSoftKeyboard() {
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
     }
+
+
+
+    open fun getApp(): AppController {
+        return this.application as AppController
+    }
+
+    override fun noInternetConnectionFound() {
+
+    }
+
+    override fun showProgress() {
+    }
+
+    override fun hiddenProgress() {
+    }
+
+    override fun onFailure(message: String?) {
+    }
+
+
+//    override fun onUserInteraction() {
+//        super.onUserInteraction()
+//        getApp().touch()
+//        Log.e("Tuch", "User interaction to $this")
+//    }
 }

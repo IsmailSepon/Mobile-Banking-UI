@@ -1,12 +1,14 @@
 package com.cloudwell.paywell.consumer.appController
 
 import android.app.Application
+import com.cloudwell.paywell.consumer.base.ApplockManager
 import com.cloudwell.paywell.consumer.data.db.AppDatabase
 import com.cloudwell.paywell.consumer.data.network.APIService
 import com.cloudwell.paywell.consumer.data.network.interceptor.HeaderTokenInterceptor
 import com.cloudwell.paywell.consumer.data.network.interceptor.NetworkConnectionInterceptor
-import com.cloudwell.paywell.consumer.data.repository.UserRepository
-import com.cloudwell.paywell.consumer.ui.auth.authViewModelFactory.AuthViewModelFactory
+import com.cloudwell.paywell.consumer.ui.addMoney.view.AddMoneyRepository
+import com.cloudwell.paywell.consumer.ui.sendMoney.view.SendMoneyRepository
+import com.cloudwell.paywell.consumer.ui.sendMoney.view.SendMoneyFactory
 import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
@@ -37,9 +39,21 @@ class AppController : Application(), KodeinAware {
         bind() from singleton { OkHttpProfilerInterceptor() }
         bind() from singleton { APIService(instance()) }
         bind() from singleton { AppDatabase(instance()) }
-        bind() from singleton { UserRepository(instance(), instance()) }
+//        bind() from singleton { BaseRepository(instance(), instance()) }
+        bind() from singleton {
+            SendMoneyRepository(
+                instance(),
+                instance()
+            )
+        }
+        bind() from singleton {
+            AddMoneyRepository(
+                instance(),
+                instance()
+            )
+        }
 
-        bind() from provider { AuthViewModelFactory(instance()) }
+        bind() from provider { SendMoneyFactory(instance()) }
     }
 
     private fun initilizationLogger() {
@@ -52,5 +66,10 @@ class AppController : Application(), KodeinAware {
         })
     }
 
+
+
+     fun touch(){
+        ApplockManager.getInstance().updateTouch();
+    }
 
 }

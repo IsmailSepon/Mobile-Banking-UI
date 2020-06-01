@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.HomeFragment">
+
+    <data>
+
+        <variable
+            name="viewmode"
+            type="com.cloudwell.paywell.consumer.ui.account.AccountViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="৳0.00"
+            android:textSize="26dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
+            android:onClick="@{viewmode::addMoney}"
+            android:id="@+id/homeBtnTopup"
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/add_money"
+            android:text="@string/add_money_btn"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/send"
+            android:onClick="@{viewmode::sendMoney}"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/send_money"
+            android:text="@string/send_money"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <Button
+            android:onClick="@{viewmode::requestMoney}"
+            android:id="@+id/homeBtnEticket"
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/request_money"
+            android:text="@string/request_money"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/cash_withdoaw"
+            android:text="@string/withdraw_cash"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/bank_transfer"
+            android:text="@string/bank_transfer"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <Button
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/schedule_transfer"
+            android:text="@string/schedule_transfer"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/vault"
+            android:text="@string/vault"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/linked_account"
+            android:text="@string/linked_account_s"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <Button
+            style="@style/HomeButton"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/statement"
+            android:text="@string/statement"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+<!--    <ss.com.bannerslider.Slider-->
+<!--        android:id="@+id/view_pager_auto"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_margin="24dp"-->
+<!--        android:visibility="visible"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtHeading"-->
+<!--        tools:layout_conversion_absoluteHeight="150dp"-->
+<!--        tools:layout_conversion_absoluteWidth="379dp" />-->
+    </LinearLayout>
+</layout>

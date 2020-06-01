@@ -16,4 +16,5 @@ open class BaseViewModel : ViewModel() {
             view?.onFailure(ex.message)
         }
     }
+
 }

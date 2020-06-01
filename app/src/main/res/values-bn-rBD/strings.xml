@@ -1,4 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Paywell Consumer</string>
+    <string name="action_settings">Settings</string>
+    <string name="loading_msg" />
+    <string name="connection_error_msg">No Internet connection found</string>
     <string name="ok">OK</string>
+    <string name="sign_activity_name">SignupActivity</string>
+
+    //Keybord
+    <string name="number_zero">0</string>
+    <string name="number_one">1</string>
+    <string name="number_two">2</string>
+    <string name="number_three">3</string>
+    <string name="number_four">4</string>
+    <string name="number_five">5</string>
+    <string name="number_six">6</string>
+    <string name="number_seven">7</string>
+    <string name="number_eight">8</string>
+    <string name="number_nine">9</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_backspace">Back</string>
+    <string name="btn_forgot">ভুলে গেছেন?</string>
+    <string name="condition">একটি পাসকোড তৈরি করে আপনি আমাদের শর্তাদি শর্ত এবং গোপনীয়তা নীতিতে সম্মত হন</string>
+
+    <string name="add_money_btn">অ্যাড মানি</string>
+    <string name="send_money">সেন্ড মানি</string>
+    <string name="request_money">রিকোয়েস্ট মানি</string>
+    <string name="ac_created">আপনার পেওয়েল অ্যাকাউন্ট তৈরি করা হয়েছে</string>
+    <string name="done">সম্পন্ন</string>
+    <string name="create_passcode">একটি পাসকোড তৈরি করুন</string>
+    <string name="confirm_passcode">পাসকোড নিশ্চিত করুন</string>
+    <string name="paywell_account">আপনার পেওয়েল অ্যাকাউন্টের জন্য</string>
+    <string name="type_document">ডকুমেন্ট ধরণ</string>
+    <string name="pass_doc">আপনি বাংলাদেশে থাকেন তা প্রমাণ করে এমন নথি জমা দিন</string>
+    <string name="continue_txt">চালান</string>
+    <string name="mail_sucss">ইমেল সফলভাবে যাচাই করা হয়েছে</string>
+    <string name="ac_secure">আপনার অ্যাকাউন্ট এখন আরও সুরক্ষিত</string>
+    <string name="nid_again">আপনার এনআইডি আবার যাচাই করুন</string>
+    <string name="retake_selfie">আবার নিজের সেলফি তুলুন</string>
+    <string name="my_details_are_captured_properly">আমার বিবরণ সঠিকভাবে ক্যাপচার করা হয়</string>
+    <string name="take_a_new_picture">একটি নতুন ছবি নিন</string>
+    <string name="pass_discription">প্রায় সেখানে! আমাদের সম্প্রদায়কে আর্থিক অপরাধের বিরুদ্ধে রক্ষা করতে আমাদের কেবল আপনার পরিচয় যাচাই করতে হবে। এটি কেবল এক বা দুই মিনিট সময় নেয়। আপনি এই যাচাইয়ের পরে যে কোনও একটিতে অর্থ স্থানান্তর করতে এবং কোনও পণ্য বা পরিষেবার জন্য অর্থ প্রদান করতে সক্ষম হবেন।</string>
+    <string name="verify_identity">পরিচয় যাচাই করুন</string>
+    <string name="top_up_your_account">আপনার অ্যাকাউন্টে ৫০০ টাকা বা আরও বেশি পরিমাণে শীর্ষ করুন</string>
+    <string name="topup_discription">আপনাকে অ্যাকাউন্ট দিয়ে দেওয়ার আগে, আপনাকে শীর্ষে রাখা দরকার। আপনি এই অর্থটি পরে ব্যয় করতে বা প্রত্যাহার করতে পারেন।</string>
+    <string name="lost_access_to_your_number">আপনার নম্বরটিতে অ্যাক্সেস হারিয়েছেন?</string>
+    <string name="personalise_your_dashboard">আপনার ড্যাশবোর্ডটি ব্যক্তিগতকৃত করুন</string>
+    <string name="add_or_remove_widgets_drag_to_reorder_make_it_truly_yours">উইজেটগুলি যুক্ত বা সরান। পুনর্বিন্যাস টেনে আনুন. এটি সত্যই আপনার করুন</string>
+    <string name="give_free_card">বিনামূল্যে কার্ড দিন</string>
+    <string name="account">একাউন্ট</string>
+    <string name="linked_accounts">লিংকড একাউন্টস</string>
+    <string name="vault">ভল্ট</string>
+    <string name="transactions">লেনদেন</string>
+    <string name="concierge">প্রহরী</string>
+    <string name="what_are_your_personal_details">আপনার ব্যক্তিগত বিবরণ কি?</string>
+    <string name="what_s_your_home_address">তোমার বাসার ঠিকানা কি</string>
+    <string name="no_po_boxes_please">দয়া করে কোনও পোস্ট অফিস না</string>
+    <string name="present_address">বর্তমান ঠিকানা</string>
+    <string name="permanent_address">স্থায়ী ঠিকানা</string>
+    <string name="house_holding_no">বাড়ি / হোল্ডিং নং</string>
+    <string name="village_road">গ্রাম / রোড</string>
+    <string name="postal_code">পোস্ট অফিসের নাম্বার</string>
+    <string name="and_what_s_your_primary_email">এবং আপনার প্রাথমিক ইমেলটি কী?</string>
+    <string name="we_will_only_use_it_to_advise_you_for_any_important_change">আমরা এটি কোনও গুরুত্বপূর্ণ পরিবর্তনের জন্য আপনাকে পরামর্শ দেওয়ার জন্যই ব্যবহার করব</string>
+    <string name="top_up">টপ আপ</string>
+
 </resources>
