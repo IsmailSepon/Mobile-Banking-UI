@@ -16,12 +16,5 @@ open class BaseViewModel : ViewModel() {
             view?.onFailure(ex.message)
         }
     }
-    public fun handleException(ex: Exception, view: IView?) {
-        if (ex is ApiException) {
-            view?.onFailure(ex.message)
-        } else if (ex is NoInternetException) {
-            view?.onFailure(ex.message)
-        }
-    }
 
 }
