@@ -95,6 +95,7 @@
 
 
         <Button
+            android:onClick="@{viewmode::scheduleTransfer}"
             style="@style/HomeButton"
             android:layout_weight="1"
             android:drawableTop="@drawable/schedule_transfer"

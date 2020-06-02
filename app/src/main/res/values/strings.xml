@@ -86,6 +86,11 @@
     <string name="bdt">BDT</string>
     <string name="add_a_new_beneficiary">Add a new beneficiary</string>
     <string name="confirm">Confirm</string>
+    <string name="add_note">Add note</string>
+    <string name="adjust">Adjust</string>
+    <string name="deactivate">Deactivate</string>
+    <string name="rename">Rename</string>
+    <string name="delete">Delete</string>
 
 
 </resources>

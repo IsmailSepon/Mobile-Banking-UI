@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.cloudwell.paywell.consumer.activity.registation.RegistationMainActivity
 import com.cloudwell.paywell.consumer.activity.registation.SignupActivity
 import com.cloudwell.paywell.consumer.ui.addMoney.AddMoneyHostActivity
+import com.cloudwell.paywell.consumer.ui.scheduled_Transfer.SchedulTransferHostActivity
 import com.cloudwell.paywell.consumer.ui.sendMoney.SendMoneyHostActivity
 
 class AccountViewModel : ViewModel() {
@@ -24,6 +25,12 @@ class AccountViewModel : ViewModel() {
 
     fun requestMoney(view: View) {
         Intent(view.context, SignupActivity::class.java).also {
+            view.context.startActivity(it)
+        }
+    }
+
+    fun scheduleTransfer(view: View) {
+        Intent(view.context, SchedulTransferHostActivity::class.java).also {
             view.context.startActivity(it)
         }
     }

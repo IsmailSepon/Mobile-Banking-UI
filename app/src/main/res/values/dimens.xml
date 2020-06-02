@@ -6,4 +6,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="normal_txt">15sp</dimen>
     <dimen name="keyboard_textsize">28sp</dimen>
+    <dimen name="half_one">1dp</dimen>
+    <dimen name="eight_dp">8dp</dimen>
+    <dimen name="fifteendp">15sp</dimen>
 </resources>
