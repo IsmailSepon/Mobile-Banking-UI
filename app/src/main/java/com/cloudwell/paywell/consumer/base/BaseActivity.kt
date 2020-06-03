@@ -1,6 +1,5 @@
 package com.cloudwell.paywell.consumer.base
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.text.Spannable
@@ -8,10 +7,10 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.MenuItem
-import android.view.Window
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import com.cloudwell.paywell.consumer.activity.registation.SignupActivity
 import com.cloudwell.paywell.consumer.appController.AppController
 
@@ -21,14 +20,18 @@ import com.cloudwell.paywell.consumer.appController.AppController
  */
 open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, IBaseView {
 
-    val class_Name : String = this.javaClass.simpleName
+    val class_Name: String = this.javaClass.simpleName
+    lateinit var viewModel: BaseViewModel
 
         override fun onStart() {
-                super.onStart()
-            LogOutTimerUtil.startLogoutTimer(this, this);
-            Log.e(class_Name, "OnStart () &&& Starting timer");
+            super.onStart()
+            LogOutTimerUtil.startLogoutTimer(this, this)
+            Log.e(class_Name, "OnStart () &&& Starting timer")
             //disable screenShoot..........
-            this.window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
+            this.window.setFlags(
+                WindowManager.LayoutParams.FLAG_SECURE,
+                WindowManager.LayoutParams.FLAG_SECURE
+            )
         }
 
 
@@ -41,7 +44,7 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, I
     override fun doLogout() {
         Log.e(class_Name, "Time Out + log out")
         val intent = Intent(this, SignupActivity::class.java)
-        finishAffinity();
+        finishAffinity()
         this.finish()
         startActivity(intent)
 
@@ -116,6 +119,18 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, I
     }
 
     override fun onFailure(message: String?) {
+    }
+
+
+    fun setViewModelObserver() {
+        viewModel.isShowProcessBar.observe(this, Observer {
+            if (it) {
+                showProgress()
+            } else {
+                hiddenProgress()
+            }
+        })
+
     }
 
 
