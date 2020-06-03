@@ -9,4 +9,5 @@
     <dimen name="half_one">1dp</dimen>
     <dimen name="eight_dp">8dp</dimen>
     <dimen name="fifteendp">15sp</dimen>
+    <dimen name="eleven_sp">11sp</dimen>
 </resources>

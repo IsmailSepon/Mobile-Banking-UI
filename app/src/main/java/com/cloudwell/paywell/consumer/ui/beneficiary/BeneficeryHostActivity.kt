@@ -8,13 +8,12 @@ import com.cloudwell.paywell.consumer.ui.beneficiary.fragment.FindPayWellUserFrg
 import com.cloudwell.paywell.consumer.utils.FragmentHelper
 
 class BeneficeryHostActivity : AppCompatActivity() {
-
+    var type: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_beneficery_host)
 
-        val type: Int =
-            intent.getIntExtra(applicationContext.getString(R.string.beneficery_type), 0)
+        type = intent.getIntExtra(applicationContext.getString(R.string.beneficery_type), 0)
 
         if (type == 1) {
             FragmentHelper.replaceFragment(
@@ -22,10 +21,16 @@ class BeneficeryHostActivity : AppCompatActivity() {
                 supportFragmentManager,
                 R.id.beneficery_host_container
             )
-        } else {
+        } else if (type == 2) {
 
             FragmentHelper.replaceFragment(
                 FindPayWellUserFrg(),
+                supportFragmentManager,
+                R.id.beneficery_host_container
+            )
+        } else if (type == 3) {
+            FragmentHelper.replaceFragment(
+                ChooseTransferTypeFragment(),
                 supportFragmentManager,
                 R.id.beneficery_host_container
             )

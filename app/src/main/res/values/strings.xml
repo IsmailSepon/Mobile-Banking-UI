@@ -91,6 +91,14 @@
     <string name="deactivate">Deactivate</string>
     <string name="rename">Rename</string>
     <string name="delete">Delete</string>
+    <string name="repeat">Repeat</string>
+    <string name="every_day">Every day</string>
+    <string name="date">Date</string>
+    <string name="set">Set</string>
+    <string name="what_do_you_want_to_add">What do you want to add</string>
+    <string name="beneficery">Beneficiary</string>
+    <string name="contact">Contact</string>
+    <string name="cancel">Cancel</string>
 
 
 </resources>

@@ -69,7 +69,7 @@
         app:srcCompat="@drawable/add_beneficery" />
 
     <TextView
-        android:id="@+id/textView112"
+        android:id="@+id/addnewContact"
         style="@style/medium_text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
