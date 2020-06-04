@@ -10,51 +10,57 @@
         android:id="@+id/imageView43"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/back"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView76"
         style="@style/medium_text_style"
-        android:layout_width="200dp"
+        android:layout_width="@dimen/_200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
         android:text="You are adding   500 from BRAC Bank Ltd."
         android:textColor="@color/keypad_text_clr"
-        android:textSize="17sp"
+        android:textSize="@dimen/_17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView43" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19999999" />
 
     <ImageView
         android:id="@+id/imageView44"
-        android:layout_width="122dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="@dimen/_122dp"
+        android:layout_height="@dimen/_122dp"
+        app:layout_constraintBottom_toTopOf="@+id/bank_confirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView76"
-        app:srcCompat="@drawable/brack_selected" />
+        app:layout_constraintVertical_bias="0.100000024"
+        app:srcCompat="@drawable/brack_selected"
+        tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/bank_confirm"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:textSize="15sp"
-        android:layout_marginBottom="80dp"
+        android:layout_width="@dimen/_250dp"
+        android:layout_height="@dimen/_50dp"
         android:background="@drawable/round_btn_visable"
-        android:elevation="5dp"
+        android:elevation="@dimen/_5dp"
         android:text="@string/confirm"
         android:textAllCaps="false"
         android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89"
+        tools:targetApi="lollipop" />
 
 
     <TextView
@@ -62,10 +68,11 @@
         style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:text="Add note"
+        android:text="@string/add_note"
         android:textColor="@color/recyclerview_title"
+        app:layout_constraintBottom_toTopOf="@+id/bank_confirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView44" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView44"
+        app:layout_constraintVertical_bias="0.13999999" />
 </androidx.constraintlayout.widget.ConstraintLayout>

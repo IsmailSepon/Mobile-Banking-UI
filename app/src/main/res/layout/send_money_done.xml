@@ -11,39 +11,42 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/email_verified" />
+        app:layout_constraintVertical_bias="0.29000002"
+        app:srcCompat="@drawable/email_verified"
+        tools:ignore="ContentDescription" />
 
     <TextView
-        android:textSize="16sp"
-        android:textColor="@color/keypad_text_clr"
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:text="You’ve transferred ৳500to Anisul Islam"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintBottom_toTopOf="@+id/send_money_done"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.13" />
 
 
     <Button
         android:id="@+id/send_money_done"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:textSize="15sp"
+        android:layout_width="@dimen/_250dp"
+        android:layout_height="@dimen/_50dp"
         android:background="@drawable/round_btn_visable"
         android:text="@string/done"
         android:textAllCaps="false"
         android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.715" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,43 +8,46 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:textSize="16sp"
-        android:textColor="@color/keypad_text_clr"
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
         android:text="@string/and_what_s_your_primary_email"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.110000014" />
 
     <TextView
+        android:id="@+id/textView8"
+        android:layout_width="@dimen/_260dp"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:lines="2"
-        android:id="@+id/textView8"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
         android:text="@string/we_will_only_use_it_to_advise_you_for_any_important_change"
         android:textAlignment="center"
         android:textColor="@color/common_clr"
-        android:textSize="14sp"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintBottom_toTopOf="@+id/email_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:layout_marginBottom="4dp"
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:text="Email"
+        android:text="@string/email"
+        app:layout_constraintBottom_toTopOf="@+id/email_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.20999998" />
 
     <EditText
         android:id="@+id/email_et"
@@ -52,12 +55,13 @@
         android:layout_height="wrap_content"
         android:background="@drawable/common_et_bg"
         android:ems="13"
-        android:text="@email.com"
         android:inputType="textEmailAddress"
+        android:text="@email.com"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/email_btn"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.00999999"
         tools:ignore="MissingConstraints" />
 
 
@@ -65,27 +69,27 @@
         android:id="@+id/email_btn"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:textSize="15sp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="24dp"
         android:background="@drawable/round_btn"
-        android:elevation="5dp"
+        android:elevation="@dimen/_5dp"
         android:text="@string/continue_txt"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/textView20"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_et"
-        app:layout_constraintVertical_bias="0.982" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89"
+        tools:ignore="UnusedAttribute" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="Not now"
+        android:text="@string/not_now"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

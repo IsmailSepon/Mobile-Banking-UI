@@ -15,4 +15,6 @@
     <color name="recyclerview_title">#7e8996</color>
     <color name="tollbar_bg">#f0f4f9</color>
     <color name="divider_bg">#f5f4f7</color>
+    <color name="blck_bg">#19000000</color>
+    <color name="white_2">#f0f4f9</color>
 </resources>

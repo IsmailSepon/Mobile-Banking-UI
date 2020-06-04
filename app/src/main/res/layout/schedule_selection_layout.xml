@@ -14,25 +14,26 @@
 
         <ImageButton
             android:id="@+id/back_btn"
-            android:layout_width="22dp"
-            android:layout_height="12dp"
+            android:layout_width="@dimen/_22dp"
+            android:layout_height="@dimen/_12dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="@dimen/_24dp"
             android:foregroundGravity="center_vertical"
             android:src="@drawable/back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
 
 
         <TextView
             android:id="@+id/textView73"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:text="Scheduled Transfer"
+            android:layout_marginStart="@dimen/_12dp"
+            android:text="@string/scheduled_transfer"
             android:textColor="@color/keypad_text_clr"
-            android:textSize="16sp"
+            android:textSize="@dimen/_16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/back_btn"
             app:layout_constraintTop_toTopOf="parent"
@@ -41,7 +42,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0.8dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/_10dp"
             android:background="@color/common_clr"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView73"
@@ -49,9 +50,9 @@
 
         <ImageView
             android:id="@+id/imageView60"
-            android:layout_width="20dp"
+            android:layout_width="@dimen/_20dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="@dimen/_16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -62,8 +63,8 @@
         android:id="@+id/imageView61"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout12"
         app:srcCompat="@drawable/add_beneficery" />
@@ -73,10 +74,10 @@
         style="@style/medium_text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Schedule a new transfer"
+        android:layout_marginStart="@dimen/_16dp"
+        android:text="@string/schedule_a_new_transfer"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="15sp"
+        android:textSize="@dimen/_15sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView61"
         app:layout_constraintStart_toEndOf="@+id/imageView61"
         app:layout_constraintTop_toTopOf="@+id/imageView61" />
@@ -86,8 +87,8 @@
         style="@style/medium_text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
-        android:text="Active"
+        android:layout_marginTop="@dimen/_43dp"
+        android:text="@string/active"
         android:textColor="@color/common_clr"
         app:layout_constraintStart_toStartOf="@+id/imageView61"
         app:layout_constraintTop_toBottomOf="@+id/imageView61" />
@@ -97,29 +98,30 @@
         android:id="@+id/contact_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView114">
 
         <ImageView
             android:id="@+id/imageView62"
-            android:layout_width="33dp"
-            android:layout_height="33dp"
+            android:layout_width="@dimen/_33dp"
+            android:layout_height="@dimen/_33dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/person" />
+            app:srcCompat="@drawable/person"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView115"
             style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/_16dp"
             android:text="Mominul Islam"
             android:textColor="@color/keypad_text_clr"
-            android:textSize="13sp"
+            android:textSize="@dimen/_13sp"
             app:layout_constraintStart_toEndOf="@+id/imageView62"
             app:layout_constraintTop_toTopOf="@+id/imageView62" />
 
@@ -129,7 +131,7 @@
             android:layout_height="wrap_content"
             android:text="Daily next 01 April"
             android:textColor="@color/common_clr"
-            android:textSize="12sp"
+            android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="@+id/textView115"
             app:layout_constraintTop_toBottomOf="@+id/textView115" />
 
@@ -137,10 +139,10 @@
             android:id="@+id/textView117"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="@dimen/_24dp"
             android:text="-৳1500"
             android:textColor="@color/keypad_text_clr"
-            android:textSize="13sp"
+            android:textSize="@dimen/_13sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView115" />
 

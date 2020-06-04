@@ -19,31 +19,35 @@
             android:id="@+id/imageView64"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/cross_btn" />
+            app:srcCompat="@drawable/cross_btn"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/imageView67"
-            android:layout_width="83dp"
-            android:layout_height="83dp"
+            android:layout_width="@dimen/_83dp"
+            android:layout_height="@dimen/_83dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView64"
-            app:srcCompat="@drawable/person" />
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/person"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/imageView68"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/p_round"
-            tools:ignore="VectorDrawableCompat" />
+            tools:ignore="ContentDescription,VectorDrawableCompat" />
 
         <TextView
             android:onClick="@{scheduleViewmodel::showBottomsheet}"
@@ -51,7 +55,7 @@
             style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="@dimen/_15dp"
             android:text="1 Apr 2020"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintBottom_toBottomOf="@+id/imageView68"
@@ -63,10 +67,10 @@
             style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="@dimen/_18dp"
             android:text="Mominul Islam"
             android:textColor="@color/keypad_text_clr"
-            android:textSize="15sp"
+            android:textSize="@dimen/_15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView67" />
@@ -76,52 +80,55 @@
             style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="42dp"
+            android:layout_marginStart="@dimen/_24dp"
             android:text="@string/bdt"
             android:textColor="@color/keypad_text_clr"
-            android:textSize="27sp"
+            android:textSize="@dimen/_27sp"
+            app:layout_constraintBottom_toTopOf="@+id/reg_top_up_btn"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView142" />
+            app:layout_constraintTop_toBottomOf="@+id/textView142"
+            app:layout_constraintVertical_bias="0.100000024" />
 
         <EditText
-            android:background="@color/transparent"
             android:id="@+id/textView144"
             style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="42dp"
-            android:layout_marginEnd="24dp"
-            android:text="500"
+            android:layout_marginEnd="@dimen/_24dp"
+            android:background="@color/transparent"
             android:ems="4"
             android:gravity="right"
+            android:text="@string/_500"
             android:textColor="@color/keypad_text_clr"
-            android:textSize="27sp"
+            android:textSize="@dimen/_27sp"
+            app:layout_constraintBottom_toTopOf="@+id/reg_top_up_btn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView142" />
+            app:layout_constraintTop_toBottomOf="@+id/textView142"
+            app:layout_constraintVertical_bias="0.100000024" />
 
         <TextView
             android:id="@+id/textView145"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="@dimen/_24dp"
             android:text="Balance: ৳7500.50"
             android:textColor="@color/common_clr"
-            android:textSize="15sp"
+            android:textSize="@dimen/_15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView143" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="77dp"
-            android:layout_marginEnd="32dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginStart="@dimen/_32dp"
+            android:layout_marginEnd="@dimen/_32dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/reg_top_up_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView145"
+            app:layout_constraintVertical_bias="0.19"
             tools:ignore="MissingConstraints">
 
             <TextView
@@ -131,17 +138,18 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/textview_border"
-                android:text="GIF"
-                android:textSize="14sp"
+                android:text="@string/gif"
+                android:textSize="@dimen/_14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="404dp" />
 
             <ImageView
-                android:layout_width="1dp"
+                android:layout_width="@dimen/_1dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@color/common_clr" />
+                android:layout_marginLeft="@dimen/_30dp"
+                android:layout_marginRight="@dimen/_30dp"
+                android:background="@color/common_clr"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textView62"
@@ -150,8 +158,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/textview_border"
-                android:text="Add note"
-                android:textSize="14sp"
+                android:text="@string/add_note"
+                android:textSize="@dimen/_14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="404dp" />
 
@@ -160,20 +168,19 @@
         <Button
             android:id="@+id/reg_top_up_btn"
             style="Select amount"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="80dp"
+            android:layout_width="@dimen/_250dp"
+            android:layout_height="@dimen/_50dp"
             android:background="@drawable/round_btn_visable"
-            android:text="Select amount"
+            android:text="@string/select_amount"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15sp"
+            android:textSize="@dimen/_15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11"
-            app:layout_constraintVertical_bias="0.715" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.89" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

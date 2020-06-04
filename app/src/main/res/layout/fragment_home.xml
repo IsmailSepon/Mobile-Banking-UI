@@ -20,13 +20,13 @@
         <TextView
             android:layout_marginTop="10dp"
             android:text="৳0.00"
-            android:textSize="26dp"
+            android:textSize="@dimen/_26sp"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
     <LinearLayout
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/_40dp"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,8 +46,8 @@
         <Button
             android:id="@+id/send"
             android:onClick="@{viewmode::sendMoney}"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginRight="@dimen/_20dp"
             style="@style/HomeButton"
             android:layout_weight="1"
             android:drawableTop="@drawable/send_money"
@@ -68,7 +68,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/_20dp"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -84,8 +84,8 @@
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <Button
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginRight="@dimen/_20dp"
             style="@style/HomeButton"
             android:layout_weight="1"
             android:drawableTop="@drawable/bank_transfer"
@@ -105,7 +105,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/_20dp"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -121,8 +121,8 @@
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <Button
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginRight="@dimen/_20dp"
             style="@style/HomeButton"
             android:layout_weight="1"
             android:drawableTop="@drawable/linked_account"
@@ -142,9 +142,10 @@
 
     <ImageView
         android:id="@+id/image"
-        android:layout_margin="24dp"
+        android:layout_margin="@dimen/_24dp"
         android:layout_width="match_parent"
-        android:layout_height="100dp"/>
+        android:layout_height="@dimen/_100dp"
+        tools:ignore="ContentDescription" />
 
 <!--    <ss.com.bannerslider.Slider-->
 <!--        android:id="@+id/view_pager_auto"-->

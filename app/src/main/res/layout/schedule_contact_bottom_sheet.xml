@@ -20,7 +20,7 @@
             style="@style/medium_text_style"
             android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_50dp"
             android:text="@string/what_do_you_want_to_add"
             android:textColor="@color/white" />
 
@@ -38,7 +38,7 @@
             android:gravity="center"
             android:id="@+id/beneficery"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_50dp"
             android:text="@string/beneficery"
             android:textColor="@color/white"
             tools:ignore="HardcodedText" />
@@ -46,7 +46,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="@dimen/half_one"
-            android:background="@color/common_clr" />
+            android:background="@color/common_clr"
+            tools:ignore="ContentDescription" />
 
         <TextView
             style="@style/medium_text_style"
@@ -61,7 +62,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="@dimen/half_one"
-            android:background="@color/common_clr" />
+            android:background="@color/common_clr"
+            tools:ignore="ContentDescription" />
 
         <TextView
             style="@style/medium_text_style"
@@ -69,7 +71,7 @@
             android:gravity="center"
             android:id="@+id/cancel"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_50dp"
             android:text="@string/cancel"
             android:textColor="@color/white" />
 
