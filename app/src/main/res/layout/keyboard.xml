@@ -7,7 +7,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_marginBottom="21dp"
+            android:layout_marginBottom="@dimen/_21dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -22,7 +22,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="1" />
+                android:text="@string/_1" />
 
             <TextView
                 style="@style/text_style"
@@ -34,7 +34,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="2" />
+                android:text="@string/_2" />
 
             <TextView
                 style="@style/text_style"
@@ -46,13 +46,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="3" />
+                android:text="@string/_3" />
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginBottom="21dp"
+            android:layout_marginBottom="@dimen/_21dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -68,7 +68,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="4" />
+                android:text="@string/_4" />
 
             <TextView
                 style="@style/text_style"
@@ -80,7 +80,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="5" />
+                android:text="@string/_5" />
 
             <TextView
                 style="@style/text_style"
@@ -92,12 +92,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="6" />
+                android:text="@string/_6" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginBottom="21dp"
+            android:layout_marginBottom="@dimen/_21dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -113,7 +113,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="7" />
+                android:text="@string/_7" />
 
             <TextView
                 style="@style/text_style"
@@ -125,7 +125,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="8" />
+                android:text="@string/_8" />
 
             <TextView
                 style="@style/text_style"
@@ -137,13 +137,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="9" />
+                android:text="@string/_9" />
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginBottom="21dp"
+            android:layout_marginBottom="@dimen/_21dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -159,7 +159,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Delete" />
+                android:text="@string/delete" />
 
             <TextView
                 style="@style/text_style"
@@ -171,7 +171,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0" />
+                android:text="@string/_0" />
 
             <TextView
                 style="@style/text_style"
@@ -184,7 +184,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:text="Enter" />
+                android:text="@string/enter" />
 
         </LinearLayout>
 

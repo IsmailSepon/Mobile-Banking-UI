@@ -8,33 +8,35 @@
     tools:context=".activity.registation.SignupActivity">
 
 
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.120000005"
         app:srcCompat="@drawable/splash_logo" />
 
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:textSize="15sp"
-        android:layout_marginBottom="80dp"
+        android:layout_width="@dimen/_250dp"
+        android:layout_height="@dimen/fifty_dp"
         android:background="@drawable/round_btn"
-        android:elevation="5dp"
+        android:elevation="@dimen/evelation_five"
         android:text="@string/continue_txt"
         android:textAllCaps="false"
         android:textColor="@color/white"
+        android:textSize="@dimen/fifteen_sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        tools:targetApi="lollipop" />
 
     <TextView
         android:layout_width="match_parent"
@@ -44,7 +46,7 @@
         android:textColor="@color/keypad_text_clr"
         app:layout_constraintBottom_toTopOf="@+id/login_btn"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.865"
+        app:layout_constraintVertical_bias="0.79"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -52,49 +54,48 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/login_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.36"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
-            android:layout_width="75dp"
+            android:layout_width="@dimen/_75dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="@dimen/_15dp"
             android:orientation="vertical"
             tools:ignore="MissingConstraints">
 
             <TextView
-                android:textSize="12sp"
-                android:layout_marginStart="3dp"
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Country"
-                android:textColor="@color/common_clr" />
+                android:layout_marginStart="@dimen/_3dp"
+                android:text="@string/country"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/twelve_sp" />
 
             <Spinner
-                android:layout_marginTop="13dp"
                 android:id="@+id/country_code_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="26dp"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
                 style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_26dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_13dp"
                 android:background="@drawable/spinner_bg"
                 android:gravity="center"
                 android:spinnerMode="dropdown" />
 
 
             <ImageView
-                android:background="@color/common_clr"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="@dimen/_2dp"
+                android:background="@color/common_clr"
                 tools:ignore="ContentDescription" />
-
 
 
         </LinearLayout>
@@ -106,14 +107,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:textSize="12sp"
-                android:layout_marginStart="3dp"
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PhoneNumber"
-                android:visibility="invisible"
-                android:textColor="@color/colorPrimaryDark" />
+                android:layout_marginStart="@dimen/_3dp"
+                android:text="@string/phonenumber"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                android:visibility="invisible" />
 
 
             <EditText
@@ -123,10 +124,12 @@
                 android:layout_marginTop="5dp"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:ems="13"
-                android:textSize="16sp"
-                android:hint="Enter your mobile number"
+                android:hint="@string/enter_your_mobile_number"
                 android:inputType="number"
-                android:textColorHint="#8ea0b6" />
+                android:textColorHint="#8ea0b6"
+                android:textSize="16sp"
+                tools:ignore="TextFields"
+                tools:targetApi="lollipop" />
         </LinearLayout>
 
 

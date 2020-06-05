@@ -11,25 +11,28 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="125dp"
-        android:layout_height="30dp"
+        android:layout_width="@dimen/_125dp"
+        android:layout_height="@dimen/_30dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/splash_logo" />
+        app:layout_constraintVertical_bias="0.050000012"
+        app:srcCompat="@drawable/splash_logo"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
         android:text="@string/confirm_passcode"
         android:textAlignment="center"
         android:textColor="@color/keypad_text_clr"
-        android:textSize="16sp"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_pass_keyboard"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.110000014"
         tools:layout_editor_absoluteX="16dp" />
 
     <TextView
@@ -39,8 +42,10 @@
         android:text="@string/paywell_account"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintBottom_toTopOf="@+id/agrement_text"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <!--    <include layout="@layout/custom_keyboard" />-->
@@ -48,27 +53,28 @@
 
     <com.alimuzaffar.lib.pin.PinEntryEditText
         android:id="@+id/confirm_pin_et"
-        android:layout_width="110dp"
-        android:layout_height="25dp"
+        android:layout_width="@dimen/_110dp"
+        android:layout_height="@dimen/_25dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="70dp"
         android:background="@null"
         android:cursorVisible="false"
         android:digits="1234567890"
         android:inputType="number"
         android:maxLength="4"
-        android:padding="5dp"
+        android:padding="@dimen/_5dp"
         android:textColor="@android:color/transparent"
         android:textIsSelectable="false"
         android:textSize="0px"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_pass_keyboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.29000002"
         app:pinBackgroundDrawable="@drawable/pin_bg"
         app:pinBackgroundIsSquare="true"
-        app:pinCharacterSpacing="13dp"
+        app:pinCharacterSpacing="@dimen/_13dp"
         app:pinLineColors="@color/colorPrimaryDark" />
 
     <com.cloudwell.paywell.consumer.base.CustomKeyboard
@@ -76,28 +82,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginEnd="@dimen/_32dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/agrement_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/agrement_text"
-        android:layout_marginBottom="57dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="@dimen/_60dp"
+        android:layout_marginEnd="@dimen/_60dp"
         android:text="@string/condition"
         android:textAlignment="center"
         android:textColor="@color/keypad_text_clr"
-        android:textSize="14sp"
+        android:textSize="@dimen/_14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
 </androidx.constraintlayout.widget.ConstraintLayout>

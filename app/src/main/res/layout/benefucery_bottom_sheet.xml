@@ -22,9 +22,9 @@
             android:id="@+id/textView23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="27dp"
-            android:text="What do you want to do"
+            android:layout_marginStart="@dimen/_32dp"
+            android:layout_marginTop="@dimen/_27dp"
+            android:text="@string/what_do_you_want_to_do"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.146"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
 
         <LinearLayout
             android:onClick="@{bottomsheetModel::addBankAccount}"
-            android:layout_marginTop="29dp"
+            android:layout_marginTop="@dimen/_29dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -41,17 +41,17 @@
                 android:id="@+id/imageView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="@dimen/_50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView23"
                 app:srcCompat="@drawable/bank_icon" />
 
             <TextView
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/_24dp"
                 android:id="@+id/textView24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add bank account"
+                android:text="@string/add_bank_account"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.09"
@@ -61,8 +61,8 @@
 
         <LinearLayout
             android:onClick="@{bottomsheetModel::findPayWellUser}"
-            android:layout_marginTop="26dp"
-            android:layout_marginBottom="42dp"
+            android:layout_marginTop="@dimen/_26dp"
+            android:layout_marginBottom="@dimen/_42dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -71,7 +71,7 @@
                 android:id="@+id/imageView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="@dimen/_50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView13"
                 app:srcCompat="@drawable/p" />
@@ -81,8 +81,8 @@
                 android:id="@+id/textView25"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:text="Find PayWell user"
+                android:layout_marginStart="@dimen/_28dp"
+                android:text="@string/find_paywell_user"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
