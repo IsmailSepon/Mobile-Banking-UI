@@ -1,9 +1,9 @@
-package com.cloudwell.paywell.consumer.ui.scheduled_Transfer.viewModel
+package com.cloudwell.paywell.consumer.ui.scheduledTransfer.viewModel
 
 import android.view.View
 import androidx.lifecycle.ViewModel
 import com.cloudwell.paywell.consumer.data.repository.BaseRepository
-import com.cloudwell.paywell.consumer.ui.scheduled_Transfer.view.IscheduleTransferVIew
+import com.cloudwell.paywell.consumer.ui.scheduledTransfer.view.IscheduleTransferVIew
 
 class ScheduleTransferViewModel(val repository: BaseRepository) : ViewModel() {
 

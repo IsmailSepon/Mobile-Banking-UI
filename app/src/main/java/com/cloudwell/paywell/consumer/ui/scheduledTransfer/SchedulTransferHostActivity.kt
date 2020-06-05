@@ -1,21 +1,10 @@
-package com.cloudwell.paywell.consumer.ui.scheduled_Transfer
+package com.cloudwell.paywell.consumer.ui.scheduledTransfer
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.consumer.R
-import com.cloudwell.paywell.consumer.base.BaseActivity
-import com.cloudwell.paywell.consumer.databinding.ActivityAddMoneyHostBinding
-import com.cloudwell.paywell.consumer.ui.addMoney.fragment.AddMoneyFragment
-import com.cloudwell.paywell.consumer.ui.addMoney.view.IaddMoneyVIew
-import com.cloudwell.paywell.consumer.ui.addMoney.viewModel.AddMoneyViewModel
-import com.cloudwell.paywell.consumer.ui.scheduled_Transfer.fragment.ScheduleSelectionFragment
-import com.cloudwell.paywell.consumer.ui.sendMoney.view.SendMoneyFactory
+import com.cloudwell.paywell.consumer.ui.scheduledTransfer.fragment.ScheduleSelectionFragment
 import com.cloudwell.paywell.consumer.utils.FragmentHelper
-import org.kodein.di.KodeinAware
-import org.kodein.di.android.kodein
-import org.kodein.di.generic.instance
 
 class SchedulTransferHostActivity : AppCompatActivity() {
 

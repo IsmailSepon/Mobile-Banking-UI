@@ -7,7 +7,7 @@
 
         <variable
             name="scheduleViewmodel"
-            type="com.cloudwell.paywell.consumer.ui.scheduled_Transfer.viewModel.ScheduleTransferViewModel" />
+            type="com.cloudwell.paywell.consumer.ui.scheduledTransfer.viewModel.ScheduleTransferViewModel" />
     </data>
 
 

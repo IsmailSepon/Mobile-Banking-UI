@@ -21,12 +21,15 @@ import com.cloudwell.paywell.consumer.base.CustomKeyboard;
 /**
  * Created by Sepon on 4/15/2020.
  */
-public class Reg_two_Feg extends Fragment {
+public class RegTwoFeg extends Fragment {
     CustomKeyboard keyboard;
-    public static Reg_One_Feg newInstance() {
-        return new Reg_One_Feg();
+
+    public static RegOneFeg newInstance() {
+        return new RegOneFeg();
     }
+
     PinEntryEditText confirm_pin_et;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

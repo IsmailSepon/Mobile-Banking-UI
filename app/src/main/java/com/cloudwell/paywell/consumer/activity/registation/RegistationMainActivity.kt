@@ -52,14 +52,14 @@ class RegistationMainActivity : AppCompatActivity() {
 
         override fun createFragment(position: Int): Fragment {
             when (position) {
-                0 -> return Reg_One_Feg()
-                1 -> return Reg_two_Feg()
-                2 -> return Reg_three_Feg()
-                3 -> return Personal_detils_freg()
-                4 -> return Personal_detils_full_freg()
-                5 -> return Reg_email_freg()
+                0 -> return RegOneFeg()
+                1 -> return RegTwoFeg()
+                2 -> return RegThreeFeg()
+                3 -> return PersonalDetilsFreg()
+                4 -> return PersonalDetilsFullFreg()
+                5 -> return RegEmailFreg()
             }
-            return Reg_One_Feg()
+            return RegOneFeg()
 
         }
 

@@ -5,8 +5,11 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.widget.DatePicker;
+
 import androidx.fragment.app.DialogFragment;
-import com.cloudwell.paywell.consumer.activity.registation.fragment.Personal_detils_freg;
+
+import com.cloudwell.paywell.consumer.activity.registation.fragment.PersonalDetilsFreg;
+
 import java.util.Calendar;
 
 /**
@@ -33,6 +36,6 @@ public class DatePickerFragmentDialog extends DialogFragment implements DatePick
     public void onDateSet(DatePicker view, int year, int month, int day) {
 
         String stringOfDate = day + "/" + month + "/" + year;
-        Personal_detils_freg.dateofbirth_et.setText(stringOfDate);
+        PersonalDetilsFreg.dateofbirth_et.setText(stringOfDate);
     }
 }

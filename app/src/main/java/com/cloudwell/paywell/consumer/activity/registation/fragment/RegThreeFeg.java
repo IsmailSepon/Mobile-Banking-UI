@@ -18,12 +18,14 @@ import com.cloudwell.paywell.consumer.activity.registation.RegistationMainActivi
 /**
  * Created by Sepon on 4/15/2020.
  */
-public class Reg_three_Feg extends Fragment {
+public class RegThreeFeg extends Fragment {
 
-    public static Reg_three_Feg newInstance() {
-        return new Reg_three_Feg();
+    public static RegThreeFeg newInstance() {
+        return new RegThreeFeg();
     }
+
     PinEntryEditText etMobileOrRID;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

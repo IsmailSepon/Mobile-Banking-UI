@@ -19,7 +19,7 @@
         android:theme="@style/FullScreen">
 
         <activity
-            android:name=".ui.scheduled_Transfer.SchedulTransferHostActivity"
+            android:name=".ui.scheduledTransfer.SchedulTransferHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity

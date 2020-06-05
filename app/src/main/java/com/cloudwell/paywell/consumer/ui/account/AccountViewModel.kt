@@ -3,10 +3,9 @@ package com.cloudwell.paywell.consumer.ui.account
 import android.content.Intent
 import android.view.View
 import androidx.lifecycle.ViewModel
-import com.cloudwell.paywell.consumer.activity.registation.RegistationMainActivity
 import com.cloudwell.paywell.consumer.activity.registation.SignupActivity
 import com.cloudwell.paywell.consumer.ui.addMoney.AddMoneyHostActivity
-import com.cloudwell.paywell.consumer.ui.scheduled_Transfer.SchedulTransferHostActivity
+import com.cloudwell.paywell.consumer.ui.scheduledTransfer.SchedulTransferHostActivity
 import com.cloudwell.paywell.consumer.ui.sendMoney.SendMoneyHostActivity
 
 class AccountViewModel : ViewModel() {

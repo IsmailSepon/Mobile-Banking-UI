@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.ui.scheduled_Transfer.view
+package com.cloudwell.paywell.consumer.ui.scheduledTransfer.view
 
 import com.cloudwell.paywell.consumer.base.IBaseView
 

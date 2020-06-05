@@ -7,7 +7,7 @@
 
         <variable
             name="schedulebottomsheetModel"
-            type="com.cloudwell.paywell.consumer.ui.scheduled_Transfer.viewModel.ScheduleBottomSheetViewModel" />
+            type="com.cloudwell.paywell.consumer.ui.scheduledTransfer.viewModel.ScheduleBottomSheetViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

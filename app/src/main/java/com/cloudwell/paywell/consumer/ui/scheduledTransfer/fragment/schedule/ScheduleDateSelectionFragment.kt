@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.ui.scheduled_Transfer.fragment.schedule
+package com.cloudwell.paywell.consumer.ui.scheduledTransfer.fragment.schedule
 
 import android.os.Bundle
 import android.view.LayoutInflater

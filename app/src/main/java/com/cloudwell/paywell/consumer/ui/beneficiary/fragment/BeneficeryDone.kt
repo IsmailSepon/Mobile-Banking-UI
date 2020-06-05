@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.consumer.R
 import com.cloudwell.paywell.consumer.ui.beneficiary.BeneficeryHostActivity
 import com.cloudwell.paywell.consumer.ui.beneficiary.viewModel.BeneficeryViewModel
-import com.cloudwell.paywell.consumer.ui.scheduled_Transfer.fragment.ScheduleSelectAmountFragment
+import com.cloudwell.paywell.consumer.ui.scheduledTransfer.fragment.ScheduleSelectAmountFragment
 import com.cloudwell.paywell.consumer.ui.sendMoney.fragment.SendMoneyFragment
 import kotlinx.android.synthetic.main.beneficery_done.view.*
 

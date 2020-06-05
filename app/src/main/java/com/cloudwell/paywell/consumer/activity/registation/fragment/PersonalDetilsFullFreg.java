@@ -18,25 +18,23 @@ import androidx.fragment.app.Fragment;
 import com.cloudwell.paywell.consumer.R;
 import com.cloudwell.paywell.consumer.activity.registation.RegistationMainActivity;
 
-import java.util.ArrayList;
-
 /**
  * Created by Sepon on 4/15/2020.
  */
-public class Personal_detils_full_freg extends Fragment {
+public class PersonalDetilsFullFreg extends Fragment {
 
     EditText name_et, dateofbirth_et;
-    String[] country = { "Select Country","Bangladesh","India", "USA", "China", "Japan", "Other"};
-    String[] district = { "Dhaka", "Barisal"};
-    String[] thana = { "Badda", "Kalabagan"};
-    String[] city = { "Dhaka", "Barisal"};
+    String[] country = {"Select Country", "Bangladesh", "India", "USA", "China", "Japan", "Other"};
+    String[] district = {"Dhaka", "Barisal"};
+    String[] thana = {"Badda", "Kalabagan"};
+    String[] city = {"Dhaka", "Barisal"};
     Spinner country_sp, district_sp, thana_sp, city_sp;
     EditText address_et;
     Button address_btn;
 
 
-    public static Personal_detils_full_freg newInstance() {
-        return new Personal_detils_full_freg();
+    public static PersonalDetilsFullFreg newInstance() {
+        return new PersonalDetilsFullFreg();
     }
 
     @Nullable

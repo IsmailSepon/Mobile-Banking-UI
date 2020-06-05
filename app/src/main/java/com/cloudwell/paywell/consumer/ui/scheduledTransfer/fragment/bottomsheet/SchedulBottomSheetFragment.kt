@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.ui.scheduled_Transfer.fragment.bottomsheet
+package com.cloudwell.paywell.consumer.ui.scheduledTransfer.fragment.bottomsheet
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +10,8 @@ import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.consumer.R
 import com.cloudwell.paywell.consumer.databinding.ScheduleBottomSheetBinding
 import com.cloudwell.paywell.consumer.ui.beneficiary.BeneficeryHostActivity
-import com.cloudwell.paywell.consumer.ui.scheduled_Transfer.view.IscheduleTransferVIew
-import com.cloudwell.paywell.consumer.ui.scheduled_Transfer.viewModel.ScheduleBottomSheetViewModel
+import com.cloudwell.paywell.consumer.ui.scheduledTransfer.view.IscheduleTransferVIew
+import com.cloudwell.paywell.consumer.ui.scheduledTransfer.viewModel.ScheduleBottomSheetViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class SchedulBottomSheetFragment : BottomSheetDialogFragment(), IscheduleTransferVIew {

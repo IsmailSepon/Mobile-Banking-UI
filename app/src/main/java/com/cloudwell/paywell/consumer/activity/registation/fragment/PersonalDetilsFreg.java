@@ -13,15 +13,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import com.cloudwell.paywell.consumer.R;
-import com.cloudwell.paywell.consumer.activity.registation.DatePickerFragmentDialog;
 import com.cloudwell.paywell.consumer.activity.registation.RegistationMainActivity;
 
 import java.text.SimpleDateFormat;
@@ -30,13 +27,14 @@ import java.util.Calendar;
 /**
  * Created by Sepon on 4/15/2020.
  */
-public class Personal_detils_freg extends Fragment {
+public class PersonalDetilsFreg extends Fragment {
 
     public static EditText name_et, dateofbirth_et;
     Button btn;
     private int mYear, mMonth, mDay, mHour, mMinute;
-    public static Personal_detils_freg newInstance() {
-        return new Personal_detils_freg();
+
+    public static PersonalDetilsFreg newInstance() {
+        return new PersonalDetilsFreg();
     }
 
 

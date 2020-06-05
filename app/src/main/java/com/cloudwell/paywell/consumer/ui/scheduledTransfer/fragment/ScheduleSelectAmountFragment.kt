@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.ui.scheduled_Transfer.fragment
+package com.cloudwell.paywell.consumer.ui.scheduledTransfer.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.consumer.R
-import com.cloudwell.paywell.consumer.ui.scheduled_Transfer.fragment.bottomsheet.SchedulBottomSheetFragment
+import com.cloudwell.paywell.consumer.ui.scheduledTransfer.fragment.bottomsheet.SchedulBottomSheetFragment
 import kotlinx.android.synthetic.main.schedule_select_amount_layout.view.*
 
 class ScheduleSelectAmountFragment : Fragment() {
