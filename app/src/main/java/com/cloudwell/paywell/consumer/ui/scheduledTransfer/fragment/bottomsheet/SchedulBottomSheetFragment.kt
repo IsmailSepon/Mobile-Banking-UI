@@ -31,6 +31,7 @@ class SchedulBottomSheetFragment : BottomSheetDialogFragment(), IscheduleTransfe
         beneficeryViewModel!!.setView(this)
         binding.schedulebottomsheetModel = beneficeryViewModel
         binding.lifecycleOwner = this
+        setStyle(BottomSheetDialogFragment.STYLE_NORMAL, R.style.SheetDialog2)
 
         return binding.root
     }
@@ -59,4 +60,5 @@ class SchedulBottomSheetFragment : BottomSheetDialogFragment(), IscheduleTransfe
 
     }
 
+    override fun getTheme(): Int = R.style.SheetDialog2
 }

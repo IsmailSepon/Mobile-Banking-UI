@@ -130,4 +130,18 @@
         <item name="colorAccent">@color/colorPrimaryDark</item>
     </style>
 
+
+    <!--Style for BlurBottomSheet-->
+    <style name="SheetDialog2" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+
 </resources>
