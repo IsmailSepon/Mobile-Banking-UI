@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.consumer.R
 import com.cloudwell.paywell.consumer.ui.scheduledTransfer.fragment.bottomsheet.SchedulBottomSheetFragment
+import com.cloudwell.paywell.consumer.ui.scheduledTransfer.fragment.schedule.ScheduleDateSelectionFragment
+import com.cloudwell.paywell.consumer.utils.FragmentHelper
 import kotlinx.android.synthetic.main.schedule_select_amount_layout.view.*
 
 
@@ -33,11 +35,14 @@ class ScheduleSelectAmountFragment : Fragment() {
             )
 
 
-//            val dialogView: View = layoutInflater.inflate(R.layout.schedule_bottom_sheet, null)
-//            val dialog = activity?.let { it1 -> BottomSheetDialog(it1) }
-//            dialog?.setContentView(dialogView)
-//            dialog?.show()
+        })
 
+        view.reg_top_up_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.replaceFragment(
+                ScheduleDateSelectionFragment(),
+                activity?.supportFragmentManager,
+                R.id.schedule_transfer_container
+            )
         })
 
 

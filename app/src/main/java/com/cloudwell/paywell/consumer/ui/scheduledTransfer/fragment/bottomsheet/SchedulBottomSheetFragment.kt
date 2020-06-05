@@ -47,6 +47,10 @@ class SchedulBottomSheetFragment : BottomSheetDialogFragment(), IscheduleTransfe
 
     }
 
+    override fun startContactFragment() {
+
+    }
+
     override fun noInternetConnectionFound() {
     }
 

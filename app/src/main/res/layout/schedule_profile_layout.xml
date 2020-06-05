@@ -156,6 +156,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/profile_rename"
                 android:layout_width="@dimen/_70dp"
                 android:layout_marginEnd="@dimen/_45dp"
                 android:layout_height="match_parent"
@@ -180,6 +181,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/deactive"
                 android:layout_width="@dimen/_70dp"
                 android:layout_marginRight="@dimen/_45dp"
                 android:layout_height="match_parent"
@@ -205,6 +207,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/sc_profile_delete"
                 android:layout_width="@dimen/_70dp"
                 android:layout_height="match_parent"
                 android:gravity="center"

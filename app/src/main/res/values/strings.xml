@@ -88,7 +88,6 @@
     <string name="confirm">Confirm</string>
     <string name="add_note">Add note</string>
     <string name="adjust">Adjust</string>
-    <string name="deactivate">Deactivate</string>
     <string name="rename">Rename</string>
     <string name="repeat">Repeat</string>
     <string name="every_day">Every day</string>
@@ -217,6 +216,10 @@
     <string name="f">F</string>
     <string name="you_ve_set_up_a_recurring_payment_to_ipdc_finance_limited_467">You’ve set up a recurring payment to IPDC Finance Limited *467</string>
     <string name="the_next_payment_of_20_000_tk_will_occur_on_16_april_2020">The next payment of 20,000 Tk. will occur on 16 April 2020</string>
-
+    <string name="your_recurring_transfer_of_200_will_be_deactivated">Your recurring transfer of ৳200 will be deactivated.</string>
+    <string name="you_will_be_able_to_activate_it_at_any_time_later">You will be able to activate it at any time later.</string>
+    <string name="deactivate_recurring_transfer">Deactivate recurring transfer?</string>
+    <string name="deactivate">Deactivate</string>
+    <string name="your_recurring_transfer_of_200_will_be_deleted_permanently">Your recurring transfer of ৳200 will be deleted permanently.</string>
 
 </resources>

@@ -10,8 +10,10 @@ import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.consumer.R
 import com.cloudwell.paywell.consumer.databinding.ScheduleContactBottomSheetBinding
 import com.cloudwell.paywell.consumer.ui.beneficiary.BeneficeryHostActivity
+import com.cloudwell.paywell.consumer.ui.scheduledTransfer.fragment.addNewContact.ScheduleSelectContactFragment
 import com.cloudwell.paywell.consumer.ui.scheduledTransfer.view.IscheduleTransferVIew
 import com.cloudwell.paywell.consumer.ui.scheduledTransfer.viewModel.ScheduleBottomSheetViewModel
+import com.cloudwell.paywell.consumer.utils.FragmentHelper
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class SchedulContactBottomSheetFragment : BottomSheetDialogFragment(), IscheduleTransferVIew {
@@ -46,6 +48,17 @@ class SchedulContactBottomSheetFragment : BottomSheetDialogFragment(), Ischedule
         this.startActivity(intent)
         // FragmentHelper.replaceFragment(ChooseTransferTypeFragment(), activity?.supportFragmentManager, R.id.schedule_transfer_container)
     }
+
+    override fun startContactFragment() {
+
+        FragmentHelper.replaceFragment(
+            ScheduleSelectContactFragment(),
+            activity?.supportFragmentManager,
+            R.id.schedule_transfer_container
+        )
+
+    }
+
 
     override fun noInternetConnectionFound() {
     }

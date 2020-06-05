@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.consumer.R
-import com.cloudwell.paywell.consumer.ui.scheduledTransfer.fragment.addNewContact.ScheduleSelectContactFragment
+import com.cloudwell.paywell.consumer.ui.scheduledTransfer.fragment.addNewContact.ScheduleNewContactFragment
 import com.cloudwell.paywell.consumer.utils.FragmentHelper
 import kotlinx.android.synthetic.main.schedule_selection_layout.view.*
 
@@ -30,11 +30,12 @@ class ScheduleSelectionFragment : Fragment() {
 
         view.addnewContact.setOnClickListener(View.OnClickListener {
             FragmentHelper.replaceFragment(
-                ScheduleSelectContactFragment(),
+                ScheduleNewContactFragment(),
                 activity?.supportFragmentManager,
                 R.id.schedule_transfer_container
             )
         })
+
 
 
         return view

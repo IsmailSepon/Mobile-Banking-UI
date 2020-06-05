@@ -13,6 +13,10 @@ class ScheduleBottomSheetViewModel : ViewModel() {
         mView?.startBeneficeryChooseFragment()
     }
 
+    fun contactOnclick(view: View) {
+        mView?.startContactFragment()
+    }
+
 
     fun setView(view: IscheduleTransferVIew) {
         this.mView = view

@@ -143,5 +143,11 @@
         <item name="android:background">@color/transparent</item>
     </style>
 
+    <style name="EditTextTheme">
+        <item name="colorControlNormal">@color/common_clr</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">#FFFFFF</item>
+    </style>
+
 
 </resources>
