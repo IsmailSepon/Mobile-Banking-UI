@@ -50,7 +50,6 @@
             tools:ignore="ContentDescription,VectorDrawableCompat" />
 
         <TextView
-            android:onClick="@{scheduleViewmodel::showBottomsheet}"
             android:id="@+id/date_time_txt"
             style="@style/medium_text_style"
             android:layout_width="wrap_content"
