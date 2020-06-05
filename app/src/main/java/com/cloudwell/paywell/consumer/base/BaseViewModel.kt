@@ -1,5 +1,6 @@
 package com.cloudwell.paywell.consumer.base
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.cloudwell.paywell.consumer.utils.exception.ApiException
 import com.cloudwell.paywell.consumer.utils.exception.NoInternetException
@@ -9,7 +10,11 @@ import com.cloudwell.paywell.consumer.utils.exception.NoInternetException
  */
 open class BaseViewModel : ViewModel() {
 
-    public fun handleException(ex: Exception, view: IView?) {
+    val isShowProcessBar = MutableLiveData<Boolean>()
+    val onFailureString = MutableLiveData<String>()
+
+
+    fun handleException(ex: Exception, view: IView?) {
         if (ex is ApiException) {
             view?.onFailure(ex.message)
         } else if (ex is NoInternetException) {

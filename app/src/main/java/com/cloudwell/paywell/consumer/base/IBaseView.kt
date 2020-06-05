@@ -1,7 +1,6 @@
 package com.cloudwell.paywell.consumer.base
 
 interface IBaseView {
-
     fun noInternetConnectionFound()
     fun showProgress()
     fun hiddenProgress()
