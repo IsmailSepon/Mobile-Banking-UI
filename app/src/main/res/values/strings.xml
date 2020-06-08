@@ -232,5 +232,9 @@
     <string name="at_least_15_characters">At least 15 characters</string>
     <string name="i_know_the_year_of_birth">I know the year of birth</string>
     <string name="year_of_birth">Year of birth</string>
+    <string name="near_me">Near me</string>
+    <string name="create_payment_link">Create payment link</string>
+    <string name="invite_friends_to_paywell">Invite friends to PayWell</string>
+    <string name="frequent">Frequent</string>
 
 </resources>

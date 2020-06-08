@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.registation.EmailVerificationActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@drawable/email_verified"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="@dimen/_37dp"
+        android:layout_marginStart="@dimen/_37dp"
+        android:layout_height="wrap_content"
+        android:text="You have requested ৳500 from Abul Kalam"
+        android:textAlignment="center"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/_34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/ac_created_btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:elevation="@dimen/evelation_five"
+        android:background="@drawable/round_btn_visable"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        tools:targetApi="lollipop" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="@dimen/_260dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/you_can_review_your_transfer_any_time_in_your_transaction_log"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_13sp"
+        app:layout_constraintBottom_toTopOf="@+id/ac_created_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

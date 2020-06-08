@@ -17,11 +17,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
-
+        <activity
+            android:name=".ui.requestMoney.RequestMoneyHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.scheduledTransfer.SchedulTransferHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".ui.addMoney.AddMoneyHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
