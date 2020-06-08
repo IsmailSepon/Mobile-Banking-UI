@@ -121,7 +121,6 @@
                 android:layout_marginStart="@dimen/_37dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/mini_calender"
                 tools:ignore="VectorDrawableCompat" />
 

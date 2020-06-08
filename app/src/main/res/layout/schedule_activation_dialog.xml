@@ -38,14 +38,13 @@
     <TextView
         android:id="@+id/textView151"
         style="@style/text_style"
-        android:layout_width="@dimen/_240dp"
+        android:layout_width="@dimen/_220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10dp"
         android:gravity="left"
         android:text="@string/you_will_be_able_to_activate_it_at_any_time_later"
         android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/_15sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView127"
         app:layout_constraintStart_toStartOf="@+id/textView127"
         app:layout_constraintTop_toBottomOf="@+id/textView127" />
 

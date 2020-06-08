@@ -122,4 +122,8 @@
     <dimen name="_53dp">53dp</dimen>
     <dimen name="_260dp">260dp</dimen>
     <dimen name="_36dp">36dp</dimen>
+    <dimen name="_0dp">0dp</dimen>
+    <dimen name="_57dp">57dp</dimen>
+    <dimen name="_9dp">9dp</dimen>
+    <dimen name="_210dp">210dp</dimen>
 </resources>

@@ -6,16 +6,16 @@
     android:layout_height="wrap_content">
 
     <TextView
-        style="@style/text_style"
-        android:textStyle="bold"
-        android:textColor="@color/keypad_text_clr"
-        android:textSize="@dimen/_15sp"
         android:id="@+id/textView112"
-        android:layout_width="wrap_content"
+        style="@style/text_style"
+        android:layout_width="@dimen/_240dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"
         android:layout_marginTop="28dp"
-        android:text="@string/deactivate_recurring_transfer"
+        android:text="@string/delete_recurring_transfer_to_raihan_ahmed"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

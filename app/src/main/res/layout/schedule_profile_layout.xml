@@ -59,7 +59,7 @@
     <TextView
         android:id="@+id/textView118"
         style="@style/text_style"
-        android:layout_width="@dimen/_185dp"
+        android:layout_width="@dimen/_200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_24dp"
         android:gravity="center"
@@ -119,6 +119,7 @@
 
 
     <HorizontalScrollView
+        android:layout_marginTop="@dimen/_45dp"
         android:id="@+id/hsv"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_100dp"

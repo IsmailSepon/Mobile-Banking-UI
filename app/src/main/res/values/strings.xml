@@ -56,6 +56,7 @@
     <string name="no_po_boxes_please">No PO Boxes, please</string>
     <string name="present_address">Present Address </string>
     <string name="permanent_address">Permanent address</string>
+    <string name="permanent_address_req">Permanent address*</string>
     <string name="house_holding_no">House/Holding No.</string>
     <string name="village_road">Village/Road</string>
     <string name="postal_code">Postal code</string>
@@ -221,5 +222,15 @@
     <string name="deactivate_recurring_transfer">Deactivate recurring transfer?</string>
     <string name="deactivate">Deactivate</string>
     <string name="your_recurring_transfer_of_200_will_be_deleted_permanently">Your recurring transfer of ৳200 will be deleted permanently.</string>
+    <string name="delete_recurring_transfer_to_raihan_ahmed">Delete recurring transfer to Raihan Ahmed?</string>
+    <string name="top_up_your_account_now">Top up your account now</string>
+    <string name="you_can_spend_or_withdraw_the_money_latter">You can spend or withdraw the money latter</string>
+    <string name="schedule">Schedule</string>
+    <string name="currency">Currency</string>
+    <string name="add_more_information">Add more information</string>
+    <string name="reason_for_transfer">Reason for Transfer</string>
+    <string name="at_least_15_characters">At least 15 characters</string>
+    <string name="i_know_the_year_of_birth">I know the year of birth</string>
+    <string name="year_of_birth">Year of birth</string>
 
 </resources>

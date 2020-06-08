@@ -127,26 +127,26 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView145"
-            app:layout_constraintVertical_bias="0.19"
+            app:layout_constraintVertical_bias="0.26"
             tools:ignore="MissingConstraints">
 
             <TextView
                 android:id="@+id/textView61"
                 style="@style/text_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_60dp"
+                android:layout_height="@dimen/_35dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/textview_border"
                 android:text="@string/gif"
-                android:textSize="@dimen/_14sp"
+                android:textSize="@dimen/_13sp"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="404dp" />
 
             <ImageView
                 android:layout_width="@dimen/_1dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/_30dp"
-                android:layout_marginRight="@dimen/_30dp"
+                android:layout_marginLeft="@dimen/_60dp"
+                android:layout_marginRight="@dimen/_60dp"
                 android:background="@color/common_clr"
                 tools:ignore="ContentDescription" />
 
@@ -154,11 +154,11 @@
                 android:id="@+id/textView62"
                 style="@style/text_style"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_35dp"
                 android:layout_gravity="center_vertical"
-                android:background="@drawable/textview_border"
+                android:gravity="center_vertical"
                 android:text="@string/add_note"
-                android:textSize="@dimen/_14sp"
+                android:textSize="@dimen/_13sp"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="404dp" />
 
