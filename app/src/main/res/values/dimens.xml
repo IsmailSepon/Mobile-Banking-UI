@@ -126,4 +126,6 @@
     <dimen name="_57dp">57dp</dimen>
     <dimen name="_9dp">9dp</dimen>
     <dimen name="_210dp">210dp</dimen>
+    <dimen name="_190dp">190dp</dimen>
+    <dimen name="_73dp">73dp</dimen>
 </resources>

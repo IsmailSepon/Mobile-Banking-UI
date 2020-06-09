@@ -20,7 +20,7 @@
             android:layout_height="@dimen/_14dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/_20dp"
-            android:src="@drawable/cross_btn"
+            app:srcCompat="@drawable/cross_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

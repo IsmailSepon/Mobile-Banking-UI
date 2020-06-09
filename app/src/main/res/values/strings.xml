@@ -236,5 +236,13 @@
     <string name="create_payment_link">Create payment link</string>
     <string name="invite_friends_to_paywell">Invite friends to PayWell</string>
     <string name="frequent">Frequent</string>
+    <string name="enter_card_details">Enter card details</string>
+    <string name="please_note_that_the_card">Please note that the card</string>
+    <string name="card_holder_name">Card holder name</string>
+    <string name="card_details_are_saved_securely">Card details are saved securely</string>
+    <string name="must_be_in_your_name">must be in your name</string>
+    <string name="cvv">CVV</string>
+    <string name="prime_bank_mastercard_7671_has_been_added_to_your_account">Prime Bank Mastercard *7671 has been added to your account</string>
+    <string name="you_ve_topped_up_your_account_with_500">You’ve topped up your account with 500</string>
 
 </resources>
