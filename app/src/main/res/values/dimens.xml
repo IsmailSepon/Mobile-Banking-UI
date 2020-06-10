@@ -128,4 +128,6 @@
     <dimen name="_210dp">210dp</dimen>
     <dimen name="_190dp">190dp</dimen>
     <dimen name="_73dp">73dp</dimen>
+    <dimen name="_270dp">270dp</dimen>
+    <dimen name="_11dp">11dp</dimen>
 </resources>

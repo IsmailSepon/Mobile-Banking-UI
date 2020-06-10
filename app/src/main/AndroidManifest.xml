@@ -18,6 +18,12 @@
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
         <activity
+            android:name=".ui.bankTransfer.BankTransferHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.withdrawCash.CashWithdrawHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".ui.requestMoney.RequestMoneyHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

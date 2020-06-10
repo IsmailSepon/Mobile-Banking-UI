@@ -244,5 +244,15 @@
     <string name="cvv">CVV</string>
     <string name="prime_bank_mastercard_7671_has_been_added_to_your_account">Prime Bank Mastercard *7671 has been added to your account</string>
     <string name="you_ve_topped_up_your_account_with_500">You’ve topped up your account with 500</string>
+    <string name="you_can_withdraw_cash_by_using_a_code_that_will_be_generated_automatically_in_the_next_screen_once_you_click_the_following_button">You can withdraw cash by using a code that will be generated automatically in the next screen once you click the following button.</string>
+    <string name="select_amount_generate_code"><![CDATA[Select amount & Generate code]]></string>
+    <string name="withdraw_from_atm">Withdraw from ATM</string>
+    <string name="we_are_generating_the_withdrawal_code_for_you_please_wait">We are generating the withdrawal code for you, please wait</string>
+    <string name="finishing_in_28_seconds">Finishing in 28 seconds</string>
+    <string name="atm_cash_withdrawal_code">ATM cash withdrawal code</string>
+    <string name="for_using_in_any_of_the_following_banks_atms_with_cash_by_code">For using in any of the following banks’ ATMs with Cash-by-code</string>
+    <string name="code">Code</string>
+    <string name="atm_near_me">ATM near me</string>
+    <string name="when_you_make_a_withdrawal_the_cash_can_only_be_withdrawn_at_a_the_city_bank_atm_southeast_bank_atm">When you make a withdrawal, the cash can only be withdrawn at a the City Bank ATM, Southeast Bank *ATM.</string>
 
 </resources>

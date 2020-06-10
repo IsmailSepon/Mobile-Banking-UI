@@ -76,6 +76,7 @@
         android:weightSum="5">
 
         <Button
+            android:onClick="@{viewmode::cashwithdraw}"
             style="@style/HomeButton"
             android:layout_weight="1"
             android:drawableTop="@drawable/cash_withdoaw"
@@ -84,6 +85,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <Button
+            android:onClick="@{viewmode::bankTransfer}"
             android:layout_marginLeft="@dimen/_20dp"
             android:layout_marginRight="@dimen/_20dp"
             style="@style/HomeButton"

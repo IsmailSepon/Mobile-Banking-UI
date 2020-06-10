@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView97"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31"
+        app:srcCompat="@drawable/process_ic" />
+
+    <TextView
+        android:id="@+id/textView193"
+        android:layout_width="@dimen/_250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40dp"
+        android:layout_marginTop="@dimen/_30dp"
+        android:layout_marginEnd="@dimen/_40dp"
+        android:textAlignment="center"
+        style="@style/medium_text_style"
+        android:textSize="@dimen/_15sp"
+        android:text="@string/we_are_generating_the_withdrawal_code_for_you_please_wait"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView97" />
+
+
+    <Button
+        android:id="@+id/cashwithdraw_process_btn"
+        android:layout_width="@dimen/_250dp"
+        android:layout_height="@dimen/_50dp"
+        android:background="@drawable/round_btn_orange"
+        android:text="@string/finishing_in_28_seconds"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
+        android:elevation="@dimen/_5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView193"
+        app:layout_constraintVertical_bias="0.77"
+        tools:ignore="UnknownIdInLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
