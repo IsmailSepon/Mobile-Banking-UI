@@ -21,7 +21,7 @@
                 tools:ignore="MissingConstraints"
                 android:id="@+id/imageView34" />
 
-            <com.cloudwell.paywell.consumer.activity.customview.PinEntryEditText
+            <com.cloudwell.paywell.consumer.ui.registration.customView.PinEntryEditText
                 android:id="@+id/etMobileOrRID"
                 android:layout_width="200dp"
                 android:layout_height="30dp"

@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.activity.customview;
+package com.cloudwell.paywell.consumer.activity.registation.customview;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
