@@ -105,7 +105,8 @@ class AccountFragment : Fragment() {
             activity?.applicationContext!!,
             "Hide",
             12.0f,
-            android.R.color.holo_red_light,
+            //android.R.color.darker_gray,
+            R.color.recycler_swipe_gray,
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {
 
@@ -118,7 +119,8 @@ class AccountFragment : Fragment() {
             activity?.applicationContext!!,
             "Split bill",
             12.0f,
-            android.R.color.holo_green_light,
+            //android.R.color.holo_orange_dark,
+            R.color.colorPrimaryDark,
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {
 

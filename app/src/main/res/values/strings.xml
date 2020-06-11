@@ -276,5 +276,6 @@
     <string name="completed">Completed</string>
     <string name="hide">Hide</string>
     <string name="something_wrong_get_help">Something wrong? Get help!</string>
+    <string name="add_a_new_bank_beneficiary">Add a new bank beneficiary</string>
 
 </resources>

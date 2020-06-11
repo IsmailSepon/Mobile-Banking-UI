@@ -3,7 +3,7 @@ package com.cloudwell.paywell.consumer.ui.bankTransfer
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.consumer.R
-import com.cloudwell.paywell.consumer.ui.beneficiary.fragment.BeneficiaryFragment
+import com.cloudwell.paywell.consumer.ui.bankTransfer.fragment.BankBeneficeryFragment
 import com.cloudwell.paywell.consumer.utils.FragmentHelper
 
 class BankTransferHostActivity : AppCompatActivity() {
@@ -18,7 +18,7 @@ class BankTransferHostActivity : AppCompatActivity() {
 //        binding.addMoneyViewModel = viewModel
 
         FragmentHelper.replaceFragment(
-            BeneficiaryFragment(),
+            BankBeneficeryFragment(),
             supportFragmentManager,
             R.id.bank_transfer_container
         )

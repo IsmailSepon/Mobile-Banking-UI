@@ -263,7 +263,7 @@
 
 
         <Button
-            android:id="@+id/ac_created_btn"
+            android:id="@+id/cash_withdraw_done_btn"
             android:layout_width="@dimen/btn_width"
             android:layout_height="@dimen/btn_hight"
             android:layout_marginTop="50dp"

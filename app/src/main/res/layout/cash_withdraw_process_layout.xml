@@ -25,6 +25,7 @@
         android:layout_marginEnd="@dimen/_40dp"
         android:textAlignment="center"
         style="@style/medium_text_style"
+        android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/_15sp"
         android:text="@string/we_are_generating_the_withdrawal_code_for_you_please_wait"
         app:layout_constraintEnd_toEndOf="parent"
