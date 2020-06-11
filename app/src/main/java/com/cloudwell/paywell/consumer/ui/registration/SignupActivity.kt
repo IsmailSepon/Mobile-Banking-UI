@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.activity.registation
+package com.cloudwell.paywell.consumer.ui.registration
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.consumer.R
-import com.cloudwell.paywell.consumer.ui.home.MainHomeActivity
 import kotlinx.android.synthetic.main.activity_signup.*
 
 

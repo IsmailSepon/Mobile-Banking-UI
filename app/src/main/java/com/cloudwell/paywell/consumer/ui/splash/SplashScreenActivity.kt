@@ -1,11 +1,10 @@
-package com.cloudwell.paywell.consumer.activity
+package com.cloudwell.paywell.consumer.ui.splash
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.consumer.R
-import com.cloudwell.paywell.consumer.activity.registation.SignupActivity
 import com.cloudwell.paywell.consumer.base.ApplockManager
 import com.cloudwell.paywell.consumer.ui.home.MainHomeActivity
 

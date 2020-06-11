@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.activity.registation.fragment;
+package com.cloudwell.paywell.consumer.ui.registration.fragment;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -16,7 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.cloudwell.paywell.consumer.R;
-import com.cloudwell.paywell.consumer.activity.registation.RegistationMainActivity;
+import com.cloudwell.paywell.consumer.ui.registration.RegistationMainActivity;
 
 /**
  * Created by Sepon on 4/15/2020.

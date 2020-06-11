@@ -1,11 +1,11 @@
-package com.cloudwell.paywell.consumer.activity.registation.nidVerification
+package com.cloudwell.paywell.consumer.ui.registration.nidVerification
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.consumer.R
 import kotlinx.android.synthetic.main.activity_n_i_dfrontside.*
 
@@ -31,7 +31,7 @@ class NIDfrontsideActivity : AppCompatActivity() {
 //      //  getApplicationContext().getResources().getColor(R.color.white)
 
         take_pic.setOnClickListener(View.OnClickListener {
-            startActivity(Intent(this, NIDfrontSecondActivity :: class.java))
+            startActivity(Intent(this, NIDfrontSecondActivity::class.java))
         })
     }
 

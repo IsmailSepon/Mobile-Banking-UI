@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.activity.registation
+package com.cloudwell.paywell.consumer.ui.registration
 
 import android.content.Intent
 import android.os.Bundle

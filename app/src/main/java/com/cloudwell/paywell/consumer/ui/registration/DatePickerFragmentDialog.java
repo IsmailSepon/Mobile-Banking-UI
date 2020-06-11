@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.activity.registation;
+package com.cloudwell.paywell.consumer.ui.registration;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -8,7 +8,7 @@ import android.widget.DatePicker;
 
 import androidx.fragment.app.DialogFragment;
 
-import com.cloudwell.paywell.consumer.activity.registation.fragment.PersonalDetilsFreg;
+import com.cloudwell.paywell.consumer.ui.registration.fragment.PersonalDetilsFreg;
 
 import java.util.Calendar;
 

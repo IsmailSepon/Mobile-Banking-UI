@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.activity.registation.fragment;
+package com.cloudwell.paywell.consumer.ui.registration.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -15,8 +15,8 @@ import androidx.fragment.app.Fragment;
 
 import com.alimuzaffar.lib.pin.PinEntryEditText;
 import com.cloudwell.paywell.consumer.R;
-import com.cloudwell.paywell.consumer.activity.registation.RegistationMainActivity;
 import com.cloudwell.paywell.consumer.base.CustomKeyboard;
+import com.cloudwell.paywell.consumer.ui.registration.RegistationMainActivity;
 
 /**
  * Created by Sepon on 4/15/2020.

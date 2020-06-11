@@ -1,7 +1,7 @@
-package com.cloudwell.paywell.consumer.activity.registation.nidVerification
+package com.cloudwell.paywell.consumer.ui.registration.nidVerification
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.consumer.R
 
 class NIDfrontSecondActivity : AppCompatActivity() {

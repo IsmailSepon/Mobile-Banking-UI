@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.activity.registation
+package com.cloudwell.paywell.consumer.ui.registration
 
 import android.os.Bundle
 import android.view.View
@@ -10,7 +10,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.cloudwell.paywell.consumer.R
-import com.cloudwell.paywell.consumer.activity.registation.fragment.*
+import com.cloudwell.paywell.consumer.ui.registration.fragment.*
 import kotlinx.android.synthetic.main.activity_registation_main.*
 
 
@@ -23,11 +23,14 @@ class RegistationMainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registation_main)
 
 
-        val adapter = ScreenSlidePagerAdapter(this)
+        val adapter =
+            ScreenSlidePagerAdapter(
+                this
+            )
         reg_view_pager.adapter = adapter
         reg_view_pager.isUserInputEnabled = false
 
-        reg_view_pager.registerOnPageChangeCallback(object : OnPageChangeCallback(){
+        reg_view_pager.registerOnPageChangeCallback(object : OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
 

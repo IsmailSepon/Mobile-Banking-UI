@@ -1,9 +1,9 @@
-package com.cloudwell.paywell.consumer.activity.registation
+package com.cloudwell.paywell.consumer.ui.registration
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.consumer.R
 import kotlinx.android.synthetic.main.activity_passport_verification.*
 

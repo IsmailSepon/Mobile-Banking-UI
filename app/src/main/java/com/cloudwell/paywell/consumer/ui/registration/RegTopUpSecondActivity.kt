@@ -1,11 +1,11 @@
-package com.cloudwell.paywell.consumer.activity.registation
+package com.cloudwell.paywell.consumer.ui.registration
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.consumer.R
 import kotlinx.android.synthetic.main.activity_reg_top_up_second.*
 

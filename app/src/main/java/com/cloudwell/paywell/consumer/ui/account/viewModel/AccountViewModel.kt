@@ -5,6 +5,7 @@ import android.view.View
 import androidx.lifecycle.ViewModel
 import com.cloudwell.paywell.consumer.ui.addMoney.AddMoneyHostActivity
 import com.cloudwell.paywell.consumer.ui.bankTransfer.BankTransferHostActivity
+import com.cloudwell.paywell.consumer.ui.registration.SignupActivity
 import com.cloudwell.paywell.consumer.ui.requestMoney.RequestMoneyHostActivity
 import com.cloudwell.paywell.consumer.ui.scheduledTransfer.SchedulTransferHostActivity
 import com.cloudwell.paywell.consumer.ui.sendMoney.SendMoneyHostActivity
@@ -44,6 +45,12 @@ class AccountViewModel : ViewModel() {
 
     fun bankTransfer(view: View) {
         Intent(view.context, BankTransferHostActivity::class.java).also {
+            view.context.startActivity(it)
+        }
+    }
+
+    fun vault(view: View) {
+        Intent(view.context, SignupActivity::class.java).also {
             view.context.startActivity(it)
         }
     }
