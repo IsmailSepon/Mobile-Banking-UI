@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
         <activity
+            android:name="com.cloudwell.paywell.consumer.ui.spiltBill.fragment.SpiltBillHoastActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".ui.bankTransfer.BankTransferHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

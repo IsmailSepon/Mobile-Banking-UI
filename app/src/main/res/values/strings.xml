@@ -254,5 +254,23 @@
     <string name="code">Code</string>
     <string name="atm_near_me">ATM near me</string>
     <string name="when_you_make_a_withdrawal_the_cash_can_only_be_withdrawn_at_a_the_city_bank_atm_southeast_bank_atm">When you make a withdrawal, the cash can only be withdrawn at a the City Bank ATM, Southeast Bank *ATM.</string>
+    <string name="split_bill">Split bill</string>
+    <string name="select_contacts_to_split_300_00_daraz">Select contacts to split 300.00 Daraz</string>
+    <string name="you">you</string>
+    <string name="request">Request</string>
+    <string name="requests_to_split_the_bill_are_sent">Requests\nto split the bill are sent!</string>
+    <string name="you_can_review_your_requests_anytime_in_your_transactions_list">You can review your requests anytime\nin your transactions list</string>
+    <string name="send_link">Send link</string>
+    <string name="split_bill_request">Split bill request</string>
+    <string name="send_this_link_to_maruf_hasan_so_that_s_he_can_use_it_to_pay_you_150">Send this link to Maruf Hasan so that (s)he can use it to pay you ৳150</string>
+    <string name="http_www_paywellonline_com_money_request_uiu5458ams">http://www.paywellonline.com/money-request/UIU5458ams</string>
+    <string name="please_send_me_150_using_this_link_from_paywell">Please send me ৳150 using this link from PayWell:</string>
+    <string name="paywell_http_www_paywellonline_com_money_request_uiu5458ams">PayWell: http://www.paywellonline.com/money-request/UIU5458ams.</string>
+    <string name="ps_paywell_is_a_bangladesh_bank_licensed_payment_service_provider">PS: PayWell is a Bangladesh Bank licensed payment service provider</string>
+    <string name="send">Send</string>
+    <string name="send_anisul_islam_money">Send Anisul Islam money</string>
+    <string name="we_ll_need_your_payment_details_to_send_your_money_to_anisul_islam_s_paywell_account_instantly">We’ll need your payment details to send your money to Anisul Islam’s PayWell account instantly</string>
+    <string name="please_enter_your_payment_ndetails_maruf_hasan">Please enter your payment\ndetails, Maruf Hasan</string>
+    <string name="paying_amount">Paying amount</string>
 
 </resources>

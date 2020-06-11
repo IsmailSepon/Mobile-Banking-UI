@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.ui.account
+package com.cloudwell.paywell.consumer.ui.account.viewModel
 
 import android.content.Intent
 import android.view.View
