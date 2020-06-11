@@ -56,7 +56,7 @@
             android:id="@+id/imageView108"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_34dp"
+            android:layout_marginTop="35dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -88,13 +88,14 @@
 
         <TextView
             android:id="@+id/textView217"
+            style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:text="Name"
             android:textSize="@dimen/_10sp"
-            style="@style/text_style"
             app:layout_constraintStart_toStartOf="@+id/textView216"
-            tools:layout_editor_absoluteY="284dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView216"
             tools:ignore="MissingConstraints" />
 
         <EditText
@@ -204,8 +205,8 @@
             android:ems="5"
             android:inputType="textPersonName"
             android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@+id/textView221"
             app:layout_constraintTop_toBottomOf="@+id/textView221"
-            tools:layout_editor_absoluteX="44dp"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -222,14 +223,14 @@
 
         <EditText
             android:id="@+id/editTextTextPersonName12"
+            style="@style/EditTextTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="6"
             android:inputType="textPersonName"
             android:textSize="@dimen/_12sp"
-            style="@style/EditTextTheme"
             app:layout_constraintStart_toStartOf="@+id/textView222"
-            tools:layout_editor_absoluteY="599dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView222"
             tools:ignore="MissingConstraints" />
 
 
@@ -244,7 +245,6 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="@dimen/_15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"

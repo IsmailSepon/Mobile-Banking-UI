@@ -121,7 +121,10 @@ class AccountFragment : Fragment() {
             android.R.color.holo_green_light,
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {
-                    startActivity(Intent(activity, SpiltBillHoastActivity::class.java))
+
+                    val intent = Intent(activity, SpiltBillHoastActivity::class.java)
+                    intent.putExtra("spilt", "1")
+                    startActivity(intent)
                 }
             })
     }

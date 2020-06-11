@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.consumer.R
+import com.cloudwell.paywell.consumer.ui.spiltBill.fragment.SpiltBillProfileFragment
 import com.cloudwell.paywell.consumer.utils.FragmentHelper
-import kotlinx.android.synthetic.main.spilt_bill_send_money_info_layout.view.*
+import kotlinx.android.synthetic.main.spilt_bill_request_profile_layout.view.*
 
-class SpiltBillsendMoneyInfoFragment : Fragment() {
+class SpiltBillRequestProfileFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -17,16 +18,17 @@ class SpiltBillsendMoneyInfoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.spilt_bill_send_money_info_layout, container, false)
+        val view = inflater.inflate(R.layout.spilt_bill_request_profile_layout, container, false)
 
-
-        view.send_money_info_btn.setOnClickListener(View.OnClickListener {
+        view.button6.setOnClickListener(View.OnClickListener {
             FragmentHelper.replaceFragment(
-                SpiltBillRequestDoneFragment(),
+                SpiltBillProfileFragment(),
                 activity?.supportFragmentManager,
                 R.id.spilt_bill_container
             )
         })
+
+
 
 
         return view

@@ -20,14 +20,21 @@ class SpiltBillProfileFragment : Fragment() {
         val view = inflater.inflate(R.layout.spilt_bill_profile_layout, container, false)
 
 
+//        view.spilt_bill_btn.setOnClickListener(View.OnClickListener {
+//            FragmentHelper.replaceFragment(
+//                SpiltBillAmountFragment(),
+//                activity?.supportFragmentManager,
+//                R.id.schedule_transfer_container
+//            )
+//        })
+
         view.spilt_bill_btn.setOnClickListener(View.OnClickListener {
             FragmentHelper.replaceFragment(
                 SpiltBillAmountFragment(),
                 activity?.supportFragmentManager,
-                R.id.schedule_transfer_container
+                R.id.spilt_bill_container
             )
         })
-
 
         return view
     }

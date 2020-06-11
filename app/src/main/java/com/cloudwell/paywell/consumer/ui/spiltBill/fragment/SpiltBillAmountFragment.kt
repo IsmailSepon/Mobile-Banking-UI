@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.consumer.R
+import com.cloudwell.paywell.consumer.ui.spiltBill.fragment.requestSpiltbill.SpiltBillRequestFragment
+import com.cloudwell.paywell.consumer.utils.FragmentHelper
 import kotlinx.android.synthetic.main.spilt_bill_amount_layout.view.*
 
 class SpiltBillAmountFragment : Fragment() {
@@ -20,11 +22,19 @@ class SpiltBillAmountFragment : Fragment() {
 
 
         view.spilt_amount_done_btn.setOnClickListener(View.OnClickListener {
-//            FragmentHelper.replaceFragment(
-//                ScheduleSelectAmountFragment(),
-//                activity?.supportFragmentManager,
-//                R.id.schedule_transfer_container
-//            )
+            FragmentHelper.replaceFragment(
+                SpiltBillDoneFragment(),
+                activity?.supportFragmentManager,
+                R.id.spilt_bill_container
+            )
+        })
+
+        view.constraintLayout15.setOnClickListener(View.OnClickListener {
+            FragmentHelper.replaceFragment(
+                SpiltBillRequestFragment(),
+                activity?.supportFragmentManager,
+                R.id.spilt_bill_container
+            )
         })
 
 

@@ -35,7 +35,7 @@
 
 
     <Button
-        android:id="@+id/email_verification_btn"
+        android:id="@+id/request_done"
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_hight"
         android:background="@drawable/round_btn_visable"

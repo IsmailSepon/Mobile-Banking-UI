@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout17"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_190dp"
+        android:background="#f0f4f9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView109"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:id="@+id/textView223"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/completed"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView224"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Jan 01, 06.30 PM"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView223" />
+
+        <LinearLayout
+            android:layout_width="164dp"
+            android:layout_height="@dimen/_33dp"
+            android:layout_marginTop="@dimen/_13dp"
+            android:background="@drawable/round_btn_light_blue"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView224">
+
+            <ImageView
+                android:layout_width="@dimen/_15dp"
+                android:layout_height="@dimen/_14dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_26dp"
+                app:srcCompat="@drawable/ecomarch_ic" />
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:text="@string/ecommerce"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView110"
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/daraz" />
+
+    <TextView
+        style="@style/text_style"
+        android:textSize="@dimen/_27sp"
+        android:textColor="@color/keypad_text_clr"
+        android:id="@+id/textView225"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="-   300"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView110" />
+
+    <TextView
+        style="@style/text_style"
+        android:textSize="@dimen/_17sp"
+        android:textStyle="bold"
+        android:textColor="@color/keypad_text_clr"
+        android:id="@+id/textView226"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Daraz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView225" />
+
+    <TextView
+        style="@style/text_style"
+        android:textSize="@dimen/_15sp"
+        android:textColor="@color/common_clr"
+        android:id="@+id/textView227"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="Add note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView226" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/common_clr"
+        android:layout_marginTop="@dimen/_20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView227"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <Button
+        android:id="@+id/button6"
+        style="@style/HomeButton"
+        android:layout_width="@dimen/_80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40dp"
+        android:drawableTop="@drawable/spilt_bill_ic"
+        android:text="@string/split_bill"
+        android:textAllCaps="false"
+        android:textColor="@color/keypad_text_clr"
+        app:layout_constraintEnd_toStartOf="@+id/button17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+
+    <Button
+        android:id="@+id/button16"
+        style="@style/HomeButton"
+        android:layout_width="@dimen/_80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40dp"
+        android:drawableTop="@drawable/hide_ic"
+        android:text="@string/hide"
+        android:textAllCaps="false"
+        android:textColor="@color/keypad_text_clr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button17"
+        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+
+    <Button
+        android:id="@+id/button17"
+        style="@style/HomeButton"
+        android:layout_width="@dimen/_80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40dp"
+        android:drawableTop="@drawable/statment_small"
+        android:text="@string/statement"
+        android:textAllCaps="false"
+        android:textColor="@color/keypad_text_clr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:background="@color/blck_bg"
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/help_txt"
+        style="@style/medium_text_style"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/something_wrong_get_help"
+        android:textSize="@dimen/_15sp"
+        android:layout_marginTop="@dimen/_26dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView28" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_26dp"
+        android:background="@color/blck_bg"
+        app:layout_constraintTop_toBottomOf="@+id/help_txt"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <TextView
+        style="@style/text_style"
+        android:textSize="@dimen/_15sp"
+        android:textColor="@color/recyclerview_title"
+        android:id="@+id/textView228"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How was your experience with Daraz?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView29" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

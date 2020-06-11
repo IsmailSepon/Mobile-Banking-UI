@@ -272,5 +272,9 @@
     <string name="we_ll_need_your_payment_details_to_send_your_money_to_anisul_islam_s_paywell_account_instantly">We’ll need your payment details to send your money to Anisul Islam’s PayWell account instantly</string>
     <string name="please_enter_your_payment_ndetails_maruf_hasan">Please enter your payment\ndetails, Maruf Hasan</string>
     <string name="paying_amount">Paying amount</string>
+    <string name="ecommerce">Ecommerce</string>
+    <string name="completed">Completed</string>
+    <string name="hide">Hide</string>
+    <string name="something_wrong_get_help">Something wrong? Get help!</string>
 
 </resources>

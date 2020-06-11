@@ -78,7 +78,7 @@
             android:layout_marginEnd="@dimen/_32dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/request_money_done_btn"
+            app:layout_constraintBottom_toTopOf="@+id/spilt_amount_done_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"

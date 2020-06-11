@@ -24,7 +24,7 @@ class SpiltBillSendMoneyFragment : Fragment() {
             FragmentHelper.replaceFragment(
                 SpiltBillsendMoneyInfoFragment(),
                 activity?.supportFragmentManager,
-                R.id.schedule_transfer_container
+                R.id.spilt_bill_container
             )
         })
 
