@@ -8,7 +8,7 @@
 
         <variable
             name="viewmode"
-            type="com.cloudwell.paywell.consumer.ui.account.AccountViewModel" />
+            type="com.cloudwell.paywell.consumer.ui.account.viewModel.AccountViewModel" />
     </data>
 
 
