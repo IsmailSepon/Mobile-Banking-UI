@@ -13,6 +13,7 @@
     </data>
 
 
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -180,40 +181,146 @@
                 tools:ignore="MissingConstraints" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/image"
-        app:srcCompat="@drawable/slider_demo"
-        android:layout_margin="@dimen/_24dp"
-        android:scaleType="fitXY"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_100dp"
-        tools:ignore="ContentDescription" />
-
-<!--    <ss.com.bannerslider.Slider-->
-        <!--        android:id="@+id/view_pager_auto"-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="100dp"-->
-        <!--        android:layout_margin="24dp"-->
-        <!--        android:visibility="visible"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toBottomOf="@+id/txtHeading"-->
-        <!--        tools:layout_conversion_absoluteHeight="150dp"-->
-        <!--        tools:layout_conversion_absoluteWidth="379dp" />-->
-        <TextView
-            android:layout_marginLeft="@dimen/_20dp"
-            android:id="@+id/textView232"
+        <ScrollView
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Today" />
+            android:layout_height="match_parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="@dimen/_21dp"
-            android:id="@+id/spilt_bill_recyclerview"
-            android:layout_width="match_parent"
-            android:scrollbars="vertical"
-            android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image"
+                    app:srcCompat="@drawable/slider_demo"
+                    android:layout_margin="@dimen/_24dp"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100dp"
+                    tools:ignore="ContentDescription" />
+
+                <!--    <ss.com.bannerslider.Slider-->
+                <!--        android:id="@+id/view_pager_auto"-->
+                <!--        android:layout_width="match_parent"-->
+                <!--        android:layout_height="100dp"-->
+                <!--        android:layout_margin="24dp"-->
+                <!--        android:visibility="visible"-->
+                <!--        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--        app:layout_constraintStart_toStartOf="parent"-->
+                <!--        app:layout_constraintTop_toBottomOf="@+id/txtHeading"-->
+                <!--        tools:layout_conversion_absoluteHeight="150dp"-->
+                <!--        tools:layout_conversion_absoluteWidth="379dp" />-->
 
 
+                <ImageView
+                    android:background="@color/common_clr"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/half_one" />
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_20dp"
+                    style="@style/medium_text_style"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:text="Pending" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/pendding_req"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/imageView121"
+                        android:layout_width="@dimen/_33dp"
+                        android:layout_height="@dimen/_33dp"
+                        android:layout_marginStart="24dp"
+                        android:src="@drawable/person"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textView239"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Amzad Hossain"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_14sp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView121"
+                        app:layout_constraintTop_toTopOf="@+id/imageView121" />
+
+                    <TextView
+                        android:id="@+id/textView240"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:55, "
+                        app:layout_constraintStart_toStartOf="@+id/textView239"
+                        app:layout_constraintTop_toBottomOf="@+id/textView239" />
+
+                    <TextView
+                        android:id="@+id/textView241"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="owes you"
+                        android:textColor="@color/recyclerview_title"
+                        android:textSize="@dimen/_10sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView239" />
+
+                    <TextView
+                        android:id="@+id/textView242"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+   150"
+                        android:textColor="@color/recyclerview_title"
+                        android:textSize="@dimen/_13sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView241"
+                        app:layout_constraintTop_toBottomOf="@+id/textView241" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@color/common_clr"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/half_one"
+                    tools:ignore="ContentDescription" />
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:id="@+id/textView232"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:text="Today" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_21dp"
+                    android:id="@+id/spilt_bill_recyclerview"
+                    android:layout_width="match_parent"
+                    android:scrollbars="vertical"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
     </LinearLayout>
+
+
 </layout>

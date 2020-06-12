@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
@@ -15,12 +16,14 @@ import com.cloudwell.paywell.consumer.databinding.FragmentHomeBinding
 import com.cloudwell.paywell.consumer.ui.account.adapter.CoursesItem
 import com.cloudwell.paywell.consumer.ui.account.adapter.SwipeHelper
 import com.cloudwell.paywell.consumer.ui.account.adapter.TestAdapter
+import com.cloudwell.paywell.consumer.ui.account.pendingPopupDialog.RequestProfileDialog
+import com.cloudwell.paywell.consumer.ui.account.view.IaccountVIew
 import com.cloudwell.paywell.consumer.ui.account.viewModel.AccountViewModel
 import com.cloudwell.paywell.consumer.ui.spiltBill.fragment.SpiltBillHoastActivity
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 
-class AccountFragment : Fragment() {
+class AccountFragment : Fragment(), IaccountVIew {
 
     private lateinit var homeViewModel: AccountViewModel
 
@@ -37,35 +40,17 @@ class AccountFragment : Fragment() {
         binding.viewmode = homeViewModel
         binding.lifecycleOwner = this
 
-//        val btn : Button = root.findViewById(R.id.homeBtnTopup)
-//       // val btn_doc : Button = root.findViewById(R.id.homeBtnUtility)
-//        btn.setOnClickListener(View.OnClickListener {
-//            startActivity(Intent(activity, RegistationMainActivity::class.java))
-//        })
-////        btn_doc.setOnClickListener(View.OnClickListener {
-////            startActivity(Intent(activity, DocumentSubmitActivity::class.java))
-////        })
-//
-//        image = root.findViewById(R.id.image);
-//        context?.let {
-//            Glide
-//                .with(it)
-//                .load("https://api.paywellonline.com/retailerPromotionImage/Banner_Bus.9.png")
-//                .into(image!!)
-//        }
-//
-//        imageUrl.add("https://api.paywellonline.com/retailerPromotionImage/Banner_Bus.9.png")
-//        val textView: TextView = root.findViewById(R.id.text_home)
-//        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//        })
+        binding.root.pendding_req.setOnClickListener(View.OnClickListener {
+            Toast.makeText(activity?.applicationContext, "click", Toast.LENGTH_LONG).show()
+            val dialog: RequestProfileDialog = RequestProfileDialog()
+            activity?.supportFragmentManager?.let { it1 ->
+                dialog.show(
+                    it1,
+                    "RequestProfileDialog"
+                )
+            }
 
-//        viewPager = root.findViewById(R.id.view_pager_auto)
-//        viewPager?.setAdapter(MainSliderAdapter(imageUrl))
-
-//        homeBtnTopup.setOnClickListener(View.OnClickListener {
-//            startActivity(Intent(activity, RegistationMainActivity::class.java))
-//        })
+        })
 
         val linearLayoutManager: LinearLayoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
@@ -129,6 +114,30 @@ class AccountFragment : Fragment() {
                     startActivity(intent)
                 }
             })
+    }
+
+    override fun startAccountPopupDialog() {
+//        Toast.makeText(activity?.applicationContext, "click", Toast.LENGTH_LONG).show()
+//        val dialog: RequestProfileDialog = RequestProfileDialog()
+//        activity?.supportFragmentManager?.let { it1 -> dialog.show(it1, "RequestProfileDialog") }
+
+    }
+
+
+    override fun noInternetConnectionFound() {
+        TODO("Not yet implemented")
+    }
+
+    override fun showProgress() {
+        TODO("Not yet implemented")
+    }
+
+    override fun hiddenProgress() {
+        TODO("Not yet implemented")
+    }
+
+    override fun onFailure(message: String?) {
+        TODO("Not yet implemented")
     }
 
 }
