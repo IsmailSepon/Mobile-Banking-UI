@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_round_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/text_style"
+        android:textStyle="bold"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        android:id="@+id/textView112"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/deactivate_recurring_transfer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView127"
+        style="@style/text_style"
+        android:layout_width="@dimen/_240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="left"
+        android:text="@string/your_recurring_transfer_of_200_will_be_deactivated"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="@+id/textView112"
+        app:layout_constraintTop_toBottomOf="@+id/textView112" />
+
+    <TextView
+        android:id="@+id/textView151"
+        style="@style/text_style"
+        android:layout_width="@dimen/_220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:gravity="left"
+        android:text="@string/you_will_be_able_to_activate_it_at_any_time_later"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView127"
+        app:layout_constraintTop_toBottomOf="@+id/textView127" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_28dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:background="@color/transparent"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/textView151" />
+
+    <Button
+        android:id="@+id/button9"
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_15sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_regular"
+        android:textAllCaps="false"
+        android:background="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:text="@string/deactivate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button8" />
+</androidx.constraintlayout.widget.ConstraintLayout>

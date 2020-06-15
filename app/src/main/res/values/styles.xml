@@ -86,7 +86,6 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="fontFamily">@font/roboto_regular</item>
-        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="medium_text_style">
@@ -128,6 +127,38 @@
 
     <style name="DatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
         <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+
+    <!--Style for BlurBottomSheet-->
+    <style name="SheetDialog2" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="EditTextTheme">
+        <item name="colorControlNormal">@color/common_clr</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">#FFFFFF</item>
+    </style>
+
+
+    <style name="CustomDatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:datePickerStyle">@style/CustomDatePickerStyle</item>
+    </style>
+
+    <style name="CustomDatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker" tools:targetApi="lollipop">
+        <item name="android:headerMonthTextAppearance">@style/HeaderTextStyle</item>
+    </style>
+
+    <style name="HeaderTextStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/colorAccent</item>
     </style>
 
 </resources>

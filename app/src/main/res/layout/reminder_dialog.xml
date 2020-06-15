@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_357dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10dp"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_30dp"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/textView244"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_21dp"
+            android:layout_marginTop="@dimen/_21dp"
+            android:text="Reminder"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/button20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_70dp"
+            android:background="@color/transparent"
+            android:drawableTop="@drawable/timer_1_ic"
+            android:text="3 hours"
+            android:textAllCaps="false"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22dp"
+            android:background="@color/transparent"
+            android:drawableTop="@drawable/tomorrow_dialog_ic"
+            android:text="3 hours"
+            android:textAllCaps="false"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toEndOf="@+id/button20"
+            app:layout_constraintStart_toStartOf="@+id/button19"
+            app:layout_constraintTop_toBottomOf="@+id/button19" />
+
+        <Button
+            android:id="@+id/button23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22dp"
+            android:background="@color/transparent"
+            android:drawableTop="@drawable/timer_ic"
+            android:text="3 hours"
+            android:textAllCaps="false"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toEndOf="@+id/button21"
+            app:layout_constraintStart_toStartOf="@+id/button20"
+            app:layout_constraintTop_toBottomOf="@+id/button19" />
+
+        <Button
+            android:id="@+id/button21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="@dimen/_70dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/transparent"
+            android:drawableTop="@drawable/timer_2_ic"
+            android:text="3 hours"
+            android:textAllCaps="false"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button20"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/_70dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/transparent"
+            android:drawableTop="@drawable/timer_3_ic"
+            android:text="3 hours"
+            android:textAllCaps="false"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toStartOf="@+id/button20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

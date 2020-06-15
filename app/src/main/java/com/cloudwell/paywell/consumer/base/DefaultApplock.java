@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.cloudwell.paywell.consumer.activity.SplashScreenActivity;
+import com.cloudwell.paywell.consumer.ui.splash.SplashScreenActivity;
 
 import java.util.Date;
 

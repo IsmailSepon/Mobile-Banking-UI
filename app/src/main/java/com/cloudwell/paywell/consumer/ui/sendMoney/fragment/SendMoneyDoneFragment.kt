@@ -19,13 +19,14 @@ class SendMoneyDoneFragment : Fragment() {
         val view = inflater.inflate(R.layout.send_money_done, container, false)
 
         view.send_money_done.setOnClickListener(View.OnClickListener {
-            val done =
-                SendMoneyDoneFragment()
-            val manager = activity?.supportFragmentManager
-            val transaction = manager?.beginTransaction()
-            transaction?.replace(R.id.beneficery_host_container, done)
-            transaction?.addToBackStack(null)
-            transaction?.commit()
+            activity?.finish()
+//            val done =
+//                SendMoneyDoneFragment()
+//            val manager = activity?.supportFragmentManager
+//            val transaction = manager?.beginTransaction()
+//            transaction?.replace(R.id.beneficery_host_container, done)
+//            transaction?.addToBackStack(null)
+//            transaction?.commit()
         })
 
 //        beneficeryViewModel =

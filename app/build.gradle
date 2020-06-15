@@ -128,7 +128,9 @@ dependencies {
 
     implementation "androidx.biometric:biometric:${rootProject.ext.biometricVersion}"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-
+    //datepicker
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
 }
