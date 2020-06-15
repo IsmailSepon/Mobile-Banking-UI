@@ -13,7 +13,6 @@
     </data>
 
 
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -181,13 +180,12 @@
                 tools:ignore="MissingConstraints" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ScrollView
+        <androidx.core.widget.NestedScrollView
             android:fillViewport="true"
             android:orientation="vertical"
-            android:scrollIndicators="none"
-            android:nestedScrollingEnabled="true"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
             tools:targetApi="m">
 
             <LinearLayout
@@ -220,7 +218,8 @@
                 <ImageView
                     android:background="@color/common_clr"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/half_one" />
+                    android:layout_height="@dimen/half_one"
+                    tools:ignore="ContentDescription" />
 
 
                 <TextView
@@ -318,13 +317,13 @@
                     android:id="@+id/spilt_bill_recyclerview"
                     android:layout_width="match_parent"
                     android:scrollbars="vertical"
+                    android:nestedScrollingEnabled="true"
                     android:layout_height="wrap_content" />
 
 
             </LinearLayout>
 
-        </ScrollView>
+        </androidx.core.widget.NestedScrollView>
     </LinearLayout>
-
 
 </layout>

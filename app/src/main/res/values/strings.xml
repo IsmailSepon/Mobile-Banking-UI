@@ -283,5 +283,11 @@
     <string name="no">No</string>
     <string name="yes">Yes</string>
     <string name="close">Close</string>
+    <string name="people_near_me">People Near me</string>
+    <string name="invite_friends">Invite friends</string>
+    <string name="to_find_your_friends_ask_them_to_open_this_nscreen_in_their_app_or_invite_them_to_join">To find your friends, ask them to open this\nscreen in their app, or invite them to join</string>
+    <string name="to_find_your_friends_ask_them_to_open_this_screen_in_their_app_or_invite_them_to_join_paywell">To find your friends, ask them to open this screen in their app, or invite them to join PayWell</string>
+    <string name="searching_for_paywell_users">Searching for PayWell users ...</string>
+    <string name="you_can_review_your_requests_anytime_nin_your_transactions_list">You can review your requests anytime\nin your transactions list</string>
 
 </resources>

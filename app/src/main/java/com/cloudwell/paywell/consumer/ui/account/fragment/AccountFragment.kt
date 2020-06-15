@@ -87,6 +87,8 @@ class AccountFragment : Fragment(), IaccountVIew, DatePickerDialog.OnDateSetList
         val linearLayoutManager: LinearLayoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         binding.root.spilt_bill_recyclerview.layoutManager = linearLayoutManager
+
+        binding.root.spilt_bill_recyclerview.setHasFixedSize(false)
         val item = CoursesItem()
         item.amount = "300"
         var list = ArrayList<CoursesItem>()
