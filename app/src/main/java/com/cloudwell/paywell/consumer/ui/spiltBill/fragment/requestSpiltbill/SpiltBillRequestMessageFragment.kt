@@ -19,13 +19,17 @@ class SpiltBillRequestMessageFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.spilt_bill_request_message_layout, container, false)
 
+        val value = requireArguments().getString("requestMoney")
 
         view.send_text.setOnClickListener(View.OnClickListener {
+
+
             FragmentHelper.replaceFragment(
                 SpiltBillSendMoneyFragment(),
                 activity?.supportFragmentManager,
                 R.id.spilt_bill_container
             )
+
         })
 
 

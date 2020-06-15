@@ -260,12 +260,11 @@
     <string name="request">Request</string>
     <string name="requests_to_split_the_bill_are_sent">Requests\nto split the bill are sent!</string>
     <string name="you_can_review_your_requests_anytime_in_your_transactions_list">You can review your requests anytime\nin your transactions list</string>
-    <string name="send_link">Send link</string>
     <string name="split_bill_request">Split bill request</string>
     <string name="send_this_link_to_maruf_hasan_so_that_s_he_can_use_it_to_pay_you_150">Send this link to Maruf Hasan so that (s)he can use it to pay you ৳150</string>
     <string name="http_www_paywellonline_com_money_request_uiu5458ams">http://www.paywellonline.com/money-request/UIU5458ams</string>
     <string name="please_send_me_150_using_this_link_from_paywell">Please send me ৳150 using this link from PayWell:</string>
-    <string name="paywell_http_www_paywellonline_com_money_request_uiu5458ams">PayWell: http://www.paywellonline.com/money-request/UIU5458ams.</string>
+    <string name="paywell_http_www_paywellonline_com_money_request_uiu5458ams">http://www.paywellonline.com/money-request/UIU5458ams.</string>
     <string name="ps_paywell_is_a_bangladesh_bank_licensed_payment_service_provider">PS: PayWell is a Bangladesh Bank licensed payment service provider</string>
     <string name="send">Send</string>
     <string name="send_anisul_islam_money">Send Anisul Islam money</string>
@@ -289,5 +288,8 @@
     <string name="to_find_your_friends_ask_them_to_open_this_screen_in_their_app_or_invite_them_to_join_paywell">To find your friends, ask them to open this screen in their app, or invite them to join PayWell</string>
     <string name="searching_for_paywell_users">Searching for PayWell users ...</string>
     <string name="you_can_review_your_requests_anytime_nin_your_transactions_list">You can review your requests anytime\nin your transactions list</string>
+    <string name="send_this_link_to_any_of_your_address_nbook_contacts_so_that_s_he_can_use_it_nto_pay_you_2000">Send this link to any of your address\nbook contacts so that (s)he can use it\nto pay you ৳2000</string>
+    <string name="send_link">Send link</string>
+    <string name="choose_from_address_book_or_enter_nemail_mobile_number_manually">Choose from address book or enter\nemail/mobile number manually</string>
 
 </resources>

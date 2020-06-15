@@ -10,6 +10,7 @@ import com.cloudwell.paywell.consumer.ui.requestMoney.fragment.nearMe.NearMeSear
 import com.cloudwell.paywell.consumer.utils.FragmentHelper
 import kotlinx.android.synthetic.main.request_money_main_frg_layout.view.*
 
+
 class RequestMoneyMainFragment : Fragment() {
 
 
@@ -35,6 +36,17 @@ class RequestMoneyMainFragment : Fragment() {
                 NearMeSearchFragment(),
                 activity?.supportFragmentManager,
                 R.id.request_money_container
+            )
+        })
+
+        view.creat_link_btn.setOnClickListener(View.OnClickListener {
+
+            val requestMoneyFragment = RequestMoneyFragment()
+            val args = Bundle()
+            args.putString("activity", "create_link")
+            requestMoneyFragment.arguments = args
+            FragmentHelper.replaceFragment(
+                requestMoneyFragment, activity?.supportFragmentManager, R.id.request_money_container
             )
         })
 

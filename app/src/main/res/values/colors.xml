@@ -20,4 +20,5 @@
     <color name="blck_bg">#19000000</color>
     <color name="white_2">#f0f4f9</color>
     <color name="card_bg">#f1f6fb</color>
+    <color name="slim_divider_bg">#E4E8ED</color>
 </resources>

@@ -1,13 +1,16 @@
-package com.cloudwell.paywell.consumer.ui.requestMoney.fragment.nearMe
+package com.cloudwell.paywell.consumer.ui.requestMoney.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.consumer.R
+import com.cloudwell.paywell.consumer.ui.requestMoney.fragment.creat_link.RequestMoneyCreatLinkFragment
+import com.cloudwell.paywell.consumer.ui.requestMoney.fragment.nearMe.RequestNearDoneFragment
 import com.cloudwell.paywell.consumer.utils.FragmentHelper
 import com.example.nbtk.slider.ScreenUtils
 import com.example.nbtk.slider.SliderAdapter
@@ -29,6 +32,9 @@ class RequestMoneyFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.request_money, container, false)
 
+        val value = requireArguments().getString("activity")
+        Toast.makeText(activity?.applicationContext, value, Toast.LENGTH_LONG).show()
+
         data.add("300")
         data.add("500")
         data.add("1000")
@@ -43,12 +49,21 @@ class RequestMoneyFragment : Fragment() {
 
 
         view.request_amount_submit.setOnClickListener(View.OnClickListener {
-            FragmentHelper.replaceFragment(
-                RequestNearDoneFragment(),
-                activity?.supportFragmentManager,
-                R.id.request_money_container
 
-            )
+            if (value.equals("create_link")) {
+                FragmentHelper.replaceFragment(
+                    RequestMoneyCreatLinkFragment(),
+                    activity?.supportFragmentManager,
+                    R.id.request_money_container
+                )
+            } else {
+                FragmentHelper.replaceFragment(
+                    RequestNearDoneFragment(),
+                    activity?.supportFragmentManager,
+                    R.id.request_money_container
+                )
+            }
+
         })
 
 //        beneficeryViewModel =
