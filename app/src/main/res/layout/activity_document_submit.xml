@@ -7,14 +7,16 @@
     tools:context=".activity.registation.nidVerification.DocumentSubmitActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/continue_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintVertical_bias="0.13"
         tools:ignore="MissingConstraints">
 
 
@@ -24,15 +26,15 @@
             android:layout_marginStart="1dp"
             android:text="@string/type_document"
             android:textColor="@color/common_clr"
-            android:textSize="10sp" />
+            android:textSize="@dimen/txt_ten_sp"
+            tools:ignore="SmallSp" />
 
         <Spinner
 
             android:id="@+id/document_spinner"
             style="@style/Base.Widget.AppCompat.Spinner.Underlined"
-            android:layout_width="276dp"
+            android:layout_width="@dimen/spiner_width"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:background="@drawable/spinner_bg"
             android:gravity="center"
@@ -51,50 +53,55 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="17dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="@dimen/cross_width"
+        android:layout_height="@dimen/cross_hight"
+        android:layout_marginStart="@dimen/twenty_four_dp"
+        android:layout_marginTop="@dimen/twenty_four_dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cross_btn" />
+        app:srcCompat="@drawable/cross_btn"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/passport_veri" />
+        app:layout_constraintVertical_bias="0.14999998"
+        app:srcCompat="@drawable/passport_veri"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="276dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="@dimen/fouty_dp"
+        android:layout_marginEnd="@dimen/fouty_dp"
         android:text="@string/pass_doc"
         android:textAlignment="center"
         android:textColor="@color/keypad_text_clr"
-        android:textSize="18sp"
+        android:textSize="@dimen/txt_eighteen_sp"
+        app:layout_constraintBottom_toTopOf="@+id/continue_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:layout_constraintVertical_bias="0.060000002" />
 
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="32dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/continue_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.13999999"
         tools:ignore="MissingConstraints">
 
 
@@ -102,16 +109,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
-            android:text="Nationality"
+            android:text="@string/nationality"
             android:textColor="@color/common_clr"
-            android:textSize="10sp" />
+            android:textSize="@dimen/txt_ten_sp" />
 
         <Spinner
             android:id="@+id/country_spinner"
             style="@style/Base.Widget.AppCompat.Spinner.Underlined"
-            android:layout_width="276dp"
+            android:layout_width="@dimen/spiner_width"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:background="@drawable/spinner_bg"
             android:gravity="center"
@@ -130,19 +136,21 @@
 
     <Button
         android:id="@+id/continue_btn"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:textSize="15sp"
-        android:layout_marginBottom="80dp"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:elevation="@dimen/evelation_five"
         android:background="@drawable/round_btn"
         android:text="@string/continue_txt"
         android:textAllCaps="false"
         android:textColor="@color/white"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.715" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        tools:targetApi="lollipop" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

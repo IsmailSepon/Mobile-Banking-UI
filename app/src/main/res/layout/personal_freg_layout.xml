@@ -10,7 +10,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -21,10 +21,10 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="@dimen/_50dp"
                 android:text="@string/what_are_your_personal_details"
                 android:textColor="@color/keypad_text_clr"
-                android:textSize="16sp"
+                android:textSize="@dimen/_16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="@dimen/_100dp"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -44,10 +44,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Full name*"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:text="@string/full_name"
                     android:textColor="@color/common_clr"
-                    android:textSize="10sp"
+                    android:textSize="@dimen/_10sp"
                     tools:ignore="MissingConstraints" />
 
 
@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/common_et_bg"
                     android:ems="13"
-                    android:hint="Name"
+                    android:hint="@string/name"
                     android:inputType="textCapWords"
                     android:textColor="@color/keypad_text_clr" />
 
@@ -69,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/_20dp"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -78,10 +78,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Date of birth *"
+                    android:text="@string/dateofbirth_Require"
                     android:textColor="@color/common_clr"
-                    android:textSize="10sp"
-                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/_10sp"
+                    android:layout_marginBottom="@dimen/_10dp"
                     app:layout_constraintBottom_toTopOf="@+id/date_of_birth"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.201"
@@ -95,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/common_et_bg"
                     android:ems="13"
-                    android:hint="01/20/1988"
+                    android:hint="@string/_01_20_1988"
                     android:focusable="false"
                     android:textColor="@color/keypad_text_clr"
                     tools:ignore="MissingConstraints" />
@@ -105,13 +105,13 @@
 
             <Button
                 android:id="@+id/nect_btn"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/_250dp"
+                android:layout_height="@dimen/_50dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="250dp"
-                android:layout_marginBottom="80dp"
+                android:layout_marginTop="@dimen/_250dp"
+                android:layout_marginBottom="@dimen/_80dp"
                 android:background="@drawable/round_btn"
-                android:elevation="5dp"
+                android:elevation="@dimen/_5dp"
                 android:text="@string/continue_txt"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -120,7 +120,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+                tools:targetApi="lollipop" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>

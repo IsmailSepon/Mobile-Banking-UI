@@ -8,25 +8,26 @@
             android:id="@+id/billViewLL"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp">
+            android:layout_margin="@dimen/_10dp">
 
             <ImageView
-                android:layout_width="15dp"
-                android:layout_height="2dp"
-                android:layout_marginTop="152dp"
+                android:id="@+id/imageView34"
+                android:layout_width="@dimen/_15dp"
+                android:layout_height="@dimen/_2dp"
                 android:background="@color/keypad_text_clr"
+                app:layout_constraintBottom_toTopOf="@+id/textView65"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvOtpMessage"
                 tools:ignore="MissingConstraints"
-                android:id="@+id/imageView34" />
+                app:layout_constraintVertical_bias="0.32999998" />
 
             <com.cloudwell.paywell.consumer.ui.registration.customView.PinEntryEditText
                 android:id="@+id/etMobileOrRID"
-                android:layout_width="200dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_width="@dimen/_200dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginEnd="@dimen/_24dp"
                 android:background="@drawable/rect_text_edit"
                 android:backgroundTint="@color/keypad_text_clr"
                 android:cursorVisible="false"
@@ -36,103 +37,60 @@
                 android:textColor="@color/keypad_text_clr"
                 android:textCursorDrawable="@null"
                 android:textIsSelectable="false"
-                android:textSize="20sp"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView65"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView34" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView34"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="UnusedAttribute" />
 
             <TextView
                 android:id="@+id/otpVerificationTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="66dp"
-                android:padding="5dp"
-                android:text="Enter the 6-digit code"
+                android:padding="@dimen/_5dp"
+                android:text="@string/enter_the_6_digit_code"
                 android:textColor="@color/keypad_text_clr"
-                android:textSize="16sp"
+                android:textSize="@dimen/_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.100000024" />
 
             <TextView
                 android:id="@+id/tvOtpMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:gravity="center"
-                android:padding="2dp"
+                android:padding="@dimen/_2dp"
                 android:text="We’ve sent it to +88001758712950"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="14sp"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/otpVerificationTV" />
+                app:layout_constraintTop_toBottomOf="@+id/otpVerificationTV"
+                app:layout_constraintVertical_bias="0.060000002" />
 
             <TextView
                 android:id="@+id/textView65"
                 style="@style/text_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="93dp"
-                android:text="No verification code received?"
+                android:text="@string/no_verification_code_received"
                 android:textColor="@color/keypad_text_clr"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etMobileOrRID"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <!--            <Button-->
-            <!--                android:visibility="gone"-->
-            <!--                android:id="@+id/btCancel"-->
-            <!--                android:layout_width="150dp"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_marginStart="24dp"-->
-            <!--                android:layout_marginLeft="24dp"-->
-            <!--                android:layout_marginTop="16dp"-->
-            <!--                android:layout_marginEnd="24dp"-->
-            <!--                android:layout_marginRight="24dp"-->
-            <!--                android:background="@drawable/submit_button"-->
-            <!--                android:drawableLeft="@drawable/submit_icon"-->
-            <!--                android:paddingLeft="26dp"-->
-            <!--                android:paddingTop="8dp"-->
-            <!--                android:paddingRight="26dp"-->
-            <!--                android:paddingBottom="8dp"-->
-            <!--                android:text="Cancel"-->
-            <!--                android:textColor="#FFFFFF"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/btNextOtp" />-->
-
-            <!--            <TextView-->
-            <!--                android:id="@+id/textView58"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_marginTop="16dp"-->
-            <!--                android:text="@string/didn_t_you_received_any_code"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/btCancel" />-->
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.86" />
 
 
-            <!--            <com.dhruv.timerbutton.TimerButton-->
-            <!--                android:id="@+id/timer_button"-->
-            <!--                android:layout_width="150dp"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_centerInParent="true"-->
-            <!--                android:layout_marginTop="8dp"-->
-            <!--                android:layout_marginBottom="32dp"-->
-            <!--                app:animationBackground="@color/mti_default_primary"-->
-            <!--                app:animationCompleteText="@string/resend_otp"-->
-            <!--                app:buttonBackground="@color/mti_default_primary"-->
-            <!--                app:defaultText="@string/resend_otp"-->
-            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:textColor="@color/white" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

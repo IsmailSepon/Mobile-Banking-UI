@@ -8,21 +8,21 @@
     <ImageView
         android:id="@+id/imageView28"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_marginTop="32dp"
-        android:background="#19000000"
+        android:layout_height="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_32dp"
+        android:background="@color/blck_bg"
         app:layout_constraintTop_toBottomOf="@+id/button6"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="ContentDescription,MissingConstraints" />
 
     <Button
         android:id="@+id/button7"
         style="@style/HomeButton"
-        android:layout_width="80dp"
+        android:layout_width="@dimen/_80dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginEnd="@dimen/_100dp"
         android:drawableTop="@drawable/delate"
-        android:text="Delete"
+        android:text="@string/delete"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView27" />
@@ -30,36 +30,38 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:background="#f0f4f9"
+        android:layout_height="@dimen/_110dp"
+        android:background="@color/white_2"
         tools:ignore="MissingConstraints">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/back" />
+            android:layout_marginStart="@dimen/_32dp"
+            android:layout_marginTop="@dimen/_32dp"
+            android:src="@drawable/back"
+            tools:ignore="ContentDescription" />
 
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView26"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_100dp"
+        android:layout_marginTop="@dimen/_60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout3"
-        app:srcCompat="@drawable/selected_bank" />
+        app:srcCompat="@drawable/selected_bank"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView37"
         style="@style/medium_text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/_24dp"
         android:text="Prime Bank Mastercard *7671"
         android:textColor="@color/keypad_text_clr"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,21 +71,21 @@
     <ImageView
         android:id="@+id/imageView27"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginTop="@dimen/_32dp"
         android:background="@color/common_clr"
         app:layout_constraintTop_toBottomOf="@+id/textView37"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="ContentDescription,MissingConstraints" />
 
     <Button
         android:id="@+id/button6"
         style="@style/HomeButton"
-        android:layout_width="80dp"
+        android:layout_width="@dimen/_80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="@dimen/_100dp"
+        android:layout_marginTop="@dimen/_32dp"
         android:drawableTop="@drawable/adjust"
-        android:text="Adjust auto top-up"
+        android:text="@string/adjust_auto_top_up"
         android:textColor="@color/keypad_text_clr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView27" />
@@ -92,11 +94,11 @@
         android:id="@+id/textView40"
         style="@style/text_style"
         android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:text="Card details"
-        android:textColor="#7e8996"
+        android:layout_height="@dimen/_17dp"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:text="@string/card_details"
+        android:textColor="@color/common_clr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView28" />
 
@@ -105,10 +107,10 @@
         style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="Card number:"
-        android:textColor="#7e8996"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="@string/card_number1"
+        android:textColor="@color/common_clr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
@@ -117,10 +119,10 @@
         style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="Type:"
-        android:textColor="#7e8996"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="@string/type"
+        android:textColor="@color/common_clr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView41" />
 
@@ -129,10 +131,10 @@
         style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="Valid until:"
-        android:textColor="#7e8996"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="@string/valid_until"
+        android:textColor="@color/common_clr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
@@ -141,10 +143,10 @@
         style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="Bank name:"
-        android:textColor="#7e8996"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="@string/bank_name"
+        android:textColor="@color/common_clr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
@@ -153,7 +155,7 @@
         style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="@dimen/_32dp"
         android:text="Mastercard *7671"
         android:textColor="@color/keypad_text_clr"
         app:layout_constraintEnd_toEndOf="parent"
@@ -164,8 +166,8 @@
         style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:text="Credit"
+        android:layout_marginEnd="@dimen/_32dp"
+        android:text="@string/credit"
         android:textColor="@color/keypad_text_clr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView42" />
@@ -175,32 +177,23 @@
         style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:text="08/23"
+        android:layout_marginEnd="@dimen/_32dp"
+        android:text="@string/_08_23"
         android:textColor="@color/keypad_text_clr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView43" />
 
-    <TextView
-        android:id="@+id/textView48"
-        style="@style/text_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="@color/keypad_text_clr"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="312dp"
-        tools:layout_editor_absoluteY="597dp" />
 
     <TextView
         android:id="@+id/textView49"
         style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:text="Edit"
+        android:layout_marginEnd="@dimen/_32dp"
+        android:text="@string/edit"
         android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView48" />
+        app:layout_constraintTop_toBottomOf="@+id/textView47"
+        app:layout_constraintVertical_bias="0.74" />
 </androidx.constraintlayout.widget.ConstraintLayout>

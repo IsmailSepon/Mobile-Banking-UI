@@ -18,108 +18,113 @@
             android:id="@+id/imageView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginStart="@dimen/_32dp"
+            android:layout_marginTop="@dimen/_24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/back" />
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView26"
             style="@style/medium_text_style"
-            android:layout_marginTop="70dp"
             android:text="@string/choose_transfer_type"
             android:textColor="@color/keypad_text_clr"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.100000024" />
 
         <TextView
             android:id="@+id/textView27"
             style="@style/text_style"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="@dimen/_32dp"
             android:text="@string/transfer_type"
             android:textColor="@color/common_clr"
+            app:layout_constraintBottom_toTopOf="@+id/transferBtn"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+            app:layout_constraintTop_toBottomOf="@+id/textView26"
+            app:layout_constraintVertical_bias="0.07999998" />
 
 
         <Button
 
             android:id="@+id/transferBtn"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:textSize="15sp"
-            android:layout_marginBottom="80dp"
+            android:layout_width="@dimen/_250dp"
+            android:layout_height="@dimen/_50dp"
             android:background="@drawable/round_btn_visable"
             android:onClick="@{chooseViewmodelXml::transferSelectBtn}"
             android:text="@string/continue_txt"
             android:textAllCaps="false"
             android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.89" />
 
         <RadioGroup
             android:id="@+id/transfertype_radiogroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginStart="@dimen/_35dp"
+            app:layout_constraintBottom_toTopOf="@+id/transferBtn"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView27"
+            app:layout_constraintVertical_bias="0.17000002"
             tools:ignore="MissingConstraints">
 
             <RadioButton
-                android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
-                android:theme="@style/RadioButtonStyle"
-                android:textSize="16sp"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/keypad_text_clr"
                 android:id="@+id/radiomyselt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
                 android:checked="true"
-                android:text="@string/to_myself" />
+                android:fontFamily="@font/roboto_medium"
+                android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
+                android:text="@string/to_myself"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_16sp"
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
-                android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
-                android:theme="@style/RadioButtonStyle"
-                android:textSize="16sp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/keypad_text_clr"
                 android:id="@+id/radioanother_person"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/to_another_person" />
+                android:layout_marginTop="@dimen/_15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
+                android:text="@string/to_another_person"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_16sp"
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
-                android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
-                android:theme="@style/RadioButtonStyle"
-                android:textSize="16sp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/keypad_text_clr"
                 android:id="@+id/radio_business"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/to_a_business" />
+                android:layout_marginTop="@dimen/_15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
+                android:text="@string/to_a_business"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_16sp"
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
-                android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
-                android:theme="@style/RadioButtonStyle"
-                android:textSize="16sp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/roboto_medium"
-                android:textColor="@color/keypad_text_clr"
                 android:id="@+id/radio_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/to_a_credit_card" />
+                android:layout_marginTop="@dimen/_15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
+                android:text="@string/to_a_credit_card"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_16sp"
+                android:theme="@style/RadioButtonStyle" />
 
         </RadioGroup>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,15 +16,15 @@
 
         <ImageView
             android:id="@+id/imageView17"
-            android:layout_width="14dp"
-            android:layout_height="14dp"
+            android:layout_width="@dimen/_14dp"
+            android:layout_height="@dimen/_14dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="@dimen/_20dp"
             android:src="@drawable/cross_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="ContentDescription,MissingConstraints" />
 
         <TextView
             style="@style/medium_text_style"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:text="@string/send_money"
             android:textColor="@color/keypad_text_clr"
-            android:textSize="16sp"
+            android:textSize="@dimen/_16sp"
             android:theme="@style/medium_text_style"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -45,15 +45,16 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="50dp"
-        android:orientation="horizontal"
         android:id="@+id/rv_horizontal_picker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/send_money_submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
+        app:layout_constraintVertical_bias="0.13" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -61,58 +62,60 @@
         android:src="@drawable/polygon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_horizontal_picker" />
+        app:layout_constraintTop_toBottomOf="@+id/rv_horizontal_picker"
+        tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/send_money_submit"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:textSize="15sp"
-        android:layout_marginBottom="80dp"
+        android:layout_width="@dimen/_250dp"
+        android:layout_height="@dimen/_50dp"
         android:background="@drawable/round_btn_visable"
         android:text="@string/send_money"
         android:textAllCaps="false"
         android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.715"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89"
         tools:ignore="UnknownIdInLayout" />
 
     <TextView
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="76dp"
-        android:text="BDT"
+        android:layout_marginStart="@dimen/_32dp"
+        android:text="@string/bdt"
         android:textColor="@color/keypad_text_clr"
-        android:textSize="26sp"
+        android:textSize="@dimen/_26sp"
+        app:layout_constraintBottom_toTopOf="@+id/send_money_submit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rv_horizontal_picker"
+        app:layout_constraintVertical_bias="0.25"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="32dp"
-        android:text="500"
+        android:layout_marginEnd="@dimen/_32dp"
+        android:text="@string/_500"
         android:textColor="@color/keypad_text_clr"
-        android:textSize="26sp"
+        android:textSize="@dimen/_26sp"
+        app:layout_constraintBottom_toTopOf="@+id/send_money_submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rv_horizontal_picker"
+        app:layout_constraintVertical_bias="0.25"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginTop="@dimen/_8dp"
         android:text="Balance:    7500.50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView28" />
@@ -121,9 +124,9 @@
         android:id="@+id/textView31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:text="no fee"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_32dp"
+        android:text="@string/no_fee"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
 

@@ -20,7 +20,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven { url "https://jitpack.io" }
     }
 }
 
@@ -74,13 +74,6 @@ ext {
     glideVersion = "4.9.0"
     pinentryedittextVersion = "2.0.6"
     biometricVersion = "1.0.1"
-
-
-
-
-
-
-
 
 }
 

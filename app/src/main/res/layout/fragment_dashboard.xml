@@ -11,7 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="ScrollViewSize">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -19,11 +20,11 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="28dp"
-                android:src="@drawable/pfc"
+                android:layout_width="@dimen/_45dp"
+                android:layout_height="@dimen/_45dp"
+                android:layout_marginStart="@dimen/_32dp"
+                android:layout_marginTop="@dimen/_28dp"
+                app:srcCompat="@drawable/pfc"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
@@ -32,12 +33,12 @@
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="35dp"
-                android:layout_marginEnd="32dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_35dp"
+                android:layout_marginEnd="@dimen/_32dp"
                 android:text="Ismail Sepon"
                 android:textColor="@color/keypad_text_clr"
-                android:textSize="22sp"
+                android:textSize="@dimen/_22sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.026"
@@ -48,9 +49,9 @@
                 android:id="@+id/imageView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
-                android:src="@drawable/dash_setting"
+                android:layout_marginTop="@dimen/_16sp"
+                android:layout_marginEnd="@dimen/_24dp"
+                app:srcCompat="@drawable/dash_setting"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,26 +59,27 @@
                 android:id="@+id/imageView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/dash_setting"
+                android:layout_marginTop="@dimen/_16sp"
+                android:layout_marginEnd="@dimen/_16sp"
+                app:srcCompat="@drawable/dash_setting"
                 app:layout_constraintEnd_toStartOf="@+id/imageView5"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
                 android:layout_width="match_parent"
-                android:layout_height="98dp"
-                android:layout_margin="23dp"
-                android:layout_marginTop="32dp"
-                android:elevation="5dp"
+                android:layout_height="@dimen/_98dp"
+                android:layout_margin="@dimen/_23dp"
+                android:layout_marginTop="@dimen/_32dp"
+                android:elevation="@dimen/_5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.472"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/username"
                 app:layout_constraintVertical_bias="0.046"
-                tools:ignore="MissingConstraints">
+                tools:ignore="MissingConstraints"
+                tools:targetApi="lollipop">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -87,26 +89,27 @@
 
                     <ImageView
                         android:id="@+id/imageView7"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="@dimen/_60dp"
+                        android:layout_height="@dimen/_60dp"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="@dimen/_16dp"
                         android:foregroundGravity="center_vertical"
                         android:src="@drawable/ac_creat"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
 
 
                     <TextView
                         android:id="@+id/textView16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="@dimen/_16dp"
+                        android:layout_marginTop="@dimen/_16dp"
                         android:text="@string/personalise_your_dashboard"
                         android:textColor="@color/keypad_text_clr"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/_16sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.03"
@@ -115,14 +118,14 @@
 
                     <TextView
                         android:id="@+id/textView15"
-                        android:layout_width="250dp"
+                        android:layout_width="@dimen/_250dp"
                         android:layout_height="0dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="@dimen/_16dp"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:layout_marginEnd="@dimen/_16dp"
                         android:text="@string/add_or_remove_widgets_drag_to_reorder_make_it_truly_yours"
                         android:textColor="#7e8996"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/_15sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.25"
@@ -137,21 +140,22 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="@dimen/_60dp"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@+id/cardView2"
                 tools:ignore="MissingConstraints">
 
                 <ImageView
                     android:id="@+id/imageView9"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="32dp"
-                    android:src="@drawable/dash_setting"
+                    android:layout_width="@dimen/_25dp"
+                    android:layout_height="@dimen/_25dp"
+                    android:layout_marginStart="@dimen/_32dp"
+                    app:srcCompat="@drawable/dash_setting"
                     app:layout_constraintBottom_toTopOf="@+id/imageView8"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.506" />
+                    app:layout_constraintVertical_bias="0.506"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/textView17"
@@ -159,7 +163,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/give_free_card"
                     android:textColor="#5121b6"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/_16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.065"
@@ -182,7 +186,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="@dimen/_80dp"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
                 tools:ignore="MissingConstraints">
@@ -190,14 +194,15 @@
 
                 <ImageView
                     android:id="@+id/imageView10"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="32dp"
-                    android:src="@drawable/dash_setting"
+                    android:layout_width="@dimen/_25dp"
+                    android:layout_height="@dimen/_25dp"
+                    android:layout_marginStart="@dimen/_32dp"
+                    app:srcCompat="@drawable/dash_setting"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.506" />
+                    app:layout_constraintVertical_bias="0.506"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/textView18"
@@ -205,7 +210,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/account"
                     android:textColor="@color/keypad_text_clr"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/_16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.065"
@@ -213,7 +218,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:layout_marginBottom="2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/common_clr"
@@ -223,19 +228,20 @@
 
                 <ImageView
                     android:id="@+id/imageView11"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
+                    android:layout_width="@dimen/_15dp"
+                    android:layout_height="@dimen/_15dp"
                     android:src="@drawable/drop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/imageView10"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/textView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
+                    android:layout_marginEnd="@dimen/_32dp"
                     android:text="৳ 100.20"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -247,7 +253,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="@dimen/_80dp"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
                 tools:ignore="MissingConstraints">
@@ -255,21 +261,22 @@
 
                 <ImageView
                     android:id="@+id/imageView101"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="32dp"
-                    android:src="@drawable/dash_setting"
+                    android:layout_width="@dimen/_25dp"
+                    android:layout_height="@dimen/_25dp"
+                    android:layout_marginStart="@dimen/_32dp"
+                    app:srcCompat="@drawable/dash_setting"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.506" />
+                    app:layout_constraintVertical_bias="0.506"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/concierge"
                     android:textColor="@color/keypad_text_clr"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/_16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.065"
@@ -277,7 +284,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:layout_marginBottom="2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/common_clr"
@@ -286,13 +293,14 @@
                     tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
+                    android:layout_width="@dimen/_15dp"
+                    android:layout_height="@dimen/_15dp"
                     android:src="@drawable/drop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/imageView101"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -300,7 +308,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout5"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="@dimen/_80dp"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
                 tools:ignore="MissingConstraints">
@@ -308,21 +316,22 @@
 
                 <ImageView
                     android:id="@+id/imageView112"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="32dp"
-                    android:src="@drawable/dash_setting"
+                    android:layout_width="@dimen/_25dp"
+                    android:layout_height="@dimen/_25dp"
+                    android:layout_marginStart="@dimen/_32dp"
+                    app:srcCompat="@drawable/dash_setting"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.506" />
+                    app:layout_constraintVertical_bias="0.506"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/transactions"
                     android:textColor="@color/keypad_text_clr"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/_16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.065"
@@ -330,7 +339,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:layout_marginBottom="2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/common_clr"
@@ -339,18 +348,19 @@
                     tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
+                    android:layout_width="@dimen/_15dp"
+                    android:layout_height="@dimen/_15dp"
                     android:src="@drawable/drop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/imageView112"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
+                    android:layout_marginEnd="@dimen/_32dp"
                     android:text="Spent today   0.00 "
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -371,21 +381,22 @@
 
                 <ImageView
                     android:id="@+id/imageView113"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="32dp"
-                    android:src="@drawable/dash_setting"
+                    android:layout_width="@dimen/_25dp"
+                    android:layout_height="@dimen/_25dp"
+                    android:layout_marginStart="@dimen/_32dp"
+                    app:srcCompat="@drawable/dash_setting"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.506" />
+                    app:layout_constraintVertical_bias="0.506"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/vault"
                     android:textColor="@color/keypad_text_clr"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/_16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.065"
@@ -393,7 +404,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:layout_marginBottom="2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/common_clr"
@@ -402,18 +413,19 @@
                     tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
+                    android:layout_width="@dimen/_15dp"
+                    android:layout_height="@dimen/_15dp"
                     android:src="@drawable/drop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/imageView113"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
+                    android:layout_marginEnd="@dimen/_32dp"
                     android:text="৳ 0"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -426,7 +438,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="@dimen/_80dp"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
                 tools:ignore="MissingConstraints">
@@ -434,21 +446,22 @@
 
                 <ImageView
                     android:id="@+id/imageView114"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="32dp"
-                    android:src="@drawable/dash_setting"
+                    android:layout_width="@dimen/_25dp"
+                    android:layout_height="@dimen/_25dp"
+                    android:layout_marginStart="@dimen/_32dp"
+                    app:srcCompat="@drawable/dash_setting"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.506" />
+                    app:layout_constraintVertical_bias="0.506"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/linked_accounts"
                     android:textColor="@color/keypad_text_clr"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/_16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.065"
@@ -456,7 +469,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:layout_marginBottom="2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/common_clr"
@@ -465,18 +478,19 @@
                     tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
+                    android:layout_width="@dimen/_15dp"
+                    android:layout_height="@dimen/_15dp"
                     android:src="@drawable/drop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/imageView114"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
+                    android:layout_marginEnd="@dimen/_32dp"
                     android:text="৳ 0"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

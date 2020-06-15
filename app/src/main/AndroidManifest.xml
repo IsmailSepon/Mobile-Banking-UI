@@ -10,13 +10,18 @@
 
     <application
         android:name=".appController.AppController"
-        android:allowBackup="false"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:installLocation="internalOnly"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
+
+        <activity
+            android:name=".ui.scheduled_Transfer.SchedulTransferHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".ui.addMoney.AddMoneyHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />

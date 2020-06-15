@@ -12,27 +12,27 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="40dp">
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_height="@dimen/_40dp">
 
             <ImageView
                 android:id="@+id/imageView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="@dimen/_32dp"
                 android:src="@drawable/back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="ContentDescription,MissingConstraints" />
 
             <TextView
                 style="@style/medium_text_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:text="Add card account details"
+                android:layout_marginStart="@dimen/_32dp"
+                android:text="@string/add_card_account_details"
                 android:textColor="@color/keypad_text_clr"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView17"
@@ -47,9 +47,9 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_marginTop="40dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
+                android:layout_marginTop="@dimen/_40dp"
+                android:layout_marginStart="@dimen/_32dp"
+                android:layout_marginEnd="@dimen/_32dp"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -59,14 +59,14 @@
                     android:id="@+id/linearLayout4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/_10dp"
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_marginBottom="4dp"
+                        android:layout_marginBottom="@dimen/_4dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Card Beneficiary first name"
+                        android:text="@string/card_beneficiary_first_name"
                         android:textColor="@color/common_clr"
                         style="@style/text_style"
                         app:layout_constraintBottom_toTopOf="@+id/date_of_birth"
@@ -78,8 +78,8 @@
                     <EditText
                         android:id="@+id/beneficiary_first_name"
                         style="@style/edittext_style"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:layout_marginBottom="@dimen/_2dp"
                         android:hint="@string/beneficiary_first_name"
                         android:inputType="textPersonName"
                         android:text="Anisul"
@@ -92,14 +92,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="@dimen/_20dp"
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_marginBottom="4dp"
+                        android:layout_marginBottom="@dimen/_4dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Card Beneficiary last name"
+                        android:text="@string/card_beneficiary_last_name"
                         android:textColor="@color/common_clr"
                         style="@style/text_style"
                         app:layout_constraintBottom_toTopOf="@+id/date_of_birth"
@@ -111,12 +111,12 @@
                     <EditText
                         android:id="@+id/beneficiary_last_name"
                         style="@style/edittext_style"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:layout_marginBottom="@dimen/_2dp"
                         android:hint="@string/beneficiary_last_name"
                         android:inputType="textPersonName"
                         android:text="Islam"
-                        tools:ignore="MissingConstraints" />
+                        tools:ignore="Autofill,MissingConstraints" />
 
 
                 </LinearLayout>
@@ -124,17 +124,16 @@
                 <EditText
 
                     style="@style/edittext_style"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:layout_marginBottom="@dimen/_2dp"
                     android:hint="Card number"
                     android:inputType="textPersonName"
-                    tools:ignore="MissingConstraints" />
+                    tools:ignore="HardcodedText,MissingConstraints" />
 
                 <Spinner
-                    android:layout_marginTop="33dp"
+                    android:layout_marginTop="@dimen/_33dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:layout_gravity="center"
                     style="@style/Base.Widget.AppCompat.Spinner.Underlined"
                     android:background="@drawable/spinner_bg"
@@ -142,11 +141,11 @@
                     android:spinnerMode="dropdown" />
 
                 <ImageView
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="@dimen/_5dp"
+                    android:layout_marginLeft="@dimen/_5dp"
                     android:background="@color/common_clr"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="@dimen/_1dp"
                     android:src="@drawable/arrowspinner"
                     tools:ignore="ContentDescription" />
 
@@ -154,35 +153,36 @@
                 <EditText
 
                     style="@style/edittext_style"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginBottom="2dp"
-                    android:hint="Mobile number (optional)"
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:hint="@string/mobile_number_optional"
                     android:inputType="textPersonName"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
 
                     style="@style/edittext_style"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginBottom="2dp"
-                    android:hint="Email address (to send a transfer confirmation)"
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:hint="@string/email_address_to_send_a_transfer_confirmation"
                     android:inputType="textPersonName"
                     tools:ignore="MissingConstraints" />
 
 
                 <Button
                     android:id="@+id/address_btn"
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
-                    android:textSize="15sp"
-                    android:layout_marginBottom="80dp"
+                    android:layout_width="@dimen/_250dp"
+                    android:layout_height="@dimen/_50dp"
+                    android:textSize="@dimen/_15sp"
+                    android:layout_marginBottom="@dimen/_80dp"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/round_btn_visable"
-                    android:elevation="5dp"
+                    android:elevation="@dimen/_5dp"
                     android:text="@string/continue_txt"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:layout_marginTop="80dp" />
+                    android:layout_marginTop="80dp"
+                    tools:ignore="UnusedAttribute" />
 
 
             </LinearLayout>

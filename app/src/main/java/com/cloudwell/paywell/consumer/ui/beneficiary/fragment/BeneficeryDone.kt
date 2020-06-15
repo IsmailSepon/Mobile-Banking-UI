@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.consumer.R
+import com.cloudwell.paywell.consumer.ui.beneficiary.BeneficeryHostActivity
 import com.cloudwell.paywell.consumer.ui.beneficiary.viewModel.BeneficeryViewModel
+import com.cloudwell.paywell.consumer.ui.scheduled_Transfer.fragment.ScheduleSelectAmountFragment
 import com.cloudwell.paywell.consumer.ui.sendMoney.fragment.SendMoneyFragment
 import kotlinx.android.synthetic.main.beneficery_done.view.*
 
@@ -22,14 +24,28 @@ class BeneficeryDone : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.beneficery_done, container, false)
 
+        var type = (activity as? BeneficeryHostActivity)?.type
+
         view.done.setOnClickListener(View.OnClickListener {
-            val done =
-                SendMoneyFragment()
-            val manager = activity?.supportFragmentManager
-            val transaction = manager?.beginTransaction()
-            transaction?.replace(R.id.beneficery_host_container, done)
-            transaction?.addToBackStack(null)
-            transaction?.commit()
+
+            if (type == 3) {
+                val done = ScheduleSelectAmountFragment()
+                val manager = activity?.supportFragmentManager
+                val transaction = manager?.beginTransaction()
+                transaction?.replace(R.id.beneficery_host_container, done)
+                transaction?.addToBackStack(null)
+                transaction?.commit()
+
+            } else {
+                val done = SendMoneyFragment()
+                val manager = activity?.supportFragmentManager
+                val transaction = manager?.beginTransaction()
+                transaction?.replace(R.id.beneficery_host_container, done)
+                transaction?.addToBackStack(null)
+                transaction?.commit()
+            }
+
+
         })
 
 //        beneficeryViewModel =
