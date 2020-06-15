@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="345dp"
-    app:cardCornerRadius="@dimen/_5dp"
+    app:cardCornerRadius="@dimen/_10dp"
     android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -109,7 +109,7 @@
 
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/remind_btn"
             android:layout_width="148dp"
             android:layout_height="@dimen/_38dp"
             android:layout_marginStart="11dp"
@@ -142,15 +142,16 @@
             tools:ignore="MissingConstraints" />
 
         <TextView
-            style="@style/text_style"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_15sp"
             android:id="@+id/textView237"
+            style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:text="@string/phone"
-            app:layout_constraintStart_toStartOf="@+id/button4"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/remind_btn"
             app:layout_constraintTop_toBottomOf="@+id/button4" />
 
         <TextView
