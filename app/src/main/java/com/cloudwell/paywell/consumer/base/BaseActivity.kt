@@ -11,8 +11,8 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import com.cloudwell.paywell.consumer.activity.registation.SignupActivity
 import com.cloudwell.paywell.consumer.appController.AppController
+import com.cloudwell.paywell.consumer.ui.registration.SignupActivity
 
 
 /**

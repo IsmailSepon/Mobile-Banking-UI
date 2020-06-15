@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/textView211"
+        style="@style/medium_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="New Message"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="@dimen/_270dp"
+        android:layout_height="@dimen/_357dp"
+        android:layout_marginStart="@dimen/_25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/_25dp"
+        app:cardBackgroundColor="@color/card_bg"
+        app:cardCornerRadius="@dimen/_5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView211"
+        tools:ignore="MissingConstraints">
+
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_25dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/_213dp"
+            android:layout_height="@dimen/_176dp">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_10dp"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/textView190"
+                    style="@style/text_style"
+                    android:gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/please_send_me_150_using_this_link_from_paywell"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paywell_http_www_paywellonline_com_money_request_uiu5458ams"
+                    android:textColor="@color/text_link_clr"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ps_paywell_is_a_bangladesh_bank_licensed_payment_service_provider"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/send_text"
+                    style="@style/text_style"
+                    android:gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_14sp"
+                    android:text="@string/send"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/_5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

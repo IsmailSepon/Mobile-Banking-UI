@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_40dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView93"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/textView188"
+            android:lineSpacingExtra="3dp"
+            style="@style/text_style"
+            android:layout_width="@dimen/_250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:text="@string/we_ll_need_your_payment_details_to_send_your_money_to_anisul_islam_s_paywell_account_instantly"
+            android:textColor="@color/recyclerview_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView214" />
+
+        <TextView
+            android:lineSpacingExtra="3dp"
+            android:id="@+id/textView214"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18dp"
+            android:text="@string/please_enter_your_payment_ndetails_maruf_hasan"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView108" />
+
+        <ImageView
+            android:id="@+id/imageView108"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/splash_logo" />
+
+        <TextView
+            android:id="@+id/textView215"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_46dp"
+            android:layout_marginTop="@dimen/_22dp"
+            android:text="@string/paying_amount"
+            android:textSize="@dimen/_10sp"
+            style="@style/text_style"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView188" />
+
+        <TextView
+            android:id="@+id/textView216"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:text="৳150"
+            style="@style/medium_text_style"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView215"
+            app:layout_constraintTop_toBottomOf="@+id/textView215" />
+
+        <TextView
+            android:id="@+id/textView217"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Name"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintStart_toStartOf="@+id/textView216"
+            app:layout_constraintTop_toBottomOf="@+id/textView216"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName6"
+            style="@style/EditTextTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_46dp"
+            android:layout_marginEnd="@dimen/_46dp"
+            android:ems="15"
+            android:inputType="textPersonName"
+            android:text="Maruf Hasan"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView217"
+            app:layout_constraintTop_toBottomOf="@+id/textView217" />
+
+        <TextView
+            android:id="@+id/textView218"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24dp"
+            android:text="Card number"
+            android:textSize="@dimen/_10sp"
+            style="@style/text_style"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName6"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName10"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_46dp"
+            android:layout_marginEnd="@dimen/_46dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/_12sp"
+            android:inputType="textPersonName"
+            android:text="Name"
+            style="@style/EditTextTheme"
+            app:layout_constraintStart_toStartOf="@+id/textView218"
+            app:layout_constraintTop_toBottomOf="@+id/textView218" />
+
+        <TextView
+            android:id="@+id/textView219"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24dp"
+            android:text="Email"
+            style="@style/text_style"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName10"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_46dp"
+            android:layout_marginEnd="@dimen/_46dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/_12sp"
+            android:inputType="textEmailAddress"
+            style="@style/EditTextTheme"
+            app:layout_constraintStart_toStartOf="@+id/textView219"
+            app:layout_constraintTop_toBottomOf="@+id/textView219" />
+
+        <TextView
+            android:id="@+id/textView220"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24dp"
+            android:text="Mobile number"
+            style="@style/text_style"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+        <EditText
+            android:id="@+id/editTextNumberPassword"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_46dp"
+            android:layout_marginEnd="@dimen/_46dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/_12sp"
+            android:inputType="numberPassword"
+            style="@style/EditTextTheme"
+            app:layout_constraintStart_toStartOf="@+id/textView220"
+            app:layout_constraintTop_toBottomOf="@+id/textView220" />
+
+        <TextView
+            android:id="@+id/textView221"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/cvv"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintStart_toStartOf="@+id/editTextNumberPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName11"
+            style="@style/EditTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@+id/textView221"
+            app:layout_constraintTop_toBottomOf="@+id/textView221"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView222"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_50dp"
+            android:text="Date of expiry"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextNumberPassword"
+            app:layout_constraintTop_toTopOf="@+id/textView221"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName12"
+            style="@style/EditTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@+id/textView222"
+            app:layout_constraintTop_toBottomOf="@+id/textView222"
+            tools:ignore="MissingConstraints" />
+
+
+        <Button
+            android:id="@+id/send_money_info_btn"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_hight"
+            android:layout_marginTop="@dimen/_24dp"
+            android:background="@drawable/round_btn_visable"
+            android:elevation="@dimen/evelation_five"
+            android:text="@string/continue_txt"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11"
+            tools:targetApi="lollipop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

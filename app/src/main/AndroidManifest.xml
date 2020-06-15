@@ -10,18 +10,28 @@
 
     <application
         android:name=".appController.AppController"
-        android:allowBackup="false"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:installLocation="internalOnly"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
-
         <activity
-            android:name=".ui.scheduled_Transfer.SchedulTransferHostActivity"
+            android:name="com.cloudwell.paywell.consumer.ui.spiltBill.fragment.SpiltBillHoastActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity
+            android:name=".ui.bankTransfer.BankTransferHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.withdrawCash.CashWithdrawHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.requestMoney.RequestMoneyHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.scheduledTransfer.SchedulTransferHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.addMoney.AddMoneyHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -32,50 +42,47 @@
             android:name=".ui.sendMoney.SendMoneyHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.nidVerification.IdentyOptionActivity"
+            android:name=".ui.registration.nidVerification.IdentyOptionActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.nidVerification.NIDfrontSecondActivity"
+            android:name=".ui.registration.nidVerification.NIDfrontSecondActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.nidVerification.NIDfrontsideActivity"
-            android:parentActivityName=".activity.registation.nidVerification.DocumentSubmitActivity"
+            android:name=".ui.registration.nidVerification.NIDfrontsideActivity"
+            android:parentActivityName=".ui.registration.nidVerification.DocumentSubmitActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.nidVerification.DocumentSubmitActivity"
+            android:name=".ui.registration.nidVerification.DocumentSubmitActivity"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="InnerclassSeparator" />
         <activity
             android:name=".ui.home.MainHomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.PassportVerificationActivity"
+            android:name=".ui.registration.PassportVerificationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.RegTopUpSecondActivity"
+            android:name=".ui.registration.RegTopUpSecondActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.RegTopUpActivity"
+            android:name=".ui.registration.RegTopUpActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.AccountCreattionActivity"
+            android:name=".ui.registration.AccountCreattionActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.EmailVerificationActivity"
+            android:name=".ui.registration.EmailVerificationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.RegistationMainActivity"
-            android:parentActivityName=".activity.registation.SignupActivity"
+            android:name=".ui.registration.RegistationMainActivity"
+            android:parentActivityName=".ui.registration.SignupActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.login.CustomLoginActivity" />
-        <activity android:name=".activity.registation.FingerAuthActivity" />
-        <activity android:name=".activity.thirdActivity" />
         <activity
-            android:name=".activity.registation.SignupActivity"
+            android:name=".ui.registration.SignupActivity"
             android:isScrollContainer="true"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.SplashScreenActivity"
+            android:name=".ui.splash.SplashScreenActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -83,10 +90,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.auth.LoginActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"
