@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.beneficiary.fragment.FindPayWellUserFrg">
+    tools:context="com.cloudwell.paywell.ui.beneficiary.fragment.FindPayWellUserFrg">
 
     <data>
 
         <variable
             name="findpaywellUserViewmodel"
-            type="com.cloudwell.paywell.consumer.ui.beneficiary.viewModel.FindPayWellUserFrgViewModel" />
+            type="com.cloudwell.paywell.ui.beneficiary.viewModel.FindPayWellUserFrgViewModel" />
     </data>
 
 
