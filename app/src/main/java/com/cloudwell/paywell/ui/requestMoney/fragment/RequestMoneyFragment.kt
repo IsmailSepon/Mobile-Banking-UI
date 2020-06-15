@@ -7,13 +7,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.consumer.R
+import com.cloudwell.paywell.R
 import com.cloudwell.paywell.consumer.ui.requestMoney.fragment.creat_link.RequestMoneyCreatLinkFragment
 import com.cloudwell.paywell.consumer.ui.requestMoney.fragment.nearMe.RequestNearDoneFragment
-import com.cloudwell.paywell.consumer.utils.FragmentHelper
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.example.nbtk.slider.ScreenUtils
 import com.example.nbtk.slider.SliderAdapter
 import com.example.nbtk.slider.SliderLayoutManager
+import kotlinx.android.synthetic.main.request_money.view.*
 
 class RequestMoneyFragment : Fragment() {
 

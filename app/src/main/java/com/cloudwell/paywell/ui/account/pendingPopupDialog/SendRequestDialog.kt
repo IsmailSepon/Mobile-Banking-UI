@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.cloudwell.paywell.consumer.R
-import com.cloudwell.paywell.consumer.base.BaseDialog
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.base.BaseDialog
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
 
 

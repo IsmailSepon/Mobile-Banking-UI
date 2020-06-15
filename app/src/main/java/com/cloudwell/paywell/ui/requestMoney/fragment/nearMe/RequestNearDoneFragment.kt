@@ -5,7 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.cloudwell.paywell.consumer.R
+import com.cloudwell.paywell.R
+import kotlinx.android.synthetic.main.request_near_done_frg_layout.view.*
 
 class RequestNearDoneFragment : Fragment() {
 

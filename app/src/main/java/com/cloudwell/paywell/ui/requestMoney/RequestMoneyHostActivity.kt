@@ -3,7 +3,7 @@ package com.cloudwell.paywell.ui.requestMoney
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.ui.requestMoney.fragment.RequestMoneyMainFragment
+import com.cloudwell.paywell.consumer.ui.requestMoney.fragment.RequestMoneyMainFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 
 class RequestMoneyHostActivity : AppCompatActivity() {

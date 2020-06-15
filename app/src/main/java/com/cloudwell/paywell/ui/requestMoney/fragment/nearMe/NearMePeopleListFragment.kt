@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.cloudwell.paywell.consumer.R
+import com.cloudwell.paywell.R
 import com.cloudwell.paywell.consumer.ui.requestMoney.fragment.RequestMoneyFragment
-import com.cloudwell.paywell.consumer.utils.FragmentHelper
+import com.cloudwell.paywell.utils.FragmentHelper
+import kotlinx.android.synthetic.main.near_me_people_list_layout.view.*
 
 class NearMePeopleListFragment : Fragment() {
 
