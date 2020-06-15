@@ -279,5 +279,9 @@
     <string name="add_a_new_bank_beneficiary">Add a new bank beneficiary</string>
     <string name="pending">Pending</string>
     <string name="phone">Phone</string>
+    <string name="are_you_sure_you_want_to_reject_nthis_request">Are you sure you want to reject\nthis request?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="close">Close</string>
 
 </resources>

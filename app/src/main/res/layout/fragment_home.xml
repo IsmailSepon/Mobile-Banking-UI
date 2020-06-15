@@ -182,9 +182,13 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ScrollView
+            android:fillViewport="true"
             android:orientation="vertical"
+            android:scrollIndicators="none"
+            android:nestedScrollingEnabled="true"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:targetApi="m">
 
             <LinearLayout
                 android:orientation="vertical"
