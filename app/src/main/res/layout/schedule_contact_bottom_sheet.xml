@@ -6,7 +6,7 @@
 
         <variable
             name="contactBottomViewModel"
-            type="com.cloudwell.paywell.consumer.ui.scheduled_Transfer.viewModel.ScheduleBottomSheetViewModel" />
+            type="com.cloudwell.paywell.ui.scheduledTransfer.viewModel.ScheduleBottomSheetViewModel" />
     </data>
 
     <LinearLayout
@@ -50,6 +50,7 @@
             tools:ignore="ContentDescription" />
 
         <TextView
+            android:onClick="@{contactBottomViewModel::contactOnclick}"
             style="@style/medium_text_style"
             android:textSize="@dimen/fifteendp"
             android:gravity="center"

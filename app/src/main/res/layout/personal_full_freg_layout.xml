@@ -154,7 +154,7 @@
                 android:layout_marginBottom="@dimen/_4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/present_address_required"
+                android:text="@string/permanent_address_req"
                 android:textColor="@color/common_clr"
                 android:textSize="@dimen/_10sp"
                 app:layout_constraintBottom_toTopOf="@+id/date_of_birth"

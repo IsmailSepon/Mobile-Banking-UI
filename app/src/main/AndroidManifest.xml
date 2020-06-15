@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.cloudwell.paywell.consumer">
+    package="com.cloudwell.paywell">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -9,73 +9,80 @@
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
     <application
-        android:name=".appController.AppController"
-        android:allowBackup="true"
+        android:name="com.cloudwell.paywell.appController.AppController"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:installLocation="internalOnly"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
-
         <activity
-            android:name=".ui.scheduled_Transfer.SchedulTransferHostActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".ui.addMoney.AddMoneyHostActivity"
+            android:name="com.cloudwell.paywell.ui.spiltBill.fragment.SpiltBillHoastActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.beneficiary.BeneficeryHostActivity"
+            android:name="com.cloudwell.paywell.ui.bankTransfer.BankTransferHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.sendMoney.SendMoneyHostActivity"
+            android:name="com.cloudwell.paywell.ui.withdrawCash.CashWithdrawHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.nidVerification.IdentyOptionActivity"
+            android:name="com.cloudwell.paywell.ui.requestMoney.RequestMoneyHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.nidVerification.NIDfrontSecondActivity"
+            android:name="com.cloudwell.paywell.ui.scheduledTransfer.SchedulTransferHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.nidVerification.NIDfrontsideActivity"
-            android:parentActivityName=".activity.registation.nidVerification.DocumentSubmitActivity"
+            android:name="com.cloudwell.paywell.ui.addMoney.AddMoneyHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.nidVerification.DocumentSubmitActivity"
+            android:name="com.cloudwell.paywell.ui.beneficiary.BeneficeryHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.cloudwell.paywell.ui.sendMoney.SendMoneyHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.cloudwell.paywell.ui.registration.nidVerification.IdentyOptionActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.cloudwell.paywell.ui.registration.nidVerification.NIDfrontSecondActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.cloudwell.paywell.ui.registration.nidVerification.NIDfrontsideActivity"
+            android:parentActivityName="com.cloudwell.paywell.ui.registration.nidVerification.DocumentSubmitActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.cloudwell.paywell.ui.registration.nidVerification.DocumentSubmitActivity"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="InnerclassSeparator" />
         <activity
-            android:name=".ui.home.MainHomeActivity"
+            android:name="com.cloudwell.paywell.ui.home.MainHomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.PassportVerificationActivity"
+            android:name="com.cloudwell.paywell.ui.registration.PassportVerificationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.RegTopUpSecondActivity"
+            android:name="com.cloudwell.paywell.ui.registration.RegTopUpSecondActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.RegTopUpActivity"
+            android:name="com.cloudwell.paywell.ui.registration.RegTopUpActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.AccountCreattionActivity"
+            android:name="com.cloudwell.paywell.ui.registration.AccountCreattionActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.EmailVerificationActivity"
+            android:name="com.cloudwell.paywell.ui.registration.EmailVerificationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.registation.RegistationMainActivity"
-            android:parentActivityName=".activity.registation.SignupActivity"
+            android:name="com.cloudwell.paywell.ui.registration.RegistationMainActivity"
+            android:parentActivityName="com.cloudwell.paywell.ui.registration.SignupActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.login.CustomLoginActivity" />
-        <activity android:name=".activity.registation.FingerAuthActivity" />
-        <activity android:name=".activity.thirdActivity" />
         <activity
-            android:name=".activity.registation.SignupActivity"
+            android:name="com.cloudwell.paywell.ui.registration.SignupActivity"
             android:isScrollContainer="true"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.SplashScreenActivity"
+            android:name="com.cloudwell.paywell.ui.splash.SplashScreenActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -83,10 +90,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.auth.LoginActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"

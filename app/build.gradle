@@ -7,7 +7,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
-        applicationId "com.cloudwell.paywell.consumer"
+        applicationId "com.cloudwell.paywell"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -128,7 +128,9 @@ dependencies {
 
     implementation "androidx.biometric:biometric:${rootProject.ext.biometricVersion}"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-
+    //datepicker
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
 }
