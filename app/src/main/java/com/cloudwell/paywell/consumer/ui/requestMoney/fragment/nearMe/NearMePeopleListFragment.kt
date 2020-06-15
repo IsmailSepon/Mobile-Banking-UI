@@ -22,8 +22,14 @@ class NearMePeopleListFragment : Fragment() {
 
         view.request_from_nearest_peopleList.setOnClickListener(View.OnClickListener {
 
+            val requestMoneyFragment = RequestMoneyFragment()
+            val args = Bundle()
+            args.putString("activity", "near_me ")
+            requestMoneyFragment.arguments = args
+
+
             FragmentHelper.replaceFragment(
-                RequestMoneyFragment(),
+                requestMoneyFragment,
                 activity?.supportFragmentManager,
                 R.id.request_money_container
             )

@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.consumer.R
@@ -33,7 +32,6 @@ class RequestMoneyFragment : Fragment() {
         val view = inflater.inflate(R.layout.request_money, container, false)
 
         val value = requireArguments().getString("activity")
-        Toast.makeText(activity?.applicationContext, value, Toast.LENGTH_LONG).show()
 
         data.add("300")
         data.add("500")
