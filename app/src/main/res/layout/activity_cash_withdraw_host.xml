@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.addMoney.AddMoneyHostActivity">
+    tools:context="com.cloudwell.paywell.ui.addMoney.AddMoneyHostActivity">
 
     <data>
 
         <variable
             name="addMoneyViewModel"
-            type="com.cloudwell.paywell.consumer.ui.addMoney.viewModel.AddMoneyViewModel" />
+            type="com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel" />
     </data>
 
     <FrameLayout

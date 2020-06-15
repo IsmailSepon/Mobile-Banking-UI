@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.home.HomeFragment">
+    tools:context="com.cloudwell.paywell.ui.home.HomeFragment">
 
     <data>
 
         <variable
             name="viewmode"
-            type="com.cloudwell.paywell.consumer.ui.account.viewModel.AccountViewModel" />
+            type="com.cloudwell.paywell.ui.account.viewModel.AccountViewModel" />
     </data>
 
 
