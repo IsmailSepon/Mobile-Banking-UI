@@ -47,7 +47,7 @@ android {
 
 
 dependencies {
-    
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -142,5 +142,8 @@ dependencies {
     implementation "com.google.firebase:firebase-analytics:$rootProject.ext.firebaseAnalyticsVers"
     implementation "com.google.firebase:firebase-crashlytics:$rootProject.ext.firebaseCrashlytics"
     implementation "com.google.firebase:firebase-messaging:$rootProject.ext.firebaseMessaging"
+
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$rootProject.ext.leakcanaryVersion"
+
 
 }
