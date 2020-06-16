@@ -9,6 +9,7 @@ import com.cloudwell.paywell.data.network.interceptor.NetworkConnectionIntercept
 import com.cloudwell.paywell.ui.addMoney.view.AddMoneyRepository
 import com.cloudwell.paywell.ui.sendMoney.view.SendMoneyFactory
 import com.cloudwell.paywell.ui.sendMoney.view.SendMoneyRepository
+import com.google.firebase.messaging.FirebaseMessaging
 import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
@@ -25,6 +26,12 @@ import org.kodein.di.generic.singleton
  * Created by Android on 12/1/2015.
  */
 class AppController : Application(), KodeinAware {
+
+    override fun onCreate() {
+        super.onCreate()
+        FirebaseMessaging.getInstance().isAutoInitEnabled = true
+
+    }
 
     override val kodein = Kodein.lazy {
         initilizationDI()

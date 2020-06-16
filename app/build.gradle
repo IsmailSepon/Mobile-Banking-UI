@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -20,6 +22,10 @@ android {
 
     }
     buildTypes {
+
+        debug {
+            applicationIdSuffix '.debug'
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -43,6 +49,7 @@ android {
 dependencies {
 
 
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -61,7 +68,7 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:${rootProject.ext.navigationFragmentVersion}"
 
     implementation "androidx.navigation:navigation-ui-ktx:${rootProject.ext.navigationFragmentVersion}"
-    implementation  "androidx.lifecycle:lifecycle-viewmodel-ktx:${rootProject.ext.viewmodelKtxVersion}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${rootProject.ext.viewmodelKtxVersion}"
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
 
     //retrofit
@@ -75,7 +82,7 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.okhttpVersion}"
     implementation "com.itkacher.okhttpprofiler:okhttpprofiler:${rootProject.ext.okhttpprofiler}"
 
-//    //Android Room
+    //Android Room
     implementation "androidx.room:room-runtime:${rootProject.ext.room_version}"
     implementation "androidx.room:room-ktx:${rootProject.ext.room_version}"
 
@@ -133,4 +140,9 @@ dependencies {
 
     //datepicker
     implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+
+    implementation "com.google.firebase:firebase-analytics:$rootProject.ext.firebaseAnalyticsVers"
+    implementation "com.google.firebase:firebase-crashlytics:$rootProject.ext.firebaseCrashlytics"
+    implementation "com.google.firebase:firebase-messaging:$rootProject.ext.firebaseMessaging"
+
 }
