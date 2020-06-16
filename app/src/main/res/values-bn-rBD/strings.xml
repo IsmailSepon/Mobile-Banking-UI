@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Paywell Consumer</string>
+    <string name="app_name">PayWell</string>
     <string name="action_settings">Settings</string>
     <string name="loading_msg" />
     <string name="connection_error_msg">No Internet connection found</string>
