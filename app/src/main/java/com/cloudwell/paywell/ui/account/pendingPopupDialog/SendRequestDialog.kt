@@ -6,14 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
-import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
 
 
-class SendRequestDialog : BaseDialog(), DatePickerDialog.OnDateSetListener {
+class SendRequestDialog : BaseDialog() {
 
-    val DATEPICKER_TAG = "datepicker"
-
-    private var dpd: DatePickerDialog? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,10 +25,6 @@ class SendRequestDialog : BaseDialog(), DatePickerDialog.OnDateSetListener {
         return view
     }
 
-
-    override fun onDateSet(view: DatePickerDialog?, year: Int, monthOfYear: Int, dayOfMonth: Int) {
-
-    }
 
 
 }

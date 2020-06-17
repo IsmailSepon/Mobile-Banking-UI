@@ -132,5 +132,5 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     //datepicker
-    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+   // implementation 'com.oginotihiro:datepicker:1.0.0'
 }

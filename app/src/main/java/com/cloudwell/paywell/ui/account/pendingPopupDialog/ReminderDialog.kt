@@ -6,15 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
-import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
 import kotlinx.android.synthetic.main.reminder_dialog.view.*
 
 
-class ReminderDialog : BaseDialog(), DatePickerDialog.OnDateSetListener {
+class ReminderDialog : BaseDialog() {
 
-    val DATEPICKER_TAG = "datepicker"
-
-    private var dpd: DatePickerDialog? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,9 +31,6 @@ class ReminderDialog : BaseDialog(), DatePickerDialog.OnDateSetListener {
     }
 
 
-    override fun onDateSet(view: DatePickerDialog?, year: Int, monthOfYear: Int, dayOfMonth: Int) {
-
-    }
 
 
 }

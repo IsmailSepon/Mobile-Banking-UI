@@ -149,16 +149,12 @@
     </style>
 
 
-    <style name="CustomDatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
-        <item name="android:datePickerStyle">@style/CustomDatePickerStyle</item>
+    <style name="CustomDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog" tools:targetApi="lollipop">
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
     </style>
 
-    <style name="CustomDatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker" tools:targetApi="lollipop">
-        <item name="android:headerMonthTextAppearance">@style/HeaderTextStyle</item>
-    </style>
-
-    <style name="HeaderTextStyle" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textColor">@color/colorAccent</item>
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.DatePicker" tools:targetApi="lollipop">
+        <item name="android:datePickerMode">calendar</item>
     </style>
 
 </resources>
