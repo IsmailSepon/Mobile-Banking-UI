@@ -22,4 +22,5 @@
     <color name="card_bg">#f1f6fb</color>
     <color name="slim_divider_bg">#E4E8ED</color>
     <color name="calender_bg">#eef1f4</color>
+    <color name="calender_activied">#dee4ec</color>
 </resources>

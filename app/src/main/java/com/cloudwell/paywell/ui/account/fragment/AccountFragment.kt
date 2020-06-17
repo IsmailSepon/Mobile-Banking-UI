@@ -1,6 +1,7 @@
 package com.cloudwell.paywell.ui.account.fragment
 
 import android.app.DatePickerDialog
+import android.app.DatePickerDialog.OnDateSetListener
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.DatePicker
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
@@ -20,11 +22,12 @@ import com.cloudwell.paywell.databinding.FragmentHomeBinding
 import com.cloudwell.paywell.ui.account.adapter.CoursesItem
 import com.cloudwell.paywell.ui.account.adapter.SwipeHelper
 import com.cloudwell.paywell.ui.account.adapter.TestAdapter
-import com.cloudwell.paywell.ui.account.pendingPopupDialog.DatePickerFragment
+import com.cloudwell.paywell.ui.account.pendingPopupDialog.RequestProfileDialog
 import com.cloudwell.paywell.ui.account.view.IaccountVIew
 import com.cloudwell.paywell.ui.account.viewModel.AccountViewModel
 import com.cloudwell.paywell.ui.spiltBill.fragment.SpiltBillHoastActivity
 import kotlinx.android.synthetic.main.fragment_home.view.*
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -49,25 +52,7 @@ class AccountFragment : Fragment(), IaccountVIew, DatePickerDialog.OnDateSetList
 
         binding.root.pendding_req.setOnClickListener(View.OnClickListener {
 
-
-            //Use the current date as the default date in the date picker
-            val c = Calendar.getInstance()
-            val year = c[Calendar.YEAR]
-            val month = c[Calendar.MONTH]
-            val day = c[Calendar.DAY_OF_MONTH]
-            val datePickerDialog = DatePickerDialog(
-                activity?.applicationContext!!,
-                R.style.CustomDatePickerDialogTheme
-            )
-            datePickerDialog.show()
-
-//            val d = DatePickerDialog (activity?.applicationContext!!, R.style.CustomDatePickerDialogTheme,
-//                DatePickerDialog.OnDateSetListener listener, int year, int monthOfYear, int dayOfMonth)
-
-
-            datepicker2()
-
-
+            pendindProfilePopup()
         })
 
         val linearLayoutManager: LinearLayoutManager =
@@ -185,10 +170,34 @@ class AccountFragment : Fragment(), IaccountVIew, DatePickerDialog.OnDateSetList
     }
 
 
-    fun datepicker2() {
+    fun datepicker() {
 
-        val newFragment: DialogFragment = DatePickerFragment()
+        val calendar = Calendar.getInstance()
+        val datePickerDialog = DatePickerDialog(
+            requireActivity(),
+            R.style.DatePickerDialogTheme,
+            OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+                val newDate = Calendar.getInstance()
+                newDate[year, monthOfYear] = dayOfMonth
+                val simpleDateFormat =
+                    SimpleDateFormat("dd-MM-yyyy")
+                val date = simpleDateFormat.format(newDate.time)
+                Toast.makeText(activity?.applicationContext, date + "", Toast.LENGTH_LONG).show()
+            },
+            calendar[Calendar.YEAR],
+            calendar[Calendar.MONTH],
+            calendar[Calendar.DAY_OF_MONTH]
+        )
+        datePickerDialog.show()
+
+    }
+
+    fun pendindProfilePopup() {
+
+        val newFragment: DialogFragment = RequestProfileDialog()
         newFragment.show(activity?.supportFragmentManager!!, "Date Picker")
+
+
     }
 
 

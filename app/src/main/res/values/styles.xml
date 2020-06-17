@@ -126,7 +126,12 @@
     </style>
 
     <style name="DatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
-        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/calender_activied</item>
+        <item name="background">@color/recyclerview_title</item>
+        <item name="android:selectionDividerHeight" tools:targetApi="q">@dimen/half_one</item>
+        <item name="android:showDividers">beginning</item>
+        <item name="buttonGravity">bottom</item>
     </style>
 
 
