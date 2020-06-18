@@ -291,5 +291,8 @@
     <string name="send_this_link_to_any_of_your_address_nbook_contacts_so_that_s_he_can_use_it_nto_pay_you_2000">Send this link to any of your address\nbook contacts so that (s)he can use it\nto pay you ৳2000</string>
     <string name="send_link">Send link</string>
     <string name="choose_from_address_book_or_enter_nemail_mobile_number_manually">Choose from address book or enter\nemail/mobile number manually</string>
+    <string name="paywell_cards">PayWell cards</string>
+    <string name="already_got_a_card_link_it_here">Already got a card? Link it here</string>
+    <string name="complete_identity_check">Complete identity check</string>
 
 </resources>
