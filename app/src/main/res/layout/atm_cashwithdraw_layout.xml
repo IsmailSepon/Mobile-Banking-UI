@@ -175,7 +175,7 @@
             android:id="@+id/imageView100"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="22dp"
             android:layout_marginTop="52dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout16"
@@ -183,56 +183,84 @@
 
         <TextView
             android:id="@+id/textView204"
-            android:layout_width="@dimen/_270dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_11dp"
-            android:textColor="@color/keypad_text_clr"
             style="@style/text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="32dp"
             android:gravity="left"
+            android:lineHeight="@dimen/_17sp"
             android:text="@string/when_you_make_a_withdrawal_the_cash_can_only_be_withdrawn_at_a_the_city_bank_atm_southeast_bank_atm"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_14sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView100"
-            app:layout_constraintStart_toEndOf="@+id/imageView100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView100" />
 
         <TextView
             android:id="@+id/textView205"
             style="@style/text_style"
-            android:layout_width="@dimen/_270dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="11dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="32dp"
             android:gravity="left"
+            android:lineHeight="@dimen/_17sp"
             android:text="Withdrawal vouchers are only valid for 24 hours after which they are refunded back to your wallet balance."
             android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_14sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView102"
-            app:layout_constraintStart_toEndOf="@+id/imageView102"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView102" />
+
 
         <TextView
             android:id="@+id/textView206"
             style="@style/text_style"
-            android:layout_width="@dimen/_270dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="11dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="32dp"
             android:gravity="left"
+            android:lineHeight="@dimen/_17sp"
             android:text="you can find a record of the ATM withdrawal in your transaction list."
             android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_14sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView103"
-            app:layout_constraintStart_toEndOf="@+id/imageView103"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView103" />
+
+
+        <ImageView
+            android:id="@+id/imageView104"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_40dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView103"
+            app:layout_constraintTop_toBottomOf="@+id/imageView103"
+            app:srcCompat="@drawable/pin_ic" />
 
         <TextView
             android:id="@+id/textView207"
             style="@style/text_style"
-            android:layout_width="@dimen/_270dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="11dp"
+            android:layout_marginStart="@dimen/_60dp"
+            android:layout_marginEnd="@dimen/_32dp"
             android:gravity="left"
+            android:lineHeight="@dimen/_17sp"
             android:text="When you want to collect the cash, enter the PIN given above on the voucher (not your account PIN) on the ATM"
             android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_14sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView104"
-            app:layout_constraintStart_toEndOf="@+id/imageView104"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView104"
             app:layout_constraintVertical_bias="0.473" />
+
 
         <ImageView
             android:id="@+id/imageView102"
@@ -251,15 +279,6 @@
             app:layout_constraintStart_toStartOf="@+id/imageView102"
             app:layout_constraintTop_toBottomOf="@+id/imageView102"
             app:srcCompat="@drawable/doc_ic" />
-
-        <ImageView
-            android:id="@+id/imageView104"
-            android:layout_width="28dp"
-            android:layout_height="17dp"
-            android:layout_marginTop="40dp"
-            app:layout_constraintStart_toStartOf="@+id/imageView103"
-            app:layout_constraintTop_toBottomOf="@+id/imageView103"
-            app:srcCompat="@drawable/pin_ic" />
 
 
         <Button
