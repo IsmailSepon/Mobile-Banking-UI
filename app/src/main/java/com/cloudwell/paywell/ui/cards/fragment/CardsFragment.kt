@@ -1,16 +1,22 @@
-package com.cloudwell.paywell.ui.cards
+package com.cloudwell.paywell.ui.cards.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.cards.CardHoastActivity
+import com.cloudwell.paywell.ui.cards.fragment.sliderFrg.SliderFragment
+import com.cloudwell.paywell.ui.cards.fragment.sliderFrg.SliderFragment2
+import com.cloudwell.paywell.ui.cards.fragment.sliderFrg.SliderFragment3
+import com.cloudwell.paywell.ui.cards.viewModel.CardsViewModel
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.google.android.material.tabs.TabLayoutMediator
@@ -19,8 +25,10 @@ import kotlinx.android.synthetic.main.cards_fragment.view.*
 
 class CardsFragment : Fragment() {
 
+
     companion object {
-        fun newInstance() = CardsFragment()
+        fun newInstance() =
+            CardsFragment()
     }
 
     private lateinit var viewModel: CardsViewModel
@@ -33,23 +41,14 @@ class CardsFragment : Fragment() {
         val root: View = inflater.inflate(R.layout.cards_fragment, container, false)
 
         var viewpager: ViewPager2 = root.card_viewpager
+
+
         viewpager.clipToPadding = false
         viewpager.clipChildren = false
         viewpager.offscreenPageLimit = 3
-        viewpager.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
-        var list: ArrayList<CradsItem> = ArrayList()
-        var card = CradsItem()
-        var card1 = CradsItem()
-        card.image = R.drawable.paywell_card_1
-        card1.image = R.drawable.paywell_card_2
-        list.add(card)
-        list.add(card1)
-        list.add(card)
 
-        var adapter: CardSliderAdapter =
-            CardSliderAdapter(list, viewpager, activity?.applicationContext!!)
-        viewpager.adapter = adapter
-
+        val pagerAdapter = ScreenSlidePagerAdapter(this)
+        viewpager.adapter = pagerAdapter
 
         var compositePageTransformer: CompositePageTransformer = CompositePageTransformer()
         compositePageTransformer.addTransformer(MarginPageTransformer(30))
@@ -60,7 +59,7 @@ class CardsFragment : Fragment() {
             }
         })
         viewpager.setPageTransformer(compositePageTransformer)
-
+//
         var tab: TabLayout = root.into_tab_layout
         tab.addOnTabSelectedListener(object : OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
@@ -82,10 +81,15 @@ class CardsFragment : Fragment() {
             override fun onTabReselected(tab: TabLayout.Tab) {}
         })
 
-
         TabLayoutMediator(tab, viewpager) { tab, position -> }.attach()
 
 
+
+        root.layout3.setOnClickListener(View.OnClickListener {
+            Intent(root.context, CardHoastActivity::class.java).also {
+                root.context.startActivity(it)
+            }
+        })
 
 
 
@@ -100,4 +104,25 @@ class CardsFragment : Fragment() {
 
     }
 
+    private inner class ScreenSlidePagerAdapter(fa: Fragment) : FragmentStateAdapter(fa) {
+        override fun getItemCount(): Int = 3
+
+        val root = view
+
+        override fun createFragment(position: Int): Fragment {
+
+            if (position == 0) {
+                return SliderFragment()
+            } else if (position == 1) {
+                return SliderFragment2()
+            } else if (position == 2) {
+                return SliderFragment3()
+            }
+
+            return SliderFragment()
+        }
+
+        //  override fun createFragment(position: Int): Fragment = SliderFragment()
+
+    }
 }

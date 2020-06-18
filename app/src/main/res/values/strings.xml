@@ -294,5 +294,8 @@
     <string name="paywell_cards">PayWell cards</string>
     <string name="already_got_a_card_link_it_here">Already got a card? Link it here</string>
     <string name="complete_identity_check">Complete identity check</string>
+    <string name="enter_paywell_card_number">Enter PayWell card number</string>
+    <string name="link_card">Link card</string>
+    <string name="your_paywell_card_has_been_linked_to_your_account">Your PayWell card has been linked to your account</string>
 
 </resources>

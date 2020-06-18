@@ -23,7 +23,7 @@
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/navigation_cards"
-        android:name="com.cloudwell.paywell.ui.cards.CardsFragment"
+        android:name="com.cloudwell.paywell.ui.cards.fragment.CardsFragment"
         android:label="Cards"
         tools:layout="@layout/fragment_notifications" />
     <fragment
