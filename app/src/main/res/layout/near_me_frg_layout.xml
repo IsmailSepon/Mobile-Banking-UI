@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout9"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
@@ -20,6 +20,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/_20dp"
             android:src="@drawable/back"
+            android:layout_marginTop="@dimen/_20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -32,6 +33,7 @@
             android:text="@string/people_near_me"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_16sp"
+            android:layout_marginTop="@dimen/_15dp"
             android:theme="@style/medium_text_style"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,10 +46,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_14dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/dash_setting" />
+            app:srcCompat="@drawable/setting_2_ic" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

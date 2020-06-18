@@ -20,6 +20,7 @@
             android:id="@+id/imageView17"
             android:layout_width="@dimen/_22dp"
             android:layout_height="@dimen/_14dp"
+            android:layout_marginTop="@dimen/_20dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/_20dp"
             android:src="@drawable/back"
@@ -29,6 +30,7 @@
             tools:ignore="ContentDescription,MissingConstraints" />
 
         <TextView
+            android:layout_marginTop="@dimen/_15dp"
             style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,6 +45,7 @@
             tools:ignore="MissingConstraints" />
 
         <ImageView
+            android:layout_marginTop="@dimen/_14dp"
             android:id="@+id/imageView123"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +53,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/dash_setting" />
+            app:srcCompat="@drawable/setting_2_ic" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
