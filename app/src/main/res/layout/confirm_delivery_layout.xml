@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView134"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:padding="@dimen/_10dp"
+        android:id="@+id/imageView136"
+        android:layout_width="167dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="42dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/round_bg" />
+
+    <ImageView
+        android:id="@+id/imageView135"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView136"
+        app:layout_constraintEnd_toEndOf="@+id/imageView136"
+        app:layout_constraintStart_toStartOf="@+id/imageView136"
+        app:layout_constraintTop_toTopOf="@+id/imageView136"
+        app:srcCompat="@drawable/delivery_address" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:textSize="@dimen/_17sp"
+        android:textColor="@color/keypad_text_clr"
+        android:id="@+id/textView258"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="Confirm delivery address of\nVisa card *6789"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView136" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_15sp"
+        android:id="@+id/textView264"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:text="314, West Rampura,\nDhaka-1219"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView258" />
+
+
+    <ImageView
+        android:id="@+id/imageView137"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/half_one"
+        android:layout_marginTop="50dp"
+        android:background="@color/divider_bg"
+        app:layout_constraintTop_toBottomOf="@+id/textView264" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:textSize="@dimen/_15sp"
+        android:textColor="@color/keypad_text_clr"
+        android:id="@+id/textView265"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Is the address correct?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView137" />
+
+    <ImageView
+        android:id="@+id/imageView138"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="33dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView265"
+        app:srcCompat="@drawable/close_orng" />
+
+    <ImageView
+        android:id="@+id/imageView139"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="71dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView265"
+        app:srcCompat="@drawable/done_round" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_15sp"
+        android:id="@+id/textView266"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="No change it"
+        app:layout_constraintEnd_toEndOf="@+id/imageView138"
+        app:layout_constraintStart_toStartOf="@+id/imageView138"
+        app:layout_constraintTop_toBottomOf="@+id/imageView138" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        android:id="@+id/textView267"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes, continue"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView139"
+        app:layout_constraintStart_toStartOf="@+id/imageView139"
+        app:layout_constraintTop_toBottomOf="@+id/imageView139" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

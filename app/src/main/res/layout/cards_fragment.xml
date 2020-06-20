@@ -11,7 +11,7 @@
         style="@style/medium_text_style"
         android:textSize="@dimen/_17sp"
         android:textColor="@color/keypad_text_clr"
-        android:id="@+id/textView258"
+        android:id="@+id/titile_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -49,7 +49,7 @@
         android:paddingEnd="@dimen/_45dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView258" />
+        app:layout_constraintTop_toBottomOf="@+id/titile_text" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/into_tab_layout"
