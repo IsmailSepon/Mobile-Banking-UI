@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,22 +9,24 @@
         android:id="@+id/imageView134"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="@dimen/_18dp"
+        android:layout_marginTop="@dimen/_18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/back"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:padding="@dimen/_10dp"
         android:id="@+id/imageView136"
-        android:layout_width="167dp"
-        android:layout_height="167dp"
-        android:layout_marginTop="42dp"
+        android:layout_width="@dimen/_167dp"
+        android:layout_height="@dimen/_167dp"
+        android:layout_marginTop="@dimen/_42dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/round_bg" />
+        app:srcCompat="@drawable/round_bg"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView135"
@@ -34,7 +37,8 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView136"
         app:layout_constraintStart_toStartOf="@+id/imageView136"
         app:layout_constraintTop_toTopOf="@+id/imageView136"
-        app:srcCompat="@drawable/delivery_address" />
+        app:srcCompat="@drawable/delivery_address"
+        tools:ignore="ContentDescription" />
 
     <TextView
         style="@style/medium_text_style"
@@ -43,8 +47,8 @@
         android:id="@+id/textView258"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:text="Confirm delivery address of\nVisa card *6789"
+        android:layout_marginTop="@dimen/_38dp"
+        android:text="@string/confirm_delivery_address_of_nvisa_card_6789"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView136" />
@@ -56,7 +60,7 @@
         android:id="@+id/textView264"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="@dimen/_42dp"
         android:text="314, West Rampura,\nDhaka-1219"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,9 +71,10 @@
         android:id="@+id/imageView137"
         android:layout_width="match_parent"
         android:layout_height="@dimen/half_one"
-        android:layout_marginTop="50dp"
-        android:background="@color/divider_bg"
-        app:layout_constraintTop_toBottomOf="@+id/textView264" />
+        android:layout_marginTop="@dimen/_50dp"
+        android:background="@color/common_clr"
+        app:layout_constraintTop_toBottomOf="@+id/textView264"
+        tools:ignore="ContentDescription" />
 
     <TextView
         style="@style/medium_text_style"
@@ -78,8 +83,8 @@
         android:id="@+id/textView265"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Is the address correct?"
+        android:layout_marginTop="@dimen/_60dp"
+        android:text="@string/is_the_address_correct"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView137" />
@@ -88,18 +93,19 @@
         android:id="@+id/imageView138"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginStart="@dimen/_62dp"
+        android:layout_marginTop="@dimen/_33dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView265"
-        app:srcCompat="@drawable/close_orng" />
+        app:srcCompat="@drawable/close_orng"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView139"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="71dp"
+        android:layout_marginTop="@dimen/_33dp"
+        android:layout_marginEnd="@dimen/_71dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView265"
         app:srcCompat="@drawable/done_round" />
@@ -111,8 +117,8 @@
         android:id="@+id/textView266"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="No change it"
+        android:layout_marginTop="@dimen/_10dp"
+        android:text="@string/no_change_it"
         app:layout_constraintEnd_toEndOf="@+id/imageView138"
         app:layout_constraintStart_toStartOf="@+id/imageView138"
         app:layout_constraintTop_toBottomOf="@+id/imageView138" />
@@ -124,8 +130,8 @@
         android:id="@+id/textView267"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Yes, continue"
-        android:layout_marginTop="10dp"
+        android:text="@string/yes_continue"
+        android:layout_marginTop="@dimen/_10dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView139"
         app:layout_constraintStart_toStartOf="@+id/imageView139"
         app:layout_constraintTop_toBottomOf="@+id/imageView139" />

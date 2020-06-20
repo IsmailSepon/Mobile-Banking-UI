@@ -297,5 +297,9 @@
     <string name="enter_paywell_card_number">Enter PayWell card number</string>
     <string name="link_card">Link card</string>
     <string name="your_paywell_card_has_been_linked_to_your_account">Your PayWell card has been linked to your account</string>
+    <string name="is_the_address_correct">Is the address correct?</string>
+    <string name="confirm_delivery_address_of_nvisa_card_6789">Confirm delivery address of\nVisa card *6789</string>
+    <string name="no_change_it">No change it</string>
+    <string name="yes_continue">Yes, continue</string>
 
 </resources>
