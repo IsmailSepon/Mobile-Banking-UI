@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    app:cardCornerRadius="@dimen/_10dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_22dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            style="@style/text_style"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15sp"
+            android:textColor="@color/keypad_text_clr"
+            android:gravity="left"
+            android:id="@+id/textView268"
+            android:layout_width="@dimen/_240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="20dp"
+            android:text="Terminate and reorder to a new\naddress?"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView269"
+            style="@style/text_style"
+            android:gravity="left"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:lineHeight="@dimen/_20sp"
+            android:text="The undelivered card will be terminated and your can order another one to your new address for free"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView268" />
+
+        <TextView
+            style="@style/text_style"
+            android:textSize="@dimen/_15sp"
+            android:textColor="@color/text_link_clr"
+            android:id="@+id/textView270"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/terminate_reorder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView269" />
+
+        <TextView
+            style="@style/text_style"
+            android:textSize="@dimen/_15sp"
+            android:textColor="@color/text_link_clr"
+            android:id="@+id/textView271"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView270" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

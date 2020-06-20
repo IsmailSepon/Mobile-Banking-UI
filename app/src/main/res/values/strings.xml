@@ -301,5 +301,6 @@
     <string name="confirm_delivery_address_of_nvisa_card_6789">Confirm delivery address of\nVisa card *6789</string>
     <string name="no_change_it">No change it</string>
     <string name="yes_continue">Yes, continue</string>
+    <string name="terminate_reorder"><![CDATA[Terminate & reorder]]></string>
 
 </resources>
