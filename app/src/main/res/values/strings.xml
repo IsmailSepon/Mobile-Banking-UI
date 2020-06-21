@@ -302,5 +302,23 @@
     <string name="no_change_it">No change it</string>
     <string name="yes_continue">Yes, continue</string>
     <string name="terminate_reorder"><![CDATA[Terminate & reorder]]></string>
+    <string name="we_can_t_provide_a_tracking_number_for_this_ndelivery">We can’t provide a tracking number for this\ndelivery</string>
+    <string name="got_it">Got it</string>
+    <string name="get_standard_card">Get Standard card</string>
+    <string name="card_ordering_usage_terms"><![CDATA[Card ordering & usage terms]]></string>
+    <string name="the_nid_selfie_and_the_name_of_proprietor_in_ntrade_license_needs_to_the_of_the_same_person">The NID, Selfie and the name of proprietor in trade license needs to the of the same person.</string>
+    <string name="card_issuance_delivery_fee"><![CDATA[Card issuance & delivery fee]]></string>
+    <string name="to_be_deliverd_within_10_days">To be deliverd within 10 days</string>
+    <string name="i_agree_to_pay_issue_use_the_card_as_per_nthe_about_terms"><![CDATA[I agree to pay, issue & use the card as per\nthe about terms.]]></string>
+    <string name="please_ensure_you_have_available_fund_in_your_account_you_may_top_up_to_add_fund_now">Please ensure you have available fund in your account, you may top up to add fund now.</string>
+    <string name="create_pin_for_your_paywell_card">Create PIN for your PayWell card</string>
+    <string name="dot">.</string>
+    <string name="change_address">Change address</string>
+    <string name="add_tracking_to_your_delivery">Add tracking to your delivery</string>
+    <string name="hooray_your_paywell_card_is_on_nits_way">Hooray! Your PayWell card is on\nits way!</string>
+    <string name="one_more_thing">One more thing</string>
+    <string name="would_you_like_to_activate_location_based_security_for_future_card_transactions">Would you like to activate location-based security for future card transactions?</string>
+    <string name="we_will_use_your_location_to_decline_card_transactions_happening_outside_of_your_phone_geo_location">We will use your location to\ndecline card transactions\nhappening outside of your phone\ngeo-location</string>
+    <string name="allow_location_access">Allow location access</string>
 
 </resources>

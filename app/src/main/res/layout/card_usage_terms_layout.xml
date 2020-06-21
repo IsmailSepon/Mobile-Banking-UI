@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/titile_text"
+        style="@style/medium_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/card_ordering_usage_terms"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_17sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView139"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView139"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/titile_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titile_text"
+        app:srcCompat="@drawable/back"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        style="@style/text_style"
+        android:textSize="@dimen/_14sp"
+        android:textColor="@color/keypad_text_clr"
+        android:lineHeight="@dimen/_17sp"
+        android:gravity="left"
+        android:id="@+id/textView270"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_42dp"
+        android:layout_marginTop="@dimen/_60dp"
+        android:layout_marginEnd="@dimen/_42dp"
+        android:text="@string/the_nid_selfie_and_the_name_of_proprietor_in_ntrade_license_needs_to_the_of_the_same_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titile_text" />
+
+    <TextView
+
+        style="@style/text_style"
+        android:textSize="@dimen/_15sp"
+        android:textColor="@color/keypad_text_clr"
+        android:lineHeight="@dimen/_17sp"
+        android:id="@+id/textView272"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32dp"
+        android:text="@string/card_issuance_delivery_fee"
+        app:layout_constraintStart_toStartOf="@+id/textView270"
+        app:layout_constraintTop_toBottomOf="@+id/textView270" />
+
+    <TextView
+        style="@style/text_style"
+        android:textSize="@dimen/_15sp"
+        android:textColor="@color/recyclerview_title"
+        android:lineHeight="@dimen/_17sp"
+        android:id="@+id/textView273"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_be_deliverd_within_10_days"
+        app:layout_constraintStart_toStartOf="@+id/textView272"
+        app:layout_constraintTop_toBottomOf="@+id/textView272" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:textSize="@dimen/_15sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:lineHeight="@dimen/_20sp"
+        android:id="@+id/textView274"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_40dp"
+        android:text="৳560"
+        app:layout_constraintBottom_toBottomOf="@+id/textView273"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView272"
+        tools:ignore="UnusedAttribute" />
+
+    <CheckBox
+        android:buttonTint="@color/keypad_text_clr"
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32dp"
+        app:layout_constraintStart_toStartOf="@+id/textView273"
+        app:layout_constraintTop_toBottomOf="@+id/textView273" />
+
+    <TextView
+        android:id="@+id/textView275"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:gravity="left"
+        android:lineHeight="@dimen/_17sp"
+        android:text="@string/i_agree_to_pay_issue_use_the_card_as_per_nthe_about_terms"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintTop_toTopOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/textView276"
+        style="@style/text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_42dp"
+        android:layout_marginEnd="@dimen/_42dp"
+        android:lineHeight="@dimen/_17sp"
+        android:text="@string/please_ensure_you_have_available_fund_in_your_account_you_may_top_up_to_add_fund_now"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintBottom_toTopOf="@+id/spilt_bill_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView275" />
+
+
+    <Button
+        android:id="@+id/card_usage_terms_btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:background="@drawable/round_btn_visable"
+        android:elevation="@dimen/evelation_five"
+        android:text="@string/continue_txt"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        tools:targetApi="lollipop" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

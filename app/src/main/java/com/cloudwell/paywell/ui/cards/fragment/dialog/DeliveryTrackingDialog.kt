@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
-import com.cloudwell.paywell.ui.cards.fragment.identityCheck.ConfirmDeliveryDoneFragment
+import com.cloudwell.paywell.ui.cards.fragment.physicalCard.OneMoreThingFragment
 import com.cloudwell.paywell.utils.FragmentHelper
-import kotlinx.android.synthetic.main.terminate_order_dialog.view.*
+import kotlinx.android.synthetic.main.delivery_tracking_dialog.view.*
 
 
-class TerminateOrderDialog : BaseDialog() {
+class DeliveryTrackingDialog : BaseDialog() {
 
 
     override fun onCreateView(
@@ -19,17 +19,17 @@ class TerminateOrderDialog : BaseDialog() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = layoutInflater.inflate(R.layout.terminate_order_dialog, null)
+        val view = layoutInflater.inflate(R.layout.delivery_tracking_dialog, null)
 
-
-        view.terminate_order_btn.setOnClickListener(View.OnClickListener {
+        view.terminate_reorder_btn.setOnClickListener(View.OnClickListener {
 
             FragmentHelper.replaceFragment(
-                ConfirmDeliveryDoneFragment(),
+                OneMoreThingFragment(),
                 activity?.supportFragmentManager,
                 R.id.Cards_container
             )
             dismiss()
+
         })
 
 

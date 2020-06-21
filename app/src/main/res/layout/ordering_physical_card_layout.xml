@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.cards.fragment.CardsFragment">
+
+
+    <TextView
+        android:id="@+id/titile_text"
+        style="@style/medium_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ordering your physical card"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/card_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:paddingStart="@dimen/_45dp"
+        android:paddingEnd="@dimen/_45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titile_text" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/into_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintTop_toBottomOf="@+id/card_viewpager"
+        app:tabBackground="@drawable/tab_pager_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp" />
+
+
+    <ImageView
+        android:id="@+id/imageView139"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/titile_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titile_text"
+        app:srcCompat="@drawable/back" />
+
+
+    <Button
+        android:id="@+id/ordering_physical_card_btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:background="@drawable/round_btn_visable"
+        android:elevation="@dimen/evelation_five"
+        android:text="@string/get_standard_card"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/into_tab_layout"
+        app:layout_constraintVertical_bias="0.81"
+        tools:targetApi="lollipop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
