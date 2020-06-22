@@ -37,7 +37,7 @@ class RegistationMainActivity : AppCompatActivity() {
 
                 val t = 100 / adapter.itemCount
                 val p = position + 1
-                registation_progressBar.progress = p*t
+                registation_progressBar.progress = p * t
 
             }
         })

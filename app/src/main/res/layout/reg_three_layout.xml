@@ -22,7 +22,7 @@
                 tools:ignore="MissingConstraints"
                 app:layout_constraintVertical_bias="0.32999998" />
 
-            <com.cloudwell.paywell.ui.registration.customView.PinEntryEditText
+            <com.cloudwell.paywell.consumer.ui.registration.customView.PinEntryEditText
                 android:id="@+id/etMobileOrRID"
                 android:layout_width="@dimen/_200dp"
                 android:layout_height="@dimen/_30dp"

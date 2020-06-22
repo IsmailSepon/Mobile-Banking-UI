@@ -220,8 +220,7 @@
                 <ImageView
                     android:background="@color/common_clr"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/half_one"
-                    tools:ignore="ContentDescription" />
+                    android:layout_height="@dimen/half_one" />
 
 
                 <TextView
@@ -319,14 +318,12 @@
                     android:id="@+id/spilt_bill_recyclerview"
                     android:layout_width="match_parent"
                     android:scrollbars="vertical"
-                    android:nestedScrollingEnabled="true"
                     android:layout_height="wrap_content" />
 
 
             </LinearLayout>
 
-        </androidx.core.widget.NestedScrollView>
-
+        </ScrollView>
     </LinearLayout>
 
 </layout>

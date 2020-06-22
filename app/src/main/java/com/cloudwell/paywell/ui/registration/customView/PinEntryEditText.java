@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.ui.registration.customView;
+package com.cloudwell.paywell.consumer.activity.registation.customview;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -15,7 +15,7 @@ import android.view.View;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
-import com.cloudwell.paywell.R;
+import com.cloudwell.paywell.consumer.R;
 
 
 /**
