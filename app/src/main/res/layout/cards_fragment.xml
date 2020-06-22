@@ -126,7 +126,6 @@
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        app:layout_constraintTop_toBottomOf="@+id/into_tab_layout">-->
 
-
     <!--        <com.anton46.stepsview.StepsView-->
     <!--            android:id="@+id/stepsView"-->
     <!--            android:layout_width="match_parent"-->
@@ -134,7 +133,6 @@
     <!--            app:layout_constraintEnd_toEndOf="parent"-->
     <!--            app:layout_constraintStart_toStartOf="parent"-->
     <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
 
     <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 

@@ -105,12 +105,12 @@ class CardsFragment : Fragment() {
 
         val views = arrayOf("View 1", "View 2", "View 3")
 
-        root.stepsView.setLabels(views)
-            .setBarColorIndicator(R.color.recyclerview_title)
-            .setProgressColorIndicator(R.color.color_red)
-            .setLabelColorIndicator(R.color.orange)
-            .setCompletedPosition(1)
-            .drawView()
+//        root.stepsView.setLabels(views)
+//            .setBarColorIndicator(R.color.recyclerview_title)
+//            .setProgressColorIndicator(R.color.color_red)
+//            .setLabelColorIndicator(R.color.orange)
+//            .setCompletedPosition(1)
+//            .drawView()
 
 
         return root
