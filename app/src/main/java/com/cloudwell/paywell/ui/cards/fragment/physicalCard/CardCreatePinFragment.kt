@@ -13,7 +13,7 @@ import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.CustomKeyboardWithBack
-import com.cloudwell.paywell.ui.registration.customView.PinEntryEditText
+import com.cloudwell.paywell.base.PinEntryEditText
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.card_create_pin_layout.view.*
 
