@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -12,6 +13,8 @@ import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.consumer.ui.account.pendingPopupDialog.CreateCardPinDialog
+import com.cloudwell.paywell.consumer.ui.account.pendingPopupDialog.ViewCardPinDialog
 import com.cloudwell.paywell.ui.cards.CardHoastActivity
 import com.cloudwell.paywell.ui.cards.fragment.sliderFrg.SliderFragment
 import com.cloudwell.paywell.ui.cards.fragment.sliderFrg.SliderFragment2
@@ -103,15 +106,28 @@ class CardsFragment : Fragment() {
 
         })
 
-        val views = arrayOf("View 1", "View 2", "View 3")
 
-//        root.stepsView.setLabels(views)
-//            .setBarColorIndicator(R.color.recyclerview_title)
-//            .setProgressColorIndicator(R.color.color_red)
-//            .setLabelColorIndicator(R.color.orange)
-//            .setCompletedPosition(1)
-//            .drawView()
+        root.security_layout.setOnClickListener(View.OnClickListener {
+            val intent = Intent(root.context, CardHoastActivity::class.java)
+            intent.putExtra("cards", "security")
+            root.context.startActivity(intent)
+        })
 
+        root.limit_layout.setOnClickListener(View.OnClickListener {
+            val intent = Intent(root.context, CardHoastActivity::class.java)
+            intent.putExtra("cards", "limit")
+            root.context.startActivity(intent)
+        })
+
+        root.reset_card_pin.setOnClickListener(View.OnClickListener {
+            val newFragment: DialogFragment = CreateCardPinDialog()
+            newFragment.show(activity?.supportFragmentManager!!, "CreateCardPinDialog")
+        })
+
+        root.view_pin_layout.setOnClickListener(View.OnClickListener {
+            val newFragment: DialogFragment = ViewCardPinDialog()
+            newFragment.show(activity?.supportFragmentManager!!, "CreateCardPinDialog")
+        })
 
         return root
 

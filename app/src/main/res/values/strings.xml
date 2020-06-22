@@ -320,5 +320,14 @@
     <string name="would_you_like_to_activate_location_based_security_for_future_card_transactions">Would you like to activate location-based security for future card transactions?</string>
     <string name="we_will_use_your_location_to_decline_card_transactions_happening_outside_of_your_phone_geo_location">We will use your location to\ndecline card transactions\nhappening outside of your phone\ngeo-location</string>
     <string name="allow_location_access">Allow location access</string>
+    <string name="location_based_security">Location-based security</string>
+    <string name="we_ll_use_your_location_to_help_proevent_fraudulent_transaction_if_your_card_is_ever_compromised_gps_must_be_turned_on">We\'ll use your location to help proevent fraudulent transaction if your card is ever compromised. GPS must be turned on.</string>
+    <string name="swipe_payments">Swipe payments</string>
+    <string name="sometimes_cards_can_be_cloned_switch_off_the_magnetic_strip_for_extra_security">Sometimes cards can be cloned. Switch off the magnetic strip for extra security</string>
+    <string name="atm_withdrawals">ATM withdrawals</string>
+    <string name="if_you_do_not_plan_to_withdraw_cash_you_can_switch_atm_withdrawals_off">If you do not plan to withdraw cash, you can switch ATM withdrawals off</string>
+    <string name="online_transactions">Online transactions</string>
+    <string name="internet_based_transactions_are_generally_high_risk_you_can_switch_them_off_for_extra_security">Internet-based transactions are generally high-risk. You can switch them off for extra security</string>
+    <string name="limit_to_use_in_pos_atm_nis_15000_a_month"><![CDATA[Limit to use in POS & ATM\nis ৳15000 a month]]></string>
 
 </resources>

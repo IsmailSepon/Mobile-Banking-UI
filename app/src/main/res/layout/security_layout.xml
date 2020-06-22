@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView50"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="8dp"
+            android:text="Card security"
+            android:textSize="@dimen/_17sp"
+            android:textColor="@color/keypad_text_clr"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.159"
+            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.538"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/location_permission"
+        android:layout_marginTop="37dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_marginStart="27dp"
+            android:id="@+id/imageView146"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/loc_security_ic"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/medium_text_style"
+            android:textSize="@dimen/_15sp"
+            android:textColor="@color/keypad_text_clr"
+            android:id="@+id/textView290"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:text="@string/location_based_security"
+            app:layout_constraintStart_toEndOf="@+id/imageView146"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView290"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView290" />
+
+        <TextView
+            style="@style/text_style"
+            android:textSize="@dimen/_14sp"
+            android:textColor="@color/recyclerview_title"
+            android:gravity="left"
+            android:id="@+id/textView291"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/we_ll_use_your_location_to_help_proevent_fraudulent_transaction_if_your_card_is_ever_compromised_gps_must_be_turned_on"
+            app:layout_constraintEnd_toStartOf="@+id/switch3"
+            app:layout_constraintStart_toStartOf="@+id/textView290"
+            app:layout_constraintTop_toBottomOf="@+id/textView290" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/swipe_payment"
+        android:layout_marginTop="37dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_marginStart="27dp"
+            android:id="@+id/swipe_payment_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/security_wallet"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/medium_text_style"
+            android:textSize="@dimen/_15sp"
+            android:textColor="@color/keypad_text_clr"
+            android:id="@+id/swipe_payment_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:text="@string/swipe_payments"
+            app:layout_constraintStart_toEndOf="@+id/swipe_payment_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/swipe_payment_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintBottom_toBottomOf="@+id/swipe_payment_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/swipe_payment_txt" />
+
+        <TextView
+            style="@style/text_style"
+            android:textSize="@dimen/_14sp"
+            android:textColor="@color/recyclerview_title"
+            android:gravity="left"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/sometimes_cards_can_be_cloned_switch_off_the_magnetic_strip_for_extra_security"
+            app:layout_constraintEnd_toStartOf="@+id/swipe_payment_switch"
+            app:layout_constraintStart_toStartOf="@+id/swipe_payment_txt"
+            app:layout_constraintTop_toBottomOf="@+id/swipe_payment_txt" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ATM_permission"
+        android:layout_marginTop="37dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_marginStart="27dp"
+            android:id="@+id/ATM_permission_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/atm_security"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/medium_text_style"
+            android:textSize="@dimen/_15sp"
+            android:textColor="@color/keypad_text_clr"
+            android:id="@+id/ATM_permission_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:text="@string/atm_withdrawals"
+            app:layout_constraintStart_toEndOf="@+id/ATM_permission_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/ATM_permission_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ATM_permission_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ATM_permission_txt" />
+
+        <TextView
+            style="@style/text_style"
+            android:textSize="@dimen/_14sp"
+            android:textColor="@color/recyclerview_title"
+            android:gravity="left"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/if_you_do_not_plan_to_withdraw_cash_you_can_switch_atm_withdrawals_off"
+            app:layout_constraintEnd_toStartOf="@+id/ATM_permission_switcher"
+            app:layout_constraintStart_toStartOf="@+id/ATM_permission_txt"
+            app:layout_constraintTop_toBottomOf="@+id/ATM_permission_txt" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/online_permission"
+        android:layout_marginTop="37dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_marginStart="27dp"
+            android:id="@+id/online_permission_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/security_online"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/medium_text_style"
+            android:textSize="@dimen/_15sp"
+            android:textColor="@color/keypad_text_clr"
+            android:id="@+id/online_permission_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:text="@string/online_transactions"
+            app:layout_constraintStart_toEndOf="@+id/online_permission_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/online_permission_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintBottom_toBottomOf="@+id/online_permission_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/online_permission_txt" />
+
+        <TextView
+            style="@style/text_style"
+            android:textSize="@dimen/_14sp"
+            android:textColor="@color/recyclerview_title"
+            android:gravity="left"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/internet_based_transactions_are_generally_high_risk_you_can_switch_them_off_for_extra_security"
+            app:layout_constraintEnd_toStartOf="@+id/online_permission_switch"
+            app:layout_constraintStart_toStartOf="@+id/online_permission_txt"
+            app:layout_constraintTop_toBottomOf="@+id/online_permission_txt" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

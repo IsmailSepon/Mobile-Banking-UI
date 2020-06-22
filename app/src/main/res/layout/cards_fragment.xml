@@ -1,140 +1,372 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.cards.fragment.CardsFragment">
 
-
-    <TextView
-        style="@style/medium_text_style"
-        android:textSize="@dimen/_17sp"
-        android:textColor="@color/keypad_text_clr"
-        android:id="@+id/titile_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/paywell_cards"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView129"
-        android:layout_width="@dimen/_25dp"
-        android:layout_height="@dimen/_25dp"
-        android:layout_marginEnd="16dp"
-        app:srcCompat="@drawable/swap_vert"
-        app:layout_constraintEnd_toStartOf="@+id/imageView130"
-        app:layout_constraintTop_toTopOf="@+id/imageView130" />
-
-    <ImageView
-        android:id="@+id/imageView130"
-        android:layout_width="@dimen/_18dp"
-        android:layout_height="@dimen/_18dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="15dp"
-        app:srcCompat="@drawable/add_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/card_viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:layout_marginTop="@dimen/_40dp"
-        android:paddingStart="@dimen/_45dp"
-        android:paddingEnd="@dimen/_45dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titile_text" />
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/into_tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:layout_constraintTop_toBottomOf="@+id/card_viewpager"
-        app:tabBackground="@drawable/tab_pager_selector"
-        app:tabGravity="center"
-        app:tabIndicatorHeight="0dp" />
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout3"
-        android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_50dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/into_tab_layout">
+        android:paddingBottom="@dimen/_50dp"
+        android:layout_height="wrap_content">
 
+        <TextView
+            style="@style/medium_text_style"
+            android:textSize="@dimen/_17sp"
+            android:textColor="@color/keypad_text_clr"
+            android:id="@+id/titile_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/paywell_cards"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView131"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_50dp"
-            app:srcCompat="@drawable/link_only_ic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/imageView129"
+            android:layout_width="@dimen/_25dp"
+            android:layout_height="@dimen/_25dp"
+            android:layout_marginEnd="16dp"
+            app:srcCompat="@drawable/swap_vert"
+            app:layout_constraintEnd_toStartOf="@+id/imageView130"
+            app:layout_constraintTop_toTopOf="@+id/imageView130" />
+
+        <ImageView
+            android:id="@+id/imageView130"
+            android:layout_width="@dimen/_18dp"
+            android:layout_height="@dimen/_18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/add_btn"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            style="@style/medium_text_style"
-            android:textColor="@color/text_link_clr"
-            android:textSize="@dimen/_15sp"
-            android:id="@+id/textView259"
-            android:layout_width="wrap_content"
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/card_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="@dimen/_40dp"
+            android:paddingStart="@dimen/_45dp"
+            android:paddingEnd="@dimen/_45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titile_text" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/into_tab_layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:text="@string/already_got_a_card_link_it_here"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView131"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_gravity="bottom"
+            app:layout_constraintTop_toBottomOf="@+id/card_viewpager"
+            app:tabBackground="@drawable/tab_pager_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout3"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/into_tab_layout">
+
+
+            <ImageView
+                android:id="@+id/imageView131"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_50dp"
+                app:srcCompat="@drawable/link_only_ic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/medium_text_style"
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_15sp"
+                android:id="@+id/textView259"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/already_got_a_card_link_it_here"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView131"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout2"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/into_tab_layout">
+
+            <TextView
+                style="@style/medium_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_50dp"
+                android:text="@string/complete_identity_check"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/into_tab_layout">
+
+
+            <include layout="@layout/staper_layout" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/view_pin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout18"
+            tools:ignore="UselessLeaf">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/imageView145"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:src="@drawable/freez_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:lineHeight="@dimen/_14sp"
+                    android:id="@+id/freez_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:text="Freeze card"
+                    app:layout_constraintStart_toEndOf="@+id/imageView145"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:textSize="@dimen/_12sp"
+                    android:textColor="@color/recyclerview_title"
+                    android:id="@+id/freez_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap again to unfreeze"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/freez_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/freez_txt" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_26dp"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/pin_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:src="@drawable/view_pin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:lineHeight="@dimen/_14sp"
+                    android:id="@+id/pin_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:text="View PIN"
+                    app:layout_constraintStart_toEndOf="@+id/pin_image"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:textSize="@dimen/_12sp"
+                    android:textColor="@color/recyclerview_title"
+                    android:id="@+id/pin_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Always protect your PIN"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/pin_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/pin_txt" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/reset_card_pin"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_26dp"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/reset_pin_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:src="@drawable/view_pin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:lineHeight="@dimen/_14sp"
+                    android:id="@+id/view_pin_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:text="Reset PIN"
+                    app:layout_constraintStart_toEndOf="@+id/reset_pin_image"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/view_pin_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Always protect your PIN"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/view_pin_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/view_pin_txt" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/security_layout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_26dp"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/security_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:src="@drawable/security_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:id="@+id/security_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:text="Security"
+                    app:layout_constraintStart_toEndOf="@+id/security_image"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:textSize="@dimen/_12sp"
+                    android:textColor="@color/recyclerview_title"
+                    android:id="@+id/security_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enable additional protection"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/security_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/security_txt" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/limit_layout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_26dp"
+                android:layout_marginBottom="@dimen/_30dp"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/limit_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:src="@drawable/limit_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:textSize="@dimen/_14sp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:id="@+id/textView282"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:text="Limit"
+                    app:layout_constraintStart_toEndOf="@+id/limit_image"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:textSize="@dimen/_12sp"
+                    android:textColor="@color/recyclerview_title"
+                    android:id="@+id/textView284"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Set monthly spending amount"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView282"
+                    app:layout_constraintTop_toBottomOf="@+id/textView282" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout2"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_50dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/into_tab_layout">
-
-        <TextView
-            style="@style/medium_text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_50dp"
-            android:text="@string/complete_identity_check"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="500dp"-->
-    <!--        android:layout_marginTop="30dp"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/into_tab_layout">-->
-
-    <!--        <com.anton46.stepsview.StepsView-->
-    <!--            android:id="@+id/stepsView"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

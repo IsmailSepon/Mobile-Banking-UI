@@ -3,6 +3,8 @@ package com.cloudwell.paywell.ui.cards
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.cards.fragment.CardsLimitFragment
+import com.cloudwell.paywell.ui.cards.fragment.CardsSecurityFragment
 import com.cloudwell.paywell.ui.cards.fragment.PaywellCardsLinkFragment
 import com.cloudwell.paywell.ui.cards.fragment.identityCheck.ConfirmDeliveryFragment
 import com.cloudwell.paywell.ui.cards.fragment.physicalCard.OrderingPhysicalCardFragment
@@ -34,6 +36,20 @@ class CardHoastActivity : AppCompatActivity() {
             //identy
             FragmentHelper.replaceFragment(
                 OrderingPhysicalCardFragment(),
+                supportFragmentManager,
+                R.id.Cards_container
+            )
+        } else if (parent.equals("security")) {
+            //identy
+            FragmentHelper.replaceFragment(
+                CardsSecurityFragment(),
+                supportFragmentManager,
+                R.id.Cards_container
+            )
+        } else if (parent.equals("limit")) {
+            //identy
+            FragmentHelper.replaceFragment(
+                CardsLimitFragment(),
                 supportFragmentManager,
                 R.id.Cards_container
             )

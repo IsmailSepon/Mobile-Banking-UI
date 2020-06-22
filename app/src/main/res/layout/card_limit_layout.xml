@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView50"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:text="Limit"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.538"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView147"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+        app:srcCompat="@drawable/limit_image" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/textView292"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15000.00"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView147"
+        app:layout_constraintEnd_toEndOf="@+id/imageView147"
+        app:layout_constraintStart_toStartOf="@+id/imageView147"
+        app:layout_constraintTop_toTopOf="@+id/imageView147" />
+
+    <TextView
+        style="@style/text_style"
+        android:textSize="@dimen/_17sp"
+        android:textColor="@color/recyclerview_title"
+        android:lineHeight="@dimen/_17sp"
+        android:id="@+id/textView293"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/limit_to_use_in_pos_atm_nis_15000_a_month"
+        app:layout_constraintEnd_toEndOf="@+id/imageView147"
+        app:layout_constraintStart_toStartOf="@+id/imageView147"
+        app:layout_constraintTop_toBottomOf="@+id/imageView147" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
