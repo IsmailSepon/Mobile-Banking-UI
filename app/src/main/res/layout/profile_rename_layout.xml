@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView71"
+        android:id="@+id/rename_back"
         android:layout_width="@dimen/_12dp"
         android:layout_height="@dimen/_12dp"
         android:layout_marginStart="@dimen/_24dp"
@@ -24,9 +24,9 @@
         android:text="@string/rename"
         android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/_17sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView71"
-        app:layout_constraintStart_toEndOf="@+id/imageView71"
-        app:layout_constraintTop_toTopOf="@+id/imageView71" />
+        app:layout_constraintBottom_toBottomOf="@+id/rename_back"
+        app:layout_constraintStart_toEndOf="@+id/rename_back"
+        app:layout_constraintTop_toTopOf="@+id/rename_back" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
