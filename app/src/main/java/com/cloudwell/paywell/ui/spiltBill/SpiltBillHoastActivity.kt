@@ -16,13 +16,13 @@ class SpiltBillHoastActivity : AppCompatActivity() {
         if (id.equals("2")) {
 
 
-            FragmentHelper.replaceFragment(
+            FragmentHelper.addFirstFragment(
                 SpiltBillRequestProfileFragment(),
                 supportFragmentManager,
                 R.id.spilt_bill_container
             )
         } else {
-            FragmentHelper.replaceFragment(
+            FragmentHelper.addFirstFragment(
                 SpiltBillProfileFragment(),
                 supportFragmentManager,
                 R.id.spilt_bill_container

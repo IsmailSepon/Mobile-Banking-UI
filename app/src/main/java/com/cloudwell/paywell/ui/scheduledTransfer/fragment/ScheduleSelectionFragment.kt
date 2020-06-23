@@ -39,7 +39,7 @@ class ScheduleSelectionFragment : Fragment() {
 
 
         view.back_btn.setOnClickListener(View.OnClickListener {
-            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+           activity?.finish()
         })
 
 

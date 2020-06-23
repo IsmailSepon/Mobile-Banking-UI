@@ -29,6 +29,9 @@ class SpiltBillRequestProfileFragment : Fragment() {
         })
 
 
+        view.spilt_profile_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
 
 
         return view
