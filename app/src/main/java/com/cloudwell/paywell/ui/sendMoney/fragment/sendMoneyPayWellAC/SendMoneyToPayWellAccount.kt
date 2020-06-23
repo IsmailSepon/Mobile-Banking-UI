@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
+import kotlinx.android.synthetic.main.send_money_to_pay_well_account_fragment.view.*
 
 class SendMoneyToPayWellAccount : Fragment() {
 
@@ -20,7 +22,18 @@ class SendMoneyToPayWellAccount : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.send_money_to_pay_well_account_fragment, container, false)
+        val view: View =
+            inflater.inflate(R.layout.send_money_to_pay_well_account_fragment, container, false)
+
+
+
+        view.send_money_profile_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
+
+
+        return view
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

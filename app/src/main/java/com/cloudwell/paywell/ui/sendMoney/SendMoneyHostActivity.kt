@@ -13,6 +13,7 @@ import com.cloudwell.paywell.ui.beneficiary.BeneficeryHostActivity
 import com.cloudwell.paywell.ui.beneficiary.fragment.BeneficiaryFragment
 import com.cloudwell.paywell.ui.sendMoney.view.SendMoneyFactory
 import com.cloudwell.paywell.ui.sendMoney.viewmodel.SendMoneyViewModel
+import com.cloudwell.paywell.utils.FragmentHelper
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
@@ -41,13 +42,18 @@ class SendMoneyHostActivity : BaseActivity(), KodeinAware {
         setViewModelObserver()
 
 
-        val beneficiaryFragment = BeneficiaryFragment()
-        val manager = supportFragmentManager
-        val transaction = manager.beginTransaction()
-        transaction.replace(R.id.send_money_container, beneficiaryFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+//        val beneficiaryFragment = BeneficiaryFragment()
+//        val manager = supportFragmentManager
+//        val transaction = manager.beginTransaction()
+//        transaction.replace(R.id.send_money_container, beneficiaryFragment)
+//        transaction.addToBackStack(null)
+//        transaction.commit()
 
+        FragmentHelper.addFirstFragment(
+            BeneficiaryFragment(),
+            supportFragmentManager,
+            R.id.send_money_container
+        )
 
     }
 
