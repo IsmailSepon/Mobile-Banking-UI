@@ -49,6 +49,10 @@ class CashWithDreawMainFragment : Fragment() {
         })
 
 
+        view.setOnClickListener(View.OnClickListener {
+            activity?.finish()
+        })
+
 //        beneficeryViewModel =
 //            ViewModelProviders.of(this).get(BeneficeryViewModel::class.java)
 //        val binding : AddaccountLayoutBinding = DataBindingUtil.inflate(inflater, R.layout.addaccount_layout, container, false)

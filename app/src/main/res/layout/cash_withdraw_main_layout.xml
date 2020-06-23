@@ -16,7 +16,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/atm_withdraw_back"
             android:layout_width="@dimen/_14dp"
             android:layout_height="@dimen/_14dp"
             android:layout_gravity="center_horizontal"
