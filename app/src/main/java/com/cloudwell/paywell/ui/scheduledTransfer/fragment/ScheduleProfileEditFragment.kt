@@ -28,6 +28,11 @@ class ScheduleProfileEditFragment : Fragment() {
         })
 
 
+        view.back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
+
+
 
         return view
     }

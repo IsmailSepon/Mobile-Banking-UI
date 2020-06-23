@@ -18,7 +18,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
     <ImageView
-        android:id="@+id/imageView72"
+        android:id="@+id/addnew_contact_back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -36,9 +36,9 @@
         android:text="@string/add_a_new_contact"
         android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/_17sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView72"
-        app:layout_constraintStart_toEndOf="@+id/imageView72"
-        app:layout_constraintTop_toTopOf="@+id/imageView72" />
+        app:layout_constraintBottom_toBottomOf="@+id/addnew_contact_back_btn"
+        app:layout_constraintStart_toEndOf="@+id/addnew_contact_back_btn"
+        app:layout_constraintTop_toTopOf="@+id/addnew_contact_back_btn" />
 
     <ImageView
         android:id="@+id/done_btn"

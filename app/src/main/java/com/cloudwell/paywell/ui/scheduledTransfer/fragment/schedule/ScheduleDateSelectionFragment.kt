@@ -28,6 +28,9 @@ class ScheduleDateSelectionFragment : Fragment() {
             )
         })
 
+        view.date_selection_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
 
         return view
     }
