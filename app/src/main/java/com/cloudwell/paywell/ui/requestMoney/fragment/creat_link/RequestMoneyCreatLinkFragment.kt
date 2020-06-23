@@ -31,6 +31,9 @@ class RequestMoneyCreatLinkFragment : Fragment() {
 
 
 
+        view.req_money_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
 
         return view
     }

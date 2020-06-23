@@ -29,6 +29,9 @@ class NearMeSearchFragment : Fragment() {
         })
 
 
+        view.near_me_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
 
 
         return view

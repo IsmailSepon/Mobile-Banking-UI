@@ -28,6 +28,9 @@ class RequestMoneyLinkInfoFragment : Fragment() {
             )
         })
 
+        view.req_link_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
 
         return view
     }

@@ -11,7 +11,7 @@ class RequestMoneyHostActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request_money_host)
 
-        FragmentHelper.replaceFragment(
+        FragmentHelper.addFirstFragment(
             RequestMoneyMainFragment(),
             supportFragmentManager,
             R.id.request_money_container

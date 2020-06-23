@@ -16,20 +16,20 @@ class BeneficeryHostActivity : AppCompatActivity() {
         type = intent.getIntExtra(applicationContext.getString(R.string.beneficery_type), 0)
 
         if (type == 1) {
-            FragmentHelper.replaceFragment(
+            FragmentHelper.addFirstFragment(
                 ChooseTransferTypeFragment(),
                 supportFragmentManager,
                 R.id.beneficery_host_container
             )
         } else if (type == 2) {
 
-            FragmentHelper.replaceFragment(
+            FragmentHelper.addFirstFragment(
                 FindPayWellUserFrg(),
                 supportFragmentManager,
                 R.id.beneficery_host_container
             )
         } else if (type == 3) {
-            FragmentHelper.replaceFragment(
+            FragmentHelper.addFirstFragment(
                 ChooseTransferTypeFragment(),
                 supportFragmentManager,
                 R.id.beneficery_host_container

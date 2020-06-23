@@ -14,7 +14,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/near_me_back_btn"
             android:layout_width="@dimen/_22dp"
             android:layout_height="@dimen/_14dp"
             android:layout_gravity="center_horizontal"

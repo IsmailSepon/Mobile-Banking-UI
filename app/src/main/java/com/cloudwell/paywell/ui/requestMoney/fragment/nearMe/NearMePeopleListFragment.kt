@@ -36,6 +36,9 @@ class NearMePeopleListFragment : Fragment() {
         })
 
 
+        view.near_list_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
 
 
         return view

@@ -64,6 +64,11 @@ class RequestMoneyFragment : Fragment() {
 
         })
 
+
+        view.req_money_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
+
 //        beneficeryViewModel =
 //            ViewModelProviders.of(this).get(BeneficeryViewModel::class.java)
 //        val binding : AddaccountLayoutBinding = DataBindingUtil.inflate(inflater, R.layout.addaccount_layout, container, false)
