@@ -17,7 +17,7 @@ class BankTransferHostActivity : AppCompatActivity() {
 //        viewModel.setView(this)
 //        binding.addMoneyViewModel = viewModel
 
-        FragmentHelper.replaceFragment(
+        FragmentHelper.addFirstFragment(
             BankBeneficeryFragment(),
             supportFragmentManager,
             R.id.bank_transfer_container
