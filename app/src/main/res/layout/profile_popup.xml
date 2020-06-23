@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="profileHostViewModel"
+            type="com.cloudwell.paywell.consumer.ui.dashboard.viewmodel.ProfileHostViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="ScrollViewSize">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="254dp"
+            android:layout_height="251.3dp"
+            app:cardCornerRadius="13.4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile_image_card_view"
+                    android:layout_width="@dimen/_50dp"
+                    android:layout_height="@dimen/_50dp"
+                    android:layout_marginTop="12.7dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_50dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="@dimen/_50dp">
+
+                        <ImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="@dimen/_50dp"
+                            android:layout_height="@dimen/_50dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/pfc"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.7dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Anisul Islam"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_15sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_image_card_view" />
+
+                <TextView
+                    android:id="@+id/manage_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7.8dp"
+                    android:background="@drawable/round_outline_acc_profile"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="@dimen/_5_2sp"
+                    android:text="@string/manage_your_account_profile"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_11_7sp"
+                    android:textStyle="normal"
+                    android:onClick="@{profileHostViewModel::profileManageBtn}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/username" />
+
+                <ImageView
+                    android:id="@+id/imageViewPP1"
+                    android:layout_width="213dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.8dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:background="@color/common_clr"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/manage_account"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutPP2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewPP1"
+                    tools:ignore="MissingConstraints">
+
+
+                    <ImageView
+                        android:id="@+id/imageViewPP2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19.3dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/ic_upgrad_bank"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewPP1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="@dimen/_5_2sp"
+                        android:text="@string/upgrade_your_account"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_11_7sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.065"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewPP2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewPP3"
+                    android:layout_width="213dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.8dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:background="@color/common_clr"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayoutPP2"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutPP3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewPP3"
+                    tools:ignore="MissingConstraints">
+
+
+                    <ImageView
+                        android:id="@+id/imageViewPP4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19.3dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/switch_acc"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewPP2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="@dimen/_5_2sp"
+                        android:text="@string/switch_to_another_account"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_11_7sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.065"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewPP4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewPP5"
+                    android:layout_width="213dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.8dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:background="@color/common_clr"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayoutPP3"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutPP4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6.5dp"
+                    android:layout_marginEnd="14dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewPP5"
+                    tools:ignore="MissingConstraints">
+
+
+                    <ImageView
+                        android:id="@+id/imageViewPP6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="19.3dp"
+                        android:layout_marginEnd="@dimen/_14dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/sign_out_acc"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewPP3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="@dimen/_5_2sp"
+                        android:text="@string/sign_out_of_all_accounts"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_11_7sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.065"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewPP6"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>

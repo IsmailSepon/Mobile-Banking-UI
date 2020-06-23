@@ -53,6 +53,7 @@
     <string name="vault">ভল্ট</string>
     <string name="transactions">লেনদেন</string>
     <string name="concierge">প্রহরী</string>
+    <string name="insurance">বীমা</string>
     <string name="what_are_your_personal_details">আপনার ব্যক্তিগত বিবরণ কি?</string>
     <string name="what_s_your_home_address">তোমার বাসার ঠিকানা কি</string>
     <string name="no_po_boxes_please">দয়া করে কোনও পোস্ট অফিস না</string>

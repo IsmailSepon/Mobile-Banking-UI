@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <data>
+        <variable
+            name="manageProfileViewModel"
+            type="com.cloudwell.paywell.consumer.ui.profile.viewmodel.ManageProfileViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.dashboard.ProfileManageActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/reg_back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22.3dp"
+                    android:layout_marginTop="@dimen/_18dp"
+                    app:layout_constraintHorizontal_bias="0.192"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.518"
+                    app:srcCompat="@drawable/ic_back"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile_image_card_view"
+                    android:layout_width="@dimen/_70_5dp"
+                    android:layout_height="@dimen/_70_5dp"
+                    android:layout_marginTop="@dimen/_43_3dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_70_5dp"
+                        android:layout_height="@dimen/_70_5dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="@dimen/_50dp">
+
+                        <ImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="@dimen/_70_5dp"
+                            android:layout_height="@dimen/_70_5dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/pfc"
+                            tools:ignore="MissingConstraints" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.7dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Anisul Islam"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_15sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_image_card_view" />
+
+                <ImageView
+                    android:id="@+id/imageViewMA1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:background="@color/common_clr"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/username"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26.3dp"
+                    android:layout_marginTop="17.4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/profile"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewMA1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.7dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewProfile"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_36dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/ic_pfc_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="29.7dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/personal_details_processing"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.065"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32.7dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA1"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35.7dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/bank_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="26.4dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/account_details"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.046"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35.2dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA2"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/ic_limit_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="27.3dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/top_up_limit"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.038"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35.2dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA3"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/price_plan_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="31.8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/price_plan_standard"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.076"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_36dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA4"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="37.8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/doc_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30.3dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/documents"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.049"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewMA7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23.8dp"
+                    android:background="@color/common_clr"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayoutMA5"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewSecurity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26.3dp"
+                    android:layout_marginTop="16.8dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="@dimen/_5_5dp"
+                    android:text="@string/security"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewMA7" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="29.3dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewSecurity"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36.1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/change_passcode_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="26.4dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4.1sp"
+                        android:text="@string/change_passcode"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.075"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA8"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="29.4dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA6"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="37.3dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/privacy_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4.1sp"
+                        android:text="Privacy"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.075"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA9"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24.7dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA7"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_36dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/biometric_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="26dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4.1sp"
+                        android:text="@string/sign_in_with_biometrics"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.075"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA10"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <Switch
+                        android:id="@+id/switchBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="19.4dp"
+                        android:checked="true"
+                        android:theme="@style/SwitchButtonOrange"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.512" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewMA11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="38.7dp"
+                    android:background="@color/common_clr"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayoutMA8"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32.7dp"
+                    android:layout_marginTop="21.2dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="@dimen/_5_5dp"
+                    android:text="About Us"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewMA11" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36.3dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewAbout"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35.3dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/star_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20.3dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4.1sp"
+                        android:text="@string/rate_us_on_google_play"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.075"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA12"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewMA13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30.2dp"
+                    android:background="@color/common_clr"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayoutMA9"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28.8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewMA13"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40.1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/linked_in_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="27.1dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4.1sp"
+                        android:text="@string/follow_us_on_linkedin"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.075"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA14"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35.7dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA10"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40.1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/linked_in_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="27.1dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4.1sp"
+                        android:text="@string/follow_us_on_linkedin"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.075"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA15"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35.7dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA11"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/fb_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="27dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4.1sp"
+                        android:text="@string/like_us_on_facebook"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.075"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA16"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32.3dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA12"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40.8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/privacy_policy_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="27dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4.1sp"
+                        android:text="@string/privacy_policy"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.075"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA17"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34.3dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA13"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40.7dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/terms_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24.3dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4.1sp"
+                        android:text="Terms &amp; conditions"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.075"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA18"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewMA19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27.8dp"
+                    android:background="@color/common_clr"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayoutMA14"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewMA19"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40.4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/close_acc_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="21.1dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4.1sp"
+                        android:text="@string/close_account"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.075"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA20"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutMA16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA15"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageViewMA21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40.7dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506"
+                        app:srcCompat="@drawable/sign_out_orange"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textViewMA17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24.3dp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4.1sp"
+                        android:text="@string/log_out"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_13_3sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.075"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA21"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewMA22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28.4dp"
+                    android:background="@color/common_clr"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayoutMA16"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/companyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25.5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:lineSpacingExtra="5.5sp"
+                    android:text="CloudWell Limited"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewMA22" />
+
+                <TextView
+                    android:id="@+id/version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="5.5sp"
+                    android:text="Version 1.0.0"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/companyName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

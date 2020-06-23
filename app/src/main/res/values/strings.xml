@@ -51,6 +51,7 @@
     <string name="vault">Vault</string>
     <string name="transactions">Transactions</string>
     <string name="concierge">Concierge</string>
+    <string name="insurance">Insurance</string>
     <string name="what_are_your_personal_details">What are your personal details?</string>
     <string name="what_s_your_home_address">What’s your home address</string>
     <string name="no_po_boxes_please">No PO Boxes, please</string>
@@ -217,6 +218,30 @@
     <string name="f">F</string>
     <string name="you_ve_set_up_a_recurring_payment_to_ipdc_finance_limited_467">You’ve set up a recurring payment to IPDC Finance Limited *467</string>
     <string name="the_next_payment_of_20_000_tk_will_occur_on_16_april_2020">The next payment of 20,000 Tk. will occur on 16 April 2020</string>
+    <string name="manage_your_account_profile">Manage your account profile</string>
+    <string name="upgrade_your_account">Upgrade your account</string>
+    <string name="switch_to_another_account">Switch to another account</string>
+    <string name="sign_out_of_all_accounts">Sign out of all accounts</string>
+    <string name="personal_details_processing">Personal details - Processing</string>
+    <string name="account_details">Account details</string>
+    <string name="top_up_limit">Top-up limit</string>
+    <string name="price_plan_standard">Price plan - Standard</string>
+    <string name="documents">Documents</string>
+    <string name="profile">Profile</string>
+    <string name="security">Security</string>
+    <string name="change_passcode">Change passcode</string>
+    <string name="rate_us_on_google_play">Rate us on Google Play</string>
+    <string name="sign_in_with_biometrics">Sign in with biometrics</string>
+    <string name="follow_us_on_linkedin">Follow us on Linkedin</string>
+    <string name="like_us_on_facebook">Like us on Facebook</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="close_account">Close account</string>
+    <string name="log_out">Log out</string>
+    <string name="personal_details">Personal details</string>
+    <string name="full_name_and_date_of_birth">Full name and date of birth</string>
+    <string name="phone_number">Phone number</string>
+    <string name="verify_ur_email">Verify your email</string>
+    <string name="_continue">Continue</string>
 
 
 </resources>

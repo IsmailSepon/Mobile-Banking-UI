@@ -122,4 +122,11 @@
     <dimen name="_53dp">53dp</dimen>
     <dimen name="_260dp">260dp</dimen>
     <dimen name="_36dp">36dp</dimen>
+    <dimen name="_13_3sp">13.3sp</dimen>
+    <dimen name="_24_7dp">24.7dp</dimen>
+    <dimen name="_11_7sp">11.7sp</dimen>
+    <dimen name="_5_2sp">5.2sp</dimen>
+    <dimen name="_70_5dp">70.5dp</dimen>
+    <dimen name="_5_5dp">5.5dp</dimen>
+    <dimen name="_43_3dp">43.3dp</dimen>
 </resources>

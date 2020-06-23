@@ -7,6 +7,8 @@ import com.cloudwell.paywell.consumer.data.network.APIService
 import com.cloudwell.paywell.consumer.data.network.interceptor.HeaderTokenInterceptor
 import com.cloudwell.paywell.consumer.data.network.interceptor.NetworkConnectionInterceptor
 import com.cloudwell.paywell.consumer.ui.addMoney.view.AddMoneyRepository
+import com.cloudwell.paywell.consumer.ui.dashboard.view.ProfileHostFactory
+import com.cloudwell.paywell.consumer.ui.dashboard.view.ProfileRepository
 import com.cloudwell.paywell.consumer.ui.sendMoney.view.SendMoneyRepository
 import com.cloudwell.paywell.consumer.ui.sendMoney.view.SendMoneyFactory
 import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
@@ -54,6 +56,14 @@ class AppController : Application(), KodeinAware {
         }
 
         bind() from provider { SendMoneyFactory(instance()) }
+
+        bind() from singleton {
+            ProfileRepository(
+                instance(),
+                instance()
+            )
+        }
+        bind() from provider { ProfileHostFactory(instance()) }
     }
 
     private fun initilizationLogger() {

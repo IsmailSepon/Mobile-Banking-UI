@@ -17,11 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
-
         <activity
             android:name=".ui.scheduled_Transfer.SchedulTransferHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".ui.addMoney.AddMoneyHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -91,6 +89,16 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".ui.dashboard.DashboardHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.dashboard.ProfileManageActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".ui.dashboard.ProfileHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
