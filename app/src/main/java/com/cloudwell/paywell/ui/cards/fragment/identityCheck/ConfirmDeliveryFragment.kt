@@ -25,6 +25,10 @@ class ConfirmDeliveryFragment : Fragment() {
             pendindProfilePopup()
         })
 
+        view.card_confirm_back.setOnClickListener(View.OnClickListener {
+            activity?.finish()
+        })
+
 
         return view
     }

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import kotlinx.android.synthetic.main.security_layout.view.*
 
 class CardsSecurityFragment : Fragment() {
 
@@ -18,6 +19,9 @@ class CardsSecurityFragment : Fragment() {
 
 
 
+        view.security_card_back.setOnClickListener(View.OnClickListener {
+            activity?.finish()
+        })
 
         return view
     }

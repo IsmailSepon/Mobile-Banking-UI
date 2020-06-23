@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import kotlinx.android.synthetic.main.card_limit_layout.view.*
 
 class CardsLimitFragment : Fragment() {
 
@@ -18,6 +19,9 @@ class CardsLimitFragment : Fragment() {
 
 
 
+        view.card_limit_back.setOnClickListener(View.OnClickListener {
+            activity?.finish()
+        })
 
         return view
     }

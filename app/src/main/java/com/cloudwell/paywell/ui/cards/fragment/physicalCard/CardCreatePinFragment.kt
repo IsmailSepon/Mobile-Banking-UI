@@ -46,6 +46,7 @@ class CardCreatePinFragment : Fragment() {
         etMobileOrRID.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 if (etMobileOrRID.text!!.length == 4) {
+                    etMobileOrRID.text!!.clear()
                     FragmentHelper.replaceFragment(
                         SpecifyDeliveryAddressFragment(),
                         activity?.supportFragmentManager,
@@ -61,6 +62,11 @@ class CardCreatePinFragment : Fragment() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
 
             }
+        })
+
+
+        view.card_create_pin_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
         })
 
         return view

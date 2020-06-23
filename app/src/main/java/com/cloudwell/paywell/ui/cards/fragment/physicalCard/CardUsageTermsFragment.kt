@@ -28,6 +28,11 @@ class CardUsageTermsFragment : Fragment() {
         })
 
 
+        view.card_terms_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
+
+
         return view
     }
 }

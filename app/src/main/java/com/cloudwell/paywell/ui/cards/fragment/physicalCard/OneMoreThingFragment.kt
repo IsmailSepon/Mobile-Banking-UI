@@ -28,6 +28,11 @@ class OneMoreThingFragment : Fragment() {
         })
 
 
+        view.card_way_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
+
+
         return view
     }
 }

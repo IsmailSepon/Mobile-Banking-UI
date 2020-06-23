@@ -1,6 +1,7 @@
 package com.cloudwell.paywell.ui.cards
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.cards.fragment.CardsLimitFragment
@@ -20,35 +21,35 @@ class CardHoastActivity : AppCompatActivity() {
 
         if (parent.equals("1")) {
             //card link
-            FragmentHelper.replaceFragment(
+            FragmentHelper.addFirstFragment(
                 PaywellCardsLinkFragment(),
                 supportFragmentManager,
                 R.id.Cards_container
             )
         } else if (parent.equals("2")) {
             //identy
-            FragmentHelper.replaceFragment(
+            FragmentHelper.addFirstFragment(
                 ConfirmDeliveryFragment(),
                 supportFragmentManager,
                 R.id.Cards_container
             )
         } else if (parent.equals("3")) {
             //identy
-            FragmentHelper.replaceFragment(
+            FragmentHelper.addFirstFragment(
                 OrderingPhysicalCardFragment(),
                 supportFragmentManager,
                 R.id.Cards_container
             )
         } else if (parent.equals("security")) {
             //identy
-            FragmentHelper.replaceFragment(
+            FragmentHelper.addFirstFragment(
                 CardsSecurityFragment(),
                 supportFragmentManager,
                 R.id.Cards_container
             )
         } else if (parent.equals("limit")) {
             //identy
-            FragmentHelper.replaceFragment(
+            FragmentHelper.addFirstFragment(
                 CardsLimitFragment(),
                 supportFragmentManager,
                 R.id.Cards_container
@@ -56,5 +57,16 @@ class CardHoastActivity : AppCompatActivity() {
         }
 
 
+    }
+
+
+    override fun onPause() {
+        super.onPause()
+        Log.e("Card Host", "pause")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("Card Host", "resume")
     }
 }

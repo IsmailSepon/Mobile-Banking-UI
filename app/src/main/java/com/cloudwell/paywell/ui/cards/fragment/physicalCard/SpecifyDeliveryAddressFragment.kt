@@ -28,6 +28,11 @@ class SpecifyDeliveryAddressFragment : Fragment() {
         })
 
 
+        view.card_delivery_address_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
+
+
         return view
     }
 }

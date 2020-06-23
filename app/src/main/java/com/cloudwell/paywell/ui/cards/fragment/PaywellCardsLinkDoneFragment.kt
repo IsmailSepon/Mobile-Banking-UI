@@ -1,6 +1,7 @@
 package com.cloudwell.paywell.ui.cards.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,21 @@ class PaywellCardsLinkDoneFragment : Fragment() {
 
 
         return view
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("PaywellCardsLink", "onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.e("PaywellCardsLink", "onPause")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.e("PaywellCardsLink", "onDestroy")
     }
 }
 

@@ -75,6 +75,10 @@ class OrderingPhysicalCardFragment : Fragment() {
         })
 
 
+        root.physicar_card_back.setOnClickListener(View.OnClickListener {
+            activity?.finish()
+        })
+
 
         return root
 

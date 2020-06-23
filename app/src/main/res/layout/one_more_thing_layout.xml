@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView136" />
 
     <ImageView
-        android:id="@+id/imageView143"
+        android:id="@+id/card_way_back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"

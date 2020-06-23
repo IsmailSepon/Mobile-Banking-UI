@@ -9,6 +9,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.paywell_cards_link_layout.view.*
 
+
 class PaywellCardsLinkFragment : Fragment() {
 
     override fun onCreateView(
@@ -28,7 +29,14 @@ class PaywellCardsLinkFragment : Fragment() {
         })
 
 
+        view.close.setOnClickListener(View.OnClickListener {
+            activity?.finish()
+        })
+
+
         return view
     }
+
+
 }
 

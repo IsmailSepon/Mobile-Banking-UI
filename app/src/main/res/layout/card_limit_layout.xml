@@ -13,12 +13,12 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/card_limit_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/_10dp"
             android:src="@drawable/back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,11 +32,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="8dp"
-            android:text="Limit"
+            android:text="@string/limit"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_17sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintStart_toEndOf="@+id/card_limit_back"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.538"
             tools:ignore="MissingConstraints" />

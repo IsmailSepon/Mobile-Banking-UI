@@ -24,8 +24,8 @@ class SliderFragment3 : Fragment() {
         view.virtual_card.setOnClickListener(View.OnClickListener {
             Toast.makeText(activity?.applicationContext, "vitual", Toast.LENGTH_LONG).show()
         })
-        view.physical_card.setOnClickListener(View.OnClickListener {
 
+        view.physical_card.setOnClickListener(View.OnClickListener {
             val intent = Intent(view.context, CardHoastActivity::class.java)
             intent.putExtra("cards", "3")
             view.context.startActivity(intent)

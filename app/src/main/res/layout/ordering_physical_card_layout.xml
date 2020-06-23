@@ -44,7 +44,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView139"
+        android:id="@+id/physicar_card_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"

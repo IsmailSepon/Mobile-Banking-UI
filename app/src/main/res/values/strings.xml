@@ -329,5 +329,6 @@
     <string name="online_transactions">Online transactions</string>
     <string name="internet_based_transactions_are_generally_high_risk_you_can_switch_them_off_for_extra_security">Internet-based transactions are generally high-risk. You can switch them off for extra security</string>
     <string name="limit_to_use_in_pos_atm_nis_15000_a_month"><![CDATA[Limit to use in POS & ATM\nis ৳15000 a month]]></string>
+    <string name="limit">Limit</string>
 
 </resources>

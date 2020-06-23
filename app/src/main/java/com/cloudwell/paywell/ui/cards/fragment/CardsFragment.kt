@@ -99,7 +99,6 @@ class CardsFragment : Fragment() {
         })
 
         root.layout2.setOnClickListener(View.OnClickListener {
-
             val intent = Intent(root.context, CardHoastActivity::class.java)
             intent.putExtra("cards", "2")
             root.context.startActivity(intent)
@@ -116,6 +115,7 @@ class CardsFragment : Fragment() {
         root.limit_layout.setOnClickListener(View.OnClickListener {
             val intent = Intent(root.context, CardHoastActivity::class.java)
             intent.putExtra("cards", "limit")
+            //intent.putExtra(StringEnum().card_limit, StringEnum().card_limit)
             root.context.startActivity(intent)
         })
 
