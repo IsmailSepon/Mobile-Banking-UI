@@ -15,7 +15,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/bank_list_back_btn"
             android:layout_width="@dimen/_22dp"
             android:layout_height="@dimen/_14dp"
             android:layout_gravity="center_horizontal"
@@ -36,7 +36,7 @@
             android:textSize="@dimen/_16sp"
             android:theme="@style/medium_text_style"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintStart_toEndOf="@+id/bank_list_back_btn"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 

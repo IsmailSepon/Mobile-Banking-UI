@@ -23,7 +23,7 @@ class AddMoneyHostActivity : AppCompatActivity() {
 //        viewModel.setView(this)
 //        binding.addMoneyViewModel = viewModel
 
-        FragmentHelper.replaceFragment(
+        FragmentHelper.addFirstFragment(
             AddMoneyFragment(),
             supportFragmentManager,
             R.id.add_money_container
