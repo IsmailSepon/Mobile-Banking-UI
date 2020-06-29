@@ -7,28 +7,28 @@
 
     <fragment
         android:id="@+id/navigation_account"
-        android:name="com.cloudwell.paywell.consumer.ui.account.fragment.AccountFragment"
+        android:name="com.cloudwell.paywell.ui.account.fragment.AccountFragment"
         android:label="Account" />
 
     <fragment
         android:id="@+id/navigation_budget"
-        android:name="com.cloudwell.paywell.consumer.ui.notifications.NotificationsFragment"
+        android:name="com.cloudwell.paywell.ui.notifications.NotificationsFragment"
         android:label="Budget"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_pay"
-        android:name="com.cloudwell.paywell.consumer.ui.notifications.NotificationsFragment"
+        android:name="com.cloudwell.paywell.ui.notifications.NotificationsFragment"
         android:label="Pay"
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/navigation_cards"
-        android:name="com.cloudwell.paywell.consumer.ui.notifications.NotificationsFragment"
+        android:name="com.cloudwell.paywell.ui.cards.fragment.CardsFragment"
         android:label="Cards"
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/navigation_control"
-        android:name="com.cloudwell.paywell.consumer.ui.dashboard.DashboardFragment"
+        android:name="com.cloudwell.paywell.ui.dashboard.DashboardFragment"
         android:label="Control"
         tools:layout="@layout/fragment_dashboard" />
 </navigation>

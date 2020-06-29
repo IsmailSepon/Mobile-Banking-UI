@@ -57,6 +57,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${rootProject.ext.appcompatVersion}"
     implementation "androidx.legacy:legacy-support-v4:${rootProject.ext.legacySupportVersion}"
     implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintlayoutVersion}"
+    //noinspection GradleDependency
     implementation "com.google.android.material:material:${rootProject.ext.materialVersion}"
     implementation "androidx.recyclerview:recyclerview:${rootProject.ext.recyclerviewVersion}"
 
@@ -144,6 +145,14 @@ dependencies {
     implementation "com.google.firebase:firebase-messaging:$rootProject.ext.firebaseMessaging"
 
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$rootProject.ext.leakcanaryVersion"
+
+
+   // implementation 'com.oginotihiro:datepicker:1.0.0'
+
+    //cardSlider
+    implementation 'com.github.IslamKhSh:CardSlider:1.0.1'
+    implementation "com.google.android.material:material:1.3.0-alpha01"
+    implementation "androidx.viewpager2:viewpager2:1.1.0-alpha01"
 
 
 }

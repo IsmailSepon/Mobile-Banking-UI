@@ -15,7 +15,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/spilt_bill_back"
             android:layout_width="@dimen/_14dp"
             android:layout_height="@dimen/_14dp"
             android:layout_gravity="center_horizontal"
@@ -35,10 +35,10 @@
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_17sp"
             android:theme="@style/medium_text_style"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+            app:layout_constraintBottom_toBottomOf="@+id/spilt_bill_back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView17"
+            app:layout_constraintTop_toTopOf="@+id/spilt_bill_back"
             tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

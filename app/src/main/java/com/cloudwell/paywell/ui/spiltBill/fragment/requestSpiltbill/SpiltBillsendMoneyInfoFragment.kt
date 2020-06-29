@@ -29,6 +29,11 @@ class SpiltBillsendMoneyInfoFragment : Fragment() {
         })
 
 
+
+        view.spilt_bill_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
+
         return view
     }
 

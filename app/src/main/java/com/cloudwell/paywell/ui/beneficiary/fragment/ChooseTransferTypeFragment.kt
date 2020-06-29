@@ -79,6 +79,10 @@ class ChooseTransferTypeFragment : Fragment() {
 //        return binding.root
 
 
+        view.back_btn.setOnClickListener(View.OnClickListener {
+            activity?.finish()
+        })
+
         return view
     }
 

@@ -15,7 +15,7 @@
         <ImageView
             android:layout_marginTop="@dimen/_20dp"
             android:layout_marginBottom="@dimen/_4dp"
-            android:id="@+id/imageView17"
+            android:id="@+id/schedule_contact_back_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -36,9 +36,9 @@
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_17sp"
             android:theme="@style/medium_text_style"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView17"
-            app:layout_constraintStart_toEndOf="@+id/imageView17"
-            app:layout_constraintTop_toTopOf="@+id/imageView17"
+            app:layout_constraintBottom_toBottomOf="@+id/schedule_contact_back_btn"
+            app:layout_constraintStart_toEndOf="@+id/schedule_contact_back_btn"
+            app:layout_constraintTop_toTopOf="@+id/schedule_contact_back_btn"
             tools:ignore="MissingConstraints" />
 
         <ImageView

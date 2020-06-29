@@ -23,7 +23,7 @@ class SchedulTransferHostActivity : AppCompatActivity() {
 //        viewModel.setView(this)
 //        binding.addMoneyViewModel = viewModel
 
-        FragmentHelper.replaceFragment(
+        FragmentHelper.addFirstFragment(
             ScheduleSelectionFragment(),
             supportFragmentManager,
             R.id.schedule_transfer_container

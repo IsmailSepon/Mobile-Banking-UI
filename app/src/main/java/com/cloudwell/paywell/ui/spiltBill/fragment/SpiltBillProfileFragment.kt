@@ -36,6 +36,13 @@ class SpiltBillProfileFragment : Fragment() {
             )
         })
 
+
+
+        view.setOnClickListener(View.OnClickListener {
+            activity?.finish()
+        })
+
+
         return view
     }
 

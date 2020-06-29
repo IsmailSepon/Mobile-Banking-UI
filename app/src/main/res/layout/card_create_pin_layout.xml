@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/card_create_pin_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:textSize="@dimen/_17sp"
+        android:textColor="@color/keypad_text_clr"
+        android:lineHeight="@dimen/_17sp"
+        android:id="@+id/textView277"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:text="@string/create_pin_for_your_paywell_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.cloudwell.paywell.base.PinEntryEditText
+        android:id="@+id/create_pin"
+        android:layout_width="150dp"
+        android:layout_height="@dimen/_30dp"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:background="@drawable/rect_text_edit"
+        android:backgroundTint="@color/keypad_text_clr"
+        android:cursorVisible="false"
+        android:digits="1234567890"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textColor="@color/keypad_text_clr"
+        android:textCursorDrawable="@null"
+        android:textIsSelectable="false"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView277"
+        app:layout_constraintVertical_bias="0.19"
+        tools:ignore="UnusedAttribute" />
+
+
+    <com.cloudwell.paywell.base.CustomKeyboardWithBack
+        android:id="@+id/card_create_pin_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginEnd="@dimen/_32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_pin"
+        app:layout_constraintVertical_bias="0.81"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.activity.registation.fragment;
+package com.cloudwell.paywell.ui.registration.fragment;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,19 +11,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.cloudwell.paywell.consumer.R;
-import com.cloudwell.paywell.consumer.activity.registation.customview.PinEntryEditText;
-import com.cloudwell.paywell.consumer.activity.registation.RegistationMainActivity;
+import com.cloudwell.paywell.R;
+import com.cloudwell.paywell.base.PinEntryEditText;
+import com.cloudwell.paywell.ui.registration.RegistationMainActivity;
 
 /**
  * Created by Sepon on 4/15/2020.
  */
-public class Reg_three_Feg extends Fragment {
+public class RegThreeFeg extends Fragment {
 
-    public static Reg_three_Feg newInstance() {
-        return new Reg_three_Feg();
+    public static RegThreeFeg newInstance() {
+        return new RegThreeFeg();
     }
+
     PinEntryEditText etMobileOrRID;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

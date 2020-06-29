@@ -10,7 +10,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView75"
+            android:id="@+id/schedule_addinfo_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_27dp"

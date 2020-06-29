@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.registration.EmailVerificationActivity">
+
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="2000"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_33dp"
+        app:layout_constraintBottom_toTopOf="@+id/request_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView256"
+        app:layout_constraintVertical_bias="0.19999999" />
+
+    <Button
+        android:id="@+id/request_link_done_btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:background="@drawable/round_btn_visable"
+        android:text="Send Anisul Islam money"
+        android:elevation="@dimen/evelation_five"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fifteen_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83"
+        tools:targetApi="lollipop" />
+
+    <ImageView
+        android:id="@+id/imageView128"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/splash_logo" />
+
+    <TextView
+        android:id="@+id/textView256"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
+        style="@style/text_style"
+        android:textSize="@dimen/_14sp"
+        android:textColor="@color/recyclerview_title"
+        android:text="Hi Maruf Hasan,\nAnisul Islam has requested"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView128" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
