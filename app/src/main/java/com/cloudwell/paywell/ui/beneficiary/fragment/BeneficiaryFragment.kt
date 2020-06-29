@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.databinding.FragmentBeneficiaryBinding
 import com.cloudwell.paywell.ui.beneficiary.viewModel.BeneficeryViewModel
+import kotlinx.android.synthetic.main.fragment_beneficiary.view.*
 
 class BeneficiaryFragment : Fragment() {
 
@@ -28,6 +29,11 @@ class BeneficiaryFragment : Fragment() {
         //beneficeryViewModel.setView(this)
         binding.beneficeryViewModelxml = beneficeryViewModel
         binding.lifecycleOwner = this
+
+
+        binding.root.beneficery_back_btn.setOnClickListener(View.OnClickListener {
+            activity?.finish()
+        })
 
         return binding.root
     }

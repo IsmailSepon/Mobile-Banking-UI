@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.scheduledTransfer.fragment.bottomsheet.SchedulContactBottomSheetFragment
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.schedule_select_contact_layout.view.*
 
 class ScheduleSelectContactFragment : Fragment() {
@@ -30,6 +31,9 @@ class ScheduleSelectContactFragment : Fragment() {
         })
 
 
+        view.schedule_trx_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
         return view
     }
 

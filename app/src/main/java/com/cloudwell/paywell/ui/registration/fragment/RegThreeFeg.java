@@ -12,8 +12,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.cloudwell.paywell.R;
+import com.cloudwell.paywell.base.PinEntryEditText;
 import com.cloudwell.paywell.ui.registration.RegistationMainActivity;
-import com.cloudwell.paywell.ui.registration.customView.PinEntryEditText;
 
 /**
  * Created by Sepon on 4/15/2020.

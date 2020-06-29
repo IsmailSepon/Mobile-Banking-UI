@@ -42,7 +42,7 @@ public class FullScreenDialogPayWell extends DialogFragment {
         super.onCreate(savedInstanceState);
         themeId = getArguments().getInt(THEME_KEY);
         title = getArguments().getString(TITLE_KEY);
-        onSetFullScreenDialogView = (OnSetFullScreenDialogView) getArguments().getParcelable(DIALOG_KEY);
+        onSetFullScreenDialogView = getArguments().getParcelable(DIALOG_KEY);
         setStyle(DialogFragment.STYLE_NORMAL, themeId);
     }
 

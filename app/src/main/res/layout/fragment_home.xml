@@ -13,6 +13,7 @@
 
 
     <LinearLayout
+        android:paddingBottom="@dimen/_60dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -179,10 +180,15 @@
                 tools:ignore="MissingConstraints" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ScrollView
+        <androidx.core.widget.NestedScrollView
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            tools:targetApi="m">
+
 
             <LinearLayout
                 android:orientation="vertical"
@@ -317,8 +323,7 @@
 
             </LinearLayout>
 
-        </ScrollView>
+        </androidx.core.widget.NestedScrollView>
     </LinearLayout>
-
 
 </layout>

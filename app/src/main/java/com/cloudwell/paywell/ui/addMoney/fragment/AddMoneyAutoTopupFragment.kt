@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
+import kotlinx.android.synthetic.main.add_money_autotopup_layout.view.*
 
 class AddMoneyAutoTopupFragment : Fragment() {
 
@@ -19,6 +21,9 @@ class AddMoneyAutoTopupFragment : Fragment() {
 
 
 
+        view.auto_topup_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
 
         return view
     }

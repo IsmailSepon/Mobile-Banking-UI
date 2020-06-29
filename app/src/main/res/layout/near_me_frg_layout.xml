@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/near_me_back_btn"
+            android:layout_width="@dimen/_22dp"
+            android:layout_height="@dimen/_14dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_20dp"
+            android:src="@drawable/back"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <TextView
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/people_near_me"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16sp"
+            android:layout_marginTop="@dimen/_15dp"
+            android:theme="@style/medium_text_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView123"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/setting_2_ic" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView122"
+        android:layout_width="@dimen/_176dp"
+        android:layout_height="@dimen/_176dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
+        app:layout_constraintVertical_bias="0.13999999"
+        app:srcCompat="@drawable/map_view" />
+
+    <ImageView
+        android:id="@+id/imageView124"
+        android:layout_width="@dimen/_117dp"
+        android:layout_height="@dimen/_116dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView122"
+        app:layout_constraintEnd_toEndOf="@+id/imageView122"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView122"
+        app:layout_constraintTop_toTopOf="@+id/imageView122"
+        app:layout_constraintVertical_bias="0.71000004"
+        app:srcCompat="@drawable/search_on_map" />
+
+    <TextView
+        android:id="@+id/textView247"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/searching_for_paywell_users"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView122"
+        app:layout_constraintVertical_bias="0.06999999" />
+
+    <TextView
+        android:id="@+id/textView248"
+        style="@style/text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="51dp"
+        android:lineHeight="@dimen/_17sp"
+        android:text="@string/to_find_your_friends_ask_them_to_open_this_screen_in_their_app_or_invite_them_to_join_paywell"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView247"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <Button
+        android:id="@+id/inviteFnd_req"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:background="@drawable/round_btn_visable"
+        android:elevation="@dimen/evelation_five"
+        android:text="@string/invite_friends"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
+        app:layout_constraintVertical_bias="0.84000003"
+        tools:targetApi="lollipop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

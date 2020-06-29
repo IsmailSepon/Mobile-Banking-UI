@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.ui.registration.customView;
+package com.cloudwell.paywell.base;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -21,14 +21,14 @@ import com.cloudwell.paywell.R;
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2019-11-19.
  */
-public class PinEntryEditText extends AppCompatEditText {
+public class FourPinEntryEditText extends AppCompatEditText {
     public static final String XML_NAMESPACE_ANDROID = "http://schemas.android.com/apk/res/android";
 
     private float mSpace = 12; //24 dp by default, space between the lines
     private float mCharSize;
-    private float mNumChars = 6;
+    private float mNumChars = 4;
     private float mLineSpacing = 4; //8dp by default, height of the text from our lines
-    private int mMaxLength = 6;
+    private int mMaxLength = 4;
 
     private OnClickListener mClickListener;
 
@@ -50,17 +50,17 @@ public class PinEntryEditText extends AppCompatEditText {
 
     ColorStateList mColorStates = new ColorStateList(mStates, mColors);
 
-    public PinEntryEditText(Context context) {
+    public FourPinEntryEditText(Context context) {
         super(context);
 
     }
 
-    public PinEntryEditText(Context context, AttributeSet attrs) {
+    public FourPinEntryEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public PinEntryEditText(Context context, AttributeSet attrs, int defStyleAttr) {
+    public FourPinEntryEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
@@ -97,7 +97,7 @@ public class PinEntryEditText extends AppCompatEditText {
         setBackgroundResource(0);
         mSpace = multi * mSpace; //convert to pixels for our density
         mLineSpacing = multi * mLineSpacing; //convert to pixels for our density
-        mMaxLength = attrs.getAttributeIntValue(XML_NAMESPACE_ANDROID, "maxLength", 6);
+        mMaxLength = attrs.getAttributeIntValue(XML_NAMESPACE_ANDROID, "maxLength", 4);
         mNumChars = mMaxLength;
 
         //Disable copy paste

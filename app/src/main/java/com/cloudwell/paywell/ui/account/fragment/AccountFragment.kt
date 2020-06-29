@@ -1,14 +1,15 @@
 package com.cloudwell.paywell.ui.account.fragment
 
-import android.annotation.SuppressLint
-import android.content.DialogInterface
+import android.app.DatePickerDialog
+import android.app.DatePickerDialog.OnDateSetListener
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.DatePicker
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
@@ -21,13 +22,12 @@ import com.cloudwell.paywell.databinding.FragmentHomeBinding
 import com.cloudwell.paywell.ui.account.adapter.CoursesItem
 import com.cloudwell.paywell.ui.account.adapter.SwipeHelper
 import com.cloudwell.paywell.ui.account.adapter.TestAdapter
-import com.cloudwell.paywell.ui.account.pendingPopupDialog.DatePickerFragment
-import com.cloudwell.paywell.ui.account.pendingPopupDialog.DatepickerDialog
+import com.cloudwell.paywell.ui.account.pendingPopupDialog.RequestProfileDialog
 import com.cloudwell.paywell.ui.account.view.IaccountVIew
 import com.cloudwell.paywell.ui.account.viewModel.AccountViewModel
 import com.cloudwell.paywell.ui.spiltBill.fragment.SpiltBillHoastActivity
-import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
 import kotlinx.android.synthetic.main.fragment_home.view.*
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -35,14 +35,7 @@ import kotlin.collections.ArrayList
 class AccountFragment : Fragment(), IaccountVIew, DatePickerDialog.OnDateSetListener {
 
     private lateinit var homeViewModel: AccountViewModel
-    private var dpd: DatePickerDialog? = null
-
-    var calendar: Calendar? = null
-
-    //var datePickerDialog: DatePickerDialog? = null
-    var Year = 0
-    var Month: Int = 0
-    var Day: Int = 0
+    val DATEPICKER_TAG = "datepicker"
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreateView(
@@ -59,34 +52,14 @@ class AccountFragment : Fragment(), IaccountVIew, DatePickerDialog.OnDateSetList
 
         binding.root.pendding_req.setOnClickListener(View.OnClickListener {
 
-            val dialog: DatepickerDialog = DatepickerDialog()
-            activity?.supportFragmentManager?.let { it1 ->
-                dialog.show(
-                    it1,
-                    "ReminderDialog"
-                )
-            }
-
-//            calendar = Calendar.getInstance();
-//
-//            var datePickerDialog: DatePickerDialog = DatePickerDialog.newInstance(AccountFragment(), Year, Month, Day);
-//
-//            datePickerDialog.setThemeDark(false);
-//
-//            datePickerDialog.showYearPickerFirst(false);
-//
-//            datePickerDialog.setAccentColor(Color.parseColor("#0072BA"));
-//
-//            datePickerDialog.setTitle("Select Date From DatePickerDialog");
-//
-//            datePickerDialog.show(activity?.supportFragmentManager!!, "DatePickerDialog");
-
-            // datepicker2()
+            pendindProfilePopup()
         })
 
         val linearLayoutManager: LinearLayoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         binding.root.spilt_bill_recyclerview.layoutManager = linearLayoutManager
+
+        binding.root.spilt_bill_recyclerview.setHasFixedSize(false)
         val item = CoursesItem()
         item.amount = "300"
         var list = ArrayList<CoursesItem>()
@@ -114,6 +87,29 @@ class AccountFragment : Fragment(), IaccountVIew, DatePickerDialog.OnDateSetList
         itemTouchHelper.attachToRecyclerView(binding.root.spilt_bill_recyclerview)
 
         return binding.root
+    }
+
+    private fun showCustomDatepicker() {
+// for use this add liberary+ Ondateset below
+//        val calendar = Calendar.getInstance()
+//        val datePickerDialog =
+//            com.oginotihiro.datepicker.DatePickerDialog.newInstance(
+//                this,
+//                calendar[Calendar.YEAR],
+//                calendar[Calendar.MONTH],
+//                calendar[Calendar.DAY_OF_MONTH]
+//            )
+//        datePickerDialog.setVibrate(false)
+//        datePickerDialog.setYearRange(1990, 2020)
+//        datePickerDialog.setCloseOnSingleTapDay(true)
+//
+//        datePickerDialog.setColor(R.color.keypad_text_clr);
+//        datePickerDialog.setDarkColor(R.color.colorPrimary);
+//
+//        datePickerDialog.show(
+//            activity?.supportFragmentManager!!,
+//            DATEPICKER_TAG
+//        )
     }
 
 
@@ -169,51 +165,39 @@ class AccountFragment : Fragment(), IaccountVIew, DatePickerDialog.OnDateSetList
     override fun onFailure(message: String?) {
     }
 
+    override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
 
-    @SuppressLint("ResourceAsColor")
+    }
+
+
     fun datepicker() {
-        val now = Calendar.getInstance()
-        now.add(Calendar.DATE, 7)
 
-        if (dpd == null) {
-
-            dpd = DatePickerDialog.newInstance(
-                AccountFragment(),
-                now[Calendar.YEAR],
-                now[Calendar.MONTH],
-                now[Calendar.DAY_OF_MONTH]
-            )
-        } else {
-            dpd!!.initialize(
-                AccountFragment(),
-                now[Calendar.YEAR],
-                now[Calendar.MONTH],
-                now[Calendar.DAY_OF_MONTH]
-            )
-        }
-        dpd!!.setCancelColor("#00203f")
-        dpd!!.setCancelText("Finished")
-        dpd!!.setOkColor(R.color.transparent)
-        dpd!!.vibrate(true)
-        dpd!!.version =
-            if (false) DatePickerDialog.Version.VERSION_2 else DatePickerDialog.Version.VERSION_1
-
-        dpd!!.setOnCancelListener(DialogInterface.OnCancelListener { dialog: DialogInterface? ->
-            Log.d("DatePickerDialog", "Dialog was cancelled")
-            dpd = null
-        })
-        dpd!!.show(requireFragmentManager(), "Datepickerdialog")
-    }
-
-    override fun onDateSet(view: DatePickerDialog?, year: Int, monthOfYear: Int, dayOfMonth: Int) {
+        val calendar = Calendar.getInstance()
+        val datePickerDialog = DatePickerDialog(
+            requireActivity(),
+            R.style.DatePickerDialogTheme,
+            OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+                val newDate = Calendar.getInstance()
+                newDate[year, monthOfYear] = dayOfMonth
+                val simpleDateFormat =
+                    SimpleDateFormat("dd-MM-yyyy")
+                val date = simpleDateFormat.format(newDate.time)
+                Toast.makeText(activity?.applicationContext, date + "", Toast.LENGTH_LONG).show()
+            },
+            calendar[Calendar.YEAR],
+            calendar[Calendar.MONTH],
+            calendar[Calendar.DAY_OF_MONTH]
+        )
+        datePickerDialog.show()
 
     }
 
+    fun pendindProfilePopup() {
 
-    fun datepicker2() {
-
-        val newFragment: DialogFragment = DatePickerFragment()
+        val newFragment: DialogFragment = RequestProfileDialog()
         newFragment.show(activity?.supportFragmentManager!!, "Date Picker")
+
+
     }
 
 

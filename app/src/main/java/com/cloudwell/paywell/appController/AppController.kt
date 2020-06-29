@@ -74,9 +74,8 @@ class AppController : Application(), KodeinAware {
     }
 
 
-
-     fun touch() {
-         ApplockManager.getInstance().updateTouch()
-     }
+    fun touch() {
+        ApplockManager.getInstance().updateTouch()
+    }
 
 }

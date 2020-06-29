@@ -28,6 +28,10 @@ class AddCardDetailsFragment : Fragment() {
         })
 
 
+        view.card_detils_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
+
 
         return view
     }

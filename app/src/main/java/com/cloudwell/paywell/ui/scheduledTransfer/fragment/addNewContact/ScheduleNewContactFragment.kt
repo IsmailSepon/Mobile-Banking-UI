@@ -29,6 +29,9 @@ class ScheduleNewContactFragment : Fragment() {
         })
 
 
+        view.addnew_contact_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
         return view
     }
 

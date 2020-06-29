@@ -30,6 +30,10 @@ class AddMoneyBankProfileFragment : Fragment() {
 
         })
 
+        view.bank_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
+
         return view
     }
 

@@ -16,7 +16,7 @@ class CashWithdrawHostActivity : AppCompatActivity() {
 //        viewModel.setView(this)
 //        binding.addMoneyViewModel = viewModel
 
-        FragmentHelper.replaceFragment(
+        FragmentHelper.addFirstFragment(
             CashWithDreawMainFragment(),
             supportFragmentManager,
             R.id.cash_withdraw_container

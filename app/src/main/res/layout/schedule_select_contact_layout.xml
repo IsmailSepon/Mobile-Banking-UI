@@ -28,8 +28,7 @@
 
 
             <ImageView
-                android:onClick="@{beneficeryViewModelxml::beneficeryBack}"
-                android:id="@+id/beneficery_back_btn"
+                android:id="@+id/schedule_trx_back_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -65,7 +64,7 @@
                 android:textColor="@color/keypad_text_clr"
                 android:textSize="17sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/beneficery_back_btn"
+                app:layout_constraintStart_toEndOf="@+id/schedule_trx_back_btn"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
 

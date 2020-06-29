@@ -29,13 +29,9 @@ class AddMoneyBankLisFragment : Fragment() {
 
         })
 
-        view.brack.setOnClickListener(View.OnClickListener {
-            FragmentHelper.replaceFragment(
-                AddMoneyfromBankConfirmFragment(),
-                activity?.supportFragmentManager,
-                R.id.add_money_container
-            )
 
+        view.bank_list_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
         })
 
         return view

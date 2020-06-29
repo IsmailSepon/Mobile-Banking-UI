@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/card_confirm_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18dp"
+        android:layout_marginTop="@dimen/_18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:padding="@dimen/_10dp"
+        android:id="@+id/imageView136"
+        android:layout_width="@dimen/_167dp"
+        android:layout_height="@dimen/_167dp"
+        android:layout_marginTop="@dimen/_42dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/round_bg"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView135"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView136"
+        app:layout_constraintEnd_toEndOf="@+id/imageView136"
+        app:layout_constraintStart_toStartOf="@+id/imageView136"
+        app:layout_constraintTop_toTopOf="@+id/imageView136"
+        app:srcCompat="@drawable/delivery_address"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:textSize="@dimen/_17sp"
+        android:textColor="@color/keypad_text_clr"
+        android:id="@+id/textView258"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_38dp"
+        android:text="@string/confirm_delivery_address_of_nvisa_card_6789"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView136" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_15sp"
+        android:id="@+id/textView264"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_42dp"
+        android:text="314, West Rampura,\nDhaka-1219"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView258" />
+
+
+    <ImageView
+        android:id="@+id/imageView137"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/half_one"
+        android:layout_marginTop="@dimen/_50dp"
+        android:background="@color/common_clr"
+        app:layout_constraintTop_toBottomOf="@+id/textView264"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:textSize="@dimen/_15sp"
+        android:textColor="@color/keypad_text_clr"
+        android:id="@+id/textView265"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_60dp"
+        android:text="@string/is_the_address_correct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView137" />
+
+    <ImageView
+        android:id="@+id/imageView138"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_62dp"
+        android:layout_marginTop="@dimen/_33dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView265"
+        app:srcCompat="@drawable/close_orng"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/yes_continue_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_33dp"
+        android:layout_marginEnd="@dimen/_71dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView265"
+        app:srcCompat="@drawable/done_round"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_15sp"
+        android:id="@+id/textView266"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:text="@string/no_change_it"
+        app:layout_constraintEnd_toEndOf="@+id/imageView138"
+        app:layout_constraintStart_toStartOf="@+id/imageView138"
+        app:layout_constraintTop_toBottomOf="@+id/imageView138" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        android:id="@+id/textView267"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yes_continue"
+        android:layout_marginTop="@dimen/_10dp"
+        app:layout_constraintEnd_toEndOf="@+id/yes_continue_btn"
+        app:layout_constraintStart_toStartOf="@+id/yes_continue_btn"
+        app:layout_constraintTop_toBottomOf="@+id/yes_continue_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

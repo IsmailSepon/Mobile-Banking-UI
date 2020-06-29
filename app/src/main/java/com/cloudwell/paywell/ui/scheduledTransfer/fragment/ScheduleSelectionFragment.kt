@@ -38,6 +38,11 @@ class ScheduleSelectionFragment : Fragment() {
 
 
 
+        view.back_btn.setOnClickListener(View.OnClickListener {
+           activity?.finish()
+        })
+
+
         return view
     }
 

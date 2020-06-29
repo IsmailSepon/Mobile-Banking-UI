@@ -1,15 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="270dp"
+    android:background="@color/calender_bg"
+    android:layout_height="wrap_content">
 
-    <CalendarView
-        android:scrollbarAlwaysDrawVerticalTrack="true"
-        android:id="@+id/calendarView"
-        android:layout_width="wrap_content"
+
+    <TextView
+        android:id="@+id/textView257"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Sunday"
+        android:background="@color/keypad_text_clr"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sp"
+        android:paddingBottom="@dimen/_10dp"
+        android:paddingTop="@dimen/_10dp"
+        android:textAlignment="center"
+        style="@style/medium_text_style"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/linearLayout18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView257">
+
+        <TextView
+            style="@style/medium_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_10dp"
+            android:text="Apr"
+            android:textAlignment="center"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/medium_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="26"
+            android:textAlignment="center"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="57sp" />
+
+        <TextView
+            style="@style/medium_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10dp"
+            android:text="2020"
+            android:textAlignment="center"
+            android:textColor="@color/common_clr"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <CalendarView
+        android:id="@+id/calender"
+        android:paddingBottom="@dimen/_0dp"
+        android:background="@color/calender_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout18"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/half_one" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_14dp"
+        android:paddingBottom="@dimen/_14dp"
+        android:text="Finished"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_14sp" />
+
+</LinearLayout>

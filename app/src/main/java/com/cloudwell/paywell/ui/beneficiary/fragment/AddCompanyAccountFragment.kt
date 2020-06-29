@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.beneficiary.viewModel.BeneficeryViewModel
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.addcompanyaccount_layout.view.*
 
 class AddCompanyAccountFragment : Fragment() {
@@ -37,6 +38,13 @@ class AddCompanyAccountFragment : Fragment() {
 //        binding.beneficeryViewModel = beneficeryViewModel
 //        binding.lifecycleOwner = this
 //        return binding.root
+
+
+        view.company_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
+
+
 
         return view
     }

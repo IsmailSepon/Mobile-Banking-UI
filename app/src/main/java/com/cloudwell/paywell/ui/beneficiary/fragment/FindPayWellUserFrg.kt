@@ -36,6 +36,11 @@ class FindPayWellUserFrg : Fragment() {
             )
         })
 
+
+        view.beneficery_back_btn.setOnClickListener(View.OnClickListener {
+            activity?.finish()
+        })
+
         return view
     }
 

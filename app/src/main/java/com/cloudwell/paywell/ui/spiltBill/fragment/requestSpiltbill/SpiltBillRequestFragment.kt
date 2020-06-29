@@ -30,6 +30,11 @@ class SpiltBillRequestFragment : Fragment() {
         })
 
 
+        view.spilt_req_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+        })
+
+
         return view
     }
 

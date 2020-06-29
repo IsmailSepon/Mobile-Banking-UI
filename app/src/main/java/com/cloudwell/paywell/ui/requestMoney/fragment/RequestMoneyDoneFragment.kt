@@ -18,6 +18,9 @@ class RequestMoneyDoneFragment : Fragment() {
         val view = inflater.inflate(R.layout.request_money_done_frg_layout, container, false)
 
 
+        view.setOnClickListener(View.OnClickListener {
+            activity?.finish()
+        })
 
         return view
     }
