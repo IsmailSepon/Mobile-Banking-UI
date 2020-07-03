@@ -42,13 +42,6 @@ class SendMoneyHostActivity : BaseActivity(), KodeinAware {
         setViewModelObserver()
 
 
-//        val beneficiaryFragment = BeneficiaryFragment()
-//        val manager = supportFragmentManager
-//        val transaction = manager.beginTransaction()
-//        transaction.replace(R.id.send_money_container, beneficiaryFragment)
-//        transaction.addToBackStack(null)
-//        transaction.commit()
-
         FragmentHelper.addFirstFragment(
             BeneficiaryFragment(),
             supportFragmentManager,

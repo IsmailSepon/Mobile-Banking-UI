@@ -45,7 +45,8 @@ class SignupActivity : AppCompatActivity() {
                        startActivity(
                            Intent(
                                applicationContext,
-                               RegistationMainActivity::class.java
+                               // RegistationMainActivity::class.java
+                               RegistrationUserOptionActivity::class.java
                            )
                        )
                    })

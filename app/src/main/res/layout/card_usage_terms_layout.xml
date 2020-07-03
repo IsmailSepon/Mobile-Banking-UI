@@ -122,10 +122,11 @@
         android:text="@string/please_ensure_you_have_available_fund_in_your_account_you_may_top_up_to_add_fund_now"
         android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/_14sp"
-        app:layout_constraintBottom_toTopOf="@+id/spilt_bill_btn"
+        app:layout_constraintBottom_toTopOf="@+id/card_usage_terms_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView275" />
+        app:layout_constraintTop_toBottomOf="@+id/textView275"
+        app:layout_constraintVertical_bias="0.8" />
 
 
     <Button
