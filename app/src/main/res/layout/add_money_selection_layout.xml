@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageButton
-        android:id="@+id/add_money_selection_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+<layout>
+
+    <data>
+
+        <variable
+            name="addMoneySelectionxml"
+            type="com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneySelectionViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <ImageButton
+            android:onClick="@{addMoneySelectionxml::add_money_selection_back}"
+            android:id="@+id/add_money_selection_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"
         android:layout_marginTop="@dimen/_24dp"
         android:background="@drawable/back"
@@ -45,6 +56,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:onClick="@{addMoneySelectionxml::bankItemOnclick}"
         android:id="@+id/constraintLayout7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -101,6 +113,7 @@
             app:srcCompat="@drawable/round_bank" />
 
         <TextView
+            android:onClick="@{addMoneySelectionxml::bankItem2Onclick}"
             android:id="@+id/textView69"
             style="@style/text_style"
             android:layout_width="wrap_content"
@@ -171,6 +184,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView71" />
 
     <TextView
+        android:onClick="@{addMoneySelectionxml::bankList}"
         android:id="@+id/bankList"
         android:layout_width="@dimen/_200dp"
         android:layout_height="wrap_content"
@@ -205,6 +219,7 @@
         tools:ignore="ContentDescription" />
 
     <TextView
+        android:onClick="@{addMoneySelectionxml::addmoneypaywell}"
         android:textColor="@color/keypad_text_clr"
         android:id="@+id/addmoneypaywell"
         android:layout_width="wrap_content"
@@ -238,4 +253,7 @@
         app:layout_constraintTop_toTopOf="@+id/addmoneypaywell" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
