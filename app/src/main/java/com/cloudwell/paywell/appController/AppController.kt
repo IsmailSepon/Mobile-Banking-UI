@@ -6,7 +6,7 @@ import com.cloudwell.paywell.data.db.AppDatabase
 import com.cloudwell.paywell.data.network.APIService
 import com.cloudwell.paywell.data.network.interceptor.HeaderTokenInterceptor
 import com.cloudwell.paywell.data.network.interceptor.NetworkConnectionInterceptor
-import com.cloudwell.paywell.ui.addMoney.view.AddMoneyRepository
+import com.cloudwell.paywell.ui.addMoney.factory.AddMoneyRepository
 import com.cloudwell.paywell.ui.sendMoney.view.SendMoneyFactory
 import com.cloudwell.paywell.ui.sendMoney.view.SendMoneyRepository
 import com.google.firebase.messaging.FirebaseMessaging

@@ -87,6 +87,7 @@ public class PersonalDetilsFullFreg extends Fragment {
                 public void onClick(View v) {
                     RegistationMainActivity parent = (RegistationMainActivity) getActivity();
                     parent.setPagerFragment(5);
+
                 }
             });
                 }
@@ -96,4 +97,6 @@ public class PersonalDetilsFullFreg extends Fragment {
 
         return view;
     }
+
+
 }

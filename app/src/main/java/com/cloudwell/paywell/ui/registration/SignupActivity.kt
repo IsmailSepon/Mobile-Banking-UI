@@ -37,7 +37,7 @@ class SignupActivity : AppCompatActivity() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             var phone : String = et_phone.text.toString()
-               if (phone.length >= 4){
+               if (phone.length >= 10) {
                    login_btn.setBackgroundResource(R.drawable.round_btn_visable)
                    login_btn.setOnClickListener(View.OnClickListener {
                        finish()

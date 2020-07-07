@@ -51,6 +51,7 @@ public class PersonalDetilsFreg extends Fragment {
         btn = view.findViewById(R.id.nect_btn);
         dateofbirth_et = view.findViewById(R.id.date_of_birth);
         name_et = view.findViewById(R.id.fullname);
+        name_et.setFocusable(true);
         dateofbirth_et.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -64,6 +65,7 @@ public class PersonalDetilsFreg extends Fragment {
 
                             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
                             String date = simpleDateFormat.format(newDate.getTime());
+                            dateofbirth_et.setText(date);
                         }
                     }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
 
@@ -73,46 +75,6 @@ public class PersonalDetilsFreg extends Fragment {
                 return false;
             }
         });
-//        dateofbirth_et.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//
-//                Calendar calendar = Calendar.getInstance();
-//
-//                DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), R.style.DatePickerDialogTheme, new DatePickerDialog.OnDateSetListener() {
-//                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-//                        Calendar newDate = Calendar.getInstance();
-//                        newDate.set(year, monthOfYear, dayOfMonth);
-//
-//                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
-//                        String date = simpleDateFormat.format(newDate.getTime());
-//                    }
-//                }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
-//
-//                datePickerDialog.show();
-//
-////
-////                // Get Current Date
-////                final Calendar c = Calendar.getInstance();
-////                mYear = c.get(Calendar.YEAR);
-////                mMonth = c.get(Calendar.MONTH);
-////                mDay = c.get(Calendar.DAY_OF_MONTH);
-////
-////
-////                DatePickerDialog datePickerDialog = new DatePickerDialog(view.getContext(),
-////                        new DatePickerDialog.OnDateSetListener() {
-////
-////                            @Override
-////                            public void onDateSet(DatePicker view, int year,int monthOfYear, int dayOfMonth) {
-////
-////                                dateofbirth_et.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-////
-////                            }
-////                        }, mYear, mMonth, mDay);
-////                datePickerDialog.show();
-//            }
-//        });
         name_et.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

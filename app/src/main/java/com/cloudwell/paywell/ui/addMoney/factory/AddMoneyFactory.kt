@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.ui.addMoney.view
+package com.cloudwell.paywell.ui.addMoney.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

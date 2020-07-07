@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.ui.addMoney.view
+package com.cloudwell.paywell.ui.addMoney.factory
 
 import com.cloudwell.paywell.data.db.AppDatabase
 import com.cloudwell.paywell.data.network.APIService

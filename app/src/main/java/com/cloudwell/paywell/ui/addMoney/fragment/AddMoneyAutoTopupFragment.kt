@@ -22,7 +22,6 @@ class AddMoneyAutoTopupFragment : Fragment() {
         val view = inflater.inflate(R.layout.add_money_autotopup_layout, container, false)
 
 
-
         view.auto_topup_back_btn.setOnClickListener(View.OnClickListener {
             FragmentHelper.removeFragment(activity?.supportFragmentManager)
         })

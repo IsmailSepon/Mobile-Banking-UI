@@ -4,29 +4,53 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel
-import kotlinx.android.synthetic.main.add_card_topup_done_layout.view.*
+import com.cloudwell.paywell.databinding.AddCardTopupDoneLayoutBinding
+import com.cloudwell.paywell.ui.addMoney.view.IaddCardtopupDoneVIew
+import com.cloudwell.paywell.ui.addMoney.viewModel.AddCardTopupDoneViewModel
 
-class AddCardTopupDoneFragment : Fragment() {
+class AddCardTopupDoneFragment : Fragment(), IaddCardtopupDoneVIew {
 
+    private lateinit var addCardTopupDoneViewModel: AddCardTopupDoneViewModel
 
-    private lateinit var addMoneyViewmodel: AddMoneyViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.add_card_topup_done_layout, container, false)
+        addCardTopupDoneViewModel =
+            ViewModelProviders.of(this).get(AddCardTopupDoneViewModel::class.java)
+        val binding: AddCardTopupDoneLayoutBinding =
+            DataBindingUtil.inflate(inflater, R.layout.add_card_topup_done_layout, container, false)
+        addCardTopupDoneViewModel.setView(this)
+        binding.addCardTopupDoneXml = addCardTopupDoneViewModel
+        binding.lifecycleOwner = this
 
-        view.done.setOnClickListener(View.OnClickListener {
-           activity?.finish()
-        })
 
+        return binding.root
+    }
 
+    override fun doneonclick() {
+        activity?.finish()
+    }
 
-        return view
+    override fun noInternetConnectionFound() {
+        TODO("Not yet implemented")
+    }
+
+    override fun showProgress() {
+        TODO("Not yet implemented")
+    }
+
+    override fun hiddenProgress() {
+        TODO("Not yet implemented")
+    }
+
+    override fun onFailure(message: String?) {
+        TODO("Not yet implemented")
     }
 
 

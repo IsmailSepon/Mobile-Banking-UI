@@ -6,7 +6,7 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.ApplockManager
-import com.cloudwell.paywell.ui.home.MainHomeActivity
+import com.cloudwell.paywell.ui.registration.SignupActivity
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -19,7 +19,7 @@ class SplashScreenActivity : AppCompatActivity() {
         ApplockManager.getInstance().enableDefaultAppLockIfAvailable(application)
 
         Handler().postDelayed({
-            val mainIntent = Intent(this, MainHomeActivity::class.java)
+            val mainIntent = Intent(this, SignupActivity::class.java)
             this.startActivity(mainIntent)
             this.finish()
         }, SPLASH_DISPLAY_LENGTH.toLong())
