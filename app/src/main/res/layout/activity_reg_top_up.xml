@@ -66,7 +66,7 @@
         app:layout_constraintVertical_bias="0.100000024" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/reg_topup_notnow_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/not_now"
