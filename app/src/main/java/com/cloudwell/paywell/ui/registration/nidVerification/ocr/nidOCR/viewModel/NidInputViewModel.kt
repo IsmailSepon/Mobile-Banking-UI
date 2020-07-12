@@ -123,7 +123,11 @@ class NidInputViewModel : BaseViewModel() {
 
 
     private fun findHusbandName(lineText: String): Boolean {
-        if (lineText.matches("(.*)স্বামী:(.*)".toRegex())) {
+        if (lineText.matches(
+                ("(.*)স্ব" +
+                        "ামী:(.*)").toRegex()
+            )
+        ) {
             val name =
                 lineText.split("স্বামী:".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
             userFather = name[1]
@@ -372,6 +376,7 @@ class NidInputViewModel : BaseViewModel() {
             }
 
             val resultText = result.text
+            Log.e("NID 2nd", resultText)
 
 
             var temp = ""

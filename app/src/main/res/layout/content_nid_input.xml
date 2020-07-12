@@ -29,7 +29,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView56"
             app:layout_constraintVertical_chainStyle="packed"
-            app:srcCompat="@drawable/nid_pic"
+            app:srcCompat="@drawable/nid_fornt_image"
             tools:layout_conversion_absoluteHeight="64dp"
             tools:layout_conversion_absoluteWidth="411dp" />
 
@@ -48,27 +48,29 @@
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView57"
-            app:srcCompat="@drawable/nid_pic_2"
+            app:srcCompat="@drawable/nid_back_img"
             tools:layout_conversion_absoluteHeight="64dp"
             tools:layout_conversion_absoluteWidth="411dp" />
 
         <Button
             android:id="@+id/btNext"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_hight"
+            android:elevation="@dimen/evelation_five"
+            android:background="@drawable/round_btn_visable"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:layout_marginBottom="32dp"
-            android:background="@color/keypad_text_clr"
             android:text="next"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -134,18 +136,21 @@
             app:layout_constraintTop_toTopOf="@+id/ivNidFirst"
             app:layout_constraintVertical_bias="0.539"
             android:visibility="gone"
+            android:src="@drawable/nid_selected"
             tools:visibility="visible" />
 
         <ImageView
             android:id="@+id/ivBackSeleted"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="53dp"
+            android:layout_marginBottom="52dp"
+            android:src="@drawable/nid_selected"
             android:visibility="gone"
-            tools:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/ivNidSecound"
             app:layout_constraintEnd_toEndOf="@+id/ivNidSecound"
-            app:layout_constraintStart_toEndOf="@+id/ivNidSecound" />
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ivNidSecound"
+            tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.util.Base64
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.databinding.ActivityOldNidPageBinding
 import com.cloudwell.paywell.ui.BaseActivity
+import com.cloudwell.paywell.ui.registration.nidVerification.NIDfrontsideActivity
 import com.cloudwell.paywell.ui.registration.nidVerification.ocr.model.RegistrationModel
 import com.cloudwell.paywell.ui.registration.nidVerification.ocr.nidOCR.model.User
 import com.cloudwell.paywell.ui.registration.nidVerification.ocr.nidOCR.view.IInputNidListener
@@ -20,6 +22,7 @@ import com.cloudwell.paywell.ui.registration.nidVerification.ocr.nidOCR.viewMode
 import com.cloudwell.paywell.ui.registration.nidVerification.ocr.nidOCR.viewModel.NidInputViewModel
 import com.cloudwell.paywell.utils.ImageUtility.getResizedBitmap
 import com.cloudwell.paywell.utils.viewUtil.toast
+import com.google.gson.Gson
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -118,10 +121,8 @@ class NidInputActivity : BaseActivity(), IInputNidListener {
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             val result = CropImage.getActivityResult(data)
             if (resultCode == Activity.RESULT_OK) {
-
                 val resultUri = result.uri
                 if (inputViewModel.isFirstPage) {
-
                     inputViewModel.firstPageUri = resultUri
                     ivNidFirst.setImageURI(resultUri)
                     ivForntSeleted.visibility = View.VISIBLE
@@ -182,22 +183,28 @@ class NidInputActivity : BaseActivity(), IInputNidListener {
         }
 
 
-//        val intent = Intent(applicationContext, InputNidInfoActivity::class.java)
-//        intent.putExtra("data", Gson().toJson(user))
-//        intent.putExtra("isNID", isNID)
-//        intent.putExtra("isMissingPage", isMissingPage)
-//        startActivity(intent)
+        val intent = Intent(applicationContext, NIDfrontsideActivity::class.java)
+        intent.putExtra("data", Gson().toJson(user))
+        intent.putExtra("isNID", isNID)
+        intent.putExtra("isMissingPage", isMissingPage)
+
+        val nidFirstPage: Bitmap = (ivNidFirst.drawable as BitmapDrawable).bitmap
+        intent.putExtra("nidFirstPage", nidFirstPage)
+        val nidSecondPage: Bitmap = (ivNidSecound.drawable as BitmapDrawable).bitmap
+        intent.putExtra("nidSecondPage", nidSecondPage)
+
+        startActivity(intent)
 
     }
 
     override fun setDefaultNIDImagInFirstNIDView() {
-        ivNidFirst.setImageResource(R.drawable.nid_pic)
+        ivNidFirst.setImageResource(R.drawable.nid_fornt_image)
         ivForntSeleted.visibility = View.GONE
 
     }
 
     override fun setDefaultNIDImagInSecondNIDView() {
-        ivNidSecound.setImageResource(R.drawable.nid_pic_2)
+        ivNidSecound.setImageResource(R.drawable.nid_back_img)
         ivBackSeleted.visibility = View.GONE
 
 
