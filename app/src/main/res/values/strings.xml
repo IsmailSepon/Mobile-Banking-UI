@@ -338,5 +338,11 @@
     <string name="title_smart">এন.আই.ডি-এর তথ্য</string>
     <string name="text_nid">এন.আই.ডি</string>
     <string name="text_smart_card">স্মার্ট কার্ড</string>
+    <string name="send_fund">Send fund</string>
+    <string name="title_activity_test_tab">TestTabActivity</string>
+    <string name="history">History</string>
+    <string name="friends_on_PayWell">Friends on PayWell</string>
+    <string name="favorites">Favorites</string>
+    <string name="title_activity_test">TestActivity</string>
 
 </resources>
