@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.ui.BusinessUI.test.ui.main
+package com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.pagerAdapter
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

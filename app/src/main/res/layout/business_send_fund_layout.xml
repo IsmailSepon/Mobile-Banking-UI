@@ -92,7 +92,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView6"
+        android:id="@+id/bulk_payment_layout"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_22dp"
         android:layout_marginStart="24dp"
@@ -146,7 +146,7 @@
         app:cardElevation="@dimen/_0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView6">
+        app:layout_constraintTop_toBottomOf="@+id/bulk_payment_layout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

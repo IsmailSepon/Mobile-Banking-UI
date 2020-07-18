@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.ui.BusinessUI.test.ui.main.SectionsPagerAdapter
+import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.pagerAdapter.SectionsPagerAdapter
 import com.google.android.material.tabs.TabLayout
 
 class BusinessSecondSendFundFragment : Fragment() {

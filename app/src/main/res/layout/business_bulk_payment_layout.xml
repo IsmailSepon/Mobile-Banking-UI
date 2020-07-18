@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_40dp"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageView93"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView303"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/send_fund_bulk"
+            android:textSize="@dimen/_17sp"
+            android:textColor="@color/keypad_text_clr"
+            style="@style/medium_text_style"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView93"
+            app:layout_constraintStart_toEndOf="@+id/imageView93"
+            app:layout_constraintTop_toTopOf="@+id/imageView93" />
+
+        <TextView
+            android:id="@+id/textView304"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_40dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginEnd="@dimen/_40dp"
+            android:textSize="@dimen/_14sp"
+            style="@style/text_style"
+            android:textColor="@color/common_clr"
+            android:text="@string/bulk_send_fund_is_the_method_for_sending_funds_to_multiple_beneficiaries_at_one_go_n_n_you_would_need_to_specify_the_amount_reference_and_mobile_number_or_email_in_an_excel_or_csv_file_once_uploaded_here_below_it_will_prompt_you_to_reconfirm_and_after_your_confirmation_all_funds_will_be_sent_to_the_designated_accounts"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView303" />
+
+        <TextView
+            android:id="@+id/textView305"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="40dp"
+            android:textSize="@dimen/_15sp"
+            style="@style/text_style"
+            android:textColor="@color/black"
+            android:text="@string/you_may_upload_a_csv_or_xlsx_file_using_nthe_below_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView304" />
+
+        <ImageView
+            android:id="@+id/imageView109"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView305"
+            app:srcCompat="@drawable/bulk_upload" />
+
+        <TextView
+            android:id="@+id/textView306"
+            style="@style/text_style"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="57dp"
+            android:text="@string/please_download_the_sample_file_linked_below_to_create_the_bulk_uploadable_file"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView109" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView306"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="@dimen/_10dp"
+                android:layout_height="@dimen/_10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/downlode_bulk"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5dp"
+                android:text="@string/download_sample_file"
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_10sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView307"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:text="@string/to_be_sent_for_approval"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout24" />
+
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifty_dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="@dimen/fifty_dp"
+            android:background="@drawable/round_btn_visable"
+            android:text="@string/continue_txt"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fifteen_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView307"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifty_dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="@dimen/fifty_dp"
+            android:background="@drawable/round_btn_orange"
+            android:text="@string/retake_selfie"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fifteen_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button5"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

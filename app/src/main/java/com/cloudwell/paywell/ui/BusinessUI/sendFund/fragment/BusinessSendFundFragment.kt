@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.utils.FragmentHelper
+import kotlinx.android.synthetic.main.business_send_fund_layout.view.*
 
 class BusinessSendFundFragment : Fragment() {
 
@@ -24,6 +25,15 @@ class BusinessSendFundFragment : Fragment() {
             requireActivity().supportFragmentManager,
             R.id.business_sendFund_container
         )
+
+
+        view.bulk_payment_layout.setOnClickListener(View.OnClickListener {
+            FragmentHelper.replaceFragment(
+                BusinessBulkPaymentFragment(),
+                requireActivity().supportFragmentManager,
+                R.id.send_money_container
+            )
+        })
 
         return view
     }
