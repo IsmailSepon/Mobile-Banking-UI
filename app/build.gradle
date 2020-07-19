@@ -145,6 +145,8 @@ dependencies {
     implementation "com.google.firebase:firebase-messaging:$rootProject.ext.firebaseMessaging"
 
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$rootProject.ext.leakcanaryVersion"
+    debugImplementation "com.readystatesoftware.chuck:library:$rootProject.ext.chuckVersion"
+
 
 
    // implementation 'com.oginotihiro:datepicker:1.0.0'
