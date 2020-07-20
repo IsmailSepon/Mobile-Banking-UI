@@ -46,7 +46,7 @@
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name"
+                android:hint="@string/name"
                 android:textSize="@dimen/_10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView299"
@@ -171,13 +171,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="10dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name"
+                android:hint="@string/name"
                 android:textSize="@dimen/_10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/search_contact"
                 app:layout_constraintStart_toStartOf="@+id/s_p_a"
                 app:layout_constraintTop_toBottomOf="@+id/s_p_a" />
 
@@ -191,6 +191,17 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/search_commn_clr" />
 
+            <TextView
+                android:id="@+id/search_contact"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Jamil Hasan"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/et_paywell_account" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
