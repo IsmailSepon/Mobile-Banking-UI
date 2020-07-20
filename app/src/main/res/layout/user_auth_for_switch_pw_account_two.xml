@@ -49,7 +49,7 @@
         app:pinCharacterSpacing="@dimen/_13dp"
         app:pinLineColors="@color/colorPrimaryDark" />
 
-    <com.cloudwell.paywell.consumer.base.CustomKeyboardWithFingerprint
+    <com.cloudwell.paywell.base.CustomKeyboardWithFingerprint
         android:id="@+id/customKeyboardUAS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

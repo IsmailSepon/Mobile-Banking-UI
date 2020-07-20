@@ -8,7 +8,7 @@
 
         <variable
             name="manageProfileViewModel"
-            type="com.cloudwell.paywell.consumer.ui.profile.viewmodel.ManageProfileViewModel" />
+            type="com.cloudwell.paywell.ui.profile.viewmodel.ManageProfileViewModel" />
     </data>
 
     <ScrollView

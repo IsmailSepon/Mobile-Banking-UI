@@ -58,7 +58,7 @@
         app:pinCharacterSpacing="@dimen/_13dp"
         app:pinLineColors="@color/colorPrimaryDark" />
 
-    <com.cloudwell.paywell.consumer.base.CustomKeyboard
+    <com.cloudwell.paywell.base.CustomKeyboard
         android:id="@+id/customKeyboardUANP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

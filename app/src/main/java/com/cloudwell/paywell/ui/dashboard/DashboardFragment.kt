@@ -3,7 +3,6 @@ package com.cloudwell.paywell.ui.dashboard
 import android.app.AlertDialog
 import android.app.Dialog
 import android.content.DialogInterface
-import android.content.DialogInterface.OnShowListener
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -18,13 +17,13 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.consumer.databinding.FragmentDashboardBinding
-import com.cloudwell.paywell.consumer.ui.authentication.UserAuthenticationHostActivity
-import com.cloudwell.paywell.consumer.ui.freeCard.FreeCardHostActivity
-import com.cloudwell.paywell.consumer.ui.help.UserHelpHostActivity
-import com.cloudwell.paywell.consumer.ui.profile.ProfileHostActivity
-import com.cloudwell.paywell.consumer.ui.profile.ProfileHostSecondActivity
-import com.cloudwell.paywell.consumer.ui.switchAccount.SwitchAccountHostActivity
+import com.cloudwell.paywell.databinding.FragmentDashboardBinding
+import com.cloudwell.paywell.ui.authentication.UserAuthenticationHostActivity
+import com.cloudwell.paywell.ui.freeCard.FreeCardHostActivity
+import com.cloudwell.paywell.ui.help.UserHelpHostActivity
+import com.cloudwell.paywell.ui.profile.ProfileHostActivity
+import com.cloudwell.paywell.ui.profile.ProfileHostSecondActivity
+import com.cloudwell.paywell.ui.switchAccount.SwitchAccountHostActivity
 import kotlinx.android.synthetic.main.fragment_dashboard.view.*
 
 

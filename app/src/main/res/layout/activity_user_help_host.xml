@@ -7,7 +7,7 @@
 
         <variable
             name="viewModelUserHelpHost"
-            type="com.cloudwell.paywell.consumer.ui.help.viewModel.UserHelpHostViewModel" />
+            type="com.cloudwell.paywell.ui.help.viewModel.UserHelpHostViewModel" />
     </data>
 
     <FrameLayout

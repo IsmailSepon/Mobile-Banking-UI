@@ -9,25 +9,16 @@ import com.cloudwell.paywell.data.network.interceptor.NetworkConnectionIntercept
 import com.cloudwell.paywell.ui.addMoney.view.AddMoneyRepository
 import com.cloudwell.paywell.ui.sendMoney.view.SendMoneyFactory
 import com.cloudwell.paywell.ui.sendMoney.view.SendMoneyRepository
-import com.google.firebase.messaging.FirebaseMessaging
-import com.cloudwell.paywell.consumer.base.ApplockManager
-import com.cloudwell.paywell.consumer.data.db.AppDatabase
-import com.cloudwell.paywell.consumer.data.network.APIService
-import com.cloudwell.paywell.consumer.data.network.interceptor.HeaderTokenInterceptor
-import com.cloudwell.paywell.consumer.data.network.interceptor.NetworkConnectionInterceptor
-import com.cloudwell.paywell.consumer.ui.addMoney.view.AddMoneyRepository
-import com.cloudwell.paywell.consumer.ui.authentication.view.UserAuthenticationHostFactory
-import com.cloudwell.paywell.consumer.ui.authentication.view.UserAuthenticationHostRepository
-import com.cloudwell.paywell.consumer.ui.freeCard.view.FreeCardHostFactory
-import com.cloudwell.paywell.consumer.ui.freeCard.view.FreeCardHostRepository
-import com.cloudwell.paywell.consumer.ui.help.view.UserHelpHostFactory
-import com.cloudwell.paywell.consumer.ui.help.view.UserHelpHostRepository
-import com.cloudwell.paywell.consumer.ui.profile.view.ProfileHostFactory
-import com.cloudwell.paywell.consumer.ui.profile.view.ProfileHostRepository
-import com.cloudwell.paywell.consumer.ui.sendMoney.view.SendMoneyRepository
-import com.cloudwell.paywell.consumer.ui.sendMoney.view.SendMoneyFactory
-import com.cloudwell.paywell.consumer.ui.switchAccount.view.SwitchAccountHostFactory
-import com.cloudwell.paywell.consumer.ui.switchAccount.view.SwitchAccountHostRepository
+import com.cloudwell.paywell.ui.authentication.view.UserAuthenticationHostFactory
+import com.cloudwell.paywell.ui.authentication.view.UserAuthenticationHostRepository
+import com.cloudwell.paywell.ui.freeCard.view.FreeCardHostFactory
+import com.cloudwell.paywell.ui.freeCard.view.FreeCardHostRepository
+import com.cloudwell.paywell.ui.help.view.UserHelpHostFactory
+import com.cloudwell.paywell.ui.help.view.UserHelpHostRepository
+import com.cloudwell.paywell.ui.profile.view.ProfileHostFactory
+import com.cloudwell.paywell.ui.profile.view.ProfileHostRepository
+import com.cloudwell.paywell.ui.switchAccount.view.SwitchAccountHostFactory
+import com.cloudwell.paywell.ui.switchAccount.view.SwitchAccountHostRepository
 import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
@@ -44,12 +35,6 @@ import org.kodein.di.generic.singleton
  * Created by Android on 12/1/2015.
  */
 class AppController : Application(), KodeinAware {
-
-    override fun onCreate() {
-        super.onCreate()
-        FirebaseMessaging.getInstance().isAutoInitEnabled = true
-
-    }
 
     override val kodein = Kodein.lazy {
         initilizationDI()

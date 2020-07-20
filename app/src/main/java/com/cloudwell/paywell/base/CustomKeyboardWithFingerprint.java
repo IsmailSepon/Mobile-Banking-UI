@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.base;
+package com.cloudwell.paywell.base;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.cloudwell.paywell.consumer.R;
+import com.cloudwell.paywell.R;
 
 public class CustomKeyboardWithFingerprint extends LinearLayout implements View.OnClickListener {
     private TextView button1, button2, button3, button4,

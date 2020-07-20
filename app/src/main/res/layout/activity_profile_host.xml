@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModelProfileHost"
-            type="com.cloudwell.paywell.consumer.ui.profile.viewmodel.ProfileHostViewModel" />
+            type="com.cloudwell.paywell.ui.profile.viewmodel.ProfileHostViewModel" />
     </data>
 
     <FrameLayout

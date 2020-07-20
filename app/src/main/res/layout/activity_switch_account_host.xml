@@ -7,7 +7,7 @@
 
         <variable
             name="viewModelSwitchAccountHost"
-            type="com.cloudwell.paywell.consumer.ui.switchAccount.viewModel.SwitchAccountHostViewModel" />
+            type="com.cloudwell.paywell.ui.switchAccount.viewModel.SwitchAccountHostViewModel" />
     </data>
 
     <FrameLayout

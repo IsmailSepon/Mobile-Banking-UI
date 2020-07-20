@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.ui.profile.fragment
+package com.cloudwell.paywell.ui.profile.fragment
 
 import android.app.Dialog
 import android.os.Bundle
@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
-import com.cloudwell.paywell.consumer.R
-import com.cloudwell.paywell.consumer.utils.FragmentHelper
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.manage_acc_profile_personal_details.view.*
 
 
