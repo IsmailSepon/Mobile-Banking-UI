@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".activity.registation.EmailVerificationActivity">
+    tools:context="com.cloudwell.paywell.ui.registration.EmailVerificationActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout9"
@@ -15,12 +15,12 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/send_money_back_btn"
             android:layout_width="@dimen/_14dp"
             android:layout_height="@dimen/_14dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/_20dp"
-            android:src="@drawable/cross_btn"
+            app:srcCompat="@drawable/cross_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

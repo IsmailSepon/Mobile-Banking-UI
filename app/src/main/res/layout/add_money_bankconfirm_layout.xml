@@ -7,7 +7,7 @@
     android:scrollbarSize="15sp">
 
     <ImageView
-        android:id="@+id/imageView43"
+        android:id="@+id/back_back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"

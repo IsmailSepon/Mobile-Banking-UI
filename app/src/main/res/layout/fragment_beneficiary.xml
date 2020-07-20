@@ -8,7 +8,7 @@
 
         <variable
             name="beneficeryViewModelxml"
-            type="com.cloudwell.paywell.consumer.ui.beneficiary.viewModel.BeneficeryViewModel" />
+            type="com.cloudwell.paywell.ui.beneficiary.viewModel.BeneficeryViewModel" />
 
     </data>
 
@@ -28,7 +28,6 @@
 
 
             <ImageView
-                android:onClick="@{beneficeryViewModelxml::beneficeryBack}"
                 android:id="@+id/beneficery_back_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

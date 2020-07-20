@@ -12,6 +12,9 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+        classpath 'com.google.gms:google-services:4.3.3'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.1.1'
+
     }
 
 }
@@ -20,8 +23,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url 'https://jitpack.io' }
-        
+        maven { url "https://jitpack.io" }
     }
 }
 
@@ -32,7 +34,7 @@ ext {
     compileSdkVersion = 29
     targetSdkVersion = 29
     buildToolsVersion = "29.0.2"
-    minSdkVersion = 18
+    minSdkVersion = 21
 
     materialVersion = " 1.1.0"
     supportLibraryVersion = '28.0.0'
@@ -48,6 +50,9 @@ ext {
     androidMaterialIntroScreen = '0.0.5'
     gogolePlay = '16.0.0'
     firebaseVersion = '16.0.6'
+    firebaseAnalyticsVers = '17.4.3'
+    firebaseMessaging = '20.2.0'
+    firebaseCrashlytics = '17.0.1'
 
     lifecycle_version = "1.1.1"
     room_version = "2.1.0"
@@ -75,13 +80,8 @@ ext {
     glideVersion = "4.9.0"
     pinentryedittextVersion = "2.0.6"
     biometricVersion = "1.0.1"
-    arcseekbarcVersion = "0.31"
-
-
-
-
-
-
+    leakcanaryVersion = "2.4"
+    chuckVersion = "1.1.0"
 
 }
 

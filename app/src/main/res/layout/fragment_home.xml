@@ -1,162 +1,329 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.home.HomeFragment">
+    tools:context="com.cloudwell.paywell.ui.home.HomeFragment">
 
     <data>
 
         <variable
             name="viewmode"
-            type="com.cloudwell.paywell.consumer.ui.account.AccountViewModel" />
+            type="com.cloudwell.paywell.ui.account.viewModel.AccountViewModel" />
     </data>
 
 
     <LinearLayout
+        android:paddingBottom="@dimen/_60dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/_15dp"
             android:text="৳0.00"
             android:textSize="@dimen/_26sp"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-    <LinearLayout
-        android:layout_marginTop="@dimen/_40dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="5">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="@dimen/_40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
-        <Button
-            android:onClick="@{viewmode::addMoney}"
-            android:id="@+id/homeBtnTopup"
-            style="@style/HomeButton"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/add_money"
-            android:text="@string/add_money_btn"
-            android:textAllCaps="false"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            <Button
+                android:id="@+id/homeBtnTopup"
+                style="@style/HomeButton"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/add_money"
+                android:onClick="@{viewmode::addMoney}"
+                android:text="@string/add_money_btn"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toStartOf="@+id/homeBtnEticket"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
 
-        <Button
-            android:id="@+id/send"
-            android:onClick="@{viewmode::sendMoney}"
-            android:layout_marginLeft="@dimen/_20dp"
-            android:layout_marginRight="@dimen/_20dp"
-            style="@style/HomeButton"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/send_money"
-            android:text="@string/send_money"
-            android:textAllCaps="false"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            <Button
+                android:id="@+id/send"
+                style="@style/HomeButton"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/send_money"
+                android:onClick="@{viewmode::sendMoney}"
+                android:text="@string/send_money"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/homeBtnEticket"
+                tools:ignore="MissingConstraints" />
 
 
-        <Button
-            android:onClick="@{viewmode::requestMoney}"
-            android:id="@+id/homeBtnEticket"
-            style="@style/HomeButton"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/request_money"
-            android:text="@string/request_money"
-            android:textAllCaps="false"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            <Button
+                android:id="@+id/homeBtnEticket"
+                style="@style/HomeButton"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/request_money"
+                android:onClick="@{viewmode::requestMoney}"
+                android:text="@string/request_money"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <Button
+                android:id="@+id/button10"
+                style="@style/HomeButton"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/cash_withdoaw"
+                android:onClick="@{viewmode::cashwithdraw}"
+                android:text="@string/withdraw_cash"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toStartOf="@+id/button12"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button12"
+                style="@style/HomeButton"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/bank_transfer"
+                android:onClick="@{viewmode::bankTransfer}"
+                android:text="@string/bank_transfer"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+            <Button
+                android:id="@+id/button11"
+                style="@style/HomeButton"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/schedule_transfer"
+                android:onClick="@{viewmode::scheduleTransfer}"
+                android:text="@string/schedule_transfer"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button12"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <Button
+                android:onClick="@{viewmode::vault}"
+                android:id="@+id/button13"
+                style="@style/HomeButton"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/vault"
+                android:text="@string/vault"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toStartOf="@+id/button14"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button14"
+                style="@style/HomeButton"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/linked_account"
+                android:text="@string/linked_account_s"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+            <Button
+                android:id="@+id/button15"
+                style="@style/HomeButton"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/statement"
+                android:text="@string/statement"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button14"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            tools:targetApi="m">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image"
+                    app:srcCompat="@drawable/slider_demo"
+                    android:layout_margin="@dimen/_24dp"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100dp"
+                    tools:ignore="ContentDescription" />
+
+                <!--    <ss.com.bannerslider.Slider-->
+                <!--        android:id="@+id/view_pager_auto"-->
+                <!--        android:layout_width="match_parent"-->
+                <!--        android:layout_height="100dp"-->
+                <!--        android:layout_margin="24dp"-->
+                <!--        android:visibility="visible"-->
+                <!--        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--        app:layout_constraintStart_toStartOf="parent"-->
+                <!--        app:layout_constraintTop_toBottomOf="@+id/txtHeading"-->
+                <!--        tools:layout_conversion_absoluteHeight="150dp"-->
+                <!--        tools:layout_conversion_absoluteWidth="379dp" />-->
+
+
+                <ImageView
+                    android:background="@color/common_clr"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/half_one" />
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_20dp"
+                    style="@style/medium_text_style"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:text="Pending" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/pendding_req"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/imageView121"
+                        android:layout_width="@dimen/_33dp"
+                        android:layout_height="@dimen/_33dp"
+                        android:layout_marginStart="24dp"
+                        android:src="@drawable/person"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textView239"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Amzad Hossain"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_14sp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView121"
+                        app:layout_constraintTop_toTopOf="@+id/imageView121" />
+
+                    <TextView
+                        android:id="@+id/textView240"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:55, "
+                        app:layout_constraintStart_toStartOf="@+id/textView239"
+                        app:layout_constraintTop_toBottomOf="@+id/textView239" />
+
+                    <TextView
+                        android:id="@+id/textView241"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="owes you"
+                        android:textColor="@color/recyclerview_title"
+                        android:textSize="@dimen/_10sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView239" />
+
+                    <TextView
+                        android:id="@+id/textView242"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+   150"
+                        android:textColor="@color/recyclerview_title"
+                        android:textSize="@dimen/_13sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView241"
+                        app:layout_constraintTop_toBottomOf="@+id/textView241" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@color/common_clr"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/half_one"
+                    tools:ignore="ContentDescription" />
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:id="@+id/textView232"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:text="Today" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_21dp"
+                    android:id="@+id/spilt_bill_recyclerview"
+                    android:layout_width="match_parent"
+                    android:scrollbars="vertical"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_marginTop="@dimen/_20dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="5">
-
-        <Button
-            style="@style/HomeButton"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/cash_withdoaw"
-            android:text="@string/withdraw_cash"
-            android:textAllCaps="false"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <Button
-            android:layout_marginLeft="@dimen/_20dp"
-            android:layout_marginRight="@dimen/_20dp"
-            style="@style/HomeButton"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/bank_transfer"
-            android:text="@string/bank_transfer"
-            android:textAllCaps="false"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-
-        <Button
-            android:onClick="@{viewmode::scheduleTransfer}"
-            style="@style/HomeButton"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/schedule_transfer"
-            android:text="@string/schedule_transfer"
-            android:textAllCaps="false"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginTop="@dimen/_20dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="5">
-
-        <Button
-            style="@style/HomeButton"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/vault"
-            android:text="@string/vault"
-            android:textAllCaps="false"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <Button
-            android:layout_marginLeft="@dimen/_20dp"
-            android:layout_marginRight="@dimen/_20dp"
-            style="@style/HomeButton"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/linked_account"
-            android:text="@string/linked_account_s"
-            android:textAllCaps="false"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-
-        <Button
-            style="@style/HomeButton"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/statement"
-            android:text="@string/statement"
-            android:textAllCaps="false"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/image"
-        android:layout_margin="@dimen/_24dp"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_100dp"
-        tools:ignore="ContentDescription" />
-
-<!--    <ss.com.bannerslider.Slider-->
-<!--        android:id="@+id/view_pager_auto"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:layout_margin="24dp"-->
-<!--        android:visibility="visible"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/txtHeading"-->
-<!--        tools:layout_conversion_absoluteHeight="150dp"-->
-<!--        tools:layout_conversion_absoluteWidth="379dp" />-->
-    </LinearLayout>
 </layout>

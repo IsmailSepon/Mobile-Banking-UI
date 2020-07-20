@@ -2,16 +2,18 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
-        applicationId "com.cloudwell.paywell.consumer"
+        applicationId "com.cloudwell.paywell"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 
@@ -20,16 +22,18 @@ android {
 
     }
     buildTypes {
+
+        debug {
+            applicationIdSuffix '.debug'
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
-    buildFeatures {
-        dataBinding {
-            enabled = true
-        }
+    dataBinding {
+        enabled = true
     }
 
     compileOptions {
@@ -44,7 +48,6 @@ android {
 
 dependencies {
 
-
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -54,6 +57,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${rootProject.ext.appcompatVersion}"
     implementation "androidx.legacy:legacy-support-v4:${rootProject.ext.legacySupportVersion}"
     implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintlayoutVersion}"
+    //noinspection GradleDependency
     implementation "com.google.android.material:material:${rootProject.ext.materialVersion}"
     implementation "androidx.recyclerview:recyclerview:${rootProject.ext.recyclerviewVersion}"
 
@@ -63,7 +67,7 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:${rootProject.ext.navigationFragmentVersion}"
 
     implementation "androidx.navigation:navigation-ui-ktx:${rootProject.ext.navigationFragmentVersion}"
-    implementation  "androidx.lifecycle:lifecycle-viewmodel-ktx:${rootProject.ext.viewmodelKtxVersion}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${rootProject.ext.viewmodelKtxVersion}"
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
 
     //retrofit
@@ -77,7 +81,7 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.okhttpVersion}"
     implementation "com.itkacher.okhttpprofiler:okhttpprofiler:${rootProject.ext.okhttpprofiler}"
 
-//    //Android Room
+    //Android Room
     implementation "androidx.room:room-runtime:${rootProject.ext.room_version}"
     implementation "androidx.room:room-ktx:${rootProject.ext.room_version}"
 
@@ -130,10 +134,27 @@ dependencies {
 
     implementation "androidx.biometric:biometric:${rootProject.ext.biometricVersion}"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    //arcseekbar
-    implementation "com.github.marcinmoskala:ArcSeekBar:${rootProject.ext.arcseekbarcVersion}"
+    //datepicker
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+
+    implementation "com.google.firebase:firebase-analytics:$rootProject.ext.firebaseAnalyticsVers"
+    implementation "com.google.firebase:firebase-crashlytics:$rootProject.ext.firebaseCrashlytics"
+    implementation "com.google.firebase:firebase-messaging:$rootProject.ext.firebaseMessaging"
+
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$rootProject.ext.leakcanaryVersion"
+    debugImplementation "com.readystatesoftware.chuck:library:$rootProject.ext.chuckVersion"
+
+
+
+   // implementation 'com.oginotihiro:datepicker:1.0.0'
+
+    //cardSlider
+    implementation 'com.github.IslamKhSh:CardSlider:1.0.1'
+    implementation "com.google.android.material:material:1.3.0-alpha01"
+    implementation "androidx.viewpager2:viewpager2:1.1.0-alpha01"
 
 
 }

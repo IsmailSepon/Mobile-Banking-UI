@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="beneficeryViewModelxml"
+            type="com.cloudwell.paywell.ui.beneficiary.viewModel.BeneficeryViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+
+            <ImageView
+                android:id="@+id/beneficery_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_32dp"
+                android:src="@drawable/back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.518" />
+
+            <ImageView
+                android:id="@+id/beneficery_info_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_32dp"
+                android:src="@drawable/beneficery_info"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.518" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/textView21"
+            style="@style/medium_text_style"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_7dp"
+            android:text="@string/select_a_beneficiary"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="@dimen/_50dp"
+            android:onClick="@{beneficeryViewModelxml::addBeneficery}"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/button2"
+                android:layout_width="@dimen/_33dp"
+                android:layout_height="@dimen/_33dp"
+                android:background="@null"
+
+                android:src="@drawable/add_beneficery"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView22"
+                style="@style/medium_text_style"
+                android:text="@string/add_a_new_bank_beneficiary"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.135"
+                app:layout_constraintStart_toEndOf="@+id/button2"
+                app:layout_constraintTop_toTopOf="@+id/button2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView111"
+            android:layout_width="@dimen/_33dp"
+            android:layout_height="@dimen/_33dp"
+            android:layout_marginTop="33dp"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout20"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout20"
+            app:srcCompat="@drawable/round_bank" />
+
+        <TextView
+            style="@style/text_style"
+            android:textSize="@dimen/_14sp"
+            android:textColor="@color/keypad_text_clr"
+            android:id="@+id/textView230"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="IPDC Finance Limited"
+            app:layout_constraintStart_toEndOf="@+id/imageView111"
+            app:layout_constraintTop_toTopOf="@+id/imageView111" />
+
+        <TextView
+            style="@style/text_style"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_12sp"
+            android:id="@+id/textView231"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Number: 10321464"
+            app:layout_constraintStart_toStartOf="@+id/textView230"
+            app:layout_constraintTop_toBottomOf="@+id/textView230" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

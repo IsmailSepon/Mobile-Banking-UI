@@ -2,12 +2,12 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!--        parent="Theme.MaterialComponents.Light.NoActionBar">-->
+<!--        parent="Theme.MaterialComponents.Light.NoActionBar">-->
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/status_bar_clr</item>
         <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
-        <!--        <item name="colorAccent">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorPrimaryDark</item>-->
         <item name="bottomSheetDialogTheme">@style/SheetDialog</item>
 
         <!-- New MaterialComponents attributes. -->
@@ -52,10 +52,13 @@
         <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
 
-    <style name="DialogTheme" parent="Theme.MaterialComponents">
-        <!--        <item name="colorPrimary">@color/primary</item>-->
-        <!--        <item name="colorPrimaryDark">@color/primary_dark</item>-->
-        <item name="colorAccent">@color/colorPrimaryDark</item>
+
+    <style name="DialogTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
     <style name="blue_edittext">
@@ -101,7 +104,6 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="fontFamily">@font/roboto_regular</item>
-        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="medium_text_style">
@@ -140,7 +142,40 @@
     </style>
 
     <style name="DatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
-        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/calender_activied</item>
+        <item name="background">@color/recyclerview_title</item>
+        <item name="android:selectionDividerHeight" tools:targetApi="q">@dimen/half_one</item>
+        <item name="android:showDividers">beginning</item>
+        <item name="buttonGravity">bottom</item>
+    </style>
+
+
+    <!--Style for BlurBottomSheet-->
+    <style name="SheetDialog2" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="EditTextTheme">
+        <item name="colorControlNormal">@color/common_clr</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">#FFFFFF</item>
+    </style>
+
+
+    <style name="CustomDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog" tools:targetApi="lollipop">
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+    </style>
+
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.DatePicker" tools:targetApi="lollipop">
+        <item name="android:datePickerMode">calendar</item>
     </style>
 
     <style name="SwitchButtonOrange" parent="Theme.AppCompat.Light">

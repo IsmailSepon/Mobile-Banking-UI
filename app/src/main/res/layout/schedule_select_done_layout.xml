@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".activity.registation.EmailVerificationActivity">
+    tools:context="com.cloudwell.paywell.ui.registration.EmailVerificationActivity">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -34,7 +34,7 @@
         app:layout_constraintVertical_bias="0.25" />
 
     <Button
-        android:id="@+id/ac_created_btn"
+        android:id="@+id/schedule_trx_btn"
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_hight"
         android:elevation="@dimen/evelation_five"
