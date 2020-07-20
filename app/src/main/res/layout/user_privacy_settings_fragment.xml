@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="ScrollViewSize">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/reg_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25.7dp"
+                android:layout_marginTop="23.7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewUPS1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25.6dp"
+                android:layout_marginTop="17.3dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/privacy"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_16_7sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/reg_back_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewUPS2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24.3dp"
+                android:layout_marginTop="@dimen/_36dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="6.2sp"
+                android:text="@string/marketing"
+                android:textColor="@color/recyclerview_title"
+                android:textSize="@dimen/fifteen_sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reg_back_btn" />
+
+            <TextView
+                android:id="@+id/textViewUPS3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_64dp"
+                android:layout_marginTop="@dimen/_26dp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="4.6sp"
+                android:text="@string/marketing_emails"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/fifteen_sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUPS2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutUSP1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.3dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUPS3"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/imageViewUSP1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19.7dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_mail_orange"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewUPS4"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24.3dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.6sp"
+                    android:layout_marginEnd="@dimen/_25dp"
+                    android:text="I’m happy for PayWell to be able to send me marketing emails that may interest me"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewUSP1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/switchUSP1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.7dp"
+                    android:layout_marginEnd="26.1dp"
+                    android:checked="true"
+                    android:theme="@style/SwitchButtonOrange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textViewUPS4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewUPS5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_64dp"
+                android:layout_marginTop="@dimen/_26dp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="4.6sp"
+                android:text="@string/marketing_pushes"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/fifteen_sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutUSP1" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutUSP2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.3dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUPS5"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/imageViewUSP2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22.7dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_mobile_orange"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewUPS6"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_28dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.6sp"
+                    android:text="I’m happy for PayWell to be able to send me marketing emails that may interest me"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewUSP2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/switchUSP2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.7dp"
+                    android:layout_marginEnd="26.1dp"
+                    android:checked="true"
+                    android:theme="@style/SwitchButtonOrange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textViewUPS6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewUPS7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_64dp"
+                android:layout_marginTop="@dimen/_26dp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="4.6sp"
+                android:text="@string/social_media_advertising_platfroms"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/fifteen_sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutUSP2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutUSP3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.3dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUPS7"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/imageViewUSP3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19.7dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_pfc_orange"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewUPS8"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_28dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.6sp"
+                    android:text="I’m happy for PayWell to share information, such as my name, email address and app events with social media and advertising platforms, to allow PayWell to advertise to me and others like me and to conduct analytics"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewUSP3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/switchUSP3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.7dp"
+                    android:layout_marginEnd="26.1dp"
+                    android:checked="true"
+                    android:theme="@style/SwitchButtonOrange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textViewUPS8"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewUPS9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_64dp"
+                android:layout_marginTop="@dimen/_26dp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="4.6sp"
+                android:text="@string/third_party_promotions"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/fifteen_sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutUSP3" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutUSP4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.3dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUPS9"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/imageViewUSP4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_gift_orange"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewUPS10"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.6sp"
+                    android:text="I want to receive emails and push notifications about third-party promotions acroos travel, health, entertainment, food and drink and other relevant areas, from trusted PayWell partners"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewUSP4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/switchUSP4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.7dp"
+                    android:layout_marginEnd="26.1dp"
+                    android:checked="false"
+                    android:theme="@style/SwitchButtonOrange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textViewUPS10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewUPS11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_64dp"
+                android:layout_marginTop="@dimen/_26dp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="4.6sp"
+                android:text="@string/service_pushes"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/fifteen_sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutUSP4" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutUSP5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.3dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUPS11"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/imageViewUSP5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_gift_orange"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewUPS12"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.6sp"
+                    android:text="I’m happy to receive notifications to see how close I am to unlocking my next entitled services"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewUSP5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/switchUSP5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.7dp"
+                    android:layout_marginEnd="26.1dp"
+                    android:checked="true"
+                    android:theme="@style/SwitchButtonOrange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textViewUPS12"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewUPS13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24.3dp"
+                android:layout_marginTop="@dimen/_36dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="6.2sp"
+                android:text="@string/payments"
+                android:textColor="@color/recyclerview_title"
+                android:textSize="@dimen/fifteen_sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutUSP5" />
+
+            <TextView
+                android:id="@+id/textViewUPS14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_64dp"
+                android:layout_marginTop="19.3dp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="4.6sp"
+                android:text="@string/payments_with_friends"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/fifteen_sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUPS13" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutUSP6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.3dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUPS14"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/imageViewUSP6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_not_seen_orange"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewUPS15"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.6sp"
+                    android:text="I’m happy to be visible to friends who have me saved as a contact in their phone book"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewUSP6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/switchUSP6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.7dp"
+                    android:layout_marginEnd="26.1dp"
+                    android:checked="true"
+                    android:theme="@style/SwitchButtonOrange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textViewUPS15"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewUPS16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24.3dp"
+                android:layout_marginTop="@dimen/_36dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="6.2sp"
+                android:text="@string/credit"
+                android:textColor="@color/recyclerview_title"
+                android:textSize="@dimen/fifteen_sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutUSP6" />
+
+            <TextView
+                android:id="@+id/textViewUPS17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_64dp"
+                android:layout_marginTop="19.3dp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="4.6sp"
+                android:text="@string/credit"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/fifteen_sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUPS16" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutUSP7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.3dp"
+                android:layout_marginBottom="57.7dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUPS17"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/imageViewUSP7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_money_bag_orange"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewUPS18"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="1.6sp"
+                    android:text="I’m happy for PayWell to share my data (name, address and date of bir"
+                    android:textColor="@color/recyclerview_title"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewUSP7"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/switchUSP7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.7dp"
+                    android:layout_marginEnd="26.1dp"
+                    android:checked="true"
+                    android:theme="@style/SwitchButtonOrange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textViewUPS18"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</ScrollView>

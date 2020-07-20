@@ -7,10 +7,18 @@ import com.cloudwell.paywell.consumer.data.network.APIService
 import com.cloudwell.paywell.consumer.data.network.interceptor.HeaderTokenInterceptor
 import com.cloudwell.paywell.consumer.data.network.interceptor.NetworkConnectionInterceptor
 import com.cloudwell.paywell.consumer.ui.addMoney.view.AddMoneyRepository
-import com.cloudwell.paywell.consumer.ui.dashboard.view.ProfileHostFactory
-import com.cloudwell.paywell.consumer.ui.dashboard.view.ProfileRepository
+import com.cloudwell.paywell.consumer.ui.authentication.view.UserAuthenticationHostFactory
+import com.cloudwell.paywell.consumer.ui.authentication.view.UserAuthenticationHostRepository
+import com.cloudwell.paywell.consumer.ui.freeCard.view.FreeCardHostFactory
+import com.cloudwell.paywell.consumer.ui.freeCard.view.FreeCardHostRepository
+import com.cloudwell.paywell.consumer.ui.help.view.UserHelpHostFactory
+import com.cloudwell.paywell.consumer.ui.help.view.UserHelpHostRepository
+import com.cloudwell.paywell.consumer.ui.profile.view.ProfileHostFactory
+import com.cloudwell.paywell.consumer.ui.profile.view.ProfileHostRepository
 import com.cloudwell.paywell.consumer.ui.sendMoney.view.SendMoneyRepository
 import com.cloudwell.paywell.consumer.ui.sendMoney.view.SendMoneyFactory
+import com.cloudwell.paywell.consumer.ui.switchAccount.view.SwitchAccountHostFactory
+import com.cloudwell.paywell.consumer.ui.switchAccount.view.SwitchAccountHostRepository
 import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
@@ -58,12 +66,64 @@ class AppController : Application(), KodeinAware {
         bind() from provider { SendMoneyFactory(instance()) }
 
         bind() from singleton {
-            ProfileRepository(
+            ProfileHostRepository(
                 instance(),
                 instance()
             )
         }
-        bind() from provider { ProfileHostFactory(instance()) }
+        bind() from provider {
+            ProfileHostFactory(
+                instance()
+            )
+        }
+
+        bind() from singleton {
+            SwitchAccountHostRepository(
+                instance(),
+                instance()
+            )
+        }
+        bind() from provider {
+            SwitchAccountHostFactory(
+                instance()
+            )
+        }
+
+        bind() from singleton {
+            UserHelpHostRepository(
+                instance(),
+                instance()
+            )
+        }
+        bind() from provider {
+            UserHelpHostFactory(
+                instance()
+            )
+        }
+
+        bind() from singleton {
+            FreeCardHostRepository(
+                instance(),
+                instance()
+            )
+        }
+        bind() from provider {
+            FreeCardHostFactory(
+                instance()
+            )
+        }
+
+        bind() from singleton {
+            UserAuthenticationHostRepository(
+                instance(),
+                instance()
+            )
+        }
+        bind() from provider {
+            UserAuthenticationHostFactory(
+                instance()
+            )
+        }
     }
 
     private fun initilizationLogger() {

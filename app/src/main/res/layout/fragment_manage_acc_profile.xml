@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <data>
+
         <variable
             name="manageProfileViewModel"
             type="com.cloudwell.paywell.consumer.ui.profile.viewmodel.ManageProfileViewModel" />
@@ -23,7 +24,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/_20dp">
 
                 <ImageView
                     android:id="@+id/reg_back_btn"
@@ -68,7 +70,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/username"
+                    android:id="@+id/usernameMA1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16.7dp"
@@ -91,7 +93,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/username"
+                    app:layout_constraintTop_toBottomOf="@id/usernameMA1"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -174,7 +176,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="26.4dp"
                         android:fontFamily="sans-serif"
-                        android:text="@string/account_details"
+                        android:text="@string/virtual_account_details"
                         android:textColor="@color/keypad_text_clr"
                         android:textSize="@dimen/_13_3sp"
                         android:textStyle="normal"
@@ -214,7 +216,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="27.3dp"
                         android:fontFamily="sans-serif"
-                        android:text="@string/top_up_limit"
+                        android:text="@string/limits"
                         android:textColor="@color/keypad_text_clr"
                         android:textSize="@dimen/_13_3sp"
                         android:textStyle="normal"
@@ -254,7 +256,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="31.8dp"
                         android:fontFamily="sans-serif"
-                        android:text="@string/price_plan_standard"
+                        android:text="@string/subscription_plan_free"
                         android:textColor="@color/keypad_text_clr"
                         android:textSize="@dimen/_13_3sp"
                         android:textStyle="normal"
@@ -280,11 +282,11 @@
                         android:id="@+id/imageViewMA6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="37.8dp"
+                        android:layout_marginStart="36dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.506"
+                        app:layout_constraintVertical_bias="0.0"
                         app:srcCompat="@drawable/doc_orange"
                         tools:ignore="ContentDescription" />
 
@@ -606,22 +608,22 @@
                         android:id="@+id/imageViewMA15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="40.1dp"
+                        android:layout_marginStart="40dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.506"
-                        app:srcCompat="@drawable/linked_in_orange"
+                        app:srcCompat="@drawable/fb_orange"
                         tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/textViewMA11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="27.1dp"
+                        android:layout_marginStart="27dp"
                         android:fontFamily="sans-serif"
                         android:lineSpacingExtra="4.1sp"
-                        android:text="@string/follow_us_on_linkedin"
+                        android:text="@string/like_us_on_facebook"
                         android:textColor="@color/keypad_text_clr"
                         android:textSize="@dimen/_13_3sp"
                         android:textStyle="normal"
@@ -638,7 +640,7 @@
                     android:id="@+id/constraintLayoutMA12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="35.7dp"
+                    android:layout_marginTop="32.3dp"
                     android:orientation="horizontal"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA11"
                     tools:ignore="MissingConstraints">
@@ -647,12 +649,12 @@
                         android:id="@+id/imageViewMA16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
+                        android:layout_marginStart="40.8dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.506"
-                        app:srcCompat="@drawable/fb_orange"
+                        app:srcCompat="@drawable/privacy_policy_orange"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -662,7 +664,7 @@
                         android:layout_marginStart="27dp"
                         android:fontFamily="sans-serif"
                         android:lineSpacingExtra="4.1sp"
-                        android:text="@string/like_us_on_facebook"
+                        android:text="@string/privacy_policy"
                         android:textColor="@color/keypad_text_clr"
                         android:textSize="@dimen/_13_3sp"
                         android:textStyle="normal"
@@ -679,54 +681,13 @@
                     android:id="@+id/constraintLayoutMA13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32.3dp"
+                    android:layout_marginTop="34.3dp"
                     android:orientation="horizontal"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA12"
                     tools:ignore="MissingConstraints">
 
                     <ImageView
                         android:id="@+id/imageViewMA17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="40.8dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.506"
-                        app:srcCompat="@drawable/privacy_policy_orange"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:id="@+id/textViewMA13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="27dp"
-                        android:fontFamily="sans-serif"
-                        android:lineSpacingExtra="4.1sp"
-                        android:text="@string/privacy_policy"
-                        android:textColor="@color/keypad_text_clr"
-                        android:textSize="@dimen/_13_3sp"
-                        android:textStyle="normal"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.075"
-                        app:layout_constraintStart_toEndOf="@+id/imageViewMA17"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayoutMA14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="34.3dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA13"
-                    tools:ignore="MissingConstraints">
-
-                    <ImageView
-                        android:id="@+id/imageViewMA18"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="40.7dp"
@@ -738,7 +699,7 @@
                         tools:ignore="ContentDescription" />
 
                     <TextView
-                        android:id="@+id/textViewMA14"
+                        android:id="@+id/textViewMA13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24.3dp"
@@ -751,14 +712,14 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.075"
-                        app:layout_constraintStart_toEndOf="@+id/imageViewMA18"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA17"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <ImageView
-                    android:id="@+id/imageViewMA19"
+                    android:id="@+id/imageViewMA18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="27.8dp"
@@ -767,20 +728,20 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/constraintLayoutMA14"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayoutMA13"
                     tools:ignore="ContentDescription" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayoutMA15"
+                    android:id="@+id/constraintLayoutMA14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_20dp"
                     android:orientation="horizontal"
-                    app:layout_constraintTop_toBottomOf="@+id/imageViewMA19"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewMA18"
                     tools:ignore="MissingConstraints">
 
                     <ImageView
-                        android:id="@+id/imageViewMA20"
+                        android:id="@+id/imageViewMA19"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="40.4dp"
@@ -792,7 +753,7 @@
                         tools:ignore="ContentDescription" />
 
                     <TextView
-                        android:id="@+id/textViewMA15"
+                        android:id="@+id/textViewMA14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="21.1dp"
@@ -805,23 +766,23 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.075"
-                        app:layout_constraintStart_toEndOf="@+id/imageViewMA20"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA19"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayoutMA16"
+                    android:id="@+id/constraintLayoutMA15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="33dp"
                     android:orientation="horizontal"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA15"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMA14"
                     tools:ignore="MissingConstraints">
 
                     <ImageView
-                        android:id="@+id/imageViewMA21"
+                        android:id="@+id/imageViewMA20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="40.7dp"
@@ -833,7 +794,7 @@
                         tools:ignore="ContentDescription" />
 
                     <TextView
-                        android:id="@+id/textViewMA17"
+                        android:id="@+id/textViewMA15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24.3dp"
@@ -846,14 +807,14 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.075"
-                        app:layout_constraintStart_toEndOf="@+id/imageViewMA21"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewMA20"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <ImageView
-                    android:id="@+id/imageViewMA22"
+                    android:id="@+id/imageViewMA21"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28.4dp"
@@ -862,7 +823,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/constraintLayoutMA16"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayoutMA15"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -878,7 +839,7 @@
                     android:textStyle="normal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageViewMA22" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewMA21" />
 
                 <TextView
                     android:id="@+id/version"

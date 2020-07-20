@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/cross_btnEPDS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_23dp"
+                    android:layout_marginTop="@dimen/_19dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_cross"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewEPD21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_75dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/what_are_your_personal_details"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_15sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewEPD22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/permanent_address"
+                    android:textColor="@color/text_clr_gray"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toTopOf="@+id/imageViewEPD21"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewEPD21" />
+
+                <ImageView
+                    android:id="@+id/imageViewEPD21"
+                    android:layout_width="@dimen/_200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:background="@color/text_clr_gray"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewEPD23"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.225"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewEPD22"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewEPD23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/house_holding_number"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_10sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textViewEPD22"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewEPD21" />
+
+                <EditText
+                    android:id="@+id/editTextEPD21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:background="@drawable/common_et_bg"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="#332 No."
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewEPD24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewEPD22"
+                    app:layout_constraintTop_toBottomOf="@id/textViewEPD23" />
+
+                <TextView
+                    android:id="@+id/textViewEPD24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/village_road"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_10sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textViewEPD22"
+                    app:layout_constraintTop_toBottomOf="@id/editTextEPD21" />
+
+                <EditText
+                    android:id="@+id/editTextEPD22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:background="@drawable/common_et_bg"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Gulshan"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toTopOf="@+id/spinnerEPD21"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewEPD22"
+                    app:layout_constraintTop_toBottomOf="@id/textViewEPD24" />
+
+                <Spinner
+                    android:id="@+id/spinnerEPD21"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:background="@drawable/spinner_bg"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintBottom_toTopOf="@+id/imageViewEPD22"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewEPD22"
+                    app:layout_constraintTop_toBottomOf="@id/editTextEPD22" />
+
+                <ImageView
+                    android:id="@+id/imageViewEPD22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:background="@color/text_clr_gray"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintBottom_toTopOf="@+id/spinnerEPD22"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerEPD21"
+                    tools:ignore="ContentDescription" />
+
+                <Spinner
+                    android:id="@+id/spinnerEPD22"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:background="@drawable/spinner_bg"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintBottom_toTopOf="@+id/imageViewEPD23"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewEPD22"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewEPD22" />
+
+                <ImageView
+                    android:id="@+id/imageViewEPD23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:background="@color/text_clr_gray"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintBottom_toTopOf="@+id/spinnerEPD23"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerEPD22"
+                    tools:ignore="ContentDescription" />
+
+                <Spinner
+                    android:id="@+id/spinnerEPD23"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:background="@drawable/spinner_bg"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintBottom_toTopOf="@+id/imageViewEPD24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewEPD22"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewEPD23" />
+
+                <ImageView
+                    android:id="@+id/imageViewEPD24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:background="@color/text_clr_gray"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewEPD25"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerEPD23"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewEPD25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_40dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/current_address"
+                    android:textColor="@color/text_clr_gray"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toTopOf="@+id/imageViewEPD25"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewEPD24" />
+
+                <ImageView
+                    android:id="@+id/imageViewEPD25"
+                    android:layout_width="@dimen/_200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:background="@color/text_clr_gray"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintBottom_toTopOf="@+id/checkboxEPD21"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.225"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewEPD25"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkboxEPD21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_40dp"
+                    android:layout_marginTop="@dimen/_18dp"
+                    android:checked="false"
+                    android:text="Same as permanent address"
+                    android:textColor="@color/common_clr"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewEPD25"
+                    app:theme="@style/CheckboxStyle" />
+
+                <EditText
+                    android:id="@+id/editTextEPD23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:background="@drawable/common_et_bg"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="House/Holding Number"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textColorHint="@color/common_clr"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toTopOf="@+id/editTextEPD24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewEPD22"
+                    app:layout_constraintTop_toBottomOf="@id/checkboxEPD21" />
+
+                <EditText
+                    android:id="@+id/editTextEPD24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:background="@drawable/common_et_bg"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="Village/Road"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textColorHint="@color/common_clr"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewEPD22"
+                    app:layout_constraintTop_toBottomOf="@id/editTextEPD23" />
+
+                <Spinner
+                    android:id="@+id/spinnerEPD24"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:background="@drawable/spinner_bg"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintBottom_toTopOf="@+id/imageViewEPD26"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewEPD22"
+                    app:layout_constraintTop_toBottomOf="@id/editTextEPD24" />
+
+                <ImageView
+                    android:id="@+id/imageViewEPD26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:background="@color/text_clr_gray"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintBottom_toTopOf="@+id/spinnerEPD25"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerEPD24"
+                    tools:ignore="ContentDescription" />
+
+                <Spinner
+                    android:id="@+id/spinnerEPD25"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:background="@drawable/spinner_bg"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintBottom_toTopOf="@+id/imageViewEPD27"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewEPD22"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewEPD26" />
+
+                <ImageView
+                    android:id="@+id/imageViewEPD27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:background="@color/text_clr_gray"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintBottom_toTopOf="@+id/spinnerEPD26"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerEPD25"
+                    tools:ignore="ContentDescription" />
+
+                <Spinner
+                    android:id="@+id/spinnerEPD26"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:background="@drawable/spinner_bg"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewEPD28"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewEPD22"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewEPD27" />
+
+                <ImageView
+                    android:id="@+id/imageViewEPD28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:layout_marginBottom="180dp"
+                    android:background="@color/text_clr_gray"
+                    android:src="@drawable/arrowspinner"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerEPD26"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/profile_edit_done_btn"
+        android:layout_width="@dimen/_300dp"
+        android:layout_height="@dimen/_60dp"
+        android:background="@drawable/round_btn_visable"
+        android:elevation="@dimen/evelation_five"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89"
+        tools:targetApi="lollipop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

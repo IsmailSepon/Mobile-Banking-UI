@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/back_btnUANP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="@dimen/_19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textViewUANP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/create_your_new_passcode"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_16_7sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_btnUANP"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <com.alimuzaffar.lib.pin.PinEntryEditText
+        android:id="@+id/editTextUANP"
+        android:layout_width="@dimen/_110dp"
+        android:layout_height="@dimen/_25dp"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:digits="1234567890"
+        android:inputType="number"
+        android:maxLength="4"
+        android:padding="@dimen/_5dp"
+        android:textColor="@android:color/transparent"
+        android:textIsSelectable="false"
+        android:textSize="0px"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUANP1"
+        app:layout_constraintVertical_bias="0.165"
+        app:pinBackgroundDrawable="@drawable/pin_bg"
+        app:pinBackgroundIsSquare="true"
+        app:pinCharacterSpacing="@dimen/_13dp"
+        app:pinLineColors="@color/colorPrimaryDark" />
+
+    <com.cloudwell.paywell.consumer.base.CustomKeyboard
+        android:id="@+id/customKeyboardUANP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginEnd="@dimen/_32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUANP"
+        app:layout_constraintVertical_bias="0.38"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

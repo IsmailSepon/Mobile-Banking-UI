@@ -26,8 +26,10 @@ android {
         }
     }
 
-    dataBinding {
-        enabled = true
+    buildFeatures {
+        dataBinding {
+            enabled = true
+        }
     }
 
     compileOptions {
@@ -129,6 +131,9 @@ dependencies {
     implementation "androidx.biometric:biometric:${rootProject.ext.biometricVersion}"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //arcseekbar
+    implementation "com.github.marcinmoskala:ArcSeekBar:${rootProject.ext.arcseekbarcVersion}"
 
 
 }

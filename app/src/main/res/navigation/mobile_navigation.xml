@@ -28,7 +28,7 @@
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/navigation_control"
-        android:name="com.cloudwell.paywell.consumer.ui.dashboard.fragment.DashboardFragment"
+        android:name="com.cloudwell.paywell.consumer.ui.dashboard.DashboardFragment"
         android:label="Control"
         tools:layout="@layout/fragment_dashboard" />
 </navigation>

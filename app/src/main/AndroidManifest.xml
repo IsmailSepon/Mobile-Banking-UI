@@ -17,6 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
+
         <activity
             android:name=".ui.scheduled_Transfer.SchedulTransferHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -94,10 +95,22 @@
             android:name=".ui.dashboard.DashboardHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.dashboard.ProfileManageActivity"
+            android:name=".ui.profile.ProfileHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity android:name=".ui.dashboard.ProfileHostActivity"
+        <activity
+            android:name=".ui.profile.ProfileHostSecondActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.switchAccount.SwitchAccountHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.help.UserHelpHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.freeCard.FreeCardHostActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.authentication.UserAuthenticationHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

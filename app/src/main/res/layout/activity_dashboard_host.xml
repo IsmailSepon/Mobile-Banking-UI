@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.cloudwell.paywell.consumer.ui.dashboard.viewmodel.DashboardViewModel" />
+            type="com.cloudwell.paywell.consumer.ui.dashboard.DashboardViewModel" />
     </data>
 
     <FrameLayout

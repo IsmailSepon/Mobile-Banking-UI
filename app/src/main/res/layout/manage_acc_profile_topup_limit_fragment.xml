@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="ScrollViewSize">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/reg_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25.7dp"
+                android:layout_marginTop="23.7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewMAPTL1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25.6dp"
+                android:layout_marginTop="17.3dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Limit"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="16.7sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/reg_back_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.marcinmoskala.arcseekbar.ArcSeekBar
+                android:id="@+id/arcSeekBarTopupLimit"
+                android:layout_width="243dp"
+                android:layout_height="207dp"
+                android:layout_marginTop="165.3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMAPTL1"
+                app:progressBackgroundColor="@color/common_clr"
+                app:progressBackgroundWidth="@dimen/_10dp"
+                app:progress="50"
+                app:maxProgress="1000"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewMAPTL2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80.7dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="৳150.00"
+                android:textColor="@color/colorPrimaryDark"
+                android:lineSpacingExtra="13.7sp"
+                android:textSize="33.3sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/arcSeekBarTopupLimit" />
+
+            <TextView
+                android:id="@+id/textViewMAPTL3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.3dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Limit is reached"
+                android:textColor="@color/colorPrimaryDark"
+                android:lineSpacingExtra="7.6sp"
+                android:textSize="18.3sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMAPTL2" />
+
+            <ImageView
+                android:id="@+id/imageViewMAPTL1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMAPTL3"
+                app:srcCompat="@drawable/ic_card_gray"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewMAPTL4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12.1dp"
+                android:fontFamily="sans-serif"
+                android:text="Limit is ৳0 a year"
+                android:textColor="@color/recyclerview_title"
+                android:lineSpacingExtra="7.6sp"
+                android:textSize="18.3sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewMAPTL1" />
+
+            <TextView
+                android:id="@+id/textViewMAPTL5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Pending verification"
+                android:textColor="@color/keypad_text_clr"
+                android:lineSpacingExtra="5.2sp"
+                android:textSize="@dimen/_16_7sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMAPTL4" />
+
+            <TextView
+                android:id="@+id/textViewMAPTL6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12.1dp"
+                android:layout_marginStart="26.3dp"
+                android:layout_marginEnd="26.3dp"
+                android:fontFamily="sans-serif"
+                android:text="We’re currently reviewing your profie. We’ll notifiy\nyou via a push notification when this is complete."
+                android:textColor="@color/recyclerview_title"
+                android:lineSpacingExtra="5.5sp"
+                android:textSize="13.3sp"
+                android:maxLines="2"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMAPTL5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="ScrollViewSize">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/reg_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_21dp"
+                android:layout_marginTop="@dimen/_19dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewPDF1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31.9dp"
+                android:layout_marginTop="14.3dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/documents"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_16_7sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@id/reg_back_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutPDF1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72.3dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPDF1"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageViewPDF1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="39.3dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/doc_blue"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewPDF2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23.3dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/account_creation_confirmation"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@id/imageViewPDF1"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutPDF2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27.7dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutPDF1"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageViewPDF2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="39.3dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/doc_blue"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewPDF3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23.3dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/debit_card_creation_confirmation"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@id/imageViewPDF2"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutPDF3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27.3dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutPDF2"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageViewPDF3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="39.3dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/doc_blue"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewPDF4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23.3dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/national_id_submission_confirmation"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@id/imageViewPDF3"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutPDF4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27.3dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutPDF3"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageViewPDF4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="39.3dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/doc_blue"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textViewPDF5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23.3dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/trade_license_submission_confirmation"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@id/imageViewPDF4"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
