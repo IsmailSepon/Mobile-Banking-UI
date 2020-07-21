@@ -325,7 +325,6 @@
     <string name="we_ll_use_your_location_to_help_proevent_fraudulent_transaction_if_your_card_is_ever_compromised_gps_must_be_turned_on">We\'ll use your location to help proevent fraudulent transaction if your card is ever compromised. GPS must be turned on.</string>
     <string name="swipe_payments">Swipe payments</string>
     <string name="sometimes_cards_can_be_cloned_switch_off_the_magnetic_strip_for_extra_security">Sometimes cards can be cloned. Switch off the magnetic strip for extra security</string>
-    <string name="atm_withdrawals">ATM withdrawals</string>
     <string name="if_you_do_not_plan_to_withdraw_cash_you_can_switch_atm_withdrawals_off">If you do not plan to withdraw cash, you can switch ATM withdrawals off</string>
     <string name="online_transactions">Online transactions</string>
     <string name="internet_based_transactions_are_generally_high_risk_you_can_switch_them_off_for_extra_security">Internet-based transactions are generally high-risk. You can switch them off for extra security</string>
@@ -359,7 +358,6 @@
     <string name="add_account">Add account</string>
     <string name="active_accounts">Active accounts</string>
     <string name="quick_actions">Quick actions</string>
-    <string name="got_it">Got it</string>
     <string name="account_creation_confirmation">Account creation confirmation</string>
     <string name="debit_card_creation_confirmation">Debit card creation confirmation</string>
     <string name="national_id_submission_confirmation">National ID submission confirmation</string>
@@ -385,7 +383,6 @@
     <string name="start_inviting">Start inviting</string>
     <string name="how_invite_works">How invite works</string>
     <string name="accepted_invitations">Accepted invitations</string>
-    <string name="invite_friends">Invite friends</string>
     <string name="share_your_invite_link">Share your invite link</string>
     <string name="select_contacts_to_invite">Select contacts to invite</string>
     <string name="how_can_we_help">How can we help?</string>

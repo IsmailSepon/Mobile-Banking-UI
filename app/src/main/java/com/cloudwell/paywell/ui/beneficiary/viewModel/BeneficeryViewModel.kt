@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.consumer.ui.beneficiary.viewModel
+package com.cloudwell.paywell.ui.beneficiary.viewModel
 
 import android.view.View
 import android.widget.Toast
