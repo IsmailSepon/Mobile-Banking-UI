@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.help.UserHelpHostActivity">
+
+    <data>
+
+        <variable
+            name="viewModelUserHelpHost"
+            type="com.cloudwell.paywell.ui.help.viewModel.UserHelpHostViewModel" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/user_help_host_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+</layout>

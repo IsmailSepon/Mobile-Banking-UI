@@ -1,13 +1,12 @@
 package com.cloudwell.paywell.ui.dashboard
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class DashboardViewModel: ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
-    }
-    val text: LiveData<String> = _text
+//    fun openProfile(view: View) {
+//        Intent(view.context, ProfileHostActivity::class.java).also {
+//            view.context.startActivity(it)
+//        }
+//    }
 }

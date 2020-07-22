@@ -95,6 +95,7 @@
     <dimen name="_42dp">42dp</dimen>
     <dimen name="_60dp">60dp</dimen>
     <dimen name="_48dp">48dp</dimen>
+    <dimen name="_49dp">49dp</dimen>
     <dimen name="_7dp">7dp</dimen>
     <dimen name="_22sp">22sp</dimen>
     <dimen name="_98dp">98dp</dimen>
@@ -139,4 +140,23 @@
     <dimen name="appbar_padding">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
     <dimen name="_24sp">24sp</dimen>
+    <dimen name="_13_3sp">13.3sp</dimen>
+    <dimen name="_18_3sp">18.3sp</dimen>
+    <dimen name="_27_3sp">27.3sp</dimen>
+    <dimen name="_16_7sp">16.7sp</dimen>
+    <dimen name="_24_7dp">24.7dp</dimen>
+    <dimen name="_11_7sp">11.7sp</dimen>
+    <dimen name="_8_3sp">8.3sp</dimen>
+    <dimen name="_8sp">8sp</dimen>
+    <dimen name="_5_2sp">5.2sp</dimen>
+    <dimen name="_70_5dp">70.5dp</dimen>
+    <dimen name="_5_5dp">5.5dp</dimen>
+    <dimen name="_43_3dp">43.3dp</dimen>
+    <dimen name="_17_7dp">17.7dp</dimen>
+    <dimen name="_300dp">300dp</dimen>
+    <dimen name="_400dp">400dp</dimen>
+    <dimen name="_150dp">150dp</dimen>
+    <dimen name="_230dp">230dp</dimen>
+    <dimen name="_65dp">65dp</dimen>
+    <dimen name="_160dp">160dp</dimen>
 </resources>

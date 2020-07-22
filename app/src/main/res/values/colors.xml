@@ -6,15 +6,15 @@
     <color name="background">#FAFAFA</color>
     <color name="color_red">#E00201</color>
     <color name="white">#FFFFFF</color>
-    <color name="common_clr">#8ea0b6</color>
+    <color name="common_clr">#8EA0B6</color>
     <color name="keypad_text_clr">#00203f</color>
     <color name="light_blue">#31476a</color>
     <color name="status_bar_clr">#f6f6f6</color>
     <color name="black">#000</color>
     <color name="text_link_clr">#0066CB</color>
     <color name="transparent">#00000000</color>
-    <color name="recyclerview_title">#7e8996</color>
     <color name="recycler_swipe_gray">#637c99</color>
+    <color name="recyclerview_title">#7E8996</color>
     <color name="tollbar_bg">#f0f4f9</color>
     <color name="divider_bg">#f5f4f7</color>
     <color name="blck_bg">#19000000</color>
@@ -25,6 +25,15 @@
     <color name="calender_activied">#dee4ec</color>
     <color name="not_now_color">#416186</color>
     <color name="staper_bg">#bac5d4</color>
+    <color name="blue_light">#416186</color>
+    <color name="orange_fade">#fdae94</color>
+    <color name="pink_light">#FAEAE8</color>
+    <color name="blue_text_light">#0082ff</color>
+    <color name="divider_color_light">#E4E8ED</color>
+    <color name="bg_light_blue">#ECF0F4</color>
+    <color name="text_clr_blue">#0066CB</color>
+    <color name="text_clr_gray">#385776</color>
+
     <color name="bulk_bg">#f6f7f8</color>
     <color name="tab_unselected_clr">#d8e1eb</color>
 </resources>

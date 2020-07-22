@@ -46,7 +46,7 @@ class AccountFragment : Fragment(), IaccountVIew, DatePickerDialog.OnDateSetList
         homeViewModel = ViewModelProviders.of(this).get(AccountViewModel::class.java)
         val binding: FragmentHomeBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
-        // val viewmodel = ViewModelProviders.of(this).get(AccountViewModel::class.java)
+//         val viewmodel = ViewModelProviders.of(this).get(AccountViewModel::class.java)
         binding.viewmode = homeViewModel
         binding.lifecycleOwner = this
 

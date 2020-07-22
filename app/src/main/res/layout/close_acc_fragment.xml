@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sad_emo_outer"
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="116dp"
+        app:cardBackgroundColor="@color/pink_light"
+        app:cardCornerRadius="192dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_sad_emoji"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textViewCA1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29.7dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/hey_wait_where_are_you_going"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="18.3sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sad_emo_outer" />
+
+    <TextView
+        android:id="@+id/textViewCA2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.3dp"
+        android:fontFamily="sans-serif"
+        android:text="It’s free to keep a Standard account\nand opening a new one cloud take\nsome time if you cancel"
+        android:textColor="@color/common_clr"
+        android:textAlignment="center"
+        android:textSize="@dimen/fifteen_sp"
+        android:maxLines="3"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCA1" />
+
+    <TextView
+        android:id="@+id/textViewCA3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_70dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/close_account"
+        android:textColor="@color/blue_text_light"
+        android:textSize="@dimen/_16_7sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCA2" />
+
+    <Button
+        android:id="@+id/acc_open_keep_btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:background="@drawable/round_btn_visable"
+        android:layout_marginTop="29.7dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Keep account open"
+        android:textAllCaps="false"
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fifteen_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCA3"
+        tools:targetApi="lollipop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,33 @@
         <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
         <!--        <item name="colorAccent">@color/colorPrimaryDark</item>-->
         <item name="bottomSheetDialogTheme">@style/SheetDialog</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- New MaterialComponents attributes. -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.MaterialComponents.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.MaterialComponents.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.MaterialComponents.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.MaterialComponents.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.MaterialComponents.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.MaterialComponents.Caption</item>
+        <item name="textAppearanceButton">@style/TextAppearance.MaterialComponents.Button</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.MaterialComponents.Overline</item>
+
+        <item name="colorPrimaryVariant">@color/design_default_color_primary_variant</item>
+        <item name="colorSecondaryVariant">@color/design_default_color_secondary_variant</item>
+        <item name="colorSurface">@color/design_default_color_surface</item>
+        <item name="colorOnPrimary">@color/colorPrimary</item>
+        <item name="colorOnSecondary">@color/design_default_color_secondary</item>
+        <item name="colorOnBackground">@color/background</item>
+        <item name="colorOnError">@color/color_red</item>
+        <item name="colorOnSurface">@color/design_default_color_surface</item>
+        <item name="scrimBackground">@color/background</item>
     </style>
 
     <style name="FullScreen" parent="AppTheme">
@@ -181,4 +208,30 @@
         <item name="android:datePickerMode">calendar</item>
     </style>
 
+    <style name="SwitchButtonOrange" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#f15a24</item>
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+        <item name="android:colorForeground">#42221f1f</item>
+    </style>
+
+    <style name="MaterialDialogSheetAnimation">
+        <item name="android:windowEnterAnimation">@anim/popup_show</item>
+        <item name="android:windowExitAnimation">@anim/popup_hide</item>
+    </style>
+
+    <style name="text_style_for_custom_keyboard_with_forget">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/_27_3sp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/keypad_text_clr</item>
+    </style>
+
+    <style name="CheckboxStyle" parent="AppTheme">
+        <item name="colorAccent">@color/colorPrimaryDark</item>  // for checked
+        <item name="android:textColorSecondary">@color/common_clr</item>  // for unchecked
+    </style>
 </resources>

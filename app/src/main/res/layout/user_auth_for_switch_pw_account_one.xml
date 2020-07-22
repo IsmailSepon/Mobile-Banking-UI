@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewUAS1"
+        android:layout_width="284.3dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40dp"
+        android:layout_marginTop="97.3dp"
+        android:layout_marginEnd="@dimen/_40dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Please provide your PayWell business account credentials"
+        android:textAlignment="center"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/fifteen_sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/continue_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.012" />
+
+    <TextView
+        android:id="@+id/textViewUAS2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45.7dp"
+        android:layout_marginTop="73.7dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/email"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_10sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUAS1" />
+
+    <EditText
+        android:id="@+id/ediTextUAS1r"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_46dp"
+        android:layout_marginTop="@dimen/_12dp"
+        android:layout_marginEnd="@dimen/_46dp"
+        android:background="@drawable/common_et_bg"
+        android:fontFamily="sans-serif"
+        android:hint="Enter your email ID"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUAS2"
+        tools:ignore="Autofill,MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonContinueUAS"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:background="@drawable/round_btn"
+        android:text="@string/continue_txt"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        tools:targetApi="lollipop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

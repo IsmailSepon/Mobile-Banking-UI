@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPA1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginEnd="16.7dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewPA1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="ITEM"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_8_3sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="NO of transaction"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_8_3sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="end"
+            android:text="Amount"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_8_3sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewPA1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="16.7dp"
+        android:layout_marginBottom="@dimen/_2dp"
+        android:background="@color/common_clr"
+        android:src="@drawable/arrowspinner"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPA1"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPA2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="7.1dp"
+        android:layout_marginEnd="16.7dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPA1">
+
+        <TextView
+            android:id="@+id/textViewPA4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/wallet_balance"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="NO of transaction"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textViewPA6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="end"
+            android:text="৳50,00,000"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewPA2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="7.8dp"
+        android:layout_marginEnd="16.7dp"
+        android:layout_marginBottom="@dimen/_2dp"
+        android:background="@color/common_clr"
+        android:src="@drawable/arrowspinner"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPA2"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPA3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="7.1dp"
+        android:layout_marginEnd="16.7dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPA2">
+
+        <TextView
+            android:id="@+id/textViewPA7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/add_fund"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="50"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="end"
+            android:text="৳5,00,000"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewPA3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="8.1dp"
+        android:layout_marginEnd="16.7dp"
+        android:layout_marginBottom="@dimen/_2dp"
+        android:background="@color/common_clr"
+        android:src="@drawable/arrowspinner"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPA3"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPA4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="7.1dp"
+        android:layout_marginEnd="16.7dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPA3">
+
+        <TextView
+            android:id="@+id/textViewPA10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/send_transfer_fund"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="50"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="end"
+            android:text="৳5,00,000"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewPA4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="8.1dp"
+        android:layout_marginEnd="16.7dp"
+        android:layout_marginBottom="@dimen/_2dp"
+        android:background="@color/common_clr"
+        android:src="@drawable/arrowspinner"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPA4"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPA5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="7.1dp"
+        android:layout_marginEnd="16.7dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPA4">
+
+        <TextView
+            android:id="@+id/textViewPA13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/request_fund"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="50"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="end"
+            android:text="৳5,00,000"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewPA5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="8.1dp"
+        android:layout_marginEnd="16.7dp"
+        android:layout_marginBottom="@dimen/_2dp"
+        android:background="@color/common_clr"
+        android:src="@drawable/arrowspinner"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPA5"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPA6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="7.1dp"
+        android:layout_marginEnd="16.7dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPA5">
+
+        <TextView
+            android:id="@+id/textViewPA16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/atm_withdraw"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA17"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="50"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="end"
+            android:text="৳5,00,000"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewPA6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="8.1dp"
+        android:layout_marginEnd="16.7dp"
+        android:layout_marginBottom="@dimen/_2dp"
+        android:background="@color/common_clr"
+        android:src="@drawable/arrowspinner"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPA6"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPA7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="7.1dp"
+        android:layout_marginEnd="16.7dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPA6">
+
+        <TextView
+            android:id="@+id/textViewPA19"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/mobile_top_up"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="500"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA21"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="end"
+            android:text="৳10,00,000"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewPA7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="8.1dp"
+        android:layout_marginEnd="16.7dp"
+        android:layout_marginBottom="@dimen/_2dp"
+        android:background="@color/common_clr"
+        android:src="@drawable/arrowspinner"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPA7"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPA8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="7.1dp"
+        android:layout_marginEnd="16.7dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPA7">
+
+        <TextView
+            android:id="@+id/textViewPA22"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/utility_tickets_fees"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA23"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="500"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewPA24"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="end"
+            android:text="৳10,00,000"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

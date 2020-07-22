@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/buttonBackGFC11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20.7dp"
+        android:layout_marginTop="17.3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back"
+        tools:ignore="ContentDescription" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/open_envelop_outer"
+        android:layout_width="143dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="80.7dp"
+        app:cardBackgroundColor="@color/divider_color_light"
+        app:cardCornerRadius="192dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/open_envelop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_open_envelop"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textViewGFCF1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_48dp"
+        android:layout_marginTop="25.3dp"
+        android:layout_marginEnd="@dimen/_48dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Your friends to complete a few steps before they’re rewarded"
+        android:textAlignment="center"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/fifteen_sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/open_envelop_outer"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutGFCF1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGFCF1">
+
+        <TextView
+            android:id="@+id/textViewGFCF2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_35dp"
+            android:background="@drawable/ic_outline_blue"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/_1"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_13_3sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textViewGFCF3"
+            android:layout_width="262.3dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15.3dp"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="2sp"
+            android:text="Follow your invite link and create a PayWell account"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_13_3sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewGFCF2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutGFCF2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutGFCF1">
+
+        <TextView
+            android:id="@+id/textViewGFCF4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_35dp"
+            android:background="@drawable/ic_outline_blue"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/_2"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_13_3sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textViewGFCF5"
+            android:layout_width="262.3dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15.3dp"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="2sp"
+            android:text="Confirm their identity with a NID or passport, and a selfie"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_13_3sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewGFCF4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buttonStartInviteGFCF1"
+        android:layout_width="@dimen/_250dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginBottom="54.7dp"
+        android:background="@drawable/round_btn_visable"
+        android:text="@string/start_inviting"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutGFCF2"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="UnknownIdInLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
