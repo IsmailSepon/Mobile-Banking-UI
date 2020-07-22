@@ -9,8 +9,8 @@ import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseActivity
 import com.cloudwell.paywell.databinding.ActivitySendMoneyHostBinding
+import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.BusinessSendFundFragment
 import com.cloudwell.paywell.ui.beneficiary.BeneficeryHostActivity
-import com.cloudwell.paywell.ui.beneficiary.fragment.BeneficiaryFragment
 import com.cloudwell.paywell.ui.sendMoney.view.SendMoneyFactory
 import com.cloudwell.paywell.ui.sendMoney.viewmodel.SendMoneyViewModel
 import com.cloudwell.paywell.utils.FragmentHelper
@@ -42,15 +42,16 @@ class SendMoneyHostActivity : BaseActivity(), KodeinAware {
         setViewModelObserver()
 
 
-//        val beneficiaryFragment = BeneficiaryFragment()
-//        val manager = supportFragmentManager
-//        val transaction = manager.beginTransaction()
-//        transaction.replace(R.id.send_money_container, beneficiaryFragment)
-//        transaction.addToBackStack(null)
-//        transaction.commit()
+//        FragmentHelper.addFirstFragment(
+//            BeneficiaryFragment(),
+//            supportFragmentManager,
+//            R.id.send_money_container
+//        )
+
+        //for Business Send fund
 
         FragmentHelper.addFirstFragment(
-            BeneficiaryFragment(),
+            BusinessSendFundFragment(),
             supportFragmentManager,
             R.id.send_money_container
         )

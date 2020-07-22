@@ -58,6 +58,7 @@
                     android:background="@drawable/common_et_bg"
                     android:ems="13"
                     android:hint="@string/name"
+                    android:windowSoftInputMode="stateVisible"
                     android:inputType="textCapWords"
                     android:textColor="@color/keypad_text_clr" />
 

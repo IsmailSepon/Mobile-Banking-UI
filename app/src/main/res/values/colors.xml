@@ -34,4 +34,6 @@
     <color name="text_clr_blue">#0066CB</color>
     <color name="text_clr_gray">#385776</color>
 
+    <color name="bulk_bg">#f6f7f8</color>
+    <color name="tab_unselected_clr">#d8e1eb</color>
 </resources>

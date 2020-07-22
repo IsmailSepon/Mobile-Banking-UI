@@ -6,8 +6,8 @@
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp">
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp">
 
     <TextView
         android:id="@+id/tv_item"
@@ -17,9 +17,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:textSize="28sp"
+        android:textSize="20sp"
+        style="@style/medium_text_style"
         tools:text="1"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/common_clr" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

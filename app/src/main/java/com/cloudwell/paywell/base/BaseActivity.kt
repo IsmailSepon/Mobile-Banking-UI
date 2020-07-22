@@ -28,10 +28,10 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, I
             LogOutTimerUtil.startLogoutTimer(this, this)
             Log.e(class_Name, "OnStart () &&& Starting timer")
             //disable screenShoot..........
-            this.window.setFlags(
-                WindowManager.LayoutParams.FLAG_SECURE,
-                WindowManager.LayoutParams.FLAG_SECURE
-            )
+//            this.window.setFlags(
+//                WindowManager.LayoutParams.FLAG_SECURE,
+//                WindowManager.LayoutParams.FLAG_SECURE
+//            )
         }
 
 

@@ -27,6 +27,7 @@
         android:textAlignment="center"
         android:textColor="@color/keypad_text_clr"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/ac_created_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"

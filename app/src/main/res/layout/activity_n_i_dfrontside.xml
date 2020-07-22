@@ -53,7 +53,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/nid_first_side"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginStart="32dp"
@@ -78,7 +78,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/nid_first_side"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -103,6 +103,7 @@
                     android:textSize="@dimen/twelve_sp" />
 
                 <TextView
+                    android:id="@+id/nid_name"
                     android:layout_marginTop="@dimen/five_dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -127,6 +128,7 @@
                     android:textSize="@dimen/twelve_sp" />
 
                 <TextView
+                    android:id="@+id/nid_father_name"
                     android:layout_marginTop="@dimen/five_dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -152,6 +154,7 @@
                     android:textSize="@dimen/twelve_sp" />
 
                 <TextView
+                    android:id="@+id/nid_mother_name"
                     android:layout_marginTop="@dimen/five_dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -177,6 +180,7 @@
                     android:textSize="@dimen/twelve_sp" />
 
                 <TextView
+                    android:id="@+id/nid_birthday_date"
                     android:layout_marginTop="@dimen/five_dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -202,6 +206,7 @@
                     android:textSize="@dimen/twelve_sp" />
 
                 <TextView
+                    android:id="@+id/nid_id_number"
                     android:layout_marginTop="@dimen/five_dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -212,6 +217,7 @@
 
 
             <Button
+                android:id="@+id/next_side"
                 android:layout_marginTop="@dimen/thirty_dp"
                 android:text="@string/my_details_are_captured_properly"
                 android:textColor="@color/white"
