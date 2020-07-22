@@ -145,6 +145,8 @@ dependencies {
     implementation "com.google.firebase:firebase-messaging:$rootProject.ext.firebaseMessaging"
 
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$rootProject.ext.leakcanaryVersion"
+    debugImplementation "com.readystatesoftware.chuck:library:$rootProject.ext.chuckVersion"
+
 
     //cardSlider
     implementation 'com.github.IslamKhSh:CardSlider:1.0.1'
