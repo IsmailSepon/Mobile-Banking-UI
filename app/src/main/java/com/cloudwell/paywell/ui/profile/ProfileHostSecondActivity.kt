@@ -7,6 +7,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseActivity
 import com.cloudwell.paywell.databinding.ActivityProfileHostBinding
 import com.cloudwell.paywell.ui.profile.fragment.ManageSubscriptionPlanFragment
+import com.cloudwell.paywell.ui.profile.fragment.PricePlanManageFragment
 import com.cloudwell.paywell.ui.profile.view.ProfileHostFactory
 import com.cloudwell.paywell.ui.profile.viewmodel.ProfileHostViewModel
 import org.kodein.di.KodeinAware
@@ -28,7 +29,14 @@ class ProfileHostSecondActivity : BaseActivity(), KodeinAware {
         viewModel = ViewModelProviders.of(this, factory).get(ProfileHostViewModel::class.java)
         binding.viewModelProfileHost = viewModel as ProfileHostViewModel
 
-        val managePricePlanFragment = ManageSubscriptionPlanFragment()
+//        val managePricePlanFragment = ManageSubscriptionPlanFragment()
+//        val manager = supportFragmentManager
+//        val transaction = manager.beginTransaction()
+//        transaction.replace(R.id.profile_host_container, managePricePlanFragment)
+//        transaction.addToBackStack(null)
+//        transaction.commit()
+
+        val managePricePlanFragment = PricePlanManageFragment()
         val manager = supportFragmentManager
         val transaction = manager.beginTransaction()
         transaction.replace(R.id.profile_host_container, managePricePlanFragment)

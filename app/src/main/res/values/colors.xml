@@ -34,10 +34,4 @@
     <color name="text_clr_blue">#0066CB</color>
     <color name="text_clr_gray">#385776</color>
 
-    <array name="seekbar_gradient">
-        <item>#f9b79f</item>
-        <item>#f6936f</item>
-        <item>#f36f3f</item>
-        <item>#f15a24</item>
-    </array>
 </resources>

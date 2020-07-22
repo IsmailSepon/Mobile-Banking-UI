@@ -17,14 +17,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.databinding.FragmentDashboardBinding
+import com.cloudwell.paywell.databinding.DashboardFragmentBinding
 import com.cloudwell.paywell.ui.authentication.UserAuthenticationHostActivity
 import com.cloudwell.paywell.ui.freeCard.FreeCardHostActivity
 import com.cloudwell.paywell.ui.help.UserHelpHostActivity
 import com.cloudwell.paywell.ui.profile.ProfileHostActivity
 import com.cloudwell.paywell.ui.profile.ProfileHostSecondActivity
 import com.cloudwell.paywell.ui.switchAccount.SwitchAccountHostActivity
-import kotlinx.android.synthetic.main.fragment_dashboard.view.*
+import kotlinx.android.synthetic.main.dashboard_fragment.view.*
 
 
 class DashboardFragment : Fragment() {
@@ -39,8 +39,8 @@ class DashboardFragment : Fragment() {
         dashboardViewModel =
             ViewModelProviders.of(this).get(DashboardViewModel::class.java)
 
-        val binding: FragmentDashboardBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_dashboard, container, false)
+        val binding: DashboardFragmentBinding =
+            DataBindingUtil.inflate(inflater, R.layout.dashboard_fragment, container, false)
         binding.dashboardViewModel = dashboardViewModel
         binding.lifecycleOwner = this
 

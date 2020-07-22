@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.databinding.FragmentManageAccProfileBinding
 import com.cloudwell.paywell.ui.profile.viewmodel.ManageProfileViewModel
+import com.cloudwell.paywell.utils.FragmentHelper
 
 class ManageProfileFragment : Fragment() {
 
@@ -127,6 +128,11 @@ class ManageProfileFragment : Fragment() {
 
         binding.textViewMA15.setOnClickListener(View.OnClickListener {
             showLogOutDialog()
+        })
+
+        binding.backBtnMAP.setOnClickListener(View.OnClickListener {
+//            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+            activity?.finish()
         })
 
     return binding.root

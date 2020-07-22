@@ -57,8 +57,8 @@
         app:pinCharacterSpacing="@dimen/_13dp"
         app:pinLineColors="@color/colorPrimaryDark" />
 
-    <com.cloudwell.paywell.consumer.base.CustomKeyboardWithForget
-        android:id="@+id/customKeyboard"
+    <com.cloudwell.paywell.base.CustomKeyboardWithForget
+        android:id="@+id/customKeyboardCPP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_32dp"
