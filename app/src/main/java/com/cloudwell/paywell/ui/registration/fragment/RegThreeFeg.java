@@ -1,11 +1,14 @@
 package com.cloudwell.paywell.ui.registration.fragment;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -48,7 +51,8 @@ public class RegThreeFeg extends Fragment {
             @Override
             public void afterTextChanged(Editable s) {
 
-                if (etMobileOrRID.getText().length() == 6){
+                if (etMobileOrRID.getText().length() == 6) {
+                    hideKeyboardFrom(getActivity(), etMobileOrRID);
                     RegistationMainActivity parent = (RegistationMainActivity) getActivity();
                     parent.setPagerFragment(3);
                 }
@@ -56,5 +60,10 @@ public class RegThreeFeg extends Fragment {
         });
 
         return view;
+    }
+
+    public static void hideKeyboardFrom(Context context, View view) {
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 }

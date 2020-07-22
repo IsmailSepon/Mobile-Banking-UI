@@ -5,21 +5,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.databinding.AddMoneyBinding
+import com.cloudwell.paywell.ui.addMoney.view.IaddMoneyVIew
+import com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel
 import com.cloudwell.paywell.utils.FragmentHelper
 import com.example.nbtk.slider.ScreenUtils
 import com.example.nbtk.slider.SliderAdapter
 import com.example.nbtk.slider.SliderLayoutManager
-import kotlinx.android.synthetic.main.add_money.view.*
 
-class AddMoneyFragment : Fragment() {
+class AddMoneyFragment : Fragment(), IaddMoneyVIew {
 
+    private lateinit var addMoneyViewmodel: AddMoneyViewModel
     private lateinit var rvHorizontalPicker: RecyclerView
     private lateinit var tvSelectedItem: TextView
 
-    // private val data = (100..2000).toList().map { it.toString() } as ArrayList<String>
     private val data: ArrayList<String> = ArrayList()
 
     override fun onCreateView(
@@ -27,7 +32,12 @@ class AddMoneyFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.add_money, container, false)
+        addMoneyViewmodel = ViewModelProviders.of(this).get(AddMoneyViewModel::class.java)
+        val binding: AddMoneyBinding =
+            DataBindingUtil.inflate(inflater, R.layout.add_money, container, false)
+        addMoneyViewmodel.setView(this)
+        binding.addmoneyView = addMoneyViewmodel
+        binding.lifecycleOwner = this
 
         data.add("300")
         data.add("500")
@@ -37,34 +47,39 @@ class AddMoneyFragment : Fragment() {
         data.add("2500")
         data.add("3000")
 
-        setTvSelectedItem(view)
-        setHorizontalPicker(view)
-
-        view.add_money_submit.setOnClickListener(View.OnClickListener {
-
-        })
-
-        view.type_change.setOnClickListener(View.OnClickListener {
-            FragmentHelper.replaceFragment(
-                AddMoneySelectionFragment(),
-                activity?.supportFragmentManager,
-                R.id.add_money_container
-            )
-        })
+        setTvSelectedItem(binding.root)
+        setHorizontalPicker(binding.root)
 
 
-        view.add_money_back_btn.setOnClickListener(View.OnClickListener {
-            activity?.finish()
-        })
+        return binding.root
+    }
 
-//        beneficeryViewModel =
-//            ViewModelProviders.of(this).get(BeneficeryViewModel::class.java)
-//        val binding : AddaccountLayoutBinding = DataBindingUtil.inflate(inflater, R.layout.addaccount_layout, container, false)
-//        binding.beneficeryViewModelxml = beneficeryViewModel
-//        binding.lifecycleOwner = this
-//        return binding.root
+    override fun addMoneySubmit() {
+        Toast.makeText(activity, "click", Toast.LENGTH_LONG).show()
+    }
 
-        return view
+    override fun type_change() {
+        FragmentHelper.replaceFragment(
+            AddMoneySelectionFragment(), activity?.supportFragmentManager,
+            R.id.add_money_container
+        )
+    }
+
+    override fun add_money_back_btn() {
+        activity?.finish()
+    }
+
+    override fun noInternetConnectionFound() {
+
+    }
+
+    override fun showProgress() {
+    }
+
+    override fun hiddenProgress() {
+    }
+
+    override fun onFailure(message: String?) {
     }
 
 

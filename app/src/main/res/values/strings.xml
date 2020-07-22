@@ -330,5 +330,25 @@
     <string name="internet_based_transactions_are_generally_high_risk_you_can_switch_them_off_for_extra_security">Internet-based transactions are generally high-risk. You can switch them off for extra security</string>
     <string name="limit_to_use_in_pos_atm_nis_15000_a_month"><![CDATA[Limit to use in POS & ATM\nis ৳15000 a month]]></string>
     <string name="limit">Limit</string>
+    <string name="m_first_ni_error" translatable="false">Sorry, can\'t process first page of your input NID</string>
+    <string name="m_second_ni_error" translatable="false">Sorry, can\'t process second page of your input NID</string>
+    <string name="m_please_input_both_nid_page" translatable="false">Please input both NID page</string>
+
+    <string name="title_nid">এন.আই.ডি-এর তথ্য</string>
+    <string name="title_smart">এন.আই.ডি-এর তথ্য</string>
+    <string name="text_nid">এন.আই.ডি</string>
+    <string name="text_smart_card">স্মার্ট কার্ড</string>
+    <string name="send_fund">Send fund</string>
+    <string name="title_activity_test_tab">TestTabActivity</string>
+    <string name="history">History</string>
+    <string name="friends_on_PayWell">Friends on PayWell</string>
+    <string name="favorites">Favorites</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="bulk_send_fund_is_the_method_for_sending_funds_to_multiple_beneficiaries_at_one_go_n_n_you_would_need_to_specify_the_amount_reference_and_mobile_number_or_email_in_an_excel_or_csv_file_once_uploaded_here_below_it_will_prompt_you_to_reconfirm_and_after_your_confirmation_all_funds_will_be_sent_to_the_designated_accounts">Bulk send fund is the method for sending funds to multiple beneficiaries at one go.\n\n You would need to specify the amount, reference and mobile number or email in an excel or csv file, once uploaded here below, it will prompt you to reconfirm and after your confirmation, all funds will be sent to the designated accounts.</string>
+    <string name="send_fund_bulk">Send fund - bulk</string>
+    <string name="you_may_upload_a_csv_or_xlsx_file_using_nthe_below_button">You may upload a .csv or .xlsx file using\nthe below button</string>
+    <string name="please_download_the_sample_file_linked_below_to_create_the_bulk_uploadable_file">Please download the sample file linked below to create the bulk uploadable file</string>
+    <string name="download_sample_file">Download sample file</string>
+    <string name="to_be_sent_for_approval">to be sent for approval?</string>
 
 </resources>

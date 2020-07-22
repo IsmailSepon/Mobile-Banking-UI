@@ -148,13 +148,21 @@ dependencies {
     debugImplementation "com.readystatesoftware.chuck:library:$rootProject.ext.chuckVersion"
 
 
-
-   // implementation 'com.oginotihiro:datepicker:1.0.0'
-
     //cardSlider
     implementation 'com.github.IslamKhSh:CardSlider:1.0.1'
     implementation "com.google.android.material:material:1.3.0-alpha01"
     implementation "androidx.viewpager2:viewpager2:1.1.0-alpha01"
 
+
+    //MLkit
+    implementation 'com.google.firebase:firebase-ml-vision:24.0.3'
+
+    //NID image croper
+    implementation "com.karumi:dexter:5.0.0"
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+    // amount selection horizental picker Adapter liberary
+    implementation 'net.idik:slimadapter:2.1.2'
 
 }

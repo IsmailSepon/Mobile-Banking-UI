@@ -136,4 +136,7 @@
     <dimen name="_116dp">116dp</dimen>
     <dimen name="_167dp">167dp</dimen>
     <dimen name="_71dp">71dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="_24sp">24sp</dimen>
 </resources>
