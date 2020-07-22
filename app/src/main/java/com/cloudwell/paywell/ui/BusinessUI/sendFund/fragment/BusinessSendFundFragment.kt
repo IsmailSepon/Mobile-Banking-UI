@@ -54,7 +54,7 @@ class BusinessSendFundFragment : Fragment() {
                 view.search_contact.setOnClickListener(View.OnClickListener {
 
                     FragmentHelper.replaceFragment(
-                        BusinessSendFundFromContactFragment(),
+                        BusinessSendFundAmountSelectionFragment(),
                         requireActivity().supportFragmentManager,
                         R.id.send_money_container
                     )

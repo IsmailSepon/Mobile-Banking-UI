@@ -42,28 +42,45 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_horizontal_picker"
-        android:layout_width="wrap_content"
+    <com.cloudwell.paywell.ui.BusinessUI.sendFund.utility.HorizontalPicker
+        android:id="@+id/business_send_fund_amount_rv"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingStart="@dimen/_30dp"
         android:layout_marginTop="50dp"
         android:clipToPadding="false"
-        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/send_money_submit"
-        app:layout_constraintEnd_toEndOf="@+id/imageView132"
-        app:layout_constraintStart_toStartOf="@+id/imageView132"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.23000002" />
+
+
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/business_send_fund_amount_rv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:clipToPadding="false"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/send_money_submit"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"-->
+<!--        app:layout_constraintVertical_bias="0.23000002" />-->
 
     <ImageView
         android:id="@+id/imageView132"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="@dimen/_45dp"
+        android:layout_marginTop="@dimen/_7dp"
         android:src="@drawable/polygon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_horizontal_picker"
+        app:layout_constraintTop_toBottomOf="@+id/business_send_fund_amount_rv"
         tools:ignore="ContentDescription" />
 
     <Button
@@ -90,11 +107,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
         android:layout_marginTop="30dp"
-        android:ems="8"
+        android:ems="6"
+        android:textColor="@color/keypad_text_clr"
+        style="@style/medium_text_style"
+        android:gravity="left"
+        android:paddingStart="@dimen/_10dp"
+        android:textSize="@dimen/_24sp"
         android:inputType="number"
         app:backgroundTint="@color/common_clr"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView132" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView132"
+        tools:ignore="RtlSymmetry" />
 
 
     <androidx.cardview.widget.CardView
@@ -126,7 +149,7 @@
                 android:layout_marginBottom="8dp"
                 android:text="Reason for payment or reference"
                 android:textColor="@color/common_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -167,7 +190,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/no_fee"
-        android:textSize="@dimen/_10sp"
+        android:textSize="@dimen/_12sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView134"
         app:layout_constraintStart_toStartOf="@+id/imageView134"
         app:layout_constraintTop_toBottomOf="@+id/imageView134" />
@@ -196,7 +219,7 @@
         android:id="@+id/textView309"
         style="@style/text_style"
         android:textColor="@color/text_link_clr"
-        android:textSize="@dimen/_10sp"
+        android:textSize="@dimen/_12sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"

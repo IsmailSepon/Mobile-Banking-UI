@@ -1,155 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout23"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout22">
-
-            <TextView
-                android:id="@+id/to"
-                style="@style/text_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="9dp"
-                android:text="To"
-                android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_10sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView153"
-                tools:ignore="MissingConstraints" />
-
-
-            <ImageView
-                android:id="@+id/imageView153"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/half_one"
-                android:background="@color/common_clr"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/textView324"
-                style="@style/medium_text_style"
-                android:layout_width="@dimen/_27dp"
-                android:layout_height="@dimen/_27dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/round_btn_orange"
-                android:gravity="center"
-                android:text="KA"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/to"
-                app:layout_constraintTop_toBottomOf="@+id/to" />
-
-            <TextView
-                android:id="@+id/textView325"
-                style="@style/text_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="Kalam Automobiles"
-                android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView324"
-                app:layout_constraintStart_toEndOf="@+id/textView324"
-                app:layout_constraintTop_toTopOf="@+id/textView324" />
-
-            <TextView
-                android:id="@+id/textView326"
-                style="@style/text_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="22dp"
-                android:text="৳5,000"
-                android:textColor="@color/text_link_clr"
-                android:textSize="@dimen/_12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView325"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView325" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout22"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout21">
-
-            <TextView
-                android:id="@+id/textView321"
-                style="@style/text_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="9dp"
-                android:layout_marginBottom="9dp"
-                android:text="From"
-                android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView150"
-                tools:ignore="MissingConstraints" />
-
-
-            <TextView
-                android:id="@+id/textView320"
-                style="@style/text_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="9dp"
-                android:text="Company limited"
-                android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView150"
-                tools:ignore="MissingConstraints" />
-
-            <ImageView
-                android:id="@+id/imageView150"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/half_one"
-                android:background="@color/common_clr"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <ImageView
-            android:id="@+id/divider3"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_10dp"
-            android:layout_marginTop="27dp"
-            android:background="@color/divider_bg"
-            app:layout_constraintTop_toBottomOf="@+id/textView318"
-            tools:ignore="ContentDescription"
-            tools:layout_editor_absoluteX="0dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout19"
@@ -205,20 +68,172 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:paddingBottom="@dimen/_40dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/textView314"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="14-Jun-2020"
+                android:textColor="@color/recyclerview_title"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout22">
+
         <TextView
-            android:id="@+id/textView314"
+            android:id="@+id/to"
+            style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="12dp"
-            android:text="14-Jun-2020"
-            style="@style/text_style"
+            android:layout_marginTop="9dp"
+            android:text="To"
+            android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_12sp"
-            android:textColor="@color/recyclerview_title"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout19" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView153"
+            tools:ignore="MissingConstraints" />
+
+
+        <ImageView
+            android:id="@+id/imageView153"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/half_one"
+            android:background="@color/common_clr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
 
         <TextView
+            android:id="@+id/textView324"
+            style="@style/medium_text_style"
+            android:layout_width="@dimen/_27dp"
+            android:layout_height="@dimen/_27dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_btn_orange"
+            android:gravity="center"
+            android:text="KA"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/to"
+            app:layout_constraintTop_toBottomOf="@+id/to" />
+
+        <TextView
+            android:id="@+id/textView325"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Kalam Automobiles"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView324"
+            app:layout_constraintStart_toEndOf="@+id/textView324"
+            app:layout_constraintTop_toTopOf="@+id/textView324" />
+
+        <TextView
+            android:id="@+id/textView326"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:text="৳5,000"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView325"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView325" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout21">
+
+        <TextView
+            android:id="@+id/textView321"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="9dp"
+            android:text="From"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView150"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/textView320"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="9dp"
+            android:text="Company limited"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView150"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView150"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/half_one"
+            android:background="@color/common_clr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10dp"
+        android:layout_marginTop="27dp"
+        android:background="@color/divider_bg"
+        app:layout_constraintTop_toBottomOf="@+id/textView318"
+        tools:ignore="ContentDescription"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <TextView
             android:id="@+id/textView315"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -318,7 +333,7 @@
                 android:layout_marginBottom="9dp"
                 android:text="Created by"
                 android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView115"
@@ -335,7 +350,7 @@
                 android:layout_marginBottom="9dp"
                 android:text="Abdur Rahim"
                 android:textColor="@color/text_link_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView151"
@@ -381,7 +396,7 @@
                 android:layout_marginTop="13dp"
                 android:text="Bank account name"
                 android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView152" />
 
@@ -393,7 +408,7 @@
                 android:layout_marginTop="12dp"
                 android:text="Bank account number"
                 android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintStart_toStartOf="@+id/textView327"
                 app:layout_constraintTop_toBottomOf="@+id/textView327" />
 
@@ -405,7 +420,7 @@
                 android:layout_marginEnd="22dp"
                 android:text="Kalam Automobiles"
                 android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView327"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView327" />
@@ -418,7 +433,7 @@
                 android:layout_marginEnd="22dp"
                 android:text="4676 2457 34678 00"
                 android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView328"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView328" />
@@ -452,7 +467,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/bank_name"
                 android:textColor="@color/common_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -464,7 +479,7 @@
                 android:layout_marginTop="10dp"
                 android:text="TextView"
                 android:textColor="@color/common_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintStart_toStartOf="@+id/textView331"
                 app:layout_constraintTop_toBottomOf="@+id/textView331" />
 
@@ -477,7 +492,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Routing number"
                 android:textColor="@color/common_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView332" />
 
@@ -489,7 +504,7 @@
                 android:layout_marginEnd="22dp"
                 android:text="Mutual Trust Bank"
                 android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView331"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView331" />
@@ -502,7 +517,7 @@
                 android:layout_marginEnd="22dp"
                 android:text="Bangla Motor"
                 android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView332"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView332" />
@@ -515,7 +530,7 @@
                 android:layout_marginEnd="22dp"
                 android:text="53401"
                 android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_10sp"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView333"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView333" />
@@ -592,8 +607,10 @@
                 app:layout_constraintStart_toStartOf="@+id/textView339"
                 app:layout_constraintTop_toBottomOf="@+id/textView339" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 
-</ScrollView>
+</LinearLayout>
