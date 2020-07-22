@@ -449,6 +449,12 @@
     <string name="house_holding_number">House/Holding Number</string>
     <string name="current_address">Current address</string>
     <string name="your_passcode_has_been_succesfully_changed">Your passcode has been succesfully changed</string>
+    <string name="company_limited_has_sent_you_2000_in_order_to_withdraw_or_use_please_go_to_the_following_link_to_download_the_paywell_app_register_yourself"><![CDATA[Company limited has sent you ৳2000. In order to withdraw or use, please go to the following link to download the PayWell App & register yourself.]]></string>
+    <string name="your_contact_hilmi_khan_is_not_registered_on_paywell_you_may_send_the_following_signup_invitation_and_help_him_or_her_to_register_receive_your_fund_enjoy_all_the_benefits_of_our_service"><![CDATA[Your contact Hilmi Khan is not registered on PayWell. You may send the following signup invitation and help him or her to register, receive your fund & enjoy all the benefits of our service.]]></string>
+    <string name="send_fund_with_signup_request">Send fund with signup request</string>
+    <string name="add_beneficiary">Add beneficiary</string>
+    <string name="create_company">Create “Company”</string>
+    <string name="wrong_information_may_cause_transfers_to_be_rejected">Wrong information may cause transfers to be rejected</string>
 
 
 </resources>

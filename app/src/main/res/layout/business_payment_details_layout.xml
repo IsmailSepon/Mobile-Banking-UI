@@ -573,7 +573,7 @@
             <TextView
                 style="@style/text_style"
                 android:textSize="@dimen/_12sp"
-                android:textColor="@color/common_clr"
+                android:textColor="@color/keypad_text_clr"
                 android:id="@+id/textView338"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -602,7 +602,7 @@
                 android:id="@+id/textView340"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="1dp"
                 android:text="30 Mar, 6:31 PM"
                 app:layout_constraintStart_toStartOf="@+id/textView339"
                 app:layout_constraintTop_toBottomOf="@+id/textView339" />
