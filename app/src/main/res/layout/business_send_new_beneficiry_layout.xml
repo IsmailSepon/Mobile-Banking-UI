@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -54,129 +55,303 @@
         tools:ignore="MissingConstraints">
 
         <RadioButton
-            android:id="@+id/radiomyselt"
+            android:id="@+id/bank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
             android:fontFamily="@font/roboto_light"
-            android:text="Bank account"
+            android:text="@string/bank_account"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_12sp"
-            android:paddingLeft="@dimen/_10dp"
-            android:theme="@style/RadioButtonStyle" />
+            android:paddingStart="@dimen/_10dp"
+            android:theme="@style/RadioButtonStyle"
+            tools:ignore="RtlSymmetry" />
 
         <RadioButton
-            android:paddingLeft="@dimen/_10dp"
-            android:layout_marginLeft="@dimen/_25dp"
-            android:id="@+id/radioanother_person"
+            android:paddingStart="@dimen/_10dp"
+            android:layout_marginStart="@dimen/_25dp"
+            android:id="@+id/mobile_finincial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_light"
-            android:text="Mobile financial (MFS) account"
+            android:text="@string/mobile_financial_mfs_account"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_12sp"
-            android:theme="@style/RadioButtonStyle" />
+            android:theme="@style/RadioButtonStyle"
+            tools:ignore="RtlSymmetry" />
 
 
     </RadioGroup>
 
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mobile_finincial_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
         android:layout_marginTop="@dimen/_40dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
+        android:paddingBottom="@dimen/_10dp"
         app:layout_constraintTop_toBottomOf="@+id/transfertype_radiogroup"
-        tools:ignore="MissingConstraints">
+        android:layout_height="wrap_content">
 
-        <RadioButton
-            android:id="@+id/bkash_rbtn"
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:fontFamily="@font/roboto_light"
-            android:paddingLeft="@dimen/_10dp"
-            android:text="bKash"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_12sp"
-            android:theme="@style/RadioButtonStyle" />
+            android:layout_marginStart="@dimen/_20dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints">
 
-        <RadioButton
-            android:id="@+id/rocket_rbtn"
+            <RadioButton
+                android:id="@+id/bkash_rbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/roboto_light"
+                android:paddingStart="@dimen/_10dp"
+                android:text="@string/bkash"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                android:theme="@style/RadioButtonStyle"
+                tools:ignore="RtlSymmetry" />
+
+            <RadioButton
+                android:id="@+id/rocket_rbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16dp"
+                android:fontFamily="@font/roboto_light"
+                android:paddingStart="@dimen/_10dp"
+                android:text="@string/rocket"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                android:theme="@style/RadioButtonStyle"
+                tools:ignore="RtlSymmetry" />
+
+            <RadioButton
+                android:id="@+id/nagad_rbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16dp"
+                android:fontFamily="@font/roboto_light"
+                android:paddingStart="@dimen/_10dp"
+                android:text="@string/nagad"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                android:theme="@style/RadioButtonStyle"
+                tools:ignore="RtlSymmetry" />
+
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView343"
+            style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_16dp"
-            android:fontFamily="@font/roboto_light"
-            android:paddingLeft="@dimen/_10dp"
-            android:text="Rocket"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_12sp"
-            android:theme="@style/RadioButtonStyle" />
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="38dp"
+            android:text="@string/mobile_number"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
-        <RadioButton
-            android:id="@+id/nagad_rbtn"
+        <EditText
+            android:layout_marginTop="@dimen/_10dp"
+            style="@style/edittext_style"
+            android:id="@+id/editText3"
+            android:textSize="@dimen/_14sp"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView343"
+            app:layout_constraintTop_toBottomOf="@+id/textView343" />
+
+        <TextView
+            android:id="@+id/textView344"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_16dp"
-            android:fontFamily="@font/roboto_light"
-            android:paddingLeft="@dimen/_10dp"
-            android:text="Nagad"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_12sp"
-            android:theme="@style/RadioButtonStyle" />
+            android:layout_marginTop="8dp"
+            style="@style/text_style"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_10sp"
+            android:text="@string/wrong_information_may_cause_transfers_to_be_rejected"
+            app:layout_constraintStart_toStartOf="@+id/editText3"
+            app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
 
-    </RadioGroup>
 
-    <TextView
-        android:id="@+id/textView343"
-        style="@style/text_style"
-        android:layout_width="wrap_content"
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bank_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="38dp"
-        android:text="Mobile number"
-        android:textColor="@color/common_clr"
-        android:textSize="@dimen/_10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-    <EditText
-        android:layout_marginTop="@dimen/_10dp"
-        android:hint="01912250477"
-        style="@style/edittext_style"
-        android:id="@+id/editText3"
-        android:textSize="@dimen/_14sp"
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="22dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="28dp"
+        android:paddingBottom="@dimen/_30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView343"
-        app:layout_constraintTop_toBottomOf="@+id/textView343" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transfertype_radiogroup">
 
-    <TextView
-        android:id="@+id/textView344"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        style="@style/text_style"
-        android:textColor="@color/text_link_clr"
-        android:textSize="@dimen/_10sp"
-        android:text="@string/wrong_information_may_cause_transfers_to_be_rejected"
-        app:layout_constraintStart_toStartOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
+        <Spinner
+            android:id="@+id/banklist_sp"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@drawable/spinner_bg"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView348" />
+
+        <ImageView
+            android:id="@+id/imageView45"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/common_clr"
+            app:layout_constraintBottom_toBottomOf="@+id/banklist_sp"
+            app:layout_constraintEnd_toEndOf="@+id/banklist_sp"
+            app:layout_constraintStart_toStartOf="@+id/textView348"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageView154"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/common_clr"
+            app:layout_constraintEnd_toEndOf="@+id/banklist_sp"
+            app:layout_constraintStart_toStartOf="@+id/textView348"
+            app:layout_constraintTop_toBottomOf="@+id/spinner"
+            tools:ignore="ContentDescription" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="@dimen/_200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/spinner_bg"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView349" />
+
+        <TextView
+            android:id="@+id/textView348"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/select_bank_name"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView349"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/select_bank_branch"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/banklist_sp" />
+
+        <TextView
+            android:id="@+id/textView350"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/routing_number"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+        <TextView
+            style="@style/text_style"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_14sp"
+            android:id="@+id/textView351"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="005010"
+            app:layout_constraintStart_toStartOf="@+id/textView350"
+            app:layout_constraintTop_toBottomOf="@+id/textView350" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName13"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25dp"
+            android:ems="30"
+            android:gravity="left"
+            android:inputType="textPersonName"
+            android:hint="@string/account_name"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@+id/textView351"
+            app:layout_constraintTop_toBottomOf="@+id/textView351"
+            tools:ignore="RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName14"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:ems="15"
+            android:gravity="left"
+            android:inputType="textPersonName"
+            android:hint="@string/account_number"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName13"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName13"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/textView352"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/wrong_information_may_cause_transfers_to_be_rejected"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName14"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-
-        android:id="@+id/transferBtn"
+        android:id="@+id/create_company"
         android:layout_width="@dimen/_250dp"
         android:layout_height="@dimen/_50dp"
         android:background="@drawable/round_btn_visable"
-        android:text="@string/create_company"
+        android:text="@string/create"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="@dimen/_15sp"
@@ -186,5 +361,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.89" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

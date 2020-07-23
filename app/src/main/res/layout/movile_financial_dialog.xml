@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/dialog_round_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView112"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="left"
+        android:text="@string/are_you_sure_you_want_to_add_this_beneficiary"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView127"
+        style="@style/text_style"
+        android:layout_width="@dimen/_240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="left"
+        android:text="Mobile financial account"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="@+id/textView112"
+        app:layout_constraintTop_toBottomOf="@+id/textView300" />
+
+    <TextView
+        android:id="@+id/textView151"
+        style="@style/text_style"
+        android:layout_width="@dimen/_220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+        android:text="Nagad"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView127"
+        app:layout_constraintTop_toBottomOf="@+id/textView345" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/transparent"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="right"
+        android:text="@string/confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView347" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@color/transparent"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="right"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <TextView
+        style="@style/text_style"
+        android:textSize="@dimen/_12sp"
+        android:textColor="@color/common_clr"
+        android:id="@+id/textView300"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/account_type"
+        app:layout_constraintStart_toStartOf="@+id/textView112"
+        app:layout_constraintTop_toBottomOf="@+id/textView112" />
+
+    <TextView
+        style="@style/text_style"
+        android:textSize="@dimen/_12sp"
+        android:textColor="@color/common_clr"
+        android:id="@+id/textView345"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Service"
+        app:layout_constraintStart_toStartOf="@+id/textView127"
+        app:layout_constraintTop_toBottomOf="@+id/textView127" />
+
+    <TextView
+        style="@style/text_style"
+        android:textSize="@dimen/_12sp"
+        android:textColor="@color/common_clr"
+        android:id="@+id/textView346"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Mobile number"
+        app:layout_constraintStart_toStartOf="@+id/textView151"
+        app:layout_constraintTop_toBottomOf="@+id/textView151" />
+
+    <TextView
+        style="@style/text_style"
+        android:textSize="@dimen/_14sp"
+        android:textColor="@color/keypad_text_clr"
+        android:id="@+id/textView347"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="01746773152"
+        app:layout_constraintStart_toStartOf="@+id/textView346"
+        app:layout_constraintTop_toBottomOf="@+id/textView346" />
+</androidx.constraintlayout.widget.ConstraintLayout>

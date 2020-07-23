@@ -455,6 +455,17 @@
     <string name="add_beneficiary">Add beneficiary</string>
     <string name="create_company">Create “Company”</string>
     <string name="wrong_information_may_cause_transfers_to_be_rejected">Wrong information may cause transfers to be rejected</string>
+    <string name="are_you_sure_you_want_to_add_this_beneficiary">Are you sure you want to add this\nbeneficiary?</string>
+    <string name="account_type">Account type</string>
+    <string name="bank_account">Bank account</string>
+    <string name="mobile_financial_mfs_account">Mobile financial (MFS) account</string>
+    <string name="bkash">bKash</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="create">create</string>
+    <string name="account_name">Account name</string>
+    <string name="routing_number">Routing number</string>
+    <string name="select_bank_branch">Select bank branch</string>
+    <string name="select_bank_name">Select bank name</string>
 
 
 </resources>
