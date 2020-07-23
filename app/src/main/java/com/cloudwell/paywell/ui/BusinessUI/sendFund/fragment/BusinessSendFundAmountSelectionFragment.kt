@@ -37,19 +37,19 @@ class BusinessSendFundAmountSelectionFragment : Fragment() {
             inflater.inflate(R.layout.business_send_fund_fromcontact_layout, container, false)
 
 
-        data.add("300")
-        data.add("500")
-        data.add("1,000")
-        data.add("1,500")
-        data.add("2,000")
-        data.add("2,500")
-        data.add("3,000")
-        data.add("3,500")
-        data.add("4,000")
-        data.add("4,500")
-        data.add("5,000")
-        data.add("10,000")
-        data.add("20,000")
+        data.add("\u09F3"+"300")
+        data.add("\u09F3"+"500")
+        data.add("\u09F3"+"1,000")
+        data.add("\u09F3"+"1,500")
+        data.add("\u09F3"+"2,000")
+        data.add("\u09F3"+"2,500")
+        data.add("\u09F3"+"3,000")
+        data.add("\u09F3"+"3,500")
+        data.add("\u09F3"+"4,000")
+        data.add("\u09F3"+"4,500")
+        data.add("\u09F3"+"5,000")
+        data.add("\u09F3"+"10,000")
+        data.add("\u09F3"+"20,000")
         setTvSelectedItem(view)
 
 
@@ -70,7 +70,7 @@ class BusinessSendFundAmountSelectionFragment : Fragment() {
 
         view.business_send_money_submit.setOnClickListener(View.OnClickListener {
             FragmentHelper.replaceFragment(
-                BusinessSendFundConfirmationFragment(),
+                BusinessSendFundSuccessfullFragment(),
                 requireActivity().supportFragmentManager,
                 R.id.send_money_container
             )

@@ -6,6 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
+import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.BusinessSendFundConfirmationFragment
+import com.cloudwell.paywell.utils.FragmentHelper
+import kotlinx.android.synthetic.main.bank_financial_dialog.view.*
 
 class BankFinancialDialog : BaseDialog() {
 
@@ -16,11 +19,16 @@ class BankFinancialDialog : BaseDialog() {
     ): View? {
         val view = layoutInflater.inflate(R.layout.bank_financial_dialog, null)
 
-//        view.title_txt.text = title
-//        view.message.text = message
-//        view.submit_button.setOnClickListener(View.OnClickListener {
-//            dialog.dismiss()
-//        })
+
+        view.confirm.setOnClickListener(View.OnClickListener {
+            FragmentHelper.replaceFragment(
+                BusinessSendFundConfirmationFragment(),
+                requireActivity().supportFragmentManager,
+                R.id.send_money_container
+            )
+        })
+
+
 
         return view
     }
