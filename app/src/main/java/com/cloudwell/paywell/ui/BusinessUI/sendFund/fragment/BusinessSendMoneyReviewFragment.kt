@@ -10,7 +10,7 @@ import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.dialog.SchedulePaym
 import kotlinx.android.synthetic.main.business_payment_details_layout.view.*
 import kotlinx.android.synthetic.main.business_schedule_payment_details_layout.view.*
 
-class BusinessSchedulePaymentDetailsFragment : Fragment() {
+class BusinessSendMoneyReviewFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -18,13 +18,7 @@ class BusinessSchedulePaymentDetailsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.business_schedule_payment_details_layout, container, false)
-
-        view.schedule_txt.setOnClickListener(View.OnClickListener {
-            val dialog: SchedulePaymentDialog = SchedulePaymentDialog()
-            activity?.supportFragmentManager?.let { it1 -> dialog.show(it1, "MobileFinancial") }
-
-        })
+        val view = inflater.inflate(R.layout.business_sendfund_review_layout, container, false)
 
 
         return view

@@ -267,7 +267,7 @@
             app:srcCompat="@drawable/business_schedule" />
 
         <TextView
-            android:id="@+id/textView317"
+            android:id="@+id/schedule_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -289,7 +289,7 @@
             android:textSize="@dimen/_14sp"
             android:textColor="@color/common_clr"
             app:layout_constraintStart_toStartOf="@+id/imageView148"
-            app:layout_constraintTop_toBottomOf="@+id/textView317" />
+            app:layout_constraintTop_toBottomOf="@+id/schedule_text" />
 
         <ImageView
             android:id="@+id/imageView149"

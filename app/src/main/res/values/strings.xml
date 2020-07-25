@@ -466,6 +466,9 @@
     <string name="routing_number">Routing number</string>
     <string name="select_bank_branch">Select bank branch</string>
     <string name="select_bank_name">Select bank name</string>
+    <string name="reject">Reject</string>
+    <string name="approve">Approve</string>
+    <string name="return_txt">Return</string>
 
 
 </resources>

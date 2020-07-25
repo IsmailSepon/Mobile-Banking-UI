@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/dialog_round_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/confirm_mobile_finc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="25dp"
+        android:background="@color/transparent"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="right"
+        android:text="Schedule payment"
+        android:textAllCaps="false"
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView373" />
+
+    <Button
+        android:id="@+id/cancel_mobile_finc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:background="@color/transparent"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="right"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_mobile_finc" />
+
+    <ImageView
+        android:id="@+id/imageView156"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="31dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/business_schedule" />
+
+    <TextView
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView364"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:text="Fri, 26 June"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView156"
+        app:layout_constraintStart_toEndOf="@+id/imageView156"
+        app:layout_constraintTop_toTopOf="@+id/imageView156" />
+
+
+    <ImageView
+        android:id="@+id/imageView157"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:background="@color/common_clr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView156"
+        app:layout_constraintTop_toBottomOf="@+id/textView364" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView365"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="To"
+        app:layout_constraintStart_toStartOf="@+id/imageView157"
+        app:layout_constraintTop_toBottomOf="@+id/imageView157" />
+
+
+    <TextView
+        android:id="@+id/textView367"
+        style="@style/text_style"
+        android:layout_width="@dimen/_27dp"
+        android:layout_height="@dimen/_27dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_btn_orange"
+        android:gravity="center"
+        android:text="K"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/textView365"
+        app:layout_constraintTop_toBottomOf="@+id/textView365" />
+
+    <TextView
+        android:id="@+id/textView366"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="147dp"
+        android:text="Kalam Automobiles"
+        android:textColor="@color/keypad_text_clr"
+        app:layout_constraintBottom_toBottomOf="@+id/textView367"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toEndOf="@+id/textView367"
+        app:layout_constraintTop_toTopOf="@+id/textView367" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        android:id="@+id/textView368"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Amount"
+        app:layout_constraintStart_toStartOf="@+id/textView367"
+        app:layout_constraintTop_toBottomOf="@+id/textView367" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        android:id="@+id/textView369"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:text="৳5000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView368"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView368" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        android:id="@+id/textView370"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Transfer fee"
+        app:layout_constraintStart_toStartOf="@+id/textView368"
+        app:layout_constraintTop_toBottomOf="@+id/textView368" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        android:id="@+id/textView371"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="26dp"
+        android:text="No fee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView369" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        android:id="@+id/textView372"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Total"
+        app:layout_constraintStart_toStartOf="@+id/textView370"
+        app:layout_constraintTop_toBottomOf="@+id/textView370" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        android:id="@+id/textView373"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="26dp"
+        android:text="৳5000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView371" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -76,6 +76,14 @@ class BusinessSendFundAmountSelectionFragment : Fragment() {
             )
         })
 
+        view.schedule_later_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.replaceFragment(
+                BusinessSendMoneyReviewFragment(),
+                requireActivity().supportFragmentManager,
+                R.id.send_money_container
+            )
+        })
+
 //        beneficeryViewModel =
 //            ViewModelProviders.of(this).get(BeneficeryViewModel::class.java)
 //        val binding : AddaccountLayoutBinding = DataBindingUtil.inflate(inflater, R.layout.addaccount_layout, container, false)

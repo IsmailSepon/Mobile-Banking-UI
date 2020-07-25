@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content">-->
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/twenty_two_dp"
+            android:layout_height="@dimen/twelve_dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="26dp"
+            android:foregroundGravity="center_vertical"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/textView313"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_fund"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/sisteen_sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintStart_toEndOf="@+id/back_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.512" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:paddingBottom="@dimen/_40dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/textView314"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="Awaiting review"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView315"
+                style="@style/medium_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="68dp"
+                android:text="৳5000"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_24sp"
+                app:layout_constraintStart_toStartOf="@+id/textView314"
+                app:layout_constraintTop_toBottomOf="@+id/textView314" />
+
+            <TextView
+                android:id="@+id/textView318"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:text="paying to"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toStartOf="@+id/textView315"
+                app:layout_constraintTop_toBottomOf="@+id/textView315" />
+
+
+            <TextView
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:textColor="@color/common_clr"
+                android:id="@+id/textView374"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:text="14-Jun-2020"
+                app:layout_constraintStart_toEndOf="@+id/textView314"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/textView375"
+                style="@style/medium_text_style"
+                android:layout_width="@dimen/_33dp"
+                android:layout_height="@dimen/_33dp"
+                android:layout_marginTop="19dp"
+                android:src="@drawable/person"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toStartOf="@+id/textView318"
+                app:layout_constraintTop_toBottomOf="@+id/textView318" />
+
+            <TextView
+                android:id="@+id/textView376"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Kalam Automobiles"
+                style="@style/text_style"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView375"
+                app:layout_constraintStart_toEndOf="@+id/textView375"
+                app:layout_constraintTop_toTopOf="@+id/textView375" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="24dp"
+                app:cardBackgroundColor="@color/bulk_bg"
+                app:cardCornerRadius="@dimen/_5dp"
+                app:cardElevation="@dimen/_0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView376">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/s_p_a"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Reason for payment or reference"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="90dp"
+                android:layout_height="@dimen/_34dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/round_btn_visable"
+                android:text="@string/approve"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toStartOf="@+id/button23"
+                app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+
+
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="90dp"
+                android:layout_height="@dimen/_34dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/round_btn_orange"
+                android:text="@string/reject"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+
+            <Button
+                android:id="@+id/button24"
+                android:layout_width="90dp"
+                android:layout_height="@dimen/_34dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/round_btn_orange"
+                android:text="@string/return_txt"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toEndOf="@+id/button23"
+                app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+
+
+            <ImageView
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10dp"
+                android:layout_marginTop="27dp"
+                android:background="@color/divider_bg"
+                app:layout_constraintTop_toBottomOf="@+id/button23"
+                tools:ignore="ContentDescription" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider3">
+
+
+                <TextView
+                    android:id="@+id/textView337"
+                    style="@style/medium_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="History"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView338"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="22dp"
+                    android:text="Payment of ৳5000 created by Abdur Rahim"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView337" />
+
+                <TextView
+                    android:id="@+id/textView339"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="What is it for?"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView338"
+                    app:layout_constraintTop_toBottomOf="@+id/textView338" />
+
+                <TextView
+                    android:id="@+id/textView340"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="30 Mar, 6:31 PM"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView339"
+                    app:layout_constraintTop_toBottomOf="@+id/textView339" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
