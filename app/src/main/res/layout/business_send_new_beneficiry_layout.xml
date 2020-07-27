@@ -302,16 +302,17 @@
         <EditText
             android:id="@+id/editTextTextPersonName13"
             style="@style/text_style"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/_0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_25dp"
             android:ems="30"
             android:gravity="left"
-            android:inputType="textPersonName"
             android:hint="@string/account_name"
+            android:inputType="textPersonName"
             android:textColor="@color/common_clr"
             android:textSize="@dimen/_12sp"
-            app:layout_constraintStart_toStartOf="@+id/textView351"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
             app:layout_constraintTop_toBottomOf="@+id/textView351"
             tools:ignore="RtlHardcoded" />
 
@@ -336,7 +337,6 @@
             style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:text="@string/wrong_information_may_cause_transfers_to_be_rejected"
             android:textColor="@color/text_link_clr"
             android:textSize="@dimen/_12sp"

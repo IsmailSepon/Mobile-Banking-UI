@@ -469,6 +469,10 @@
     <string name="reject">Reject</string>
     <string name="approve">Approve</string>
     <string name="return_txt">Return</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="sent">Sent</string>
+    <string name="beneficiaries">Beneficiaries</string>
+    <string name="failed">Failed</string>
 
 
 </resources>

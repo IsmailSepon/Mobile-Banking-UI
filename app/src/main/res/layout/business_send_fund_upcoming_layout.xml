@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/sendfund_upcoming_rv"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout26">
+
+
+        <TextView
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Approval pending"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView301"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView301"
+            style="@style/medium_text_style"
+            android:layout_width="@dimen/_27dp"
+            android:layout_height="@dimen/_27dp"
+            android:background="@drawable/round_yellow"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/imageView75"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="৳12,500"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView295"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="To Salam Enterprise"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView301"
+            app:layout_constraintTop_toTopOf="@+id/textView301" />
+
+        <TextView
+            android:id="@+id/textView302"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:text="Wed, 15 Jul 2020"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="9sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView158"
+            app:layout_constraintTop_toBottomOf="@+id/textView295"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/upcoming_status"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="AK. Bulbul"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView159"
+            app:layout_constraintStart_toEndOf="@+id/imageView159"
+            app:layout_constraintTop_toTopOf="@+id/imageView159"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/textView377"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Mohammad Kudratullah, Ziko Mondal"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView159"
+            app:layout_constraintStart_toEndOf="@+id/imageView160"
+            app:layout_constraintTop_toTopOf="@+id/imageView159"
+            tools:ignore="SmallSp" />
+
+        <ImageView
+            android:id="@+id/imageView158"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/textView302"
+            app:layout_constraintStart_toStartOf="@+id/textView295"
+            app:layout_constraintTop_toTopOf="@+id/textView302"
+            app:srcCompat="@drawable/item_small_cal_ic" />
+
+        <ImageView
+            android:id="@+id/imageView159"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView158"
+            app:layout_constraintTop_toBottomOf="@+id/imageView158"
+            app:srcCompat="@drawable/item_add_sall_ic" />
+
+        <ImageView
+            android:id="@+id/imageView160"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/upcoming_status"
+            app:layout_constraintStart_toEndOf="@+id/upcoming_status"
+            app:layout_constraintTop_toTopOf="@+id/upcoming_status"
+            app:srcCompat="@drawable/item_select_small_ic" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/half_one"
+            android:layout_marginTop="10dp"
+            android:background="@color/common_clr"
+            app:layout_constraintTop_toBottomOf="@+id/textView377"
+            tools:layout_editor_absoluteX="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout26"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/failed"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView3011"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3011"
+            style="@style/medium_text_style"
+            android:layout_width="@dimen/_27dp"
+            android:layout_height="@dimen/_27dp"
+            android:background="@drawable/round_purple"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/imageView751"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="৳12,500"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2951"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="To Salam Enterprise"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView3011"
+            app:layout_constraintTop_toTopOf="@+id/textView3011" />
+
+        <TextView
+            android:id="@+id/textView3021"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:text="Wed, 15 Jul 2020"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="9sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView1581"
+            app:layout_constraintTop_toBottomOf="@+id/textView2951"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/upcoming_status1"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="AK. Bulbul"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView1591"
+            app:layout_constraintStart_toEndOf="@+id/imageView1591"
+            app:layout_constraintTop_toTopOf="@+id/imageView1591"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/textView3771"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Mohammad Kudratullah, Ziko Mondal"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView1591"
+            app:layout_constraintStart_toEndOf="@+id/imageView1601"
+            app:layout_constraintTop_toTopOf="@+id/imageView1591"
+            tools:ignore="SmallSp" />
+
+        <ImageView
+            android:id="@+id/imageView1581"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3021"
+            app:layout_constraintStart_toStartOf="@+id/textView2951"
+            app:layout_constraintTop_toTopOf="@+id/textView3021"
+            app:srcCompat="@drawable/item_small_cal_ic" />
+
+        <ImageView
+            android:id="@+id/imageView1591"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView1581"
+            app:layout_constraintTop_toBottomOf="@+id/imageView1581"
+            app:srcCompat="@drawable/item_add_sall_ic" />
+
+        <ImageView
+            android:id="@+id/imageView1601"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/upcoming_status1"
+            app:layout_constraintStart_toEndOf="@+id/upcoming_status1"
+            app:layout_constraintTop_toTopOf="@+id/upcoming_status1"
+            app:srcCompat="@drawable/item_select_small_ic" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/half_one"
+            android:layout_marginTop="10dp"
+            android:background="@color/common_clr"
+            app:layout_constraintTop_toBottomOf="@+id/textView3771"
+            tools:layout_editor_absoluteX="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

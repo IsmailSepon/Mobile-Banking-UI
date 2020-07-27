@@ -54,7 +54,7 @@ class BusinessSendFundnewBeneficiryFragment : Fragment() {
                         selection = 1
                         view.mobile_finincial_layout.visibility = View.GONE
                         view.bank_layout.visibility = View.VISIBLE
-                        loadBankData()
+                        loadBankData(view)
                     }
                     R.id.mobile_finincial -> {
                         selection = 2
@@ -64,19 +64,20 @@ class BusinessSendFundnewBeneficiryFragment : Fragment() {
                 }
             }
         })
+       // loadBankData(view)
 
         return view
     }
 
-    private fun loadBankData() {
+    private fun loadBankData(view: View) {
         var country = arrayOf("Mutual Trust Bank", "City Bank", "Brack Bank")
 
-        requireView().banklist_sp.onItemSelectedListener
+        view.banklist_sp.onItemSelectedListener
         val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), android.R.layout.simple_spinner_item, country)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         requireView().banklist_sp.adapter = aa
 
-        requireView().banklist_sp?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        view.banklist_sp?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
 
             }

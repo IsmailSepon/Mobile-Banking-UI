@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingStart="@dimen/_30dp"
+    android:paddingEnd="@dimen/_30dp"
+    android:paddingTop="@dimen/_20dp"
+    tools:context="com.cloudwell.paywell.ui.BusinessUI.test.TestActivity">
+
+    <ImageView
+        android:src="@drawable/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_marginTop="@dimen/_5dp"
+        android:id="@+id/transcationView_tabs"
+        android:elevation="@dimen/_0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabTextColor="@color/common_clr"
+        app:tabTextAppearance="@style/CustomTextAppearanceTab"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="start"
+        app:tabMode="scrollable"
+        android:layout_marginStart="-10dp"
+        android:textAlignment="viewStart"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorColor="@color/text_link_clr"
+        app:tabBackground="@drawable/tab_layout_selector"
+        app:tabRippleColor="@color/text_link_clr"
+        app:tabSelectedTextColor="@color/text_link_clr"
+        android:background="@color/white"
+        tools:ignore="RtlCompat" />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_marginTop="@dimen/_10dp"
+        android:id="@+id/transcation_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>
