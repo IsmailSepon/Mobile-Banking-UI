@@ -21,6 +21,7 @@ class BankFinancialDialog : BaseDialog() {
 
 
         view.confirm.setOnClickListener(View.OnClickListener {
+            dismiss()
             FragmentHelper.replaceFragment(
                 BusinessSendFundConfirmationFragment(),
                 requireActivity().supportFragmentManager,

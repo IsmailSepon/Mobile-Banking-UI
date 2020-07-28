@@ -473,6 +473,16 @@
     <string name="sent">Sent</string>
     <string name="beneficiaries">Beneficiaries</string>
     <string name="failed">Failed</string>
+    <string name="company">Company</string>
+    <string name="beneficiary_details">Beneficiary details</string>
+    <string name="accounts">Accounts</string>
+    <string name="settings">Settings</string>
+    <string name="copy_details">Copy details</string>
+    <string name="branch">Branch</string>
+    <string name="beneficiary_settings">Beneficiary settings</string>
+    <string name="beneficiary_name">Beneficiary name</string>
+    <string name="delete_beneficiary">Delete beneficiary</string>
+    <string name="are_you_sure_you_want_to_ndelete_this_beneficiary">Are you sure you want to \ndelete this beneficiary?</string>
 
 
 </resources>

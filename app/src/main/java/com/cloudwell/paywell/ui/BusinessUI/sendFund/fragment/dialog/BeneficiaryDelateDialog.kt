@@ -12,23 +12,16 @@ import kotlinx.android.synthetic.main.bank_financial_dialog.view.*
 import kotlinx.android.synthetic.main.bank_financial_dialog.view.confirm
 import kotlinx.android.synthetic.main.movile_financial_dialog.view.*
 
-class MobileFinancialDialog : BaseDialog() {
+class BeneficiaryDelateDialog : BaseDialog() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = layoutInflater.inflate(R.layout.movile_financial_dialog, null)
+        val view = layoutInflater.inflate(R.layout.beneficiary_delate_dialog, null)
 
-        view.confirm_mobile_finc.setOnClickListener(View.OnClickListener {
-            dismiss()
-            FragmentHelper.replaceFragment(
-                BusinessSendFundConfirmationFragment(),
-                requireActivity().supportFragmentManager,
-                R.id.send_money_container
-            )
-        })
+
         return view
     }
 

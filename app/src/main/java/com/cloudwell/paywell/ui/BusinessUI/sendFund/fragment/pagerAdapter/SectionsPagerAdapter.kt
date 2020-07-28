@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.others.BusinessSendFundFavoritesFragment
+import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.others.BusinessSendFundFindOnPaywellFragment
 import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.others.BusinessSendFundHistoryFragment
 
 private val TAB_TITLES = arrayOf(
@@ -26,8 +28,8 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
         // return PlaceholderFragment.newInstance(position + 1)
         return when (position) {
             0 -> BusinessSendFundHistoryFragment.newInstance(0)
-            1 -> PlaceholderFragment.newInstance(1)
-            2 -> PlaceholderFragment.newInstance(2)
+            1 -> BusinessSendFundFindOnPaywellFragment.newInstance(1)
+            2 -> BusinessSendFundFavoritesFragment.newInstance(2)
             else -> BusinessSendFundHistoryFragment.newInstance(0)
         }
 
