@@ -6,6 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.BusinessPaymentDetailsFragment
+import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.beneficiary.BusinessBeneficiaryProfileDetailsFragment
+import com.cloudwell.paywell.utils.FragmentHelper
+import kotlinx.android.synthetic.main.business_send_fund_history_layout.view.*
 
 class BusinessSendFundHistoryFragment : Fragment() {
 
@@ -18,6 +22,13 @@ class BusinessSendFundHistoryFragment : Fragment() {
         val view = inflater.inflate(R.layout.business_send_fund_history_layout, container, false)
 
 
+        view.beneficiary_profile.setOnClickListener(View.OnClickListener {
+            FragmentHelper.replaceFragment(
+                BusinessBeneficiaryProfileDetailsFragment(),
+                requireActivity().supportFragmentManager,
+                R.id.send_money_container
+            )
+        })
 
         return view
     }

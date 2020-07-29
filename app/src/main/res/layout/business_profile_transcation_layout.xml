@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout29"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView172"
+            android:layout_width="@dimen/_34dp"
+            android:layout_height="@dimen/_34dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rejected_ic" />
+
+        <TextView
+            android:id="@+id/textView411"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="To Jamil Hasan"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView172"
+            app:layout_constraintTop_toTopOf="@+id/imageView172" />
+
+        <TextView
+            android:id="@+id/textView421"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="6:31 PM, Tue, 14 April, rejected"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView172"
+            app:layout_constraintStart_toEndOf="@+id/imageView172"
+            app:layout_constraintTop_toBottomOf="@+id/textView411" />
+
+        <TextView
+            android:id="@+id/amount_txt"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="৳200"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView411" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout29">
+
+
+        <ImageView
+            android:id="@+id/imageView172"
+            android:layout_width="@dimen/_34dp"
+            android:layout_height="@dimen/_34dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/recived_ic"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textView411"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="To Jamil Hasan"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView172"
+            app:layout_constraintTop_toTopOf="@+id/imageView172"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textView421"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="2:40 PM, Sat, 11 April, received"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView172"
+            app:layout_constraintStart_toEndOf="@+id/imageView172"
+            app:layout_constraintTop_toBottomOf="@+id/textView411"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/amount_txt"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="৳500"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView411"
+            tools:ignore="DuplicateIds" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
