@@ -490,6 +490,8 @@
     <string name="bank_account_number">Bank account number</string>
     <string name="bank_branch">Bank branch</string>
     <string name="statistics">Statistics</string>
+    <string name="edit_beneficiary">Edit beneficiary</string>
+    <string name="paywell_account2">PayWell account</string>
 
 
 </resources>

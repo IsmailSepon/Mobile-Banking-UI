@@ -4,10 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 
 class BusinessProfileEditFragment : Fragment() {
+
+
+    private var addNoFlag = 0
+    private var paywellAClayouy :LinearLayout?= null
+    private var inf: LayoutInflater? = null
 
 
     override fun onCreateView(
@@ -18,8 +24,21 @@ class BusinessProfileEditFragment : Fragment() {
         val view = inflater.inflate(R.layout.business_profile_edit_layout, container, false)
 
 
+        paywellAClayouy = view.findViewById(R.id.paywell_ac_layout)
+        inf = layoutInflater
+
+        addpaywell_Ac()
 
         return view
+    }
+    
+    private fun addpaywell_Ac() {
+        ++addNoFlag
+        var paywellACview: View = inf!!.inflate(R.layout.paywell_account_item, null)
+
+
+        paywellAClayouy?.addView(paywellACview)
+
     }
 
     companion object {
