@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:background="@color/white"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:paddingBottom="@dimen/_10dp"
-    android:layout_height="wrap_content">
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
 
 
     <TextView
-        android:textColor="@color/common_clr"
-        android:textSize="@dimen/_10sp"
-        style="@style/text_style"
         android:id="@+id/textView425"
+        style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginTop="14dp"
-        android:text="@string/paywell_id"
+        android:text="Select eWallet provider name"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,22 +31,62 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView425"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView425"
-        app:srcCompat="@drawable/remove_view"
+        app:srcCompat="@drawable/remove_view" />
+
+
+    <Spinner
+        android:id="@+id/banklist_sp"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/spinner_bg"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toStartOf="@+id/imageView175"
+        app:layout_constraintStart_toStartOf="@+id/textView425"
+        app:layout_constraintTop_toBottomOf="@+id/textView425" />
+
+    <ImageView
+        android:id="@+id/imageView45"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_2dp"
+        android:background="@color/common_clr"
+        app:layout_constraintBottom_toBottomOf="@+id/banklist_sp"
+        app:layout_constraintEnd_toEndOf="@+id/banklist_sp"
+        app:layout_constraintStart_toStartOf="@+id/banklist_sp"
         tools:ignore="ContentDescription" />
 
+
+    <TextView
+        android:id="@+id/textView45"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/mobile_number"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView45" />
+
+
     <EditText
-        android:textColor="@color/keypad_text_clr"
-        android:textSize="@dimen/_14sp"
-        android:hint="01612250477"
         android:id="@+id/editTextPhone"
         style="@style/edittext_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="5dp"
         android:ems="8"
+        android:hint="01612250477"
         android:inputType="phone"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_14sp"
         app:layout_constraintStart_toStartOf="@+id/textView425"
-        app:layout_constraintTop_toBottomOf="@+id/textView425" />
+        app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
     <TextView
         android:textColor="@color/common_clr"
@@ -73,7 +114,7 @@
 
     <TextView
         android:textColor="@color/common_clr"
-        android:textSize="@dimen/_14sp"
+        android:textSize="@dimen/_12sp"
         style="@style/text_style"
         android:id="@+id/textView429"
         android:layout_width="wrap_content"
@@ -93,7 +134,7 @@
         android:layout_marginTop="6dp"
         android:ems="8"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Name"
         app:layout_constraintStart_toStartOf="@+id/textView429"
         app:layout_constraintTop_toBottomOf="@+id/textView429" />
 

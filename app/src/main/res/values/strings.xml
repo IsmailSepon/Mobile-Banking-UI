@@ -492,6 +492,13 @@
     <string name="statistics">Statistics</string>
     <string name="edit_beneficiary">Edit beneficiary</string>
     <string name="paywell_account2">PayWell account</string>
+    <string name="paywell_id">PayWell ID</string>
+    <string name="registered_name">Registered name</string>
+    <string name="nick_name">Nick name</string>
+    <string name="ewallet_account">eWallet account</string>
+    <string name="save">Save</string>
+    <string name="confirmation_code_from_sms">Confirmation code from SMS</string>
+    <string name="we_ve_sent_a_6_digit_verification_code_to_8801715457815">We’ve sent a 6-digit verification code to +8801715457815</string>
 
 
 </resources>
