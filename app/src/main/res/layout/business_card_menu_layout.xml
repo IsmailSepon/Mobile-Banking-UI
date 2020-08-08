@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_17sp"
+        style="@style/medium_text_style"
+        android:text="@string/sir_how_may_i_help_you"
+        android:layout_marginTop="@dimen/_28dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingBottom="@dimen/_54dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_28dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_14sp"
+                    style="@style/text_style"
+                    android:id="@+id/textView442"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:text="@string/payment_services"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <HorizontalScrollView
+                    android:layout_marginStart="@dimen/_21dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingTop="@dimen/_24dp"
+                        android:paddingBottom="@dimen/_5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/create_new_card_btn"
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/create_npayment"
+                            android:drawableTop="@drawable/create_payment_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/schedule_npayments"
+                            android:drawableTop="@drawable/schedule_payment_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/manage_npayments"
+                            android:drawableTop="@drawable/manage_payment_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+                <ImageView
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:background="@color/slim_divider_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/half_one"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_18dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_14sp"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:text="Expense services"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <HorizontalScrollView
+                    android:layout_marginStart="@dimen/_21dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingTop="@dimen/_24dp"
+                        android:paddingBottom="@dimen/_5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/claim_nexpense"
+                            android:drawableTop="@drawable/claim_expense_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="Manag\nexpenses"
+                            android:drawableTop="@drawable/manage_expence_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+                <ImageView
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:background="@color/slim_divider_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/half_one"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_18dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_14sp"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:text="Merchant services"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <HorizontalScrollView
+                    android:layout_marginStart="@dimen/_21dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingTop="@dimen/_24dp"
+                        android:paddingBottom="@dimen/_5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/create_npayment_link"
+                            android:drawableTop="@drawable/crt_payment_link_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/create_bulk_npayment_links"
+                            android:drawableTop="@drawable/bulk_plink_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/manage_nlinks"
+                            android:drawableTop="@drawable/manage_link_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/reminder_nsettings"
+                            android:drawableTop="@drawable/reminder_settings"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+                <ImageView
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:background="@color/slim_divider_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/half_one"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_18dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_14sp"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:text="Invoicing services"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <HorizontalScrollView
+                    android:layout_marginStart="@dimen/_21dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingTop="@dimen/_24dp"
+                        android:paddingBottom="@dimen/_5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/create_ninvoice"
+                            android:drawableTop="@drawable/create_invoice_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/manage_ninvoices"
+                            android:drawableTop="@drawable/create_user_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/manage_ncustomers"
+                            android:drawableTop="@drawable/mng_custmrs_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/manage_nproducts"
+                            android:drawableTop="@drawable/mng_products_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/settings"
+                            android:drawableTop="@drawable/mng_products_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+                <ImageView
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:background="@color/slim_divider_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/half_one"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_18dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_14sp"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:text="User management"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <HorizontalScrollView
+                    android:layout_marginStart="@dimen/_21dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingTop="@dimen/_24dp"
+                        android:paddingBottom="@dimen/_5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/issue_ncorporate_ncard_s"
+                            android:drawableTop="@drawable/manage_crd_usr_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/create_nuser_s"
+                            android:drawableTop="@drawable/create_user_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:textColor="@color/keypad_text_clr"
+                            android:textSize="@dimen/_12sp"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="@dimen/_40dp"
+                            android:text="@string/manage_ncards_users"
+                            android:drawableTop="@drawable/manage_c_u_ic"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+                <ImageView
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:background="@color/slim_divider_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/half_one"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

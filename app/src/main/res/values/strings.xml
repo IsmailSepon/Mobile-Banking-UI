@@ -499,6 +499,30 @@
     <string name="save">Save</string>
     <string name="confirmation_code_from_sms">Confirmation code from SMS</string>
     <string name="we_ve_sent_a_6_digit_verification_code_to_8801715457815">We’ve sent a 6-digit verification code to +8801715457815</string>
+    <string name="sir_how_may_i_help_you">Sir, how may I help you?</string>
+    <string name="payment_services">Payment services</string>
+    <string name="create_npayment">Create\npayment</string>
+    <string name="schedule_npayments">Schedule\npayments</string>
+    <string name="manage_npayments">Manage\npayments</string>
+    <string name="claim_nexpense">Claim\nexpense</string>
+    <string name="create_npayment_link">Create\npayment link</string>
+    <string name="create_bulk_npayment_links">Create bulk\npayment links</string>
+    <string name="manage_nlinks">Manage\nlinks</string>
+    <string name="reminder_nsettings">Reminder\nsettings</string>
+    <string name="create_ninvoice">Create\ninvoice</string>
+    <string name="create_nuser_s">Create\nuser(s)</string>
+    <string name="manage_ninvoices">Manage\ninvoices</string>
+    <string name="manage_ncustomers">Manage\ncustomers</string>
+    <string name="manage_nproducts">Manage\nproducts</string>
+    <string name="issue_ncorporate_ncard_s">Issue\ncorporate\ncard(s)</string>
+    <string name="manage_ncards_users"><![CDATA[Manage\ncards & users]]></string>
+    <string name="physical_cards">Physical cards</string>
+    <string name="users">Users</string>
+    <string name="virtual_cards">Virtual cards</string>
+    <string name="all">All</string>
+    <string name="order_a_corporate_card">Order a corporate card</string>
+    <string name="get_a_virtual_card">Get a virtual card</string>
+    <string name="add_an_user">Add an user</string>
 
 
 </resources>

@@ -5,10 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.BusinessSendFundnewBeneficiryFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.business_profile_edit_layout.view.*
 

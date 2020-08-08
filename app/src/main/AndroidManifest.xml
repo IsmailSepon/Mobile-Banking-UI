@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.cloudwell.paywell">
 
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -26,6 +26,7 @@
         android:supportsRtl="true"
         android:theme="@style/FullScreen"
         tools:replace="android:allowBackup">
+        <activity android:name=".ui.BusinessUI.cards.BusinessCardLandingActivity"></activity>
         <activity
             android:name=".ui.BusinessUI.sendFund.BusinessSendFundHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -129,8 +130,6 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
-
 
         <activity
             android:name=".ui.dashboard.DashboardHostActivity"
