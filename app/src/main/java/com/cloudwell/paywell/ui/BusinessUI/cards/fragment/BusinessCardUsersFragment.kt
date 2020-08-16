@@ -18,6 +18,7 @@ class BusinessCardUsersFragment : Fragment() {
         val view = inflater.inflate(R.layout.business_card_users_layout, container, false)
 
 
+
         return view
     }
 

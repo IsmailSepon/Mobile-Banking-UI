@@ -101,13 +101,13 @@
 
             <ImageView
                 android:id="@+id/imageView178"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/right_arrow_c" />
+                app:srcCompat="@drawable/right_slim_arw" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

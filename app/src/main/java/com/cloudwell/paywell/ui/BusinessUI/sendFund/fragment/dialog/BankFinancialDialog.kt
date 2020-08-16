@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
 import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.BusinessSendFundConfirmationFragment
+import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.BusinessSendFundwithPhoneContactFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.bank_financial_dialog.view.*
 
@@ -22,10 +23,11 @@ class BankFinancialDialog : BaseDialog() {
 
         view.confirm.setOnClickListener(View.OnClickListener {
             dismiss()
-            FragmentHelper.replaceFragment(
-                BusinessSendFundConfirmationFragment(),
+            FragmentHelper.replaceFragmentWithString(
+               BusinessSendFundConfirmationFragment(),
+                //BusinessSendFundwithPhoneContactFragment(),
                 requireActivity().supportFragmentManager,
-                R.id.send_money_container
+                R.id.send_money_container, "bankBeneficiary"
             )
         })
 

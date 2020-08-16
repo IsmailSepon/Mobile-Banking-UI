@@ -523,6 +523,25 @@
     <string name="order_a_corporate_card">Order a corporate card</string>
     <string name="get_a_virtual_card">Get a virtual card</string>
     <string name="add_an_user">Add an user</string>
+    <string name="no_transactions_found">No transactions found</string>
+    <string name="you_haven_t_made_any_transfers_yet">You haven’t made any transfers yet.</string>
+    <string name="start_of_account_activity">start of account activity</string>
+    <string name="get">Get</string>
+    <string name="sent_payments_from">sent payments from</string>
+    <string name="date_and_type_filters_are_applied_all_ntimestamps_are_in_utc_and_your_account_timezone">Date and type filters are applied. All\ntimestamps are in UTC and your account timezone</string>
+    <string name="only_completed_transactions">Only completed transactions</string>
+    <string name="download_as_csv">Download as CSV</string>
+    <string name="download_as_pdf">Download as PDF</string>
+    <string name="need_another_format">Need another format?</string>
+    <string name="let_us_know">Let us know</string>
+    <string name="add_to_expenses">Add to expenses</string>
+    <string name="get_statement">Get statement</string>
+    <string name="card">Card</string>
+    <string name="payer">Payer</string>
+    <string name="amount">Amount</string>
+    <string name="fee">Fee</string>
+    <string name="total">Total</string>
+    <string name="location">Location</string>
 
 
 </resources>

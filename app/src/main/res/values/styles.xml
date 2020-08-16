@@ -234,4 +234,10 @@
         <item name="colorAccent">@color/colorPrimaryDark</item>  // for checked
         <item name="android:textColorSecondary">@color/common_clr</item>  // for unchecked
     </style>
+
+    <style name="CustomBackground">
+        <item name="android:popupBackground">@drawable/popup_bg</item>
+    </style>
+
+
 </resources>
