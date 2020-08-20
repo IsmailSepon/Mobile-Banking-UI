@@ -306,10 +306,7 @@
     <string name="we_can_t_provide_a_tracking_number_for_this_ndelivery">We can’t provide a tracking number for this\ndelivery</string>
     <string name="got_it">Got it</string>
     <string name="get_standard_card">Get Standard card</string>
-    <string name="card_ordering_usage_terms"><![CDATA[Card ordering & usage terms]]></string>
     <string name="the_nid_selfie_and_the_name_of_proprietor_in_ntrade_license_needs_to_the_of_the_same_person">The NID, Selfie and the name of proprietor in trade license needs to the of the same person.</string>
-    <string name="card_issuance_delivery_fee"><![CDATA[Card issuance & delivery fee]]></string>
-    <string name="to_be_deliverd_within_10_days">To be deliverd within 10 days</string>
     <string name="i_agree_to_pay_issue_use_the_card_as_per_nthe_about_terms"><![CDATA[I agree to pay, issue & use the card as per\nthe about terms.]]></string>
     <string name="please_ensure_you_have_available_fund_in_your_account_you_may_top_up_to_add_fund_now">Please ensure you have available fund in your account, you may top up to add fund now.</string>
     <string name="create_pin_for_your_paywell_card">Create PIN for your PayWell card</string>
@@ -321,12 +318,10 @@
     <string name="would_you_like_to_activate_location_based_security_for_future_card_transactions">Would you like to activate location-based security for future card transactions?</string>
     <string name="we_will_use_your_location_to_decline_card_transactions_happening_outside_of_your_phone_geo_location">We will use your location to\ndecline card transactions\nhappening outside of your phone\ngeo-location</string>
     <string name="allow_location_access">Allow location access</string>
-    <string name="location_based_security">Location-based security</string>
     <string name="we_ll_use_your_location_to_help_proevent_fraudulent_transaction_if_your_card_is_ever_compromised_gps_must_be_turned_on">We\'ll use your location to help proevent fraudulent transaction if your card is ever compromised. GPS must be turned on.</string>
     <string name="swipe_payments">Swipe payments</string>
     <string name="sometimes_cards_can_be_cloned_switch_off_the_magnetic_strip_for_extra_security">Sometimes cards can be cloned. Switch off the magnetic strip for extra security</string>
     <string name="if_you_do_not_plan_to_withdraw_cash_you_can_switch_atm_withdrawals_off">If you do not plan to withdraw cash, you can switch ATM withdrawals off</string>
-    <string name="online_transactions">Online transactions</string>
     <string name="internet_based_transactions_are_generally_high_risk_you_can_switch_them_off_for_extra_security">Internet-based transactions are generally high-risk. You can switch them off for extra security</string>
     <string name="limit_to_use_in_pos_atm_nis_15000_a_month"><![CDATA[Limit to use in POS & ATM\nis ৳15000 a month]]></string>
     <string name="limit">Limit</string>
@@ -360,7 +355,6 @@
     <string name="subscription_plan_free">Subscription plan - free</string>
     <string name="documents">Documents</string>
     <string name="profile">Profile</string>
-    <string name="security">Security</string>
     <string name="change_passcode">Change passcode</string>
     <string name="rate_us_on_google_play">Rate us on Google Play</string>
     <string name="sign_in_with_biometrics">Sign in with biometrics</string>
@@ -542,6 +536,44 @@
     <string name="fee">Fee</string>
     <string name="total">Total</string>
     <string name="location">Location</string>
+    <string name="card_settings">Card settings</string>
+    <string name="freeze_the_card_to_restrict_the_employee_from_nmaking_transactions">Freeze the card to restrict the employee from\nmaking transactions</string>
+    <string name="domestic">Domestic</string>
+    <string name="domestic_or_international">Domestic or International</string>
+    <string name="allowed_countries">Allowed countries</string>
+    <string name="security">Security</string>
+    <string name="the_current_card_will_be_terminated_a_new_card_will_be_issued_on_this_card_holder_s_name"><![CDATA[The current card will be terminated & a new card will be issued on this card holder’s name.]]></string>
+    <string name="this_action_is_irreversible_freeze_the_card_if_you_want_to_temporarily_disable_it">This action is irreversible. Freeze the card if you want to temporarily disable it.</string>
+    <string name="terminate_card">Terminate card</string>
+    <string name="order_a_replacement_card">Order a replacement card</string>
+    <string name="online_transactions_internet_based_transactions_are_generally_high_risk_you_can_switch_them_off_for_extra_security">Online transactions Internet-based transactions are generally high-risk. You can switch them off for extra security.</string>
+    <string name="online_transactions">Online transactions</string>
+    <string name="location_based_security">Location-based security</string>
+    <string name="we_ll_use_your_location_to_help_prevent_fraudulent_transactions_if_your_card_is_ever_compromised_gps_must_be_turned_on">We’ll use your location to help prevent fraudulent transactions if your card is ever compromised. GPS must be turned on.</string>
+    <string name="call_to_enable_disable">Call to enable/disable</string>
+    <string name="sometimes_cards_can_be_cloned_switch_off_the_magnetic_stripe_for_extra_security">Sometimes cards can be cloned. Switch off the magnetic stripe for extra security.</string>
+    <string name="contactless_payments">Contactless payments</string>
+    <string name="if_you_do_not_use_contactless_payments_you_can_swithch_them_off_for_extra_security">If you do not use contactless payments, you can swithch them off for extra security.</string>
+    <string name="if_you_do_not_plan_withdraw_cash_you_can_switch_atm_withdrawals_off">If you do not plan withdraw cash, you can switch ATM withdrawals off.</string>
+    <string name="card_is_active">Card is active</string>
+    <string name="call_to_freeze">Call to freeze</string>
+    <string name="monthly_limit">Monthly limit</string>
+    <string name="renews_every_first_day_the_month">Renews every first day the month</string>
+    <string name="set_monthly_limit">Set monthly limit</string>
+    <string name="are_you_sure_you_want_to_terminate_this_card_you_will_not_be_able_to_reinstate_it_again">Are you sure you want to terminate this card? You will not be able to reinstate it again.</string>
+    <string name="yes_please_terminate">Yes-please terminate</string>
+    <string name="card_ordering_usage_terms"><![CDATA[Card ordering & usage terms]]></string>
+    <string name="the_name_of_the_cardholder_and_nid_should_be_of_the_same_person">The name of the Cardholder and NID should be of the same person.</string>
+    <string name="card_issuance_delivery_fee"><![CDATA[Card issuance & delivery fee]]></string>
+    <string name="to_be_deliverd_within_10_days">To be deliverd within 10 days</string>
+    <string name="i_we_agree_to_pay_issue_use_the_card_as_per_the_terms"><![CDATA[I/we agree to pay, issue & use the card as per the terms.]]></string>
+    <string name="specify_card_holder_name_limit"><![CDATA[Specify card holder name & limit]]></string>
+    <string name="name_on_card">Name on Card</string>
+    <string name="monthly_transaction_limit">Monthly Transaction Limit</string>
+    <string name="nid_smart_card_id_number">NID/Smart card ID number</string>
+    <string name="deliver_to_current_business_address">Deliver to current business address</string>
+    <string name="specify_delivery_address">Specify delivery address</string>
+    <string name="corporate_card_for_ak_bulbul_nis_on_its_way">Corporate card for AK. Bulbul\nis on its way!</string>
 
 
 </resources>

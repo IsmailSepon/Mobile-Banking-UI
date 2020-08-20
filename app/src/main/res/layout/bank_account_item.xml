@@ -35,7 +35,7 @@
 
 
     <Spinner
-        android:id="@+id/banklist_sp"
+        android:id="@+id/towncity_spinner"
         style="@style/Base.Widget.AppCompat.Spinner.Underlined"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

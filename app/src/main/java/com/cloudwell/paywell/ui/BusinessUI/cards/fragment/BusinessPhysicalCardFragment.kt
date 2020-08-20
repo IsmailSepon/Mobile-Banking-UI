@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.BusinessUI.cards.cardOrder.BusinessCardOrderTermsFragment
 import com.cloudwell.paywell.ui.BusinessUI.cards.fragment.transaction.BusinessTransactionSettingFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.business_physical_card_layout.view.*
@@ -30,6 +31,18 @@ class BusinessPhysicalCardFragment : Fragment() {
 
 
         })
+
+
+        view.order_physical_card_btn.setOnClickListener(View.OnClickListener {
+
+            FragmentHelper.replaceFragment(
+                BusinessCardOrderTermsFragment(),
+                requireActivity().supportFragmentManager,
+                R.id.bu_Cards_container
+            )
+
+        })
+
 
         return view
     }

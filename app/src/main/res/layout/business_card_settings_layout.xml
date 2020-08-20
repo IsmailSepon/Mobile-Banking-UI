@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_40dp"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_14sp"
+            style="@style/text_style"
+            android:id="@+id/card_setting_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/card_settings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_setting_txt">
+
+            <TextView
+                android:id="@+id/card_status"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:text="@string/card_is_active"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView462"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:text="@string/freeze_the_card_to_restrict_the_employee_from_nmaking_transactions"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/card_status"
+                app:layout_constraintTop_toBottomOf="@+id/card_status"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/textView463"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/call_to_freeze"
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/card_status" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout37"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout36">
+
+            <TextView
+                android:id="@+id/allwoed_country"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25dp"
+                android:text="@string/allowed_countries"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/allwoed_country_description"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:text="@string/domestic_or_international"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/allwoed_country"
+                app:layout_constraintTop_toBottomOf="@+id/allwoed_country"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/allwoed_country_status"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/domestic"
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/allwoed_country" />
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/allwoed_country_spinner"
+                style="@style/CustomBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@null"
+                android:padding="@dimen/_0dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/allwoed_country_status"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/allwoed_country_description"
+                app:layout_constraintTop_toBottomOf="@+id/allwoed_country_status" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout35">
+
+            <TextView
+                android:id="@+id/monthly_limit"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25dp"
+                android:text="@string/monthly_limit"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/description_txt"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:text="@string/renews_every_first_day_the_month"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/monthly_limit"
+                app:layout_constraintTop_toBottomOf="@+id/monthly_limit" />
+
+            <TextView
+                android:id="@+id/limit_amount"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="৳500,000"
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/monthly_limit" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/security_txt"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/security"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout37" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3s6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/security_txt">
+
+            <TextView
+                android:id="@+id/location_based_security"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30dp"
+                android:text="@string/location_based_security"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/location_based_security_description"
+                style="@style/text_style"
+                android:layout_width="@dimen/_160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:text="@string/we_ll_use_your_location_to_help_prevent_fraudulent_transactions_if_your_card_is_ever_compromised_gps_must_be_turned_on"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/location_based_security"
+                app:layout_constraintTop_toBottomOf="@+id/location_based_security"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/location_based_security_status"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/call_to_enable_disable"
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/location_based_security" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/swipe_payments_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3s6">
+
+            <TextView
+                android:id="@+id/swipe_payments_txt"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:text="@string/swipe_payments"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/swipe_payments_description"
+                style="@style/text_style"
+                android:layout_width="@dimen/_160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:text="@string/sometimes_cards_can_be_cloned_switch_off_the_magnetic_stripe_for_extra_security"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/swipe_payments_txt"
+                app:layout_constraintTop_toBottomOf="@+id/swipe_payments_txt" />
+
+            <TextView
+                android:id="@+id/swipe_payments_status"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/call_to_enable_disable"
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/swipe_payments_txt" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contactless_payments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swipe_payments_layout">
+
+            <TextView
+                android:id="@+id/contactless_payments_txt"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:text="@string/contactless_payments"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/contactless_payments_description"
+                style="@style/text_style"
+                android:layout_width="@dimen/_160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:text="@string/if_you_do_not_use_contactless_payments_you_can_swithch_them_off_for_extra_security"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/contactless_payments_txt"
+                app:layout_constraintTop_toBottomOf="@+id/contactless_payments_txt" />
+
+            <TextView
+                android:id="@+id/contactless_payments_status"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/call_to_enable_disable"
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/contactless_payments_txt" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/atm_withdrawals_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contactless_payments">
+
+            <TextView
+                android:id="@+id/atm_withdrawals_txt"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:text="@string/atm_withdrawals"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/atm_withdrawals_description"
+                style="@style/text_style"
+                android:layout_width="@dimen/_160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:text="@string/if_you_do_not_plan_withdraw_cash_you_can_switch_atm_withdrawals_off"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/atm_withdrawals_txt"
+                app:layout_constraintTop_toBottomOf="@+id/atm_withdrawals_txt" />
+
+            <TextView
+                android:id="@+id/atm_withdrawals_status"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/call_to_enable_disable"
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/atm_withdrawals_txt" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/online_transactions_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/atm_withdrawals_layout">
+
+            <TextView
+                android:id="@+id/online_transactions_txt"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:text="@string/online_transactions"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/online_transactions_description"
+                style="@style/text_style"
+                android:layout_width="@dimen/_160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:text="@string/online_transactions_internet_based_transactions_are_generally_high_risk_you_can_switch_them_off_for_extra_security"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="@+id/online_transactions_txt"
+                app:layout_constraintTop_toBottomOf="@+id/online_transactions_txt"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/online_transactions_status"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/call_to_enable_disable"
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/online_transactions_txt" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView459"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:text="@string/order_a_replacement_card"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/online_transactions_layout" />
+
+        <TextView
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:gravity="left"
+            android:id="@+id/textView464"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="65dp"
+            android:text="@string/the_current_card_will_be_terminated_a_new_card_will_be_issued_on_this_card_holder_s_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView459"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:id="@+id/textView465"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:text="@string/terminate_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView464" />
+
+        <TextView
+            android:id="@+id/textView466"
+            style="@style/text_style"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="65dp"
+            android:gravity="left"
+            android:text="@string/this_action_is_irreversible_freeze_the_card_if_you_want_to_temporarily_disable_it"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView465" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>

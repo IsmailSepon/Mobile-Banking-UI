@@ -34,9 +34,9 @@
         android:id="@+id/imageView179"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textView447"
+        app:layout_constraintBottom_toBottomOf="@+id/order_physical_card_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView447"
+        app:layout_constraintTop_toTopOf="@+id/order_physical_card_btn"
         app:srcCompat="@drawable/search_commn_clr" />
 
     <TextView
@@ -45,7 +45,7 @@
         android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/_12sp"
         style="@style/text_style"
-        android:id="@+id/textView447"
+        android:id="@+id/order_physical_card_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_65dp"
         android:paddingBottom="@dimen/_5dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView447">
+        app:layout_constraintTop_toBottomOf="@+id/order_physical_card_btn">
 
 
         <ImageView

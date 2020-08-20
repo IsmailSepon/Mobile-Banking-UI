@@ -8,6 +8,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.BusinessUI.cards.fragment.BusinessCardUsersFragment
 import com.cloudwell.paywell.ui.BusinessUI.cards.fragment.BusinessPhysicalCardFragment
 import com.cloudwell.paywell.ui.BusinessUI.cards.fragment.BusinessvirtualCardFragment
+import com.cloudwell.paywell.ui.BusinessUI.cards.fragment.transaction.BusinessCardSettingsFragment
 import com.cloudwell.paywell.ui.BusinessUI.cards.fragment.transaction.BusinessCardTransactionFragment
 
 private val TAB_TITLES = arrayOf(
@@ -25,7 +26,7 @@ class CardsTransactionPagerAdapter(private val context: Context, fm: FragmentMan
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> BusinessCardTransactionFragment.newInstance(0)
-            1 -> BusinessvirtualCardFragment.newInstance(1)
+            1 -> BusinessCardSettingsFragment.newInstance(1)
             else -> BusinessCardTransactionFragment.newInstance(0)
         }
 
