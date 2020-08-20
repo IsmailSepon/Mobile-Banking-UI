@@ -574,6 +574,7 @@
     <string name="deliver_to_current_business_address">Deliver to current business address</string>
     <string name="specify_delivery_address">Specify delivery address</string>
     <string name="corporate_card_for_ak_bulbul_nis_on_its_way">Corporate card for AK. Bulbul\nis on its way!</string>
+    <string name="approve_with_your_fingerprint">Approve with your fingerprint</string>
 
 
 </resources>

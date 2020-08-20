@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
+import com.cloudwell.paywell.ui.BusinessUI.cards.cardOrder.BusinessCardApwithFingerFragment
 import com.cloudwell.paywell.ui.BusinessUI.cards.cardOrder.BusinessOneMoreThingFragment
 import com.cloudwell.paywell.ui.cards.fragment.physicalCard.OneMoreThingFragment
 import com.cloudwell.paywell.utils.FragmentHelper
@@ -25,7 +26,8 @@ class BusinessDeliveryTrackingDialog : BaseDialog() {
         view.terminate_reorder_btn.setOnClickListener(View.OnClickListener {
 
             FragmentHelper.replaceFragment(
-                BusinessOneMoreThingFragment(),
+                BusinessCardApwithFingerFragment(),
+                //BusinessOneMoreThingFragment(),
                 activity?.supportFragmentManager,
                 R.id.bu_Cards_container
             )
