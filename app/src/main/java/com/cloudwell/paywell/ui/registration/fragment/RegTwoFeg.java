@@ -38,6 +38,7 @@ public class RegTwoFeg extends Fragment {
         keyboard = view.findViewById(R.id.confirm_pass_keyboard);
         confirm_pin_et = view.findViewById(R.id.confirm_pin_et);
         confirm_pin_et.requestFocus();
+        confirm_pin_et.setShowSoftInputOnFocus(false);
         InputConnection ic = confirm_pin_et.onCreateInputConnection(new EditorInfo());
         keyboard.setInputConnection(ic);
         confirm_pin_et.post(new Runnable() {

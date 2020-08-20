@@ -41,6 +41,7 @@ public class RegOneFeg extends Fragment {
         creat_pin_et = view.findViewById(R.id.creat_pin_et);
         creat_pin_et.setRawInputType(InputType.TYPE_CLASS_TEXT);
         creat_pin_et.setTextIsSelectable(true);
+        creat_pin_et.setShowSoftInputOnFocus(false);
         InputConnection ic = creat_pin_et.onCreateInputConnection(new EditorInfo());
         keyboard.setInputConnection(ic);
         creat_pin_et.post(new Runnable() {

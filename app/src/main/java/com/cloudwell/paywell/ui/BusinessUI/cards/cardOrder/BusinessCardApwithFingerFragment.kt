@@ -42,7 +42,7 @@ class BusinessCardApwithFingerFragment : Fragment() {
 
 
 //        view.card_continue_btn.setOnClickListener(View.OnClickListener {
-//k
+//
 //            FragmentHelper.replaceFragment(
 //                CreateBusinessCardFragment(),
 //                requireActivity().supportFragmentManager,
