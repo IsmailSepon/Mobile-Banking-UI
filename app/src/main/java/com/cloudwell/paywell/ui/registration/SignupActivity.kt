@@ -6,8 +6,10 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.authentication.UserAuthenticationHostActivity
 import kotlinx.android.synthetic.main.activity_signup.*
 
 
@@ -29,6 +31,16 @@ class SignupActivity : AppCompatActivity() {
             ArrayAdapter<Any?>(this, android.R.layout.simple_spinner_item, country)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         country_code_spinner.adapter = aa
+
+
+        lost_access_num.setOnClickListener(View.OnClickListener {
+
+            val intent = Intent(this, UserAuthenticationHostActivity::class.java)
+           // intent.putExtra("lostAccess", "lostAccess")
+            startActivity(intent)
+
+        })
+
 
         et_phone.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {}

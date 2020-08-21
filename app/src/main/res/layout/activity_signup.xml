@@ -39,6 +39,7 @@
         tools:targetApi="lollipop" />
 
     <TextView
+        android:id="@+id/lost_access_num"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/lost_access_to_your_number"

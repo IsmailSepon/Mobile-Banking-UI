@@ -22,7 +22,8 @@ import com.cloudwell.paywell.ui.registration.RegistationMainActivity;
  * Created by Sepon on 4/15/2020.
  */
 public class RegTwoFeg extends Fragment {
-    CustomKeyboard keyboard;
+    CustomKeyboard keyboard
+            ;
 
     public static RegOneFeg newInstance() {
         return new RegOneFeg();
