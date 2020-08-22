@@ -65,7 +65,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_26dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/_13dp"
+                        android:layout_marginTop="@dimen/_5dp"
                         android:background="@drawable/spinner_bg"
                         android:gravity="center"
                         android:spinnerMode="dropdown" />
@@ -87,14 +87,14 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/text_style"
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_3dp"
                         android:text="@string/monthly_limit"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="12sp"
-                        android:visibility="invisible" />
+                        android:textColor="@color/common_clr"
+                        android:textSize="12sp" />
 
 
                     <EditText
@@ -104,6 +104,12 @@
                         android:layout_marginTop="5dp"
                         android:backgroundTint="@color/divider_bg"
                         android:ems="8"
+                        android:paddingBottom="@dimen/_5dp"
+                        android:layout_marginBottom="@dimen/_2dp"
+                        android:paddingTop="@dimen/_0dp"
+                        android:paddingEnd="@dimen/_0dp"
+                        android:paddingStart="@dimen/_0dp"
+                        style="@style/edittext_style"
                         android:hint="500,000"
                         android:inputType="number"
                         android:textColorHint="#8ea0b6"

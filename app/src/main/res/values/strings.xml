@@ -316,7 +316,7 @@
     <string name="hooray_your_paywell_card_is_on_nits_way">Hooray! Your PayWell card is on\nits way!</string>
     <string name="one_more_thing">One more thing</string>
     <string name="would_you_like_to_activate_location_based_security_for_future_card_transactions">Would you like to activate location-based security for future card transactions?</string>
-    <string name="we_will_use_your_location_to_decline_card_transactions_happening_outside_of_your_phone_geo_location">We will use your location to\ndecline card transactions\nhappening outside of your phone\ngeo-location</string>
+    <string name="we_will_use_your_location_to_decline_card_transactions_happening_outside_of_your_phone_geo_location">We will use your location to decline card transactions happening outside of your phone geo-location</string>
     <string name="allow_location_access">Allow location access</string>
     <string name="we_ll_use_your_location_to_help_proevent_fraudulent_transaction_if_your_card_is_ever_compromised_gps_must_be_turned_on">We\'ll use your location to help proevent fraudulent transaction if your card is ever compromised. GPS must be turned on.</string>
     <string name="swipe_payments">Swipe payments</string>
@@ -575,6 +575,8 @@
     <string name="specify_delivery_address">Specify delivery address</string>
     <string name="corporate_card_for_ak_bulbul_nis_on_its_way">Corporate card for AK. Bulbul\nis on its way!</string>
     <string name="approve_with_your_fingerprint">Approve with your fingerprint</string>
+    <string name="general">General</string>
+    <string name="api">API</string>
 
 
 </resources>

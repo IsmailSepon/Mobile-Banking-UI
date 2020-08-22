@@ -37,7 +37,6 @@ class BusinessCardSettingsFragment : Fragment(), AdapterView.OnItemSelectedListe
 
         view.monthly_limit.setOnClickListener(View.OnClickListener {
 
-
             val dialog: MonthlyLimitDialog = MonthlyLimitDialog()
             dialog.show(activity?.supportFragmentManager!!, "MonthlyLimitDialog")
 

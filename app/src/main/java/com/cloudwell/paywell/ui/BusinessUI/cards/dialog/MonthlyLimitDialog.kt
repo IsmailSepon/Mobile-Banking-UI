@@ -23,9 +23,9 @@ class MonthlyLimitDialog : BaseDialog() {
 
 
         view.currency_spinner.onItemSelectedListener
-        val aa: ArrayAdapter<Any?> = ArrayAdapter<Any?>(requireActivity().applicationContext, android.R.layout.simple_spinner_item, country)
+        val aa: ArrayAdapter<Any?> = ArrayAdapter<Any?>(requireActivity().applicationContext, R.layout.spinner_item, country)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        country_code_spinner.adapter = aa
+        view.currency_spinner.adapter = aa
 
 
         return view

@@ -26,7 +26,8 @@
         android:supportsRtl="true"
         android:theme="@style/FullScreen"
         tools:replace="android:allowBackup">
-        <activity android:name=".ui.BusinessUI.cards.BusinessCardLandingActivity"></activity>
+        <activity android:name=".ui.BusinessUI.control.BusinessControlHostActivity"/>
+        <activity android:name=".ui.BusinessUI.cards.BusinessCardLandingActivity"/>
         <activity
             android:name=".ui.BusinessUI.sendFund.BusinessSendFundHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
