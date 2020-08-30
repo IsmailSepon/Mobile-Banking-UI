@@ -428,6 +428,7 @@
     <string name="never_expires">Never expires</string>
     <string name="item">ITEM</string>
     <string name="manage">MANAGE</string>
+    <string name="manage_small">Manage</string>
     <string name="free_virtual_account">Free virtual account</string>
     <string name="accounts_and_statements">Accounts and statements</string>
     <string name="operations_with_funds">Operations with funds</string>
@@ -577,6 +578,43 @@
     <string name="approve_with_your_fingerprint">Approve with your fingerprint</string>
     <string name="general">General</string>
     <string name="api">API</string>
+    <string name="personal_profile">Personal profile</string>
+    <string name="business_management">Business management</string>
+    <string name="user_management">User management</string>
+    <string name="have_an_idea">Have an idea?</string>
+    <string name="help_us_improve_permissions">Help us improve permissions</string>
+    <string name="expense_management_setup">Expense management setup</string>
+    <string name="expenses">Expenses</string>
+    <string name="invoice_management_access">Invoice management access</string>
+    <string name="invoicing">Invoicing</string>
+    <string name="withdraw_funds">Withdraw funds</string>
+    <string name="payments_link">Payments link</string>
+    <string name="merchat_account_access">Merchat account access</string>
+    <string name="merchant_account">Merchant account</string>
+    <string name="intergrations">Intergrations</string>
+    <string name="intergrations_and_api">Intergrations and API</string>
+    <string name="create_payments_witch_are_then_checked_and_approved_by_other_members_of_the_team">Create payments witch are then checked and approved by other members of the team.</string>
+    <string name="add_rule">Add rule</string>
+    <string name="approve_beneficiaries">Approve beneficiaries</string>
+    <string name="add_delete_beneficiaries">Add/delete beneficiaries</string>
+    <string name="approve_payments">Approve payments</string>
+    <string name="initiate_delete_payments">Initiate/delete payments</string>
+    <string name="legal_first_name">Legal first name</string>
+    <string name="legal_last_name">Legal last name</string>
+    <string name="same_as_permanent_address">Same as permanent address</string>
+    <string name="what_s_your_new_phone_number">What’s your new phone number?</string>
+    <string name="structure_of_your_business">Structure of your business</string>
+    <string name="nature_of_your_business">Nature of your business</string>
+    <string name="company_limited">Company limited</string>
+    <string name="incorporation_details">Incorporation details</string>
+    <string name="place_of_registration">Place of Registration</string>
+    <string name="date_of_registration">Date of Registration</string>
+    <string name="legal_name_of_business_org">Legal Name of Business/Org *</string>
+    <string name="what_is_the_nature_of_business">What is the nature of business?</string>
+    <string name="digital_payment_system">Digital payment system</string>
+    <string name="how_many_employees_you_have">How many employees you have?</string>
+    <string name="monthly_transaction_volume">Monthly transaction volume</string>
+    <string name="company_website">Company website</string>
 
 
 </resources>

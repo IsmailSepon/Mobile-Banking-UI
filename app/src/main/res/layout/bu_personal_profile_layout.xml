@@ -15,45 +15,6 @@
         android:layout_height="wrap_content">
 
 
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/profile_image_card_view"
-            android:layout_width="@dimen/_60dp"
-            android:layout_height="@dimen/_50dp"
-            android:layout_marginTop="8dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="@dimen/_50dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView192">
-
-            <ImageView
-                android:id="@+id/bu_profile_image"
-                android:layout_width="@dimen/_50dp"
-                android:layout_height="@dimen/_50dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/logo_ic"
-                tools:ignore="MissingConstraints" />
-
-
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/textViewDFUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="21dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Company limited"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_17sp"
-            android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_image_card_view" />
-
         <ImageView
             android:id="@+id/imageView192"
             android:layout_width="wrap_content"
@@ -64,6 +25,39 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/back" />
 
+        <ImageView
+            android:id="@+id/imageView193"
+            android:layout_width="@dimen/_33dp"
+            android:layout_height="@dimen/_33dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/person" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_26sp"
+            style="@style/medium_text_style"
+            android:id="@+id/textView481"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Anisul Islam"
+            app:layout_constraintStart_toStartOf="@+id/imageView192"
+            app:layout_constraintTop_toBottomOf="@+id/imageView192" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:id="@+id/textView482"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Owner . Active"
+            app:layout_constraintStart_toStartOf="@+id/textView481"
+            app:layout_constraintTop_toBottomOf="@+id/textView481" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -82,7 +76,7 @@
 
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/controll_tab"
+            android:id="@+id/ctrl_profile_tab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="-12dp"
@@ -103,7 +97,7 @@
 
 
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/controll_pager"
+            android:id="@+id/ctrl_profile_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />

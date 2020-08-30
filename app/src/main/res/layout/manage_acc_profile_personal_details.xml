@@ -118,11 +118,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="31dp"
                         android:layout_marginBottom="5dp"
-                        android:fontFamily="sans-serif-medium"
+                        style="@style/medium_text_style"
                         android:text="@string/full_name_and_date_of_birth"
                         android:textColor="@color/recyclerview_title"
                         android:textSize="@dimen/_13_3sp"
-                        android:textStyle="normal"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -130,11 +129,10 @@
                         android:id="@+id/textViewMAP2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
                         android:text="Anisul Islam, 10 Nov 1975"
                         android:textColor="@color/keypad_text_clr"
                         android:textSize="@dimen/_13_3sp"
-                        android:textStyle="normal"
+                        style="@style/medium_text_style"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/textViewMAP1"
                         app:layout_constraintTop_toBottomOf="@+id/textViewMAP1" />
@@ -180,11 +178,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="31dp"
                         android:layout_marginBottom="5dp"
-                        android:fontFamily="sans-serif-medium"
+                        style="@style/medium_text_style"
                         android:text="@string/address"
                         android:textColor="@color/recyclerview_title"
                         android:textSize="@dimen/_13_3sp"
-                        android:textStyle="normal"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -192,11 +189,10 @@
                         android:id="@+id/textViewMAP4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
+                        style="@style/medium_text_style"
                         android:text="Gulshan, Dhaka-1219, Bangladesh"
                         android:textColor="@color/keypad_text_clr"
                         android:textSize="@dimen/_13_3sp"
-                        android:textStyle="normal"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/textViewMAP3"
                         app:layout_constraintTop_toBottomOf="@+id/textViewMAP3" />
@@ -242,11 +238,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="31dp"
                         android:layout_marginBottom="5dp"
-                        android:fontFamily="sans-serif-medium"
+                        style="@style/medium_text_style"
                         android:text="@string/phone_number"
                         android:textColor="@color/recyclerview_title"
                         android:textSize="@dimen/_13_3sp"
-                        android:textStyle="normal"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -254,11 +249,10 @@
                         android:id="@+id/textViewMAP8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
+                        style="@style/medium_text_style"
                         android:text="+8801245876941"
                         android:textColor="@color/keypad_text_clr"
                         android:textSize="@dimen/_13_3sp"
-                        android:textStyle="normal"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/textViewMAP7"
                         app:layout_constraintTop_toBottomOf="@+id/textViewMAP7" />
@@ -304,11 +298,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="31dp"
                         android:layout_marginBottom="5dp"
-                        android:fontFamily="sans-serif-medium"
+                        style="@style/medium_text_style"
                         android:text="@string/verify_ur_email"
                         android:textColor="@color/recyclerview_title"
                         android:textSize="@dimen/_13_3sp"
-                        android:textStyle="normal"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -316,11 +309,10 @@
                         android:id="@+id/textViewMAP10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
+                        style="@style/medium_text_style"
                         android:text="anisul.islam@gmail.com"
                         android:textColor="@color/keypad_text_clr"
                         android:textSize="@dimen/_13_3sp"
-                        android:textStyle="normal"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@id/textViewMAP9"
                         app:layout_constraintTop_toBottomOf="@+id/textViewMAP9" />

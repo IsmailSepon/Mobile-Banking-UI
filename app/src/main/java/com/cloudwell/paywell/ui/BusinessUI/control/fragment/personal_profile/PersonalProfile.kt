@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.ui.BusinessUI.control.fragment
+package com.cloudwell.paywell.ui.BusinessUI.control.fragment.personal_profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,26 +6,25 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.ui.BusinessUI.control.fragment.info_edit.company.CompanyProfileFragment
-import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.beneficiary.BusinessBeneficiaryProfileDetailsFragment
+import com.cloudwell.paywell.ui.BusinessUI.control.fragment.info_edit.PersonalDetailsOneEditFrg
+import com.cloudwell.paywell.ui.BusinessUI.control.fragment.info_edit.PersonalDetailstwoEditFrg
 import com.cloudwell.paywell.utils.FragmentHelper
-import kotlinx.android.synthetic.main.business_general_control_layout.view.*
+import kotlinx.android.synthetic.main.bu_personal_layout.view.*
 
-class BusinessGeneralControlFragment : Fragment() {
 
+class PersonalProfile : Fragment() {
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.business_general_control_layout, container, false)
+        val root: View = inflater.inflate(R.layout.bu_personal_layout, container, false)
 
 
-        view.personal_profile_layout.setOnClickListener(View.OnClickListener {
+        root.personal_details_et.setOnClickListener(View.OnClickListener {
 
             FragmentHelper.replaceFragment(
-                BuPersonalProfileFragment(),
+                PersonalDetailsOneEditFrg(),
                 requireActivity().supportFragmentManager,
                 R.id.bu_Control_container
             )
@@ -33,17 +32,18 @@ class BusinessGeneralControlFragment : Fragment() {
         })
 
 
-        view.business_profile.setOnClickListener(View.OnClickListener {
+        root.address_et_ic.setOnClickListener(View.OnClickListener {
 
             FragmentHelper.replaceFragment(
-                CompanyProfileFragment (),
+                PersonalDetailstwoEditFrg(),
                 requireActivity().supportFragmentManager,
                 R.id.bu_Control_container
             )
-
         })
 
-        return view
+
+        return root
+
     }
 
 
@@ -59,12 +59,13 @@ class BusinessGeneralControlFragment : Fragment() {
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int): BusinessGeneralControlFragment {
-            return BusinessGeneralControlFragment().apply {
+        fun newInstance(sectionNumber: Int): PersonalProfile {
+            return PersonalProfile().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
                 }
             }
         }
     }
+
 }

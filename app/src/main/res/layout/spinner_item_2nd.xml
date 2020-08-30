@@ -5,7 +5,7 @@
     style="@style/medium_text_style"
     android:gravity="left"
     android:textSize="@dimen/_14sp"
-    android:textColor="@color/common_clr"
+    android:textColor="@color/keypad_text_clr"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 

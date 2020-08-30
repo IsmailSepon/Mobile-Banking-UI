@@ -162,6 +162,14 @@
 
     </style>
 
+    <style name="TextLabeltwo" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+
+    </style>
+
     <style name="RadioButtonStyle" parent="Theme.AppCompat.Light">
         <item name="colorControlNormal">@color/common_clr</item>
         <item name="colorControlActivated">@color/colorPrimaryDark</item>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView202"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView494"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/nature_of_your_business"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView202" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textView494">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_46dp"
+                android:layout_marginEnd="@dimen/_46dp"
+                android:layout_marginTop="@dimen/_22dp"
+                app:hintTextColor="@color/common_clr"
+                android:textColorHint="@color/common_clr"
+                app:hintTextAppearance="@style/TextLabel">
+
+
+                <EditText
+                    style="@style/edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/what_is_the_nature_of_business"
+                    android:textColorHint="@color/common_clr"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:paddingTop="@dimen/_15dp"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40dp">
+
+
+                <Spinner
+                    android:id="@+id/employe_sp"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/spinner_bg"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_0dp"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+
+                <ImageView
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="@dimen/_1dp"
+                    android:layout_marginTop="27dp"
+                    android:background="@color/common_clr"
+                    app:layout_constraintBottom_toBottomOf="@+id/employe_sp"
+                    app:layout_constraintEnd_toEndOf="@+id/employe_sp"
+                    app:layout_constraintStart_toStartOf="@+id/employe_sp"
+                    app:layout_constraintTop_toTopOf="@+id/employe_sp"
+                    tools:ignore="ContentDescription" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40dp">
+
+
+                <Spinner
+                    android:id="@+id/monthly_trx_sp"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/spinner_bg"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_0dp"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+
+                <ImageView
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="@dimen/_1dp"
+                    android:layout_marginTop="27dp"
+                    android:background="@color/common_clr"
+                    app:layout_constraintBottom_toBottomOf="@+id/monthly_trx_sp"
+                    app:layout_constraintEnd_toEndOf="@+id/monthly_trx_sp"
+                    app:layout_constraintStart_toStartOf="@+id/monthly_trx_sp"
+                    app:layout_constraintTop_toTopOf="@+id/monthly_trx_sp"
+                    tools:ignore="ContentDescription" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40dp">
+
+
+                <Spinner
+                    android:id="@+id/yearly_turnover_sp"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_46dp"
+                    android:layout_marginEnd="@dimen/_46dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/spinner_bg"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_0dp"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+
+                <ImageView
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="@dimen/_1dp"
+                    android:layout_marginTop="27dp"
+                    android:background="@color/common_clr"
+                    app:layout_constraintBottom_toBottomOf="@+id/yearly_turnover_sp"
+                    app:layout_constraintEnd_toEndOf="@+id/yearly_turnover_sp"
+                    app:layout_constraintStart_toStartOf="@+id/yearly_turnover_sp"
+                    app:layout_constraintTop_toTopOf="@+id/yearly_turnover_sp"
+                    tools:ignore="ContentDescription" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/personal_details_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_46dp"
+                android:layout_marginEnd="@dimen/_46dp"
+                android:layout_marginTop="@dimen/_22dp"
+                app:hintTextColor="@color/common_clr"
+                android:textColorHint="@color/common_clr"
+                app:hintTextAppearance="@style/TextLabel">
+
+
+                <EditText
+                    android:id="@+id/legal_first_name_et"
+                    style="@style/edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/company_website"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:paddingTop="@dimen/_15dp"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_hight"
+                android:elevation="@dimen/evelation_five"
+                android:background="@drawable/round_btn_visable"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_122dp"
+                tools:targetApi="lollipop" />
+
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_hight"
+                android:elevation="@dimen/evelation_five"
+                android:background="@drawable/round_btn_orange"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_20dp"
+                android:layout_marginBottom="@dimen/_40dp"
+                tools:targetApi="lollipop" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
