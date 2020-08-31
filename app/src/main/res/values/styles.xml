@@ -153,6 +153,16 @@
         <item name="android:background">@drawable/common_et_bg</item>
         <item name="android:textColor">@color/keypad_text_clr</item>
     </style>
+    <style name="edittext_style_medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:ems">13</item>
+        <item name="android:textColorHint">@color/common_clr</item>
+        <item name="android:background">@drawable/common_et_bg</item>
+        <item name="android:textColor">@color/keypad_text_clr</item>
+    </style>
 
     <style name="TextLabel" parent="TextAppearance.AppCompat">
         <!-- Hint color and label color in FALSE state -->

@@ -609,12 +609,15 @@
     <string name="incorporation_details">Incorporation details</string>
     <string name="place_of_registration">Place of Registration</string>
     <string name="date_of_registration">Date of Registration</string>
-    <string name="legal_name_of_business_org">Legal Name of Business/Org *</string>
     <string name="what_is_the_nature_of_business">What is the nature of business?</string>
     <string name="digital_payment_system">Digital payment system</string>
     <string name="how_many_employees_you_have">How many employees you have?</string>
     <string name="monthly_transaction_volume">Monthly transaction volume</string>
     <string name="company_website">Company website</string>
+    <string name="what_is_the_nature_of_your_business">What is the nature of your business?</string>
+    <string name="legal_name_of_business_org">Legal Name of Business/Org *</string>
+    <string name="please_be_precise">Please be precise</string>
+    <string name="what_are_your_business_details">What are your business details?</string>
 
 
 </resources>

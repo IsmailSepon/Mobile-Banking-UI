@@ -17,6 +17,7 @@ import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.bu_personal_address_edit_layout.view.*
 import kotlinx.android.synthetic.main.bu_personal_layout.view.*
+import kotlinx.android.synthetic.main.company_address_layout.view.*
 
 
 class CompanyAddressEditFrg : Fragment() {
@@ -42,22 +43,22 @@ class CompanyAddressEditFrg : Fragment() {
         var country_sp : Spinner = root!!.findViewById(R.id.company_towncity_sp)
 
         val aa: ArrayAdapter<*> =
-            ArrayAdapter<Any?>(requireActivity(), R.layout.spinner_item, country)
+            ArrayAdapter<Any?>(requireActivity(), R.layout.spinner_item_regular, country)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         country_sp.setAdapter(aa)
 
 
-//        root.address_done_btn.setOnClickListener(View.OnClickListener {
-//
-//
-//            FragmentHelper.replaceFragment(
-//                NewphoneNumberFrg(),
-//                requireActivity().supportFragmentManager,
-//                R.id.bu_Control_container
-//            )
-//
-//
-//        })
+        root.address_save_btn.setOnClickListener(View.OnClickListener {
+
+
+            FragmentHelper.replaceFragment(
+                BusinessDetailsEditFrg(),
+                requireActivity().supportFragmentManager,
+                R.id.bu_Control_container
+            )
+
+
+        })
 
 
 
