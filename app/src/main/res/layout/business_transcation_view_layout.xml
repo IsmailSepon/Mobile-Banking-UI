@@ -9,7 +9,7 @@
     android:paddingStart="@dimen/_30dp"
     android:paddingEnd="@dimen/_30dp"
     android:paddingTop="@dimen/_20dp"
-    tools:context="com.cloudwell.paywell.ui.BusinessUI.test.TestActivity">
+    tools:context=".uiBusiness.test.TestActivity">
 
     <ImageView
         android:src="@drawable/back"
