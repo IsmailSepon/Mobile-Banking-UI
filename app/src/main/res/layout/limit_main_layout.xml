@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/_40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imageView207"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_17sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView501"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/limits"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView207"
+        app:layout_constraintStart_toEndOf="@+id/imageView207"
+        app:layout_constraintTop_toTopOf="@+id/imageView207" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textView501">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/textView501">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_470dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_30dp"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDFUsername">
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/limit_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-12dp"
+                    android:background="@color/white"
+                    android:elevation="@dimen/_0dp"
+                    android:textAlignment="viewStart"
+                    app:tabBackground="@drawable/tab_layout_selector"
+                    app:tabGravity="start"
+                    app:tabIndicatorColor="@color/text_link_clr"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabMaxWidth="0dp"
+                    app:tabMode="scrollable"
+                    app:tabRippleColor="@color/text_link_clr"
+                    app:tabSelectedTextColor="@color/text_link_clr"
+                    app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                    app:tabTextColor="@color/common_clr"
+                    tools:ignore="RtlCompat" />
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/limit_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:background="@color/divider_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_7dp"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                android:gravity="left"
+                style="@style/medium_text_style"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:text="@string/dailly_allowed_limits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_400dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDFUsername">
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/alowes_limit_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-12dp"
+                    android:background="@color/white"
+                    android:elevation="@dimen/_0dp"
+                    android:textAlignment="viewStart"
+                    app:tabBackground="@drawable/tab_layout_selector"
+                    app:tabGravity="start"
+                    app:tabIndicatorColor="@color/text_link_clr"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabMaxWidth="0dp"
+                    app:tabMode="scrollable"
+                    app:tabRippleColor="@color/text_link_clr"
+                    app:tabSelectedTextColor="@color/text_link_clr"
+                    app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                    app:tabTextColor="@color/common_clr"
+                    tools:ignore="RtlCompat" />
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/alowes_limit_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

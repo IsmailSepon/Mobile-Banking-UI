@@ -623,6 +623,9 @@
     <string name="partnership">Partnership</string>
     <string name="private_limited">Private limited</string>
     <string name="public_limited">Public limited</string>
+    <string name="daily_limits">Daily limits</string>
+    <string name="business_account">Business account</string>
+    <string name="personal_account">Personal account</string>
     <string name="ngo_charity_jv_others">NGO / Charity / JV / Others</string>
     <string name="for_using_in_your_internet_banking_beneficiary_addition_page_or_for_someone_to_send_you_money_via_a_c_payee_cheque_n_nall_money_deposited_or_transferred_to_the_following_account_will_be_available_in_your_paywell_account">For using in your internet banking beneficiary addition page or for someone to send you money via A/C payee cheque.\n\nAll money deposited or transferred to the following account will be available in your PayWell account.</string>
 

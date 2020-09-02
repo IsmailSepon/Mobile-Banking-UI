@@ -1,24 +1,34 @@
-package com.cloudwell.paywell.ui.profile.fragment
+package com.cloudwell.paywell.uiBusiness.control.fragment.limit
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.viewpager.widget.ViewPager
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessvirtualCardFragment
+import com.cloudwell.paywell.uiBusiness.control.adapter.BuControllPagerAdapter
+import com.cloudwell.paywell.uiBusiness.control.fragment.BusinessGeneralControlFragment
+import com.google.android.material.tabs.TabLayout
 
-class DailyFragment : Fragment() {
+
+class PersonalAccountDetailsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View =
-            inflater.inflate(R.layout.daily_limits_fragment, container, false)
-        return view
-    }
+        val root: View = inflater.inflate(R.layout.personalac_details_fragment, container, false)
 
+
+
+
+
+
+
+        return root
+
+    }
 
     companion object {
         /**
@@ -32,12 +42,13 @@ class DailyFragment : Fragment() {
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int): DailyFragment {
-            return DailyFragment().apply {
+        fun newInstance(sectionNumber: Int): PersonalAccountDetailsFragment {
+            return PersonalAccountDetailsFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
                 }
             }
         }
     }
+
 }
