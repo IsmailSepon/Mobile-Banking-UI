@@ -629,6 +629,10 @@
     <string name="ngo_charity_jv_others">NGO / Charity / JV / Others</string>
     <string name="for_using_in_your_internet_banking_beneficiary_addition_page_or_for_someone_to_send_you_money_via_a_c_payee_cheque_n_nall_money_deposited_or_transferred_to_the_following_account_will_be_available_in_your_paywell_account">For using in your internet banking beneficiary addition page or for someone to send you money via A/C payee cheque.\n\nAll money deposited or transferred to the following account will be available in your PayWell account.</string>
     <string name="specify_user_name_mobile_nnumber_email"><![CDATA[Specify user name, mobile\nnumber & email]]></string>
+    <string name="a_dedicated_expense_management_tool_can_save_you_a_huge_amount_of_time_and_effort_not_to_mention_keeping_your_team_happy_this_is_especially_true_if_n_nyou_have_travelling_salespeople_and_need_to_track_their_spending_on_the_road_for_example_accommodation_travel_and_other_expenses"><![CDATA[A dedicated expense management tool can save you a huge amount of time and effort, not to mention keeping your team happy. This is especially true if:\n\nYou have travelling salespeople and need to track their spending on the road (for example, accommodation, travel, and other expenses).]]></string>
+    <string name="business_expense_management_nnow_made_super_easy">Business expense management\nnow made super easy</string>
+    <string name="smart_reconciliation_with_receipts">Smart reconciliation with receipts</string>
+    <string name="you_and_your_team_are_struggling_to_keep_track_of_receipts_making_reconciling_expenses_a_monthly_nnightmare_nif_any_of_this_sounds_familiar_you_really_should_think_about_using_our_expense_management_module"><![CDATA[You and your team are struggling to keep track of receipts, making reconciling expenses a monthly\nnightmare.\nIf any of this sounds familiar, you really should think about using our expense management module.]]></string>
 
 
 </resources>
