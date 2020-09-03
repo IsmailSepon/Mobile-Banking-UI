@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    app:cardElevation="@dimen/_10dp"
+    app:cardCornerRadius="@dimen/_10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/_20dp"
+    android:layout_height="match_parent">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout34"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_20dp"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView467"
+            style="@style/medium_text_style"
+            android:layout_width="@dimen/_240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="18dp"
+            android:gravity="left"
+            android:text="Payment approval rules"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/yest_txt"-->
+<!--            style="@style/text_style"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="32dp"-->
+<!--            android:gravity="left"-->
+<!--            android:text="@string/yes_please_terminate"-->
+<!--            android:textColor="@color/text_link_clr"-->
+<!--            android:textSize="@dimen/_15sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/textView467"-->
+<!--            tools:layout_editor_absoluteY="336dp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/no_txt"-->
+<!--            style="@style/text_style"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="296dp"-->
+<!--            android:gravity="left"-->
+<!--            android:text="No"-->
+<!--            android:textColor="@color/text_link_clr"-->
+<!--            android:textSize="@dimen/_15sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/textView467"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView467" />-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView467">
+
+
+            <TextView
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="9sp"
+                style="@style/text_style"
+                android:id="@+id/textView504"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="If amount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView208"
+                android:layout_width="4dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="7dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView504"
+                app:layout_constraintStart_toEndOf="@+id/textView504"
+                app:layout_constraintTop_toTopOf="@+id/textView504"
+                app:layout_constraintVertical_bias="0.57"
+                app:srcCompat="@drawable/right_slim_arw" />
+
+            <ImageView
+                android:id="@+id/imageView209"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView208"
+                app:layout_constraintStart_toEndOf="@+id/imageView208"
+                app:layout_constraintTop_toTopOf="@+id/imageView208"
+                app:srcCompat="@drawable/small_under_arrow" />
+
+
+            <EditText
+                android:gravity="right"
+                android:id="@+id/legal_first_name_et"
+                style="@style/edittext_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:ems="3"
+                android:hint="1000"
+                android:padding="@dimen/_0dp"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:paddingTop="@dimen/_15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView209"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextFields" />
+
+            <TextView
+                android:id="@+id/textView505"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="then approver     2"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/legal_first_name_et"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

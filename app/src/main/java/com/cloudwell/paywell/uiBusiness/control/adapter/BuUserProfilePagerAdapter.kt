@@ -5,29 +5,27 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardUsersFragment
-import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessvirtualCardFragment
 import com.cloudwell.paywell.uiBusiness.control.fragment.BusinessGeneralControlFragment
-import com.cloudwell.paywell.uiBusiness.control.fragment.BusinessUserControlFragment
+import com.cloudwell.paywell.uiBusiness.control.fragment.personal_profile.PersonalProfile
+import com.cloudwell.paywell.uiBusiness.control.fragment.personal_profile.PersonalProfileSettinggsFrg
+import com.cloudwell.paywell.uiBusiness.control.fragment.user.UserProfile
 
 private val TAB_TITLES = arrayOf(
-    R.string.general,
-    R.string.users,
-    R.string.api
+    R.string.personal_profile,
+    R.string.settings
 )
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-class BuControllPagerAdapter(private val context: Context, fm: FragmentManager) :
+class BuUserProfilePagerAdapter(private val context: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
-            0 -> BusinessGeneralControlFragment.newInstance(0)
-            1 -> BusinessUserControlFragment.newInstance(1)
-            2 -> BusinessCardUsersFragment.newInstance(2)
+            0 -> UserProfile.newInstance(0)
+            1 -> PersonalProfileSettinggsFrg.newInstance(1)
             else -> BusinessGeneralControlFragment.newInstance(0)
         }
 
@@ -40,6 +38,6 @@ class BuControllPagerAdapter(private val context: Context, fm: FragmentManager) 
 
     override fun getCount(): Int {
         // Show 2 total pages.
-        return 3
+        return 2
     }
 }

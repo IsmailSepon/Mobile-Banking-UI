@@ -72,6 +72,16 @@ class BusinessGeneralControlFragment : Fragment() {
             )
         })
 
+        view.document_layout.setOnClickListener(View.OnClickListener {
+
+
+            FragmentHelper.replaceFragment(
+                BuDocumentFragment(),
+                requireActivity().supportFragmentManager,
+                R.id.bu_Control_container
+            )
+        })
+
 
 
 
