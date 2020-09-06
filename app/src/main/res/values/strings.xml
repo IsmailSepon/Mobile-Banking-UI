@@ -633,6 +633,11 @@
     <string name="business_expense_management_nnow_made_super_easy">Business expense management\nnow made super easy</string>
     <string name="smart_reconciliation_with_receipts">Smart reconciliation with receipts</string>
     <string name="you_and_your_team_are_struggling_to_keep_track_of_receipts_making_reconciling_expenses_a_monthly_nnightmare_nif_any_of_this_sounds_familiar_you_really_should_think_about_using_our_expense_management_module"><![CDATA[You and your team are struggling to keep track of receipts, making reconciling expenses a monthly\nnightmare.\nIf any of this sounds familiar, you really should think about using our expense management module.]]></string>
+    <string name="departments">Departments</string>
+    <string name="you_need_to_enter_your_organization_s_cost_center_codes_i_e_gl_codes_according_to_your_chart_of_accounts_where_the_expenses_will_be_debited_or_credited">You need to enter your organization\'s cost center codes i.e. GL codes according to your chart of accounts where the expenses will be debited or credited.</string>
+    <string name="your_organization_s_chart_of_accounts">Your organization’s chart of accounts</string>
+    <string name="save_close"><![CDATA[Save & close]]></string>
+    <string name="save_go_to_organogram"><![CDATA[Save & go to organogram]]></string>
 
 
 </resources>

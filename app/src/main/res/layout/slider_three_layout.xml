@@ -51,7 +51,7 @@
 
 
     <Button
-        android:id="@+id/ac_created_btn"
+        android:id="@+id/slider_3"
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_hight"
         android:elevation="@dimen/evelation_five"

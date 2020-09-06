@@ -9,7 +9,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiBusiness.control.fragment.info_edit.company.CompanyProfileFragment
 import com.cloudwell.paywell.uiBusiness.control.fragment.limit.BuLimitMainFragment
 import com.cloudwell.paywell.uiBusiness.control.fragment.subscriptionPlan.BuSubscriptionPlanFragment
-import com.cloudwell.paywell.uiBusiness.slider.ExpenceManagmentMainFragment
+import com.cloudwell.paywell.uiBusiness.control.fragment.expenceManagment.slider.ExpenceManagmentMainFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.business_general_control_layout.view.*
 
@@ -59,7 +59,11 @@ class BusinessGeneralControlFragment : Fragment() {
 
         view.limit_layout.setOnClickListener(View.OnClickListener {
 
-
+            FragmentHelper.replaceFragment(
+                BuLimitMainFragment(),
+                requireActivity().supportFragmentManager,
+                R.id.bu_Control_container
+            )
         })
 
 

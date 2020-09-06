@@ -23,8 +23,7 @@ class RegistationMainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registation_main)
 
 
-        val adapter =
-            ScreenSlidePagerAdapter(
+        val adapter = ScreenSlidePagerAdapter(
                 this
             )
         reg_view_pager.adapter = adapter

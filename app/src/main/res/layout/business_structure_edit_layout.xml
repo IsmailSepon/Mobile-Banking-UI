@@ -61,7 +61,7 @@
             android:checked="true"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/sole_proprietorship"
-            android:textColor="@color/keypad_text_clr"
+            android:textColor="@drawable/text_radio_selector"
             android:textSize="@dimen/_15sp"
             android:theme="@style/RadioButtonStyle" />
 
@@ -72,7 +72,7 @@
             android:layout_marginTop="@dimen/_25dp"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/partnership"
-            android:textColor="@color/keypad_text_clr"
+            android:textColor="@drawable/text_radio_selector"
             android:textSize="@dimen/_15sp"
             android:theme="@style/RadioButtonStyle" />
 
@@ -83,7 +83,7 @@
             android:layout_marginTop="@dimen/_25dp"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/private_limited"
-            android:textColor="@color/keypad_text_clr"
+            android:textColor="@drawable/text_radio_selector"
             android:textSize="@dimen/_15sp"
             android:theme="@style/RadioButtonStyle" />
 
@@ -94,7 +94,7 @@
             android:layout_marginTop="@dimen/_25dp"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/public_limited"
-            android:textColor="@color/keypad_text_clr"
+            android:textColor="@drawable/text_radio_selector"
             android:textSize="@dimen/_15sp"
             android:theme="@style/RadioButtonStyle" />
 
@@ -104,7 +104,7 @@
             android:layout_marginTop="@dimen/_25dp"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/ngo_charity_jv_others"
-            android:textColor="@color/keypad_text_clr"
+            android:textColor="@drawable/text_radio_selector"
             android:textSize="@dimen/_15sp"
             android:theme="@style/RadioButtonStyle" />
 
