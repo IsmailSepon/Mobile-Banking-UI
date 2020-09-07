@@ -9,14 +9,10 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.ui.registration.RegistationMainActivity
-import com.cloudwell.paywell.ui.registration.fragment.*
-import kotlinx.android.synthetic.main.activity_registation_main.*
-import kotlinx.android.synthetic.main.activity_registation_main.reg_view_pager
-import kotlinx.android.synthetic.main.expence_managment_layout.*
+import com.cloudwell.paywell.uiBusiness.control.Interface.ControlInterface
 import kotlinx.android.synthetic.main.expence_managment_layout.view.*
 
-class ExpenceManagmentFragment : Fragment() {
+class ExpenceManagmentFragment : Fragment(), ControlInterface {
 
     var pager: ViewPager2? = null
 
@@ -31,10 +27,11 @@ class ExpenceManagmentFragment : Fragment() {
 
 
         val adapter = ScreenSlidePagerAdapter(activity)
-        view.expence_view_pager.adapter = adapter
-        view.expence_view_pager.isUserInputEnabled = false
+        pager = view.expence_view_pager
+        pager?.adapter = adapter
+        pager?.isUserInputEnabled = false
 
-        view.expence_view_pager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        pager?.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
 
@@ -51,25 +48,47 @@ class ExpenceManagmentFragment : Fragment() {
         return view
     }
 
-    private class ScreenSlidePagerAdapter(fa: FragmentActivity?) :
+    class ScreenSlidePagerAdapter(fa: FragmentActivity?) :
         FragmentStateAdapter(fa!!) {
 
         override fun createFragment(position: Int): Fragment {
             when (position) {
                 0 -> return OrginizeChartFragment()
-                1 -> return RegTwoFeg()
-                2 -> return RegThreeFeg()
+                1 -> return OrginizeApprovalFragment()
+                2 -> return BuClaimentProfileFragment()
             }
-            return RegOneFeg()
+            return OrginizeChartFragment()
 
         }
 
         override fun getItemCount(): Int {
-            return 6
+            return 3
         }
     }
 
-    fun setPagerFragment(a: Int) {
-        reg_view_pager.currentItem = a
+    fun setPagerFrg(a: Int) {
+        pager?.currentItem = a
     }
+
+    override fun setFragment(a: Int) {
+        pager?.currentItem = a
+    }
+
+    override fun noInternetConnectionFound() {
+        TODO("Not yet implemented")
+    }
+
+    override fun showProgress() {
+        TODO("Not yet implemented")
+    }
+
+    override fun hiddenProgress() {
+        TODO("Not yet implemented")
+    }
+
+    override fun onFailure(message: String?) {
+        TODO("Not yet implemented")
+    }
+
+
 }

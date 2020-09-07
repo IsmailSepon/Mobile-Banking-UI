@@ -638,6 +638,12 @@
     <string name="your_organization_s_chart_of_accounts">Your organization’s chart of accounts</string>
     <string name="save_close"><![CDATA[Save & close]]></string>
     <string name="save_go_to_organogram"><![CDATA[Save & go to organogram]]></string>
+    <string name="i_need_claimant_s_line_manager_and_nother_approvers_to_facilitate_nre_imbursement">I need claimant’s line manager and\nother approvers to facilitate\nre-imbursement.</string>
+    <string name="i_my_deputy_will_approve_all_expenses">I/my deputy will approve all expenses</string>
+    <string name="claimant_profiles">Claimant profiles</string>
+    <string name="please_add_the_users_who_will_be_able_to_claim_their_expenses_you_may_also_create_upload_a_user_list_using_bulk_upload"><![CDATA[Please add the users who will be able to claim their expenses. you may also create & upload a user list using bulk upload.]]></string>
+    <string name="add_claimant">Add claimant</string>
+    <string name="bulk_upload">Bulk upload</string>
 
 
 </resources>

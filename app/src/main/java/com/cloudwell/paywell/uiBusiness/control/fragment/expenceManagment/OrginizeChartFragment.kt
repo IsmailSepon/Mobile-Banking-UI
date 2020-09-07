@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.uiBusiness.control.Interface.ControlInterface
 import kotlinx.android.synthetic.main.organize_chart_fragment.view.*
 
 class OrginizeChartFragment : Fragment() {
@@ -69,9 +70,15 @@ class OrginizeChartFragment : Fragment() {
             liabilities()
         })
 
+        var mView: ControlInterface? = null
 
 
+        view.save_organogram_btn.setOnClickListener(View.OnClickListener {
 
+            val parent = activity as NewExpenceActivity?
+            parent?.setPagerFrg(1)
+
+        })
 
 
 
@@ -84,7 +91,6 @@ class OrginizeChartFragment : Fragment() {
 
 
         liabilities_layout?.addView(paywellACview)
-
     }
 
     private fun expenceCatagory() {
@@ -102,6 +108,5 @@ class OrginizeChartFragment : Fragment() {
 
 
         paywellAClayouy?.addView(paywellACview)
-
     }
 }

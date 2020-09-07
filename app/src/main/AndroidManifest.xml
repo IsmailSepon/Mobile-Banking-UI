@@ -26,12 +26,16 @@
         android:supportsRtl="true"
         android:theme="@style/FullScreen"
         tools:replace="android:allowBackup">
-        <activity android:name="com.cloudwell.paywell.uiBusiness.control.BusinessControlHostActivity"/>
-        <activity android:name="com.cloudwell.paywell.uiBusiness.cards.BusinessCardLandingActivity"/>
+        <activity android:name=".uiBusiness.control.fragment.expenceManagment.NewExpenceActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".uiBusiness.control.BusinessControlHostActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".uiBusiness.cards.BusinessCardLandingActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name="com.cloudwell.paywell.uiBusiness.sendFund.BusinessSendFundHostActivity"
+            android:name=".uiBusiness.sendFund.BusinessSendFundHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.cloudwell.paywell.uiBusiness.BusinessLandingActivity" />
+        <activity android:name=".uiBusiness.BusinessLandingActivity" />
         <activity
             android:name=".ui.registration.nidVerification.ocr.NidInputActivity"
             android:screenOrientation="portrait"
