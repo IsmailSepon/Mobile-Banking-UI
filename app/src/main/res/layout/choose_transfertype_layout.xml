@@ -80,6 +80,7 @@
             tools:ignore="MissingConstraints">
 
             <RadioButton
+                android:textColor="@drawable/text_radio_selector"
                 android:id="@+id/radiomyselt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,11 +89,11 @@
                 android:fontFamily="@font/roboto_medium"
                 android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
                 android:text="@string/to_myself"
-                android:textColor="@color/keypad_text_clr"
                 android:textSize="@dimen/_16sp"
                 android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
+                android:textColor="@drawable/text_radio_selector"
                 android:id="@+id/radioanother_person"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -100,7 +101,6 @@
                 android:fontFamily="@font/roboto_medium"
                 android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
                 android:text="@string/to_another_person"
-                android:textColor="@color/keypad_text_clr"
                 android:textSize="@dimen/_16sp"
                 android:theme="@style/RadioButtonStyle" />
 
@@ -112,7 +112,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
                 android:text="@string/to_a_business"
-                android:textColor="@color/keypad_text_clr"
+                android:textColor="@drawable/text_radio_selector"
                 android:textSize="@dimen/_16sp"
                 android:theme="@style/RadioButtonStyle" />
 
@@ -124,7 +124,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:onClick="@{chooseViewmodelXml::onRadioButtonClicked}"
                 android:text="@string/to_a_credit_card"
-                android:textColor="@color/keypad_text_clr"
+                android:textColor="@drawable/text_radio_selector"
                 android:textSize="@dimen/_16sp"
                 android:theme="@style/RadioButtonStyle" />
 

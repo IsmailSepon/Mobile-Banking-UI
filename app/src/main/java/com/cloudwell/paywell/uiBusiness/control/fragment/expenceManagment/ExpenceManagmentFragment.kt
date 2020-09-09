@@ -9,10 +9,9 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.uiBusiness.control.Interface.ControlInterface
 import kotlinx.android.synthetic.main.expence_managment_layout.view.*
 
-class ExpenceManagmentFragment : Fragment(), ControlInterface {
+class ExpenceManagmentFragment : Fragment(){
 
     var pager: ViewPager2? = null
 
@@ -70,25 +69,7 @@ class ExpenceManagmentFragment : Fragment(), ControlInterface {
         pager?.currentItem = a
     }
 
-    override fun setFragment(a: Int) {
-        pager?.currentItem = a
-    }
 
-    override fun noInternetConnectionFound() {
-        TODO("Not yet implemented")
-    }
-
-    override fun showProgress() {
-        TODO("Not yet implemented")
-    }
-
-    override fun hiddenProgress() {
-        TODO("Not yet implemented")
-    }
-
-    override fun onFailure(message: String?) {
-        TODO("Not yet implemented")
-    }
 
 
 }

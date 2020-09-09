@@ -644,6 +644,32 @@
     <string name="please_add_the_users_who_will_be_able_to_claim_their_expenses_you_may_also_create_upload_a_user_list_using_bulk_upload"><![CDATA[Please add the users who will be able to claim their expenses. you may also create & upload a user list using bulk upload.]]></string>
     <string name="add_claimant">Add claimant</string>
     <string name="bulk_upload">Bulk upload</string>
+    <string name="enable_partial_paymentw">Enable partial paymentw</string>
+    <string name="add_a_description_or_reference">Add a description or reference</string>
+    <string name="enter_an_amount_you_want_to_charge_your_customer">Enter an amount you want to charge your customer</string>
+    <string name="set_an_amount">Set an amount</string>
+    <string name="create_link">Create link</string>
+    <string name="partial_payment_enabled">Partial payment enabled</string>
+    <string name="bill_for_june">Bill for June</string>
+    <string name="requested_via_payment_link">Requested via payment link</string>
+    <string name="share_thru_email_messenger_whatsapp_etc">Share thru email, messenger, WhatsApp etc.</string>
+    <string name="share_link">Share link</string>
+    <string name="paste_it_into_an_email_whatsapp_messenger">Paste it into an email/whatsapp/messenger</string>
+    <string name="copy_link">Copy link</string>
+    <string name="preview">Preview</string>
+    <string name="expires_12_june_2020_at_18_16">Expires 12 June 2020 at 18:16</string>
+    <string name="include_the_link_in_an_email_or_message_and_send_it_to_your_customer_to_request_a_payment_they_ll_be_able_to_visit_the_link_and_enter_their_card_or_bank_details">Include the link in an email or message and send it to your customer to request a payment. They’ll be able to visit the link and enter their card or bank details</string>
+    <string name="payment_request_link_for_500_created">Payment request link for ৳500 created</string>
+    <string name="payment_for">Payment for</string>
+    <string name="mango_supply">Mango supply</string>
+    <string name="amount_payable">Amount payable</string>
+    <string name="select_a_payment_type">Select a payment type</string>
+    <string name="payment_in_full">Payment in full</string>
+    <string name="make_payment_in_parts">Make payment in parts</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="show_payment_history">Show payment history</string>
+    <string name="paid_using_mastercard_thru_brac_bank">Paid using Mastercard thru BRAC Bank</string>
+    <string name="successful_payments">Successful payments</string>
 
 
 </resources>

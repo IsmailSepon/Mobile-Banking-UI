@@ -78,6 +78,7 @@
 
 
                         <TextView
+                            android:id="@+id/schedule_payment"
                             android:textColor="@color/keypad_text_clr"
                             android:textSize="@dimen/_12sp"
                             style="@style/text_style"
@@ -227,6 +228,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/marchent_creat_plink"
                             android:textColor="@color/keypad_text_clr"
                             android:textSize="@dimen/_12sp"
                             style="@style/text_style"
