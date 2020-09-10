@@ -662,7 +662,6 @@
     <string name="payment_request_link_for_500_created">Payment request link for ৳500 created</string>
     <string name="payment_for">Payment for</string>
     <string name="mango_supply">Mango supply</string>
-    <string name="amount_payable">Amount payable</string>
     <string name="select_a_payment_type">Select a payment type</string>
     <string name="payment_in_full">Payment in full</string>
     <string name="make_payment_in_parts">Make payment in parts</string>
@@ -670,6 +669,9 @@
     <string name="show_payment_history">Show payment history</string>
     <string name="paid_using_mastercard_thru_brac_bank">Paid using Mastercard thru BRAC Bank</string>
     <string name="successful_payments">Successful payments</string>
+    <string name="amount_payable">Amount payable</string>
+    <string name="remember_this_card">Remember this card</string>
+    <string name="date_of_expiry">Date of expiry</string>
 
 
 </resources>
