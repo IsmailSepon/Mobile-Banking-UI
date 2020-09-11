@@ -5,11 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.ViewPager
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.uiBusiness.control.adapter.BuControllPagerAdapter
-import com.cloudwell.paywell.uiBusiness.control.fragment.BusinessGeneralControlFragment
-import com.google.android.material.tabs.TabLayout
 
 
 class BusinessAccountDetailsFragment : Fragment() {

@@ -243,6 +243,7 @@
 
 
                         <TextView
+                            android:id="@+id/create_bulk_payment"
                             android:textColor="@color/keypad_text_clr"
                             android:textSize="@dimen/_12sp"
                             style="@style/text_style"
@@ -257,6 +258,7 @@
 
 
                         <TextView
+                            android:id="@+id/manage_link_txt"
                             android:textColor="@color/keypad_text_clr"
                             android:textSize="@dimen/_12sp"
                             style="@style/text_style"

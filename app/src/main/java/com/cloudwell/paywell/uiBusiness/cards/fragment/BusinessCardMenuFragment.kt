@@ -34,6 +34,19 @@ class BusinessCardMenuFragment : Fragment() {
         })
 
 
+        view.create_bulk_payment.setOnClickListener(View.OnClickListener {
+            val intent = Intent(view.context, BusinessCardLandingActivity::class.java)
+            intent.putExtra("bu_cards", "3")
+            view.context.startActivity(intent)
+        })
+
+        view.manage_link_txt.setOnClickListener(View.OnClickListener {
+            val intent = Intent(view.context, BusinessCardLandingActivity::class.java)
+            intent.putExtra("bu_cards", "4")
+            view.context.startActivity(intent)
+        })
+
+
         return view
     }
 
