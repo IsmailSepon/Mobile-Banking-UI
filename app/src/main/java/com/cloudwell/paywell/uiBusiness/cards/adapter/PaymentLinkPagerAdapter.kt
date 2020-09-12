@@ -29,7 +29,7 @@ class PaymentLinkPagerAdapter(private val context: Context, fm: FragmentManager)
             1 -> BusinessPartiallypaidFragment.newInstance(1)
             2 -> BusinessUnPaidFragment.newInstance(2)
             3 -> BusinessAPIFragment.newInstance(3)
-            5 -> BusinessReminderSettingsFragment.newInstance(4)
+            4 -> BusinessReminderSettingsFragment.newInstance(4)
             else -> BusinessCardTransactionFragment.newInstance(0)
         }
 

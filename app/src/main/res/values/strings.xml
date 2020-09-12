@@ -674,8 +674,8 @@
     <string name="date_of_expiry">Date of expiry</string>
     <string name="payment_links">Payment links</string>
     <string name="need_help_take_a_tour">Need help? Take a tour</string>
-    <string name="paid">Paid</string>
     <string name="unpaid">Unpaid</string>
+    <string name="paid">Paid</string>
     <string name="reminder_settings">Reminder settings</string>
     <string name="partially_paid">Partially paid</string>
 
