@@ -678,6 +678,20 @@
     <string name="paid">Paid</string>
     <string name="reminder_settings">Reminder settings</string>
     <string name="partially_paid">Partially paid</string>
+    <string name="developer_api">Developer API</string>
+    <string name="production_api_key">Production API key</string>
+    <string name="use_the_demo_sandbox_environment_to_test_api_integration_checkout_and_payment_transactions_before_going_live">Use the demo sandbox environment to test API integration, checkout, and payment transactions before going live.</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="please_keep_your_production_api_key_private">Please keep your production API key private.</string>
+    <string name="send_automated_reminders_for_unpaid_payment_links_and_get_paid_on_time">Send automated reminders for unpaid payment links and get paid on time.</string>
+    <string name="for_links_with_expiry">For links with expiry</string>
+    <string name="reminders_for_payment_links">Reminders for payment links</string>
+    <string name="customers_will_receive_email_or_sms_only_if_the_details_are_mentioned_during_the_creation_of_a_payment_link">Customers will receive email or SMS only if the details are mentioned during the creation of a payment link</string>
+    <string name="add_reminder">Add reminder</string>
+    <string name="for_links_without_expiry">For links without expiry</string>
+    <string name="advanced_settings">Advanced settings</string>
+    <string name="save_changes">Save changes</string>
+    <string name="reminders_will_be_sent_to_customers_between_11am_12pm_and_3pm_5pm_you_can_turn_on_off_reminders_for_any_individual_customer">Reminders will be sent to customers between 11AM - 12PM and 3PM - 5PM. You can turn ON/OFF reminders for any individual customer.</string>
 
 
 </resources>

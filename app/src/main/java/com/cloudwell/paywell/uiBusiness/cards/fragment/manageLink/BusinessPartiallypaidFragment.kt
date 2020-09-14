@@ -5,7 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.uiBusiness.cards.adapter.PartiallyPaidIRecyclerAdapter
+import com.cloudwell.paywell.uiBusiness.cards.model.PaidExpencePOjo
 
 class BusinessPartiallypaidFragment : Fragment(){
 
@@ -15,7 +19,32 @@ class BusinessPartiallypaidFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.business_card_settings_layout, container, false)
+        val view = inflater.inflate(R.layout.partially_paid_layout, container, false)
+
+
+        val recyclerView : RecyclerView = view.findViewById(R.id.patially_paid_recyclerview)
+
+        val linearLayoutManager: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        recyclerView.layoutManager = linearLayoutManager
+
+        recyclerView.setHasFixedSize(false)
+
+
+        val item = PaidExpencePOjo()
+        item.name = "AK. Bulbul"
+        item.date = "10 june"
+        item.amount = "৳6,000"
+
+
+
+        var list = ArrayList<PaidExpencePOjo>()
+        list.add(item)
+        list.add(item)
+        list.add(item)
+
+
+        recyclerView.adapter = PartiallyPaidIRecyclerAdapter(requireContext(), list)
+
 
 
 

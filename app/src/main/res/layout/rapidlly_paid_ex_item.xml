@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/_27dp"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/imageView227"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/payment_link" />
+
+    <TextView
+        android:id="@+id/textView558"
+        style="@style/medium_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="bill for July payment"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView227"
+        app:layout_constraintTop_toTopOf="@+id/imageView227" />
+
+    <TextView
+        android:id="@+id/date_txt"
+        style="@style/medium_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from 01785547861"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintStart_toStartOf="@+id/textView558"
+        app:layout_constraintTop_toBottomOf="@+id/textView558" />
+
+    <TextView
+        android:id="@+id/name_txt"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="৳7500 payment received on Wed, 10 June"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/date_txt"
+        app:layout_constraintTop_toBottomOf="@+id/date_txt" />
+
+    <TextView
+        android:id="@+id/amount"
+        style="@style/text_style"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="৳1500.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView558" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        android:id="@+id/textView557"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due "
+        app:layout_constraintBottom_toBottomOf="@+id/amount"
+        app:layout_constraintEnd_toStartOf="@+id/amount"
+        app:layout_constraintTop_toTopOf="@+id/amount" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        android:id="@+id/textView560"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="৳1500.00"
+        app:layout_constraintEnd_toEndOf="@+id/amount"
+        app:layout_constraintTop_toBottomOf="@+id/amount" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        android:id="@+id/textView561"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:text="@string/paid"
+        app:layout_constraintBottom_toBottomOf="@+id/textView560"
+        app:layout_constraintEnd_toStartOf="@+id/textView560"
+        app:layout_constraintTop_toBottomOf="@+id/amount" />
+</androidx.constraintlayout.widget.ConstraintLayout>

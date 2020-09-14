@@ -143,6 +143,13 @@
         <item name="fontFamily">@font/roboto_medium</item>
     </style>
 
+    <style name="light_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="fontFamily">@font/roboto_light</item>
+    </style>
+
     <style name="edittext_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -265,5 +272,9 @@
         <item name="android:popupBackground">@drawable/popup_bg</item>
     </style>
 
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/spinner_bg_solid</item>
+    </style>
 
 </resources>

@@ -29,8 +29,7 @@ class BusinessPaidFragment : Fragment(){
 
         val recyclerView : RecyclerView = view.findViewById(R.id.business_paid_recyclerview)
 
-        val linearLayoutManager: LinearLayoutManager =
-            LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        val linearLayoutManager: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         recyclerView.layoutManager = linearLayoutManager
 
         recyclerView.setHasFixedSize(false)
@@ -59,12 +58,7 @@ class BusinessPaidFragment : Fragment(){
 
         recyclerView.adapter = PaidIRecyclerAdapter(requireContext(), list)
 
-//        recyclerView.addItemDecoration(
-//            DividerItemDecoration(
-//                recyclerView.context,
-//                DividerItemDecoration.VERTICAL
-//            )
-//        )
+
 
         val itemTouchHelper =
             ItemTouchHelper(object : SwipeHelper(view.business_paid_recyclerview) {

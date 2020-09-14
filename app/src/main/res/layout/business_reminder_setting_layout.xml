@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:paddingBottom="@dimen/_40dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:id="@+id/textView564"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/reminders_for_payment_links"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:textColor="@color/recyclerview_title"
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:gravity="left"
+                android:id="@+id/textView568"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="60dp"
+                android:text="@string/send_automated_reminders_for_unpaid_payment_links_and_get_paid_on_time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView564"
+                app:layout_constraintTop_toBottomOf="@+id/textView564" />
+
+
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView564"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView564" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_24_7dp"
+            android:text="@string/for_links_with_expiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/_20dp"
+            android:orientation="vertical"
+            android:id="@+id/expair_link_layout"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/add_expire_btn"
+            android:textColor="@color/text_link_clr"
+            android:drawablePadding="@dimen/_5dp"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/add_reminder"
+            android:drawableStart="@drawable/add_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_24_7dp"
+            android:text="@string/for_links_without_expiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/_20dp"
+            android:orientation="vertical"
+            android:id="@+id/withoutexpair_link_layout"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:textColor="@color/text_link_clr"
+            android:drawablePadding="@dimen/_5dp"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/add_reminder"
+            android:drawableStart="@drawable/add_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_marginStart="@dimen/_20dp"
+            android:textColor="@color/text_link_clr"
+            android:drawablePadding="@dimen/_5dp"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:drawableEnd="@drawable/small_top_arrow"
+            android:layout_marginTop="@dimen/_30dp"
+            android:text="@string/advanced_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:paddingBottom="@dimen/_10"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/textView572"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                android:text="Channels"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="67dp"
+                android:button="@drawable/checkbox_selector_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/textView572"
+                app:layout_constraintStart_toEndOf="@+id/textView572"
+                app:layout_constraintTop_toTopOf="@+id/textView572" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:button="@drawable/checkbox_selector_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/textView572"
+                app:layout_constraintStart_toEndOf="@+id/textView573"
+                app:layout_constraintTop_toTopOf="@+id/textView572" />
+
+            <TextView
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:id="@+id/textView573"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="SMS"
+                app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
+                app:layout_constraintStart_toEndOf="@+id/checkBox2"
+                app:layout_constraintTop_toTopOf="@+id/checkBox2" />
+
+            <TextView
+                android:id="@+id/textView574"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="EMAIL"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
+                app:layout_constraintStart_toEndOf="@+id/checkBox3"
+                app:layout_constraintTop_toTopOf="@+id/checkBox2" />
+
+            <TextView
+                android:textColor="@color/recyclerview_title"
+                android:textSize="@dimen/_10sp"
+                style="@style/text_style"
+                android:gravity="left"
+                android:id="@+id/textView575"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="@dimen/_50dp"
+                android:lineHeight="@dimen/_13_3sp"
+                android:text="@string/customers_will_receive_email_or_sms_only_if_the_details_are_mentioned_during_the_creation_of_a_payment_link"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/checkBox2"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox2"
+                tools:targetApi="p" />
+
+            <TextView
+                android:id="@+id/textView571"
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="55dp"
+                android:gravity="left"
+                android:text="@string/reminders_will_be_sent_to_customers_between_11am_12pm_and_3pm_5pm_you_can_turn_on_off_reminders_for_any_individual_customer"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView575" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_50dp"
+            android:id="@+id/ac_created_btn"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_hight"
+            android:elevation="@dimen/evelation_five"
+            android:background="@drawable/round_btn_visable"
+            android:text="@string/save_changes"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:targetApi="lollipop" />
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>
