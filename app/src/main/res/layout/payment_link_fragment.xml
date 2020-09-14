@@ -109,16 +109,16 @@
             tools:ignore="RtlCompat" />
 
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/payment_link_view_pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
-
     </LinearLayout>
 
 
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/payment_link_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
 
