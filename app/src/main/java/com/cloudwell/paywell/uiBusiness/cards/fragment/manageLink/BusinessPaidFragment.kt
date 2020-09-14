@@ -39,12 +39,12 @@ class BusinessPaidFragment : Fragment(){
         val item = PaidExpencePOjo()
         item.name = "AK. Bulbul"
         item.date = "10 june"
-        item.amount = "600"
+        item.amount = "৳6,000"
 
         val item1 = PaidExpencePOjo()
         item1.name = "AK. Bulbul"
         item1.date = "16 june"
-        item1.amount = "600"
+        item1.amount = "৳6,000"
 
 
 
