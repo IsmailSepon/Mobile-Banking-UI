@@ -676,6 +676,11 @@
     <string name="need_help_take_a_tour">Need help? Take a tour</string>
     <string name="unpaid">Unpaid</string>
     <string name="paid">Paid</string>
+    <string name="issued">Issued</string>
+    <string name="draft">Draft</string>
+    <string name="customers">Customers</string>
+    <string name="expired">Expired</string>
+    <string name="cancelled">Cancelled</string>
     <string name="reminder_settings">Reminder settings</string>
     <string name="partially_paid">Partially paid</string>
     <string name="developer_api">Developer API</string>

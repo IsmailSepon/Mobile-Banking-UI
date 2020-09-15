@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageView225"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView553"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Invoices"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView225"
+            app:layout_constraintStart_toEndOf="@+id/imageView225"
+            app:layout_constraintTop_toTopOf="@+id/imageView225" />
+
+        <TextView
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:drawablePadding="@dimen/_5dp"
+            android:drawableStart="@drawable/help_ic"
+            android:id="@+id/textView555"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="18dp"
+            android:text="@string/need_help_take_a_tour"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView556"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="18dp"
+            android:drawableStart="@drawable/add_view"
+            android:drawablePadding="@dimen/_5dp"
+            android:text="Create invoice"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView555" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDFUsername">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/invoice_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-18dp"
+            android:background="@color/white"
+            android:elevation="@dimen/_0dp"
+            android:textAlignment="viewStart"
+            app:tabBackground="@drawable/tab_layout_selector"
+            app:tabGravity="start"
+            app:tabIndicatorColor="@color/text_link_clr"
+            app:tabIndicatorFullWidth="false"
+            app:tabMaxWidth="0dp"
+            app:tabMode="auto"
+            app:tabRippleColor="@color/text_link_clr"
+            app:tabSelectedTextColor="@color/text_link_clr"
+            app:tabTextAppearance="@style/CustomTextAppearanceTab"
+            app:tabTextColor="@color/common_clr"
+            tools:ignore="RtlCompat" />
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/bu_invoice_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+
+</LinearLayout>

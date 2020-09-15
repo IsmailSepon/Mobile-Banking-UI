@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.uiBusiness.cards.fragment.invoice.InvoiceMainFragment
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.invoice_slider_three_layout.view.*
 
 class InvoiceSliderThreeFragment : Fragment() {
@@ -21,6 +23,14 @@ class InvoiceSliderThreeFragment : Fragment() {
 
         view.invoice_three.setOnClickListener(View.OnClickListener {
 
+//            Intent(view.context, NewExpenceActivity::class.java).also {
+//                view.context.startActivity(it)
+//            }
+//
+//
+            FragmentHelper.replaceFragment(
+                InvoiceMainFragment(), requireActivity().supportFragmentManager, R.id.bu_Cards_container
+            )
 
         })
 

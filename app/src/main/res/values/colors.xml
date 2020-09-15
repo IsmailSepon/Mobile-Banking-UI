@@ -39,4 +39,8 @@
     <color name="tab_selected_clr">#eef3fa</color>
     <color name="resetpin_bg">#e1eaf5</color>
     <color name="ash_round_btn">#f2f7fe</color>
+    <color name="profile_txt_clr">#586c8c</color>
+
+
+
 </resources>
