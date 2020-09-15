@@ -16,7 +16,7 @@ class BuPaymentLinkFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.payment_link_fragment, container, false)
+        val view: View = inflater.inflate(R.layout.invoice_slider_fragment, container, false)
 
 
 

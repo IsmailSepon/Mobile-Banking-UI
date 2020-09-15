@@ -692,6 +692,8 @@
     <string name="advanced_settings">Advanced settings</string>
     <string name="save_changes">Save changes</string>
     <string name="reminders_will_be_sent_to_customers_between_11am_12pm_and_3pm_5pm_you_can_turn_on_off_reminders_for_any_individual_customer">Reminders will be sent to customers between 11AM - 12PM and 3PM - 5PM. You can turn ON/OFF reminders for any individual customer.</string>
+    <string name="money_is_money_but_how_you_collect_and_organize_those_funds_counts_especially_if_you_re_just_starting_out_maintaining_a_positive_cash_flow_can_make_or_break_your_business_luckily_with_paywell_for_business_we_have_you_covered_with_the_easiest_solution_for_invoicing_ntightly_integrated_with_payments">Money is money, but how you collect and organize those funds counts. Especially if you’re just starting out, maintaining a positive cash flow can make or break your business. Luckily, with PayWell for business, we have you covered with the easiest solution for invoicing,\ntightly integrated with payments.</string>
+    <string name="efficient_invoicing">Efficient invoicing</string>
 
 
 </resources>

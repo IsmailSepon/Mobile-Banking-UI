@@ -332,6 +332,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/bu_create_invoice"
                             android:textColor="@color/keypad_text_clr"
                             android:textSize="@dimen/_12sp"
                             style="@style/text_style"
