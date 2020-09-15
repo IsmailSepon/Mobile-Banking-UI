@@ -1,6 +1,5 @@
 package com.cloudwell.paywell.uiBusiness.cards.fragment.invoice
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,12 +10,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.account.adapter.SwipeHelper
-import com.cloudwell.paywell.ui.spiltBill.fragment.SpiltBillHoastActivity
-import com.cloudwell.paywell.uiBusiness.cards.adapter.IssuedIRecyclerAdapter
+import com.cloudwell.paywell.uiBusiness.cards.adapter.DraftRecyclerAdapter
 import com.cloudwell.paywell.uiBusiness.cards.model.IssuedPOjo
-import kotlinx.android.synthetic.main.business_paid_layout.view.*
+import kotlinx.android.synthetic.main.business_draft_layout.view.*
 
-class BusinessIssuedFragment : Fragment(){
+class BusinessDraftFragment : Fragment(){
 
 
     override fun onCreateView(
@@ -24,27 +22,27 @@ class BusinessIssuedFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.business_issued_layout, container, false)
+        val view = inflater.inflate(R.layout.business_draft_layout, container, false)
 
 
-        val recyclerView : RecyclerView = view.findViewById(R.id.business_paid_recyclerview)
+        val recyclerView : RecyclerView = view.findViewById(R.id.business_draft_recyclerview)
 
         val linearLayoutManager: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         recyclerView.layoutManager = linearLayoutManager
 
         recyclerView.setHasFixedSize(false)
-
-
+//
+//
         val item = IssuedPOjo()
-        item.name = "Benham Pharmaceuticals"
+        item.name = "Fair International"
         item.date = "10 june"
-        item.link = "https://bwl.io/i/i8s7qxQ"
+        item.link = "Saved by Tokee Mesbah, 03:55 PM"
         item.profile = "B"
 
         val item1 = IssuedPOjo()
-        item1.name = "MAK Group"
+        item1.name = "ICDDRB"
         item1.date = "15 june"
-        item1.link = "https://bwl.io/i/i8s7qxQ"
+        item1.link = "Saved by Tanim Bulbul, 03:55 PM"
         item1.profile = "M"
 
 
@@ -54,27 +52,27 @@ class BusinessIssuedFragment : Fragment(){
         list.add(item)
         list.add(item1)
         list.add(item1)
-
-
-        recyclerView.adapter = IssuedIRecyclerAdapter(requireContext(), list)
+//
+//
+        recyclerView.adapter = DraftRecyclerAdapter(requireContext(), list)
 
 
 
         val itemTouchHelper =
-            ItemTouchHelper(object : SwipeHelper(view.business_paid_recyclerview) {
+            ItemTouchHelper(object : SwipeHelper(view.business_draft_recyclerview) {
                 override fun instantiateUnderlayButton(position: Int): List<UnderlayButton> {
                     var buttons = listOf<UnderlayButton>()
                     val deleteButton = deleteButton(position)
                     val markAsUnreadButton = markAsUnreadButton(position)
                     val downlode = downlodeButton(position)
                     val share = shareButton(position)
-                    buttons = listOf(  share,downlode,markAsUnreadButton,deleteButton)
+                    buttons = listOf(markAsUnreadButton, deleteButton)
 
                     return buttons
                 }
             })
 
-        itemTouchHelper.attachToRecyclerView(view.business_paid_recyclerview)
+        itemTouchHelper.attachToRecyclerView(view.business_draft_recyclerview)
 
 
         return view
@@ -105,9 +103,7 @@ class BusinessIssuedFragment : Fragment(){
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {
 
-                    val intent = Intent(activity, SpiltBillHoastActivity::class.java)
-                    intent.putExtra("spilt", "1")
-                    startActivity(intent)
+
                 }
             })
     }
@@ -155,8 +151,8 @@ class BusinessIssuedFragment : Fragment(){
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int): BusinessIssuedFragment {
-            return BusinessIssuedFragment().apply {
+        fun newInstance(sectionNumber: Int): BusinessDraftFragment {
+            return BusinessDraftFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
                 }

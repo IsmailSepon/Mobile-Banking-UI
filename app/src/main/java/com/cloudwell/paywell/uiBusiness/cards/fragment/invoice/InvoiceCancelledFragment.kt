@@ -14,9 +14,9 @@ import com.cloudwell.paywell.ui.account.adapter.SwipeHelper
 import com.cloudwell.paywell.ui.spiltBill.fragment.SpiltBillHoastActivity
 import com.cloudwell.paywell.uiBusiness.cards.adapter.IssuedIRecyclerAdapter
 import com.cloudwell.paywell.uiBusiness.cards.model.IssuedPOjo
-import kotlinx.android.synthetic.main.business_paid_layout.view.*
+import kotlinx.android.synthetic.main.invoice_cancled_layout.view.*
 
-class BusinessIssuedFragment : Fragment(){
+class InvoiceCancelledFragment : Fragment(){
 
 
     override fun onCreateView(
@@ -24,10 +24,10 @@ class BusinessIssuedFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.business_issued_layout, container, false)
+        val view = inflater.inflate(R.layout.invoice_cancled_layout, container, false)
 
 
-        val recyclerView : RecyclerView = view.findViewById(R.id.business_paid_recyclerview)
+        val recyclerView : RecyclerView = view.findViewById(R.id.invoice_cancled_recyclerview)
 
         val linearLayoutManager: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         recyclerView.layoutManager = linearLayoutManager
@@ -36,13 +36,13 @@ class BusinessIssuedFragment : Fragment(){
 
 
         val item = IssuedPOjo()
-        item.name = "Benham Pharmaceuticals"
+        item.name = "Square Pharmaceuticals"
         item.date = "10 june"
         item.link = "https://bwl.io/i/i8s7qxQ"
         item.profile = "B"
 
         val item1 = IssuedPOjo()
-        item1.name = "MAK Group"
+        item1.name = "Najnin Farjana"
         item1.date = "15 june"
         item1.link = "https://bwl.io/i/i8s7qxQ"
         item1.profile = "M"
@@ -61,20 +61,20 @@ class BusinessIssuedFragment : Fragment(){
 
 
         val itemTouchHelper =
-            ItemTouchHelper(object : SwipeHelper(view.business_paid_recyclerview) {
+            ItemTouchHelper(object : SwipeHelper(view.invoice_cancled_recyclerview) {
                 override fun instantiateUnderlayButton(position: Int): List<UnderlayButton> {
                     var buttons = listOf<UnderlayButton>()
                     val deleteButton = deleteButton(position)
                     val markAsUnreadButton = markAsUnreadButton(position)
                     val downlode = downlodeButton(position)
                     val share = shareButton(position)
-                    buttons = listOf(  share,downlode,markAsUnreadButton,deleteButton)
+                    buttons = listOf(  deleteButton, markAsUnreadButton)
 
                     return buttons
                 }
             })
 
-        itemTouchHelper.attachToRecyclerView(view.business_paid_recyclerview)
+        itemTouchHelper.attachToRecyclerView(view.invoice_cancled_recyclerview)
 
 
         return view
@@ -84,10 +84,10 @@ class BusinessIssuedFragment : Fragment(){
     private fun deleteButton(position: Int): SwipeHelper.UnderlayButton {
         return SwipeHelper.UnderlayButton(
             activity?.applicationContext!!,
-            "Edit",
+            "Delete",
             12.0f,
             //android.R.color.darker_gray,
-            R.color.recycler_swipe_gray,
+            R.color.colorPrimaryDark,
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {
 
@@ -98,10 +98,10 @@ class BusinessIssuedFragment : Fragment(){
     private fun markAsUnreadButton(position: Int): SwipeHelper.UnderlayButton {
         return SwipeHelper.UnderlayButton(
             activity?.applicationContext!!,
-            "Copy",
+            "Re-issue",
             12.0f,
             //android.R.color.holo_orange_dark,
-            R.color.colorPrimaryDark,
+            R.color.recycler_swipe_gray,
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {
 
@@ -155,8 +155,8 @@ class BusinessIssuedFragment : Fragment(){
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int): BusinessIssuedFragment {
-            return BusinessIssuedFragment().apply {
+        fun newInstance(sectionNumber: Int): InvoiceCancelledFragment {
+            return InvoiceCancelledFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
                 }

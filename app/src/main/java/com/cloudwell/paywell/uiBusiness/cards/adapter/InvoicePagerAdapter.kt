@@ -5,11 +5,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.uiBusiness.cards.fragment.invoice.BusinessIssuedFragment
-import com.cloudwell.paywell.uiBusiness.cards.fragment.manageLink.BusinessAPIFragment
-import com.cloudwell.paywell.uiBusiness.cards.fragment.manageLink.BusinessPartiallypaidFragment
-import com.cloudwell.paywell.uiBusiness.cards.fragment.manageLink.BusinessReminderSettingsFragment
-import com.cloudwell.paywell.uiBusiness.cards.fragment.manageLink.BusinessUnPaidFragment
+import com.cloudwell.paywell.uiBusiness.cards.fragment.invoice.*
 import com.cloudwell.paywell.uiBusiness.cards.fragment.transaction.BusinessCardTransactionFragment
 
 private val TAB_TITLES = arrayOf(
@@ -32,12 +28,12 @@ class InvoicePagerAdapter(private val context: Context, fm: FragmentManager) :
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> BusinessIssuedFragment.newInstance(0)
-            1 -> BusinessPartiallypaidFragment.newInstance(1)
-            2 -> BusinessUnPaidFragment.newInstance(2)
-            3 -> BusinessAPIFragment.newInstance(3)
-            4 -> BusinessReminderSettingsFragment.newInstance(4)
-            5 -> BusinessReminderSettingsFragment.newInstance(5)
-            6 -> BusinessReminderSettingsFragment.newInstance(6)
+            1 -> BusinessDraftFragment.newInstance(1)
+            2 -> InvoicePaidFragment.newInstance(2)
+            3 -> InvoicePartiallyPaidFragment.newInstance(3)
+            4 -> InvoiceCancelledFragment.newInstance(4)
+            5 -> InvoiceExpairedFragment.newInstance(5)
+            6 -> InvoiceCustomerFragment.newInstance(6)
             else -> BusinessCardTransactionFragment.newInstance(0)
         }
 
