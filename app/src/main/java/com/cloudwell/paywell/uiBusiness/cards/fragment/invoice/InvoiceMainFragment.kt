@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiBusiness.cards.adapter.InvoicePagerAdapter
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.invoice_main_layout.view.*
 
 class InvoiceMainFragment : Fragment() {
 
@@ -33,6 +35,11 @@ class InvoiceMainFragment : Fragment() {
 
 
 
+        view.create_invoice.setOnClickListener(View.OnClickListener {
+            FragmentHelper.replaceFragment(
+                BuInvoicePrintFragment(), requireActivity().supportFragmentManager, R.id.bu_Cards_container
+            )
+        })
 
 
 
