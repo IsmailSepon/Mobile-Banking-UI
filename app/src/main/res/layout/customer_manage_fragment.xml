@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="@string/invoices"
+            android:text="@string/customers"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView225"
@@ -62,7 +62,7 @@
             android:layout_marginEnd="18dp"
             android:drawableStart="@drawable/add_view"
             android:drawablePadding="@dimen/_5dp"
-            android:text="@string/create_invoice"
+            android:text="Create invoice"
             android:textColor="@color/text_link_clr"
             android:textSize="@dimen/_12sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -88,26 +88,28 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewDFUsername">
 
 
+
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/invoice_tabs"
+            android:id="@+id/customers_tabs"
+            android:elevation="@dimen/_0dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-18dp"
-            android:background="@color/white"
-            android:elevation="@dimen/_0dp"
-            android:textAlignment="viewStart"
-            app:tabBackground="@drawable/tab_layout_selector"
-            app:tabGravity="start"
-            app:tabIndicatorColor="@color/text_link_clr"
-            app:tabIndicatorFullWidth="false"
+            app:tabTextColor="@color/common_clr"
+            app:tabTextAppearance="@style/CustomTextAppearanceTab"
             app:tabMaxWidth="0dp"
-            app:tabMode="auto"
+            app:tabGravity="start"
+            app:tabMode="scrollable"
+            android:layout_marginStart="-12dp"
+            android:textAlignment="viewStart"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorColor="@color/text_link_clr"
+            app:tabBackground="@drawable/tab_layout_selector"
             app:tabRippleColor="@color/text_link_clr"
             app:tabSelectedTextColor="@color/text_link_clr"
-            app:tabTextAppearance="@style/CustomTextAppearanceTab"
-            app:tabTextColor="@color/common_clr"
+            android:background="@color/white"
+            app:hintTextColor="@color/common_clr"
+            android:textColorHint="@color/common_clr"
             tools:ignore="RtlCompat" />
-
 
 
 
@@ -119,7 +121,7 @@
 
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/bu_invoice_view_pager"
+        android:id="@+id/bu_customers_view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />

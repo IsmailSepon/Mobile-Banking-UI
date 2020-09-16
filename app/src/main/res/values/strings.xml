@@ -703,6 +703,14 @@
     <string name="utility_bill_payment">Utility bill payment</string>
     <string name="paywell_fees">PayWell Fees</string>
     <string name="_2020_cloudwell_limited_cloudwell_company_no_08804411_is_authorised_by_the_financial_conduct_authority_under_the_electronic_money_regulations_2011_firm_reference_900562_registered_address_skill_house_shahjadpur_gulshan_dhaka_cloudwell_limited_is_an_appointed_representative_of_lending_works_ltd_for_the_activity_of_operating_an_electronic_system_for_lending_only_and_cloudwell_for_the_purposes_of_designated_investment_business_only_transaction_information_is_available_through_the_paywell_app_for_six_years_after_you_close_your_account_if_you_need_to_keep_a_copy_of_the_information_after_then_you_will_need_to_download_it_you_can_download_information_from_the_app_at_any_time">© 2020 CloudWell Limited CloudWell (Company No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). Registered address: Skill House, Shahjadpur Gulshan, Dhaka. CloudWell Limited is an Appointed Representative of Lending Works Ltd (for the activity of “operating an electronic system for lending” only) and CloudWell (for the purposes of designated investment business only). Transaction information is available through the PayWell app for six years after you close your account. If you need to keep a copy of the information after then, you will need to download it. You can download information from the app at any time.</string>
+    <string name="invoices">Invoices</string>
+    <string name="create_invoice">Create invoice</string>
+    <string name="new_customer_details">New customer details</string>
+    <string name="company_name">Company name</string>
+    <string name="address_line_1">Address line 1</string>
+    <string name="address_line_2">Address line 2</string>
+    <string name="city">City</string>
+    <string name="mobile">Mobile</string>
 
 
 </resources>

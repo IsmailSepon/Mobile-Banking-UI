@@ -7,6 +7,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardMainFragment
 import com.cloudwell.paywell.uiBusiness.cards.fragment.bulk.EnterBulkPaymentFragment
 import com.cloudwell.paywell.uiBusiness.cards.fragment.invoice.BuInvoiceSliderFragment
+import com.cloudwell.paywell.uiBusiness.cards.fragment.manageCustomers.BuManageCustomersFragment
 import com.cloudwell.paywell.uiBusiness.cards.fragment.manageLink.BuPaymentLinkFragment
 import com.cloudwell.paywell.uiBusiness.cards.fragment.marchentOwner.MarchentOwnerSetAmountFragment
 import com.cloudwell.paywell.utils.FragmentHelper
@@ -51,6 +52,13 @@ class BusinessCardLandingActivity : AppCompatActivity() {
             //card link
             FragmentHelper.addFirstFragment(
                 BuInvoiceSliderFragment(),
+                supportFragmentManager,
+                R.id.bu_Cards_container
+            )
+        }else if (parent.equals("6")) {
+            //card link
+            FragmentHelper.addFirstFragment(
+                BuManageCustomersFragment(),
                 supportFragmentManager,
                 R.id.bu_Cards_container
             )
