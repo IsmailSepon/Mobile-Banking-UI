@@ -74,7 +74,7 @@
                     style="@style/edittext_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Terms and conditions"
+                    android:hint="@string/terms_and_conditions"
                     android:imeOptions="actionNext"
                     android:importantForAutofill="no"
                     android:paddingTop="@dimen/_15dp"
@@ -99,7 +99,7 @@
                     style="@style/edittext_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Notes for customer"
+                    android:hint="@string/notes_for_customer"
                     android:imeOptions="actionNext"
                     android:importantForAutofill="no"
                     android:paddingTop="@dimen/_15dp"
@@ -124,7 +124,7 @@
                     style="@style/edittext_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Brief description"
+                    android:hint="@string/brief_description"
                     android:imeOptions="actionNext"
                     android:importantForAutofill="no"
                     android:paddingTop="@dimen/_15dp"
@@ -262,7 +262,7 @@
                 android:layout_marginTop="18dp"
                 android:drawableStart="@drawable/add_view"
                 android:drawablePadding="@dimen/_5dp"
-                android:text="Add line item"
+                android:text="@string/add_line_item"
                 android:textColor="@color/text_clr_blue"
                 android:textSize="@dimen/_12sp"
                 app:layout_constraintStart_toStartOf="@+id/add_line_item_layout"
@@ -275,7 +275,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="7dp"
                 android:layout_marginTop="23dp"
-                android:text="Total"
+                android:text="@string/total"
                 android:textColor="@color/keypad_text_clr"
                 android:textSize="@dimen/_14sp"
                 app:layout_constraintStart_toEndOf="@+id/add_line_item_txt"
@@ -288,7 +288,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="7dp"
                 android:layout_marginTop="22dp"
-                android:text="Tax"
+                android:text="@string/tax"
                 android:textColor="@color/keypad_text_clr"
                 android:textSize="@dimen/_14sp"
                 app:layout_constraintStart_toEndOf="@+id/add_line_item_txt"
@@ -301,7 +301,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="7dp"
                 android:layout_marginTop="24dp"
-                android:text="Grand total"
+                android:text="@string/grand_total"
                 android:textColor="@color/keypad_text_clr"
                 android:textSize="@dimen/_14sp"
                 app:layout_constraintStart_toEndOf="@+id/add_line_item_txt"
@@ -367,7 +367,8 @@
                 android:background="@color/common_clr"
                 app:layout_constraintEnd_toEndOf="@+id/textView605"
                 app:layout_constraintStart_toStartOf="@+id/textView605"
-                app:layout_constraintTop_toBottomOf="@+id/textView605" />
+                app:layout_constraintTop_toBottomOf="@+id/textView605"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/imageView247"
@@ -376,7 +377,8 @@
                 android:background="@color/common_clr"
                 app:layout_constraintEnd_toEndOf="@+id/textView610"
                 app:layout_constraintStart_toStartOf="@+id/textView610"
-                app:layout_constraintTop_toBottomOf="@+id/textView610" />
+                app:layout_constraintTop_toBottomOf="@+id/textView610"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/imageView248"
@@ -386,7 +388,8 @@
                 android:background="@color/common_clr"
                 app:layout_constraintEnd_toEndOf="@+id/textView610"
                 app:layout_constraintStart_toStartOf="@+id/textView610"
-                app:layout_constraintTop_toBottomOf="@+id/imageView247" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView247"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/imageView249"
@@ -397,7 +400,8 @@
                 app:layout_constraintBottom_toTopOf="@+id/textView610"
                 app:layout_constraintEnd_toEndOf="@+id/textView610"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/textView610" />
+                app:layout_constraintStart_toStartOf="@+id/textView610"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/imageView246"
@@ -406,7 +410,8 @@
                 android:background="@color/common_clr"
                 app:layout_constraintEnd_toEndOf="@+id/textView607"
                 app:layout_constraintStart_toStartOf="@+id/textView607"
-                app:layout_constraintTop_toBottomOf="@+id/textView607" />
+                app:layout_constraintTop_toBottomOf="@+id/textView607"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/imageView244"
@@ -416,7 +421,8 @@
                 android:background="@color/common_clr"
                 app:layout_constraintBottom_toTopOf="@+id/textView605"
                 app:layout_constraintEnd_toEndOf="@+id/textView605"
-                app:layout_constraintStart_toStartOf="@+id/textView605" />
+                app:layout_constraintStart_toStartOf="@+id/textView605"
+                tools:ignore="ContentDescription" />
 
 
             <CheckBox
@@ -429,7 +435,8 @@
                 android:paddingStart="@dimen/_8dp"
                 android:text="@string/enable_partial_payment"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout9" />
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout9"
+                tools:ignore="RtlSymmetry" />
 
 
             <Button
@@ -440,7 +447,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/round_btn_visable"
                 android:elevation="@dimen/evelation_five"
-                android:text="Issue"
+                android:text="@string/issue"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="15sp"

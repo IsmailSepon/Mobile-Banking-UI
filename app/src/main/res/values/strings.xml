@@ -722,6 +722,13 @@
     <string name="add_customer">Add customer</string>
     <string name="date_of_expiry_of_this_bill">Date of expiry of this bill</string>
     <string name="enable_partial_payment">Enable partial payment</string>
+    <string name="terms_and_conditions">Terms and conditions</string>
+    <string name="notes_for_customer">Notes for customer</string>
+    <string name="brief_description">Brief description</string>
+    <string name="add_line_item">Add line item</string>
+    <string name="tax">Tax</string>
+    <string name="grand_total">Grand total</string>
+    <string name="issue">Issue</string>
 
 
 </resources>
