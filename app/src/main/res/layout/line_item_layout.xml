@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Spinner
+        android:id="@+id/line_item_sp"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/spinner_bg"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView45"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/common_clr"
+        app:layout_constraintBottom_toBottomOf="@+id/line_item_sp"
+        app:layout_constraintEnd_toEndOf="@+id/line_item_sp"
+        app:layout_constraintStart_toStartOf ="@+id/line_item_sp"
+        tools:ignore="ContentDescription" />
+
+
+    <EditText
+        android:id="@+id/editText4"
+        style="@style/edittext_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="3"
+        android:hint="@string/rate"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:paddingBottom="@dimen/_5dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView45"
+        app:layout_constraintStart_toEndOf="@+id/line_item_sp"
+        tools:ignore="TextFields" />
+
+
+    <EditText
+        android:id="@+id/editText5"
+        style="@style/edittext_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="2"
+        android:hint="Qty"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:paddingBottom="@dimen/_5dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView45"
+        app:layout_constraintStart_toEndOf="@+id/editText4"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:id="@+id/textView602"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="৳0.00"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintStart_toEndOf="@+id/editText5"
+        app:layout_constraintTop_toTopOf="@+id/editText5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

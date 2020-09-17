@@ -347,6 +347,7 @@
 
 
                         <TextView
+                            android:id="@+id/manage_invoice"
                             android:textColor="@color/keypad_text_clr"
                             android:textSize="@dimen/_12sp"
                             style="@style/text_style"

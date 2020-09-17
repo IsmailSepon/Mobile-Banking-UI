@@ -716,6 +716,12 @@
     <string name="new_product">New Product</string>
     <string name="rate">Rate</string>
     <string name="description">Description</string>
+    <string name="new_invoice_details">New invoice details</string>
+    <string name="enter_your_invoice_number">Enter your invoice number</string>
+    <string name="customer">Customer</string>
+    <string name="add_customer">Add customer</string>
+    <string name="date_of_expiry_of_this_bill">Date of expiry of this bill</string>
+    <string name="enable_partial_payment">Enable partial payment</string>
 
 
 </resources>

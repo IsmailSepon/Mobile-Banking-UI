@@ -60,6 +60,13 @@ class BusinessCardMenuFragment : Fragment() {
         })
 
 
+        view.manage_invoice.setOnClickListener(View.OnClickListener {
+            val intent = Intent(view.context, BusinessCardLandingActivity::class.java)
+            intent.putExtra("bu_cards", "7")
+            view.context.startActivity(intent)
+        })
+
+
         return view
     }
 
