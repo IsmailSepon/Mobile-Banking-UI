@@ -711,6 +711,11 @@
     <string name="address_line_2">Address line 2</string>
     <string name="city">City</string>
     <string name="mobile">Mobile</string>
+    <string name="products">Products</string>
+    <string name="product_mango">Product-Mango</string>
+    <string name="new_product">New Product</string>
+    <string name="rate">Rate</string>
+    <string name="description">Description</string>
 
 
 </resources>

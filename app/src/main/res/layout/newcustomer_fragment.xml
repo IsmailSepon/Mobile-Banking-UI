@@ -243,7 +243,7 @@
 
 
             <Button
-                android:id="@+id/ac_created_btn"
+                android:id="@+id/new_customers_btn"
                 android:layout_width="@dimen/btn_width"
                 android:layout_height="@dimen/btn_hight"
                 android:layout_gravity="center_horizontal"
