@@ -68,7 +68,7 @@ class InvoicePartiallyPaidFragment : Fragment(){
                     val markAsUnreadButton = markAsUnreadButton(position)
                     val downlode = downlodeButton(position)
                     val share = shareButton(position)
-                    buttons = listOf(  share,downlode,markAsUnreadButton,deleteButton)
+                    buttons = listOf(  markAsUnreadButton,share,deleteButton)
 
                     return buttons
                 }
@@ -130,10 +130,10 @@ class InvoicePartiallyPaidFragment : Fragment(){
     private fun shareButton(position: Int): SwipeHelper.UnderlayButton {
         return SwipeHelper.UnderlayButton(
             activity?.applicationContext!!,
-            "Share",
+            "Cancel",
             12.0f,
             //android.R.color.holo_orange_dark,
-            R.color.colorPrimaryDark,
+            R.color.keypad_text_clr,
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {
 

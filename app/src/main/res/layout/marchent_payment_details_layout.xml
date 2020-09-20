@@ -64,6 +64,7 @@
             tools:ignore="ContentDescription" />
 
         <TextView
+            android:textColor="@color/common_clr"
             android:id="@+id/textView215"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -88,6 +89,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView215" />
 
         <TextView
+            android:textColor="@color/common_clr"
             android:id="@+id/textView217"
             style="@style/text_style"
             android:layout_width="wrap_content"
@@ -118,6 +120,7 @@
             android:importantForAutofill="no" />
 
         <TextView
+            android:textColor="@color/common_clr"
             android:id="@+id/textView218"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -142,9 +145,11 @@
             android:textSize="@dimen/_12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView218"
-            app:layout_constraintTop_toBottomOf="@+id/textView218" />
+            app:layout_constraintTop_toBottomOf="@+id/textView218"
+            android:autofillHints="" />
 
         <TextView
+            android:textColor="@color/common_clr"
             android:id="@+id/textView219"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -171,6 +176,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView219" />
 
         <TextView
+            android:textColor="@color/common_clr"
             android:id="@+id/textView220"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -194,14 +200,15 @@
             android:textSize="@dimen/_12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView220"
-            app:layout_constraintTop_toBottomOf="@+id/textView220" />
+            app:layout_constraintTop_toBottomOf="@+id/textView220"
+            android:importantForAutofill="no" />
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cvv_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="15dp"
             app:hintTextAppearance="@style/TextLabeltwo"
             app:layout_constraintStart_toStartOf="@+id/editTextNumberPassword"
             app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword">
@@ -213,11 +220,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="5"
-                android:textSize="@dimen/_12sp"
                 android:hint="@string/cvv"
+                android:textColorHint="@color/common_clr"
                 android:imeOptions="actionNext"
                 android:importantForAutofill="no"
                 android:paddingTop="@dimen/_15dp"
+                android:textSize="@dimen/_12sp"
                 tools:ignore="TextFields" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -227,7 +235,7 @@
             android:id="@+id/personal_details_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="78dp"
             app:hintTextAppearance="@style/TextLabeltwo"
             app:layout_constraintEnd_toEndOf="parent"
@@ -240,11 +248,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="6"
-                android:textSize="@dimen/_12sp"
                 android:hint="@string/date_of_expiry"
+                android:textColorHint="@color/common_clr"
                 android:imeOptions="actionNext"
                 android:importantForAutofill="no"
                 android:paddingTop="@dimen/_15dp"
+                android:textSize="@dimen/_12sp"
                 tools:ignore="TextFields" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -291,7 +300,8 @@
             android:layout_marginEnd="45dp"
             app:layout_constraintBottom_toBottomOf="@+id/textView188"
             app:layout_constraintEnd_toEndOf="@+id/textView188"
-            app:srcCompat="@drawable/fly_money" />
+            app:srcCompat="@drawable/fly_money"
+            tools:ignore="ContentDescription" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

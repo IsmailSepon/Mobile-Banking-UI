@@ -1,6 +1,5 @@
 package com.cloudwell.paywell.uiBusiness.cards.fragment.invoice
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +10,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.account.adapter.SwipeHelper
-import com.cloudwell.paywell.ui.spiltBill.fragment.SpiltBillHoastActivity
 import com.cloudwell.paywell.uiBusiness.cards.adapter.CustomerRecyclerAdapter
+import com.cloudwell.paywell.uiBusiness.cards.fragment.manageCustomers.BuNewCustomerFragment
 import com.cloudwell.paywell.uiBusiness.cards.model.IssuedPOjo
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.invoice_customers_layout.view.*
 
 class InvoiceCustomerFragment : Fragment(){
@@ -68,7 +68,7 @@ class InvoiceCustomerFragment : Fragment(){
                     val markAsUnreadButton = markAsUnreadButton(position)
                     val downlode = downlodeButton(position)
                     val share = shareButton(position)
-                    buttons = listOf(  deleteButton, markAsUnreadButton)
+                    buttons = listOf(  deleteButton, markAsUnreadButton, downlode)
 
                     return buttons
                 }
@@ -98,16 +98,14 @@ class InvoiceCustomerFragment : Fragment(){
     private fun markAsUnreadButton(position: Int): SwipeHelper.UnderlayButton {
         return SwipeHelper.UnderlayButton(
             activity?.applicationContext!!,
-            "Re-issue",
+            "Invoice",
             12.0f,
             //android.R.color.holo_orange_dark,
-            R.color.recycler_swipe_gray,
+            R.color.keypad_text_clr,
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {
 
-                    val intent = Intent(activity, SpiltBillHoastActivity::class.java)
-                    intent.putExtra("spilt", "1")
-                    startActivity(intent)
+
                 }
             })
     }
@@ -115,13 +113,15 @@ class InvoiceCustomerFragment : Fragment(){
     private fun downlodeButton(position: Int): SwipeHelper.UnderlayButton {
         return SwipeHelper.UnderlayButton(
             activity?.applicationContext!!,
-            "Download",
+            "Edit",
             12.0f,
             //android.R.color.holo_orange_dark,
             R.color.recycler_swipe_gray,
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {
-
+                    FragmentHelper.replaceFragment(
+                        BuNewCustomerFragment(), requireActivity().supportFragmentManager, R.id.bu_Cards_container
+                    )
 
                 }
             })

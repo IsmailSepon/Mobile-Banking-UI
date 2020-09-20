@@ -102,7 +102,6 @@ class CustomersFragment : Fragment(){
             R.color.recycler_swipe_gray,
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {
-
                     FragmentHelper.replaceFragment(
                         BuNewCustomerFragment(), requireActivity().supportFragmentManager, R.id.bu_Cards_container
                     )
@@ -115,7 +114,6 @@ class CustomersFragment : Fragment(){
             activity?.applicationContext!!,
             "Invoice",
             12.0f,
-            //android.R.color.holo_orange_dark,
             R.color.keypad_text_clr,
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {

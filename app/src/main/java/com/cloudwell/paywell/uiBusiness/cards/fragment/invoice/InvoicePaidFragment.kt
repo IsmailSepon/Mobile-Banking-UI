@@ -68,7 +68,7 @@ class InvoicePaidFragment : Fragment(){
                     val markAsUnreadButton = markAsUnreadButton(position)
                     val downlode = downlodeButton(position)
                     val share = shareButton(position)
-                    buttons = listOf(  share,downlode,markAsUnreadButton,deleteButton)
+                    buttons = listOf(  markAsUnreadButton,downlode)
 
                     return buttons
                 }

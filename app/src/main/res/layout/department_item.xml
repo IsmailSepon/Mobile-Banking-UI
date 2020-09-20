@@ -7,7 +7,7 @@
 
 
         <CheckBox
-            android:id="@+id/checkBox2"
+            android:id="@+id/department_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
@@ -18,7 +18,7 @@
 
 
         <EditText
-            android:id="@+id/legal_first_name_et"
+            android:id="@+id/department_name"
             style="@style/edittext_style"
             android:layout_width="@dimen/_0dp"
             android:layout_height="wrap_content"
@@ -32,12 +32,12 @@
             android:paddingTop="@dimen/_0dp"
             android:paddingBottom="@dimen/_10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/checkBox2"
+            app:layout_constraintStart_toEndOf="@+id/department_checkbox"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TextFields" />
 
         <EditText
-            android:id="@+id/legal_first_name_et2"
+            android:id="@+id/department_code"
             style="@style/edittext_style"
             android:layout_width="@dimen/_0dp"
             android:layout_height="wrap_content"
@@ -62,7 +62,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/view_minize" />
+            app:srcCompat="@drawable/view_minize"
+            tools:ignore="ContentDescription" />
 
 
 

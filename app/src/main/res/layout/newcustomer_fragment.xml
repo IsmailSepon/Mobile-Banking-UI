@@ -19,8 +19,8 @@
 
     <TextView
         android:textColor="@color/keypad_text_clr"
-        android:textSize="@dimen/_12sp"
-        style="@style/text_style"
+        android:textSize="@dimen/_16_7sp"
+        style="@style/medium_text_style"
         android:id="@+id/textView582"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:hintTextAppearance="@style/TextLabeltwo"
+                app:hintTextAppearance="@style/TextLabel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView488">
@@ -85,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_25dp"
-                app:hintTextAppearance="@style/TextLabeltwo"
+                app:hintTextAppearance="@style/TextLabel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView488">
@@ -108,7 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_25dp"
-                app:hintTextAppearance="@style/TextLabeltwo"
+                app:hintTextAppearance="@style/TextLabel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView488">
@@ -131,7 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_25dp"
-                app:hintTextAppearance="@style/TextLabeltwo"
+                app:hintTextAppearance="@style/TextLabel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView488">
@@ -154,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_25dp"
-                app:hintTextAppearance="@style/TextLabeltwo"
+                app:hintTextAppearance="@style/TextLabel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView488">
@@ -177,7 +177,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_25dp"
-                app:hintTextAppearance="@style/TextLabeltwo"
+                app:hintTextAppearance="@style/TextLabel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView488">
@@ -200,7 +200,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_25dp"
-                app:hintTextAppearance="@style/TextLabeltwo"
+                app:hintTextAppearance="@style/TextLabel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView488">
@@ -223,7 +223,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_25dp"
-                app:hintTextAppearance="@style/TextLabeltwo"
+                app:hintTextAppearance="@style/TextLabel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView488">

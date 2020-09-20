@@ -4,13 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.LinearLayout
-import android.widget.Spinner
+import android.widget.*
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import kotlinx.android.synthetic.main.business_reminder_setting_layout.view.*
+
 
 class BusinessReminderSettingsFragment : Fragment(){
 
@@ -53,6 +51,18 @@ class BusinessReminderSettingsFragment : Fragment(){
 //        })
 
 
+        view.riminder_switch.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+
+            if (isChecked) {
+                // The toggle is enabled
+                view.riminder_thing.visibility = View.VISIBLE
+            } else {
+                // The toggle is disabled
+                view.riminder_thing.visibility = View.INVISIBLE
+            }
+        })
+
+
 
         return view
     }
@@ -63,15 +73,28 @@ class BusinessReminderSettingsFragment : Fragment(){
 
         val sp : Spinner = paywellACview.findViewById(R.id.expair_sp)
 
-        var country = arrayOf("21 days before expiry date", "5 days before expiry date", "14 days after issued date")
+        var country = arrayOf(
+            "21 days before expiry date",
+            "5 days before expiry date",
+            "14 days after issued date"
+        )
         sp.onItemSelectedListener
-        val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), R.layout.spinner_item, country)
+        val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(
+            requireContext(),
+            R.layout.spinner_item,
+            country
+        )
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         sp.adapter = aa
         sp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
             }
         }
 
@@ -85,15 +108,28 @@ class BusinessReminderSettingsFragment : Fragment(){
 
         val sp : Spinner = paywellACview.findViewById(R.id.expair_sp)
 
-        var country = arrayOf("21 days before expiry date", "5 days before expiry date", "14 days after issued date")
+        var country = arrayOf(
+            "21 days before expiry date",
+            "5 days before expiry date",
+            "14 days after issued date"
+        )
         sp.onItemSelectedListener
-        val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), R.layout.spinner_item, country)
+        val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(
+            requireContext(),
+            R.layout.spinner_item,
+            country
+        )
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         sp.adapter = aa
         sp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
             }
         }
 

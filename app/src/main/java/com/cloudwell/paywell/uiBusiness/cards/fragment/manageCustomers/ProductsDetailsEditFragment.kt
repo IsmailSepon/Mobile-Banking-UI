@@ -19,10 +19,14 @@ class ProductsDetailsEditFragment : Fragment() {
             inflater.inflate(R.layout.products_details_edit_fragment, container, false)
 
 
-        view.product_details_gotit_btn.setOnClickListener(View.OnClickListener {
+        view.product_name_et.setOnClickListener(View.OnClickListener {
             FragmentHelper.replaceFragment(
                 NewProductsFragment(), requireActivity().supportFragmentManager, R.id.bu_Cards_container
             )
+        })
+//
+        view.product_details_gotit_btn.setOnClickListener(View.OnClickListener {
+           requireActivity().finish()
         })
 //
 //

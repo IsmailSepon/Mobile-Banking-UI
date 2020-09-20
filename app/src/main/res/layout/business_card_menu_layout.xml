@@ -59,7 +59,7 @@
                         android:paddingTop="@dimen/_24dp"
                         android:paddingBottom="@dimen/_5dp"
                         android:orientation="horizontal"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
                         <TextView
@@ -135,7 +135,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="21dp"
-                    android:text="Expense services"
+                    android:text="@string/expense_services"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -149,7 +149,7 @@
                         android:paddingTop="@dimen/_24dp"
                         android:paddingBottom="@dimen/_5dp"
                         android:orientation="horizontal"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
                         <TextView
@@ -174,7 +174,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="21dp"
                             android:layout_marginEnd="@dimen/_40dp"
-                            android:text="Manag\nexpenses"
+                            android:text="@string/manage_nexpenses"
                             android:drawableTop="@drawable/manage_expence_ic"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -210,7 +210,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="21dp"
-                    android:text="Merchant services"
+                    android:text="@string/merchant_services"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -314,7 +314,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="21dp"
-                    android:text="Invoicing services"
+                    android:text="@string/invoicing_services"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -328,7 +328,7 @@
                         android:paddingTop="@dimen/_24dp"
                         android:paddingBottom="@dimen/_5dp"
                         android:orientation="horizontal"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
                         <TextView
@@ -433,7 +433,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="21dp"
-                    android:text="User management"
+                    android:text="@string/user_management"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -447,7 +447,7 @@
                         android:paddingTop="@dimen/_24dp"
                         android:paddingBottom="@dimen/_5dp"
                         android:orientation="horizontal"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
                         <TextView
