@@ -134,7 +134,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/menu_stroke" />
+            app:srcCompat="@drawable/menu_stroke"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView554"
@@ -196,7 +197,7 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/internet_banking"
             android:drawablePadding="@dimen/_7dp"
-            android:text="Internet\nBanking"
+            android:text="@string/internet_nbanking"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_10sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -238,7 +239,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/menu_stroke" />
+            app:srcCompat="@drawable/menu_stroke"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/mobile_banking"
@@ -247,7 +249,7 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/mobile_banking"
             android:drawablePadding="@dimen/_7dp"
-            android:text="Mobile\nBanking"
+            android:text="@string/mobile_nbanking"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_10sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -270,11 +272,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_14sp"
+        style="@style/text_style"
         android:id="@+id/textView551"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
-        android:text="Choose your preferred payment option"
+        android:text="@string/choose_your_preferred_payment_option"
         app:layout_constraintStart_toStartOf="@+id/imageView222"
         app:layout_constraintTop_toBottomOf="@+id/imageView224" />
 

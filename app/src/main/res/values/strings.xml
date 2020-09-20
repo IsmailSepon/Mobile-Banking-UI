@@ -729,6 +729,12 @@
     <string name="tax">Tax</string>
     <string name="grand_total">Grand total</string>
     <string name="issue">Issue</string>
+    <string name="expense_management">Expense management</string>
+    <string name="claimant_profile_details">Claimant profile details</string>
+    <string name="name_of_claimant">Name of claimant</string>
+    <string name="choose_your_preferred_payment_option">Choose your preferred payment option</string>
+    <string name="mobile_nbanking">Mobile\nBanking</string>
+    <string name="internet_nbanking">Internet\nBanking</string>
 
 
 </resources>

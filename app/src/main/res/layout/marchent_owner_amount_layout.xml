@@ -114,5 +114,20 @@
         app:layout_constraintVertical_bias="0.88"
         tools:targetApi="lollipop" />
 
+    <TextView
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:drawableEnd="@drawable/upload_orng"
+        android:drawablePadding="@dimen/_7dp"
+        android:id="@+id/textView612"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="26dp"
+        android:text="@string/bulk_upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

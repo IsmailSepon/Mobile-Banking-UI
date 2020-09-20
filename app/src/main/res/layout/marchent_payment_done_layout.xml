@@ -20,18 +20,17 @@
         tools:ignore="ContentDescription" />
 
     <TextView
-        android:textColor="@color/keypad_text_clr"
-        android:textSize="@dimen/_15sp"
-        style="@style/text_style"
         android:id="@+id/textView10"
+        style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
         android:text="Thank you for payment of\n৳500 to Anisul Islam"
-        app:layout_constraintBottom_toTopOf="@+id/email_verification_btn"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.13999999" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 
     <Button

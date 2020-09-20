@@ -56,6 +56,9 @@ class NewInvoiceDetailsFragment : Fragment() {
 
 
 
+        view.issued_btn.setOnClickListener(View.OnClickListener {
+            
+        })
 
 
         return view

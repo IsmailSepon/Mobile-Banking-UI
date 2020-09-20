@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.account.adapter.SwipeHelper
-import com.cloudwell.paywell.ui.spiltBill.fragment.SpiltBillHoastActivity
 import com.cloudwell.paywell.uiBusiness.control.fragment.expenceManagment.adapter.ClaimAdapter
 import com.cloudwell.paywell.uiBusiness.control.fragment.expenceManagment.model.ClaimModel
 import kotlinx.android.synthetic.main.claiment_fragment.view.*
@@ -39,7 +38,7 @@ class BuClaimentProfileFragment : Fragment() {
 
 
 
-        var list = ArrayList<ClaimModel>()
+        val list = ArrayList<ClaimModel>()
         list.add(item)
         list.add(item)
         list.add(item)
@@ -61,7 +60,7 @@ class BuClaimentProfileFragment : Fragment() {
                     var buttons = listOf<UnderlayButton>()
                     val deleteButton = deleteButton(position)
                     val markAsUnreadButton = markAsUnreadButton(position)
-                    buttons = listOf(deleteButton, markAsUnreadButton)
+                    buttons = listOf(markAsUnreadButton, deleteButton)
 //                when (position) {
 //                    1 -> buttons = listOf(deleteButton)
 //                    2 -> buttons = listOf(deleteButton, markAsUnreadButton)
@@ -87,11 +86,11 @@ class BuClaimentProfileFragment : Fragment() {
             activity?.applicationContext!!,
             "Edit",
             12.0f,
-            //android.R.color.darker_gray,
             R.color.recycler_swipe_gray,
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {
-
+                    val intent : Intent = Intent(requireContext(), ClaimentProfileDetailsActivity::class.java)
+                    startActivity(intent)
                 }
             })
     }
@@ -101,14 +100,11 @@ class BuClaimentProfileFragment : Fragment() {
             activity?.applicationContext!!,
             "Delete",
             12.0f,
-            //android.R.color.holo_orange_dark,
             R.color.colorPrimaryDark,
             object : SwipeHelper.UnderlayButtonClickListener {
                 override fun onClick() {
 
-                    val intent = Intent(activity, SpiltBillHoastActivity::class.java)
-                    intent.putExtra("spilt", "1")
-                    startActivity(intent)
+
                 }
             })
     }
