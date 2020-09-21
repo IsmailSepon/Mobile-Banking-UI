@@ -456,7 +456,7 @@
                 tools:targetApi="lollipop" />
 
             <Button
-                android:id="@+id/ac_created_btn3"
+                android:id="@+id/save_btn"
                 android:layout_width="89dp"
                 android:layout_height="@dimen/_33dp"
                 android:layout_marginTop="30dp"
@@ -472,7 +472,7 @@
                 tools:targetApi="lollipop" />
 
             <Button
-                android:id="@+id/ac_created_btn4"
+                android:id="@+id/cancel_btn"
                 android:layout_width="89dp"
                 android:layout_height="@dimen/_33dp"
                 android:layout_marginTop="30dp"

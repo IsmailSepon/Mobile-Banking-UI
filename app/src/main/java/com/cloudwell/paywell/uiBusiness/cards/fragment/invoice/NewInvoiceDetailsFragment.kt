@@ -10,6 +10,9 @@ import android.widget.LinearLayout
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.uiBusiness.cards.dialog.IssuedInvoiceDialog
+import com.cloudwell.paywell.uiBusiness.cards.dialog.NewCustomerDialog
+import com.cloudwell.paywell.uiBusiness.cards.dialog.NewItemDialog
 import kotlinx.android.synthetic.main.new_invoice_details_layout.view.*
 
 class NewInvoiceDetailsFragment : Fragment() {
@@ -57,8 +60,31 @@ class NewInvoiceDetailsFragment : Fragment() {
 
 
         view.issued_btn.setOnClickListener(View.OnClickListener {
-            
+            val dialog: IssuedInvoiceDialog = IssuedInvoiceDialog()
+            dialog.show(activity?.supportFragmentManager!!, "IssuedInvoiceDialog")
+
+
         })
+
+
+        view.save_btn.setOnClickListener(View.OnClickListener {
+            val dialog: NewCustomerDialog = NewCustomerDialog()
+            dialog.show(activity?.supportFragmentManager!!, "NewCustomerDialog")
+
+        })
+
+
+        view.cancel_btn.setOnClickListener(View.OnClickListener {
+
+            val dialog: NewItemDialog = NewItemDialog()
+            dialog.show(activity?.supportFragmentManager!!, "NewItemDialog")
+        })
+
+
+
+
+
+
 
 
         return view

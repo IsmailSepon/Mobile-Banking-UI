@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_marginBottom="@dimen/_40dp"
+        android:layout_gravity="right"
+        android:src="@drawable/cross_wht"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="@dimen/_10dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_16_7sp"
+                style="@style/medium_text_style"
+                android:id="@+id/textView618"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="35dp"
+                android:text="@string/issue_invoice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+            <TextView
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="35dp"
+                android:text="@string/send_invoice_and_payment_instructions_to"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginStart="30dp"
+                android:button="@drawable/checkbox_selector_blue"
+                android:text="01912250477"
+                android:padding="@dimen/_10dp"
+                app:layout_constraintStart_toStartOf="@+id/textView471"
+                app:layout_constraintTop_toBottomOf="@+id/textView471" />
+
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                android:layout_marginStart="30dp"
+                android:button="@drawable/checkbox_selector_blue"
+                android:text="abdul.karim@benham.com"
+                android:padding="@dimen/_10dp"
+                app:layout_constraintStart_toStartOf="@+id/textView471"
+                app:layout_constraintTop_toBottomOf="@+id/textView471" />
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_30dp"
+                android:layout_marginEnd="@dimen/_30dp"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_12sp"
+                    style="@style/text_style"
+                    android:id="@+id/textView619"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="A"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_12sp"
+                    style="@style/text_style"
+                    android:id="@+id/textView620"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/payment_link"
+                    app:layout_constraintStart_toEndOf="@+id/textView619"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_12sp"
+                    style="@style/text_style"
+                    android:id="@+id/textView621"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/will_also_be_created"
+                    app:layout_constraintStart_toEndOf="@+id/textView620"
+                    app:layout_constraintTop_toTopOf="@+id/textView620" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                tools:ignore="DuplicateIds,HardcodedText"
+                android:layout_marginStart="@dimen/_30dp"
+                android:layout_marginEnd="@dimen/_30dp"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/textView619"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="The invoice can"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView620"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:text="not"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView619"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView621"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="be edited after issuing."
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView620"
+                    app:layout_constraintTop_toTopOf="@+id/textView620" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/ac_created_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_hight"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_36dp"
+                android:layout_marginTop="@dimen/_40dp"
+                android:layout_marginEnd="@dimen/_36dp"
+                android:layout_marginBottom="@dimen/_40dp"
+                android:background="@drawable/round_btn_visable"
+                android:elevation="@dimen/evelation_five"
+                android:text="@string/issue_invoice"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:targetApi="lollipop" />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
