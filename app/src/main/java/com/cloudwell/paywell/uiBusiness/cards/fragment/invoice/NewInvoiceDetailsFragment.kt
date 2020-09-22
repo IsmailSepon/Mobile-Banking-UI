@@ -83,10 +83,6 @@ class NewInvoiceDetailsFragment : Fragment() {
 
 
 
-
-
-
-
         return view
     }
 
@@ -97,7 +93,7 @@ class NewInvoiceDetailsFragment : Fragment() {
 
         val sp : Spinner = paywellACview.findViewById(R.id.add_customer_sp)
 
-        var country = arrayOf("Benham Pharmaceuticals", "5 days before expiry date", "14 days after issued date")
+        val country = arrayOf("Benham Pharmaceuticals", "5 days before expiry date", "14 days after issued date")
         sp.onItemSelectedListener
         val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), R.layout.spinner_item, country)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -119,7 +115,7 @@ class NewInvoiceDetailsFragment : Fragment() {
 
         val sp : Spinner = paywellACview.findViewById(R.id.line_item_sp)
 
-        var country = arrayOf("Item description", "Item description")
+        val country = arrayOf("Item description", "Item description")
         sp.onItemSelectedListener
         val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), R.layout.spinner_item, country)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)

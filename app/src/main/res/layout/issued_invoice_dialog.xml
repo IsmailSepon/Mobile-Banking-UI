@@ -182,7 +182,7 @@
 
 
             <Button
-                android:id="@+id/ac_created_btn"
+                android:id="@+id/issue_invoice_btn"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/btn_hight"
                 android:layout_gravity="center_horizontal"

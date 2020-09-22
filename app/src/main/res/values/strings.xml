@@ -751,6 +751,17 @@
     <string name="send_invoice_and_payment_instructions_to">Send invoice and payment instructions. to...</string>
     <string name="payment_link">payment link</string>
     <string name="will_also_be_created">will also be created.</string>
+    <string name="invoice">Invoice</string>
+    <string name="bill_for_seasonal_fruit_ndelivery_service">Bill for seasonal fruit\ndelivery service</string>
+    <string name="invoice_no">Invoice no</string>
+    <string name="amount_due">Amount due</string>
+    <string name="issued_on">Issued on</string>
+    <string name="billing_address">Billing address</string>
+    <string name="billing_to">Billing to</string>
+    <string name="unit_price">Unit price</string>
+    <string name="qty">Qty</string>
+    <string name="sub_total">Sub total</string>
+    <string name="proceed_to_pay">Proceed to pay</string>
 
 
 </resources>
