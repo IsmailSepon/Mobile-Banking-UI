@@ -66,6 +66,19 @@ class BusinessCardMenuFragment : Fragment() {
             view.context.startActivity(intent)
         })
 
+        view.claim_expence.setOnClickListener(View.OnClickListener {
+            val intent = Intent(view.context, BusinessCardLandingActivity::class.java)
+            intent.putExtra("bu_cards", "8")
+            view.context.startActivity(intent)
+        })
+
+
+        view.expense_manage.setOnClickListener(View.OnClickListener {
+            val intent = Intent(view.context, BusinessCardLandingActivity::class.java)
+            intent.putExtra("bu_cards", "9")
+            view.context.startActivity(intent)
+        })
+
 
         return view
     }

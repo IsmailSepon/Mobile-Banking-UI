@@ -59,6 +59,8 @@ class IssuedIRecyclerAdapter(mContext: Context, courselist: List<IssuedPOjo>) :
                 holder.linktxt.text = courselist.get(position).link
             }
 
+
+
     }
 
     override fun getItemCount(): Int {

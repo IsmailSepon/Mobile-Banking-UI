@@ -678,6 +678,7 @@
     <string name="paid">Paid</string>
     <string name="issued">Issued</string>
     <string name="draft">Draft</string>
+    <string name="pending_refunds">Pending refunds</string>
     <string name="customers">Customers</string>
     <string name="expired">Expired</string>
     <string name="cancelled">Cancelled</string>
@@ -762,6 +763,19 @@
     <string name="qty">Qty</string>
     <string name="sub_total">Sub total</string>
     <string name="proceed_to_pay">Proceed to pay</string>
+    <string name="claim_your_expense">Claim your expense</string>
+    <string name="take_picture_of_the_expense_receipt">Take picture of the expense receipt</string>
+    <string name="upload_a_picture_of_the_receipt">Upload a picture of the receipt</string>
+    <string name="enter_expense_details_manually">Enter expense details manually</string>
+    <string name="merchant_name">Merchant name</string>
+    <string name="coffeemate_sugar"><![CDATA[Coffeemate & sugar]]></string>
+    <string name="_10_may_2020">10 May 2020</string>
+    <string name="shopno_super_shop">Shopno super shop</string>
+    <string name="date_of_purchase">Date of purchase</string>
+    <string name="expense_details">Expense details</string>
+    <string name="expense_category">Expense category</string>
+    <string name="submitting_for_review">Submitting for review</string>
+    <string name="office_expense">Office expense</string>
 
 
 </resources>
