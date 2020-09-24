@@ -26,8 +26,10 @@
         android:supportsRtl="true"
         android:theme="@style/FullScreen"
         tools:replace="android:allowBackup">
-        <activity android:name=".uiBusiness.control.fragment.expenceManagment.ClaimentProfileDetailsActivity"/>
-        <activity android:name=".uiBusiness.control.fragment.expenceManagment.BulkExpenceMngActivity"/>
+        <activity android:name=".uiBusiness.cards.fragment.expence.ExpenceMemoPictureActivity"></activity>
+        <activity android:name=".uiBusiness.cards.fragment.expence.ExpenseDetailsActivity" />
+        <activity android:name=".uiBusiness.control.fragment.expenceManagment.ClaimentProfileDetailsActivity" />
+        <activity android:name=".uiBusiness.control.fragment.expenceManagment.BulkExpenceMngActivity" />
         <activity
             android:name=".uiBusiness.control.fragment.expenceManagment.NewExpenceActivity"
             android:theme="@style/AppTheme.NoActionBar" />

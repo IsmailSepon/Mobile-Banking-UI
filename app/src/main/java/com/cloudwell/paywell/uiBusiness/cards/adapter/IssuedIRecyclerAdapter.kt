@@ -2,6 +2,7 @@ package com.cloudwell.paywell.uiBusiness.cards.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.uiBusiness.cards.fragment.expence.ExpenseDetailsActivity
 import com.cloudwell.paywell.uiBusiness.cards.model.IssuedPOjo
 
 /**
@@ -58,6 +60,11 @@ class IssuedIRecyclerAdapter(mContext: Context, courselist: List<IssuedPOjo>) :
                 holder.profile_txt.text = courselist.get(position).profile
                 holder.linktxt.text = courselist.get(position).link
             }
+
+        holder.itemView.setOnClickListener(View.OnClickListener {
+            val intent : Intent = Intent(mContext.applicationContext, ExpenseDetailsActivity:: class.java )
+            mContext.startActivity(intent)
+        })
 
 
 

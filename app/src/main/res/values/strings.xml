@@ -776,6 +776,19 @@
     <string name="expense_category">Expense category</string>
     <string name="submitting_for_review">Submitting for review</string>
     <string name="office_expense">Office expense</string>
+    <string name="awaiting_review">Awaiting review</string>
+    <string name="attachments">Attachments</string>
+    <string name="view">View</string>
+    <string name="paid_in_cash">Paid in cash</string>
+    <string name="claim_of_1000_approved_by_mohammad_kudratullah">Claim of ৳1000 approved by Mohammad Kudratullah</string>
+    <string name="approved">Approved</string>
+    <string name="expense_approval">Expense approval</string>
+    <string name="comments">Comments</string>
+    <string name="this_expense_is_getting_approved_by_you_please_provide_your_comment_below_for_this_approval">This expense is getting approved by you, please provide your comment below for this approval.</string>
+    <string name="expense_rejection">Expense rejection</string>
+    <string name="this_expense_is_getting_rejected_by_you_please_provide_your_comment_below_for_this_rejection">This expense is getting rejected by you, please provide your comment below for this rejection.</string>
+    <string name="expense_claim_return">Expense claim return</string>
+    <string name="please_put_your_comments_on_why_you_are_returning_this_claim_to_the_claimant_and_s_he_needs_to_add_or_correct_anything">Please put your comments on why you are returning this claim to the claimant and s/he needs to add or correct anything.</string>
 
 
 </resources>
