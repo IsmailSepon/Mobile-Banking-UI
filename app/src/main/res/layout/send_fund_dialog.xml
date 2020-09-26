@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    app:cardElevation="@dimen/_15dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/transparent"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/_40dp"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imageView278"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="26dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_16_7sp"
+                style="@style/medium_text_style"
+                android:id="@+id/textView668"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/send_fund"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView278"
+                app:layout_constraintStart_toEndOf="@+id/imageView278"
+                app:layout_constraintTop_toTopOf="@+id/imageView278" />
+
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:id="@+id/textView669"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Awaiting your review"
+                app:layout_constraintStart_toStartOf="@+id/imageView278"
+                app:layout_constraintTop_toBottomOf="@+id/textView668" />
+
+            <TextView
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:id="@+id/textView670"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=". 14-Jun-2020"
+                app:layout_constraintBottom_toBottomOf="@+id/textView669"
+                app:layout_constraintStart_toEndOf="@+id/textView669"
+                app:layout_constraintTop_toTopOf="@+id/textView669" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView669">
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="@dimen/_10"
+                    android:button="@drawable/checkbox_selector"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView281"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="13dp"
+                    android:background="@color/divider_bg"
+                    app:layout_constraintTop_toBottomOf="@+id/textView673" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginEnd="13dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView670">
+
+
+                    <CheckBox
+                        android:id="@+id/checkBox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_selector"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView281"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView671"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="@string/benham_pharmaceuticals"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView279"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView671"
+                        app:layout_constraintTop_toBottomOf="@+id/textView671"
+                        app:srcCompat="@drawable/ash_add" />
+
+                    <TextView
+                        android:id="@+id/textView672"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Ak.Bulbul"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView279"
+                        app:layout_constraintStart_toEndOf="@+id/imageView279"
+                        app:layout_constraintTop_toTopOf="@+id/imageView279"
+                        tools:ignore="SpUsage" />
+
+                    <ImageView
+                        android:id="@+id/imageView280"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView672"
+                        app:layout_constraintTop_toBottomOf="@+id/textView671"
+                        app:srcCompat="@drawable/ash_check" />
+
+                    <TextView
+                        android:id="@+id/textView673"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/mohammad_kudratullah_ziko_mondal"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView280"
+                        app:layout_constraintStart_toEndOf="@+id/imageView280"
+                        app:layout_constraintTop_toTopOf="@+id/imageView280"
+                        tools:ignore="SpUsage" />
+
+                    <TextView
+                        android:id="@+id/textView674"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="৳500,000"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView281"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView281"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/divider_bg"
+                        app:layout_constraintTop_toBottomOf="@+id/textView673" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginEnd="13dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView670"
+                    tools:ignore="DuplicateIds">
+
+
+                    <CheckBox
+                        android:id="@+id/checkBox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_selector"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView281"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView671"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="@string/benham_pharmaceuticals"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView279"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView671"
+                        app:layout_constraintTop_toBottomOf="@+id/textView671"
+                        app:srcCompat="@drawable/ash_add" />
+
+                    <TextView
+                        android:id="@+id/textView672"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Ak.Bulbul"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView279"
+                        app:layout_constraintStart_toEndOf="@+id/imageView279"
+                        app:layout_constraintTop_toTopOf="@+id/imageView279"
+                        tools:ignore="SpUsage" />
+
+                    <ImageView
+                        android:id="@+id/imageView280"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView672"
+                        app:layout_constraintTop_toBottomOf="@+id/textView671"
+                        app:srcCompat="@drawable/ash_check" />
+
+                    <TextView
+                        android:id="@+id/textView673"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/mohammad_kudratullah_ziko_mondal"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView280"
+                        app:layout_constraintStart_toEndOf="@+id/imageView280"
+                        app:layout_constraintTop_toTopOf="@+id/imageView280"
+                        tools:ignore="SpUsage" />
+
+                    <TextView
+                        android:id="@+id/textView674"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="৳500,000"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView281"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView281"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/divider_bg"
+                        app:layout_constraintTop_toBottomOf="@+id/textView673" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginEnd="13dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView670"
+                    tools:ignore="DuplicateIds">
+
+
+                    <CheckBox
+                        android:id="@+id/checkBox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_selector"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView281"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView671"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="@string/benham_pharmaceuticals"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView279"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView671"
+                        app:layout_constraintTop_toBottomOf="@+id/textView671"
+                        app:srcCompat="@drawable/ash_add" />
+
+                    <TextView
+                        android:id="@+id/textView672"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Ak.Bulbul"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView279"
+                        app:layout_constraintStart_toEndOf="@+id/imageView279"
+                        app:layout_constraintTop_toTopOf="@+id/imageView279"
+                        tools:ignore="SpUsage" />
+
+                    <ImageView
+                        android:id="@+id/imageView280"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView672"
+                        app:layout_constraintTop_toBottomOf="@+id/textView671"
+                        app:srcCompat="@drawable/ash_check" />
+
+                    <TextView
+                        android:id="@+id/textView673"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/mohammad_kudratullah_ziko_mondal"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView280"
+                        app:layout_constraintStart_toEndOf="@+id/imageView280"
+                        app:layout_constraintTop_toTopOf="@+id/imageView280"
+                        tools:ignore="SpUsage" />
+
+                    <TextView
+                        android:id="@+id/textView674"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="৳500,000"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView281"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView281"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/divider_bg"
+                        app:layout_constraintTop_toBottomOf="@+id/textView673" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginEnd="13dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView670"
+                    tools:ignore="DuplicateIds">
+
+
+                    <CheckBox
+                        android:id="@+id/checkBox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_selector"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView281"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView671"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="@string/benham_pharmaceuticals"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView279"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView671"
+                        app:layout_constraintTop_toBottomOf="@+id/textView671"
+                        app:srcCompat="@drawable/ash_add" />
+
+                    <TextView
+                        android:id="@+id/textView672"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Ak.Bulbul"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView279"
+                        app:layout_constraintStart_toEndOf="@+id/imageView279"
+                        app:layout_constraintTop_toTopOf="@+id/imageView279"
+                        tools:ignore="SpUsage" />
+
+                    <ImageView
+                        android:id="@+id/imageView280"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView672"
+                        app:layout_constraintTop_toBottomOf="@+id/textView671"
+                        app:srcCompat="@drawable/ash_check" />
+
+                    <TextView
+                        android:id="@+id/textView673"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/mohammad_kudratullah_ziko_mondal"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView280"
+                        app:layout_constraintStart_toEndOf="@+id/imageView280"
+                        app:layout_constraintTop_toTopOf="@+id/imageView280"
+                        tools:ignore="SpUsage" />
+
+                    <TextView
+                        android:id="@+id/textView674"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="৳500,000"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView281"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView281"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/divider_bg"
+                        app:layout_constraintTop_toBottomOf="@+id/textView673" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginEnd="13dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView670"
+                    tools:ignore="DuplicateIds">
+
+
+                    <CheckBox
+                        android:id="@+id/checkBox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_selector"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView281"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView671"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="@string/benham_pharmaceuticals"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView279"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView671"
+                        app:layout_constraintTop_toBottomOf="@+id/textView671"
+                        app:srcCompat="@drawable/ash_add" />
+
+                    <TextView
+                        android:id="@+id/textView672"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Ak.Bulbul"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView279"
+                        app:layout_constraintStart_toEndOf="@+id/imageView279"
+                        app:layout_constraintTop_toTopOf="@+id/imageView279"
+                        tools:ignore="SpUsage" />
+
+                    <ImageView
+                        android:id="@+id/imageView280"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView672"
+                        app:layout_constraintTop_toBottomOf="@+id/textView671"
+                        app:srcCompat="@drawable/ash_check" />
+
+                    <TextView
+                        android:id="@+id/textView673"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/mohammad_kudratullah_ziko_mondal"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView280"
+                        app:layout_constraintStart_toEndOf="@+id/imageView280"
+                        app:layout_constraintTop_toTopOf="@+id/imageView280"
+                        tools:ignore="SpUsage" />
+
+                    <TextView
+                        android:id="@+id/textView674"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="৳500,000"
+                        android:textColor="@color/keypad_text_clr"
+                        android:textSize="@dimen/_15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView281"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView281"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/divider_bg"
+                        app:layout_constraintTop_toBottomOf="@+id/textView673" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/reject_btn"
+                android:layout_width="@dimen/_90dp"
+                android:layout_height="@dimen/_33dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/round_btn_orange"
+                android:elevation="@dimen/evelation_five"
+                android:text="@string/reject"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout30"
+                tools:targetApi="lollipop" />
+
+            <Button
+                android:id="@+id/return_btn"
+                android:layout_width="@dimen/_90dp"
+                android:layout_height="@dimen/_33dp"
+                android:background="@drawable/round_btn_orange"
+                android:elevation="@dimen/evelation_five"
+                android:text="@string/return_txt"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toEndOf="@+id/reject_btn"
+                app:layout_constraintTop_toTopOf="@+id/reject_btn"
+                tools:targetApi="lollipop" />
+
+            <Button
+                android:id="@+id/approve_btn"
+                android:layout_width="@dimen/_90dp"
+                android:layout_height="@dimen/_33dp"
+                android:background="@drawable/round_btn_visable"
+                android:elevation="@dimen/evelation_five"
+                android:text="@string/approve"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/reject_btn"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/reject_btn"
+                tools:targetApi="lollipop" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

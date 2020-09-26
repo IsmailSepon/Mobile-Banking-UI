@@ -50,6 +50,11 @@ class AccountFragment : Fragment(), IaccountVIew, DatePickerDialog.OnDateSetList
         binding.viewmode = homeViewModel
         binding.lifecycleOwner = this
 
+//
+//        val dialog: SendFundlDialog = SendFundlDialog()
+//        dialog.show(activity?.supportFragmentManager!!, "SendFundlDialog")
+
+
         binding.root.pendding_req.setOnClickListener(View.OnClickListener {
 
             pendindProfilePopup()
