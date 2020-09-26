@@ -54,7 +54,7 @@
         app:layout_constraintTop_toTopOf="@+id/profile_txt" />
 
     <TextView
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/common_clr"
         android:textSize="@dimen/_10sp"
         style="@style/text_style"
         android:id="@+id/link_txt"

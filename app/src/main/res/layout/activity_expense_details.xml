@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context="com.cloudwell.paywell.uiBusiness.cards.fragment.expence.ExpenseDetailsActivity">
 
     <ImageView
@@ -198,7 +199,7 @@
         android:background="@color/expence_divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ac_created_btn"
+        app:layout_constraintTop_toBottomOf="@+id/reject_btn"
         tools:ignore="ContentDescription" />
 
     <ImageView
@@ -216,11 +217,11 @@
         android:id="@+id/imageView274"
         android:layout_width="match_parent"
         android:layout_height="7dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="38dp"
         android:background="@color/divider_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView272"
+        app:layout_constraintTop_toBottomOf="@+id/reject_btn"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -259,7 +260,7 @@
         android:text="@string/reject"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="@dimen/_12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -276,9 +277,9 @@
         android:text="@string/return_txt"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="@dimen/_12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toEndOf="@+id/reject_btn"
         app:layout_constraintTop_toBottomOf="@+id/imageView271"
         tools:targetApi="lollipop" />
@@ -293,15 +294,15 @@
         android:text="@string/approve"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/reject_btn"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.83"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView271"
         tools:targetApi="lollipop" />
 
     <TextView
-        android:textColor="@color/keypad_text_clr"
+        android:textColor="@color/common_clr"
         android:textSize="@dimen/_14sp"
         style="@style/medium_text_style"
         android:id="@+id/textView659"

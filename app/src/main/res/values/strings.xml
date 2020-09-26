@@ -791,6 +791,12 @@
     <string name="please_put_your_comments_on_why_you_are_returning_this_claim_to_the_claimant_and_s_he_needs_to_add_or_correct_anything">Please put your comments on why you are returning this claim to the claimant and s/he needs to add or correct anything.</string>
     <string name="mohammad_kudratullah_ziko_mondal">Mohammad Kudratullah, Ziko Mondal</string>
     <string name="benham_pharmaceuticals">Benham Pharmaceuticals</string>
+    <string name="others">Others</string>
+    <string name="entertainment_expense">Entertainment expense</string>
+    <string name="medical_expense">Medical expense</string>
+    <string name="lodging_expense">Lodging expense</string>
+    <string name="travel_fuel_expense">Travel/fuel expense</string>
+    <string name="new_item">New item</string>
 
 
 </resources>

@@ -141,19 +141,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/marchent_name_txt2" />
 
             <TextView
-                android:id="@+id/marchent_name4"
-                style="@style/text_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="57dp"
-                android:layout_marginTop="28dp"
-                android:text="@string/date_of_purchase"
-                android:textColor="@color/common_clr"
-                android:textSize="@dimen/_12sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/marchent_name_txt3" />
-
-            <TextView
                 android:id="@+id/marchent_name_txt"
                 style="@style/text_style"
                 android:layout_width="wrap_content"
@@ -213,8 +200,8 @@
                 android:text="@string/description"
                 android:textColor="@color/common_clr"
                 android:textSize="@dimen/_12sp"
-                app:layout_constraintStart_toStartOf="@+id/marchent_name4"
-                app:layout_constraintTop_toBottomOf="@+id/marchent_name4" />
+                app:layout_constraintStart_toStartOf="@+id/marchent_name_txt3"
+                app:layout_constraintTop_toBottomOf="@+id/marchent_name_txt3" />
 
             <TextView
                 android:id="@+id/textView641"
@@ -245,52 +232,61 @@
                     android:layout_marginTop="@dimen/_5dp"
                     android:checked="true"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="@string/sole_proprietorship"
+                    android:text="@string/travel_fuel_expense"
                     android:textColor="@drawable/text_radio_selector"
-                    android:textSize="@dimen/_15sp"
+                    android:textSize="@dimen/_13_3sp"
                     android:theme="@style/RadioButtonStyle" />
 
                 <RadioButton
                     android:id="@+id/radioanother_person"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_25dp"
+                    android:layout_marginTop="@dimen/_10dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="@string/partnership"
+                    android:text="@string/lodging_expense"
                     android:textColor="@drawable/text_radio_selector"
-                    android:textSize="@dimen/_15sp"
+                    android:textSize="@dimen/_13_3sp"
                     android:theme="@style/RadioButtonStyle" />
 
                 <RadioButton
                     android:id="@+id/radio_business"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_25dp"
+                    android:layout_marginTop="@dimen/_10dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="@string/private_limited"
+                    android:text="@string/medical_expense"
                     android:textColor="@drawable/text_radio_selector"
-                    android:textSize="@dimen/_15sp"
+                    android:textSize="@dimen/_13_3sp"
                     android:theme="@style/RadioButtonStyle" />
 
                 <RadioButton
                     android:id="@+id/radio_card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_25dp"
+                    android:layout_marginTop="@dimen/_10dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="@string/public_limited"
+                    android:text="@string/entertainment_expense"
                     android:textColor="@drawable/text_radio_selector"
-                    android:textSize="@dimen/_15sp"
+                    android:textSize="@dimen/_13_3sp"
                     android:theme="@style/RadioButtonStyle" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_25dp"
+                    android:layout_marginTop="@dimen/_10dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="@string/ngo_charity_jv_others"
+                    android:text="@string/office_expense"
                     android:textColor="@drawable/text_radio_selector"
-                    android:textSize="@dimen/_15sp"
+                    android:textSize="@dimen/_13_3sp"
+                    android:theme="@style/RadioButtonStyle" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/others"
+                    android:textColor="@drawable/text_radio_selector"
+                    android:textSize="@dimen/_13_3sp"
                     android:theme="@style/RadioButtonStyle" />
 
             </RadioGroup>
