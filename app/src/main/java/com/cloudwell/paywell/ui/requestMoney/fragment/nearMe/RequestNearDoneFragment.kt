@@ -18,10 +18,17 @@ class RequestNearDoneFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.request_near_done_frg_layout, container, false)
 
+        val textHolder = requireActivity().getSharedPreferences("TextHolder", 0).getInt("nearMeContainer", 0)
+
+        if (textHolder!=0){
+
+            view.textView10.text = "Payment to Amzad Hossain is\nsuccessful"
+        }
 
         view.req_near_done.setOnClickListener(View.OnClickListener {
             activity?.finish()
         })
+
 
         return view
     }

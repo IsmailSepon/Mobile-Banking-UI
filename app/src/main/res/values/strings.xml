@@ -797,6 +797,30 @@
     <string name="lodging_expense">Lodging expense</string>
     <string name="travel_fuel_expense">Travel/fuel expense</string>
     <string name="new_item">New item</string>
+    <string name="common_services">Common services</string>
+    <string name="credit_card_nemi">Credit card\nEMI</string>
+    <string name="recurring_nbill_pay">Recurring\nbill pay</string>
+    <string name="bank_ntransfer">Bank\ntransfer</string>
+    <string name="split_nbill">Split\nbill</string>
+    <string name="pay_to">Pay to</string>
+    <string name="my_payments">My payments</string>
+    <string name="ticket">Ticket</string>
+    <string name="utility">Utility</string>
+    <string name="top_up_">Top-up</string>
+    <string name="shopping">Shopping</string>
+    <string name="education">Education</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="bills_pay">Bills pay</string>
+    <string name="paywell_username">PayWell username</string>
+    <string name="get_paid_without_revealing_your_mobile_number">Get paid without revealing your mobile number</string>
+    <string name="share">Share</string>
+    <string name="edit_payment_profile">Edit payment profile</string>
+    <string name="username">Username</string>
+    <string name="discoverable_by_username">Discoverable by username</string>
+    <string name="paywell_users_can_find_me_by_searching_for_my_username">PayWell users can find me by searching for my username</string>
+    <string name="send_or_request_money_with_people_near_me">Send or request money with people near me</string>
+    <string name="by_tapping_enable_near_me_you_consent_that_paywell_may_share_your_name_and_location_data_with_other_nearby_paywell_users_who_have_the_feature_enabled">By tapping Enable Near me you consent that PayWell may share your name and location data with other nearby PayWell users who have the feature enabled.</string>
+    <string name="privacy_settings">Privacy settings</string>
 
 
 </resources>

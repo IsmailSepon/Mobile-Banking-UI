@@ -18,9 +18,9 @@
 
     <fragment
         android:id="@+id/navigation_pay"
-        android:name="com.cloudwell.paywell.ui.notifications.NotificationsFragment"
+        android:name="com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment"
         android:label="Pay"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/payments_main_layout" />
     <fragment
         android:id="@+id/navigation_cards"
         android:name="com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardMenuFragment"

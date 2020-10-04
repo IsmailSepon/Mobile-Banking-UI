@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.cloudwell.paywell.ui.registration.EmailVerificationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/paymentsend_money_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cross_btn"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <TextView
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/send_fund"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16sp"
+            android:theme="@style/medium_text_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.cloudwell.paywell.uiBusiness.sendFund.utility.HorizontalPicker
+        android:id="@+id/payment_send_fund_amount_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="80dp"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/_30dp"
+        app:layout_constraintBottom_toTopOf="@+id/send_money_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
+        app:layout_constraintVertical_bias="0.23000002" />
+
+
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/business_send_fund_amount_rv"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="50dp"-->
+    <!--        android:clipToPadding="false"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/send_money_submit"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"-->
+    <!--        app:layout_constraintVertical_bias="0.23000002" />-->
+
+    <ImageView
+        android:id="@+id/imageView132"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="@dimen/_7dp"
+        android:src="@drawable/polygon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_send_fund_amount_rv"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/payment_send_money_submit"
+        android:layout_width="@dimen/_250dp"
+        android:layout_height="@dimen/_50dp"
+        android:background="@drawable/round_btn_visable"
+        android:text="@string/continue_txt"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89"
+        tools:ignore="UnknownIdInLayout" />
+
+
+    <EditText
+        android:id="@+id/payment_amount_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="30dp"
+        android:ems="6"
+        android:textColor="@color/keypad_text_clr"
+        style="@style/medium_text_style"
+        android:gravity="left"
+        android:paddingStart="@dimen/_10dp"
+        android:textSize="@dimen/_24sp"
+        android:inputType="number"
+        app:backgroundTint="@color/common_clr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView132"
+        tools:ignore="RtlSymmetry"
+        android:importantForAutofill="no" />
+
+
+    <TextView
+        android:id="@+id/textView31"
+        style="@style/text_style"
+        android:textColor="@color/common_clr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/no_fee"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintStart_toStartOf="@+id/payment_amount_et"
+        app:layout_constraintTop_toBottomOf="@+id/payment_amount_et" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:id="@+id/textView691"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Balance: ৳7500.50"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView31"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

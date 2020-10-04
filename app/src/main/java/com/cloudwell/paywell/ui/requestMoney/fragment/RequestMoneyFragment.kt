@@ -40,6 +40,12 @@ class RequestMoneyFragment : Fragment() {
         data.add("2000")
         data.add("2500")
         data.add("3000")
+        data.add("3500")
+        data.add("4000")
+        data.add("4500")
+        data.add("5000")
+        data.add("5500")
+        data.add("6000")
 
         setTvSelectedItem(view)
         setHorizontalPicker(view)
