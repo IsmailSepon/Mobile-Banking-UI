@@ -821,6 +821,13 @@
     <string name="send_or_request_money_with_people_near_me">Send or request money with people near me</string>
     <string name="by_tapping_enable_near_me_you_consent_that_paywell_may_share_your_name_and_location_data_with_other_nearby_paywell_users_who_have_the_feature_enabled">By tapping Enable Near me you consent that PayWell may share your name and location data with other nearby PayWell users who have the feature enabled.</string>
     <string name="privacy_settings">Privacy settings</string>
+    <string name="your_friends_to_complete_a_few_steps_before_they_re_rewarded">Your friends to complete a few steps before they’re rewarded</string>
+    <string name="confirm_their_identity_with_a_nid_or_passport_and_a_selfie">Confirm their identity with a NID or passport, and a selfie</string>
+    <string name="follow_your_invite_link_and_create_a_paywell_account">Follow your invite link and create a PayWell account</string>
+    <string name="who_to_pay">Who to pay</string>
+    <string name="create_new_payee">Create new payee</string>
+    <string name="paywell_friends">PayWell friends</string>
+    <string name="contact_with_the_same_phone_number_already_exists_in_your_phone_book">Contact with the same phone number already exists in your phone book</string>
 
 
 </resources>

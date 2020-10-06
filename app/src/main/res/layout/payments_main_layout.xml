@@ -103,6 +103,7 @@
 
 
         <TextView
+            android:id="@+id/recurinng_billpay"
             style="@style/text_style"
             android:layout_width="@dimen/_0dp"
             android:layout_height="wrap_content"
