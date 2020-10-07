@@ -5,7 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.beneficiary.fragment.ChooseTransferTypeFragment
+import com.cloudwell.paywell.uiCommon.pay.adapter.BankAccountListAdapter
+import com.cloudwell.paywell.uiCommon.pay.model.PaywellFriendPOjo
+import com.cloudwell.paywell.utils.FragmentHelper
+import kotlinx.android.synthetic.main.all_bank_account_layout.view.*
 
 class BankAccountFragment : Fragment() {
 
@@ -15,10 +21,35 @@ class BankAccountFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.all_account_layout, container, false)
+        val view = inflater.inflate(R.layout.all_bank_account_layout, container, false)
+
+        val layoutManager1 =
+            LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
+
+        val recycler1 = view.bank_ac_recycler
+        recycler1.layoutManager = layoutManager1
 
 
 
+        val pojo1 : PaywellFriendPOjo = PaywellFriendPOjo()
+        pojo1.name = "Anisul Islam - BDT"
+        pojo1.mail = "Account number: 0346546478"
+        val list1 = ArrayList<PaywellFriendPOjo>()
+
+        list1.add(pojo1)
+
+        recycler1.adapter  = activity?.applicationContext?.let { BankAccountListAdapter(it, list1) }
+
+
+
+        view.add_new_bank.setOnClickListener(View.OnClickListener {
+            val fg : ChooseTransferTypeFragment = ChooseTransferTypeFragment()
+            val bundle = Bundle()
+            bundle.putInt("chooseTransferType", 2)
+            fg.arguments  = bundle
+            FragmentHelper.replaceFragment(fg, requireActivity().supportFragmentManager, R.id.payment_container)
+
+        })
 
         return view
     }
