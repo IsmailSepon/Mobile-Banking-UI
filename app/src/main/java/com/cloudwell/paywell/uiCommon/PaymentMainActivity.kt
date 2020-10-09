@@ -6,6 +6,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.fragment.PaywellUserNameFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.RequestMoneyLocationAccessFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.WhoToPayFragment
+import com.cloudwell.paywell.uiCommon.pay.fragment.utility.UtilityMainFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 
 class PaymentMainActivity : AppCompatActivity() {
@@ -34,6 +35,13 @@ class PaymentMainActivity : AppCompatActivity() {
 
             FragmentHelper.addFirstFragment(
                 WhoToPayFragment(),
+                supportFragmentManager,
+                R.id.payment_container
+            )
+        }else if  (parent.equals("4")){
+
+            FragmentHelper.addFirstFragment(
+                UtilityMainFragment(),
                 supportFragmentManager,
                 R.id.payment_container
             )

@@ -829,6 +829,10 @@
     <string name="paywell_friends">PayWell friends</string>
     <string name="contact_with_the_same_phone_number_already_exists_in_your_phone_book">Contact with the same phone number already exists in your phone book</string>
     <string name="bank_accounts">Bank accounts</string>
+    <string name="electricity">Electricity</string>
+    <string name="utility_selection">Utility selection</string>
+    <string name="choose_the_utility_company">Choose the utility company</string>
+    <string name="select_the_operator_where_your_numner_is_porded_mnp">Select the operator where your numner is porded (MNP)</string>
 
 
 </resources>

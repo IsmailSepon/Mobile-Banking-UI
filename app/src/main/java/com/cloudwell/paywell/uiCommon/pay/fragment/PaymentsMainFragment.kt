@@ -118,6 +118,17 @@ class PaymentsMainFragment : Fragment() {
 
 
 
+        view.utility_btn.setOnClickListener(View.OnClickListener {
+            val intent = Intent(view.context, PaymentMainActivity::class.java)
+            intent.putExtra("payments", "4")
+            view.context.startActivity(intent)
+
+        })
+
+
+
+
+
 
         return view
     }
