@@ -833,6 +833,7 @@
     <string name="utility_selection">Utility selection</string>
     <string name="choose_the_utility_company">Choose the utility company</string>
     <string name="select_the_operator_where_your_numner_is_porded_mnp">Select the operator where your numner is porded (MNP)</string>
+    <string name="invite">Invite</string>
 
 
 </resources>

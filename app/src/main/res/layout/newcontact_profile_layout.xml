@@ -100,7 +100,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_40dp"
         android:drawableTop="@drawable/invite_ic"
-        android:text="@string/hide"
+        android:text="@string/invite"
         android:textAllCaps="false"
         android:textColor="@color/light_blue"
         app:layout_constraintEnd_toEndOf="parent"
