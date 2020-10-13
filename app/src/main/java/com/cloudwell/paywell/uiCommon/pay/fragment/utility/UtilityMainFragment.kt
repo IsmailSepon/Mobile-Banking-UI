@@ -8,10 +8,23 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.uiCommon.pay.adapter.ElectricityAdapter
+import com.cloudwell.paywell.uiCommon.pay.adapter.GasListAdapter
 import com.cloudwell.paywell.uiCommon.pay.adapter.UtilityAdapter
+import com.cloudwell.paywell.uiCommon.pay.adapter.UtilityAdapter.ItemClickListener
+import com.cloudwell.paywell.uiCommon.pay.adapter.WatrtListAdapter
+import com.cloudwell.paywell.uiCommon.pay.fragment.utility.TopUp.TopupDetailsFragment
+import com.cloudwell.paywell.uiCommon.pay.fragment.utility.electricity.ElectronicsDetailsFragment
+import com.cloudwell.paywell.uiCommon.pay.fragment.utility.gas.GasDetailsFragment
+import com.cloudwell.paywell.uiCommon.pay.fragment.utility.water.WaterDetailsFragment
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
+import com.cloudwell.paywell.utils.FragmentHelper
+import com.google.gson.Gson
 
-class UtilityMainFragment : Fragment() {
+
+class UtilityMainFragment : Fragment(), ItemClickListener,
+    ElectricityAdapter.ElecItemClickListener, WatrtListAdapter.ElecItemClickListener,
+    GasListAdapter.ElecItemClickListener {
 
 
     override fun onCreateView(
@@ -26,10 +39,26 @@ class UtilityMainFragment : Fragment() {
         val water_recyclerView : RecyclerView = view.findViewById(R.id.water_recyclerview)
         val gas_recyclerView : RecyclerView = view.findViewById(R.id.gas_recyclerview)
 
-        val linearLayoutManager: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        val linearLayoutManager1: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        val linearLayoutManager2: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        val linearLayoutManager3: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        val linearLayoutManager: LinearLayoutManager = LinearLayoutManager(
+            activity,
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
+        val linearLayoutManager1: LinearLayoutManager = LinearLayoutManager(
+            activity,
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
+        val linearLayoutManager2: LinearLayoutManager = LinearLayoutManager(
+            activity,
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
+        val linearLayoutManager3: LinearLayoutManager = LinearLayoutManager(
+            activity,
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
         topup_recycler.layoutManager = linearLayoutManager
         electronics_recyclerView.layoutManager = linearLayoutManager1
         water_recyclerView.layoutManager = linearLayoutManager2
@@ -111,16 +140,84 @@ class UtilityMainFragment : Fragment() {
 
 
 
-        topup_recycler.adapter = activity?.applicationContext?.let { UtilityAdapter(it, list) }
-        electronics_recyclerView.adapter = activity?.applicationContext?.let { UtilityAdapter(it, list2) }
-        water_recyclerView.adapter = activity?.applicationContext?.let { UtilityAdapter(it, list3) }
-        gas_recyclerView.adapter = activity?.applicationContext?.let { UtilityAdapter(it, list4) }
+        val topupAdapter : UtilityAdapter = UtilityAdapter(requireContext(), list)
+        topup_recycler.adapter = activity?.applicationContext?.let { topupAdapter }
+        topupAdapter.setClickListener(this)
+
+
+        val elecAdapter : ElectricityAdapter = ElectricityAdapter(requireContext(), list2)
+        electronics_recyclerView.adapter = elecAdapter
+        elecAdapter.setClickListener(this)
+
+
+        val waterAdapter : WatrtListAdapter = WatrtListAdapter(requireContext(), list3)
+        water_recyclerView.adapter = waterAdapter
+        waterAdapter.setClickListener(this)
+
+
+        val gasAdapter : GasListAdapter = GasListAdapter(requireContext(), list4)
+        gas_recyclerView.adapter = gasAdapter
+        gasAdapter.setClickListener(this)
+
 
 
 
 
 
         return view
+    }
+
+    override fun onClick(pojo: UtilityPOjo) {
+
+        val fg = TopupDetailsFragment()
+        val bundle  = Bundle()
+        val gson = Gson()
+        val json = gson.toJson(pojo)
+        bundle.putString("topup", json)
+        fg.arguments = bundle
+        FragmentHelper.replaceFragment(
+            fg, requireActivity().supportFragmentManager, R.id.payment_container
+        )
+
+    }
+
+    override fun onElecClick(pojo: UtilityPOjo) {
+        val fg = ElectronicsDetailsFragment()
+        val bundle  = Bundle()
+        val gson = Gson()
+        val json = gson.toJson(pojo)
+        bundle.putString("electronics", json)
+        fg.arguments = bundle
+        FragmentHelper.replaceFragment(
+            fg, requireActivity().supportFragmentManager, R.id.payment_container
+        )
+
+    }
+
+    override fun onWaterClick(pojo: UtilityPOjo) {
+        val fg = WaterDetailsFragment()
+        val bundle  = Bundle()
+        val gson = Gson()
+        val json = gson.toJson(pojo)
+        bundle.putString("water", json)
+        fg.arguments = bundle
+        FragmentHelper.replaceFragment(
+            fg, requireActivity().supportFragmentManager, R.id.payment_container
+        )
+
+    }
+
+    override fun onGasClick(pojo: UtilityPOjo) {
+        val fg = GasDetailsFragment()
+        val bundle  = Bundle()
+        val gson = Gson()
+        val json = gson.toJson(pojo)
+        bundle.putString("gas", json)
+        fg.arguments = bundle
+        FragmentHelper.replaceFragment(
+            fg, requireActivity().supportFragmentManager, R.id.payment_container
+        )
+
     }
 
 

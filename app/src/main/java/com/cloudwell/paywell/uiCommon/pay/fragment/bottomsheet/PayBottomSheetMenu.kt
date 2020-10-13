@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
@@ -39,9 +38,6 @@ class PayBottomSheetMenu : BottomSheetDialogFragment(), PayBottomsheetVIew {
     }
 
     override fun startPayMainActivity(i: Int) {
-        Toast.makeText(requireContext(), "test"+i, Toast.LENGTH_SHORT).show()
-
-
         if(i == 1){
                 super.dismiss()
             FragmentHelper.replaceFragment(

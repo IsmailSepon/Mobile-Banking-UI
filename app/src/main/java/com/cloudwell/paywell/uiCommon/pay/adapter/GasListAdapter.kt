@@ -14,8 +14,8 @@ import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
 /**
  * Created by Sepon on 9/9/2020.
  */
-class UtilityAdapter(mContext: Context, courselist: List<UtilityPOjo>) :
-    RecyclerView.Adapter<UtilityAdapter.ViewHolder?>() {
+class GasListAdapter(mContext: Context, courselist: List<UtilityPOjo>) :
+    RecyclerView.Adapter<GasListAdapter.ViewHolder?>() {
 
 
     var mContext: Context
@@ -23,7 +23,7 @@ class UtilityAdapter(mContext: Context, courselist: List<UtilityPOjo>) :
   //  private var clickListener: OnItemClickListener? = null
 
 
-    private var clickListener: ItemClickListener? = null
+    private var clickListener: ElecItemClickListener? = null
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,7 +41,7 @@ class UtilityAdapter(mContext: Context, courselist: List<UtilityPOjo>) :
         holder.icon.setImageResource(courselist.get(position).icon!!)
 
         holder.itemView.setOnClickListener(View.OnClickListener {
-            clickListener?.onClick(courselist.get(position))
+            clickListener?.onGasClick(courselist.get(position))
         })
     }
 
@@ -49,7 +49,7 @@ class UtilityAdapter(mContext: Context, courselist: List<UtilityPOjo>) :
         return courselist.size
     }
 
-    fun setClickListener(itemClickListener: ItemClickListener?) {
+    fun setClickListener(itemClickListener: ElecItemClickListener?) {
         clickListener = itemClickListener
     }
 
@@ -75,7 +75,7 @@ class UtilityAdapter(mContext: Context, courselist: List<UtilityPOjo>) :
         this.courselist = courselist
     }
 
-    interface ItemClickListener {
-        fun onClick(pojo : UtilityPOjo)
+    interface ElecItemClickListener {
+        fun onGasClick(pojo : UtilityPOjo)
     }
 }

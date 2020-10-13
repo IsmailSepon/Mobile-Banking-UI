@@ -515,6 +515,9 @@
     <string name="users">Users</string>
     <string name="virtual_cards">Virtual cards</string>
     <string name="all">All</string>
+    <string name="combo">Combo</string>
+    <string name="internet">Internet</string>
+    <string name="talk_time">Talk time</string>
     <string name="order_a_corporate_card">Order a corporate card</string>
     <string name="get_a_virtual_card">Get a virtual card</string>
     <string name="add_an_user">Add an user</string>
@@ -834,6 +837,29 @@
     <string name="choose_the_utility_company">Choose the utility company</string>
     <string name="select_the_operator_where_your_numner_is_porded_mnp">Select the operator where your numner is porded (MNP)</string>
     <string name="invite">Invite</string>
+    <string name="save_for_later_use">Save for later use</string>
+    <string name="your_top_up_details">Your top-up details</string>
+    <string name="pre_paid">Pre-paid</string>
+    <string name="post_paid">Post paid</string>
+    <string name="choose_from_data_pack_bundle_offers"><![CDATA[Choose from data pack & bundle offers]]></string>
+    <string name="gp_data_pack_bundle_offers"><![CDATA[GP data pack & bundle offers]]></string>
+    <string name="data_pack_bundle_offers"><![CDATA[data pack & bundle offers]]></string>
+    <string name="mobile_top_up_of">Mobile top-up of</string>
+    <string name="completed_successfully">completed successfully</string>
+    <string name="is">is</string>
+    <string name="confirm_send_for_approval"><![CDATA[Confirm & send for approval]]></string>
+    <string name="enter_your_bill_number">Enter your bill number</string>
+    <string name="dpdc_bill_payment_for">DPDC bill payment for</string>
+    <string name="every_month_on_3rd_day_at_10_am">every month on 3rd day at 10 AM</string>
+    <string name="will_be_completed_after_approval">will be completed after approval.</string>
+    <string name="cosumer_number">Cosumer number</string>
+    <string name="west_zone">West Zone</string>
+    <string name="month">Month</string>
+    <string name="customer_number">Customer number</string>
+    <string name="bill_type">Bill type</string>
+    <string name="water">Water</string>
+    <string name="gas">GAS</string>
+    <string name="bill_number">Bill number</string>
 
 
 </resources>

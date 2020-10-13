@@ -26,7 +26,8 @@
         android:supportsRtl="true"
         android:theme="@style/FullScreen"
         tools:replace="android:allowBackup">
-        <activity android:name=".uiCommon.PaymentMainActivity"/>
+        <activity android:name=".uiCommon.pay.fragment.utility.TopUp.TopUpOfferActivity"></activity>
+        <activity android:name=".uiCommon.PaymentMainActivity" />
         <activity android:name=".uiBusiness.cards.fragment.expence.ExpenceMemoPictureActivity" />
         <activity android:name=".uiBusiness.cards.fragment.expence.ExpenseDetailsActivity" />
         <activity android:name=".uiBusiness.control.fragment.expenceManagment.ClaimentProfileDetailsActivity" />

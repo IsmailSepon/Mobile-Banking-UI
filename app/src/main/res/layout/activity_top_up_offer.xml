@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.cloudwell.paywell.uiCommon.pay.fragment.utility.TopUp.TopUpOfferActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <ImageView
+            android:id="@+id/imageView315"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16_7sp"
+            style="@style/medium_text_style"
+            android:id="@+id/offer_hader_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:text="@string/gp_data_pack_bundle_offers"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView315"
+            app:layout_constraintStart_toEndOf="@+id/imageView315"
+            app:layout_constraintTop_toTopOf="@+id/imageView315" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDFUsername">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/topup_offer_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-15dp"
+            android:background="@color/white"
+            android:elevation="@dimen/_0dp"
+            android:textAlignment="viewStart"
+            app:tabBackground="@drawable/tab_layout_selector_slim"
+            app:tabGravity="start"
+            app:tabIndicatorColor="@color/text_link_clr"
+            app:tabIndicatorFullWidth="false"
+            app:tabMaxWidth="0dp"
+            app:tabMode="scrollable"
+            app:tabRippleColor="@color/text_link_clr"
+            app:tabSelectedTextColor="@color/text_link_clr"
+            app:tabTextAppearance="@style/CustomTextAppearanceTab"
+            app:tabTextColor="@color/common_clr"
+            tools:ignore="RtlCompat" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_marginTop="@dimen/_20dp"
+            android:id="@+id/topup_offer_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
