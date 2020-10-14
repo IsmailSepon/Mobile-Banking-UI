@@ -126,6 +126,14 @@ class PaymentsMainFragment : Fragment() {
         })
 
 
+        view.card_emi.setOnClickListener(View.OnClickListener {
+            val intent = Intent(view.context, PaymentMainActivity::class.java)
+            intent.putExtra("payments", "5")
+            view.context.startActivity(intent)
+
+        })
+
+
 
 
 

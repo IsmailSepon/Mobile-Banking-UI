@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dpdc" />
+        app:srcCompat="@drawable/wllate_round" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,13 +30,12 @@
             style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DPDC bill payment of"
+            android:text="@string/credit_card_emi_bill_payment_of"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <TextView
             android:id="@+id/mobile_number"
@@ -55,7 +54,7 @@
             style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="is completed successfully"
+            android:text="@string/is_completed_successfully"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +67,7 @@
 
 
     <Button
-        android:id="@+id/electricity_success_done"
+        android:id="@+id/cardemi_success_done"
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_hight"
         android:elevation="@dimen/evelation_five"

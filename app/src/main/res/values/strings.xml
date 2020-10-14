@@ -860,6 +860,10 @@
     <string name="water">Water</string>
     <string name="gas">GAS</string>
     <string name="bill_number">Bill number</string>
+    <string name="is_completed_successfully">is completed successfully</string>
+    <string name="your_credit_card_emi_details">Your credit card EMI details</string>
+    <string name="credit_card_emi_bill_payment_of">Credit card EMI bill payment of</string>
+    <string name="credit_card_emi_bill_payment_for">Credit card EMI bill payment for</string>
 
 
 </resources>
