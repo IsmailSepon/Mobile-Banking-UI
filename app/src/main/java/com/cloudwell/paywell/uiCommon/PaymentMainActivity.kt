@@ -6,6 +6,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.fragment.PaywellUserNameFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.RequestMoneyLocationAccessFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.WhoToPayFragment
+import com.cloudwell.paywell.uiCommon.pay.fragment.recurringBillPay.RecurringBillDetailsFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.utility.UtilityMainFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.utility.cardEmi.CardEmiDetailsFragment
 import com.cloudwell.paywell.utils.FragmentHelper
@@ -35,7 +36,7 @@ class PaymentMainActivity : AppCompatActivity() {
         }else if  (parent.equals("3")){
 
             FragmentHelper.addFirstFragment(
-                WhoToPayFragment(),
+                RecurringBillDetailsFragment(),
                 supportFragmentManager,
                 R.id.payment_container
             )
@@ -50,6 +51,13 @@ class PaymentMainActivity : AppCompatActivity() {
 
             FragmentHelper.addFirstFragment(
                 CardEmiDetailsFragment(),
+                supportFragmentManager,
+                R.id.payment_container
+            )
+        }else if  (parent.equals("6")){
+
+            FragmentHelper.addFirstFragment(
+                WhoToPayFragment(),
                 supportFragmentManager,
                 R.id.payment_container
             )

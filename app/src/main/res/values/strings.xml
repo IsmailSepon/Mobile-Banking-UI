@@ -864,6 +864,11 @@
     <string name="your_credit_card_emi_details">Your credit card EMI details</string>
     <string name="credit_card_emi_bill_payment_of">Credit card EMI bill payment of</string>
     <string name="credit_card_emi_bill_payment_for">Credit card EMI bill payment for</string>
+    <string name="recurring_bill_pay">Recurring bill pay</string>
+    <string name="create_a_new_recurring_bill_payment_job">Create a new recurring bill payment job</string>
+    <string name="created_on_8_june_activated_on_10_june">Created on 8 June, activated on 10 June</string>
+    <string name="_880_1758712950_prepaid">+880 1758712950, Prepaid</string>
+    <string name="grameenphone">Grameenphone</string>
 
 
 </resources>
