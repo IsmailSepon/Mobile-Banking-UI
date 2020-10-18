@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.uiCommon.pay.fragment.utility.electricity
+package com.cloudwell.paywell.uiCommon.pay.fragment.utility.electricity.westZone
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.electronics_details_layout.view.*
 import kotlinx.android.synthetic.main.topup_details_layout.view.operator_ic
 
 
-class ElectronicsDetailsFragment : Fragment() {
+class WestZoneDetailsFragment : Fragment() {
 
 
     @SuppressLint("SetTextI18n")

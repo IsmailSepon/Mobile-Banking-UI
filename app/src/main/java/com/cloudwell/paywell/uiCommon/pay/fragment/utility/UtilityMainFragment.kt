@@ -14,7 +14,10 @@ import com.cloudwell.paywell.uiCommon.pay.adapter.UtilityAdapter
 import com.cloudwell.paywell.uiCommon.pay.adapter.UtilityAdapter.ItemClickListener
 import com.cloudwell.paywell.uiCommon.pay.adapter.WatrtListAdapter
 import com.cloudwell.paywell.uiCommon.pay.fragment.utility.TopUp.TopupDetailsFragment
-import com.cloudwell.paywell.uiCommon.pay.fragment.utility.electricity.ElectronicsDetailsFragment
+import com.cloudwell.paywell.uiCommon.pay.fragment.utility.electricity.desco.DescoDetailsFragment
+import com.cloudwell.paywell.uiCommon.pay.fragment.utility.electricity.dpdc.DpdcDetailsFragment
+import com.cloudwell.paywell.uiCommon.pay.fragment.utility.electricity.polliBiddut.PolliDetailsFragment
+import com.cloudwell.paywell.uiCommon.pay.fragment.utility.electricity.westZone.WestZoneDetailsFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.utility.gas.GasDetailsFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.utility.water.WaterDetailsFragment
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
@@ -181,16 +184,32 @@ class UtilityMainFragment : Fragment(), ItemClickListener,
 
     }
 
-    override fun onElecClick(pojo: UtilityPOjo) {
-        val fg = ElectronicsDetailsFragment()
+    override fun onElecClick(pojo: UtilityPOjo, position: Int) {
+
         val bundle  = Bundle()
         val gson = Gson()
         val json = gson.toJson(pojo)
         bundle.putString("electronics", json)
-        fg.arguments = bundle
-        FragmentHelper.replaceFragment(
-            fg, requireActivity().supportFragmentManager, R.id.payment_container
-        )
+
+        if (position == 0){
+            val desco = DescoDetailsFragment()
+            desco.arguments = bundle
+            FragmentHelper.replaceFragment(desco, requireActivity().supportFragmentManager, R.id.payment_container)
+        }else if (position == 1){
+            val frag = DpdcDetailsFragment()
+            frag.arguments = bundle
+            FragmentHelper.replaceFragment(frag, requireActivity().supportFragmentManager, R.id.payment_container)
+        }else if (position == 2){
+            val frag = WestZoneDetailsFragment()
+            frag.arguments = bundle
+            FragmentHelper.replaceFragment(frag, requireActivity().supportFragmentManager, R.id.payment_container)
+        }else if (position == 3){
+            val frag = PolliDetailsFragment()
+            frag.arguments = bundle
+            FragmentHelper.replaceFragment(frag, requireActivity().supportFragmentManager, R.id.payment_container)
+        }
+
+
 
     }
 

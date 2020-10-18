@@ -41,7 +41,7 @@ class ElectricityAdapter(mContext: Context, courselist: List<UtilityPOjo>) :
         holder.icon.setImageResource(courselist.get(position).icon!!)
 
         holder.itemView.setOnClickListener(View.OnClickListener {
-            clickListener?.onElecClick(courselist.get(position))
+            clickListener?.onElecClick(courselist.get(position), position)
         })
     }
 
@@ -76,6 +76,6 @@ class ElectricityAdapter(mContext: Context, courselist: List<UtilityPOjo>) :
     }
 
     interface ElecItemClickListener {
-        fun onElecClick(pojo : UtilityPOjo)
+        fun onElecClick(pojo : UtilityPOjo, position : Int)
     }
 }

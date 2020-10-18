@@ -3,14 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView316"
-        android:layout_width="84dp"
-        android:layout_height="81dp"
-        android:layout_marginTop="180dp"
+        android:id="@+id/profile_ic"
+        android:layout_width="@dimen/_81dp"
+        android:layout_height="@dimen/_81dp"
+        android:background="@drawable/btn_round_blue"
+        android:padding="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_180dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,7 +26,7 @@
         android:layout_marginTop="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView316">
+        app:layout_constraintTop_toBottomOf="@+id/profile_ic">
 
         <TextView
             android:id="@+id/success_mg"
