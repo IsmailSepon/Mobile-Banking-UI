@@ -2,12 +2,13 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="@dimen/_5dp"
-    android:layout_height="match_parent">
+    app:cardCornerRadius="@dimen/_10dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:paddingBottom="@dimen/_15dp"
+        android:paddingBottom="@dimen/_30dp"
         android:layout_height="match_parent">
 
 
@@ -31,24 +32,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="18dp"
-            android:text="@string/customer_number"
+            android:text="SMS bill number"
             android:textColor="@color/common_clr"
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView716" />
-
-        <TextView
-            android:id="@+id/amount3"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="32dp"
-            android:text="@string/month"
-            android:textColor="@color/common_clr"
-            android:textSize="@dimen/_12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mobile_numver_topup2" />
 
         <TextView
             android:id="@+id/offer_txt"
@@ -57,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="18dp"
-            android:text="@string/mobile_number"
+            android:text="Phone number"
             android:textColor="@color/common_clr"
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,26 +57,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:text="@string/west_zone"
+            android:text="Dhaka WASA"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintStart_toStartOf="@+id/textView715"
             app:layout_constraintTop_toBottomOf="@+id/textView715" />
 
         <TextView
-            android:id="@+id/topup_amount2"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="June, 2020"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_15sp"
-            app:layout_constraintStart_toStartOf="@+id/textView715"
-            app:layout_constraintTop_toBottomOf="@+id/amount3" />
-
-        <TextView
             android:id="@+id/confirm_btn"
-            style="@style/text_style"
+            style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -97,11 +74,11 @@
             android:textColor="@color/text_link_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topup_amount2" />
+            app:layout_constraintTop_toBottomOf="@+id/mobile_numver_topup2" />
 
         <TextView
             android:id="@+id/cancel_btn"
-            style="@style/text_style"
+            style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="34dp"

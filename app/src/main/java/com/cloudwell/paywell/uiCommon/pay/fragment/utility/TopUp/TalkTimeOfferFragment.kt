@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cloudwell.paywell.R
@@ -12,6 +13,8 @@ import kotlinx.android.synthetic.main.talk_time_offer_layout.view.*
 
 class TalkTimeOfferFragment : Fragment() {
 
+    var continue_btn : Button? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -19,6 +22,13 @@ class TalkTimeOfferFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.talk_time_offer_layout, container, false)
+
+        continue_btn = view.talktime_continue_btn
+        continue_btn!!.setOnClickListener(View.OnClickListener {
+
+            requireActivity().finish()
+
+        })
 
 
 
@@ -40,6 +50,8 @@ class TalkTimeOfferFragment : Fragment() {
 
 
         recycler.adapter  = activity?.applicationContext?.let { OfferListAdapter(it, list) }
+
+
 
 
         return view
@@ -67,4 +79,6 @@ class TalkTimeOfferFragment : Fragment() {
             }
         }
     }
+
+
 }

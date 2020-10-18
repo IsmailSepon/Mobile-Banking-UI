@@ -108,7 +108,7 @@ class UtilityMainFragment : Fragment(), ItemClickListener,
 
         val pojo10 : UtilityPOjo = UtilityPOjo()
         pojo10.name = "Dhaka WASA"
-        pojo10.icon = R.drawable.polli_biddut_ic
+        pojo10.icon = R.drawable.wasa_ic
 
         val pojo11 : UtilityPOjo = UtilityPOjo()
         pojo11.name = "Karnafuli GAS"

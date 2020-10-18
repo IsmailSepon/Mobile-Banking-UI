@@ -2,12 +2,13 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="@dimen/_5dp"
-    android:layout_height="match_parent">
+    app:cardCornerRadius="@dimen/_10dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:paddingBottom="@dimen/_15dp"
+        android:paddingBottom="@dimen/_30dp"
         android:layout_height="match_parent">
 
 
@@ -112,7 +113,7 @@
 
         <TextView
             android:id="@+id/card_emi_confirm_btn"
-            style="@style/text_style"
+            style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -125,7 +126,7 @@
 
         <TextView
             android:id="@+id/cancel_btn"
-            style="@style/text_style"
+            style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"

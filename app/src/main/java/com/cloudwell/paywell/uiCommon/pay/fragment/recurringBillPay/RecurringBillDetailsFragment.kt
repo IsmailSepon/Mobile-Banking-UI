@@ -13,9 +13,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.adapter.RecurringBillAdapter
 import com.cloudwell.paywell.uiCommon.pay.model.RecurringBillPOjo
+import com.cloudwell.paywell.utils.FragmentHelper
+import com.google.gson.Gson
 
 
-class RecurringBillDetailsFragment : Fragment() {
+class RecurringBillDetailsFragment : Fragment(), RecurringBillAdapter.RecurringItemClickListener {
 
 
     @SuppressLint("SetTextI18n")
@@ -37,6 +39,7 @@ class RecurringBillDetailsFragment : Fragment() {
         val list = ArrayList<RecurringBillPOjo>()
 
         val pojo : RecurringBillPOjo = RecurringBillPOjo()
+
         pojo.amount = "৳500"
         pojo.details = "Created on 8 June, activated on 10 June"
         pojo.icon = R.drawable.recurring_gp
@@ -47,9 +50,9 @@ class RecurringBillDetailsFragment : Fragment() {
         list.add(pojo)
 
 
-        val topupAdapter : RecurringBillAdapter = RecurringBillAdapter(requireContext(), list)
-        recurring_recycler.adapter = activity?.applicationContext?.let { topupAdapter }
-        //topupAdapter.setClickListener(this)
+        val recurringAdapter : RecurringBillAdapter = RecurringBillAdapter(requireContext(), list)
+        recurring_recycler.adapter = activity?.applicationContext?.let { recurringAdapter }
+        recurringAdapter.setClickListener(this)
 
 
 
@@ -64,6 +67,21 @@ class RecurringBillDetailsFragment : Fragment() {
 
 
         }
+    }
+
+
+
+    override fun onRecClick(pojo: RecurringBillPOjo) {
+        val fg = RecurringDetailsFragment()
+        val bundle  = Bundle()
+        val gson = Gson()
+        val json = gson.toJson(pojo)
+        bundle.putString("recurring", json)
+        fg.arguments = bundle
+        FragmentHelper.replaceFragment(
+            fg, requireActivity().supportFragmentManager, R.id.payment_container
+        )
+
     }
 
 

@@ -1,7 +1,6 @@
 package com.cloudwell.paywell.uiCommon.pay.adapter
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -37,15 +36,10 @@ class OfferListAdapter(mContext: Context, courselist: List<String>) :
 
         holder.offer_selection_btn.setOnClickListener(View.OnClickListener {
 
-            (mContext as Activity).finish()
+           // (mContext as Activity).finish()
+            clickListener?.onClick(courselist.get(position))
 
         })
-        //holder.icon.setImageResource(courselist.get(position).icon!!)
-
-
-//        holder.itemView.setOnClickListener(View.OnClickListener {
-//            clickListener?.onClick(courselist.get(position))
-//        })
 
 
     }

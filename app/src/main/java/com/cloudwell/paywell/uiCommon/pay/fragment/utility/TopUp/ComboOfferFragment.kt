@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cloudwell.paywell.R
@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.combo_offer_layout.view.*
 
 class ComboOfferFragment : Fragment(), OfferListAdapter.OfferClickListener {
 
+    var continue_btn : Button? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,6 +23,12 @@ class ComboOfferFragment : Fragment(), OfferListAdapter.OfferClickListener {
         val view = inflater.inflate(R.layout.combo_offer_layout, container, false)
 
 
+        continue_btn = view.combo_continue_btn
+        continue_btn!!.setOnClickListener(View.OnClickListener {
+
+            requireActivity().finish()
+
+        })
 
         val layoutManager =
             LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL, false)
@@ -36,10 +43,23 @@ class ComboOfferFragment : Fragment(), OfferListAdapter.OfferClickListener {
         list.add("600 Min + 2GB For 30 Days (Tk. 494)")
         list.add("600 Min + 2GB For 30 Days (Tk. 494)")
         list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
+        list.add("600 Min + 2GB For 30 Days (Tk. 494)")
 
 
         val adapter : OfferListAdapter = OfferListAdapter(requireContext(), list)
-        recycler.adapter  = adapter//activity?.applicationContext?.let { OfferListAdapter(it, list) }
+        recycler.adapter  = adapter
         adapter.setClickListener(this)
 
 
@@ -71,7 +91,10 @@ class ComboOfferFragment : Fragment(), OfferListAdapter.OfferClickListener {
 
     override fun onClick(pojo: String) {
 
-        Toast.makeText(requireContext(), pojo, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(requireContext(), pojo, Toast.LENGTH_SHORT).show()
+       //continue_btn!!.background = R.drawable.round_btn_visable
+
+        continue_btn!!.background = this.resources.getDrawable(R.drawable.round_btn_visable)
 
     }
 }

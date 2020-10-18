@@ -10,7 +10,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.model.RecurringBillPOjo
-import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
 
 /**
  * Created by Sepon on 9/9/2020.
@@ -24,7 +23,7 @@ class RecurringBillAdapter(mContext: Context, courselist: List<RecurringBillPOjo
   //  private var clickListener: OnItemClickListener? = null
 
 
-    private var clickListener: ElecItemClickListener? = null
+    private var clickListener: RecurringItemClickListener? = null
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -39,13 +38,17 @@ class RecurringBillAdapter(mContext: Context, courselist: List<RecurringBillPOjo
         holder.name.text = courselist[position].name
         holder.icon.setImageResource(courselist.get(position).icon!!)
 
+        holder.itemView.setOnClickListener(View.OnClickListener {
+            clickListener?.onRecClick(courselist.get(position))
+        })
+
     }
 
     override fun getItemCount(): Int {
         return courselist.size
     }
 
-    fun setClickListener(itemClickListener: ElecItemClickListener?) {
+    fun setClickListener(itemClickListener: RecurringItemClickListener?) {
         clickListener = itemClickListener
     }
 
@@ -75,7 +78,7 @@ class RecurringBillAdapter(mContext: Context, courselist: List<RecurringBillPOjo
         this.courselist = courselist
     }
 
-    interface ElecItemClickListener {
-        fun onElecClick(pojo : UtilityPOjo)
+    interface RecurringItemClickListener {
+        fun onRecClick(pojo : RecurringBillPOjo)
     }
 }

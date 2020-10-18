@@ -40,35 +40,6 @@ class WaterDetailsFragment : Fragment() {
 
 
 
-//        val country = arrayOf("Select month","January", "February")
-//        val sp : Spinner = view.month_sp
-//        sp.onItemSelectedListener
-//        val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), R.layout.spinner_item, country)
-//        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//        sp.adapter = aa
-//        sp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-//            override fun onNothingSelected(parent: AdapterView<*>?) {
-//            }
-//            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-//            }
-//        }
-//
-//
-//
-//        val country1 = arrayOf("2020", "2019")
-//        val sp1 : Spinner = view.year_sp
-//        sp.onItemSelectedListener
-//        val aa1: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), R.layout.spinner_item, country1)
-//        aa1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//        sp1.adapter = aa1
-//        sp1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-//            override fun onNothingSelected(parent: AdapterView<*>?) {
-//            }
-//            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-//            }
-//        }
-
-
         view.set_water.setOnClickListener(View.OnClickListener {
 
 
