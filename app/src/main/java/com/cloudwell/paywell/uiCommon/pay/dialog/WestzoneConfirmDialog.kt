@@ -10,24 +10,24 @@ import com.cloudwell.paywell.uiCommon.pay.fragment.utility.electricity.Electrici
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
 import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.topup_confirm_dialog.view.*
+import kotlinx.android.synthetic.main.westzone_confirm_dialog.view.*
 
 
-class DpdcConfirmDialog : BaseDialog() {
+class WestzoneConfirmDialog : BaseDialog() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = layoutInflater.inflate(R.layout.electricity_confirm_dialog, null)
+        val view = layoutInflater.inflate(R.layout.westzone_confirm_dialog, null)
 
 
         val pojo : String = requireArguments().getString("electronics", "")
         val gson = Gson()
         val utility : UtilityPOjo = gson.fromJson(pojo, UtilityPOjo::class.java)
 
-        view.confirm_btn.setOnClickListener(View.OnClickListener {
+        view.westzone_confirm_btn.setOnClickListener(View.OnClickListener {
             dismiss()
 
 

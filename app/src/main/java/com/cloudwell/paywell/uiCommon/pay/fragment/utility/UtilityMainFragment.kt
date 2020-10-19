@@ -99,7 +99,7 @@ class UtilityMainFragment : Fragment(), ItemClickListener,
 
         val pojo7 : UtilityPOjo = UtilityPOjo()
         pojo7.name = "DPDC"
-        pojo7.icon = R.drawable.mask_group
+        pojo7.icon = R.drawable.dpdc
 
         val pojo8 : UtilityPOjo = UtilityPOjo()
         pojo8.name = "West Zone"

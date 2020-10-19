@@ -37,7 +37,7 @@
         android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/_15sp"
         style="@style/medium_text_style"
-        android:id="@+id/dpdc_details"
+        android:id="@+id/westzone_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
@@ -66,7 +66,7 @@
         android:textSize="@dimen/_14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dpdc_details"
+        app:layout_constraintTop_toBottomOf="@+id/westzone_details"
         tools:ignore="TextFields" />
 
     <EditText
@@ -87,25 +87,6 @@
         app:layout_constraintTop_toBottomOf="@+id/editText10"
         tools:ignore="TextFields" />
 
-
-    <EditText
-        android:id="@+id/location"
-        style="@style/edittext_style"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
-        android:drawableEnd="@drawable/ic_info_orange"
-        android:hint="@string/location"
-        android:imeOptions="actionNext"
-        android:importantForAutofill="no"
-        android:paddingTop="@dimen/_15dp"
-        android:textSize="@dimen/_14sp"
-        app:layout_constraintEnd_toEndOf="@+id/editText10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText11"
-        tools:ignore="TextFields" />
 
     <Button
         android:id="@+id/ac_created_btn"
@@ -143,13 +124,13 @@
         tools:targetApi="lollipop" />
 
     <ImageView
-        android:id="@+id/dpdc_ic"
+        android:id="@+id/westzone_ic"
         android:layout_width="@dimen/_24dp"
         android:layout_height="@dimen/_24dp"
         android:layout_marginEnd="28dp"
-        app:layout_constraintBottom_toBottomOf="@+id/dpdc_details"
+        app:layout_constraintBottom_toBottomOf="@+id/westzone_details"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dpdc_details"
+        app:layout_constraintTop_toTopOf="@+id/westzone_details"
         app:srcCompat="@drawable/dpdc"
         tools:ignore="ContentDescription" />
 
@@ -160,12 +141,12 @@
         android:layout_width="@dimen/_110dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/spinner_bg"
         android:gravity="center"
         android:spinnerMode="dropdown"
-        app:layout_constraintStart_toStartOf="@+id/location"
-        app:layout_constraintTop_toBottomOf="@+id/location" />
+        app:layout_constraintStart_toStartOf="@+id/editText11"
+        app:layout_constraintTop_toBottomOf="@+id/editText11" />
 
     <Spinner
         android:id="@+id/year_sp"
@@ -174,13 +155,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/spinner_bg"
         android:gravity="center"
         android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="@+id/location"
+        app:layout_constraintEnd_toEndOf="@+id/editText11"
         app:layout_constraintStart_toEndOf="@+id/month_sp"
-        app:layout_constraintTop_toBottomOf="@+id/location" />
+        app:layout_constraintTop_toBottomOf="@+id/editText11" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

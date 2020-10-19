@@ -65,7 +65,7 @@
         android:textSize="@dimen/_14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/elec_details"
+        app:layout_constraintTop_toBottomOf="@+id/desco_details"
         tools:ignore="TextFields" />
 
     <EditText

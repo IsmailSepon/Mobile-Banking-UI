@@ -20,7 +20,7 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="28dp"
             android:text="Bill type"
-            android:textColor="@color/common_clr"
+            android:textColor="@color/recyclerview_title"
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +33,7 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="18dp"
             android:text="Bill number"
-            android:textColor="@color/common_clr"
+            android:textColor="@color/recyclerview_title"
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView716" />
@@ -46,7 +46,7 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="31dp"
             android:text="Location"
-            android:textColor="@color/common_clr"
+            android:textColor="@color/recyclerview_title"
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mobile_numver_topup2" />
@@ -58,8 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="20dp"
-            android:text="Location"
-            android:textColor="@color/common_clr"
+            android:text="@string/month"
+            android:textColor="@color/recyclerview_title"
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/topup_amount" />

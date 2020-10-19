@@ -7,13 +7,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.uiCommon.pay.dialog.ElectricityConfirmDialog
+import com.cloudwell.paywell.uiCommon.pay.dialog.WestzoneConfirmDialog
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.electronics_details_layout.view.*
-import kotlinx.android.synthetic.main.topup_details_layout.view.operator_ic
+import kotlinx.android.synthetic.main.electronics_details_layout.view.set_electricity
+import kotlinx.android.synthetic.main.westzone_details_layout.view.*
 
 
 class WestZoneDetailsFragment : Fragment() {
@@ -25,26 +28,56 @@ class WestZoneDetailsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.electronics_details_layout, container, false)
+        val view = inflater.inflate(R.layout.westzone_details_layout, container, false)
 
         val pojo : String = requireArguments().getString("electronics", "")
         val gson = Gson()
-
         val utility : UtilityPOjo = gson.fromJson(pojo, UtilityPOjo::class.java)
 
 
-        view.elec_details.text = "Your "+utility.name+" bill details"
-        view.operator_ic.setImageResource(utility.icon!!)
+        view.westzone_details.text = "Your "+utility.name+" bill details"
+        view.westzone_ic.setImageResource(utility.icon!!)
+
+
+
+        val month = arrayOf("Select month", "January")
+        val sp : Spinner = view.month_sp
+        sp.onItemSelectedListener
+        val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), R.layout.spinner_item, month)
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        sp.adapter = aa
+        sp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            }
+        }
+
+        val year = arrayOf("2020", "2021")
+        val sp1 : Spinner = view.year_sp
+        sp.onItemSelectedListener
+        val aa1: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), R.layout.spinner_item, year)
+        aa1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        sp1.adapter = aa1
+        sp1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            }
+        }
+
+
 
         view.set_electricity.setOnClickListener(View.OnClickListener {
 
-
-            val dialog: ElectricityConfirmDialog = ElectricityConfirmDialog()
-            dialog.show(activity?.supportFragmentManager!!, "ElectricityConfirmDialog")
+            val json = gson.toJson(utility)
+            val bundle  = Bundle()
+            bundle.putString("electronics", json)
+            val dialog: WestzoneConfirmDialog = WestzoneConfirmDialog()
+            dialog.arguments = bundle
+            dialog.show(activity?.supportFragmentManager!!, "WestzoneConfirmDialog")
 
         })
-
-
 
         return view
     }

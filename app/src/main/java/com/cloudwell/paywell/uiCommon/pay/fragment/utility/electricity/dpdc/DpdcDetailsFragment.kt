@@ -8,6 +8,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.dialog.DpdcConfirmDialog
@@ -48,6 +51,33 @@ class DpdcDetailsFragment : Fragment() {
 
 
         })
+
+        val month = arrayOf("Select month", "January")
+        val sp : Spinner = view.month_sp
+        sp.onItemSelectedListener
+        val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), R.layout.spinner_item, month)
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        sp.adapter = aa
+        sp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            }
+        }
+
+        val year = arrayOf("2020", "2021")
+        val sp1 : Spinner = view.year_sp
+        sp.onItemSelectedListener
+        val aa1: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), R.layout.spinner_item, year)
+        aa1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        sp1.adapter = aa1
+        sp1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            }
+        }
+
 
 
 

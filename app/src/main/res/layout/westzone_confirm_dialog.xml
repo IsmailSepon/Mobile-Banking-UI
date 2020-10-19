@@ -39,13 +39,13 @@
             app:layout_constraintTop_toBottomOf="@+id/textView716" />
 
         <TextView
-            android:id="@+id/amount"
+            android:id="@+id/amount3"
             style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="31dp"
-            android:text="@string/amount"
+            android:text="@string/month"
             android:textColor="@color/recyclerview_title"
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +59,7 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="18dp"
             android:text="@string/mobile_number"
-            android:textColor="@color/recyclerview_title"
+            android:textColor="@color/common_clr"
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mobile_numver_topup" />
@@ -70,35 +70,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:text="DESCO post-paid"
+            android:text="DPDC"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintStart_toStartOf="@+id/textView715"
             app:layout_constraintTop_toBottomOf="@+id/textView715" />
 
         <TextView
-            android:id="@+id/topup_amount"
+            android:id="@+id/topup_amount2"
             style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="৳989"
+            android:text="June, 2020"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintStart_toStartOf="@+id/textView715"
-            app:layout_constraintTop_toBottomOf="@+id/amount" />
+            app:layout_constraintTop_toBottomOf="@+id/amount3" />
 
         <TextView
-            android:id="@+id/desco_confirm_btn"
+            android:id="@+id/westzone_confirm_btn"
             style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="17dp"
             android:text="@string/confirm"
             android:textColor="@color/text_link_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topup_amount" />
+            app:layout_constraintTop_toBottomOf="@+id/topup_amount2" />
 
         <TextView
             android:id="@+id/cancel_btn"
@@ -111,7 +111,7 @@
             android:textColor="@color/text_link_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/desco_confirm_btn" />
+            app:layout_constraintTop_toBottomOf="@+id/westzone_confirm_btn" />
 
         <TextView
             android:id="@+id/mobile_numver_topup"
