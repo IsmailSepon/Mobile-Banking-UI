@@ -15,7 +15,6 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.dialog.WestzoneConfirmDialog
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.electronics_details_layout.view.set_electricity
 import kotlinx.android.synthetic.main.westzone_details_layout.view.*
 
 
@@ -68,7 +67,7 @@ class WestZoneDetailsFragment : Fragment() {
 
 
 
-        view.set_electricity.setOnClickListener(View.OnClickListener {
+        view.set_westzone.setOnClickListener(View.OnClickListener {
 
             val json = gson.toJson(utility)
             val bundle  = Bundle()

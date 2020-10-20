@@ -869,6 +869,7 @@
     <string name="created_on_8_june_activated_on_10_june">Created on 8 June, activated on 10 June</string>
     <string name="_880_1758712950_prepaid">+880 1758712950, Prepaid</string>
     <string name="grameenphone">Grameenphone</string>
+    <string name="sms_account_number">SMS Account number</string>
 
 
 </resources>

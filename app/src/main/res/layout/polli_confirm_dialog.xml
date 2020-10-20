@@ -32,24 +32,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="18dp"
-            android:text="Bill number"
+            android:text="SMS Account number"
             android:textColor="@color/recyclerview_title"
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView716" />
-
-        <TextView
-            android:id="@+id/amount3"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="31dp"
-            android:text="@string/month"
-            android:textColor="@color/recyclerview_title"
-            android:textSize="@dimen/_12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mobile_numver_topup2" />
 
         <TextView
             android:id="@+id/offer_txt"
@@ -58,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="18dp"
-            android:text="@string/mobile_number"
+            android:text="@string/amount"
             android:textColor="@color/common_clr"
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,25 +57,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:text="West Zone"
+            android:text="DPDC"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintStart_toStartOf="@+id/textView715"
             app:layout_constraintTop_toBottomOf="@+id/textView715" />
 
         <TextView
-            android:id="@+id/topup_amount2"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="June, 2020"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_15sp"
-            app:layout_constraintStart_toStartOf="@+id/textView715"
-            app:layout_constraintTop_toBottomOf="@+id/amount3" />
-
-        <TextView
-            android:id="@+id/westzone_confirm_btn"
+            android:id="@+id/polli_confirm_btn"
             style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -98,7 +74,7 @@
             android:textColor="@color/text_link_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topup_amount2" />
+            app:layout_constraintTop_toBottomOf="@+id/mobile_numver_topup2" />
 
         <TextView
             android:id="@+id/cancel_btn"
@@ -111,7 +87,7 @@
             android:textColor="@color/text_link_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/westzone_confirm_btn" />
+            app:layout_constraintTop_toBottomOf="@+id/polli_confirm_btn" />
 
         <TextView
             android:id="@+id/mobile_numver_topup"
@@ -133,7 +109,7 @@
             android:layout_marginTop="3dp"
             android:layout_marginEnd="32dp"
             android:gravity="left"
-            android:text="01758712950"
+            android:text="৳530"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_15sp"
             app:layout_constraintEnd_toEndOf="parent"

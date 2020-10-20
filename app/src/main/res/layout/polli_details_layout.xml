@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -37,7 +36,7 @@
         android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/_15sp"
         style="@style/medium_text_style"
-        android:id="@+id/westzone_details"
+        android:id="@+id/polli_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
@@ -59,14 +58,14 @@
         android:layout_marginEnd="@dimen/_160dp"
         android:drawableEnd="@drawable/camera_small"
         android:drawablePadding="@dimen/_15dp"
-        android:hint="@string/enter_your_bill_number"
+        android:hint="@string/sms_account_number"
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
         android:paddingTop="@dimen/_15dp"
         android:textSize="@dimen/_14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/westzone_details"
+        app:layout_constraintTop_toBottomOf="@+id/polli_details"
         tools:ignore="TextFields" />
 
     <EditText
@@ -76,8 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_30dp"
         android:layout_marginTop="@dimen/_24dp"
-        android:layout_marginEnd="20dp"
-        android:hint="@string/phone_number"
+        android:layout_marginEnd="30dp"
+        android:hint="@string/amount"
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
         android:paddingTop="@dimen/_15dp"
@@ -86,6 +85,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText10"
         tools:ignore="TextFields" />
+
+
 
 
     <Button
@@ -103,11 +104,11 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText11"
-        app:layout_constraintVertical_bias="0.69"
+        app:layout_constraintVertical_bias="0.59000003"
         tools:targetApi="lollipop" />
 
     <Button
-        android:id="@+id/set_westzone"
+        android:id="@+id/polli_electricity"
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_hight"
         android:layout_marginTop="12dp"
@@ -124,44 +125,15 @@
         tools:targetApi="lollipop" />
 
     <ImageView
-        android:id="@+id/westzone_ic"
-        android:layout_width="@dimen/_24dp"
-        android:layout_height="@dimen/_24dp"
+        android:id="@+id/polli_operator_ic"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_40dp"
         android:layout_marginEnd="28dp"
-        app:layout_constraintBottom_toBottomOf="@+id/westzone_details"
+        app:layout_constraintBottom_toBottomOf="@+id/polli_details"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/westzone_details"
-        app:srcCompat="@drawable/dpdc"
+        app:layout_constraintTop_toTopOf="@+id/polli_details"
+        app:srcCompat="@drawable/polli_biddut_ic"
         tools:ignore="ContentDescription" />
-
-
-    <Spinner
-        android:id="@+id/month_sp"
-        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
-        android:layout_width="@dimen/_110dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/spinner_bg"
-        android:gravity="center"
-        android:spinnerMode="dropdown"
-        app:layout_constraintStart_toStartOf="@+id/editText11"
-        app:layout_constraintTop_toBottomOf="@+id/editText11" />
-
-    <Spinner
-        android:id="@+id/year_sp"
-        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/spinner_bg"
-        android:gravity="center"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="@+id/editText11"
-        app:layout_constraintStart_toEndOf="@+id/month_sp"
-        app:layout_constraintTop_toBottomOf="@+id/editText11" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

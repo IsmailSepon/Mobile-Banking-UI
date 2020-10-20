@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/desco_ic"
+        app:srcCompat="@drawable/west_zone_large"
         tools:ignore="ContentDescription" />
 
 

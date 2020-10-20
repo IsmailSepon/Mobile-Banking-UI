@@ -103,7 +103,7 @@ class UtilityMainFragment : Fragment(), ItemClickListener,
 
         val pojo8 : UtilityPOjo = UtilityPOjo()
         pojo8.name = "West Zone"
-        pojo8.icon = R.drawable.west_zone
+        pojo8.icon = R.drawable.west_zone_large
 
         val pojo9 : UtilityPOjo = UtilityPOjo()
         pojo9.name = "Polli Biddyut"

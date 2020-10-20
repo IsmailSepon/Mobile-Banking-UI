@@ -9,11 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.uiCommon.pay.dialog.ElectricityConfirmDialog
+import com.cloudwell.paywell.uiCommon.pay.dialog.PolliConfirmDialog
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.electronics_details_layout.view.*
-import kotlinx.android.synthetic.main.topup_details_layout.view.operator_ic
+import kotlinx.android.synthetic.main.polli_details_layout.view.*
 
 
 class PolliDetailsFragment : Fragment() {
@@ -25,7 +24,7 @@ class PolliDetailsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.electronics_details_layout, container, false)
+        val view = inflater.inflate(R.layout.polli_details_layout, container, false)
 
         val pojo : String = requireArguments().getString("electronics", "")
         val gson = Gson()
@@ -33,14 +32,17 @@ class PolliDetailsFragment : Fragment() {
         val utility : UtilityPOjo = gson.fromJson(pojo, UtilityPOjo::class.java)
 
 
-        view.elec_details.text = "Your "+utility.name+" bill details"
-        view.operator_ic.setImageResource(utility.icon!!)
+        view.polli_details.text = "Your "+utility.name+" bill details"
+        view.polli_operator_ic.setImageResource(utility.icon!!)
 
-        view.set_electricity.setOnClickListener(View.OnClickListener {
+        view.polli_electricity.setOnClickListener(View.OnClickListener {
 
-
-            val dialog: ElectricityConfirmDialog = ElectricityConfirmDialog()
-            dialog.show(activity?.supportFragmentManager!!, "ElectricityConfirmDialog")
+            val json = gson.toJson(utility)
+            val bundle  = Bundle()
+            bundle.putString("electronics", json)
+            val dialog: PolliConfirmDialog = PolliConfirmDialog()
+            dialog.arguments = bundle
+            dialog.show(activity?.supportFragmentManager!!, "PolliConfirmDialog")
 
         })
 
