@@ -59,7 +59,7 @@
         android:layout_marginEnd="100dp"
         android:drawableEnd="@drawable/camera_small"
         android:drawablePadding="@dimen/_15dp"
-        android:hint="@string/card_number"
+        android:hint="Card number"
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
         android:paddingTop="@dimen/_15dp"
