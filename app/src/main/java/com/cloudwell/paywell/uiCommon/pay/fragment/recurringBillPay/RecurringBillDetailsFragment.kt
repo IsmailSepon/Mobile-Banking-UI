@@ -14,7 +14,6 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.adapter.RecurringBillAdapter
 import com.cloudwell.paywell.uiCommon.pay.model.RecurringBillPOjo
 import com.cloudwell.paywell.utils.FragmentHelper
-import com.google.gson.Gson
 
 
 class RecurringBillDetailsFragment : Fragment(), RecurringBillAdapter.RecurringItemClickListener {
@@ -72,12 +71,12 @@ class RecurringBillDetailsFragment : Fragment(), RecurringBillAdapter.RecurringI
 
 
     override fun onRecClick(pojo: RecurringBillPOjo) {
-        val fg = RecurringDetailsFragment()
-        val bundle  = Bundle()
-        val gson = Gson()
-        val json = gson.toJson(pojo)
-        bundle.putString("recurring", json)
-        fg.arguments = bundle
+        val fg = RecurringProfileFragment()
+//        val bundle  = Bundle()
+//        val gson = Gson()
+//        val json = gson.toJson(pojo)
+//        bundle.putString("recurring", json)
+//        fg.arguments = bundle
         FragmentHelper.replaceFragment(
             fg, requireActivity().supportFragmentManager, R.id.payment_container
         )

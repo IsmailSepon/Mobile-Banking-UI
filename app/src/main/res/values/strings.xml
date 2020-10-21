@@ -870,6 +870,9 @@
     <string name="_880_1758712950_prepaid">+880 1758712950, Prepaid</string>
     <string name="grameenphone">Grameenphone</string>
     <string name="sms_account_number">SMS Account number</string>
+    <string name="enter_your_amount">Enter your amount</string>
+    <string name="payment_to_occur_on">Payment to occur on</string>
+    <string name="choose_your_service_type">Choose your service type</string>
 
 
 </resources>
