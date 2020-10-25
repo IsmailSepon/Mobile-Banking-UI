@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,248 +10,408 @@
 
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
-        <ImageView
-            android:id="@+id/imageView318"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/back" />
-
-        <TextView
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_16_7sp"
-            style="@style/medium_text_style"
-            android:id="@+id/hader_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Edit bill payment job - Grameenphone "
-            app:layout_constraintBottom_toBottomOf="@+id/imageView318"
-            app:layout_constraintStart_toEndOf="@+id/imageView318"
-            app:layout_constraintTop_toTopOf="@+id/imageView318" />
-
-        <TextView
-            android:textColor="@color/common_clr"
-            android:textSize="@dimen/_14sp"
-            style="@style/text_style"
-            android:id="@+id/textView723"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="25dp"
-            android:text="@string/choose_your_service_type"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hader_txt" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/chooseservice_recycler"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="18dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView723" />
+            android:layout_height="wrap_content">
 
 
-        <EditText
-            android:id="@+id/editText13"
-            style="@style/edittext_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="50dp"
-            android:drawableEnd="@drawable/contact_book_blue"
-            android:ems="12"
-            android:hint="@string/legal_first_name"
-            android:imeOptions="actionNext"
-            android:importantForAutofill="no"
-            android:text="+880 1758712950"
-            android:textSize="@dimen/_13_3sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chooseservice_recycler"
-            tools:ignore="TextFields" />
-
-        <TextView
-            android:textColor="@color/common_clr"
-            android:textSize="@dimen/_10sp"
-            style="@style/text_style"
-            android:id="@+id/textView721"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="25dp"
-            android:text="@string/enter_your_amount"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText13" />
-
-
-        <EditText
-            android:id="@+id/editText14"
-            style="@style/edittext_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="14dp"
-            android:ems="4"
-            android:hint="৳500"
-            android:imeOptions="actionNext"
-            android:importantForAutofill="no"
-            android:textColorHint="@color/keypad_text_clr"
-            android:textSize="@dimen/_20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView721"
-            tools:ignore="MissingConstraints,TextFields" />
-
-
-        <RadioGroup
-            android:id="@+id/transfertype_radiogroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="24dp"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText14"
-            tools:ignore="MissingConstraints">
-
-            <RadioButton
+            <ImageView
+                android:id="@+id/imageView318"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:fontFamily="@font/roboto_medium"
-                android:text="@string/pre_paid"
-                android:textColor="@drawable/text_radio_selector"
-                android:textSize="@dimen/_12sp"
-                android:theme="@style/RadioButtonStyle" />
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back" />
 
-            <RadioButton
+            <TextView
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_16_7sp"
+                style="@style/medium_text_style"
+                android:id="@+id/hader_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_27dp"
-                android:checked="false"
-                android:fontFamily="@font/roboto_medium"
-                android:text="@string/post_paid"
-                android:textColor="@drawable/text_radio_selector"
-                android:textSize="@dimen/_12sp"
-                android:theme="@style/RadioButtonStyle" />
+                android:layout_marginStart="16dp"
+                android:text="Edit bill payment job - Grameenphone "
+                app:layout_constraintBottom_toBottomOf="@+id/imageView318"
+                app:layout_constraintStart_toEndOf="@+id/imageView318"
+                app:layout_constraintTop_toTopOf="@+id/imageView318" />
 
-
-        </RadioGroup>
-
-
-        <ImageView
-            android:id="@+id/imageView319"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/half_one"
-            android:layout_marginTop="16dp"
-            android:background="@color/common_clr"
-            app:layout_constraintTop_toBottomOf="@+id/transfertype_radiogroup" />
-
-        <TextView
-            android:textColor="@color/common_clr"
-            android:textSize="@dimen/_13_3sp"
-            style="@style/text_style"
-            android:id="@+id/textView724"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/schedule"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView319" />
-
-        <TextView
-            android:textColor="@color/recyclerview_title"
-            android:textSize="@dimen/_13_3sp"
-            style="@style/text_style"
-            android:id="@+id/textView725"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="38dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/payment_to_occur_on"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView724" />
-
-        <TextView
-            android:id="@+id/textView726"
-            style="@style/medium_text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="10 AM"
-            android:textColor="@color/text_clr_blue"
-            android:textSize="@dimen/_13_3sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView725"
-            app:layout_constraintStart_toEndOf="@+id/textView725"
-            app:layout_constraintTop_toTopOf="@+id/textView725" />
-
-
-        <RadioGroup
-            android:id="@+id/radioGroup2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="26dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView725"
-            tools:ignore="MissingConstraints">
-
-            <RadioButton
+            <TextView
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_14sp"
+                style="@style/text_style"
+                android:id="@+id/textView723"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:fontFamily="@font/roboto_medium"
-                android:text="@string/every_day"
-                android:textColor="@drawable/text_radio_selector"
-                android:textSize="@dimen/_12sp"
-                android:theme="@style/RadioButtonStyle" />
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/choose_your_service_type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hader_txt" />
 
-            <RadioButton
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chooseservice_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="18dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView723" />
+
+
+            <EditText
+                android:id="@+id/editText13"
+                style="@style/edittext_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
-                android:fontFamily="@font/roboto_medium"
-                android:text="@string/every_week"
-                android:textColor="@drawable/text_radio_selector"
-                android:textSize="@dimen/_12sp"
-                android:theme="@style/RadioButtonStyle" />
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="50dp"
+                android:drawableEnd="@drawable/contact_book_blue"
+                android:ems="12"
+                android:hint="@string/legal_first_name"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:text="+880 1758712950"
+                android:textSize="@dimen/_13_3sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chooseservice_recycler"
+                tools:ignore="TextFields" />
 
-            <RadioButton
+            <TextView
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_10sp"
+                style="@style/text_style"
+                android:id="@+id/textView721"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
-                android:fontFamily="@font/roboto_medium"
-                android:text="@string/every_month"
-                android:textColor="@drawable/text_radio_selector"
-                android:textSize="@dimen/_12sp"
-                android:theme="@style/RadioButtonStyle" />
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/enter_your_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText13" />
 
 
-        </RadioGroup>
+            <EditText
+                android:id="@+id/editText14"
+                style="@style/edittext_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="14dp"
+                android:ems="4"
+                android:hint="৳500"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:textColorHint="@color/keypad_text_clr"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView721"
+                tools:ignore="MissingConstraints,TextFields" />
+
+
+            <RadioGroup
+                android:id="@+id/transfertype_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText14"
+                tools:ignore="MissingConstraints">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/pre_paid"
+                    android:textColor="@drawable/text_radio_selector"
+                    android:textSize="@dimen/_12sp"
+                    android:theme="@style/RadioButtonStyle" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_27dp"
+                    android:checked="false"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/post_paid"
+                    android:textColor="@drawable/text_radio_selector"
+                    android:textSize="@dimen/_12sp"
+                    android:theme="@style/RadioButtonStyle" />
+
+
+            </RadioGroup>
+
+
+            <ImageView
+                android:id="@+id/imageView319"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/half_one"
+                android:layout_marginTop="16dp"
+                android:background="@color/common_clr"
+                app:layout_constraintTop_toBottomOf="@+id/transfertype_radiogroup" />
+
+            <TextView
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_13_3sp"
+                style="@style/text_style"
+                android:id="@+id/textView724"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/schedule"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView319" />
+
+            <TextView
+                android:textColor="@color/recyclerview_title"
+                android:textSize="@dimen/_13_3sp"
+                style="@style/text_style"
+                android:id="@+id/textView725"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/payment_to_occur_on"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView724" />
+
+            <TextView
+                android:id="@+id/textView726"
+                style="@style/medium_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="10 AM"
+                android:textColor="@color/text_clr_blue"
+                android:textSize="@dimen/_13_3sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView725"
+                app:layout_constraintStart_toEndOf="@+id/textView725"
+                app:layout_constraintTop_toTopOf="@+id/textView725" />
+
+
+            <RadioGroup
+                android:id="@+id/day_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="26dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView725"
+                tools:ignore="MissingConstraints">
+
+                <RadioButton
+                    android:id="@+id/recur_everyday_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/every_day"
+                    android:textColor="@drawable/text_radio_selector"
+                    android:textSize="@dimen/_12sp"
+                    android:theme="@style/RadioButtonStyle" />
+
+                <RadioButton
+                    android:id="@+id/recur_everyweek_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/every_week"
+                    android:textColor="@drawable/text_radio_selector"
+                    android:textSize="@dimen/_12sp"
+                    android:theme="@style/RadioButtonStyle" />
+
+
+                <RadioGroup
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginStart="@dimen/_3dp"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:id="@+id/weekRadio"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:button="@android:color/transparent"
+                        android:layout_width="@dimen/_26dp"
+                        android:layout_height="@dimen/_26dp"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/s"
+                        android:layout_marginEnd="@dimen/_24dp"
+                        android:background="@drawable/schedule_radiobtn_bg"
+                        android:textColor="@drawable/schedule_radio_txt_clr"
+                        android:textSize="@dimen/_15sp"
+                        android:theme="@style/RadioButtonStyle" />
+
+                    <RadioButton
+                        android:button="@android:color/transparent"
+                        android:layout_width="@dimen/_26dp"
+                        android:layout_height="@dimen/_26dp"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/m"
+                        android:layout_marginEnd="@dimen/_24dp"
+                        android:background="@drawable/schedule_radiobtn_bg"
+                        android:textColor="@drawable/schedule_radio_txt_clr"
+                        android:textSize="@dimen/_15sp"
+                        android:theme="@style/RadioButtonStyle" />
+
+                    <RadioButton
+                        android:button="@android:color/transparent"
+                        android:layout_width="@dimen/_26dp"
+                        android:layout_height="@dimen/_26dp"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/t"
+                        android:layout_marginEnd="@dimen/_24dp"
+                        android:background="@drawable/schedule_radiobtn_bg"
+                        android:textColor="@drawable/schedule_radio_txt_clr"
+                        android:textSize="@dimen/_15sp"
+                        android:theme="@style/RadioButtonStyle" />
+
+                    <RadioButton
+                        android:button="@android:color/transparent"
+                        android:layout_width="@dimen/_26dp"
+                        android:layout_height="@dimen/_26dp"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/w"
+                        android:layout_marginEnd="@dimen/_24dp"
+                        android:background="@drawable/schedule_radiobtn_bg"
+                        android:textColor="@drawable/schedule_radio_txt_clr"
+                        android:textSize="@dimen/_15sp"
+                        android:theme="@style/RadioButtonStyle" />
+
+                    <RadioButton
+                        android:button="@android:color/transparent"
+                        android:layout_width="@dimen/_26dp"
+                        android:layout_height="@dimen/_26dp"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/t"
+                        android:layout_marginEnd="@dimen/_24dp"
+                        android:background="@drawable/schedule_radiobtn_bg"
+                        android:textColor="@drawable/schedule_radio_txt_clr"
+                        android:textSize="@dimen/_15sp"
+                        android:theme="@style/RadioButtonStyle" />
+
+                    <RadioButton
+                        android:button="@android:color/transparent"
+                        android:layout_width="@dimen/_26dp"
+                        android:layout_height="@dimen/_26dp"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/f"
+                        android:layout_marginEnd="@dimen/_24dp"
+                        android:background="@drawable/schedule_radiobtn_bg"
+                        android:textColor="@drawable/schedule_radio_txt_clr"
+                        android:textSize="@dimen/_15sp"
+                        android:theme="@style/RadioButtonStyle" />
+
+                    <RadioButton
+                        android:button="@android:color/transparent"
+                        android:layout_width="@dimen/_26dp"
+                        android:layout_height="@dimen/_26dp"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/s"
+                        android:background="@drawable/schedule_radiobtn_bg"
+                        android:textColor="@drawable/schedule_radio_txt_clr"
+                        android:textSize="@dimen/_15sp"
+                        android:theme="@style/RadioButtonStyle" />
+
+                </RadioGroup>
+
+
+                <RadioButton
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:id="@+id/recur_everymonth_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/every_month"
+                    android:textColor="@drawable/text_radio_selector"
+                    android:textSize="@dimen/_12sp"
+                    android:theme="@style/RadioButtonStyle" />
+
+
+
+            </RadioGroup>
+
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/day_radio_group">-->
+
+<!--                <include layout="@layout/custom_calander_view" />-->
+
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <ImageView
+                android:id="@+id/imageView321"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/half_one"
+                android:layout_marginTop="16dp"
+                android:background="@color/common_clr"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/day_radio_group" />
+
+            <ImageView
+                android:id="@+id/imageView320"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editText13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editText13"
+                app:srcCompat="@drawable/gp_ic" />
+
+
+        
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout60"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_100dp"
-        android:layout_marginTop="40dp"
         android:background="#f9fbff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2">
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <TextView
@@ -301,20 +462,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/imageView320"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintBottom_toBottomOf="@+id/editText13"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editText13"
-            app:srcCompat="@drawable/gp_ic" />
 
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-</ScrollView>
+</LinearLayout>

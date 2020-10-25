@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cloudwell.paywell.R
@@ -15,6 +16,7 @@ import kotlinx.android.synthetic.main.recurring_profile_layout.view.*
 
 class RecurringProfileFragment : Fragment() {
 
+    var select: Int = 1
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
@@ -28,7 +30,11 @@ class RecurringProfileFragment : Fragment() {
 //        val gson = Gson()
 //        val recurring : RecurringBillPOjo = gson.fromJson(pojo, RecurringBillPOjo::class.java)
 
-        val layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
+        val layoutManager = LinearLayoutManager(
+            requireActivity(),
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
         val recycler = view.chooseservice_recycler
         recycler.layoutManager = layoutManager
 
@@ -57,6 +63,23 @@ class RecurringProfileFragment : Fragment() {
         paymentlist.add(payment3)
 
         recycler.adapter  = activity?.applicationContext?.let { PaymentAdapter(it, paymentlist) }
+
+
+
+
+        view.day_radio_group.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->
+            when (checkedId) {
+                R.id.recur_everyday_btn -> {
+                    view.weekRadio.visibility = View.GONE
+                }
+                R.id.recur_everyweek_btn -> {
+                    view.weekRadio.visibility = View.VISIBLE
+                }
+                R.id.recur_everymonth_btn -> {
+                    view.weekRadio.visibility = View.GONE
+                }
+            }
+        })
 
 
 

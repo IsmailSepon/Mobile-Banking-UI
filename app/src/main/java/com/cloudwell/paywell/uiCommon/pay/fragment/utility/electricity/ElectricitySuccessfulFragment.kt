@@ -27,11 +27,12 @@ class ElectricitySuccessfulFragment : Fragment(){
         val gson = Gson()
         val utility : UtilityPOjo = gson.fromJson(pojo, UtilityPOjo::class.java)
 
-        view.profile_ic.setImageResource(utility.icon!!)
-        view.success_mg.text = utility.name+" bill payment of"
+       // view.profile_ic.setImageResource(utility.icon!!)
+        view.success_mg.text = utility.name+" payment of"
 
 
         view.electricity_success_done.setOnClickListener(View.OnClickListener {
+
 
             val frag = ElectricitySuccessfulApproveFragment()
             val json = gson.toJson(utility)

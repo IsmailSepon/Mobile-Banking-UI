@@ -11,12 +11,11 @@
         android:id="@+id/profile_ic"
         android:layout_width="83.3dp"
         android:layout_height="80.6dp"
-        android:background="@drawable/btn_round_blue"
         android:layout_marginTop="@dimen/_180dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dpdc" />
+        app:srcCompat="@drawable/email_verified" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

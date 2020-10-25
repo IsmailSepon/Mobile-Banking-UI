@@ -30,9 +30,13 @@ class DescoConfirmDialog : BaseDialog() {
         view.desco_confirm_btn.setOnClickListener(View.OnClickListener {
             dismiss()
 
+            val pojo6 : UtilityPOjo = UtilityPOjo()
+            pojo6.name = "DESCO post-paid"
+            pojo6.icon = R.drawable.desco_ic
+
 
             val frag = ElectricitySuccessfulFragment()
-            val json = gson.toJson(utility)
+            val json = gson.toJson(pojo6)
             val bundle  = Bundle()
             bundle.putString("electronics", json)
             frag.arguments = bundle

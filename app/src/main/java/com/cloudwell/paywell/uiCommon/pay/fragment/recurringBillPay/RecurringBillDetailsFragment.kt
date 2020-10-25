@@ -45,8 +45,24 @@ class RecurringBillDetailsFragment : Fragment(), RecurringBillAdapter.RecurringI
         pojo.number = "+880 1758712950, Prepaid"
         pojo.name = "Grameenphone"
 
+
+        val pojo1 : RecurringBillPOjo = RecurringBillPOjo()
+        pojo1.amount = "৳500"
+        pojo1.details = "Created on 8 June, activated on 10 June"
+        pojo1.icon = R.drawable.recurrnig_robi
+        pojo1.number = "+880 1758712950, Prepaid"
+        pojo1.name = "Grameenphone"
+
+        val pojo2 : RecurringBillPOjo = RecurringBillPOjo()
+        pojo2.amount = "৳500"
+        pojo2.details = "Created on 8 June, activated on 10 June"
+        pojo2.icon = R.drawable.recurring_wasa
+        pojo2.number = "+880 1758712950, Prepaid"
+        pojo2.name = "Grameenphone"
+
         list.add(pojo)
-        list.add(pojo)
+        list.add(pojo1)
+        list.add(pojo2)
 
 
         val recurringAdapter : RecurringBillAdapter = RecurringBillAdapter(requireContext(), list)
