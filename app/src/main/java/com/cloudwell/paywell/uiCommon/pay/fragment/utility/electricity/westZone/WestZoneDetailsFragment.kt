@@ -12,7 +12,8 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.uiCommon.pay.dialog.WestzoneConfirmDialog
+import com.cloudwell.paywell.uiCommon.pay.dialog.ElectronicsConfirmDialog
+import com.cloudwell.paywell.uiCommon.pay.model.ElectronicsDialogPOjo
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.westzone_details_layout.view.*
@@ -69,12 +70,31 @@ class WestZoneDetailsFragment : Fragment() {
 
         view.set_westzone.setOnClickListener(View.OnClickListener {
 
-            val json = gson.toJson(utility)
+            val westpojo : ElectronicsDialogPOjo = ElectronicsDialogPOjo()
+            westpojo.type = utility.name
+            westpojo.typeDetails = utility.name
+            westpojo.amount = "৳530"
+            westpojo.billNumber = "22255000051515"
+            westpojo.billNumbertitle = getString(R.string.customer_number) // R.string.customer_number
+            westpojo.mobileNumber = "01612250477"
+
+            val json = gson.toJson(westpojo)
             val bundle  = Bundle()
             bundle.putString("electronics", json)
-            val dialog: WestzoneConfirmDialog = WestzoneConfirmDialog()
+
+
+            val dialog: ElectronicsConfirmDialog = ElectronicsConfirmDialog()
             dialog.arguments = bundle
-            dialog.show(activity?.supportFragmentManager!!, "WestzoneConfirmDialog")
+            dialog.show(activity?.supportFragmentManager!!, "DescoConfirmDialog")
+
+
+//
+//            val json = gson.toJson(utility)
+//            val bundle  = Bundle()
+//            bundle.putString("electronics", json)
+//            val dialog: WestzoneConfirmDialog = WestzoneConfirmDialog()
+//            dialog.arguments = bundle
+//            dialog.show(activity?.supportFragmentManager!!, "WestzoneConfirmDialog")
 
         })
 

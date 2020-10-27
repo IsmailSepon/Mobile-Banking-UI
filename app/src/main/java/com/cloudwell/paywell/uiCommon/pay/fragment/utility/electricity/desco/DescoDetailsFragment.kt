@@ -9,7 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.uiCommon.pay.dialog.DescoConfirmDialog
+import com.cloudwell.paywell.uiCommon.pay.dialog.ElectronicsConfirmDialog
+import com.cloudwell.paywell.uiCommon.pay.model.ElectronicsDialogPOjo
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.desco_details_layout.view.*
@@ -37,10 +38,20 @@ class DescoDetailsFragment : Fragment() {
 
         view.set_electricity.setOnClickListener(View.OnClickListener {
 
-            val json = gson.toJson(utility)
+
+            val descoPojo : ElectronicsDialogPOjo = ElectronicsDialogPOjo()
+            descoPojo.type = utility.name
+            descoPojo.typeDetails = utility.name+" post-paid"
+            descoPojo.amount = "৳530"
+            descoPojo.billNumber = "22255000051515"
+            descoPojo.mobileNumber = "01612250477"
+
+            val json = gson.toJson(descoPojo)
             val bundle  = Bundle()
             bundle.putString("electronics", json)
-            val dialog: DescoConfirmDialog = DescoConfirmDialog()
+
+
+            val dialog: ElectronicsConfirmDialog = ElectronicsConfirmDialog()
             dialog.arguments = bundle
             dialog.show(activity?.supportFragmentManager!!, "DescoConfirmDialog")
 

@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_marginTop="18dp"
-            android:text="@string/customer_number"
+            android:text="@string/bill_number"
             android:textColor="@color/recyclerview_title"
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"

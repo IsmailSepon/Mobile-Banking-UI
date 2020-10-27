@@ -9,7 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.uiCommon.pay.dialog.PolliConfirmDialog
+import com.cloudwell.paywell.uiCommon.pay.dialog.ElectronicsConfirmDialog
+import com.cloudwell.paywell.uiCommon.pay.model.ElectronicsDialogPOjo
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.polli_details_layout.view.*
@@ -37,12 +38,31 @@ class PolliDetailsFragment : Fragment() {
 
         view.polli_electricity.setOnClickListener(View.OnClickListener {
 
-            val json = gson.toJson(utility)
+            val polli : ElectronicsDialogPOjo = ElectronicsDialogPOjo()
+            polli.type = utility.name
+            polli.typeDetails = utility.name
+            polli.amount = "৳530"
+            polli.billNumber = "22255000051515"
+            polli.billNumbertitle = "SMS Account number"
+            polli.mobileNumber = "01612250477"
+
+            val json = gson.toJson(polli)
             val bundle  = Bundle()
             bundle.putString("electronics", json)
-            val dialog: PolliConfirmDialog = PolliConfirmDialog()
+
+
+            val dialog: ElectronicsConfirmDialog = ElectronicsConfirmDialog()
             dialog.arguments = bundle
-            dialog.show(activity?.supportFragmentManager!!, "PolliConfirmDialog")
+            dialog.show(activity?.supportFragmentManager!!, "DescoConfirmDialog")
+
+
+//
+//            val json = gson.toJson(utility)
+//            val bundle  = Bundle()
+//            bundle.putString("electronics", json)
+//            val dialog: PolliConfirmDialog = PolliConfirmDialog()
+//            dialog.arguments = bundle
+//            dialog.show(activity?.supportFragmentManager!!, "PolliConfirmDialog")
 
         })
 

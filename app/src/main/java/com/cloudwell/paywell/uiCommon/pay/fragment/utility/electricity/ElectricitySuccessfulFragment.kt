@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
+import com.cloudwell.paywell.uiCommon.pay.model.ElectronicsDialogPOjo
 import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.electricity_success_layout.view.*
@@ -25,10 +25,11 @@ class ElectricitySuccessfulFragment : Fragment(){
 
         val pojo : String = requireArguments().getString("electronics", "")
         val gson = Gson()
-        val utility : UtilityPOjo = gson.fromJson(pojo, UtilityPOjo::class.java)
+       // val utility : UtilityPOjo = gson.fromJson(pojo, UtilityPOjo::class.java)
+        val utility : ElectronicsDialogPOjo = gson.fromJson(pojo, ElectronicsDialogPOjo::class.java)
 
        // view.profile_ic.setImageResource(utility.icon!!)
-        view.success_mg.text = utility.name+" payment of"
+        view.success_mg.text = utility.typeDetails+" payment of"
 
 
         view.electricity_success_done.setOnClickListener(View.OnClickListener {

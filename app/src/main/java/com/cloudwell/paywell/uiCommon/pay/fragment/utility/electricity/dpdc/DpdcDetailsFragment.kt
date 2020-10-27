@@ -13,7 +13,8 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.uiCommon.pay.dialog.DpdcConfirmDialog
+import com.cloudwell.paywell.uiCommon.pay.dialog.ElectronicsConfirmDialog
+import com.cloudwell.paywell.uiCommon.pay.model.ElectronicsDialogPOjo
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.dpdc_details_layout.view.*
@@ -41,12 +42,31 @@ class DpdcDetailsFragment : Fragment() {
 
         view.set_electricity.setOnClickListener(View.OnClickListener {
 
-            val json = gson.toJson(utility)
+
+            val dpdcPojo : ElectronicsDialogPOjo = ElectronicsDialogPOjo()
+            dpdcPojo.type = utility.name
+            dpdcPojo.typeDetails = utility.name
+            dpdcPojo.amount = "৳530"
+            dpdcPojo.billNumber = "22255000051515"
+            dpdcPojo.mobileNumber = "01612250477"
+
+            val json = gson.toJson(dpdcPojo)
             val bundle  = Bundle()
             bundle.putString("electronics", json)
-            val dialog: DpdcConfirmDialog = DpdcConfirmDialog()
+
+
+            val dialog: ElectronicsConfirmDialog = ElectronicsConfirmDialog()
             dialog.arguments = bundle
-            dialog.show(activity?.supportFragmentManager!!, "DpdcConfirmDialog")
+            dialog.show(activity?.supportFragmentManager!!, "DescoConfirmDialog")
+
+
+//            val json = gson.toJson(dpdcPojo)
+//            val bundle  = Bundle()
+//            bundle.putString("electronics", json)
+//
+//            val dialog: DpdcConfirmDialog = DpdcConfirmDialog()
+//            dialog.arguments = bundle
+//            dialog.show(activity?.supportFragmentManager!!, "DpdcConfirmDialog")
 
 
 

@@ -1,115 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="@dimen/_10dp"
     android:background="@color/white"
     android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/_300dp"
         android:paddingBottom="@dimen/_30dp"
         android:layout_height="match_parent">
 
 
-        <TextView
-            android:id="@+id/textView715"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="28dp"
-            android:text="Bill type"
-            android:textColor="@color/recyclerview_title"
-            android:textSize="@dimen/_12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView717"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="18dp"
-            android:text="Bill number"
-            android:textColor="@color/recyclerview_title"
-            android:textSize="@dimen/_12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView716" />
+            <TextView
+                android:id="@+id/typeTitle"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="28dp"
+                android:text="Bill type"
+                android:textColor="@color/recyclerview_title"
+                android:textSize="@dimen/_12sp" />
 
-        <TextView
-            android:id="@+id/amount"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="31dp"
-            android:text="Location"
-            android:textColor="@color/recyclerview_title"
-            android:textSize="@dimen/_12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mobile_numver_topup2" />
 
-        <TextView
-            android:id="@+id/amount3"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/month"
-            android:textColor="@color/recyclerview_title"
-            android:textSize="@dimen/_12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topup_amount" />
 
-        <TextView
-            android:id="@+id/offer_txt"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="18dp"
-            android:text="@string/mobile_number"
-            android:textColor="@color/common_clr"
-            android:textSize="@dimen/_12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mobile_numver_topup" />
+            <TextView
+                android:id="@+id/type_details_txt"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="DPDC"
+                android:layout_marginStart="18dp"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_15sp" />
 
-        <TextView
-            android:id="@+id/textView716"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:text="DPDC"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_15sp"
-            app:layout_constraintStart_toStartOf="@+id/textView715"
-            app:layout_constraintTop_toBottomOf="@+id/textView715" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/topup_amount"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dhaka North"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_15sp"
-            app:layout_constraintStart_toStartOf="@+id/textView715"
-            app:layout_constraintTop_toBottomOf="@+id/amount" />
 
-        <TextView
-            android:id="@+id/topup_amount2"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="June, 2020"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_15sp"
-            app:layout_constraintStart_toStartOf="@+id/textView715"
-            app:layout_constraintTop_toBottomOf="@+id/amount3" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:id="@+id/billNumTitle"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="18dp"
+                android:text="Bill number"
+                android:textColor="@color/recyclerview_title"
+                android:textSize="@dimen/_12sp" />
+
+
+            <TextView
+                android:id="@+id/billNumber"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="0226502569"
+                android:layout_marginStart="18dp"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/mobile_lay"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <TextView
+                android:id="@+id/offer_txt"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/mobile_number"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"/>
+
+
+
+            <TextView
+                android:id="@+id/mobile_numver"
+                style="@style/text_style"
+                android:layout_width="@dimen/_250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="32dp"
+                android:gravity="left"
+                android:text="01758712950"
+                android:layout_marginStart="18dp"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_15sp" />
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/amount_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/elec_amountTitle"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="31dp"
+                android:text="@string/amount"
+                android:textColor="@color/recyclerview_title"
+                android:textSize="@dimen/_12sp" />
+
+
+
+            <TextView
+                android:id="@+id/elec_amount"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="৳989"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_15sp"
+                android:layout_marginStart="18dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/location_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/amount"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="31dp"
+                android:text="Location"
+                android:textColor="@color/recyclerview_title"
+                android:textSize="@dimen/_12sp" />
+
+
+
+            <TextView
+                android:id="@+id/elec_location"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dhaka North"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_15sp"
+                android:layout_marginStart="18dp"/>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/month_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/amount3"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/month"
+                android:textColor="@color/recyclerview_title"
+                android:textSize="@dimen/_12sp" />
+
+
+            <TextView
+                android:id="@+id/elec_month"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="June, 2020"
+                android:layout_marginStart="18dp"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_15sp"/>
+
+        </LinearLayout>
+
+
 
         <TextView
             android:id="@+id/confirm_btn"
@@ -119,10 +230,9 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="17dp"
             android:text="@string/confirm"
+            android:layout_gravity="right"
             android:textColor="@color/text_link_clr"
-            android:textSize="@dimen/_15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topup_amount2" />
+            android:textSize="@dimen/_15sp"/>
 
         <TextView
             android:id="@+id/cancel_btn"
@@ -131,39 +241,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="34dp"
             android:layout_marginEnd="17dp"
+            android:layout_gravity="right"
             android:text="@string/cancel"
             android:textColor="@color/text_link_clr"
-            android:textSize="@dimen/_15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/confirm_btn" />
+            android:textSize="@dimen/_15sp"/>
 
-        <TextView
-            android:id="@+id/mobile_numver_topup"
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:text="0226502569"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_15sp"
-            app:layout_constraintStart_toStartOf="@+id/textView715"
-            app:layout_constraintTop_toBottomOf="@+id/textView717" />
 
-        <TextView
-            android:id="@+id/mobile_numver_topup2"
-            style="@style/text_style"
-            android:layout_width="@dimen/_250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="32dp"
-            android:gravity="left"
-            android:text="01758712950"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView715"
-            app:layout_constraintTop_toBottomOf="@+id/offer_txt" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
