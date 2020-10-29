@@ -10,8 +10,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.dialog.ElectronicsConfirmDialog
+import com.cloudwell.paywell.uiCommon.pay.fragment.recurringBillPay.RecurringBillScheduleFragment
 import com.cloudwell.paywell.uiCommon.pay.model.ElectronicsDialogPOjo
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.desco_details_layout.view.*
 import kotlinx.android.synthetic.main.electronics_details_layout.view.set_electricity
@@ -57,6 +59,16 @@ class DescoDetailsFragment : Fragment() {
 
         })
 
+
+        view.schedule_date.setOnClickListener(View.OnClickListener {
+
+            FragmentHelper.replaceFragment(
+                RecurringBillScheduleFragment(), requireActivity().supportFragmentManager, R.id.payment_container
+            )
+
+
+
+        })
 
 
         return view
