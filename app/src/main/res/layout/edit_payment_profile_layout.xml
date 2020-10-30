@@ -76,15 +76,15 @@
             tools:ignore="ContentDescription" />
 
         <TextView
-            android:textColor="@color/common_clr"
-            android:textSize="@dimen/_14sp"
-            style="@style/medium_text_style"
             android:id="@+id/textView682"
+            style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="22dp"
-            android:text="@string/username"
+            android:text="@string/mobile_number"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView292" />
 
@@ -102,13 +102,13 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView293" />
 
         <TextView
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_16_7sp"
-            style="@style/text_style"
             android:id="@+id/textView683"
+            style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@anisul659"
+            android:text="+8801612250477"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16_7sp"
             app:layout_constraintStart_toStartOf="@+id/textView682"
             app:layout_constraintTop_toBottomOf="@+id/textView682" />
 

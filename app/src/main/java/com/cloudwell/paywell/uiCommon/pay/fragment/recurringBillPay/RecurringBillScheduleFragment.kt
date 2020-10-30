@@ -60,6 +60,23 @@ class RecurringBillScheduleFragment : Fragment() {
         recurring_recycler.adapter  = activity?.applicationContext?.let { PaymentAdapter(it, paymentlist) }
 
 
+//        val navmenu : BottomNavigationView = view.recurring_schedule_bottomnav
+//        navmenu.visibility = View.INVISIBLE
+//
+//
+//        view.schedule_scrollview.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+//            //Log.d(TAG, "onScrollChangeForY - scrollY: $scrollY oldScrollY: $oldScrollY")
+//            var MOVE = -1
+//            val SCROLL_UP = 0
+//            val SCROLL_DOWN = 1
+//            val initialPositionY: Float = view.scrollview.y
+//            MOVE = if (scrollY > oldScrollY) SCROLL_UP else SCROLL_DOWN
+//            if (MOVE == SCROLL_UP) {
+//                navmenu.visibility =  View.VISIBLE
+//            }
+//        })
+
+
 
         return view
     }

@@ -1,16 +1,22 @@
 package com.cloudwell.paywell.uiCommon.pay.fragment.recurringBillPay
 
 import android.annotation.SuppressLint
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioGroup
+import androidx.annotation.RequiresApi
+import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.adapter.PaymentAdapter
 import com.cloudwell.paywell.uiCommon.pay.model.MyPaymentPOjo
+import com.cloudwell.paywell.utils.FragmentHelper
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.recurring_profile_layout.view.*
 
 
@@ -18,6 +24,7 @@ class RecurringProfileFragment : Fragment() {
 
     var select: Int = 1
 
+    @RequiresApi(Build.VERSION_CODES.M)
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -77,11 +84,52 @@ class RecurringProfileFragment : Fragment() {
                 }
                 R.id.recur_everymonth_btn -> {
                     view.weekRadio.visibility = View.GONE
+                    view.calender_lay.visibility = View.VISIBLE
                 }
             }
         })
 
 
+        val bottomMenu : BottomNavigationView = view.recurring_bottom_navigation
+        bottomMenu.visibility =  View.INVISIBLE
+
+
+        view.scrollview.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+            //Log.d(TAG, "onScrollChangeForY - scrollY: $scrollY oldScrollY: $oldScrollY")
+            var MOVE = -1
+            val SCROLL_UP = 0
+            val SCROLL_DOWN = 1
+            val initialPositionY: Float = view.scrollview.y
+            MOVE = if (scrollY > oldScrollY) SCROLL_UP else SCROLL_DOWN
+            if (MOVE == SCROLL_UP) {
+                bottomMenu.visibility =  View.VISIBLE
+            }
+        })
+
+
+
+
+
+        view.recurring_bottom_navigation.setOnNavigationItemSelectedListener { item: MenuItem ->
+            return@setOnNavigationItemSelectedListener when (item.itemId) {
+                R.id.saveas -> {
+                    FragmentHelper.replaceFragment(RecurringSuccesfulFragment(), requireActivity().supportFragmentManager, R.id.payment_container)
+                    true
+                }
+                R.id.activeDeactive -> {
+
+
+                    true
+                }
+                R.id.cancel -> {
+
+                    FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+
+                    true
+                }
+                else -> false
+            }
+        }
 
 
         return view
