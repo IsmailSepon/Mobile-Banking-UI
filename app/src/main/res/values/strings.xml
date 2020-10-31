@@ -873,6 +873,10 @@
     <string name="enter_your_amount">Enter your amount</string>
     <string name="payment_to_occur_on">Payment to occur on</string>
     <string name="choose_your_service_type">Choose your service type</string>
+    <string name="the_bill_amount_will_be_automatically_collected_from_this_service_provider_based_on_the_account_number_you_provide_below">The bill amount will be automatically collected from this service provider based on the account number you provide below.</string>
+    <string name="enter_your_account_number">Enter your account number</string>
+    <string name="on_which_date_of_every_month_this_payment_will_be_processed">On which date of every month this payment will be processed?</string>
+    <string name="payment_to_occur_on">Payment to occur on</string>
 
 
 </resources>
