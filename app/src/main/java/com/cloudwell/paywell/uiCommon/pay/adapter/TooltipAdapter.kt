@@ -14,8 +14,8 @@ import com.cloudwell.paywell.uiCommon.pay.model.MyPaymentPOjo
 /**
  * Created by Sepon on 9/9/2020.
  */
-class PaymentAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
-    RecyclerView.Adapter<PaymentAdapter.ViewHolder?>() {
+class TooltipAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
+    RecyclerView.Adapter<TooltipAdapter.ViewHolder?>() {
     private val recyclerView: RecyclerView? = null
     private val selectedItem = UNSELECTED
     var mContext: Context
@@ -27,7 +27,7 @@ class PaymentAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
     private val courselist: List<MyPaymentPOjo>
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView: View = LayoutInflater.from(parent.context)
-            .inflate(R.layout.mypayment_item, parent, false)
+            .inflate(R.layout.tooltip_item, parent, false)
         return ViewHolder(itemView)
     }
 
@@ -55,8 +55,8 @@ class PaymentAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
         var icon : ImageView
 
         init {
-            name = itemView.findViewById(R.id.paymenet_name)
-            icon = itemView.findViewById(R.id.payment_icon)
+            name = itemView.findViewById(R.id.tooltip_name)
+            icon = itemView.findViewById(R.id.tooltip_icon)
         }
     }
 

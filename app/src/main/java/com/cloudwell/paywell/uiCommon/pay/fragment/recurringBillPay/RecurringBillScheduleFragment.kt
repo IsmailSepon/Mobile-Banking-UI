@@ -2,20 +2,31 @@ package com.cloudwell.paywell.uiCommon.pay.fragment.recurringBillPay
 
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.content.Intent
+import android.content.Context
+import android.graphics.Point
+import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
+import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.PopupWindow
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.adapter.PaymentAdapter
+import com.cloudwell.paywell.uiCommon.pay.adapter.TooltipAdapter
 import com.cloudwell.paywell.uiCommon.pay.model.MyPaymentPOjo
 
 
-class RecurringBillScheduleFragment : Fragment() {
+class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickListener {
+
+    var p: Point? = null
 
 
     @SuppressLint("SetTextI18n")
@@ -24,12 +35,18 @@ class RecurringBillScheduleFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
         val view = inflater.inflate(R.layout.recurring_bill_schedule_layout, container, false)
 
 
 
         val recurring_recycler : RecyclerView = view.findViewById(R.id.recuring_service_recycler)
-        val linearLayoutManager: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        val linearLayoutManager: LinearLayoutManager = LinearLayoutManager(
+            activity,
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
         recurring_recycler.layoutManager = linearLayoutManager
 
 
@@ -57,7 +74,15 @@ class RecurringBillScheduleFragment : Fragment() {
         paymentlist.add(payment2)
         paymentlist.add(payment3)
 
-        recurring_recycler.adapter  = activity?.applicationContext?.let { PaymentAdapter(it, paymentlist) }
+        recurring_recycler.adapter  = activity?.applicationContext?.let {PaymentAdapter(
+            it,
+            paymentlist
+        )}
+
+
+        val adapter : PaymentAdapter = PaymentAdapter(requireContext(), paymentlist)
+        recurring_recycler.adapter = adapter
+        adapter.setClickListener(this)
 
 
 //        val navmenu : BottomNavigationView = view.recurring_schedule_bottomnav
@@ -81,17 +106,235 @@ class RecurringBillScheduleFragment : Fragment() {
         return view
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK && requestCode == 111) {
 
 
+    override fun onPaymentClick(pojo: MyPaymentPOjo, view: View, position: Int) {
 
-        }
+        val location = IntArray(2)
+        view.getLocationOnScreen(location)
+        p = Point()
+        p!!.x = location[0]
+        p!!.y = location[1]
+
+        if (p != null) showPopup(requireActivity(), p!!, position)
     }
 
 
+    // The method that displays the popup.
+    private fun showPopup(context: Activity, p: Point, position: Int) {
 
+        val popupWidth = LinearLayout.LayoutParams.MATCH_PARENT
+        val popupHeight = LinearLayout.LayoutParams.WRAP_CONTENT
+        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val layout = inflater.inflate(R.layout.recur_tooltip_layout, null)
+
+
+        // Creating the PopupWindow
+        val popup = PopupWindow(context)
+        popup.contentView = layout
+        popup.width = popupWidth
+        popup.height = popupHeight
+        popup.isFocusable = true
+
+        val OFFSET_X = 30
+        val OFFSET_Y = 30
+
+        // Clear the default translucent background
+        popup.setBackgroundDrawable(BitmapDrawable())
+        popup.showAtLocation(layout, Gravity.NO_GRAVITY, p.x + OFFSET_X, p.y + OFFSET_Y)
+        val arrow = layout.findViewById<ImageView>(R.id.arrow_up2)
+
+        val recyclerView : RecyclerView  = layout.findViewById(R.id.tooltipRecycler)
+
+
+
+
+        var leftMargin : Int = 140
+        if (position==1){
+
+            leftMargin  += 210
+
+            electricRecycler(recyclerView)
+
+
+        }else if (position == 2){
+            leftMargin  += 410
+
+            waterRecycler(recyclerView)
+
+
+        }else if (position == 3){
+            leftMargin  += 600
+            gasRecycler(recyclerView)
+
+
+        }else if (position == 0){
+            topupRecycler(recyclerView)
+
+        }
+
+
+
+        Log.e("POsition ", leftMargin.toString())
+        val lparams = arrow.layoutParams as LinearLayout.LayoutParams
+        lparams.setMargins(leftMargin, 150, 0, 0)
+        arrow.layoutParams = lparams
+
+
+    }
+
+    private fun waterRecycler(recyclerView: RecyclerView) {
+
+        val linearLayoutManager: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.layoutManager = linearLayoutManager
+
+
+        val p1 : MyPaymentPOjo = MyPaymentPOjo()
+        p1.name = "Dhaka WASA"
+        p1.icon = R.drawable.wasa_ic
+
+        val p2 : MyPaymentPOjo = MyPaymentPOjo()
+        p2.name = "Rajshahi WASA"
+        p2.icon = R.drawable.r_wasa
+
+
+        val paymentlist = ArrayList<MyPaymentPOjo>()
+        paymentlist.add(p1)
+        paymentlist.add(p2)
+
+        val adapter : TooltipAdapter = TooltipAdapter(requireContext(), paymentlist)
+        recyclerView.adapter = adapter
+
+    }
+
+    private fun topupRecycler(recyclerView: RecyclerView) {
+
+          recyclerView.layoutManager = GridLayoutManager(context, 6)
+
+
+        val p1 : MyPaymentPOjo = MyPaymentPOjo()
+        p1.name = "GP"
+        p1.icon = R.drawable.gp_ic
+
+        val p2 : MyPaymentPOjo = MyPaymentPOjo()
+        p2.name = "Robi"
+        p2.icon = R.drawable.robi_ic
+
+        val p3 : MyPaymentPOjo = MyPaymentPOjo()
+        p3.name = "BL"
+        p3.icon = R.drawable.banglalink_ic
+
+        val p4 : MyPaymentPOjo = MyPaymentPOjo()
+        p4.name = "Airtel"
+        p4.icon = R.drawable.airtel_ic
+
+        val p5 : MyPaymentPOjo = MyPaymentPOjo()
+        p5.name = "Teletalk"
+        p5.icon = R.drawable.teletalk_ic
+
+        val p6 : MyPaymentPOjo = MyPaymentPOjo()
+        p6.name = "Skitto"
+        p6.icon = R.drawable.skitto
+
+        val p7 : MyPaymentPOjo = MyPaymentPOjo()
+        p7.name = "Brilliant"
+        p7.icon = R.drawable.brillient
+
+
+        val paymentlist = ArrayList<MyPaymentPOjo>()
+        paymentlist.add(p1)
+        paymentlist.add(p2)
+        paymentlist.add(p3)
+        paymentlist.add(p4)
+        paymentlist.add(p5)
+        paymentlist.add(p6)
+        paymentlist.add(p7)
+
+        val adapter : TooltipAdapter = TooltipAdapter(requireContext(), paymentlist)
+        recyclerView.adapter = adapter
+
+
+    }
+
+    private fun gasRecycler(recyclerView: RecyclerView) {
+
+
+          recyclerView.layoutManager = GridLayoutManager(context, 3)
+
+
+        val p1 : MyPaymentPOjo = MyPaymentPOjo()
+        p1.name = "Titas Non-Meter\n" +
+                "GAS"
+        p1.icon = R.drawable.titas_gas
+
+        val p2 : MyPaymentPOjo = MyPaymentPOjo()
+        p2.name = "TITAS Commercial\n" +
+                "GAS"
+        p2.icon = R.drawable.titas_gas
+
+        val p3 : MyPaymentPOjo = MyPaymentPOjo()
+        p3.name = "Karnaphuli\n" +
+                "Non-Meter GAS"
+        p3.icon = R.drawable.karnaphuli_gas
+
+        val p4 : MyPaymentPOjo = MyPaymentPOjo()
+        p4.name = "Karnaphuli Commercial\n" +
+                "Metered GAS"
+        p4.icon = R.drawable.karnaphuli_gas
+
+        val p5 : MyPaymentPOjo = MyPaymentPOjo()
+        p5.name = "Bakhrabad GAS"
+        p5.icon = R.drawable.bakhrabad
+
+
+        val paymentlist = ArrayList<MyPaymentPOjo>()
+        paymentlist.add(p1)
+        paymentlist.add(p2)
+        paymentlist.add(p3)
+        paymentlist.add(p4)
+        paymentlist.add(p5)
+
+        val adapter : TooltipAdapter = TooltipAdapter(requireContext(), paymentlist)
+        recyclerView.adapter = adapter
+
+
+    }
+
+    private fun electricRecycler(recyclerView: RecyclerView) {
+        val linearLayoutManager: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.layoutManager = linearLayoutManager
+        //  recyclerView.layoutManager = GridLayoutManager(context, 5)
+
+
+        val p1 : MyPaymentPOjo = MyPaymentPOjo()
+        p1.name = "DESCO"
+        p1.icon = R.drawable.desco_ic
+
+        val p2 : MyPaymentPOjo = MyPaymentPOjo()
+        p2.name = "DPDC"
+        p2.icon = R.drawable.dpdc
+
+        val p3 : MyPaymentPOjo = MyPaymentPOjo()
+        p3.name = "Westzone"
+        p3.icon = R.drawable.west_zone
+
+        val p4 : MyPaymentPOjo = MyPaymentPOjo()
+        p4.name = "Polli Biddyut"
+        p4.icon = R.drawable.polli_biddut_ic
+
+
+        val paymentlist = ArrayList<MyPaymentPOjo>()
+        paymentlist.add(p1)
+        paymentlist.add(p2)
+        paymentlist.add(p3)
+        paymentlist.add(p4)
+        paymentlist.add(p4)
+
+        val adapter : TooltipAdapter = TooltipAdapter(requireContext(), paymentlist)
+        recyclerView.adapter = adapter
+
+
+    }
 
 
 }
