@@ -20,7 +20,7 @@ class TooltipAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
     private val selectedItem = UNSELECTED
     var mContext: Context
 
-    private var clickListener: PaymentClickListener? = null
+    private var clickListener: tooltipClickListener? = null
 
 
 
@@ -32,6 +32,7 @@ class TooltipAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
     }
 
     @SuppressLint("SetTextI18n")
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
      //   holder.amount.text = courselist[position].amount
         holder.name.text = courselist[position].name
@@ -40,7 +41,10 @@ class TooltipAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
 
 
         holder.itemView.setOnClickListener(View.OnClickListener {
-            clickListener?.onPaymentClick(courselist.get(position), it, position)
+            clickListener?.onTooltipClick(courselist.get(position))
+
+            mContext
+
         })
 
 
@@ -68,12 +72,12 @@ class TooltipAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
         this.mContext = mContext
         this.courselist = courselist
     }
-    fun setClickListener(itemClickListener: PaymentClickListener) {
+    fun setClickListener(itemClickListener: tooltipClickListener) {
         clickListener = itemClickListener
     }
 
-    interface PaymentClickListener {
-        fun onPaymentClick(pojo : MyPaymentPOjo, view : View, position : Int)
+    interface tooltipClickListener {
+        fun onTooltipClick(pojo : MyPaymentPOjo)
     }
 
 }

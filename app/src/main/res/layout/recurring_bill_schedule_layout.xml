@@ -191,7 +191,7 @@
                     tools:ignore="TextFields" />
 
                 <ImageView
-                    android:id="@+id/imageView323"
+                    android:id="@+id/bill_profile_pic"
                     android:layout_width="@dimen/_40dp"
                     android:layout_height="@dimen/_35dp"
                     android:layout_marginEnd="22dp"

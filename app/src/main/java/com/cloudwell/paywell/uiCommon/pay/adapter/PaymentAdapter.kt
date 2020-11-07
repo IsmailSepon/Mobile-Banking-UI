@@ -2,11 +2,13 @@ package com.cloudwell.paywell.uiCommon.pay.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.model.MyPaymentPOjo
@@ -20,6 +22,8 @@ class PaymentAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
     private val selectedItem = UNSELECTED
     var mContext: Context
 
+    var index  = -1
+
     private var clickListener: PaymentClickListener? = null
 
 
@@ -31,6 +35,7 @@ class PaymentAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
         return ViewHolder(itemView)
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
      //   holder.amount.text = courselist[position].amount
@@ -41,8 +46,23 @@ class PaymentAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
 
         holder.itemView.setOnClickListener(View.OnClickListener {
             clickListener?.onPaymentClick(courselist.get(position), it, position)
-        })
 
+
+            index = position
+            notifyDataSetChanged()
+
+
+
+        })
+        if (index==position){
+
+            holder.icon.setColorFilter(mContext.getColor(R.color.colorPrimaryDark))
+            holder.name.setTextColor(mContext.getColor(R.color.colorPrimaryDark))
+        }else{
+
+            holder.icon.setColorFilter(mContext.getColor(R.color.keypad_text_clr))
+            holder.name.setTextColor(mContext.getColor(R.color.keypad_text_clr))
+        }
 
     }
 
