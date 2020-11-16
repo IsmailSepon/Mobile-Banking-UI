@@ -96,10 +96,10 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
         paymentlist.add(payment2)
         paymentlist.add(payment3)
 
-        recurring_recycler.adapter  = activity?.applicationContext?.let {PaymentAdapter(
-            it,
-            paymentlist
-        )}
+//        recurring_recycler.adapter  = activity?.applicationContext?.let {PaymentAdapter(
+//            it,
+//            paymentlist
+//        )}
 
 
         val adapter : PaymentAdapter = PaymentAdapter(requireContext(), paymentlist)
