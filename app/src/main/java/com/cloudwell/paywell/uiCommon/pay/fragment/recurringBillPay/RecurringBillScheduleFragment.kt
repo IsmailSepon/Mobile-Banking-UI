@@ -1,10 +1,10 @@
+
 package com.cloudwell.paywell.uiCommon.pay.fragment.recurringBillPay
 
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.graphics.Point
-import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
@@ -14,6 +14,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupWindow
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,6 +25,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.adapter.PaymentAdapter
 import com.cloudwell.paywell.uiCommon.pay.adapter.TooltipAdapter
 import com.cloudwell.paywell.uiCommon.pay.model.MyPaymentPOjo
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.recurring_bill_schedule_layout.view.*
 
 
@@ -31,6 +35,13 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
     var p: Point? = null
     var bill_profile_pic : ImageView? = null
     var popup : PopupWindow? = null
+
+
+    var bgLayout : LinearLayout? = null
+    var part2 : ConstraintLayout? = null
+    var part : CoordinatorLayout? = null
+    var recycler_title: TextView? = null
+    lateinit var bottomNavigationView : BottomNavigationView // = null
 
 
     @SuppressLint("SetTextI18n")
@@ -44,6 +55,12 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
         val view = inflater.inflate(R.layout.recurring_bill_schedule_layout, container, false)
 
         bill_profile_pic = view.bill_profile_pic
+
+        bgLayout  = view.hader_layout
+        part2 = view.part2
+        part = view.main_layout
+        recycler_title = view.recycler_title
+        bottomNavigationView = view.recurring_schedule_bottomnav
 
 
         val recurring_recycler : RecyclerView = view.findViewById(R.id.recuring_service_recycler)
@@ -90,9 +107,8 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
         adapter.setClickListener(this)
 
 
-//        val navmenu : BottomNavigationView = view.recurring_schedule_bottomnav
-//        navmenu.visibility = View.INVISIBLE
-//
+       // val navmenu : BottomNavigationView = view.recurring_schedule_bottomnav
+//        bottomNavigationView.visibility = View.INVISIBLE
 //
 //        view.schedule_scrollview.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
 //            //Log.d(TAG, "onScrollChangeForY - scrollY: $scrollY oldScrollY: $oldScrollY")
@@ -102,7 +118,7 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
 //            val initialPositionY: Float = view.scrollview.y
 //            MOVE = if (scrollY > oldScrollY) SCROLL_UP else SCROLL_DOWN
 //            if (MOVE == SCROLL_UP) {
-//                navmenu.visibility =  View.VISIBLE
+//                bottomNavigationView.visibility =  View.VISIBLE
 //            }
 //        })
 
@@ -115,24 +131,48 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
 
     override fun onPaymentClick(pojo: MyPaymentPOjo, view: View, position: Int) {
 
+
+        setAlpha()
+
         val location = IntArray(2)
         view.getLocationOnScreen(location)
         p = Point()
         p!!.x = location[0]
         p!!.y = location[1]
 
-        if (p != null) showPopup(requireActivity(), p!!, position)
+        if (p != null) showPopup(requireActivity(), p!!, position, view)
     }
 
 
+    fun setAlpha(){
+        part2!!.alpha = 0.1f
+        bgLayout!!.alpha = 0.1f
+        recycler_title!!.alpha = 0.1f
+        bottomNavigationView.alpha = 0.1f
+
+    }
+
+
+
+    @SuppressLint("Range")
+    fun removeAlpha(){
+        part2!!.alpha = 100f
+        bgLayout!!.alpha = 100f
+        recycler_title!!.alpha =100f
+        bottomNavigationView.alpha = 100f
+
+    }
+
+
+
+
     // The method that displays the popup.
-    private fun showPopup(context: Activity, p: Point, position: Int) {
+    private fun showPopup(context: Activity, p: Point, position: Int, view: View) {
 
         val popupWidth = LinearLayout.LayoutParams.MATCH_PARENT
         val popupHeight = LinearLayout.LayoutParams.WRAP_CONTENT
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val layout = inflater.inflate(R.layout.recur_tooltip_layout, null)
-
 
 
         // Creating the PopupWindow
@@ -141,17 +181,21 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
         popup!!.width = popupWidth
         popup!!.height = popupHeight
         popup!!.isFocusable = true
+        popup!!.isOutsideTouchable = true
+
 
         val OFFSET_X = 30
         val OFFSET_Y = 30
 
-        // Clear the default translucent background
-        popup!!.setBackgroundDrawable(BitmapDrawable())
+
+        //Clear the default translucent background
+        popup!!.setBackgroundDrawable(null)
         popup!!.showAtLocation(layout, Gravity.NO_GRAVITY, p.x + OFFSET_X, p.y + OFFSET_Y)
+
+
         val arrow = layout.findViewById<ImageView>(R.id.arrow_up2)
         //val cardView = layout.findViewById<CardView>(R.id.cardView)
         val cardView = layout.findViewById<LinearLayout>(R.id.view)
-
         val recyclerView : RecyclerView  = layout.findViewById(R.id.tooltipRecycler)
 
 
@@ -229,7 +273,7 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
         params.gravity = Gravity.LEFT
-        params.setMargins(40,-80,40,15)
+        params.setMargins(40, -80, 40, 15)
         cardView.layoutParams = params
 
         // cardView.gravity = Gravity.START
@@ -368,9 +412,10 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
     }
 
     override fun onTooltipClick(pojo: MyPaymentPOjo) {
-
+        removeAlpha()
         popup!!.dismiss()
         bill_profile_pic?.setImageResource(pojo.icon!!)
+
 
     }
 

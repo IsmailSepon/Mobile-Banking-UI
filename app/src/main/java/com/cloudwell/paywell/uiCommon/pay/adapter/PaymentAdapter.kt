@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.model.MyPaymentPOjo
@@ -36,7 +37,7 @@ class PaymentAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "Range")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
      //   holder.amount.text = courselist[position].amount
         holder.name.text = courselist[position].name
@@ -58,10 +59,16 @@ class PaymentAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
 
             holder.icon.setColorFilter(mContext.getColor(R.color.colorPrimaryDark))
             holder.name.setTextColor(mContext.getColor(R.color.colorPrimaryDark))
+            holder.layout.alpha = 100f
         }else{
 
             holder.icon.setColorFilter(mContext.getColor(R.color.keypad_text_clr))
             holder.name.setTextColor(mContext.getColor(R.color.keypad_text_clr))
+
+            if (index >= 0){
+                holder.layout.alpha = 0.2f
+            }
+
         }
 
     }
@@ -73,10 +80,12 @@ class PaymentAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var name : TextView
         var icon : ImageView
+        var layout : ConstraintLayout
 
         init {
             name = itemView.findViewById(R.id.paymenet_name)
             icon = itemView.findViewById(R.id.payment_icon)
+            layout = itemView.findViewById(R.id.item_layout)
         }
     }
 
