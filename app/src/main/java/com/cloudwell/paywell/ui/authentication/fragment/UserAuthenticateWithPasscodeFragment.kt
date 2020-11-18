@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputConnection
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.alimuzaffar.lib.pin.PinEntryEditText
 import com.cloudwell.paywell.R
@@ -37,11 +36,16 @@ class UserAuthenticateWithPasscodeFragment : Fragment() {
         val ic: InputConnection = editTextCreatePin.onCreateInputConnection(EditorInfo())
         keyboard.setInputConnection(ic)
 
+        keyboard.setOnClickListener(View.OnClickListener {
+
+
+        })
+
         editTextCreatePin.post(Runnable {
             editTextCreatePin.requestFocus()
             val imgr =
                 context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imgr.hideSoftInputFromWindow(editTextCreatePin.getWindowToken(), 0)
+            imgr.hideSoftInputFromWindow(editTextCreatePin.windowToken, 0)
         })
         if (editTextCreatePin != null) {
 
@@ -53,13 +57,16 @@ class UserAuthenticateWithPasscodeFragment : Fragment() {
                         activity?.supportFragmentManager,
                         R.id.user_auth_host_container
                     )
-                } else if (str.toString() == "1111") {
+                }
+                else if (str.toString() == "1111") {
                     FragmentHelper.replaceFragment(
                         UserAuthenticateWithFingerPrintFragment(),
                         activity?.supportFragmentManager,
                         R.id.user_auth_host_container
                     )
-                } else {
+                }
+
+                else {
                     editTextCreatePin.setAnimateText(true)
                 }
             })
@@ -74,5 +81,16 @@ class UserAuthenticateWithPasscodeFragment : Fragment() {
         })
 
         return view
+    }
+
+    override fun onResume() {
+        editTextCreatePin.text!!.clear()
+
+        super.onResume()
+    }
+
+    override fun onPause() {
+        editTextCreatePin.text!!.clear()
+        super.onPause()
     }
 }

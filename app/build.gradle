@@ -166,5 +166,8 @@ dependencies {
     implementation 'net.idik:slimadapter:2.1.2'
 
 
+    // Androdi Biometric
+    implementation "androidx.biometric:biometric:1.0.1"
+
 
 }
