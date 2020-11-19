@@ -144,17 +144,10 @@ class SignupActivity : AppCompatActivity() {
 
         if (!fingerprintManagerCompat.isHardwareDetected) {
             // Device doesn't support fingerprint authentication
-            Toast.makeText(this, " Device doesn't support fingerprint authentication   ", Toast.LENGTH_SHORT
-            ).show()
             fingerBtn?.visibility = View.INVISIBLE
 
         } else if (!fingerprintManagerCompat.hasEnrolledFingerprints()) {
             // User hasn't enrolled any fingerprints to authenticate with
-            Toast.makeText(
-                this,
-                "User hasn't enrolled any fingerprints to authenticate with ",
-                Toast.LENGTH_SHORT
-            ).show()
             fingerBtn?.visibility = View.INVISIBLE
 
 

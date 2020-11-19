@@ -103,9 +103,11 @@ class RecurringProfileFragment : Fragment(), PaymentAdapter.PaymentClickListener
             when (checkedId) {
                 R.id.recur_everyday_btn -> {
                     view.weekRadio.visibility = View.GONE
+                    view.calender_lay.visibility = View.GONE
                 }
                 R.id.recur_everyweek_btn -> {
                     view.weekRadio.visibility = View.VISIBLE
+                    view.calender_lay.visibility = View.GONE
                 }
                 R.id.recur_everymonth_btn -> {
                     view.weekRadio.visibility = View.GONE
@@ -155,7 +157,6 @@ class RecurringProfileFragment : Fragment(), PaymentAdapter.PaymentClickListener
                 else -> false
             }
         }
-
 
         return view
     }

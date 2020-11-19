@@ -157,7 +157,7 @@
     <Spinner
         android:id="@+id/month_sp"
         style="@style/Base.Widget.AppCompat.Spinner.Underlined"
-        android:layout_width="@dimen/_110dp"
+        android:layout_width="@dimen/_120"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
@@ -170,7 +170,7 @@
     <Spinner
         android:id="@+id/year_sp"
         style="@style/Base.Widget.AppCompat.Spinner.Underlined"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/_60dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="20dp"
@@ -178,7 +178,6 @@
         android:background="@drawable/spinner_bg"
         android:gravity="center"
         android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="@+id/location"
         app:layout_constraintStart_toEndOf="@+id/month_sp"
         app:layout_constraintTop_toBottomOf="@+id/location" />
 
