@@ -38,8 +38,7 @@ class SignupActivity : AppCompatActivity() {
         checkFingerprint()
 
         country_code_spinner.onItemSelectedListener
-        val aa: ArrayAdapter<*> =
-            ArrayAdapter<Any?>(this, android.R.layout.simple_spinner_item, country)
+        val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(this, android.R.layout.simple_spinner_item, country)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         country_code_spinner.adapter = aa
 

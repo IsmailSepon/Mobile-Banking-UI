@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/navigation_budget"
-        android:name="com.cloudwell.paywell.ui.notifications.NotificationsFragment"
+        android:name="com.cloudwell.paywell.ui.budget.fragment.BudgetMainFragment"
         android:label="Budget"
         tools:layout="@layout/fragment_dashboard_old" />
 
