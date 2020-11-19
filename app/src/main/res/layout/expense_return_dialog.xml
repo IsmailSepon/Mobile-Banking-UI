@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    app:cardElevation="@dimen/_15dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/transparent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="275dp"
+        android:layout_height="match_parent"
+        app:cardElevation="@dimen/_10dp"
+        app:cardCornerRadius="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout34"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_20dp"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textView664"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/expense_claim_return"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView665"
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="left"
+                android:text="@string/please_put_your_comments_on_why_you_are_returning_this_claim_to_the_claimant_and_s_he_needs_to_add_or_correct_anything"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView664"
+                app:layout_constraintTop_toBottomOf="@+id/textView664" />
+
+
+            <EditText
+                android:id="@+id/editText7"
+                style="@style/edittext_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="70dp"
+                android:hint="@string/comments"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:paddingTop="@dimen/_15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView665"
+                app:layout_constraintTop_toBottomOf="@+id/textView665"
+                tools:ignore="TextFields" />
+
+            <TextView
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_14sp"
+                style="@style/medium_text_style"
+                android:id="@+id/textView666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/confirm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText7" />
+
+            <TextView
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_14sp"
+                style="@style/medium_text_style"
+                android:id="@+id/textView667"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:layout_marginEnd="19dp"
+                android:text="@string/cancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView666" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:paddingEnd="@dimen/_15dp"
+    android:paddingStart="@dimen/_15dp"
+    android:layout_height="wrap_content">
+
+
+
+        <ImageView
+            android:id="@+id/tooltip_icon"
+            android:layout_width="@dimen/_19dp"
+            android:layout_height="@dimen/_18dp"
+            android:src="@drawable/dpdc"
+            android:layout_marginTop="@dimen/_13dp"
+            android:layout_gravity="center_horizontal"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tooltip_name"
+            style="@style/text_style"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="@dimen/_17dp"
+            android:text="Karnaphuli Commercial\nMetered GAS"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_8_3sp"
+            app:layout_constraintTop_toBottomOf="@+id/tooltip_icon" />
+
+    </LinearLayout>
+
+

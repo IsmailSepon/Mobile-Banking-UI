@@ -15,6 +15,9 @@ class ChooseTransferTypeFragment : Fragment() {
 
     private lateinit var chooseViewModel: ChooseTransferViewModel
     var select: Int = 1
+    var continer : String = "1"
+    var continers : Int = 1
+
 
     fun newInstance(): ChooseTransferTypeFragment? {
         return ChooseTransferTypeFragment()
@@ -26,6 +29,10 @@ class ChooseTransferTypeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.choose_transfertype_layout, container, false)
+
+
+        continers = requireArguments().getInt("chooseTransferType")
+
 
 //        val selected = view.transfertype_radiogroup.checkedRadioButtonId
 //        view.transfertype_radiogroup.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->  })
@@ -87,10 +94,20 @@ class ChooseTransferTypeFragment : Fragment() {
     }
 
     fun setFragment(fragment: Fragment) {
-        val manager = activity?.supportFragmentManager
-        val transaction = manager?.beginTransaction()
-        transaction?.replace(R.id.beneficery_host_container, fragment)
-        transaction?.addToBackStack(null)
-        transaction?.commit()
+
+        if (continers==1){
+            val manager = activity?.supportFragmentManager
+            val transaction = manager?.beginTransaction()
+            transaction?.replace(R.id.beneficery_host_container, fragment)
+            transaction?.addToBackStack(null)
+            transaction?.commit()
+        }else if (continers==2){
+            val manager = activity?.supportFragmentManager
+            val transaction = manager?.beginTransaction()
+            transaction?.replace(R.id.payment_container, fragment)
+            transaction?.addToBackStack(null)
+            transaction?.commit()
+        }
+
     }
 }

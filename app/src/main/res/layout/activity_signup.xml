@@ -39,6 +39,7 @@
         tools:targetApi="lollipop" />
 
     <TextView
+        android:id="@+id/lost_access_num"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/lost_access_to_your_number"
@@ -113,8 +114,7 @@
                 android:layout_marginStart="@dimen/_3dp"
                 android:text="@string/phonenumber"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="12sp"
-                android:visibility="invisible" />
+                android:textSize="12sp"/>
 
 
             <EditText
@@ -135,6 +135,19 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/finger"
+        android:text="Sing in user Fingerprint"
+        android:textSize="@dimen/_14sp"
+        style="@style/text_style"
+        android:textColor="@color/keypad_text_clr"
+        android:drawableTop="@drawable/ic_finger_print"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

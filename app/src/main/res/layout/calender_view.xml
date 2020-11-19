@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <com.cloudwell.paywell.base.customView.RadioGridGroup
+        android:layout_width="match_parent"
+        android:columnCount="7"
+        android:id="@+id/radGroup"
+        android:layout_height="wrap_content">
+
+
+        <RadioButton
+            style="@style/medium_text_style"
+            android:id="@+id/rb1"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="@string/_1"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            android:fontFamily="@font/roboto_medium"
+            tools:targetApi="m" />
+
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="@string/_2"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="@string/_3"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb4"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="@string/_4"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb5"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="@string/_5"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+        <RadioButton
+            android:id="@+id/rb6"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="@string/_6"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+        <RadioButton
+            android:id="@+id/rb7"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="@string/_7"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+        <RadioButton
+            android:id="@+id/rb8"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="@string/_8"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+        <RadioButton
+            android:id="@+id/rb9"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="@string/_9"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+        <RadioButton
+            android:id="@+id/rb10"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="10"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+        <RadioButton
+            android:id="@+id/rb11"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="11"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+        <RadioButton
+            android:id="@+id/rb12"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="12"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+        <RadioButton
+            android:id="@+id/rb13"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="13"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+        <RadioButton
+            android:id="@+id/rb15"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="15"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb16"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="16"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb17"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="17"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb18"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="18"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb19"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="19"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb20"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="20"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb21"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="21"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb22"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="22"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb23"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="23"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb24"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="24"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb25"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="25"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb26"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="26"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb27"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="27"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb28"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="28"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb29"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="29"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb30"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:textSize="@dimen/_15sp"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="30"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+        <RadioButton
+            android:id="@+id/rb31"
+            android:textColor="@drawable/radiobtn_text_selected"
+            android:fontFamily="@font/roboto_medium"
+            android:allowUndo="true"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:text="31"
+            android:textSize="@dimen/_15sp"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:background="@drawable/radio_selector"
+            tools:targetApi="m" />
+
+
+
+
+
+
+
+
+
+    </com.cloudwell.paywell.base.customView.RadioGridGroup>
+
+
+
+
+
+</LinearLayout>

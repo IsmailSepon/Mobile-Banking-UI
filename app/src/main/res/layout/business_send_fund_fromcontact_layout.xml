@@ -42,7 +42,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.cloudwell.paywell.ui.BusinessUI.sendFund.utility.HorizontalPicker
+    <com.cloudwell.paywell.uiBusiness.sendFund.utility.HorizontalPicker
         android:id="@+id/business_send_fund_amount_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
         android:id="@+id/imageView132"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_45dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="@dimen/_7dp"
         android:src="@drawable/polygon"
         app:layout_constraintStart_toStartOf="parent"
@@ -216,7 +216,7 @@
         app:srcCompat="@drawable/business_schedule" />
 
     <TextView
-        android:id="@+id/textView309"
+        android:id="@+id/schedule_later_btn"
         style="@style/text_style"
         android:textColor="@color/text_link_clr"
         android:textSize="@dimen/_12sp"

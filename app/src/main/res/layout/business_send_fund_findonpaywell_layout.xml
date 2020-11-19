@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/textView408"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/round_yellow"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:id="@+id/textView409"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="ACI Limited"
+            app:layout_constraintBottom_toBottomOf="@+id/textView408"
+            app:layout_constraintStart_toEndOf="@+id/textView408"
+            app:layout_constraintTop_toTopOf="@+id/textView408" />
+
+        <ImageView
+            android:id="@+id/imageView164"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/paywell_type" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            tools:ignore="DuplicateIds"
+            android:id="@+id/textView408"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/round_blue"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            tools:ignore="DuplicateIds"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:id="@+id/textView409"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:text="Anisul Islam"
+            app:layout_constraintBottom_toBottomOf="@+id/textView408"
+            app:layout_constraintStart_toEndOf="@+id/textView408"
+            app:layout_constraintTop_toTopOf="@+id/textView408" />
+
+        <ImageView
+            android:id="@+id/imageView164"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/paywell_type"
+            tools:ignore="ContentDescription,DuplicateIds" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

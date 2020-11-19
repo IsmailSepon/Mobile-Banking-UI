@@ -20,9 +20,11 @@
         app:srcCompat="@drawable/allow_location" />
 
     <TextView
+        style="@style/medium_text_style"
         android:id="@+id/textView10"
         android:layout_width="@dimen/two_hundred_fourty_dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
         android:text="@string/would_you_like_to_activate_location_based_security_for_future_card_transactions"
         android:textAlignment="center"
         android:textColor="@color/keypad_text_clr"
@@ -54,11 +56,14 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="@dimen/two_hundred_ninty_dp"
+        android:layout_width="@dimen/_250dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/we_will_use_your_location_to_decline_card_transactions_happening_outside_of_your_phone_geo_location"
         android:textAlignment="center"
         android:textSize="@dimen/fourteen_sp"
+        style="@style/text_style"
+        android:textColor="@color/common_clr"
         app:layout_constraintBottom_toTopOf="@+id/reg_top_up_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,5 +82,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/allow_location_access"
         app:layout_constraintVertical_bias="0.3" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

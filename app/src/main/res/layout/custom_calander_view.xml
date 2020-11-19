@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cloudwell.paywell.base.customView.ToggleButtonGroupTableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TableRow>
+        <TextView
+            android:text="1"
+            android:id="@+id/rad1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="14dp" />
+
+
+        <RadioButton android:id="@+id/rad2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="13px"
+            android:layout_height="wrap_content" />
+
+
+        <RadioButton android:id="@+id/rad3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="13px"
+            android:layout_height="wrap_content" />
+
+
+        <RadioButton android:id="@+id/rad4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="13px" />
+
+
+        <RadioButton android:id="@+id/rad5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="13px"
+            android:layout_height="wrap_content" />
+
+
+        <RadioButton android:id="@+id/rad6"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="13px"
+            android:layout_height="wrap_content" />
+
+
+        <RadioButton android:id="@+id/rad7"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="13px"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+</com.cloudwell.paywell.base.customView.ToggleButtonGroupTableLayout>

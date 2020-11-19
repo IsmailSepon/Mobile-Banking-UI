@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_30dp"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView715"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="28dp"
+            android:text="Bill type"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView717"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:text="Bill number"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView716" />
+
+        <TextView
+            android:id="@+id/amount"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="31dp"
+            android:text="@string/amount"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mobile_numver_topup2" />
+
+        <TextView
+            android:id="@+id/offer_txt"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/mobile_number"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mobile_numver_topup" />
+
+        <TextView
+            android:id="@+id/textView716"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="DESCO post-paid"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintStart_toStartOf="@+id/textView715"
+            app:layout_constraintTop_toBottomOf="@+id/textView715" />
+
+        <TextView
+            android:id="@+id/topup_amount"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="৳989"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintStart_toStartOf="@+id/textView715"
+            app:layout_constraintTop_toBottomOf="@+id/amount" />
+
+        <TextView
+            android:id="@+id/desco_confirm_btn"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="17dp"
+            android:text="@string/confirm"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topup_amount" />
+
+        <TextView
+            android:id="@+id/cancel_btn"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="17dp"
+            android:text="@string/cancel"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/desco_confirm_btn" />
+
+        <TextView
+            android:id="@+id/mobile_numver_topup"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="0226502569"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintStart_toStartOf="@+id/textView715"
+            app:layout_constraintTop_toBottomOf="@+id/textView717" />
+
+        <TextView
+            android:id="@+id/mobile_numver_topup2"
+            style="@style/text_style"
+            android:layout_width="@dimen/_250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="left"
+            android:text="01758712950"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView715"
+            app:layout_constraintTop_toBottomOf="@+id/offer_txt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

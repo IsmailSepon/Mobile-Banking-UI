@@ -60,21 +60,19 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.100000024" />
 
-            <TextView
-                android:id="@+id/tvOtpMessage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="@dimen/_2dp"
-                android:text="We’ve sent it to +88001758712950"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="@dimen/_14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/otpVerificationTV"
-                app:layout_constraintVertical_bias="0.060000002" />
+    <TextView
+        android:id="@+id/tvOtpMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_2dp"
+        android:text="We’ve sent it to +88001758712950"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otpVerificationTV" />
 
             <TextView
                 android:id="@+id/textView65"

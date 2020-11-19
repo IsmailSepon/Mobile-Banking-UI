@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_17sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView540"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="21dp"
+        android:text="Anisul Islam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="@color/recyclerview_title"
+        android:textSize="@dimen/_14sp"
+        style="@style/text_style"
+        android:id="@+id/textView549"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#INV_4545hhHK3464"
+        app:layout_constraintStart_toStartOf="@+id/textView540"
+        app:layout_constraintTop_toBottomOf="@+id/textView540" />
+
+    <TextView
+        android:textColor="@color/recyclerview_title"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView550"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="@string/amount_payable"
+        app:layout_constraintStart_toStartOf="@+id/textView549"
+        app:layout_constraintTop_toBottomOf="@+id/textView549" />
+
+
+    <EditText
+        android:id="@+id/legal_first_name_et"
+        style="@style/edittext_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="38dp"
+        android:text="৳500.00"
+        android:textSize="@dimen/_27_3sp"
+        android:textColor="@color/keypad_text_clr"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView550"
+        app:layout_constraintTop_toBottomOf="@+id/textView550"
+        tools:ignore="LabelFor,TextFields" />
+
+    <ImageView
+        android:id="@+id/imageView222"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/legal_first_name_et"
+        app:srcCompat="@drawable/contact_small_ic"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView552"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="+88 01750124578   | md.lam@gmail.com"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView222"
+        app:layout_constraintStart_toEndOf="@+id/imageView222"
+        app:layout_constraintTop_toTopOf="@+id/imageView222" />
+
+    <TextView
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_14sp"
+        style="@style/text_style"
+        android:id="@+id/edit_txt"
+        android:drawablePadding="@dimen/_5dp"
+        android:drawableEnd="@drawable/arrow_below_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/edit"
+        app:layout_constraintBottom_toBottomOf="@+id/textView552"
+        app:layout_constraintStart_toEndOf="@+id/textView552"
+        app:layout_constraintTop_toTopOf="@+id/textView552" />
+
+
+    <ImageView
+        android:id="@+id/imageView224"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="35dp"
+        android:background="@color/common_clr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView552"
+        tools:ignore="ContentDescription" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout39"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/bulk_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView551">
+
+
+        <ImageView
+            android:id="@+id/imageView223"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_80dp"
+            android:layout_marginStart="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/menu_stroke"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView554"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_card_blue"
+            android:text="@string/cards"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView223"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/card_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:scrollbars="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView223"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout40"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/bulk_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout39">
+
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_80dp"
+            android:layout_marginStart="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/menu_stroke"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/internet_banking"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/internet_banking"
+            android:drawablePadding="@dimen/_7dp"
+            android:text="@string/internet_nbanking"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/banking_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:scrollbars="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/bulk_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout40">
+
+
+        <ImageView
+            android:id="@+id/divider2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_80dp"
+            android:layout_marginStart="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/menu_stroke"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/mobile_banking"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/mobile_banking"
+            android:drawablePadding="@dimen/_7dp"
+            android:text="@string/mobile_nbanking"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/divider2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mobile_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:scrollbars="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_14sp"
+        style="@style/text_style"
+        android:id="@+id/textView551"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="@string/choose_your_preferred_payment_option"
+        app:layout_constraintStart_toStartOf="@+id/imageView222"
+        app:layout_constraintTop_toBottomOf="@+id/imageView224" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

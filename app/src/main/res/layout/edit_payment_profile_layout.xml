@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/hader_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/_40dp">
+
+
+        <ImageView
+            android:id="@+id/imageView290"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="17dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16_7sp"
+            style="@style/medium_text_style"
+            android:id="@+id/textView675"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/edit_payment_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView290"
+            app:layout_constraintStart_toEndOf="@+id/imageView290"
+            app:layout_constraintTop_toTopOf="@+id/imageView290" />
+
+        <ImageView
+            android:id="@+id/imageView291"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView675"
+            app:srcCompat="@drawable/profile_pic_edit"
+            tools:ignore="ContentDescription" />
+
+
+        <ImageView
+            android:id="@+id/imageView292"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/hader_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView291"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageView293"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/hader_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView683"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView682"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="22dp"
+            android:text="@string/mobile_number"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView292" />
+
+        <TextView
+            android:id="@+id/textView688"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Discoverability"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView293" />
+
+        <TextView
+            android:id="@+id/textView683"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+8801612250477"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16_7sp"
+            app:layout_constraintStart_toStartOf="@+id/textView682"
+            app:layout_constraintTop_toBottomOf="@+id/textView682" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout55"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView688">
+
+
+            <ImageView
+                android:id="@+id/imageView294"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView690"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView689"
+                app:srcCompat="@drawable/discover" />
+
+            <TextView
+                android:id="@+id/textView689"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/discoverable_by_username"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView294"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView690"
+                style="@style/text_style"
+                android:layout_width="@dimen/_250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:text="@string/paywell_users_can_find_me_by_searching_for_my_username"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="@+id/textView689"
+                app:layout_constraintTop_toBottomOf="@+id/textView689" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/imageView295"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/hader_bg"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout55"
+            tools:layout_editor_absoluteX="-16dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout56"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView295"
+            tools:ignore="DuplicateIds">
+
+
+            <ImageView
+                android:id="@+id/imageView294"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView690"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView689"
+                app:srcCompat="@drawable/payments_fnd" />
+
+            <TextView
+                android:id="@+id/textView689"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/payments_with_friends"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_15sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView294"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView690"
+                style="@style/text_style"
+                android:layout_width="@dimen/_250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:text="@string/paywell_users_can_find_me_by_searching_for_my_username"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="@+id/textView689"
+                app:layout_constraintTop_toBottomOf="@+id/textView689" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView299"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView683"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView682"
+            app:srcCompat="@drawable/pen_orange" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

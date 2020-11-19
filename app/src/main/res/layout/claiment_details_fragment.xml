@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView250"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16_7sp"
+            style="@style/medium_text_style"
+            android:id="@+id/textView603"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/expense_management"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView250"
+            app:layout_constraintStart_toEndOf="@+id/imageView250"
+            app:layout_constraintTop_toTopOf="@+id/imageView250" />
+
+        <ImageView
+            android:id="@+id/imageView251"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView603"
+            app:srcCompat="@drawable/add_profile_pic"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16_7sp"
+            style="@style/medium_text_style"
+            android:id="@+id/textView611"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/claimant_profile_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView251" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ScrollView
+        android:layout_marginTop="@dimen/_35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/_46dp"
+            android:layout_marginEnd="@dimen/_46dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:text="@string/name_of_claimant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <Spinner
+                android:id="@+id/climent_name_sp"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@drawable/spinner_bg"
+                android:gravity="center"
+                android:spinnerMode="dropdown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView348" />
+
+            <ImageView
+                android:id="@+id/imageView45"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2dp"
+                android:background="@color/common_clr"
+                tools:ignore="ContentDescription" />
+
+
+
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_20dp"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:text="Claimant’s department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <Spinner
+                android:id="@+id/department_sp"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@drawable/spinner_bg"
+                android:gravity="center"
+                android:spinnerMode="dropdown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView348" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2dp"
+                android:background="@color/common_clr"
+                tools:ignore="ContentDescription" />
+
+
+
+
+
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_20dp"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:text="Claimant’s line manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <Spinner
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@drawable/spinner_bg"
+                android:gravity="center"
+                android:spinnerMode="dropdown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView348" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2dp"
+                android:background="@color/common_clr"
+                tools:ignore="ContentDescription" />
+
+
+
+
+
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_20dp"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:text="Approval manager 1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <Spinner
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@drawable/spinner_bg"
+                android:gravity="center"
+                android:spinnerMode="dropdown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView348" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2dp"
+                android:background="@color/common_clr"
+                tools:ignore="ContentDescription" />
+
+
+
+
+
+
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_20dp"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:text="Approval manager 2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <Spinner
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@drawable/spinner_bg"
+                android:gravity="center"
+                android:spinnerMode="dropdown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView348" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2dp"
+                android:background="@color/common_clr"
+                tools:ignore="ContentDescription" />
+
+
+
+
+
+
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_20dp"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:text="Approval manager 3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <Spinner
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5dp"
+                android:background="@drawable/spinner_bg"
+                android:gravity="center"
+                android:spinnerMode="dropdown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView348" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2dp"
+                android:background="@color/common_clr"
+                tools:ignore="ContentDescription" />
+
+
+
+
+
+            <Button
+                android:layout_marginTop="@dimen/_65dp"
+                android:layout_marginBottom="@dimen/_65dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/cliamnt_profile_details_btn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_hight"
+                android:elevation="@dimen/evelation_five"
+                android:background="@drawable/round_btn_visable"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:targetApi="lollipop" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView313"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cross_btn"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_14sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView711"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="18dp"
+        android:text="1 Apr 2020"
+        android:drawableEnd="@drawable/p_round"
+        android:drawablePadding="@dimen/_15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView713"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/your_top_up_details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView313" />
+
+
+    <RadioGroup
+        android:id="@+id/transfertype_radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/transferBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView713"
+        app:layout_constraintVertical_bias="0.17000002"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/radiomyselt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:checked="true"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/pre_paid"
+            android:textColor="@drawable/text_radio_selector"
+            android:textSize="@dimen/_12sp"
+            android:theme="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/radioanother_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/post_paid"
+            android:textColor="@drawable/text_radio_selector"
+            android:textSize="@dimen/_12sp"
+            android:theme="@style/RadioButtonStyle" />
+
+
+    </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/editText10"
+        style="@style/edittext_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="141dp"
+        android:drawableEnd="@drawable/contact_book_blue"
+        android:drawablePadding="@dimen/_15dp"
+        android:hint="@string/enter_your_mobile_number"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:paddingTop="@dimen/_15dp"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transfertype_radiogroup"
+        tools:ignore="TextFields" />
+
+    <EditText
+        android:id="@+id/editText11"
+        style="@style/edittext_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="70dp"
+        android:hint="@string/enter_amount"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:paddingTop="@dimen/_15dp"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText10"
+        tools:ignore="TextFields" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/offer_layout"
+        android:layout_width="@dimen/_160dp"
+        android:layout_height="@dimen/_30dp"
+        android:layout_marginStart="8dp"
+        app:cardCornerRadius="@dimen/_5dp"
+        app:cardElevation="@dimen/_0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText11"
+        app:layout_constraintStart_toEndOf="@+id/editText11">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bulk_bg">
+
+            <ImageView
+                android:id="@+id/imageView314"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/top_up_offer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView714"
+                style="@style/text_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="left"
+                android:text="@string/choose_from_data_pack_bundle_offers"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView314"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/ac_created_btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:background="@drawable/round_btn_visable"
+        android:elevation="@dimen/evelation_five"
+        android:text="@string/save_for_later_use"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText11"
+        app:layout_constraintVertical_bias="0.59000003"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/set_topup"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/round_btn_orange"
+        android:elevation="@dimen/evelation_five"
+        android:text="@string/set"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ac_created_btn"
+        tools:targetApi="lollipop" />
+
+    <ImageView
+        android:id="@+id/operator_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView713"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView713"
+        app:srcCompat="@drawable/gp_ic" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -54,7 +54,7 @@
                 android:layout_weight="1"
                 android:drawableTop="@drawable/send_money"
                 android:onClick="@{viewmode::sendMoney}"
-                android:text="@string/send_money"
+                android:text="@string/send_fund"
                 android:textAllCaps="false"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/colorPrimary"

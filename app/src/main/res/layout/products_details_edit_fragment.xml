@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/_40dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout29"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout28">
+
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            android:text="Created by Mohammad Kudratullah"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView599" />
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:text="Edited on 03 Apr, 03:20 AM"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView599" />
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:text="Price set as ৳110/kg"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView599" />
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:text="Description set as Rajshahi Himshagor"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView599" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView237"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView594"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/product_mango"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView237"
+        app:layout_constraintStart_toEndOf="@+id/imageView237"
+        app:layout_constraintTop_toTopOf="@+id/imageView237" />
+
+    <ImageView
+        android:id="@+id/imageView238"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_ic"
+        tools:ignore="ContentDescription" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutMAP2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView238">
+
+
+        <TextView
+            android:id="@+id/textViewMAP1"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="@string/name"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_13_3sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewMAP2"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Mango"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_13_3sp"
+            app:layout_constraintStart_toStartOf="@id/textViewMAP1"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMAP1" />
+
+        <ImageView
+            android:id="@+id/product_name_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.526"
+            app:srcCompat="@drawable/pen_orange"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout43"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMAP2"
+        tools:ignore="DuplicateIds">
+
+
+        <TextView
+            android:id="@+id/textViewMAP1"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Rate per unit"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_13_3sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewMAP2"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="৳110/kg"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_13_3sp"
+            app:layout_constraintStart_toStartOf="@id/textViewMAP1"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMAP1" />
+
+        <ImageView
+            android:id="@+id/personal_details_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.526"
+            app:srcCompat="@drawable/pen_orange"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout44"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout43"
+        tools:ignore="DuplicateIds">
+
+
+        <TextView
+            android:id="@+id/textViewMAP1"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Description"
+            android:textColor="@color/recyclerview_title"
+            android:textSize="@dimen/_13_3sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewMAP2"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Rajshahi Himshagor"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_13_3sp"
+            app:layout_constraintStart_toStartOf="@id/textViewMAP1"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMAP1" />
+
+        <ImageView
+            android:id="@+id/personal_details_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.526"
+            app:srcCompat="@drawable/pen_orange"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView239"
+        android:layout_width="match_parent"
+        android:layout_height="6.3dp"
+        android:layout_marginTop="26dp"
+        android:background="@color/divider_bg"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout44" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_14sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView599"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/history"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView239" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView599">
+
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            android:text="Edited by Mohammad Kudratullah"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView599" />
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:text="Edited on 03 Apr, 03:20 AM"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView599" />
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:text="Price set as ৳110/kg"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView599" />
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:text="Description set as Rajshahi Himshagor"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView599" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/product_details_gotit_btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/round_btn_visable"
+        android:elevation="@dimen/evelation_five"
+        android:text="@string/got_it"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout29"
+        tools:targetApi="lollipop" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

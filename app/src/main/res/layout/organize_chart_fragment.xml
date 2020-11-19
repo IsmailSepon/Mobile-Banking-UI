@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout38"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_50dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            style="@style/text_style"
+            android:id="@+id/textView510"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/your_organization_s_chart_of_accounts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView511"
+            style="@style/text_style"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/you_need_to_enter_your_organization_s_cost_center_codes_i_e_gl_codes_according_to_your_chart_of_accounts_where_the_expenses_will_be_debited_or_credited"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView510"
+            app:layout_constraintStart_toStartOf="@+id/textView510"
+            app:layout_constraintTop_toBottomOf="@+id/textView510" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_19dp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView511">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/department_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_37dp"
+                        android:layout_marginBottom="@dimen/_27dp"
+                        android:drawableEnd="@drawable/small_top_arrow"
+                        android:drawablePadding="@dimen/_5dp"
+                        android:text="@string/departments"
+                        android:textColor="@color/text_link_clr"
+                        android:textSize="@dimen/_12sp"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/add_department_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/department_layout"
+                    app:layout_constraintStart_toEndOf="@+id/department_layout"
+                    app:srcCompat="@drawable/view_add" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50dp">
+
+                <LinearLayout
+                    android:id="@+id/expence_catagory_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_37dp"
+                        android:layout_marginBottom="@dimen/_27dp"
+                        android:drawableEnd="@drawable/small_top_arrow"
+                        android:drawablePadding="@dimen/_5dp"
+                        android:text="Expense categories"
+                        android:textColor="@color/text_link_clr"
+                        android:textSize="@dimen/_12sp"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/add_expence_catagory_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/expence_catagory_layout"
+                    app:layout_constraintStart_toEndOf="@+id/expence_catagory_layout"
+                    app:srcCompat="@drawable/view_add" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50dp">
+
+                <LinearLayout
+                    android:id="@+id/liabilities_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_37dp"
+                        android:layout_marginBottom="@dimen/_27dp"
+                        android:drawableEnd="@drawable/small_top_arrow"
+                        android:drawablePadding="@dimen/_5dp"
+                        android:text="Liabilities"
+                        android:textColor="@color/text_link_clr"
+                        android:textSize="@dimen/_12sp"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/add_liabilities_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/liabilities_layout"
+                    app:layout_constraintStart_toEndOf="@+id/liabilities_layout"
+                    app:srcCompat="@drawable/view_add" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/save_organogram_btn"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_hight"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/round_btn_visable"
+            android:elevation="@dimen/evelation_five"
+            android:text="@string/save_go_to_organogram"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout26"
+            tools:targetApi="lollipop" />
+
+
+        <Button
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_hight"
+            android:layout_marginTop="@dimen/_16dp"
+            android:background="@drawable/round_btn_orange"
+            android:elevation="@dimen/evelation_five"
+            android:text="@string/save_close"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/save_organogram_btn"
+            tools:targetApi="lollipop" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

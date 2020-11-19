@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/beneficiry_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingTop="@dimen/_5dp"
+        android:paddingBottom="@dimen/_5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView404">
+
+        <ImageView
+            android:id="@+id/textView301"
+            style="@style/medium_text_style"
+            android:layout_width="@dimen/_27dp"
+            android:layout_height="@dimen/_27dp"
+            android:layout_marginStart="9dp"
+            android:gravity="center"
+            android:src="@drawable/sent_history_ic"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:text="-৳125"
+            android:id="@+id/imageView75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView295"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Independent Television"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView301"
+            app:layout_constraintTop_toTopOf="@+id/textView301" />
+
+        <TextView
+            android:id="@+id/textView302"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="06:41 . AK. Bulbul"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView301"
+            app:layout_constraintStart_toEndOf="@+id/textView301"
+            app:layout_constraintTop_toBottomOf="@+id/textView295"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView382"
+        style="@style/text_style"
+        android:textSize="@dimen/_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Get"
+        android:textColor="@color/text_link_clr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/all_beneficiray_txt"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="All"
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView385"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="transactions"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/all_beneficiray_txt"
+        app:layout_constraintStart_toEndOf="@+id/all_beneficiray_txt"
+        app:layout_constraintTop_toTopOf="@+id/all_beneficiray_txt" />
+
+    <TextView
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_14sp"
+        style="@style/text_style"
+        android:id="@+id/textView402"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start of account activity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView385" />
+
+    <TextView
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_14sp"
+        style="@style/text_style"
+        android:id="@+id/textView403"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="statement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView382" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView404"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Thu, 9 April"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView402" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

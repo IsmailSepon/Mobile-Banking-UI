@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseActivity
 import com.cloudwell.paywell.databinding.ActivitySendMoneyHostBinding
-import com.cloudwell.paywell.ui.BusinessUI.sendFund.fragment.BusinessSendFundFragment
+import com.cloudwell.paywell.uiBusiness.sendFund.fragment.BusinessSendFundFragment
 import com.cloudwell.paywell.ui.beneficiary.BeneficeryHostActivity
 import com.cloudwell.paywell.ui.sendMoney.view.SendMoneyFactory
 import com.cloudwell.paywell.ui.sendMoney.viewmodel.SendMoneyViewModel

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView185"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_17sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView468"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/card_ordering_usage_terms"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView185"
+        app:layout_constraintStart_toEndOf="@+id/imageView185"
+        app:layout_constraintTop_toTopOf="@+id/imageView185" />
+
+    <TextView
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_14sp"
+        style="@style/text_style"
+        android:gravity="left"
+        android:id="@+id/textView469"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="42dp"
+        android:text="@string/the_name_of_the_cardholder_and_nid_should_be_of_the_same_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView185"
+        app:layout_constraintTop_toBottomOf="@+id/textView468"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView470"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/card_issuance_delivery_fee"
+        app:layout_constraintStart_toStartOf="@+id/textView469"
+        app:layout_constraintTop_toBottomOf="@+id/textView469" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_15sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView471"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_be_deliverd_within_10_days"
+        app:layout_constraintStart_toStartOf="@+id/textView470"
+        app:layout_constraintTop_toBottomOf="@+id/textView470" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:button="@drawable/checkbox_selector"
+        app:layout_constraintStart_toStartOf="@+id/textView471"
+        app:layout_constraintTop_toBottomOf="@+id/textView471" />
+
+    <TextView
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_14sp"
+        style="@style/medium_text_style"
+        android:gravity="left"
+        android:id="@+id/textView472"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/i_we_agree_to_pay_issue_use_the_card_as_per_the_terms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+        app:layout_constraintTop_toTopOf="@+id/checkBox2"
+        tools:ignore="RtlHardcoded" />
+
+
+
+
+
+    <Button
+        android:id="@+id/card_continue_btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:elevation="@dimen/evelation_five"
+        android:background="@drawable/round_btn_visable"
+        android:text="@string/continue_txt"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        tools:targetApi="lollipop" />
+
+    <TextView
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_20sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView473"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="41dp"
+        android:text="৳560"
+        app:layout_constraintBottom_toBottomOf="@+id/textView471"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView470" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

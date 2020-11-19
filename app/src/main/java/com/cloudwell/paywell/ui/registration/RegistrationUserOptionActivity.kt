@@ -16,11 +16,8 @@ class RegistrationUserOptionActivity : AppCompatActivity() {
 
 
         personal_layout.setOnClickListener(View.OnClickListener {
-
             //startActivity(Intent(applicationContext, MainHomeActivity::class.java))
-            startActivity(
-                Intent(applicationContext, RegistationMainActivity::class.java)
-            )
+            startActivity(Intent(applicationContext, RegistationMainActivity::class.java))
         })
 
         business_layout.setOnClickListener(View.OnClickListener {
@@ -28,9 +25,7 @@ class RegistrationUserOptionActivity : AppCompatActivity() {
         })
 
         personal_account.setOnClickListener(View.OnClickListener {
-            startActivity(
-                Intent(applicationContext, MainHomeActivity::class.java)
-            )
+            startActivity(Intent(applicationContext, MainHomeActivity::class.java))
         })
 
     }

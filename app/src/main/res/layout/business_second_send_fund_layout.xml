@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cloudwell.paywell.ui.BusinessUI.test.TestActivity">
+    tools:context=".uiBusiness.test.TestActivity">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
@@ -17,7 +17,7 @@
         app:tabMaxWidth="0dp"
         app:tabGravity="start"
         app:tabMode="scrollable"
-        android:layout_marginStart="-17dp"
+        android:layout_marginStart="-12dp"
         android:textAlignment="viewStart"
         app:tabIndicatorFullWidth="false"
         app:tabIndicatorColor="@color/text_link_clr"

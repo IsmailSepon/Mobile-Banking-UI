@@ -14,6 +14,10 @@ public class FragmentHelper {
         manager.beginTransaction().replace(container, fragment).addToBackStack(null).commit();
     }
 
+    public static void replaceFragmentWithString(Fragment fragment, FragmentManager manager, int container, String TAG) {
+        manager.beginTransaction().replace(container, fragment, TAG).addToBackStack(null).commit();
+    }
+
     public static void removeFragment(FragmentManager manager) {
         manager.popBackStack();
     }

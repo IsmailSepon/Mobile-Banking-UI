@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/_10dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_10sp"
+        style="@style/text_style"
+        android:id="@+id/textView425"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/select_bank_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView175"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView425"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView425"
+        app:srcCompat="@drawable/remove_view" />
+
+
+    <Spinner
+        android:id="@+id/towncity_spinner"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/spinner_bg"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toStartOf="@+id/imageView175"
+        app:layout_constraintStart_toStartOf="@+id/textView425"
+        app:layout_constraintTop_toBottomOf="@+id/textView425" />
+
+    <ImageView
+        android:id="@+id/imageView45"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_2dp"
+        android:background="@color/common_clr"
+        app:layout_constraintBottom_toBottomOf="@+id/banklist_sp"
+        app:layout_constraintEnd_toEndOf="@+id/banklist_sp"
+        app:layout_constraintStart_toStartOf="@+id/banklist_sp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_10sp"
+        style="@style/text_style"
+        android:id="@+id/textView430"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="@string/select_bank_branch"
+        app:layout_constraintStart_toStartOf="@+id/imageView45"
+        app:layout_constraintTop_toBottomOf="@+id/imageView45" />
+
+    <Spinner
+        android:id="@+id/branchlist_sp"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/spinner_bg"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toStartOf="@+id/imageView175"
+        app:layout_constraintStart_toStartOf="@+id/textView430"
+        app:layout_constraintTop_toBottomOf="@+id/textView430" />
+
+    <ImageView
+        android:id="@+id/imageView451"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_2dp"
+        android:background="@color/common_clr"
+        app:layout_constraintBottom_toBottomOf="@+id/branchlist_sp"
+        app:layout_constraintEnd_toEndOf="@+id/branchlist_sp"
+        app:layout_constraintStart_toStartOf="@+id/branchlist_sp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_10sp"
+        style="@style/text_style"
+        android:id="@+id/textView431"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/routing_number"
+        app:layout_constraintStart_toStartOf="@+id/imageView451"
+        app:layout_constraintTop_toBottomOf="@+id/imageView451" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_14sp"
+        style="@style/text_style"
+        android:id="@+id/textView432"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="005010"
+        app:layout_constraintStart_toStartOf="@+id/textView431"
+        app:layout_constraintTop_toBottomOf="@+id/textView431" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_10sp"
+        style="@style/text_style"
+        android:id="@+id/textView433"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/account_name"
+        app:layout_constraintStart_toStartOf="@+id/textView432"
+        app:layout_constraintTop_toBottomOf="@+id/textView432" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName15"
+        style="@style/edittext_style"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="50dp"
+        android:ems="8"
+        android:inputType="textPersonName"
+        android:hint="@string/account_name"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView175"
+        app:layout_constraintStart_toStartOf="@+id/textView433"
+        app:layout_constraintTop_toBottomOf="@+id/textView433" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName16"
+        style="@style/edittext_style"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:ems="8"
+        android:inputType="textPersonName"
+        android:hint="@string/account_number"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView175"
+        app:layout_constraintStart_toStartOf="@+id/textView433"
+        app:layout_constraintTop_toBottomOf="@+id/textView434" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_10sp"
+        style="@style/text_style"
+        android:id="@+id/textView434"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="@string/account_number"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName15"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
+
+    <TextView
+        android:id="@+id/textView435"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/wrong_information_may_cause_transfers_to_be_rejected"
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_10sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName16"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName16" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/half_one"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/divider_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView435"
+        tools:ignore="ContentDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

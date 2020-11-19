@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        style="@style/text_style"
+        android:id="@+id/textView512"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Your organization’s approval hierarchy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView513"
+        style="@style/text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="You may set up any of the following models for all expenses approval"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_10sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView512"
+        app:layout_constraintStart_toStartOf="@+id/textView512"
+        app:layout_constraintTop_toBottomOf="@+id/textView512" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_14sp"
+        style="@style/text_style"
+        android:id="@+id/textView514"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="30dp"
+        android:text="Approval model"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView513" />
+
+
+    <RadioGroup
+        android:id="@+id/transfertype_radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView514"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/radiomyselt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:checked="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/i_my_deputy_will_approve_all_expenses"
+            android:textColor="@drawable/text_radio_selector"
+            android:textSize="@dimen/_15sp"
+            android:theme="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/radioanother_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/i_need_claimant_s_line_manager_and_nother_approvers_to_facilitate_nre_imbursement"
+            android:textColor="@drawable/text_radio_selector"
+            android:textSize="@dimen/_15sp"
+            android:theme="@style/RadioButtonStyle" />
+
+
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/orginize_app_btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:elevation="@dimen/evelation_five"
+        android:background="@drawable/round_btn_visable"
+        android:text="@string/continue_txt"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        tools:targetApi="lollipop" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

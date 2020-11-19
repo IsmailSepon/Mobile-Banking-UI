@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_50dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/card_delivery_address_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18dp"
+            android:layout_marginTop="@dimen/_18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:padding="@dimen/_10dp"
+            android:id="@+id/imageView136"
+            android:layout_width="@dimen/_167dp"
+            android:layout_height="@dimen/_167dp"
+            android:layout_marginTop="@dimen/_42dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/round_bg"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageView135"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView136"
+            app:layout_constraintEnd_toEndOf="@+id/imageView136"
+            app:layout_constraintStart_toStartOf="@+id/imageView136"
+            app:layout_constraintTop_toTopOf="@+id/imageView136"
+            app:srcCompat="@drawable/delivery_address"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/medium_text_style"
+            android:textSize="@dimen/_17sp"
+            android:textColor="@color/keypad_text_clr"
+            android:id="@+id/textView258"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_38dp"
+            android:text="@string/specify_delivery_address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView136" />
+
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="24dp"
+            android:button="@drawable/checkbox_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView258" />
+
+
+        <TextView
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_14sp"
+            style="@style/text_style"
+            android:id="@+id/textView476"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/deliver_to_current_business_address"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
+            app:layout_constraintStart_toEndOf="@+id/checkBox2"
+            app:layout_constraintTop_toTopOf="@+id/checkBox2" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30dp"
+            android:layout_marginEnd="@dimen/_46dp"
+            app:hintTextAppearance="@style/TextLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/checkBox2"
+            app:layout_constraintTop_toBottomOf="@+id/textView476">
+
+
+            <EditText
+                android:id="@+id/house_holding_number_et"
+                style="@style/edittext_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_15dp"
+                android:hint="@string/house_holding_number"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                tools:ignore="TextFields" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="@dimen/_46dp"
+            app:hintTextAppearance="@style/TextLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/checkBox2"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+
+            <EditText
+                android:id="@+id/village_road_et"
+                style="@style/edittext_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_15dp"
+                android:hint="@string/village_road"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                tools:ignore="TextFields" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Spinner
+            android:id="@+id/towncity_spinner"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="46dp"
+            android:background="@drawable/spinner_bg"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+        <ImageView
+            android:id="@+id/imageView45"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/common_clr"
+            app:layout_constraintBottom_toBottomOf="@+id/towncity_spinner"
+            app:layout_constraintEnd_toEndOf="@+id/towncity_spinner"
+            app:layout_constraintStart_toStartOf="@+id/towncity_spinner"
+            tools:ignore="ContentDescription" />
+
+        <Spinner
+            android:id="@+id/upzila_spinner"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="46dp"
+            android:background="@drawable/spinner_bg"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView45" />
+
+        <ImageView
+            android:id="@+id/imageView189"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/common_clr"
+            app:layout_constraintBottom_toBottomOf="@+id/upzila_spinner"
+            app:layout_constraintEnd_toEndOf="@+id/upzila_spinner"
+            app:layout_constraintStart_toStartOf="@+id/upzila_spinner"
+            tools:ignore="ContentDescription" />
+
+
+        <Spinner
+            android:id="@+id/district_spinner"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="46dp"
+            android:background="@drawable/spinner_bg"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView189" />
+
+        <ImageView
+            android:id="@+id/imageView190"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/common_clr"
+            app:layout_constraintBottom_toBottomOf="@+id/district_spinner"
+            app:layout_constraintEnd_toEndOf="@+id/district_spinner"
+            app:layout_constraintStart_toStartOf="@+id/district_spinner"
+            tools:ignore="ContentDescription" />
+
+
+        <Button
+            android:id="@+id/specify_address_btn"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/round_btn_visable"
+            android:elevation="@dimen/evelation_five"
+            android:text="@string/continue_txt"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView190"
+            tools:targetApi="lollipop" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/saveas"
+        android:icon="@drawable/save_as_ic"
+        android:title="Save as draft" />
+
+    <item
+        android:id="@+id/activeDeactive"
+        android:icon="@drawable/deactive_ic"
+        android:title="@string/active" />
+
+    <item
+        android:id="@+id/cancle"
+        android:icon="@drawable/cross_btn"
+        android:title="@string/cancel" />
+
+
+</menu>

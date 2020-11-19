@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView214"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_17sp"
+        style="@style/text_style"
+        android:id="@+id/textView519"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:text="@string/set_an_amount"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView214"
+        app:layout_constraintStart_toEndOf="@+id/imageView214"
+        app:layout_constraintTop_toTopOf="@+id/imageView214" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView520"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/enter_an_amount_you_want_to_charge_your_customer"
+        app:layout_constraintStart_toStartOf="@+id/textView519"
+        app:layout_constraintTop_toBottomOf="@+id/textView519" />
+
+
+    <EditText
+        android:padding="@dimen/_0dp"
+        android:id="@+id/legal_first_name_et"
+        android:text="৳500"
+        android:background="@null"
+        style="@style/edittext_style_medium"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_27_3sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="5"
+        app:layout_constraintStart_toStartOf="@+id/textView520"
+        app:layout_constraintTop_toBottomOf="@+id/textView520"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView521"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/add_a_description_or_reference"
+        app:layout_constraintStart_toStartOf="@+id/legal_first_name_et"
+        app:layout_constraintTop_toBottomOf="@+id/legal_first_name_et" />
+
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:button="@drawable/checkbox_selector"
+        app:layout_constraintStart_toStartOf="@+id/textView521"
+        app:layout_constraintTop_toBottomOf="@+id/textView521" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView522"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/enable_partial_paymentw"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
+        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+        app:layout_constraintTop_toTopOf="@+id/checkBox2" />
+
+
+
+    <Button
+        android:id="@+id/marchent_amount_done"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:elevation="@dimen/evelation_five"
+        android:background="@drawable/round_btn_visable"
+        android:text="@string/continue_txt"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        tools:targetApi="lollipop" />
+
+    <TextView
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:drawableEnd="@drawable/upload_orng"
+        android:drawablePadding="@dimen/_7dp"
+        android:id="@+id/textView612"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="26dp"
+        android:text="@string/bulk_upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

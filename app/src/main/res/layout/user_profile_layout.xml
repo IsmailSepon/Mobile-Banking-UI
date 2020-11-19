@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageView192"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/imageView193"
+            android:layout_width="@dimen/_33dp"
+            android:layout_height="@dimen/_33dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/person" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_26sp"
+            style="@style/medium_text_style"
+            android:id="@+id/textView481"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Anisul Islam"
+            app:layout_constraintStart_toStartOf="@+id/imageView192"
+            app:layout_constraintTop_toBottomOf="@+id/imageView192" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_12sp"
+            style="@style/text_style"
+            android:id="@+id/textView482"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Owner . Active"
+            app:layout_constraintStart_toStartOf="@+id/textView481"
+            app:layout_constraintTop_toBottomOf="@+id/textView481" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDFUsername">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/user_profile_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-12dp"
+            android:background="@color/white"
+            android:elevation="@dimen/_0dp"
+            android:textAlignment="viewStart"
+            app:tabBackground="@drawable/tab_layout_selector"
+            app:tabGravity="start"
+            app:tabIndicatorColor="@color/text_link_clr"
+            app:tabIndicatorFullWidth="false"
+            app:tabMaxWidth="0dp"
+            app:tabMode="scrollable"
+            app:tabRippleColor="@color/text_link_clr"
+            app:tabSelectedTextColor="@color/text_link_clr"
+            app:tabTextAppearance="@style/CustomTextAppearanceTab"
+            app:tabTextColor="@color/common_clr"
+            tools:ignore="RtlCompat" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/user_profile_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

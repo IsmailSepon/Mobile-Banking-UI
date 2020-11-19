@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView563"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/developer_api"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/api_details"
+        style="@style/text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="26dp"
+        android:gravity="left"
+        tools:text="You can start using PayWell merchant account API in your application  using API key below. Please refer to API documentation for details."
+        android:textColor="@color/recyclerview_title"
+        android:textSize="@dimen/_10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView563" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView565"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/production_api_key"
+        app:layout_constraintStart_toStartOf="@+id/api_details"
+        app:layout_constraintTop_toBottomOf="@+id/api_details" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/light_text_style"
+        android:id="@+id/textView566"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="LHH1564*****31315J"
+        app:layout_constraintStart_toStartOf="@+id/textView565"
+        app:layout_constraintTop_toBottomOf="@+id/textView565" />
+
+    <ImageView
+        android:id="@+id/imageView228"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView566"
+        app:layout_constraintStart_toEndOf="@+id/textView566"
+        app:layout_constraintTop_toTopOf="@+id/textView566"
+        app:srcCompat="@drawable/pass_view"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView567"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@android:string/copy"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView228"
+        app:layout_constraintStart_toEndOf="@+id/imageView228"
+        app:layout_constraintTop_toTopOf="@+id/imageView228" />
+
+    <TextView
+        android:textSize="@dimen/_10sp"
+        style="@style/text_style"
+        android:id="@+id/production_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="@string/please_keep_your_production_api_key_private"
+        app:layout_constraintStart_toStartOf="@+id/textView566"
+        app:layout_constraintTop_toBottomOf="@+id/textView566" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView569"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/sandbox"
+        app:layout_constraintStart_toStartOf="@+id/production_txt"
+        app:layout_constraintTop_toBottomOf="@+id/production_txt" />
+
+    <TextView
+        android:textColor="@color/recyclerview_title"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:gravity="left"
+        android:id="@+id/textView570"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/use_the_demo_sandbox_environment_to_test_api_integration_checkout_and_payment_transactions_before_going_live"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView569"
+        app:layout_constraintTop_toBottomOf="@+id/textView569" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

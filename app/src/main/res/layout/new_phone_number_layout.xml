@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageView199"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cross_btn"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_18_3sp"
+        style="@style/text_style"
+        android:id="@+id/textView491"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="97dp"
+        android:text="@string/what_s_your_new_phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView491"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="@dimen/_75dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3dp"
+                android:text="@string/country"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/twelve_sp" />
+
+            <Spinner
+                android:id="@+id/country_code_spinner"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_26dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_13dp"
+                android:background="@drawable/spinner_bg"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2dp"
+                android:background="@color/common_clr"
+                tools:ignore="ContentDescription" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3dp"
+                android:text="@string/phonenumber"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:ems="13"
+                android:hint="@string/enter_your_mobile_number"
+                android:inputType="number"
+                android:textColorHint="#8ea0b6"
+                android:textSize="16sp"
+                tools:ignore="TextFields"
+                tools:targetApi="lollipop" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/new_phone_number_done"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:elevation="@dimen/evelation_five"
+        android:background="@drawable/round_btn_visable"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        tools:targetApi="lollipop" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

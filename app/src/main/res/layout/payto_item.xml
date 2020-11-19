@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView285"
+        android:layout_width="@dimen/_34dp"
+        android:layout_height="@dimen/_34dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/person"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/paytoName"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="32dp"
+        android:text="Amzad Hossain"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView285"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView680"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+880145454"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView285"
+        app:layout_constraintStart_toStartOf="@+id/paytoName"
+        app:layout_constraintTop_toBottomOf="@+id/paytoName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

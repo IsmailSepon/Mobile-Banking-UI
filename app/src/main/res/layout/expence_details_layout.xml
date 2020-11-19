@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/hader"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView257"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView626"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/expense_details"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16_7sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView258"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_200dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView626"
+            app:srcCompat="@drawable/cash_memo"
+            tools:ignore="ContentDescription" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ScrollView
+        android:layout_marginTop="@dimen/_30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/hader">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_40dp">
+
+
+            <Button
+                android:id="@+id/capture_fdetails_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="38dp"
+                android:background="@drawable/round_btn_orange"
+                android:text="@string/my_details_are_captured_properly"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fifteen_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/transfertype_radiogroup"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="38dp"
+                android:background="@drawable/btn_radious"
+                android:text="@string/take_a_new_picture"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/fifteen_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/capture_fdetails_btn"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/marchent_name"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="57dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/merchant_name"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/marchent_name2"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="57dp"
+                android:layout_marginTop="21dp"
+                android:text="@string/amount"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/marchent_name_txt" />
+
+            <TextView
+                android:id="@+id/marchent_name3"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="57dp"
+                android:layout_marginTop="27dp"
+                android:text="@string/date_of_purchase"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/marchent_name_txt2" />
+
+            <TextView
+                android:id="@+id/marchent_name_txt"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/shopno_super_shop"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toStartOf="@+id/marchent_name"
+                app:layout_constraintTop_toBottomOf="@+id/marchent_name" />
+
+            <TextView
+                android:id="@+id/marchent_name_txt2"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="৳500"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toStartOf="@+id/marchent_name"
+                app:layout_constraintTop_toBottomOf="@+id/marchent_name2" />
+
+            <TextView
+                android:id="@+id/marchent_name_txt3"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/_10_may_2020"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toStartOf="@+id/marchent_name"
+                app:layout_constraintTop_toBottomOf="@+id/marchent_name3" />
+
+            <EditText
+                android:id="@+id/editText6"
+                style="@style/edittext_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="36dp"
+                android:hint="@string/coffeemate_sugar"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:paddingTop="@dimen/_15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView640"
+                app:layout_constraintTop_toBottomOf="@+id/textView640"
+                tools:ignore="TextFields" />
+
+            <TextView
+                android:id="@+id/textView640"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="@string/description"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="@+id/marchent_name_txt3"
+                app:layout_constraintTop_toBottomOf="@+id/marchent_name_txt3" />
+
+            <TextView
+                android:id="@+id/textView641"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/expense_category"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="@+id/editText6"
+                app:layout_constraintTop_toBottomOf="@+id/editText6" />
+
+
+            <RadioGroup
+                android:id="@+id/transfertype_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/textView641"
+                app:layout_constraintTop_toBottomOf="@+id/textView641"
+                tools:ignore="MissingConstraints">
+
+                <RadioButton
+                    android:id="@+id/radiomyselt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:checked="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/travel_fuel_expense"
+                    android:textColor="@drawable/text_radio_selector"
+                    android:textSize="@dimen/_13_3sp"
+                    android:theme="@style/RadioButtonStyle" />
+
+                <RadioButton
+                    android:id="@+id/radioanother_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/lodging_expense"
+                    android:textColor="@drawable/text_radio_selector"
+                    android:textSize="@dimen/_13_3sp"
+                    android:theme="@style/RadioButtonStyle" />
+
+                <RadioButton
+                    android:id="@+id/radio_business"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/medical_expense"
+                    android:textColor="@drawable/text_radio_selector"
+                    android:textSize="@dimen/_13_3sp"
+                    android:theme="@style/RadioButtonStyle" />
+
+                <RadioButton
+                    android:id="@+id/radio_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/entertainment_expense"
+                    android:textColor="@drawable/text_radio_selector"
+                    android:textSize="@dimen/_13_3sp"
+                    android:theme="@style/RadioButtonStyle" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/office_expense"
+                    android:textColor="@drawable/text_radio_selector"
+                    android:textSize="@dimen/_13_3sp"
+                    android:theme="@style/RadioButtonStyle" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/others"
+                    android:textColor="@drawable/text_radio_selector"
+                    android:textSize="@dimen/_13_3sp"
+                    android:theme="@style/RadioButtonStyle" />
+
+            </RadioGroup>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

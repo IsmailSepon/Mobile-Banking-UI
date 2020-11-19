@@ -159,4 +159,10 @@
     <dimen name="_230dp">230dp</dimen>
     <dimen name="_65dp">65dp</dimen>
     <dimen name="_160dp">160dp</dimen>
+    <dimen name="_470dp">470dp</dimen>
+    <dimen name="_7sp">7sp</dimen>
+    <dimen name="_5sp">5sp</dimen>
+    <dimen name="_84dp">84dp</dimen>
+    <dimen name="_180dp">180dp</dimen>
+    <dimen name="_81dp">81dp</dimen>
 </resources>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ts_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_27sp"
+            style="@style/medium_text_style"
+            android:id="@+id/ts_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="AK. Bulbul"
+            app:layout_constraintStart_toStartOf="@+id/ts_back_btn"
+            app:layout_constraintTop_toBottomOf="@+id/ts_back_btn" />
+
+        <TextView
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_14sp"
+            style="@style/text_style"
+            android:id="@+id/textView454"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..0955..04/2025"
+            app:layout_constraintStart_toStartOf="@+id/ts_profile_name"
+            app:layout_constraintTop_toBottomOf="@+id/ts_profile_name" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_110dp"
+            android:layout_height="@dimen/_22dp"
+            android:layout_marginTop="20dp"
+            app:cardElevation="@dimen/_0dp"
+            app:cardCornerRadius="@dimen/_5dp"
+            app:cardBackgroundColor="@color/resetpin_bg"
+            android:background="@color/resetpin_bg"
+            app:layout_constraintStart_toStartOf="@+id/ts_profile_name"
+            app:layout_constraintTop_toBottomOf="@+id/textView454">
+
+            <TextView
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/small_key_ic"
+                android:textColor="@color/text_link_clr"
+                android:textSize="@dimen/_10sp"
+                android:drawablePadding="@dimen/_5dp"
+                style="@style/text_style"
+                android:text="Call to reset PIN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="26dp"
+            app:cardElevation="@dimen/_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:elevation="@dimen/_10dp"
+                android:id="@+id/imageView183"
+                android:layout_width="85dp"
+                android:layout_height="@dimen/_50dp"
+                app:srcCompat="@drawable/paywell_card_2"
+                tools:ignore="ContentDescription" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView443">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/transaction_tabs"
+            android:elevation="@dimen/_0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/common_clr"
+            app:tabTextAppearance="@style/CustomTextAppearanceTab"
+            app:tabMaxWidth="0dp"
+            app:tabGravity="start"
+            app:tabMode="scrollable"
+            android:layout_marginStart="-12dp"
+            android:textAlignment="viewStart"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorColor="@color/text_link_clr"
+            app:tabBackground="@drawable/tab_layout_selector"
+            app:tabRippleColor="@color/text_link_clr"
+            app:tabSelectedTextColor="@color/text_link_clr"
+            android:background="@color/white"
+            tools:ignore="RtlCompat" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_marginTop="@dimen/_30dp"
+            android:id="@+id/trx_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

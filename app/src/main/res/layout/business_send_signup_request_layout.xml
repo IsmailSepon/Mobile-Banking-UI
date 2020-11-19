@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/send_money_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <TextView
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/send_fund"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16sp"
+            android:theme="@style/medium_text_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/send_money_back_btn"
+            app:layout_constraintTop_toBottomOf="@+id/send_money_back_btn"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="@dimen/_40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView16"
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="34dp"
+                android:lineHeight="@dimen/_17dp"
+                android:padding="@dimen/_5dp"
+                android:text="@string/your_contact_hilmi_khan_is_not_registered_on_paywell_you_may_send_the_following_signup_invitation_and_help_him_or_her_to_register_receive_your_fund_enjoy_all_the_benefits_of_our_service"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="p" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="54dp"
+                app:cardCornerRadius="@dimen/_10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_16dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_margin="@dimen/_16dp"
+                        android:id="@+id/textView341"
+                        style="@style/text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:lineHeight="@dimen/_15dp"
+                        android:paddingEnd="@dimen/_5dp"
+                        android:text="@string/company_limited_has_sent_you_2000_in_order_to_withdraw_or_use_please_go_to_the_following_link_to_download_the_paywell_app_register_yourself"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry"
+                        tools:targetApi="p" />
+
+
+                    <TextView
+                        android:layout_margin="@dimen/_16dp"
+                        android:id="@+id/textView342"
+                        style="@style/text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="left"
+                        android:text="https://pw.ll/oPk165rtLv"
+                        android:textColor="@color/text_link_clr"
+                        android:textSize="@dimen/_14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView341"
+                        tools:layout_editor_absoluteX="16dp" />
+
+
+                    <CheckBox
+                        android:layout_marginLeft="@dimen/_9dp"
+                        android:id="@+id/send_msg_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="27dp"
+                        android:textColor="@color/common_clr"
+                        android:buttonTint="@color/common_clr"
+                        android:text="Send above over SMS to 01711112333"
+                        android:textSize="@dimen/_10sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView342" />
+
+                    <CheckBox
+                        android:layout_marginLeft="@dimen/_9dp"
+                        android:id="@+id/send_mail_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:textColor="@color/common_clr"
+                        android:buttonTint="@color/common_clr"
+                        android:text="Send above over an email to mail@email.com"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/send_msg_checkbox" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/confirm_phn_continue_btn"
+                android:layout_width="@dimen/_250dp"
+                android:layout_height="@dimen/_50dp"
+                android:layout_marginTop="95dp"
+                android:background="@drawable/round_btn_visable"
+                android:text="@string/send_fund_with_signup_request"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fifteen_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="@dimen/_250dp"
+                android:layout_height="@dimen/_50dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/round_btn_orange"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fifteen_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirm_phn_continue_btn"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

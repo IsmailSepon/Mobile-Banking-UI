@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView317"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_16_7sp"
+        style="@style/medium_text_style"
+        android:id="@+id/recurring_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:text="Edit bill payment job - Grameenphone "
+        app:layout_constraintBottom_toBottomOf="@+id/imageView317"
+        app:layout_constraintStart_toEndOf="@+id/imageView317"
+        app:layout_constraintTop_toTopOf="@+id/imageView317" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_13_3sp"
+        style="@style/text_style"
+        android:id="@+id/textView722"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="25dp"
+        android:text="Choose your service type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recurring_title" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recuring_details_recyclerview"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView722"
+        app:layout_constraintTop_toBottomOf="@+id/textView722" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView313"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cross_btn"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_14sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView711"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="18dp"
+        android:text="1 Apr 2020"
+        android:drawableEnd="@drawable/p_round"
+        android:drawablePadding="@dimen/_15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        style="@style/medium_text_style"
+        android:id="@+id/dpdc_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/your_top_up_details"
+        android:drawableEnd="@drawable/ic_info_orange"
+        android:drawablePadding="@dimen/_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView313" />
+
+
+    <EditText
+        android:id="@+id/editText10"
+        style="@style/edittext_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30dp"
+        android:layout_marginTop="@dimen/_42dp"
+        android:layout_marginEnd="@dimen/_160dp"
+        android:drawableEnd="@drawable/camera_small"
+        android:drawablePadding="@dimen/_15dp"
+        android:hint="@string/enter_your_bill_number"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:paddingTop="@dimen/_15dp"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dpdc_details"
+        tools:ignore="TextFields" />
+
+    <EditText
+        android:id="@+id/editText11"
+        style="@style/edittext_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/phone_number"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:paddingTop="@dimen/_15dp"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText10"
+        tools:ignore="TextFields" />
+
+
+    <EditText
+        android:id="@+id/location"
+        style="@style/edittext_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:drawableEnd="@drawable/ic_info_orange"
+        android:hint="@string/location"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:paddingTop="@dimen/_15dp"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText11"
+        tools:ignore="TextFields" />
+
+    <Button
+        android:id="@+id/ac_created_btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:background="@drawable/round_btn_visable"
+        android:elevation="@dimen/evelation_five"
+        android:text="@string/save_for_later_use"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText11"
+        app:layout_constraintVertical_bias="0.69"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/set_electricity"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/round_btn_orange"
+        android:elevation="@dimen/evelation_five"
+        android:text="@string/set"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ac_created_btn"
+        tools:targetApi="lollipop" />
+
+    <ImageView
+        android:id="@+id/dpdc_ic"
+        android:layout_width="@dimen/_24dp"
+        android:layout_height="@dimen/_24dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dpdc_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dpdc_details"
+        app:srcCompat="@drawable/dpdc"
+        tools:ignore="ContentDescription" />
+
+
+    <Spinner
+        android:id="@+id/month_sp"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="@dimen/_110dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/spinner_bg"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <Spinner
+        android:id="@+id/year_sp"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/spinner_bg"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@+id/location"
+        app:layout_constraintStart_toEndOf="@+id/month_sp"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

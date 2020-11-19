@@ -18,6 +18,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.databinding.DashboardFragmentBinding
+import com.cloudwell.paywell.uiBusiness.control.BusinessControlHostActivity
 import com.cloudwell.paywell.ui.authentication.UserAuthenticationHostActivity
 import com.cloudwell.paywell.ui.freeCard.FreeCardHostActivity
 import com.cloudwell.paywell.ui.help.UserHelpHostActivity
@@ -64,6 +65,17 @@ class DashboardFragment : Fragment() {
                 startActivity(it)
             }
         })
+
+
+
+        binding.root.profile_image.setOnClickListener(View.OnClickListener {
+            Intent(context, BusinessControlHostActivity::class.java).also {
+                startActivity(it)
+            }
+
+        })
+
+
 
         return binding.root
     }

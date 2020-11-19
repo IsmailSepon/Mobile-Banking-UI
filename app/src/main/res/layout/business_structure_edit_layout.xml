@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView206"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        style="@style/text_style"
+        android:id="@+id/textView499"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:text="@string/structure_of_your_business"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView206" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_14sp"
+        style="@style/text_style"
+        android:id="@+id/textView500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="42dp"
+        android:text="Registration type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView499" />
+
+
+    <RadioGroup
+        android:id="@+id/transfertype_radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView500"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/radiomyselt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:checked="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/sole_proprietorship"
+            android:textColor="@drawable/text_radio_selector"
+            android:textSize="@dimen/_15sp"
+            android:theme="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/radioanother_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/partnership"
+            android:textColor="@drawable/text_radio_selector"
+            android:textSize="@dimen/_15sp"
+            android:theme="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/radio_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/private_limited"
+            android:textColor="@drawable/text_radio_selector"
+            android:textSize="@dimen/_15sp"
+            android:theme="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/radio_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/public_limited"
+            android:textColor="@drawable/text_radio_selector"
+            android:textSize="@dimen/_15sp"
+            android:theme="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/ngo_charity_jv_others"
+            android:textColor="@drawable/text_radio_selector"
+            android:textSize="@dimen/_15sp"
+            android:theme="@style/RadioButtonStyle" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/ac_created_btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:background="@drawable/round_btn_visable"
+        android:elevation="@dimen/evelation_five"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.81"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/acbtn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/round_btn_orange"
+        android:elevation="@dimen/evelation_five"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ac_created_btn"
+        tools:targetApi="lollipop" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

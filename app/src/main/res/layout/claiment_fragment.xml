@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_15sp"
+        style="@style/text_style"
+        android:id="@+id/textView515"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/claimant_profiles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView516"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="68dp"
+        android:text="@string/please_add_the_users_who_will_be_able_to_claim_their_expenses_you_may_also_create_upload_a_user_list_using_bulk_upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView515" />
+
+    <TextView
+        android:textColor="@color/text_link_clr"
+        android:drawableStart="@drawable/add_view"
+        android:drawablePadding="@dimen/_5dp"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView517"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="38dp"
+        android:text="@string/add_claimant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView516" />
+
+
+
+    <TextView
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_12sp"
+        style="@style/text_style"
+        android:id="@+id/textView518"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/bulk_upload"
+        android:drawableStart="@drawable/upload_slim_ic"
+        android:drawablePadding="@dimen/_5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView517"
+        app:layout_constraintEnd_toStartOf="@+id/textView517"
+        app:layout_constraintTop_toBottomOf="@+id/textView516" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/claim_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView518" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/half_one"
+        android:background="@color/common_clr"
+        app:layout_constraintBottom_toTopOf="@+id/claim_recyclerview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
