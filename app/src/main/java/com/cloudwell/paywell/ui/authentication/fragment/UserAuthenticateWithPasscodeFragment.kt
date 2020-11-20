@@ -1,6 +1,7 @@
 package com.cloudwell.paywell.ui.authentication.fragment
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import android.view.LayoutInflater
@@ -9,14 +10,18 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputConnection
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
+import androidx.core.hardware.fingerprint.FingerprintManagerCompat
 import androidx.fragment.app.Fragment
 import com.alimuzaffar.lib.pin.PinEntryEditText
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.CustomKeyboardWithFingerprint
+import com.cloudwell.paywell.ui.registration.RegistrationUserOptionActivity
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.user_auth_for_switch_pw_account_two.view.*
 
-class UserAuthenticateWithPasscodeFragment : Fragment() {
+class UserAuthenticateWithPasscodeFragment : Fragment(),
+    CustomKeyboardWithFingerprint.CustomKeyboardClickListener {
 
     lateinit var keyboard: CustomKeyboardWithFingerprint
     lateinit var editTextCreatePin: PinEntryEditText
@@ -36,10 +41,7 @@ class UserAuthenticateWithPasscodeFragment : Fragment() {
         val ic: InputConnection = editTextCreatePin.onCreateInputConnection(EditorInfo())
         keyboard.setInputConnection(ic)
 
-        keyboard.setOnClickListener(View.OnClickListener {
-
-
-        })
+       keyboard.setOnclick(this)
 
         editTextCreatePin.post(Runnable {
             editTextCreatePin.requestFocus()
@@ -51,22 +53,13 @@ class UserAuthenticateWithPasscodeFragment : Fragment() {
 
             editTextCreatePin.setOnPinEnteredListener(PinEntryEditText.OnPinEnteredListener { str ->
 
-                if (str.toString() == "0000") {
-                    FragmentHelper.replaceFragment(
-                        UserLostPhnFirstFragment(),
-                        activity?.supportFragmentManager,
-                        R.id.user_auth_host_container
-                    )
-                }
-                else if (str.toString() == "1111") {
-                    FragmentHelper.replaceFragment(
-                        UserAuthenticateWithFingerPrintFragment(),
-                        activity?.supportFragmentManager,
-                        R.id.user_auth_host_container
-                    )
-                }
 
-                else {
+                if (str.toString().length == 4) {
+
+                    requireActivity().finish()
+                    startActivity(Intent(requireContext(), RegistrationUserOptionActivity::class.java))
+
+                } else {
                     editTextCreatePin.setAnimateText(true)
                 }
             })
@@ -93,4 +86,41 @@ class UserAuthenticateWithPasscodeFragment : Fragment() {
         editTextCreatePin.text!!.clear()
         super.onPause()
     }
+
+    override fun onFingerClick() {
+
+        checkFingerprint()
+
+
+
+    }
+
+
+
+    private fun checkFingerprint() {
+
+        val fingerprintManagerCompat = FingerprintManagerCompat.from(requireContext())
+
+        if (!fingerprintManagerCompat.isHardwareDetected) {
+            // Device doesn't support fingerprint authentication
+            Toast.makeText(requireContext(), "Device doesn't support fingerprint authentication!", Toast.LENGTH_SHORT).show()
+
+        } else if (!fingerprintManagerCompat.hasEnrolledFingerprints()) {
+            // User hasn't enrolled any fingerprints to authenticate with
+
+            Toast.makeText(requireContext(), "User hasn't enrolled any fingerprints to authenticate with!", Toast.LENGTH_SHORT).show()
+
+        } else {
+            FragmentHelper.replaceFragment(
+                UserLoginWithFingerPrintFragment(),
+                requireActivity().supportFragmentManager,
+                R.id.user_auth_host_container
+            )
+        }
+
+    }
+
+
+
+
 }

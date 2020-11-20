@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.biometric.BiometricPrompt
 import androidx.core.hardware.fingerprint.FingerprintManagerCompat
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.base.Preference
 import com.cloudwell.paywell.ui.authentication.UserAuthenticationHostActivity
 import kotlinx.android.synthetic.main.activity_signup.*
 import java.util.concurrent.Executors
@@ -35,7 +36,7 @@ class SignupActivity : AppCompatActivity() {
 
         fingerBtn = finger
 
-        checkFingerprint()
+      //  checkFingerprint()
 
         country_code_spinner.onItemSelectedListener
         val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(this, android.R.layout.simple_spinner_item, country)
@@ -64,11 +65,14 @@ class SignupActivity : AppCompatActivity() {
                     login_btn.setOnClickListener(View.OnClickListener {
                         finish()
                         //startActivity(Intent(applicationContext, MainHomeActivity::class.java))
+
+                        val sharePreference : Preference = Preference.getInstance(this@SignupActivity)
+                        sharePreference.saveData("userMobileNumber", phone )
                         startActivity(
                             Intent(
                                 applicationContext,
-                                // RegistationMainActivity::class.java
-                                RegistrationUserOptionActivity::class.java
+                                // RegistationMainActivity::class.java      UserAuthenticationHostActivity
+                                SignupPasswordActivity::class.java
                             )
                         )
                     })

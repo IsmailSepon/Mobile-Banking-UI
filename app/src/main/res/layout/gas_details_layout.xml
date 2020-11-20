@@ -128,7 +128,7 @@
     <ImageView
         android:id="@+id/operator_ic"
         android:layout_width="@dimen/_50dp"
-        android:layout_height="@dimen/_40dp"
+        android:layout_height="@dimen/_50dp"
         android:layout_marginEnd="28dp"
         app:layout_constraintBottom_toBottomOf="@+id/water_details"
         app:layout_constraintEnd_toEndOf="parent"

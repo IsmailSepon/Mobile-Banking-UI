@@ -1,7 +1,6 @@
 package com.cloudwell.paywell.base;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
@@ -18,8 +17,10 @@ public class CustomKeyboardWithFingerprint extends LinearLayout implements View.
             button5, button6, button7, button8,
             button9, button0, buttonForget;
     private ImageView buttonFingerPrint;
+    private Context mContext;
+    public CustomKeyboardClickListener OnClick;
 
-    private SparseArray<String> keyValues = new SparseArray<>();
+    private final SparseArray<String> keyValues = new SparseArray<>();
     private InputConnection inputConnection;
 
     public CustomKeyboardWithFingerprint(Context context) {
@@ -72,8 +73,10 @@ public class CustomKeyboardWithFingerprint extends LinearLayout implements View.
         keyValues.put(R.id.button_8, "8");
         keyValues.put(R.id.button_9, "9");
         keyValues.put(R.id.button_0, "0");
-        keyValues.put(R.id.button_delete, "0000");
-        keyValues.put(R.id.imageViewFingerPrint, "1111");
+        keyValues.put(R.id.button_delete, "delate");
+        keyValues.put(R.id.imageViewFingerPrint, "finger");
+
+        mContext = context;
     }
 
     @Override
@@ -89,6 +92,10 @@ public class CustomKeyboardWithFingerprint extends LinearLayout implements View.
 //            } else {
 //                inputConnection.commitText("00", 1);
 //            }
+        }else if (view.getId() == R.id.imageViewFingerPrint){
+
+                OnClick.onFingerClick();
+
         } else {
             String value = keyValues.get(view.getId());
             inputConnection.commitText(value, 1);
@@ -100,4 +107,11 @@ public class CustomKeyboardWithFingerprint extends LinearLayout implements View.
         inputConnection = ic;
     }
 
+    public void setOnclick(CustomKeyboardClickListener onclick){
+        OnClick= onclick;
+    }
+
+    public interface CustomKeyboardClickListener {
+        void onFingerClick();
+    }
 }
