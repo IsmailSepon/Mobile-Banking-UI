@@ -26,6 +26,7 @@ class RegistrationUserOptionActivity : AppCompatActivity() {
 
         personal_account.setOnClickListener(View.OnClickListener {
             startActivity(Intent(applicationContext, MainHomeActivity::class.java))
+            finish()
         })
 
     }
