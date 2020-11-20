@@ -8,11 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.biometric.BiometricPrompt
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.registration.RegistrationUserOptionActivity
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.user_login_fingerprint_fragment.view.*
 import org.jetbrains.anko.runOnUiThread
 import java.util.concurrent.Executors
@@ -41,6 +41,10 @@ class UserLoginWithFingerPrintFragment : Fragment() {
         })
 
         authtext = view.authtext
+
+        view.usePasscode.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
 
         return view
@@ -75,7 +79,7 @@ class UserLoginWithFingerPrintFragment : Fragment() {
                 override fun onAuthenticationFailed() {
                     super.onAuthenticationFailed()
                     requireContext().runOnUiThread {
-                        Toast.makeText(requireContext(), "Authentication failed! Please try again.", Toast.LENGTH_SHORT).show()
+                       // Toast.makeText(requireContext(), "Authentication failed! Please try again.", Toast.LENGTH_SHORT).show()
 
                         authtext?.text = "Sorry, that didn’t match. Try again"
 
