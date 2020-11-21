@@ -8,11 +8,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseActivity
+import com.cloudwell.paywell.base.Preference
 import com.cloudwell.paywell.databinding.ActivitySendMoneyHostBinding
-import com.cloudwell.paywell.uiBusiness.sendFund.fragment.BusinessSendFundFragment
 import com.cloudwell.paywell.ui.beneficiary.BeneficeryHostActivity
+import com.cloudwell.paywell.ui.beneficiary.fragment.BeneficiaryFragment
 import com.cloudwell.paywell.ui.sendMoney.view.SendMoneyFactory
 import com.cloudwell.paywell.ui.sendMoney.viewmodel.SendMoneyViewModel
+import com.cloudwell.paywell.uiBusiness.sendFund.fragment.BusinessSendFundFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
@@ -23,6 +25,9 @@ class SendMoneyHostActivity : BaseActivity(), KodeinAware {
     override val kodein by kodein()
 
     private val factory: SendMoneyFactory by instance<SendMoneyFactory>()
+
+
+    var userType : String? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,22 +44,27 @@ class SendMoneyHostActivity : BaseActivity(), KodeinAware {
                 startActivity(t)
             }
         })
+
+
+        val sharePreference : Preference = Preference.getInstance(this)
+        userType = sharePreference.getData(getString(R.string.userType))
+
+
+
         setViewModelObserver()
 
+        if (userType==getString(R.string.personalUser)){
 
-//        FragmentHelper.addFirstFragment(
-//            BeneficiaryFragment(),
-//            supportFragmentManager,
-//            R.id.send_money_container
-//        )
+        FragmentHelper.addFirstFragment(BeneficiaryFragment(), supportFragmentManager, R.id.send_money_container)
 
-        //for Business Send fund
+        }else{
 
-        FragmentHelper.addFirstFragment(
-            BusinessSendFundFragment(),
-            supportFragmentManager,
-            R.id.send_money_container
-        )
+            FragmentHelper.addFirstFragment(BusinessSendFundFragment(), supportFragmentManager, R.id.send_money_container)
+        }
+
+
+
+
 
     }
 

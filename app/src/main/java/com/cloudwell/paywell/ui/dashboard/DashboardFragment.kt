@@ -17,14 +17,15 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.base.Preference
 import com.cloudwell.paywell.databinding.DashboardFragmentBinding
-import com.cloudwell.paywell.uiBusiness.control.BusinessControlHostActivity
 import com.cloudwell.paywell.ui.authentication.UserAuthenticationHostActivity
 import com.cloudwell.paywell.ui.freeCard.FreeCardHostActivity
 import com.cloudwell.paywell.ui.help.UserHelpHostActivity
 import com.cloudwell.paywell.ui.profile.ProfileHostActivity
 import com.cloudwell.paywell.ui.profile.ProfileHostSecondActivity
 import com.cloudwell.paywell.ui.switchAccount.SwitchAccountHostActivity
+import com.cloudwell.paywell.uiBusiness.control.BusinessControlHostActivity
 import kotlinx.android.synthetic.main.dashboard_fragment.view.*
 
 
@@ -32,6 +33,7 @@ class DashboardFragment : Fragment() {
 
     private lateinit var dashboardViewModel: DashboardViewModel
 
+    var userType : String? = null
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -45,8 +47,29 @@ class DashboardFragment : Fragment() {
         binding.dashboardViewModel = dashboardViewModel
         binding.lifecycleOwner = this
 
+
+
+
+
+        val sharePreference : Preference = Preference.getInstance(requireContext())
+        userType = sharePreference.getData(getString(R.string.userType))
+
+
+
+
+
+
         binding.root.textViewDFUsername.setOnClickListener(View.OnClickListener {
-            showDialog()
+
+             if (userType==getString(R.string.personalUser)){
+
+                 showDialog()
+
+             }else{
+                 Intent(context, BusinessControlHostActivity::class.java).also {
+                     startActivity(it)
+                 }
+             }
         })
         binding.root.imageView6.setOnClickListener(View.OnClickListener {
             Intent(context, UserHelpHostActivity::class.java).also {
@@ -68,13 +91,6 @@ class DashboardFragment : Fragment() {
 
 
 
-        binding.root.profile_image.setOnClickListener(View.OnClickListener {
-            Intent(context, BusinessControlHostActivity::class.java).also {
-                startActivity(it)
-            }
-
-        })
-
 
 
         return binding.root
@@ -83,7 +99,7 @@ class DashboardFragment : Fragment() {
     private fun showDialog() {
         val dialog = Dialog(requireContext())
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setCancelable(false)
+        dialog.setCancelable(true)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.setContentView(R.layout.profile_popup)
         val manageAcc = dialog.findViewById(R.id.manage_account) as TextView
