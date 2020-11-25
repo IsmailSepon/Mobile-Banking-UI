@@ -3,7 +3,10 @@ package com.cloudwell.paywell.uiCommon.pay.fragment.recurringBillPay
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.Dialog
+import android.app.TimePickerDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.graphics.Point
 import android.graphics.Rect
 import android.os.Bundle
@@ -28,6 +31,8 @@ import com.cloudwell.paywell.uiCommon.pay.adapter.TooltipAdapter
 import com.cloudwell.paywell.uiCommon.pay.model.MyPaymentPOjo
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.recurring_bill_schedule_layout.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickListener,
@@ -109,12 +114,46 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
 
 
 
+        view.timer_txt.setOnClickListener(View.OnClickListener {
+
+            //show Clock
+
+            timepicker()
+
+        })
+
 
 
         return view
     }
 
+    fun timepicker() {
 
+        val mcurrentTime = Calendar.getInstance()
+        val hour = mcurrentTime[Calendar.HOUR_OF_DAY]
+        val minute = mcurrentTime[Calendar.MINUTE]
+        val mTimePicker: TimePickerDialog
+        mTimePicker = TimePickerDialog(
+            requireActivity(), R.style.DatePickerDialogTheme,
+            TimePickerDialog.OnTimeSetListener { timePicker, selectedHour, selectedMinute ->
+                // eReminderTime.setText("$selectedHour:$selectedMinute")
+            },
+            hour,
+            minute,
+            false
+        ) //Yes 24 hour time
+        mTimePicker.setButton(
+            DialogInterface.BUTTON_POSITIVE,
+            "Finished"
+        ) { dialog, which ->
+            //Your code
+        }
+        mTimePicker.setOnShowListener(DialogInterface.OnShowListener { // This is hiding the "Cancel" button:
+            mTimePicker.getButton(Dialog.BUTTON_NEGATIVE).visibility = View.GONE
+        })
+        mTimePicker.show()
+
+    }
 
     override fun onPaymentClick(pojo: MyPaymentPOjo, view: View, position: Int) {
         val myViewRect = Rect()

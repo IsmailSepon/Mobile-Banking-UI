@@ -5,6 +5,7 @@
 <!--        android:id="@+id/navigation_business"-->
 <!--        android:icon="@drawable/business_btm_menu"-->
 <!--        android:title="@string/business" />-->
+
     <item
         android:id="@+id/navigation_account"
         android:icon="@drawable/ac"

@@ -40,20 +40,20 @@
         android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/_15sp"
         app:layout_constraintStart_toStartOf="@+id/imageView286"
-        app:layout_constraintTop_toBottomOf="@+id/textView719" />
+        app:layout_constraintTop_toBottomOf="@+id/new_recuring_bill" />
 
     <TextView
-        android:textColor="@color/text_link_clr"
-        android:textSize="@dimen/_12sp"
+        android:id="@+id/new_recuring_bill"
         style="@style/text_style"
-        android:drawableStart="@drawable/add_view"
-        android:drawablePadding="@dimen/_5dp"
-        android:id="@+id/textView719"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="18dp"
+        android:layout_marginEnd="@dimen/_25dp"
+        android:drawableStart="@drawable/add_view"
+        android:drawablePadding="@dimen/_5dp"
         android:text="@string/create_a_new_recurring_bill_payment_job"
+        android:textColor="@color/text_link_clr"
+        android:textSize="@dimen/_12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView718" />
 

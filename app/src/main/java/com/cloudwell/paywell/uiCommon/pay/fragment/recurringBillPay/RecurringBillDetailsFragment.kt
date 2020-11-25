@@ -14,6 +14,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.adapter.RecurringBillAdapter
 import com.cloudwell.paywell.uiCommon.pay.model.RecurringBillPOjo
 import com.cloudwell.paywell.utils.FragmentHelper
+import kotlinx.android.synthetic.main.recurring_bill_details_layout.view.*
 
 
 class RecurringBillDetailsFragment : Fragment(), RecurringBillAdapter.RecurringItemClickListener {
@@ -70,6 +71,13 @@ class RecurringBillDetailsFragment : Fragment(), RecurringBillAdapter.RecurringI
         recurringAdapter.setClickListener(this)
 
 
+        view.new_recuring_bill.setOnClickListener(View.OnClickListener {
+            val fg = RecurringProfileFragment()
+            FragmentHelper.replaceFragment(
+                fg, requireActivity().supportFragmentManager, R.id.payment_container
+            )
+
+        })
 
 
         return view

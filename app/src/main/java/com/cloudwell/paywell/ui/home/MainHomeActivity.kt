@@ -13,7 +13,6 @@ import com.cloudwell.paywell.ui.account.fragment.AccountFragment
 import com.cloudwell.paywell.ui.budget.fragment.BudgetMainFragment
 import com.cloudwell.paywell.ui.cards.fragment.CardsFragment
 import com.cloudwell.paywell.ui.dashboard.DashboardFragment
-import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardMenuFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -38,6 +37,8 @@ class MainHomeActivity : AppCompatActivity() {
         navView.selectedItemId = 0
         loadFragment(AccountFragment())
 
+
+
         navView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.navigation_account-> {
@@ -59,14 +60,18 @@ class MainHomeActivity : AppCompatActivity() {
                 }
 
                 R.id.navigation_cards-> {
-                    title=resources.getString(R.string.cards)
-                    if (userType==getString(R.string.personalUser)){
 
-                        loadFragment(CardsFragment())
-                    }else{
+                    loadFragment(CardsFragment())
 
-                        loadFragment(BusinessCardMenuFragment())
-                    }
+
+//                    title=resources.getString(R.string.cards)
+//                    if (userType==getString(R.string.personalUser)){
+//
+//
+//                    }else{
+//
+//                        loadFragment(BusinessCardMenuFragment())
+//                    }
                     return@setOnNavigationItemSelectedListener true
                 }
 
@@ -82,6 +87,7 @@ class MainHomeActivity : AppCompatActivity() {
         }
 
         setBadget("5", R.id.navigation_budget, navView)
+
 
 
 

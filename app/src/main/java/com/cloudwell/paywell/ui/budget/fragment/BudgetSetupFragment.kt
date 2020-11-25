@@ -1,25 +1,19 @@
-package com.cloudwell.paywell.ui.addMoney.fragment
+package com.cloudwell.paywell.ui.budget.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.databinding.AddMoneyBinding
-import com.cloudwell.paywell.ui.addMoney.view.IaddMoneyVIew
 import com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel
-import com.cloudwell.paywell.utils.FragmentHelper
 import com.example.nbtk.slider.ScreenUtils
 import com.example.nbtk.slider.SliderAdapter
 import com.example.nbtk.slider.SliderLayoutManager
 
-class AddMoneyFragment : Fragment(), IaddMoneyVIew {
+class BudgetSetupFragment : Fragment() {
 
     private lateinit var addMoneyViewmodel: AddMoneyViewModel
     private lateinit var rvHorizontalPicker: RecyclerView
@@ -32,12 +26,7 @@ class AddMoneyFragment : Fragment(), IaddMoneyVIew {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        addMoneyViewmodel = ViewModelProviders.of(this).get(AddMoneyViewModel::class.java)
-        val binding: AddMoneyBinding =
-            DataBindingUtil.inflate(inflater, R.layout.add_money, container, false)
-        addMoneyViewmodel.setView(this)
-        binding.addmoneyView = addMoneyViewmodel
-        binding.lifecycleOwner = this
+        val view = inflater.inflate(R.layout.budget_setup_layout, container, false)
 
         data.add("300")
         data.add("500")
@@ -46,49 +35,35 @@ class AddMoneyFragment : Fragment(), IaddMoneyVIew {
         data.add("2000")
         data.add("2500")
         data.add("3000")
+        data.add("3000")
+        data.add("3000")
+        data.add("3000")
+        data.add("3000")
+        data.add("3000")
+        data.add("3000")
+        data.add("3000")
+        data.add("3000")
+        data.add("3000")
+        data.add("3000")
+        data.add("3000")
+        data.add("3000")
+        data.add("3000")
 
-        setTvSelectedItem(binding.root)
-        setHorizontalPicker(binding.root)
+        setTvSelectedItem(view)
+        setHorizontalPicker(view)
 
 
-        return binding.root
+        return view
     }
 
-    override fun addMoneySubmit() {
-        Toast.makeText(activity, "click", Toast.LENGTH_LONG).show()
-    }
-
-    override fun type_change() {
-        FragmentHelper.replaceFragment(
-            AddMoneySelectionFragment(), activity?.supportFragmentManager,
-            R.id.add_money_container
-        )
-    }
-
-    override fun add_money_back_btn() {
-        activity?.finish()
-    }
-
-    override fun noInternetConnectionFound() {
-
-    }
-
-    override fun showProgress() {
-    }
-
-    override fun hiddenProgress() {
-    }
-
-    override fun onFailure(message: String?) {
-    }
 
 
     private fun setTvSelectedItem(view: View) {
-        tvSelectedItem = view.findViewById(R.id.textView29)
+        tvSelectedItem = view.findViewById(R.id.selected_amount)
     }
 
     private fun setHorizontalPicker(view: View) {
-        rvHorizontalPicker = view.findViewById(R.id.rv_horizontal_picker)
+        rvHorizontalPicker = view.findViewById(R.id.budget_horizontal_picker)
 
         // Setting the padding such that the items will appear in the middle of the screen
         val padding: Int = ScreenUtils.getScreenWidth(view.context) / 2 - ScreenUtils.dpToPx(view.context, 40)
@@ -115,5 +90,6 @@ class AddMoneyFragment : Fragment(), IaddMoneyVIew {
             }
         }
     }
+
 
 }
