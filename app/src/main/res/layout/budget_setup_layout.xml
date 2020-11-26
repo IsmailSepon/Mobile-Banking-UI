@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView328"
+        android:id="@+id/budgetsetup_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -155,7 +155,7 @@
 
 
     <Button
-        android:id="@+id/ac_created_btn"
+        android:id="@+id/budget_setup_btn"
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_hight"
         android:layout_marginBottom="48dp"

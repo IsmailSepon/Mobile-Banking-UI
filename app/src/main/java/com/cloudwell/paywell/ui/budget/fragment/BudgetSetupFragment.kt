@@ -9,9 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.example.nbtk.slider.ScreenUtils
 import com.example.nbtk.slider.SliderAdapter
 import com.example.nbtk.slider.SliderLayoutManager
+import kotlinx.android.synthetic.main.budget_setup_layout.view.*
 
 class BudgetSetupFragment : Fragment() {
 
@@ -51,6 +53,16 @@ class BudgetSetupFragment : Fragment() {
 
         setTvSelectedItem(view)
         setHorizontalPicker(view)
+
+
+        view.budget_setup_btn.setOnClickListener(View.OnClickListener {
+
+            FragmentHelper.replaceFragment(BudgetViewFragment(), requireActivity().supportFragmentManager, R.id.budget_container)
+        })
+        view.budgetsetup_back.setOnClickListener(View.OnClickListener {
+
+            FragmentHelper.removeFragment( requireActivity().supportFragmentManager)
+        })
 
 
         return view

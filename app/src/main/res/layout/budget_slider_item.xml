@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
     android:paddingLeft="10dp"
@@ -22,6 +23,18 @@
         style="@style/medium_text_style"
         tools:text="1"
         android:textColor="@color/common_clr" />
+
+    <TextView
+        android:id="@+id/month_txt"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This Month"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_16_7sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
