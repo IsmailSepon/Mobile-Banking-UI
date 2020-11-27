@@ -23,6 +23,7 @@ import com.cloudwell.paywell.uiCommon.pay.adapter.TooltipAdapter
 import com.cloudwell.paywell.uiCommon.pay.model.MyPaymentPOjo
 import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.dpdc_details_layout.*
 import kotlinx.android.synthetic.main.recurring_profile_layout.view.*
 
 
@@ -169,6 +170,7 @@ class RecurringProfileFragment : Fragment(), PaymentAdapter.PaymentClickListener
     override fun onPaymentClick(pojo: MyPaymentPOjo, view: View, position: Int) {
         val myViewRect = Rect()
         view.getGlobalVisibleRect(myViewRect)
+
         val x: Int = myViewRect.left
         val y: Int = myViewRect.top
         Log.e("margin-x", x.toString())
@@ -302,15 +304,10 @@ class RecurringProfileFragment : Fragment(), PaymentAdapter.PaymentClickListener
 
         recyclerView.layoutManager = GridLayoutManager(context, 4)
 
-        val params = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.WRAP_CONTENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-        )
+        val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
         params.gravity = Gravity.LEFT
-        params.setMargins(40, -80, 40, 15)
+        params.setMargins(40, -50, 40, 15)
         cardView.layoutParams = params
-
-        // cardView.gravity = Gravity.START
 
 
 
