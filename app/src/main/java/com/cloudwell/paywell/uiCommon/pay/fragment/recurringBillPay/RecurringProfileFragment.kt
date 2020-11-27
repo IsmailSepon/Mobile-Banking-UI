@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.graphics.Point
+import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -129,7 +130,7 @@ class RecurringProfileFragment : Fragment(), PaymentAdapter.PaymentClickListener
             val initialPositionY: Float = view.scrollview.y
             MOVE = if (scrollY > oldScrollY) SCROLL_UP else SCROLL_DOWN
             if (MOVE == SCROLL_UP) {
-                bottomMenu.visibility =  View.VISIBLE
+                bottomMenu.visibility = View.VISIBLE
             }
         })
 
@@ -140,7 +141,11 @@ class RecurringProfileFragment : Fragment(), PaymentAdapter.PaymentClickListener
         view.recurring_bottom_navigation.setOnNavigationItemSelectedListener { item: MenuItem ->
             return@setOnNavigationItemSelectedListener when (item.itemId) {
                 R.id.saveas -> {
-                    FragmentHelper.replaceFragment(RecurringSuccesfulFragment(), requireActivity().supportFragmentManager, R.id.payment_container)
+                    FragmentHelper.replaceFragment(
+                        RecurringSuccesfulFragment(),
+                        requireActivity().supportFragmentManager,
+                        R.id.payment_container
+                    )
                     true
                 }
                 R.id.activeDeactive -> {
@@ -162,6 +167,14 @@ class RecurringProfileFragment : Fragment(), PaymentAdapter.PaymentClickListener
     }
 
     override fun onPaymentClick(pojo: MyPaymentPOjo, view: View, position: Int) {
+        val myViewRect = Rect()
+        view.getGlobalVisibleRect(myViewRect)
+        val x: Int = myViewRect.left
+        val y: Int = myViewRect.top
+        Log.e("margin-x", x.toString())
+        Log.e("margin-y", y.toString())
+
+
         setAlpha()
 
         val location = IntArray(2)
@@ -170,7 +183,7 @@ class RecurringProfileFragment : Fragment(), PaymentAdapter.PaymentClickListener
         p!!.x = location[0]
         p!!.y = location[1]
 
-        if (p != null) showPopup(requireActivity(), p!!, position, view)
+        if (p != null) showPopup(requireActivity(), p!!, position, view, x, y)
     }
 
 
@@ -194,7 +207,15 @@ class RecurringProfileFragment : Fragment(), PaymentAdapter.PaymentClickListener
     }
 
     // The method that displays the popup.
-    private fun showPopup(context: Activity, p: Point, position: Int, view: View) {
+    private fun showPopup(
+        context: Activity,
+        p: Point,
+        position: Int,
+        view: View,
+        marginLeft: Int,
+        marginTop: Int
+    ) {
+
 
         val popupWidth = LinearLayout.LayoutParams.MATCH_PARENT
         val popupHeight = LinearLayout.LayoutParams.WRAP_CONTENT
@@ -223,40 +244,26 @@ class RecurringProfileFragment : Fragment(), PaymentAdapter.PaymentClickListener
         val arrow = layout.findViewById<ImageView>(R.id.arrow_up2)
         //val cardView = layout.findViewById<CardView>(R.id.cardView)
         val cardView = layout.findViewById<LinearLayout>(R.id.view)
-        val recyclerView : RecyclerView = layout.findViewById(R.id.tooltipRecycler)
+        val recyclerView : RecyclerView  = layout.findViewById(R.id.tooltipRecycler)
 
 
-
-
-        var leftMargin : Int = 140
         if (position==1){
-
-            leftMargin  += 210
-
             electricRecycler(recyclerView)
 
-
         }else if (position == 2){
-            leftMargin  += 410
-
             waterRecycler(recyclerView)
 
-
         }else if (position == 3){
-            leftMargin  += 600
             gasRecycler(recyclerView)
-
 
         }else if (position == 0){
             topupRecycler(recyclerView, cardView)
-
         }
 
 
 
-        Log.e("POsition ", leftMargin.toString())
         val lparams = arrow.layoutParams as LinearLayout.LayoutParams
-        lparams.setMargins(leftMargin, 150, 0, 0)
+        lparams.setMargins(marginLeft, 150, 0, 0)
         arrow.layoutParams = lparams
 
 
