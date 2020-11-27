@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView214"
+        android:id="@+id/marchent_amount_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -26,9 +26,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:text="@string/set_an_amount"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView214"
-        app:layout_constraintStart_toEndOf="@+id/imageView214"
-        app:layout_constraintTop_toTopOf="@+id/imageView214" />
+        app:layout_constraintBottom_toBottomOf="@+id/marchent_amount_back"
+        app:layout_constraintStart_toEndOf="@+id/marchent_amount_back"
+        app:layout_constraintTop_toTopOf="@+id/marchent_amount_back" />
 
     <TextView
         android:textColor="@color/common_clr"

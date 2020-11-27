@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
+import kotlinx.android.synthetic.main.business_structure_edit_layout.view.*
 
 
 class BusinessStructureEditFrag : Fragment() {
@@ -28,6 +30,11 @@ class BusinessStructureEditFrag : Fragment() {
 //        })
 
 
+
+
+        root.imageView206.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
         return root
 
     }

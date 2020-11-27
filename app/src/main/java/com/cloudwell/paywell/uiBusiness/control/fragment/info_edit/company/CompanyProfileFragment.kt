@@ -59,6 +59,9 @@ class CompanyProfileFragment : Fragment() {
         })
 
 
+        root.imageView201.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return root
 

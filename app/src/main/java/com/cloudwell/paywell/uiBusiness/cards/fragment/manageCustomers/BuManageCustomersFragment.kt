@@ -11,7 +11,8 @@ import com.cloudwell.paywell.uiBusiness.cards.adapter.CustomerManageAdapter
 import com.cloudwell.paywell.uiBusiness.cards.fragment.invoice.BuInvoicePrintFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.invoice_main_layout.view.*
+import kotlinx.android.synthetic.main.customer_manage_fragment.view.*
+import kotlinx.android.synthetic.main.invoice_main_layout.view.create_invoice
 
 class BuManageCustomersFragment : Fragment() {
 
@@ -41,6 +42,12 @@ class BuManageCustomersFragment : Fragment() {
             )
         })
 
+
+
+
+        view.customermanage_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return view
     }

@@ -31,6 +31,13 @@ class MarchentCreatLinkFragment : Fragment() {
         })
 
 
+
+
+        view.marchent_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
+
         return view
     }
 

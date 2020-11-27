@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.claiment_details_fragment.*
 
 class ClaimentProfileDetailsActivity : AppCompatActivity() {
@@ -18,6 +19,12 @@ class ClaimentProfileDetailsActivity : AppCompatActivity() {
                 startActivity(intent)
         })
 
+
+
+
+        exmanag_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(supportFragmentManager)
+        })
 
     }
 }

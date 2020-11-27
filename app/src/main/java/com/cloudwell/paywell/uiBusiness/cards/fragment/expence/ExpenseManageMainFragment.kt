@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiBusiness.cards.adapter.ExpensesPagerAdapter
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.expense_manage_main_layout.view.*
 
 class ExpenseManageMainFragment : Fragment() {
 
@@ -31,7 +33,9 @@ class ExpenseManageMainFragment : Fragment() {
         val tabs: TabLayout = view.findViewById(R.id.expenses_tabs)
         tabs.setupWithViewPager(viewPager)
 
-
+        view.expense_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return view
     }

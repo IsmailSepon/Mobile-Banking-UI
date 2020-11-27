@@ -30,6 +30,11 @@ class BusinessStructureFrag : Fragment() {
         })
 
 
+
+        view?.bu_structure_back_btn?.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
         return root
 
     }

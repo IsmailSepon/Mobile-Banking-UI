@@ -31,6 +31,11 @@ class MarchentOwnerSetAmountFragment : Fragment() {
         })
 
 
+
+        view.marchent_amount_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
         return view
     }
 

@@ -31,6 +31,9 @@ class PrimaryEmailNumberFrg : Fragment() {
 
 
 
+        root.imageView200.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
         return root
 
     }

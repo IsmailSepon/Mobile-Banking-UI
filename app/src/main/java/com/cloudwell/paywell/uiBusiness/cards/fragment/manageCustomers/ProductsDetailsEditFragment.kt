@@ -33,6 +33,12 @@ class ProductsDetailsEditFragment : Fragment() {
 
 
 
+        view.product_profile_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
+
+
 
         return view
     }

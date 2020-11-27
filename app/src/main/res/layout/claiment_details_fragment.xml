@@ -14,7 +14,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView250"
+            android:id="@+id/exmanag_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -33,9 +33,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/expense_management"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView250"
-            app:layout_constraintStart_toEndOf="@+id/imageView250"
-            app:layout_constraintTop_toTopOf="@+id/imageView250" />
+            app:layout_constraintBottom_toBottomOf="@+id/exmanag_back"
+            app:layout_constraintStart_toEndOf="@+id/exmanag_back"
+            app:layout_constraintTop_toTopOf="@+id/exmanag_back" />
 
         <ImageView
             android:id="@+id/imageView251"

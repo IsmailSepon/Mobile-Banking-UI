@@ -1,12 +1,14 @@
 package com.cloudwell.paywell.uiBusiness.control.fragment.expenceManagment
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.activity_new_expence.*
 
 class NewExpenceActivity : AppCompatActivity() {
@@ -35,6 +37,13 @@ class NewExpenceActivity : AppCompatActivity() {
                 expence_progressBar.progress = p * t
 
             }
+        })
+
+
+
+
+        imageView211.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(supportFragmentManager)
         })
 
     }

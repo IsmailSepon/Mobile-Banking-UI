@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiBusiness.cards.adapter.ProductsManageAdapter
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.products_fragment.view.*
 
 class BuProductsFragment : Fragment() {
 
@@ -40,6 +42,9 @@ class BuProductsFragment : Fragment() {
 
 
 
+        view.product_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return view
     }

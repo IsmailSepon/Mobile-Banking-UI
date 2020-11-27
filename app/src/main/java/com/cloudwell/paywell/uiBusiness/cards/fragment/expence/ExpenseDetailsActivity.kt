@@ -8,6 +8,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiBusiness.cards.dialog.ExpenseApproveDialog
 import com.cloudwell.paywell.uiBusiness.cards.dialog.ExpenseRejectDialog
 import com.cloudwell.paywell.uiBusiness.cards.dialog.ExpenseReturnDialog
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.activity_expense_details.*
 
 
@@ -47,6 +48,11 @@ class ExpenseDetailsActivity : AppCompatActivity() {
 
         })
 
+
+
+        imageView265.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(supportFragmentManager)
+        })
 
     }
 

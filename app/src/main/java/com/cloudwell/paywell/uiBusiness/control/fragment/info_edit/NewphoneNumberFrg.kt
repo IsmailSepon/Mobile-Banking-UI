@@ -30,6 +30,9 @@ class NewphoneNumberFrg : Fragment() {
         })
 
 
+        root.imageView199.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return root
 

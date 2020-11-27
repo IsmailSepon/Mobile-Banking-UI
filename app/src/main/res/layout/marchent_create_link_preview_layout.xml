@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView217"
+        android:id="@+id/linkpreview_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -27,8 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/payment_request_link_for_500_created"
-        app:layout_constraintStart_toEndOf="@+id/imageView217"
-        app:layout_constraintTop_toBottomOf="@+id/imageView217" />
+        app:layout_constraintStart_toEndOf="@+id/linkpreview_back"
+        app:layout_constraintTop_toBottomOf="@+id/linkpreview_back" />
 
     <TextView
         android:id="@+id/textView527"
