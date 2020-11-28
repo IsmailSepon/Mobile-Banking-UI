@@ -17,8 +17,8 @@
 
         <ImageView
             android:id="@+id/atm_withdraw_back"
-            android:layout_width="@dimen/_14dp"
-            android:layout_height="@dimen/_14dp"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/_20dp"
             app:srcCompat="@drawable/cross_btn"

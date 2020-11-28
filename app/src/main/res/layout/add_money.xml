@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -9,9 +11,7 @@
             type="com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
@@ -24,18 +24,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
-        <ImageView
-            android:onClick="@{addmoneyView::add_money_back_btn}"
-            android:id="@+id/add_money_back_btn"
-            android:layout_width="@dimen/_14dp"
-            android:layout_height="@dimen/_14dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/_20dp"
-            app:srcCompat="@drawable/cross_btn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription,MissingConstraints" />
+            <ImageView
+                android:id="@+id/add_money_back_btn"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_20dp"
+                android:onClick="@{addmoneyView::add_money_back_btn}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cross_btn"
+                tools:ignore="ContentDescription,MissingConstraints" />
 
         <TextView
             style="@style/medium_text_style"

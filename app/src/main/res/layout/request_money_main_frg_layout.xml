@@ -14,13 +14,14 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
-        <ImageView
+        <Button
             android:id="@+id/rweuest_money_back_btn"
-            android:layout_width="@dimen/_14dp"
-            android:layout_height="@dimen/_14dp"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/_20dp"
             app:srcCompat="@drawable/cross_btn"
+            android:background="@drawable/cross_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

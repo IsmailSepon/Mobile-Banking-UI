@@ -49,7 +49,7 @@ class CashWithDreawMainFragment : Fragment() {
         })
 
 
-        view.setOnClickListener(View.OnClickListener {
+        view.atm_withdraw_back.setOnClickListener(View.OnClickListener {
             activity?.finish()
         })
 

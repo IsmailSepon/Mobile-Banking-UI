@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.utils.FragmentHelper
 import com.example.nbtk.slider.ScreenUtils
 import com.example.nbtk.slider.SliderAdapter
 import com.example.nbtk.slider.SliderLayoutManager
@@ -57,7 +56,7 @@ class SendMoneyFragment : Fragment() {
 //        return binding.root
 
         view.send_money_back_btn.setOnClickListener(View.OnClickListener {
-            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+            activity?.finish()
         })
         return view
     }

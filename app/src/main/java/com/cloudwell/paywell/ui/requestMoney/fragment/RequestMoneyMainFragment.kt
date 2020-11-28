@@ -53,7 +53,8 @@ class RequestMoneyMainFragment : Fragment() {
 
 
         view.rweuest_money_back_btn.setOnClickListener(View.OnClickListener {
-            FragmentHelper.removeFragment(activity?.supportFragmentManager)
+          //  FragmentHelper.removeFragment(activity?.supportFragmentManager)
+            activity?.finish()
         })
 
         return view
