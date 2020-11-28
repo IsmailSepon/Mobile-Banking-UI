@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
+import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputConnection
 import android.view.inputmethod.InputMethodManager
@@ -59,5 +60,21 @@ class SignupPasswordActivity : AppCompatActivity() {
                 }
             })
         }
+
+
+
+
+
+
+
+
+        buttonBackUAS.setOnClickListener(View.OnClickListener {
+            finish()
+        })
+
+
+
+
+
     }
 }

@@ -2,7 +2,6 @@ package com.cloudwell.paywell.ui.registration
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -43,7 +42,8 @@ class RegistationMainActivity : AppCompatActivity() {
 
         reg_back_btn.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?) {
-                Toast.makeText(this@RegistationMainActivity, "Parent activity Not found", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@RegistationMainActivity, "Parent activity Not found", Toast.LENGTH_SHORT).show()
+                finish()
             }
         })
     }

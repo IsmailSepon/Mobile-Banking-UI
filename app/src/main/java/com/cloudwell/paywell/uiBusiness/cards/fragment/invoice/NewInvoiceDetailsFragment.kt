@@ -13,7 +13,6 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiBusiness.cards.dialog.IssuedInvoiceDialog
 import com.cloudwell.paywell.uiBusiness.cards.dialog.NewCustomerDialog
 import com.cloudwell.paywell.uiBusiness.cards.dialog.NewItemDialog
-import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.new_invoice_details_layout.view.*
 
 class NewInvoiceDetailsFragment : Fragment() {
@@ -84,7 +83,7 @@ class NewInvoiceDetailsFragment : Fragment() {
 
 
         view.newinvoice_back.setOnClickListener(View.OnClickListener {
-            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+            activity?.finish()  //  FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
         })
 
         return view

@@ -46,6 +46,10 @@ class RegistrationUserOptionActivity : AppCompatActivity() {
 
         })
 
+        imageView16.setOnClickListener(View.OnClickListener {
+            finish()
+        })
+
     }
 
     fun setUserType(user : String){

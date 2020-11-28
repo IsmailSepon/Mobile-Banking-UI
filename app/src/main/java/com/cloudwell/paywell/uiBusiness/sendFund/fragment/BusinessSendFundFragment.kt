@@ -86,6 +86,10 @@ class BusinessSendFundFragment : Fragment() {
 
         })
 
+        view.imageView14.setOnClickListener(View.OnClickListener {
+            activity?.finish()
+        })
+
 
         return view
     }
@@ -99,7 +103,7 @@ class BusinessSendFundFragment : Fragment() {
             1 -> if (resultCode === Activity.RESULT_OK) {
 
                     var phoneNumOne: String? = null
-                        val phones: Cursor = requireActivity()!!.contentResolver
+                        val phones: Cursor = requireActivity().contentResolver
                             .query(
                                 data!!.data!!,
                                 null,
@@ -112,25 +116,25 @@ class BusinessSendFundFragment : Fragment() {
                                 phones.getString(phones.getColumnIndex(Phone.NUMBER))
                         }
                         phones.close()
-                        if (!phoneNumOne!!.isEmpty() && !phoneNumOne!!.contains("+") && !phoneNumOne!!.contains(
+                        if (!phoneNumOne!!.isEmpty() && !phoneNumOne.contains("+") && !phoneNumOne.contains(
                                 "-"
                             )
-                            && !phoneNumOne!!.contains(" ") && !phoneNumOne!!.startsWith("88")
+                            && !phoneNumOne.contains(" ") && !phoneNumOne.startsWith("88")
                         ) {
                             et_phone_address.setText(phoneNumOne)
                             goforsendFund(phoneNumOne)
                         } else {
-                            if (phoneNumOne!!.contains("+")) {
-                                phoneNumOne = phoneNumOne!!.replace("+", "")
+                            if (phoneNumOne.contains("+")) {
+                                phoneNumOne = phoneNumOne.replace("+", "")
                             }
-                            if (phoneNumOne!!.contains("-")) {
-                                phoneNumOne = phoneNumOne!!.replace("-", "")
+                            if (phoneNumOne.contains("-")) {
+                                phoneNumOne = phoneNumOne.replace("-", "")
                             }
-                            if (phoneNumOne!!.contains(" ")) {
-                                phoneNumOne = phoneNumOne!!.replace(" ", "")
+                            if (phoneNumOne.contains(" ")) {
+                                phoneNumOne = phoneNumOne.replace(" ", "")
                             }
-                            if (phoneNumOne!!.startsWith("88")) {
-                                phoneNumOne = phoneNumOne!!.replace("88", "")
+                            if (phoneNumOne.startsWith("88")) {
+                                phoneNumOne = phoneNumOne.replace("88", "")
                             }
                             et_phone_address.setText(phoneNumOne)
                             goforsendFund(phoneNumOne)

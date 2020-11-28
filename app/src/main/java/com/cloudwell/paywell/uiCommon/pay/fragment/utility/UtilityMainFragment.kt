@@ -168,7 +168,7 @@ class UtilityMainFragment : Fragment(), ItemClickListener,
 
 
         view.imageView310.setOnClickListener(View.OnClickListener {
-            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+            activity?.finish()   //FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
         })
 
         return view

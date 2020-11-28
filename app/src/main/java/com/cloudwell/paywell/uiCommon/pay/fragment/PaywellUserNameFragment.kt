@@ -33,7 +33,8 @@ class PaywellUserNameFragment : Fragment() {
 
 
         view.imageView288.setOnClickListener(View.OnClickListener {
-            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+           // FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+            activity?.finish()
         })
 
 
