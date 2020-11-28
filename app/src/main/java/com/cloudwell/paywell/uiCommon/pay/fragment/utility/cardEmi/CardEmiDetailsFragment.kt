@@ -13,6 +13,7 @@ import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.dialog.CardEmiConfirmDialog
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.card_emi_details_layout.view.*
 
 
@@ -78,6 +79,10 @@ class CardEmiDetailsFragment : Fragment() {
         })
 
 
+
+        view.cardemi_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return view
     }

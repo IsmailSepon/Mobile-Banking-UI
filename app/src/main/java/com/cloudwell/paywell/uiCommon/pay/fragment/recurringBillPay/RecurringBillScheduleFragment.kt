@@ -29,6 +29,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.adapter.PaymentAdapter
 import com.cloudwell.paywell.uiCommon.pay.adapter.TooltipAdapter
 import com.cloudwell.paywell.uiCommon.pay.model.MyPaymentPOjo
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.recurring_bill_schedule_layout.view.*
 import java.util.*
@@ -122,6 +123,11 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
 
         })
 
+
+
+        view.recuring_schidule_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
 
         return view

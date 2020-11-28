@@ -49,6 +49,11 @@ class PaymentNearMePeopleListFragment : Fragment() {
         })
 
 
+
+        view.pay_near_list_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
         return view
     }
 

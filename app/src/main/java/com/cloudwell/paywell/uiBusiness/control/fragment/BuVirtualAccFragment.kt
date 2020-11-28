@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
+import kotlinx.android.synthetic.main.bu_virtual_ac_details_layout.view.*
 
 
 class BuVirtualAccFragment : Fragment() {
@@ -18,6 +20,10 @@ class BuVirtualAccFragment : Fragment() {
 
 
 
+        root.transfer_back_btn.setOnClickListener(View.OnClickListener {
+
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
         return root
 
     }

@@ -9,7 +9,9 @@ import androidx.viewpager.widget.ViewPager
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiBusiness.control.adapter.AllowedLimitAdapter
 import com.cloudwell.paywell.uiBusiness.control.adapter.DailyMonthlyLimitAdapter
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.limit_main_layout.view.*
 
 
 class BuLimitMainFragment : Fragment() {
@@ -44,6 +46,9 @@ class BuLimitMainFragment : Fragment() {
 
 
 
+        root.limitmain_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
 
 

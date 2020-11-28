@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView313"
+        android:id="@+id/topupdetails_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -43,7 +43,7 @@
         android:layout_marginTop="68dp"
         android:text="@string/your_top_up_details"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView313" />
+        app:layout_constraintTop_toBottomOf="@+id/topupdetails_back" />
 
 
     <RadioGroup

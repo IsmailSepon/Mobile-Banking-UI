@@ -164,6 +164,11 @@ class RecurringProfileFragment : Fragment(), PaymentAdapter.PaymentClickListener
             }
         }
 
+
+        view.imageView318.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
         return view
     }
 

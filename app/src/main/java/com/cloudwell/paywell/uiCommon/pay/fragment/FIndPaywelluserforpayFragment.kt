@@ -32,6 +32,10 @@ class FIndPaywelluserforpayFragment : Fragment() {
         })
 
 
+        view.imageView306.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
         return view
     }
 

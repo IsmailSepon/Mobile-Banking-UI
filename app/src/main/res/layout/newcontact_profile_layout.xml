@@ -17,7 +17,7 @@
 
 
         <ImageView
-            android:id="@+id/spilt_profile_back"
+            android:id="@+id/contact_profile_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"

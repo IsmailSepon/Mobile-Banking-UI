@@ -80,6 +80,10 @@ class RecurringBillDetailsFragment : Fragment(), RecurringBillAdapter.RecurringI
         })
 
 
+        view.recurring_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
         return view
     }
 

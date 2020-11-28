@@ -12,6 +12,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.dialog.ElectronicsConfirmDialog
 import com.cloudwell.paywell.uiCommon.pay.model.ElectronicsDialogPOjo
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.polli_details_layout.view.*
 
@@ -66,6 +67,11 @@ class PolliDetailsFragment : Fragment() {
 
         })
 
+
+
+        view.imageView313.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
 
         return view

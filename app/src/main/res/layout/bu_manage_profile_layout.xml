@@ -25,7 +25,7 @@
             app:cardCornerRadius="@dimen/_50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView192">
+            app:layout_constraintTop_toBottomOf="@+id/manage_profile_back">
 
             <ImageView
                 android:id="@+id/bu_profile_image"
@@ -55,7 +55,7 @@
             app:layout_constraintTop_toBottomOf="@+id/profile_image_card_view" />
 
         <ImageView
-            android:id="@+id/imageView192"
+            android:id="@+id/manage_profile_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
