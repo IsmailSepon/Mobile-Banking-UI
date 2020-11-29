@@ -11,9 +11,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel
 import com.cloudwell.paywell.ui.budget.adapter.BudgetAdapter
+import com.cloudwell.paywell.ui.budget.adapter.BudgetMarchentAdapter
 import com.cloudwell.paywell.ui.budget.layoutManager.BudgetLayoutManager
+import com.cloudwell.paywell.ui.budget.model.BudgetMachentPOjo
 import com.cloudwell.paywell.ui.budget.model.BudgetPOjo
 import com.example.nbtk.slider.ScreenUtils
+import kotlinx.android.synthetic.main.budget_marchent_layout.view.*
 
 class BudgetMarchantFragment : Fragment() {
 
@@ -32,6 +35,8 @@ class BudgetMarchantFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.budget_marchent_layout, container, false)
 
+
+      var   marchentRecycler : RecyclerView = view.marchent_recycler
 
 
 
@@ -53,8 +58,63 @@ class BudgetMarchantFragment : Fragment() {
 
         setHorizontalPicker(view)
 
+        setmarchentRecycler(view, marchentRecycler)
+
 
         return view
+    }
+
+    private fun setmarchentRecycler(view: View?, marchentRecycler: RecyclerView) {
+
+        val linearLayoutManager: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        marchentRecycler.layoutManager = linearLayoutManager
+
+        var pojo = BudgetMachentPOjo()
+        pojo.amount = "৳3000"
+        pojo.persentage = "0%"
+        pojo.title = "Other"
+        pojo.transcation = "6 Transactions"
+        pojo.icon = R.drawable.other_ic
+
+        var pojo1 = BudgetMachentPOjo()
+        pojo1.amount = "৳100.22"
+        pojo1.persentage = "0%"
+        pojo1.title = "Daraz"
+        pojo1.transcation = "6 Transactions"
+        pojo1.icon = R.drawable.d_shopping_ic
+
+        var pojo2 = BudgetMachentPOjo()
+        pojo2.amount = "৳100.22"
+        pojo2.persentage = "0%"
+        pojo2.title = "Food Panda"
+        pojo2.transcation = "6 Transactions"
+        pojo2.icon = R.drawable.foodpanda
+
+
+        var pojo3 = BudgetMachentPOjo()
+        pojo3.amount = "৳100.22"
+        pojo3.persentage = "0%"
+        pojo3.title = "Travel.com"
+        pojo3.transcation = "6 Transactions"
+        pojo3.icon = R.drawable.travle
+
+
+        var pojo4 = BudgetMachentPOjo()
+        pojo4.amount = "৳320"
+        pojo4.persentage = "0%"
+        pojo4.title = "Bikroy.com"
+        pojo4.transcation = "6 Transactions"
+        pojo4.icon = R.drawable.bikroy
+
+        var list = ArrayList<BudgetMachentPOjo>()
+        list.add(pojo)
+        list.add(pojo1)
+        list.add(pojo2)
+        list.add(pojo3)
+        list.add(pojo4)
+
+        marchentRecycler.adapter = BudgetMarchentAdapter(requireContext(), list)
+
     }
 
 
