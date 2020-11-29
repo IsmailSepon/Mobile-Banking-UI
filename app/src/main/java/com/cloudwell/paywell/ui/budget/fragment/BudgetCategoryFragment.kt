@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
+import kotlinx.android.synthetic.main.budget_category_layout.view.*
 
 class BudgetCategoryFragment : Fragment() {
 
@@ -16,6 +18,14 @@ class BudgetCategoryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.budget_category_layout, container, false)
+
+
+        view.textView729.setOnClickListener(View.OnClickListener {
+
+
+            FragmentHelper.replaceFragment(AddNewCatagoryFragment(), requireActivity().supportFragmentManager, R.id.budget_container)
+
+        })
 
 
 

@@ -26,9 +26,10 @@
         android:supportsRtl="true"
         android:theme="@style/FullScreen"
         tools:replace="android:allowBackup">
-        <activity android:name=".ui.budget.BudgetHostActivity"/>
-        <activity android:name=".uiCommon.pay.fragment.utility.TopUp.TopUpOfferActivity"/>
-        <activity android:name=".ui.registration.SignupPasswordActivity"/>
+        <activity android:name=".ui.budget.budgetIntro.IntroActivity"></activity>
+        <activity android:name=".ui.budget.BudgetHostActivity" />
+        <activity android:name=".uiCommon.pay.fragment.utility.TopUp.TopUpOfferActivity" />
+        <activity android:name=".ui.registration.SignupPasswordActivity" />
         <activity android:name=".uiCommon.PaymentMainActivity" />
         <activity android:name=".uiBusiness.cards.fragment.expence.ExpenceMemoPictureActivity" />
         <activity android:name=".uiBusiness.cards.fragment.expence.ExpenseDetailsActivity" />

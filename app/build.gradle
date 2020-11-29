@@ -144,7 +144,10 @@ dependencies {
     implementation "com.google.firebase:firebase-crashlytics:$rootProject.ext.firebaseCrashlytics"
     implementation "com.google.firebase:firebase-messaging:$rootProject.ext.firebaseMessaging"
 
-    debugImplementation "com.squareup.leakcanary:leakcanary-android:$rootProject.ext.leakcanaryVersion"
+
+    //memory Leak
+
+//    debugImplementation "com.squareup.leakcanary:leakcanary-android:$rootProject.ext.leakcanaryVersion"
     debugImplementation "com.readystatesoftware.chuck:library:$rootProject.ext.chuckVersion"
 
 

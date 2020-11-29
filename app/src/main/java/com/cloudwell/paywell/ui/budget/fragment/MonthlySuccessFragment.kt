@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.budget_success_layout.view.*
 
 class MonthlySuccessFragment : Fragment() {
@@ -30,7 +29,9 @@ class MonthlySuccessFragment : Fragment() {
         view.success_done.setOnClickListener(View.OnClickListener {
 
 
-            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+            requireActivity().finish()
+
+         //   FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
 
 
         })

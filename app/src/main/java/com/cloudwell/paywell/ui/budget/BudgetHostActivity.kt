@@ -24,6 +24,7 @@ class BudgetHostActivity : AppCompatActivity() {
 
             FragmentHelper.replaceFragment(BudgetIntroMainFragment(), supportFragmentManager, R.id.budget_container)
 
+
         }else{
             FragmentHelper.replaceFragment(BudgetSpendingFragment(), supportFragmentManager, R.id.budget_container)
         }

@@ -8,30 +8,48 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.budget.fragment.BudgetSetupFragment
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.expence_managment_main_layout.view.*
 
 class BudgetIntroMainFragment : Fragment() {
 
+
+//    var  viewPager  : ViewPager2? = null
+    lateinit var viewPager: ViewPager2
+    var position : Int = -1
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
         val view: View =
             inflater.inflate(R.layout.expence_managment_main_layout, container, false)
 
-        var viewpager: ViewPager2 = view.expence_viewpager
+        viewPager = view.expence_viewpager
 
         val pagerAdapter = ScreenSlidePagerAdapter(this)
-        viewpager.adapter = pagerAdapter
-      //  viewpager.setUserInputEnabled(false);
+        viewPager.adapter = pagerAdapter
+        viewPager.isUserInputEnabled = false
 
 
-        var tab: TabLayout = view.expence_tab_layout//root.into_tab_layout
+        val tab: TabLayout = view.expence_tab_layout        //root.into_tab_layout
+        TabLayoutMediator(tab, viewPager) { tab, position -> }.attach()
 
-        TabLayoutMediator(tab, viewpager) { tab, position -> }.attach()
-
+        view.intro_btn.setOnClickListener(View.OnClickListener {
+            var position : Int  = viewPager.currentItem
+            if (position==0){
+                viewPager.currentItem = 1
+            }else if (position==1){
+                viewPager.currentItem = 2
+            }else if (position==2){
+                FragmentHelper.replaceFragment(BudgetSetupFragment(), requireActivity().supportFragmentManager, R.id.budget_container)
+            }
+        })
 
         return view
     }

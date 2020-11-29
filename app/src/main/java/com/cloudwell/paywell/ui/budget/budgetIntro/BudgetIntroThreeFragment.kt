@@ -6,9 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.ui.budget.fragment.BudgetSetupFragment
-import com.cloudwell.paywell.utils.FragmentHelper
-import kotlinx.android.synthetic.main.budger_intro_three_layout.view.*
 
 class BudgetIntroThreeFragment : Fragment() {
 
@@ -20,11 +17,7 @@ class BudgetIntroThreeFragment : Fragment() {
             inflater.inflate(R.layout.budger_intro_three_layout, container, false)
 
 
-        view.intro_three_btn.setOnClickListener(View.OnClickListener {
 
-
-            FragmentHelper.replaceFragment(BudgetSetupFragment(), requireActivity().supportFragmentManager, R.id.budget_container)
-        })
 
 
 
