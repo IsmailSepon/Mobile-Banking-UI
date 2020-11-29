@@ -97,13 +97,27 @@ class BudgetMainFragment : Fragment() {
 
         view.add_budget.setOnClickListener(View.OnClickListener {
 
-         requireContext().startActivity(Intent(requireContext(), BudgetHostActivity::class.java))
+            val intent : Intent = Intent(requireContext(), BudgetHostActivity::class.java)
+            intent.putExtra("budget", 1)
+            requireContext().startActivity(intent)
 
 
         })
 
 
 
+        view.imageView320.setOnClickListener(View.OnClickListener {
+
+            val intent : Intent = Intent(requireContext(), BudgetHostActivity::class.java)
+            intent.putExtra("budget", 2)
+            requireContext().startActivity(intent)
+
+
+//            requireContext().startActivity(Intent(requireContext(), BudgetHostActivity::class.java))
+//
+//            FragmentHelper.replaceFragment(BudgetSpendingFragment(), requireActivity().supportFragmentManager, R.id.budget_container)
+
+        })
 
         return view
     }

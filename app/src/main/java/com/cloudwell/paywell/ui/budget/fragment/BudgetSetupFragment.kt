@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel
+import com.cloudwell.paywell.ui.budget.adapter.BudgetRegularAdapter
 import com.cloudwell.paywell.utils.FragmentHelper
 import com.example.nbtk.slider.ScreenUtils
-import com.example.nbtk.slider.SliderAdapter
 import com.example.nbtk.slider.SliderLayoutManager
 import kotlinx.android.synthetic.main.budget_setup_layout.view.*
 
@@ -78,7 +78,7 @@ class BudgetSetupFragment : Fragment() {
         rvHorizontalPicker = view.findViewById(R.id.budget_horizontal_picker)
 
         // Setting the padding such that the items will appear in the middle of the screen
-        val padding: Int = ScreenUtils.getScreenWidth(view.context) / 2 - ScreenUtils.dpToPx(view.context, 40)
+        val padding: Int = ScreenUtils.getScreenWidth(view.context) / 2 - ScreenUtils.dpToPx(view.context, 100)
         rvHorizontalPicker.setPadding(padding, 0, padding, 0)
 
         // Setting layout manager
@@ -91,9 +91,9 @@ class BudgetSetupFragment : Fragment() {
         }
 
         // Setting Adapter
-        rvHorizontalPicker.adapter = SliderAdapter(view.context).apply {
+        rvHorizontalPicker.adapter = BudgetRegularAdapter(view.context).apply {
             setData(data)
-            callback = object : SliderAdapter.Callback {
+            callback = object : BudgetRegularAdapter.Callback {
                 override fun onItemClicked(view: View) {
                     rvHorizontalPicker.smoothScrollToPosition(
                         rvHorizontalPicker.getChildLayoutPosition(view)
