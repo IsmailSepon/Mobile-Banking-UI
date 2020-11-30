@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel
 import com.cloudwell.paywell.ui.account.view.IaccountVIew
 import com.cloudwell.paywell.ui.addMoney.AddMoneyHostActivity
 import com.cloudwell.paywell.ui.bankTransfer.BankTransferHostActivity
-import com.cloudwell.paywell.ui.registration.SignupActivity
 import com.cloudwell.paywell.ui.requestMoney.RequestMoneyHostActivity
 import com.cloudwell.paywell.ui.scheduledTransfer.SchedulTransferHostActivity
 import com.cloudwell.paywell.ui.sendMoney.SendMoneyHostActivity
+import com.cloudwell.paywell.ui.vaults.VaultHostActivity
 import com.cloudwell.paywell.ui.withdrawCash.CashWithdrawHostActivity
 
 class AccountViewModel : ViewModel() {
@@ -53,7 +53,7 @@ class AccountViewModel : ViewModel() {
     }
 
     fun vault(view: View) {
-        Intent(view.context, SignupActivity::class.java).also {
+        Intent(view.context, VaultHostActivity::class.java).also {
             view.context.startActivity(it)
         }
     }
