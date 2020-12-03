@@ -65,7 +65,12 @@ class AddNewVaultFragmetn : Fragment() {
 
         et_button?.setOnClickListener(View.OnClickListener {
 
-            FragmentHelper.replaceFragment(VaultSetAmountFragmetn(), requireActivity().supportFragmentManager, R.id.vault_intro_container)
+            val bundle  = Bundle()
+            bundle.putString("VaultSetAmountFragmetn", "AddNewVaultFragmetn")
+
+            val frg: VaultSetAmountFragmetn = VaultSetAmountFragmetn()
+            frg.arguments = bundle
+            FragmentHelper.replaceFragment(frg, requireActivity().supportFragmentManager, R.id.vault_intro_container)
 
         })
 

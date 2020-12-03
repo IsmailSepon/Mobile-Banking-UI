@@ -38,11 +38,12 @@ class ScheduleSelectAmountFragment : Fragment() {
         })
 
         view.reg_top_up_btn.setOnClickListener(View.OnClickListener {
-            FragmentHelper.replaceFragment(
-                ScheduleDateSelectionFragment(),
-                activity?.supportFragmentManager,
-                R.id.schedule_transfer_container
-            )
+
+            val fg : ScheduleDateSelectionFragment = ScheduleDateSelectionFragment()
+            val bundle = Bundle()
+            bundle.putInt("ScheduleDateSelectionFragment", 1)
+            fg.arguments  = bundle
+            FragmentHelper.replaceFragment(fg, requireActivity().supportFragmentManager, R.id.schedule_transfer_container)
         })
 
 

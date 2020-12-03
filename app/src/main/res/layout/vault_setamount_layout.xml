@@ -116,7 +116,7 @@
 
 
     <Button
-        android:id="@+id/intro_one_btn"
+        android:id="@+id/vault_amount_btn"
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_hight"
         android:elevation="@dimen/evelation_five"
@@ -132,6 +132,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.88"
         tools:targetApi="lollipop" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_15sp"
+        style="@style/text_style"
+        android:id="@+id/note_txt"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:text="@string/add_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout60" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

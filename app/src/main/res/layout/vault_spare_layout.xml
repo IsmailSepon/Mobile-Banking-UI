@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView210"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vault_spare"
+        tools:ignore="ContentDescription" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView210">
+
+
+        <TextView
+            android:id="@+id/textView506"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Round up your spare change"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10dp"
+            android:src="@drawable/fly_money" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView507"
+        style="@style/text_style"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="left"
+        android:text="We’ll automatically round up every transaction you make and store your spare change into your personalised savings Vault."
+        android:textAlignment="center"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout32"
+        tools:ignore="RtlCompat" />
+
+    <ImageView
+        android:id="@+id/imageView297"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:padding="@dimen/_20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView507">
+
+
+        <ImageView
+            android:id="@+id/imageView300"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/spare" />
+
+        <TextView
+            android:id="@+id/textView754"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="Spare change"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView300"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textColor="@color/common_clr"
+            android:gravity="left"
+            android:textSize="@dimen/_14sp"
+            style="@style/text_style"
+            android:id="@+id/textView755"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:text="You will save approximately ৳300.30 per month"
+            app:layout_constraintEnd_toStartOf="@+id/riminder_switch"
+            app:layout_constraintStart_toStartOf="@+id/textView754"
+            app:layout_constraintTop_toBottomOf="@+id/textView754" />
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/riminder_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_17dp"
+            android:layout_marginEnd="32dp"
+            android:checked="false"
+            android:theme="@style/switcherTheme"
+            app:layout_constraintBottom_toBottomOf="@+id/name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView754" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <Button
+        android:id="@+id/vault_spare_btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:elevation="@dimen/evelation_five"
+        android:background="@drawable/round_btn_visable"
+        android:text="Create Vault"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        tools:targetApi="lollipop" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

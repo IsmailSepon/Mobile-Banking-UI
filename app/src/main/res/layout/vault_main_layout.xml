@@ -88,7 +88,7 @@
         app:layout_constraintTop_toBottomOf="@+id/add_vault_lay" />
 
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
         android:id="@+id/vault_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -8,6 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.beneficiary.fragment.ChooseTransferTypeFragment
+import com.cloudwell.paywell.ui.scheduledTransfer.fragment.schedule.ScheduleDateSelectionFragment
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.example.nbtk.slider.ScreenUtils
 import com.example.nbtk.slider.SliderAdapter
 import com.example.nbtk.slider.SliderLayoutManager
@@ -20,7 +23,7 @@ class VaultSetAmountFragmetn : Fragment() {
     private lateinit var tvSelectedItem: TextView
 
     private val data: ArrayList<String> = ArrayList()
-
+    //var tag : String? =  null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +31,15 @@ class VaultSetAmountFragmetn : Fragment() {
     ): View? {
         val view: View =
             inflater.inflate(R.layout.vault_setamount_layout, container, false)
+
+        val tag : String = requireArguments().getString("VaultSetAmountFragmetn", "")
+        if (tag == "PersonilizeVaultFragmetn"){
+            view.textView753.text = "How much would you like to put aside\n"+"each week / month?"
+            view.note_txt.visibility = View.VISIBLE
+        }else{
+            view.textView753.text = "How much would you like\n" + "to save?"
+            view.note_txt.visibility = View.GONE
+        }
 
         tvSelectedItem = view.vault_amount
         data.add("300")
@@ -39,6 +51,24 @@ class VaultSetAmountFragmetn : Fragment() {
         data.add("3000")
 
         setHorizontalPicker(view)
+
+
+        view.vault_amount_btn.setOnClickListener(View.OnClickListener {
+
+            if (tag == "PersonilizeVaultFragmetn"){
+
+                val fg : ScheduleDateSelectionFragment = ScheduleDateSelectionFragment()
+                val bundle = Bundle()
+                bundle.putInt("ScheduleDateSelectionFragment", 2)
+                fg.arguments  = bundle
+                FragmentHelper.replaceFragment(fg, requireActivity().supportFragmentManager, R.id.vault_intro_container)
+
+            }else{
+
+                FragmentHelper.replaceFragment(VaultSpareFragmetn(), requireActivity().supportFragmentManager, R.id.vault_intro_container)
+            }
+
+        })
 
 
         return view

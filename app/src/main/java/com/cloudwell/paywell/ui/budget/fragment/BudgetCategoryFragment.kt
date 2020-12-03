@@ -22,8 +22,10 @@ class BudgetCategoryFragment : Fragment() {
 
         view.textView729.setOnClickListener(View.OnClickListener {
 
+            
 
             FragmentHelper.replaceFragment(AddNewCatagoryFragment(), requireActivity().supportFragmentManager, R.id.budget_container)
+
 
         })
 

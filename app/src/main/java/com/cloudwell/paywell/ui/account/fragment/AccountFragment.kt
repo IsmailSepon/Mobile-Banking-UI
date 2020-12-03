@@ -69,11 +69,9 @@ class AccountFragment : Fragment(), IaccountVIew, DatePickerDialog.OnDateSetList
         item.amount = "300"
         var list = ArrayList<CoursesItem>()
         list.add(item)
-        binding.root.spilt_bill_recyclerview.adapter =
-            TestAdapter(activity?.applicationContext, list)
+        binding.root.spilt_bill_recyclerview.adapter = TestAdapter(activity?.applicationContext, list)
 
-        val itemTouchHelper =
-            ItemTouchHelper(object : SwipeHelper(binding.root.spilt_bill_recyclerview) {
+        val itemTouchHelper = ItemTouchHelper(object : SwipeHelper(binding.root.spilt_bill_recyclerview) {
                 override fun instantiateUnderlayButton(position: Int): List<UnderlayButton> {
                     var buttons = listOf<UnderlayButton>()
                     val deleteButton = deleteButton(position)
