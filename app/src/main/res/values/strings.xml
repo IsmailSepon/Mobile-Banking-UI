@@ -894,6 +894,8 @@
     <string name="if_you_need_a_little_help_sticking_to_your_daily_budget_our_handy_reminders_should_keep_you_on_track_with_instant_updates_you_ll_know_how_much_you_have_left_to_spend_when_you_re_nearing_your_daily_limit_or_when_you_ve_overspent_think_of_it_as_your_monthly_budget_broken_down_into_manageable_slices">If you need a little help sticking to your daily budget, our handy reminders should keep you on track. With instant updates, you’ll know how much you have left to spend, when you’re nearing your daily limit, or when you’ve overspent. Think of it as your monthly budget, broken down into manageable slices!</string>
     <string name="baby_s_birthday_vault_has_been_created">‘Baby’s Birthday’ Vault has been created</string>
     <string name="one_off_saving">One-off saving</string>
+    <string name="fund">Fund</string>
+    <string name="info">Info</string>
 
 
 </resources>

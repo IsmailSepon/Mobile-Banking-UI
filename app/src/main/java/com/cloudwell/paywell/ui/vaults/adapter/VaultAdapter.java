@@ -12,8 +12,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.cloudwell.paywell.R;
+import com.cloudwell.paywell.base.customView.OnClickListener;
 import com.cloudwell.paywell.ui.spiltBill.fragment.SpiltBillHoastActivity;
+import com.cloudwell.paywell.ui.vaults.fragment.VaultViewFragment;
 import com.cloudwell.paywell.ui.vaults.vaultPOjo.VaulttPojo;
+
+import org.jetbrains.annotations.NotNull;
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -24,9 +29,9 @@ import java.util.List;
 public class VaultAdapter extends RecyclerView.Adapter<VaultAdapter.ViewHolder> {
 
     private static final int UNSELECTED = -1;
-
     private RecyclerView recyclerView;
     private final int selectedItem = UNSELECTED;
+    public VaultItemClickListener clickListener;
 
     Context mContext;
 
@@ -56,16 +61,12 @@ public class VaultAdapter extends RecyclerView.Adapter<VaultAdapter.ViewHolder> 
         holder.costAmount.setText(courselist.get(position).getCostAmount());
         holder.cost.setText(courselist.get(position).getCost());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(mContext, SpiltBillHoastActivity.class);
-                intent.putExtra("spilt", "2");
-                mContext.startActivity(intent);
-
-            }
-        });
+       holder.itemView.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               clickListener.onvaultClick();
+           }
+       });
 
     }
 
@@ -73,6 +74,12 @@ public class VaultAdapter extends RecyclerView.Adapter<VaultAdapter.ViewHolder> 
     public int getItemCount() {
         return courselist.size();
     }
+
+    public void setClickListener( VaultItemClickListener itemClickListener) {
+        clickListener = itemClickListener;
+    }
+
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -92,4 +99,9 @@ public class VaultAdapter extends RecyclerView.Adapter<VaultAdapter.ViewHolder> 
 
     }
 
+
+
+    public interface VaultItemClickListener {
+        void  onvaultClick();
+    }
 }

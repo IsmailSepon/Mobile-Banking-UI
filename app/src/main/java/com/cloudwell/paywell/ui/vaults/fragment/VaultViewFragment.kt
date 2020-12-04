@@ -18,7 +18,7 @@ import com.yanzhenjie.recyclerview.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.android.synthetic.main.vault_main_layout.view.*
 
-class VaultViewFragment : Fragment() {
+class VaultViewFragment : Fragment(), VaultAdapter.VaultItemClickListener {
 
 
     private val data: ArrayList<String> = ArrayList()
@@ -83,8 +83,11 @@ class VaultViewFragment : Fragment() {
 
         vaultRecycler.setSwipeMenuCreator(swipeMenuCreator)
         vaultRecycler.setOnItemMenuClickListener(mMenuItemClickListener)
-        vaultRecycler.adapter = VaultAdapter(requireContext(), list)
 
+        val vaultAdapter : VaultAdapter = VaultAdapter(requireContext(), list)
+        //vaultRecycler.adapter = VaultAdapter(requireContext(), list)
+        vaultRecycler.adapter = vaultAdapter
+        vaultAdapter.setClickListener(this)
 
 
     }
@@ -138,5 +141,11 @@ class VaultViewFragment : Fragment() {
 
             }
         }
+
+    override fun onvaultClick() {
+        val intent : Intent = Intent(requireContext(), VaultAddActivity::class.java)
+        intent.putExtra("vaultMenu", 2)
+        requireContext().startActivity(intent)
+    }
 
 }
