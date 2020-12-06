@@ -153,6 +153,7 @@
                 tools:ignore="MissingConstraints" />
 
             <Button
+                android:onClick="@{viewmode::linkedAccount}"
                 android:id="@+id/button14"
                 style="@style/HomeButton"
                 android:layout_weight="1"

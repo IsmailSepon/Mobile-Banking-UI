@@ -896,6 +896,12 @@
     <string name="one_off_saving">One-off saving</string>
     <string name="fund">Fund</string>
     <string name="info">Info</string>
+    <string name="terms_conditions"><![CDATA[Terms & conditions]]></string>
+    <string name="paywell_will_never_store_any_your_sensitive_data_and_all_your_information_is_always_secure_using_the_highest_level_of_encryption">PayWell will never store any your sensitive data and all your information is always secure using the highest level of encryption.</string>
+    <string name="simple_private_and_secure">Simple, private and secure</string>
+    <string name="we_need_your_permission">We need your permission</string>
+    <string name="your_security_is_our_priority_in_order_for_us_to_offer_this_service_we_need_your_permission_to_access_the_following_account_information">Your security is our priority. In order for us to offer this service, we need your permission to access the following account information:</string>
+    <string name="your_account_details_this_includes_your_account_name_account_details_and_balance">Your account details This includes your account name, account details, and balance</string>
 
 
 </resources>

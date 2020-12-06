@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:padding="@dimen/_22dp"
+        android:id="@+id/linkedPermission_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <ScrollView
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/we_need_your_permission"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_16_7sp"
+                style="@style/medium_text_style"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_security_is_our_priority_in_order_for_us_to_offer_this_service_we_need_your_permission_to_access_the_following_account_information"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_13_3sp"
+                android:layout_marginStart="@dimen/_42dp"
+                android:layout_marginEnd="@dimen/_42dp"
+                android:layout_marginTop="@dimen/_22dp"
+                style="@style/text_style"/>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="@dimen/_42dp"
+                android:layout_marginStart="@dimen/_42dp"
+                android:layout_marginEnd="@dimen/_42dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/textView766"
+                    style="@style/medium_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_15sp"
+                    android:text="Your account details"
+                    app:layout_constraintStart_toEndOf="@+id/imageView338"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView338"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_bank_blue"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/your_account_details_this_includes_your_account_name_account_details_and_balance"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView766"
+                    app:layout_constraintTop_toBottomOf="@+id/textView766" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="@dimen/_42dp"
+                android:layout_marginStart="@dimen/_42dp"
+                android:layout_marginEnd="@dimen/_42dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                tools:ignore="DuplicateIds"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/textView766"
+                    style="@style/medium_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:text="Your transactions"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_15sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView338"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView338"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/transcation_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="This includes your account’s ingoing/outgoing transactions from the past 6 months (or more, if available), along with any regular payments"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView766"
+                    app:layout_constraintTop_toBottomOf="@+id/textView766" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="@dimen/_42dp"
+                android:layout_marginStart="@dimen/_42dp"
+                android:layout_marginEnd="@dimen/_42dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                tools:ignore="DuplicateIds"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/textView766"
+                    style="@style/medium_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:text="Your account features and benefits"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_15sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView338"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView338"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/star_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="This includes the type of account you have, any fees, charges and interest you pay, as well as any benefits, and interest your account offers"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView766"
+                    app:layout_constraintTop_toBottomOf="@+id/textView766" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="@dimen/_42dp"
+                android:layout_marginStart="@dimen/_42dp"
+                android:layout_marginEnd="@dimen/_42dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                tools:ignore="DuplicateIds"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/textView766"
+                    style="@style/medium_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:text="How will we use your account information?"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_15sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView338"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView338"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/lock_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="No third parties or apps will ever have access to your information. PayWell will never store or share your sensitive data, and said data is protedcted using extremely high levels of encryption. You may revoke or renew this consent at any time from the PayWell app, Or dirctly from your bank account"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView766"
+                    app:layout_constraintTop_toBottomOf="@+id/textView766" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Once you confirm, you will be redicected to your bank. After logging in with your account details, we’ll securely bring you back to your PayWell app."
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_13_3sp"
+                android:layout_marginStart="@dimen/_42dp"
+                android:layout_marginEnd="@dimen/_42dp"
+                android:layout_marginTop="@dimen/_26dp"
+                style="@style/text_style"/>
+
+
+
+
+
+            <Button
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/linkedpermision_done_brn"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_hight"
+                android:elevation="@dimen/evelation_five"
+                android:background="@drawable/round_btn_visable"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginTop="@dimen/_50dp"
+                android:layout_marginBottom="@dimen/_50dp"
+                tools:targetApi="lollipop" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

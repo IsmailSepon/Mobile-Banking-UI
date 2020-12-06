@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.beneficiary.fragment.ChooseTransferTypeFragment
+import com.cloudwell.paywell.ui.budget.adapter.BudgetAdapter
 import com.cloudwell.paywell.ui.scheduledTransfer.fragment.schedule.ScheduleDateSelectionFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 import com.example.nbtk.slider.ScreenUtils
@@ -21,6 +22,7 @@ class VaultSetAmountFragmetn : Fragment() {
 
     private lateinit var rvHorizontalPicker: RecyclerView
     private lateinit var tvSelectedItem: TextView
+    private lateinit var sliderAdapter: SliderAdapter
 
     private val data: ArrayList<String> = ArrayList()
     //var tag : String? =  null
@@ -88,12 +90,15 @@ class VaultSetAmountFragmetn : Fragment() {
             callback = object : SliderLayoutManager.OnItemSelectedListener {
                 override fun onItemSelected(layoutPosition: Int) {
                     tvSelectedItem.text = data[layoutPosition]
+
                 }
             }
         }
 
         // Setting Adapter
-        rvHorizontalPicker.adapter = SliderAdapter(view.context).apply {
+        sliderAdapter = SliderAdapter(requireContext())
+        sliderAdapter.setSelectedItem(0)
+        rvHorizontalPicker.adapter = sliderAdapter.apply {
             setData(data)
             callback = object : SliderAdapter.Callback {
                 override fun onItemClicked(view: View) {
