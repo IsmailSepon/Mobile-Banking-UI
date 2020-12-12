@@ -52,6 +52,7 @@ class LinkedAcIntroMainFragment : Fragment() {
                 viewPager.currentItem = 2
             }else if (position==2){
                 viewPager.currentItem = 3
+            }else if (position == 3){
                 FragmentHelper.replaceFragment(LinkedACBankListFragment(), requireActivity().supportFragmentManager, R.id.linked_account_container)
             }
         })

@@ -9,12 +9,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.Preference
+import com.cloudwell.paywell.base.customView.CurvedBottomNavigationView
+import com.cloudwell.paywell.base.customView.FabBottomNavigationView
 import com.cloudwell.paywell.ui.account.fragment.AccountFragment
 import com.cloudwell.paywell.ui.budget.fragment.BudgetMainFragment
 import com.cloudwell.paywell.ui.cards.fragment.CardsFragment
 import com.cloudwell.paywell.ui.dashboard.DashboardFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.budget_marchent_item.*
 
 
 class MainHomeActivity : AppCompatActivity() {
@@ -33,7 +36,7 @@ class MainHomeActivity : AppCompatActivity() {
         userType = sharePreference.getData(getString(R.string.userType))
 
 
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+        val navView: FabBottomNavigationView = findViewById(R.id.nav_view)
         navView.selectedItemId = 0
         loadFragment(AccountFragment())
 
@@ -66,7 +69,6 @@ class MainHomeActivity : AppCompatActivity() {
 
 //                    title=resources.getString(R.string.cards)
 //                    if (userType==getString(R.string.personalUser)){
-//
 //
 //                    }else{
 //

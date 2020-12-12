@@ -10,6 +10,7 @@ import com.cloudwell.paywell.ui.linkedAccount.LinkedAccountActivity
 import com.cloudwell.paywell.ui.requestMoney.RequestMoneyHostActivity
 import com.cloudwell.paywell.ui.scheduledTransfer.SchedulTransferHostActivity
 import com.cloudwell.paywell.ui.sendMoney.SendMoneyHostActivity
+import com.cloudwell.paywell.ui.statment.StatmentHostActivity
 import com.cloudwell.paywell.ui.vaults.VaultHostActivity
 import com.cloudwell.paywell.ui.withdrawCash.CashWithdrawHostActivity
 
@@ -61,6 +62,12 @@ class AccountViewModel : ViewModel() {
 
     fun linkedAccount(view: View) {
         Intent(view.context, LinkedAccountActivity::class.java).also {
+            view.context.startActivity(it)
+        }
+    }
+
+    fun statmentAccount(view: View) {
+        Intent(view.context, StatmentHostActivity::class.java).also {
             view.context.startActivity(it)
         }
     }

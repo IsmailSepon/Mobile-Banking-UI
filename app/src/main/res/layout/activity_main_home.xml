@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <fragment
         android:id="@+id/nav_host_fragment"
@@ -17,18 +17,26 @@
         tools:layout_editor_absoluteX="0dp"
         tools:ignore="FragmentTagUsage" />
 
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <com.cloudwell.paywell.base.customView.FabBottomNavigationView
         android:id="@+id/nav_view"
-        app:labelVisibilityMode="labeled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:menu="@menu/bottom_nav_menu"
-        app:tabBackground="@drawable/bottom_nav_color"
+        android:layout_gravity="bottom"
+        app:fab_cradle_margin="8dp"
+        app:fab_cradle_rounded_corner_radius="8dp"
+        app:fab_size="50dp"
+        app:labelVisibilityMode="labeled"
         android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:menu="@menu/bottom_nav_menu" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/fab"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/add_bottom_nav"
+        app:layout_anchor="@id/nav_view"
+        android:src="@drawable/add_bottom_nav"
+        app:layout_anchorGravity="fill_vertical|center_horizontal"
+        app:elevation="16dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

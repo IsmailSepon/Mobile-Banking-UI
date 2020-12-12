@@ -26,8 +26,12 @@
         android:supportsRtl="true"
         android:theme="@style/FullScreen"
         tools:replace="android:allowBackup">
-        <activity android:name=".ui.linkedAccount.LinkedAccountActivity"/>
-        <activity android:name=".ui.vaults.activity.VaultAddActivity" />
+        <activity android:name=".ui.statment.StatmentHostActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ui.linkedAccount.LinkedAccountActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ui.vaults.activity.VaultAddActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ui.vaults.VaultHostActivity" />
         <activity android:name=".ui.budget.BudgetHostActivity" />
         <activity android:name=".uiCommon.pay.fragment.utility.TopUp.TopUpOfferActivity" />

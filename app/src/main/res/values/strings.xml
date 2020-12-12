@@ -902,6 +902,9 @@
     <string name="we_need_your_permission">We need your permission</string>
     <string name="your_security_is_our_priority_in_order_for_us_to_offer_this_service_we_need_your_permission_to_access_the_following_account_information">Your security is our priority. In order for us to offer this service, we need your permission to access the following account information:</string>
     <string name="your_account_details_this_includes_your_account_name_account_details_and_balance">Your account details This includes your account name, account details, and balance</string>
+    <string name="pdf">PDF</string>
+    <string name="excel">Excel</string>
+    <string name="csv">CSV</string>
 
 
 </resources>

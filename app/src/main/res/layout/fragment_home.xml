@@ -168,6 +168,7 @@
 
 
             <Button
+                android:onClick="@{viewmode::statmentAccount}"
                 android:id="@+id/button15"
                 style="@style/HomeButton"
                 android:layout_weight="1"

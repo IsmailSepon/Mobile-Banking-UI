@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-<!--    <item-->
-<!--        android:id="@+id/navigation_business"-->
-<!--        android:icon="@drawable/business_btm_menu"-->
-<!--        android:title="@string/business" />-->
+    <item
+        android:id="@+id/navigation_business"
+        android:icon="@drawable/business_btm_menu2"
+        android:title="@string/business" />
 
     <item
         android:id="@+id/navigation_account"
-        android:icon="@drawable/ac"
+        android:icon="@drawable/account2"
         android:title="@string/account" />
+
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_pay"-->
+<!--        android:icon="@drawable/pay"-->
+<!--        android:title="@string/pay" />-->
+
+    <item
+        android:enabled="false"
+        android:title="@null" />
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_cards"-->
+<!--        android:icon="@drawable/card"-->
+<!--        android:title="@string/cards" />-->
+
 
     <item
         android:id="@+id/navigation_budget"
-        android:icon="@drawable/budget"
+        android:icon="@drawable/budget2"
         android:title="@string/budget" />
 
     <item
-        android:id="@+id/navigation_pay"
-        android:icon="@drawable/pay"
-        android:title="@string/pay" />
-
-    <item
-        android:id="@+id/navigation_cards"
-        android:icon="@drawable/card"
-        android:title="@string/cards" />
-
-    <item
         android:id="@+id/navigation_control"
-        android:icon="@drawable/control"
+        android:icon="@drawable/controll2"
         android:title="@string/control" />
 
 </menu>
