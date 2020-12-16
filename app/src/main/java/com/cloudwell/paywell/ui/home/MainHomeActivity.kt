@@ -9,10 +9,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.FrameLayout
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -45,7 +42,7 @@ class MainHomeActivity : AppCompatActivity() {
     var fab1: TextView? = null
     var fab2: TextView? = null
     var fab3: TextView? = null
-    var rootLayout: CoordinatorLayout? = null
+    var rootLayout: LinearLayout? = null
 
 
     private var FAB_Status = false
@@ -61,14 +58,14 @@ class MainHomeActivity : AppCompatActivity() {
 
 
     @RequiresApi(Build.VERSION_CODES.M)
-    @SuppressLint("ResourceAsColor")
+    @SuppressLint("ResourceAsColor", "Range")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_home)
 
         val sharePreference : Preference = Preference.getInstance(this)
         userType = sharePreference.getData(getString(R.string.userType))
-        rootLayout = findViewById<CoordinatorLayout>(R.id.coordinatorLayout)
+        rootLayout = findViewById<LinearLayout>(R.id.linearLayout35)
 
 
         val navView: FabBottomNavigationView = findViewById(R.id.nav_view)
@@ -171,6 +168,8 @@ class MainHomeActivity : AppCompatActivity() {
                 "Floating Action Button 1",
                 Toast.LENGTH_SHORT
             ).show()
+
+            rootLayout!!.alpha = 100f
         }
 
         fab2!!.setOnClickListener {
@@ -179,6 +178,8 @@ class MainHomeActivity : AppCompatActivity() {
                 "Floating Action Button 2",
                 Toast.LENGTH_SHORT
             ).show()
+
+            rootLayout!!.alpha = 100f
         }
 
         fab3!!.setOnClickListener {
@@ -187,6 +188,8 @@ class MainHomeActivity : AppCompatActivity() {
                 "Floating Action Button 3",
                 Toast.LENGTH_SHORT
             ).show()
+
+            rootLayout!!.alpha = 100f
         }
 
     }
@@ -223,7 +226,7 @@ class MainHomeActivity : AppCompatActivity() {
         //Floating Action Button 1
         val layoutParams = fab1!!.layoutParams as FrameLayout.LayoutParams
         layoutParams.rightMargin += (fab1!!.width * 1.7).toInt()
-        layoutParams.bottomMargin += (fab1!!.height * 1.50).toInt()
+        layoutParams.bottomMargin += (fab1!!.height * 1.0).toInt()
         fab1!!.layoutParams = layoutParams
         fab1!!.startAnimation(show_fab_1)
         fab1!!.isClickable = true
@@ -231,7 +234,7 @@ class MainHomeActivity : AppCompatActivity() {
         //Floating Action Button 2
         val layoutParams2 = fab2!!.layoutParams as FrameLayout.LayoutParams
         layoutParams2.rightMargin += (fab2!!.width * 0.0).toInt()
-        layoutParams2.bottomMargin += (fab2!!.height * 2.5).toInt()
+        layoutParams2.bottomMargin += (fab2!!.height * 1.8).toInt()
         fab2!!.layoutParams = layoutParams2
         fab2!!.startAnimation(show_fab_2)
         fab2!!.isClickable = true
@@ -239,7 +242,7 @@ class MainHomeActivity : AppCompatActivity() {
         //Floating Action Button 3
         val layoutParams3 = fab3!!.layoutParams as FrameLayout.LayoutParams
         layoutParams3.leftMargin+= (fab3!!.width * 1.7).toInt()
-        layoutParams3.bottomMargin += (fab3!!.height * 1.50).toInt()
+        layoutParams3.bottomMargin += (fab3!!.height * 1.00).toInt()
         fab3!!.layoutParams = layoutParams3
         fab3!!.startAnimation(show_fab_3)
         fab3!!.isClickable = true
@@ -252,7 +255,7 @@ class MainHomeActivity : AppCompatActivity() {
         //Floating Action Button 1
         val layoutParams = fab1!!.layoutParams as FrameLayout.LayoutParams
         layoutParams.rightMargin -= (fab1!!.width * 1.7).toInt()
-        layoutParams.bottomMargin -= (fab1!!.height * 1.50).toInt()
+        layoutParams.bottomMargin -= (fab1!!.height * 1.0).toInt()
         fab1!!.layoutParams = layoutParams
         fab1!!.startAnimation(hide_fab_1)
         fab1!!.isClickable = false
@@ -260,7 +263,7 @@ class MainHomeActivity : AppCompatActivity() {
         //Floating Action Button 2
         val layoutParams2 = fab2!!.layoutParams as FrameLayout.LayoutParams
         layoutParams2.rightMargin -= (fab2!!.width * 0.0).toInt()
-        layoutParams2.bottomMargin -= (fab2!!.height * 2.5).toInt()
+        layoutParams2.bottomMargin -= (fab2!!.height * 1.8).toInt()
         fab2!!.layoutParams = layoutParams2
         fab2!!.startAnimation(hide_fab_2)
         fab2!!.isClickable = false
@@ -268,7 +271,7 @@ class MainHomeActivity : AppCompatActivity() {
         //Floating Action Button 3
         val layoutParams3 = fab3!!.layoutParams as FrameLayout.LayoutParams
         layoutParams3.leftMargin -= (fab3!!.width * 1.7).toInt()
-        layoutParams3.bottomMargin -= (fab3!!.height * 1.50).toInt()
+        layoutParams3.bottomMargin -= (fab3!!.height * 1.0).toInt()
         fab3!!.layoutParams = layoutParams3
         fab3!!.startAnimation(hide_fab_3)
         fab3!!.isClickable = false

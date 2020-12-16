@@ -12,6 +12,7 @@
         android:layout_gravity="bottom|center"
         android:drawableTop="@drawable/fab_scan"
         android:text="Scan"
+        android:layout_marginBottom="@dimen/_30dp"
         android:textAlignment="center"
         android:textColor="@color/keypad_text_clr"
         android:visibility="invisible"
@@ -42,10 +43,12 @@
         android:textColor="@color/keypad_text_clr"
         android:textAlignment="center"
         android:id="@+id/fab_2"
+        android:layout_marginTop="-20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         android:visibility="invisible"
+        android:layout_marginBottom="@dimen/_30dp"
         app:fabSize="mini"
         android:textSize="@dimen/_10sp"
         tools:ignore="ContentDescription" />
@@ -76,6 +79,7 @@
         android:textColor="@color/keypad_text_clr"
         android:visibility="invisible"
         app:fabSize="mini"
+        android:layout_marginBottom="@dimen/_30dp"
         android:textSize="@dimen/_10sp"
         tools:ignore="ContentDescription"/>
 

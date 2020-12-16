@@ -4,12 +4,12 @@
 
     <!-- Rotate -->
     <rotate
-        android:duration="500"
+        android:duration="300"
         android:fromDegrees="30"
         android:interpolator="@android:anim/linear_interpolator"
         android:pivotX="50%"
         android:pivotY="50%"
-        android:repeatCount="4"
+        android:repeatCount="2"
         android:repeatMode="reverse"
         android:toDegrees="0" />
 
