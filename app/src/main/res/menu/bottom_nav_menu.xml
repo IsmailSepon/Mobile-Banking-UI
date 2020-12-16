@@ -3,12 +3,12 @@
 
     <item
         android:id="@+id/navigation_business"
-        android:icon="@drawable/business_btm_menu2"
+        android:icon="@drawable/nav_bus_selector"
         android:title="@string/business" />
 
     <item
         android:id="@+id/navigation_account"
-        android:icon="@drawable/account2"
+        android:icon="@drawable/nav_account_selector"
         android:title="@string/account" />
 
 
@@ -29,12 +29,12 @@
 
     <item
         android:id="@+id/navigation_budget"
-        android:icon="@drawable/budget2"
+        android:icon="@drawable/nav_budget_selector"
         android:title="@string/budget" />
 
     <item
         android:id="@+id/navigation_control"
-        android:icon="@drawable/controll2"
+        android:icon="@drawable/nav_control_selector"
         android:title="@string/control" />
 
 </menu>

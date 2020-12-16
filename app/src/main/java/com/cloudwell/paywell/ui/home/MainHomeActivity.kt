@@ -1,9 +1,6 @@
 package com.cloudwell.paywell.ui.home
 
 import android.annotation.SuppressLint
-import android.content.res.ColorStateList
-import android.graphics.Color
-import android.graphics.Color.red
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -12,12 +9,9 @@ import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.coordinatorlayout.widget.CoordinatorLayout
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.Preference
-import com.cloudwell.paywell.base.customView.CurvedBottomNavigationView
 import com.cloudwell.paywell.base.customView.FabBottomNavigationView
 import com.cloudwell.paywell.ui.account.fragment.AccountFragment
 import com.cloudwell.paywell.ui.budget.fragment.BudgetMainFragment
@@ -25,7 +19,6 @@ import com.cloudwell.paywell.ui.cards.fragment.CardsFragment
 import com.cloudwell.paywell.ui.dashboard.DashboardFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_main_home.*
 import kotlinx.android.synthetic.main.budget_marchent_item.*
 import kotlinx.android.synthetic.main.fab_layout.*
@@ -88,28 +81,34 @@ class MainHomeActivity : AppCompatActivity() {
                     return@setOnNavigationItemSelectedListener true
                 }
 
-                R.id.navigation_pay-> {
-                    title=resources.getString(R.string.pay)
-                    loadFragment(PaymentsMainFragment())
-                    return@setOnNavigationItemSelectedListener true
-                }
-
-                R.id.navigation_cards-> {
-
-                    loadFragment(CardsFragment())
-
-
-//                    title=resources.getString(R.string.cards)
-//                    if (userType==getString(R.string.personalUser)){
+//                R.id.navigation_pay-> {
+//                    title=resources.getString(R.string.pay)
+//                    loadFragment(PaymentsMainFragment())
+//                    return@setOnNavigationItemSelectedListener true
+//                }
 //
-//                    }else{
+//                R.id.navigation_cards-> {
 //
-//                        loadFragment(BusinessCardMenuFragment())
-//                    }
-                    return@setOnNavigationItemSelectedListener true
-                }
+//                    loadFragment(CardsFragment())
+//
+//
+////                    title=resources.getString(R.string.cards)
+////                    if (userType==getString(R.string.personalUser)){
+////
+////                    }else{
+////
+////                        loadFragment(BusinessCardMenuFragment())
+////                    }
+//                    return@setOnNavigationItemSelectedListener true
+//                }
 
                 R.id.navigation_control-> {
+                    title=resources.getString(R.string.control)
+                    loadFragment(DashboardFragment())
+                    return@setOnNavigationItemSelectedListener true
+                }
+
+                R.id.navigation_business-> {
                     title=resources.getString(R.string.control)
                     loadFragment(DashboardFragment())
                     return@setOnNavigationItemSelectedListener true
