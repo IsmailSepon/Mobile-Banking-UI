@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,6 +22,7 @@
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:itemIconTint="@color/keypad_text_clr"
         android:layout_gravity="bottom"
         app:fab_cradle_margin="8dp"
         app:fab_cradle_rounded_corner_radius="8dp"
@@ -29,14 +31,38 @@
         android:background="?android:attr/windowBackground"
         app:menu="@menu/bottom_nav_menu" />
 
+
+    <include layout="@layout/fab_layout" />
+
     <ImageView
-        android:id="@+id/fab"
+        android:id="@+id/fab_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@drawable/add_bottom_nav"
+        android:background="@drawable/fab_no_border"
         app:layout_anchor="@id/nav_view"
-        android:src="@drawable/add_bottom_nav"
+        android:src="@drawable/add_ic_white"
+        android:padding="@dimen/_15dp"
         app:layout_anchorGravity="fill_vertical|center_horizontal"
-        app:elevation="16dp" />
+        app:elevation="16dp"
+        tools:ignore="ContentDescription" />
+
+
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_btn"-->
+<!--        android:backgroundTint="@color/keypad_text_clr"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        app:layout_anchor="@id/nav_view"-->
+<!--        app:layout_anchorGravity="fill_vertical|center_horizontal"-->
+<!--        app:elevation="1dp"-->
+<!--        tools:ignore="ContentDescription" />-->
+
+
+
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

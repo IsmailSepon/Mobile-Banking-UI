@@ -1,11 +1,22 @@
 package com.cloudwell.paywell.ui.home
 
 import android.annotation.SuppressLint
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.graphics.Color.red
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.widget.FrameLayout
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.Preference
@@ -17,7 +28,10 @@ import com.cloudwell.paywell.ui.cards.fragment.CardsFragment
 import com.cloudwell.paywell.ui.dashboard.DashboardFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.activity_main_home.*
 import kotlinx.android.synthetic.main.budget_marchent_item.*
+import kotlinx.android.synthetic.main.fab_layout.*
 
 
 class MainHomeActivity : AppCompatActivity() {
@@ -25,6 +39,26 @@ class MainHomeActivity : AppCompatActivity() {
     var notificationsBadge : View?  = null
 
     var userType : String? = null
+
+    var fab: ImageView? = null
+    //var fab: FloatingActionButton? = null
+    var fab1: TextView? = null
+    var fab2: TextView? = null
+    var fab3: TextView? = null
+    var rootLayout: CoordinatorLayout? = null
+
+
+    private var FAB_Status = false
+
+    //Animations
+    var show_fab_1: Animation? = null
+    var hide_fab_1: Animation? = null
+    var show_fab_2: Animation? = null
+    var hide_fab_2: Animation? = null
+    var show_fab_3: Animation? = null
+    var hide_fab_3: Animation? = null
+
+
 
     @RequiresApi(Build.VERSION_CODES.M)
     @SuppressLint("ResourceAsColor")
@@ -34,6 +68,7 @@ class MainHomeActivity : AppCompatActivity() {
 
         val sharePreference : Preference = Preference.getInstance(this)
         userType = sharePreference.getData(getString(R.string.userType))
+        rootLayout = findViewById<CoordinatorLayout>(R.id.coordinatorLayout)
 
 
         val navView: FabBottomNavigationView = findViewById(R.id.nav_view)
@@ -92,6 +127,67 @@ class MainHomeActivity : AppCompatActivity() {
 
 
 
+        fab = fab_btn
+        fab1 = fab_1
+        fab2 = fab_2
+        fab3 = fab_3
+
+        //Animations
+
+        //Animations
+        show_fab_1 = AnimationUtils.loadAnimation(application, R.anim.fab1_show)
+        hide_fab_1 = AnimationUtils.loadAnimation(application, R.anim.fab1_hide)
+        show_fab_2 = AnimationUtils.loadAnimation(application, R.anim.fab2_show)
+        hide_fab_2 = AnimationUtils.loadAnimation(application, R.anim.fab2_hide)
+        show_fab_3 = AnimationUtils.loadAnimation(application, R.anim.fab3_show)
+        hide_fab_3 = AnimationUtils.loadAnimation(application, R.anim.fab3_hide)
+
+        fab!!.setOnClickListener {
+            FAB_Status = if (FAB_Status  == false) {
+                //Display FAB menu
+                fab!!.startAnimation(AnimationUtils.loadAnimation(applicationContext, R.anim.fab_rotate))
+                fab!!.background = application.getDrawable(R.drawable.fab_border)
+                fab!!.setImageResource(R.drawable.add_ic)
+
+                expandFAB()
+                true
+            } else {
+                //Close FAB menu
+                fab!!.startAnimation(AnimationUtils.loadAnimation(applicationContext, R.anim.fab_rotate_back))
+                fab!!.background = application.getDrawable(R.drawable.fab_no_border)
+                fab!!.setImageResource(R.drawable.add_ic_white)
+
+                hideFAB()
+                false
+            }
+
+
+
+        }
+
+        fab1!!.setOnClickListener {
+            Toast.makeText(
+                application,
+                "Floating Action Button 1",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        fab2!!.setOnClickListener {
+            Toast.makeText(
+                application,
+                "Floating Action Button 2",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        fab3!!.setOnClickListener {
+            Toast.makeText(
+                application,
+                "Floating Action Button 3",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
 
     }
 
@@ -116,6 +212,68 @@ class MainHomeActivity : AppCompatActivity() {
         badget.verticalOffset = 12
 
     }
+
+
+
+
+
+    private fun expandFAB() {
+        rootLayout!!.alpha = 0.1f
+
+        //Floating Action Button 1
+        val layoutParams = fab1!!.layoutParams as FrameLayout.LayoutParams
+        layoutParams.rightMargin += (fab1!!.width * 1.7).toInt()
+        layoutParams.bottomMargin += (fab1!!.height * 1.50).toInt()
+        fab1!!.layoutParams = layoutParams
+        fab1!!.startAnimation(show_fab_1)
+        fab1!!.isClickable = true
+
+        //Floating Action Button 2
+        val layoutParams2 = fab2!!.layoutParams as FrameLayout.LayoutParams
+        layoutParams2.rightMargin += (fab2!!.width * 0.0).toInt()
+        layoutParams2.bottomMargin += (fab2!!.height * 2.5).toInt()
+        fab2!!.layoutParams = layoutParams2
+        fab2!!.startAnimation(show_fab_2)
+        fab2!!.isClickable = true
+
+        //Floating Action Button 3
+        val layoutParams3 = fab3!!.layoutParams as FrameLayout.LayoutParams
+        layoutParams3.leftMargin+= (fab3!!.width * 1.7).toInt()
+        layoutParams3.bottomMargin += (fab3!!.height * 1.50).toInt()
+        fab3!!.layoutParams = layoutParams3
+        fab3!!.startAnimation(show_fab_3)
+        fab3!!.isClickable = true
+    }
+
+    @SuppressLint("Range")
+    private fun hideFAB() {
+        rootLayout!!.alpha = 100f
+
+        //Floating Action Button 1
+        val layoutParams = fab1!!.layoutParams as FrameLayout.LayoutParams
+        layoutParams.rightMargin -= (fab1!!.width * 1.7).toInt()
+        layoutParams.bottomMargin -= (fab1!!.height * 1.50).toInt()
+        fab1!!.layoutParams = layoutParams
+        fab1!!.startAnimation(hide_fab_1)
+        fab1!!.isClickable = false
+
+        //Floating Action Button 2
+        val layoutParams2 = fab2!!.layoutParams as FrameLayout.LayoutParams
+        layoutParams2.rightMargin -= (fab2!!.width * 0.0).toInt()
+        layoutParams2.bottomMargin -= (fab2!!.height * 2.5).toInt()
+        fab2!!.layoutParams = layoutParams2
+        fab2!!.startAnimation(hide_fab_2)
+        fab2!!.isClickable = false
+
+        //Floating Action Button 3
+        val layoutParams3 = fab3!!.layoutParams as FrameLayout.LayoutParams
+        layoutParams3.leftMargin -= (fab3!!.width * 1.7).toInt()
+        layoutParams3.bottomMargin -= (fab3!!.height * 1.50).toInt()
+        fab3!!.layoutParams = layoutParams3
+        fab3!!.startAnimation(hide_fab_3)
+        fab3!!.isClickable = false
+    }
+
 
 
 }
