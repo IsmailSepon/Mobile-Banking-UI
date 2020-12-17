@@ -15,9 +15,8 @@ import com.cloudwell.paywell.base.Preference
 import com.cloudwell.paywell.base.customView.FabBottomNavigationView
 import com.cloudwell.paywell.ui.account.fragment.AccountFragment
 import com.cloudwell.paywell.ui.budget.fragment.BudgetMainFragment
-import com.cloudwell.paywell.ui.cards.fragment.CardsFragment
 import com.cloudwell.paywell.ui.dashboard.DashboardFragment
-import com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment
+import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardMenuFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main_home.*
 import kotlinx.android.synthetic.main.budget_marchent_item.*
@@ -110,7 +109,7 @@ class MainHomeActivity : AppCompatActivity() {
 
                 R.id.navigation_business-> {
                     title=resources.getString(R.string.control)
-                    loadFragment(DashboardFragment())
+                    loadFragment(BusinessCardMenuFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
 
