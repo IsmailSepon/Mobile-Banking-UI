@@ -905,6 +905,7 @@
     <string name="pdf">PDF</string>
     <string name="excel">Excel</string>
     <string name="csv">CSV</string>
+    <string name="to_be_available_soon">To be available soon</string>
 
 
 </resources>
