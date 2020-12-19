@@ -71,7 +71,6 @@
     <string name="statement">Statement</string>
     <string name="control">Control</string>
     <string name="cards">Cards</string>
-    <string name="pay">Pay</string>
     <string name="budget">Budget</string>
     <string name="select_a_beneficiary">Select a beneficiary</string>
     <string name="choose_transfer_type">Choose transfer type</string>
@@ -906,6 +905,8 @@
     <string name="excel">Excel</string>
     <string name="csv">CSV</string>
     <string name="to_be_available_soon">To be available soon</string>
+    <string name="scan">Scan</string>
+    <string name="pay">Pay</string>
 
 
 </resources>

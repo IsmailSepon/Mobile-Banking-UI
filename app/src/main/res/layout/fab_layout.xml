@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/fab_layout"
-    android:layout_height="match_parent">
+    android:layout_gravity="bottom"
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/fab_1"
@@ -11,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         android:drawableTop="@drawable/fab_scan"
-        android:text="Scan"
+        android:text="@string/scan"
         android:layout_marginBottom="@dimen/_30dp"
         android:textAlignment="center"
         android:textColor="@color/keypad_text_clr"
@@ -21,29 +22,13 @@
         tools:ignore="ContentDescription" />
 
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab_1"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|center"-->
-<!--        android:layout_marginBottom="@dimen/_35dp"-->
-<!--        android:layout_marginEnd="@dimen/_16dp"-->
-<!--        android:layout_marginStart="@dimen/_16dp"-->
-<!--        android:layout_marginTop="@dimen/_16dp"-->
-<!--        android:src="@drawable/fab_scan"-->
-<!--        android:padding="@dimen/_10"-->
-<!--        android:visibility="invisible"-->
-<!--        app:backgroundTint="@color/keypad_text_clr"-->
-<!--        app:fabSize="mini"-->
-<!--        tools:ignore="ContentDescription" />-->
 
     <TextView
         android:drawableTop="@drawable/fab_pay"
-        android:text="Pay"
+        android:text="@string/pay"
         android:textColor="@color/keypad_text_clr"
         android:textAlignment="center"
         android:id="@+id/fab_2"
-        android:layout_marginTop="-20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
@@ -52,21 +37,6 @@
         app:fabSize="mini"
         android:textSize="@dimen/_10sp"
         tools:ignore="ContentDescription" />
-
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab_2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|center"-->
-<!--        android:layout_marginBottom="@dimen/_35dp"-->
-<!--        android:layout_marginEnd="@dimen/_16dp"-->
-<!--        android:layout_marginStart="@dimen/_16dp"-->
-<!--        android:layout_marginTop="@dimen/_16dp"-->
-<!--        android:src="@drawable/fab_pay"-->
-<!--        android:visibility="invisible"-->
-<!--        app:backgroundTint="@color/keypad_text_clr"-->
-<!--        app:fabSize="mini"-->
-<!--        tools:ignore="ContentDescription" />-->
 
     <TextView
         android:id="@+id/fab_3"
@@ -84,20 +54,14 @@
         tools:ignore="ContentDescription"/>
 
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab_3"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
+<!--    <ImageView-->
+<!--        android:id="@+id/fab_bg"-->
 <!--        android:layout_gravity="bottom|center"-->
-<!--        android:layout_marginBottom="@dimen/_35dp"-->
-<!--        android:layout_marginEnd="@dimen/_16dp"-->
-<!--        android:layout_marginStart="@dimen/_16dp"-->
-<!--        android:layout_marginTop="@dimen/_16dp"-->
-<!--        android:src="@drawable/pay_card"-->
-<!--        android:visibility="invisible"-->
-<!--        app:backgroundTint="@color/keypad_text_clr"-->
-<!--        app:fabSize="mini"-->
-<!--        tools:ignore="ContentDescription"/>-->
+<!--        android:background="@color/white_2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="170dp"-->
+<!--        tools:ignore="ContentDescription" />-->
+
 
 
 </FrameLayout>

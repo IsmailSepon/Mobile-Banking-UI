@@ -48,9 +48,23 @@
         app:menu="@menu/bottom_nav_menu" />
 
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/fab_layout" />
+
+
+    <LinearLayout
+        android:id="@+id/fab_bg"
+        android:layout_width="@dimen/_250dp"
+        android:paddingTop="@dimen/_20dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/fab_layout" />
+    </LinearLayout>
+
+
 
     <ImageView
         android:id="@+id/fab_btn"

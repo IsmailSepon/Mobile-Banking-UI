@@ -171,7 +171,8 @@ class BudgetMainFragment : Fragment() {
 
         val gd = GraphData.builder(requireContext())
             .setPointMap(pointMap)
-            .setGraphStroke(R.color.Black).setGraphGradient(R.color.keypad_text_clr, R.color.light_blue)
+            .setGraphStroke(R.color.Black)
+            .setGraphGradient(R.color.keypad_text_clr, R.color.keypad_text_clr)
             .animateLine(true)
             .setPointColor(R.color.Red)
             .setPointRadius(5)
@@ -187,8 +188,8 @@ class BudgetMainFragment : Fragment() {
 
         val gd2 = GraphData.builder(requireContext())
             .setPointMap(p2)
-            .setGraphStroke(R.color.Green)
-            .setGraphGradient(R.color.gradientStartColor, R.color.gradientEndColor)
+            .setGraphStroke(R.color.colorPrimaryDark)
+            .setGraphGradient(R.color.colorPrimaryDark, R.color.Orange)
             .animateLine(true)
             .build()
 
