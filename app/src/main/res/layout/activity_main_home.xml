@@ -52,7 +52,7 @@
 
     <LinearLayout
         android:id="@+id/fab_bg"
-        android:layout_width="@dimen/_250dp"
+        android:layout_width="@dimen/_220dp"
         android:paddingTop="@dimen/_20dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
