@@ -47,8 +47,10 @@
     <color name="expence_divider">#d7e1ee</color>
     <color name="bottom_nav_bg">#f9fbff</color>
     <color name="bottom_nav_bg2">#f3f6fa</color>
-    <color name="graphBlue">#BF00203f</color>
-    <color name="graphBlue2">#8000203f</color>
+    <color name="graphBlue">#3300203f</color>
+    <color name="graphBlue2">#2600203f</color>
+    <color name="graphorange">#33F15A24</color>
+    <color name="graphorange2">#26F15A24</color>
 
 
 
