@@ -73,12 +73,20 @@ class MainHomeActivity : BaseActivity() {
                 R.id.navigation_account-> {
                     title=resources.getString(R.string.account)
                     loadFragment(AccountFragment())
+                    if (FAB_Status == true){
+
+                        hideFAB()
+                    }
                     return@setOnNavigationItemSelectedListener true
                 }
 
                 R.id.navigation_budget-> {
                     title=resources.getString(R.string.budget)
                     loadFragment(BudgetMainFragment())
+                    if (FAB_Status == true){
+
+                        hideFAB()
+                    }
                     return@setOnNavigationItemSelectedListener true
                 }
 
@@ -106,12 +114,20 @@ class MainHomeActivity : BaseActivity() {
                 R.id.navigation_control-> {
                     title=resources.getString(R.string.control)
                     loadFragment(DashboardFragment())
+                    if (FAB_Status == true){
+
+                        hideFAB()
+                    }
                     return@setOnNavigationItemSelectedListener true
                 }
 
                 R.id.navigation_business-> {
                     title=resources.getString(R.string.control)
                     loadFragment(BusinessCardMenuFragment())
+                    if (FAB_Status == true){
+
+                        hideFAB()
+                    }
                     return@setOnNavigationItemSelectedListener true
                 }
 
@@ -142,17 +158,11 @@ class MainHomeActivity : BaseActivity() {
         fab!!.setOnClickListener {
             FAB_Status = if (FAB_Status  == false) {
                 //Display FAB menu
-                fab!!.startAnimation(AnimationUtils.loadAnimation(applicationContext, R.anim.fab_rotate))
-                fab!!.background = application.getDrawable(R.drawable.fab_border)
-                fab!!.setImageResource(R.drawable.add_ic)
 
                 expandFAB()
                 true
             } else {
                 //Close FAB menu
-                fab!!.startAnimation(AnimationUtils.loadAnimation(applicationContext, R.anim.fab_rotate_back))
-                fab!!.background = application.getDrawable(R.drawable.fab_no_border)
-                fab!!.setImageResource(R.drawable.add_ic_white)
 
                 hideFAB()
                 false
@@ -163,6 +173,7 @@ class MainHomeActivity : BaseActivity() {
         }
 
         fab1!!.setOnClickListener {
+
 
             hideFAB()
         }
@@ -208,6 +219,12 @@ class MainHomeActivity : BaseActivity() {
 
 
     private fun expandFAB() {
+        FAB_Status = true
+        fab!!.startAnimation(AnimationUtils.loadAnimation(applicationContext, R.anim.fab_rotate))
+        fab!!.background = application.getDrawable(R.drawable.fab_border)
+        fab!!.setImageResource(R.drawable.add_ic)
+
+
         rootLayout!!.background = resources.getDrawable(R.drawable.half_moon)
 
         //Floating Action Button 1
@@ -237,6 +254,11 @@ class MainHomeActivity : BaseActivity() {
 
     @SuppressLint("Range")
     private fun hideFAB() {
+        FAB_Status = false
+        fab!!.startAnimation(AnimationUtils.loadAnimation(applicationContext, R.anim.fab_rotate_back))
+        fab!!.background = application.getDrawable(R.drawable.fab_no_border)
+        fab!!.setImageResource(R.drawable.add_ic_white)
+
 //        rootLayout!!.alpha = 100f
         rootLayout!!.background = null//resources.getDrawable(R.drawable.half_moon)
 
