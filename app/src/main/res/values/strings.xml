@@ -907,6 +907,7 @@
     <string name="to_be_available_soon">To be available soon</string>
     <string name="scan">Scan</string>
     <string name="pay">Pay</string>
+    <string name="withdraw">Withdraw</string>
 
 
 </resources>

@@ -33,6 +33,7 @@
         <LinearLayout
             android:onClick="@{bottomsheetModel::addBankAccount}"
             android:layout_marginTop="@dimen/_29dp"
+            android:padding="@dimen/_5dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -61,8 +62,9 @@
 
         <LinearLayout
             android:onClick="@{bottomsheetModel::findPayWellUser}"
-            android:layout_marginTop="@dimen/_26dp"
+            android:layout_marginTop="@dimen/_16dp"
             android:layout_marginBottom="@dimen/_42dp"
+            android:padding="@dimen/_5dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

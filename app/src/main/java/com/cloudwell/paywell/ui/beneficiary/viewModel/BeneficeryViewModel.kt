@@ -44,7 +44,6 @@ class BeneficeryViewModel : ViewModel() {
     }
 
     fun findPayWellUser(view: View) {
-        //startActivity(view, 2)
         mView?.startBeneficeryHostActivity(2)
     }
 

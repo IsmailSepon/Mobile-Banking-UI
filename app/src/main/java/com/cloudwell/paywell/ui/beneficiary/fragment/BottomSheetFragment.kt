@@ -38,7 +38,6 @@ class BottomSheetFragment : BottomSheetDialogFragment(), IbeneficeryVIew {
     }
 
     override fun startBeneficeryHostActivity(i: Int) {
-        //Toast.makeText(context, "INTERFACE"+i, Toast.LENGTH_SHORT).show()
         startActivity(i)
     }
 

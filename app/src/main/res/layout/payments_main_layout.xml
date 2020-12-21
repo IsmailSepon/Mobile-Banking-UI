@@ -1,400 +1,410 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView282"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/contact"
-        tools:ignore="ContentDescription" />
 
-    <TextView
-        android:textColor="@color/common_clr"
-        android:textSize="@dimen/_12sp"
-        style="@style/text_style"
-        android:id="@+id/username_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:text="@anisul659"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView282"
-        app:layout_constraintStart_toEndOf="@+id/imageView282"
-        app:layout_constraintTop_toTopOf="@+id/imageView282" />
-
-    <TextView
-        android:id="@+id/textView676"
-        style="@style/medium_text_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:text="@string/payments"
-        android:textColor="@color/keypad_text_clr"
-        android:textSize="@dimen/_16_7sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView283"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView676"
-        app:srcCompat="@drawable/ic_search_blue"
-        tools:ignore="ContentDescription" />
-
-    <TextView
-        android:textColor="@color/common_clr"
-        android:textSize="@dimen/_14sp"
-        style="@style/text_style"
-        android:id="@+id/textView677"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="17dp"
-        android:text="@string/common_services"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username_txt" />
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout31"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView677">
+        android:layout_height="wrap_content">
 
+
+        <ImageView
+            android:id="@+id/imageView282"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/contact"
+            tools:ignore="ContentDescription" />
 
         <TextView
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_12sp"
             style="@style/text_style"
-            android:layout_width="@dimen/_0dp"
+            android:id="@+id/username_txt"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/spilt_payment"
-            android:drawablePadding="@dimen/_8dp"
-            android:text="@string/split_nbill"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_12sp" />
-
+            android:layout_marginStart="6dp"
+            android:text="@anisul659"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView282"
+            app:layout_constraintStart_toEndOf="@+id/imageView282"
+            app:layout_constraintTop_toTopOf="@+id/imageView282" />
 
         <TextView
-            style="@style/text_style"
-            android:layout_width="@dimen/_0dp"
+            android:id="@+id/textView676"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/bank_transfer_orng"
-            android:drawablePadding="@dimen/_8dp"
-            android:text="@string/bank_ntransfer"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_12sp" />
-
-
-        <TextView
-            android:id="@+id/recurinng_billpay"
-            style="@style/text_style"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/recurring_bill"
-            android:drawablePadding="@dimen/_8dp"
-            android:text="@string/recurring_nbill_pay"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_12sp" />
-
-
-        <TextView
-            android:id="@+id/card_emi"
-            style="@style/text_style"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/card_emi"
-            android:drawablePadding="@dimen/_8dp"
-            android:text="@string/credit_card_nemi"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_12sp" />
-
-
-    </LinearLayout>
-
-
-    <ImageView
-        android:id="@+id/imageView284"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/divider_bg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout31"
-        tools:ignore="ContentDescription" />
-
-    <TextView
-        android:textColor="@color/common_clr"
-        android:textSize="@dimen/_14sp"
-        style="@style/text_style"
-        android:id="@+id/textView678"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/pay_to"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView284" />
-
-    <TextView
-        android:id="@+id/mypayments"
-        style="@style/text_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/my_payments"
-        android:textColor="@color/common_clr"
-        android:textSize="@dimen/_14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divi" />
-
-    <TextView
-        android:id="@+id/mypayments2"
-        style="@style/text_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/bills_pay"
-        android:textColor="@color/common_clr"
-        android:textSize="@dimen/_14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divier" />
-
-    <ImageView
-        android:id="@+id/search_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="23dp"
-        app:layout_constraintEnd_toStartOf="@+id/whoto_pay"
-        app:layout_constraintTop_toTopOf="@+id/textView678"
-        app:srcCompat="@drawable/search_btn_ic"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/whoto_pay"
-        android:layout_width="@dimen/_16dp"
-        android:layout_height="@dimen/_16dp"
-        android:layout_marginEnd="17dp"
-        app:layout_constraintBottom_toBottomOf="@+id/search_location"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/search_location"
-        app:srcCompat="@drawable/add_btn"
-        tools:ignore="ContentDescription" />
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/horizental_payto_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView678" />
-
-    <ImageView
-        android:id="@+id/divi"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1dp"
-        android:layout_marginTop="@dimen/_30dp"
-        android:background="@color/divider_bg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizental_payto_recycler"
-        tools:ignore="ContentDescription" />
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/mypayment_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="18dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mypayments" />
-
-    <ImageView
-        android:id="@+id/imageView287"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/mypayment_recycler"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mypayment_recycler"
-        app:srcCompat="@drawable/arrow_right"
-        tools:ignore="ContentDescription" />
-
-
-    <ImageView
-        android:id="@+id/divier"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1dp"
-        android:layout_marginTop="@dimen/_30dp"
-        android:background="@color/divider_bg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mypayment_recycler"
-        tools:ignore="ContentDescription" />
-
-
-
-
-    <LinearLayout
-        android:id="@+id/hori_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mypayments2">
-
-
-        <TextView
-            style="@style/text_style"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/pay_topup"
-            android:drawablePadding="@dimen/_8dp"
-            android:text="@string/top_up_"
+            android:layout_marginTop="13dp"
+            android:text="@string/payments"
             android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_12sp" />
+            android:textSize="@dimen/_16_7sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/imageView283"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView676"
+            app:srcCompat="@drawable/ic_search_blue"
+            tools:ignore="ContentDescription" />
 
         <TextView
-            android:id="@+id/utility_btn"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_14sp"
             style="@style/text_style"
-            android:layout_width="@dimen/_0dp"
+            android:id="@+id/textView677"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/utility_pay"
-            android:drawablePadding="@dimen/_8dp"
-            android:text="@string/utility"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_12sp" />
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="17dp"
+            android:text="@string/common_services"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username_txt" />
 
+
+        <LinearLayout
+            android:id="@+id/linearLayout31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView677">
+
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/spilt_payment"
+                android:drawablePadding="@dimen/_8dp"
+                android:text="@string/split_nbill"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_12sp" />
+
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/bank_transfer_orng"
+                android:drawablePadding="@dimen/_8dp"
+                android:text="@string/bank_ntransfer"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_12sp" />
+
+
+            <TextView
+                android:id="@+id/recurinng_billpay"
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/recurring_bill"
+                android:drawablePadding="@dimen/_8dp"
+                android:text="@string/recurring_nbill_pay"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_12sp" />
+
+
+            <TextView
+                android:id="@+id/card_emi"
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/card_emi"
+                android:drawablePadding="@dimen/_8dp"
+                android:text="@string/credit_card_nemi"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_12sp" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imageView284"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/divider_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout31"
+            tools:ignore="ContentDescription" />
 
         <TextView
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_14sp"
             style="@style/text_style"
-            android:layout_width="@dimen/_0dp"
+            android:id="@+id/textView678"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/ticket_pay"
-            android:drawablePadding="@dimen/_8dp"
-            android:text="@string/ticket"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_12sp" />
-
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/pay_to"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView284" />
 
         <TextView
+            android:id="@+id/mypayments"
             style="@style/text_style"
-            android:layout_width="@dimen/_0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/payment_fee"
-            android:drawablePadding="@dimen/_8dp"
-            android:text="@string/fee"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_12sp" />
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/hori_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hori_1">
-
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/my_payments"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divi" />
 
         <TextView
+            android:id="@+id/mypayments2"
             style="@style/text_style"
-            android:layout_width="@dimen/_0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/shopping_pay"
-            android:drawablePadding="@dimen/_8dp"
-            android:text="@string/shopping"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_12sp" />
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/bills_pay"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divier" />
 
-
-        <TextView
-            style="@style/text_style"
-            android:layout_width="@dimen/_0dp"
+        <ImageView
+            android:id="@+id/search_location"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/edu_pay"
-            android:drawablePadding="@dimen/_8dp"
-            android:text="@string/education"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_12sp" />
+            android:layout_marginEnd="23dp"
+            app:layout_constraintEnd_toStartOf="@+id/whoto_pay"
+            app:layout_constraintTop_toTopOf="@+id/textView678"
+            app:srcCompat="@drawable/search_btn_ic"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/whoto_pay"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_marginEnd="17dp"
+            app:layout_constraintBottom_toBottomOf="@+id/search_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/search_location"
+            app:srcCompat="@drawable/add_btn"
+            tools:ignore="ContentDescription" />
 
 
-        <TextView
-            style="@style/text_style"
-            android:layout_width="@dimen/_0dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/horizental_payto_recycler"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/entertainment_pay"
-            android:drawablePadding="@dimen/_8dp"
-            android:text="@string/entertainment"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_12sp" />
+            android:layout_marginTop="21dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView678" />
+
+        <ImageView
+            android:id="@+id/divi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_30dp"
+            android:background="@color/divider_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizental_payto_recycler"
+            tools:ignore="ContentDescription" />
 
 
-        <TextView
-            style="@style/text_style"
-            android:layout_width="@dimen/_0dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mypayment_recycler"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/insurence_pay"
-            android:drawablePadding="@dimen/_8dp"
-            android:text="@string/insurance"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_12sp" />
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mypayments" />
+
+        <ImageView
+            android:id="@+id/imageView287"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/mypayment_recycler"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mypayment_recycler"
+            app:srcCompat="@drawable/arrow_right"
+            tools:ignore="ContentDescription" />
 
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/divier"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_30dp"
+            android:background="@color/divider_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mypayment_recycler"
+            tools:ignore="ContentDescription" />
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_54dp"
-        android:background="@color/keypad_text_clr"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
 
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/hori_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mypayments2">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/pay_topup"
+                android:drawablePadding="@dimen/_8dp"
+                android:text="@string/top_up_"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp" />
+
+
+            <TextView
+                android:id="@+id/utility_btn"
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/utility_pay"
+                android:drawablePadding="@dimen/_8dp"
+                android:text="@string/utility"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp" />
+
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ticket_pay"
+                android:drawablePadding="@dimen/_8dp"
+                android:text="@string/ticket"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp" />
+
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/payment_fee"
+                android:drawablePadding="@dimen/_8dp"
+                android:text="@string/fee"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/hori_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hori_1">
+
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/shopping_pay"
+                android:drawablePadding="@dimen/_8dp"
+                android:text="@string/shopping"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp" />
+
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/edu_pay"
+                android:drawablePadding="@dimen/_8dp"
+                android:text="@string/education"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp" />
+
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/entertainment_pay"
+                android:drawablePadding="@dimen/_8dp"
+                android:text="@string/entertainment"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp" />
+
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/insurence_pay"
+                android:drawablePadding="@dimen/_8dp"
+                android:text="@string/insurance"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp" />
+
+
+        </LinearLayout>
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_54dp"-->
+<!--            android:background="@color/keypad_text_clr"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent">-->
+
+
+<!--        </LinearLayout>-->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

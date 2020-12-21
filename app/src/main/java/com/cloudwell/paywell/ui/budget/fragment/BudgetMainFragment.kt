@@ -6,8 +6,7 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.TextView
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -36,6 +35,7 @@ class BudgetMainFragment : Fragment() {
     private lateinit var sliderAdapter: BudgetAdapter
 
     var selection = arrayOf("All", "Week", "Month")
+    var graphDay = 7
 
     private val data: ArrayList<String> = ArrayList()
     private val slidedata: ArrayList<BudgetPOjo> = ArrayList()
@@ -51,14 +51,35 @@ class BudgetMainFragment : Fragment() {
         val view = inflater.inflate(R.layout.budget_main_layout, container, false)
 
 
-        view.selection_spinner.onItemSelectedListener
-        val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(
-            requireContext(),
-            R.layout.budget_spinner_tem,
-            selection
-        )
+        val spinner : Spinner =  view.selection_spinner
+        val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), R.layout.budget_spinner_tem, selection)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        view.selection_spinner.adapter = aa
+        spinner.adapter = aa
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+
+                Toast.makeText(requireContext(), ""+position , Toast.LENGTH_SHORT).show()
+
+                if (position == 0){
+                    graphDay = 12
+                    setBudgetGraph(graphDay)
+                }else if (position == 1){
+
+                    graphDay = 7
+                    setBudgetGraph(graphDay)
+
+                }else if (position == 2){
+                    graphDay = 30
+                    setBudgetGraph(graphDay)
+                }
+
+            }
+
+        }
 
         data.add("300")
         data.add("500")
@@ -89,7 +110,7 @@ class BudgetMainFragment : Fragment() {
 
 
         curveGraphView = view.budget_graphview
-        setBudgetGraph()
+        setBudgetGraph(graphDay)
 
 
 
@@ -103,15 +124,6 @@ class BudgetMainFragment : Fragment() {
         viewPager.adapter = beneficiaryDetailsPagerAdapter
         val tabs: TabLayout = view.findViewById(R.id.budget_tab)
         tabs.setupWithViewPager(viewPager)
-
-
-//        view.beneficiary_profile_edit_btn.setOnClickListener(View.OnClickListener {
-//            FragmentHelper.replaceFragment(
-//                BusinessProfileEditFragment(),
-//                requireActivity().supportFragmentManager,
-//                R.id.send_money_container
-//            )
-//        })
 
 
 
@@ -143,13 +155,13 @@ class BudgetMainFragment : Fragment() {
         return view
     }
 
-    private fun setBudgetGraph() {
+    private fun setBudgetGraph(day : Int) {
 
 
         curveGraphView!!.configure(
             CurveGraphConfig.Builder(requireContext())
                 .setAxisColor(R.color.keypad_text_clr)             // Set number of values to be displayed in X ax
-                .setVerticalGuideline(7)                // Set number of background guidelines to be shown.
+                .setVerticalGuideline(day)                // Set number of background guidelines to be shown.
                 //  .setHorizontalGuideline(2)
                 .setGuidelineColor(R.color.Red)         // Set color of the visible guidelines.
                 .setNoDataMsg(" No Data ")              // Message when no data is provided to the view.

@@ -11,19 +11,21 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.base.BaseActivity
 import com.cloudwell.paywell.base.Preference
 import com.cloudwell.paywell.base.customView.FabBottomNavigationView
 import com.cloudwell.paywell.ui.account.fragment.AccountFragment
 import com.cloudwell.paywell.ui.budget.fragment.BudgetMainFragment
 import com.cloudwell.paywell.ui.dashboard.DashboardFragment
 import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardMenuFragment
+import com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main_home.*
 import kotlinx.android.synthetic.main.budget_marchent_item.*
 import kotlinx.android.synthetic.main.fab_layout.*
 
 
-class MainHomeActivity : AppCompatActivity() {
+class MainHomeActivity : BaseActivity() {
 
     var notificationsBadge : View?  = null
 
@@ -161,33 +163,20 @@ class MainHomeActivity : AppCompatActivity() {
         }
 
         fab1!!.setOnClickListener {
-            Toast.makeText(
-                application,
-                "Floating Action Button 1",
-                Toast.LENGTH_SHORT
-            ).show()
 
-            rootLayout!!.alpha = 100f
+            hideFAB()
         }
 
         fab2!!.setOnClickListener {
-            Toast.makeText(
-                application,
-                "Floating Action Button 2",
-                Toast.LENGTH_SHORT
-            ).show()
 
-            rootLayout!!.alpha = 100f
+            loadFragment(PaymentsMainFragment())
+            hideFAB()
+
         }
 
         fab3!!.setOnClickListener {
-            Toast.makeText(
-                application,
-                "Floating Action Button 3",
-                Toast.LENGTH_SHORT
-            ).show()
 
-            rootLayout!!.alpha = 100f
+            hideFAB()
         }
 
     }

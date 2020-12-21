@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.beneficiary.fragment.ChooseTransferTypeFragment
 import com.cloudwell.paywell.ui.beneficiary.fragment.FindPayWellUserFrg
+import com.cloudwell.paywell.ui.sendMoney.fragment.SendFundTransferTypeFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 
 class BeneficeryHostActivity : AppCompatActivity() {
@@ -16,8 +17,8 @@ class BeneficeryHostActivity : AppCompatActivity() {
         type = intent.getIntExtra(applicationContext.getString(R.string.beneficery_type), 0)
 
         if (type == 1) {
-            FragmentHelper.addFirstFragment(
-                ChooseTransferTypeFragment(),
+            FragmentHelper.replaceFragment(
+                SendFundTransferTypeFragment(),
                 supportFragmentManager,
                 R.id.beneficery_host_container
             )
