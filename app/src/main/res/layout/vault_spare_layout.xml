@@ -65,7 +65,7 @@
         tools:ignore="RtlCompat" />
 
     <ImageView
-        android:id="@+id/imageView297"
+        android:id="@+id/spare_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
