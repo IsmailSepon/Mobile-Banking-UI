@@ -62,7 +62,7 @@ class BudgetMainFragment : Fragment() {
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
-                Toast.makeText(requireContext(), ""+position , Toast.LENGTH_SHORT).show()
+            //    Toast.makeText(requireContext(), ""+position , Toast.LENGTH_SHORT).show()
 
                 if (position == 0){
                     graphDay = 12

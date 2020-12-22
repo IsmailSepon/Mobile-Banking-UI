@@ -1,14 +1,15 @@
 package com.cloudwell.paywell.ui.home
 
 import android.annotation.SuppressLint
+import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseActivity
@@ -52,7 +53,7 @@ class MainHomeActivity : BaseActivity() {
 
 
     @RequiresApi(Build.VERSION_CODES.M)
-    @SuppressLint("ResourceAsColor", "Range")
+    @SuppressLint("ResourceAsColor", "Range", "ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_home)
@@ -70,20 +71,20 @@ class MainHomeActivity : BaseActivity() {
 
         navView.setOnNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.navigation_account-> {
-                    title=resources.getString(R.string.account)
+                R.id.navigation_account -> {
+                    title = resources.getString(R.string.account)
                     loadFragment(AccountFragment())
-                    if (FAB_Status == true){
+                    if (FAB_Status == true) {
 
                         hideFAB()
                     }
                     return@setOnNavigationItemSelectedListener true
                 }
 
-                R.id.navigation_budget-> {
-                    title=resources.getString(R.string.budget)
+                R.id.navigation_budget -> {
+                    title = resources.getString(R.string.budget)
                     loadFragment(BudgetMainFragment())
-                    if (FAB_Status == true){
+                    if (FAB_Status == true) {
 
                         hideFAB()
                     }
@@ -111,20 +112,20 @@ class MainHomeActivity : BaseActivity() {
 //                    return@setOnNavigationItemSelectedListener true
 //                }
 
-                R.id.navigation_control-> {
-                    title=resources.getString(R.string.control)
+                R.id.navigation_control -> {
+                    title = resources.getString(R.string.control)
                     loadFragment(DashboardFragment())
-                    if (FAB_Status == true){
+                    if (FAB_Status == true) {
 
                         hideFAB()
                     }
                     return@setOnNavigationItemSelectedListener true
                 }
 
-                R.id.navigation_business-> {
-                    title=resources.getString(R.string.control)
+                R.id.navigation_business -> {
+                    title = resources.getString(R.string.control)
                     loadFragment(BusinessCardMenuFragment())
-                    if (FAB_Status == true){
+                    if (FAB_Status == true) {
 
                         hideFAB()
                     }
@@ -140,12 +141,16 @@ class MainHomeActivity : BaseActivity() {
 
 
 
+
+
+
+
         fab = fab_btn
         fab1 = fab_1
         fab2 = fab_2
         fab3 = fab_3
 
-        //Animations
+
 
         //Animations
         show_fab_1 = AnimationUtils.loadAnimation(application, R.anim.fab1_show)
@@ -169,28 +174,43 @@ class MainHomeActivity : BaseActivity() {
             }
 
 
-
         }
+        //fab.setCanceledOnTouchOutside()
 
         fab1!!.setOnClickListener {
-
-
+            Toast.makeText(this, "fab 1", Toast.LENGTH_SHORT).show()
             hideFAB()
         }
 
         fab2!!.setOnClickListener {
-
             loadFragment(PaymentsMainFragment())
             hideFAB()
 
         }
 
         fab3!!.setOnClickListener {
+            Toast.makeText(this, "fab 3", Toast.LENGTH_SHORT).show()
 
             hideFAB()
         }
 
     }
+
+
+    override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
+        val viewRect = Rect()
+        rootLayout?.getGlobalVisibleRect(viewRect)
+        if (!viewRect.contains(ev.rawX.toInt(), ev.rawY.toInt())) {
+           // setVisibility(View.GONE)
+                    if (FAB_Status == true){
+
+                          hideFAB()
+                    }
+
+        }
+         return super.dispatchTouchEvent(ev);
+    }
+
 
 
     private fun loadFragment(fragment: Fragment) {
@@ -252,10 +272,18 @@ class MainHomeActivity : BaseActivity() {
         fab3!!.isClickable = true
     }
 
+
+
     @SuppressLint("Range")
     private fun hideFAB() {
+
         FAB_Status = false
-        fab!!.startAnimation(AnimationUtils.loadAnimation(applicationContext, R.anim.fab_rotate_back))
+        fab!!.startAnimation(
+            AnimationUtils.loadAnimation(
+                applicationContext,
+                R.anim.fab_rotate_back
+            )
+        )
         fab!!.background = application.getDrawable(R.drawable.fab_no_border)
         fab!!.setImageResource(R.drawable.add_ic_white)
 
