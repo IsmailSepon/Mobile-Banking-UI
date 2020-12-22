@@ -4,10 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.vault_spare_layout.view.*
+
 
 class VaultSpareFragmetn : Fragment() {
 
@@ -26,9 +30,35 @@ class VaultSpareFragmetn : Fragment() {
 
         view.vault_spare_btn.setOnClickListener(View.OnClickListener {
 
-            FragmentHelper.replaceFragment(VaultAddDoneFragmetn(), requireActivity().supportFragmentManager, R.id.vault_intro_container)
+            FragmentHelper.replaceFragment(
+                VaultAddDoneFragmetn(),
+                requireActivity().supportFragmentManager,
+                R.id.vault_intro_container
+            )
 
         })
+
+        view.vault_radio_group.check(view.radio1.id)
+        view.vault_radio_group.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->
+            val checkedRadioButton = group.findViewById<View>(checkedId) as RadioButton
+            val isChecked = checkedRadioButton.isChecked
+            if (isChecked) {
+
+                Toast.makeText(requireContext(), checkedId.toString(), Toast.LENGTH_SHORT).show()
+
+            }
+
+
+        })
+
+
+
+
+
+
+
+
+
 
 
 

@@ -77,6 +77,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout65"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_50dp"
@@ -108,15 +109,15 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:textColor="@color/common_clr"
-            android:gravity="left"
-            android:textSize="@dimen/_14sp"
-            style="@style/text_style"
             android:id="@+id/textView755"
+            style="@style/text_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
-            android:text="You will save approximately ৳300.30 per month"
+            android:gravity="left"
+            android:text="@string/you_will_save_approximately_300_30_per_month"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_14sp"
             app:layout_constraintEnd_toStartOf="@+id/riminder_switch"
             app:layout_constraintStart_toStartOf="@+id/textView754"
             app:layout_constraintTop_toBottomOf="@+id/textView754" />
@@ -129,7 +130,6 @@
             android:layout_marginEnd="32dp"
             android:checked="false"
             android:theme="@style/switcherTheme"
-            app:layout_constraintBottom_toBottomOf="@+id/name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView754" />
 
@@ -145,7 +145,7 @@
         android:layout_height="@dimen/btn_hight"
         android:elevation="@dimen/evelation_five"
         android:background="@drawable/round_btn_visable"
-        android:text="Create Vault"
+        android:text="@string/create_vault"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp"
@@ -156,6 +156,131 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.88"
         tools:targetApi="lollipop" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_13_3sp"
+        android:id="@+id/textView768"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/spre_change_accelerator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout65" />
+
+
+    <RadioGroup
+        android:layout_marginTop="@dimen/_18dp"
+        android:id="@+id/vault_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView768"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="@dimen/_38dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:button="@color/transparent"
+            android:background="@drawable/vault_radio_bg"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_medium"
+            android:text="x1"
+            android:textColor="@drawable/radio_color_selector"
+            android:textSize="@dimen/_16sp"
+            android:theme="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_marginStart="@dimen/_13dp"
+            android:layout_width="@dimen/_38dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:button="@color/transparent"
+            android:background="@drawable/vault_radio_bg"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_medium"
+            android:text="x2"
+            android:textColor="@drawable/radio_color_selector"
+            android:textSize="@dimen/_16sp"
+            android:theme="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_marginStart="@dimen/_13dp"
+            android:layout_width="@dimen/_38dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:button="@color/transparent"
+            android:background="@drawable/vault_radio_bg"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_medium"
+            android:text="x3"
+            android:textColor="@drawable/radio_color_selector"
+            android:textSize="@dimen/_16sp"
+            android:theme="@style/RadioButtonStyle" />
+
+
+
+
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_marginStart="@dimen/_13dp"
+            android:layout_width="@dimen/_38dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:button="@color/transparent"
+            android:background="@drawable/vault_radio_bg"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_medium"
+            android:text="x4"
+            android:textColor="@drawable/radio_color_selector"
+            android:textSize="@dimen/_16sp"
+            android:theme="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/radio5"
+            android:layout_marginStart="@dimen/_13dp"
+            android:layout_width="@dimen/_38dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:button="@color/transparent"
+            android:background="@drawable/vault_radio_bg"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_medium"
+            android:text="x5"
+            android:textColor="@drawable/radio_color_selector"
+            android:textSize="@dimen/_16sp"
+            android:theme="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/radio6"
+            android:layout_marginStart="@dimen/_13dp"
+            android:layout_width="@dimen/_38dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:button="@color/transparent"
+            android:background="@drawable/vault_radio_bg"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_medium"
+            android:text="x10"
+            android:textColor="@drawable/radio_color_selector"
+            android:textSize="@dimen/_16sp"
+            android:theme="@style/RadioButtonStyle" />
+
+
+
+
+
+
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -908,6 +908,9 @@
     <string name="scan">Scan</string>
     <string name="pay">Pay</string>
     <string name="withdraw">Withdraw</string>
+    <string name="spre_change_accelerator">Spre change accelerator</string>
+    <string name="create_vault">Create Vault</string>
+    <string name="you_will_save_approximately_300_30_per_month">You will save approximately ৳300.30 per month</string>
 
 
 </resources>
