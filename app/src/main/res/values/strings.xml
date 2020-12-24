@@ -911,6 +911,11 @@
     <string name="spre_change_accelerator">Spre change accelerator</string>
     <string name="create_vault">Create Vault</string>
     <string name="you_will_save_approximately_300_30_per_month">You will save approximately ৳300.30 per month</string>
+    <string name="when_you_use_the_spare_change_accelerator_you_can_multiply_the_change_from_each_payment_you_make_with_your_paywell_card_by_2_3_4_or_even_10_times_the_original_amount_which_means_you_ll_fill_your_vault_even_faster">When you use the Spare Change Accelerator, you can multiply the change from each payment you make with your PayWell card by 2,3,4 or even 10 times the original amount - which means you’ll fill your Vault even faster.</string>
+    <string name="recurring_transfer">Recurring transfer</string>
+    <string name="frequency_">Frequency</string>
+    <string name="edit_recurring_transfer">Edit recurring transfer</string>
+    <string name="set_up_a_recurring_transfer_for_any_amount_to_your_vault_daily_weekly_or_monthly">Set up a recurring transfer for any amount to your vault - daily, weekly or monthly</string>
 
 
 </resources>

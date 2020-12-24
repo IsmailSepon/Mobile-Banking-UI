@@ -7,11 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.utils.FragmentHelper
-import kotlinx.android.synthetic.main.vault_add_done_layout.view.*
-import kotlinx.android.synthetic.main.vault_profile_layout.view.*
 import kotlinx.android.synthetic.main.vault_userprofile_layout.view.*
 
-class VaultProfileFragmetn : Fragment() {
+class VaultUserProfileFragmetn : Fragment() {
 
 
 
@@ -20,18 +18,18 @@ class VaultProfileFragmetn : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view: View =
-            inflater.inflate(R.layout.vault_profile_layout, container, false)
+            inflater.inflate(R.layout.vault_userprofile_layout, container, false)
 
 
 
+        view.edit_vault.setOnClickListener(View.OnClickListener {
+
+            FragmentHelper.replaceFragment(VaultRecurringEditFragmetn(), requireActivity().supportFragmentManager, R.id.vault_intro_container)
+        })
 
 
-
-
-
-        view.recurring_saving_layout.setOnClickListener(View.OnClickListener {
-
-            FragmentHelper.replaceFragment(VaultUserProfileFragmetn(), requireActivity().supportFragmentManager, R.id.vault_intro_container)
+        view.uservault_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
         })
 
 

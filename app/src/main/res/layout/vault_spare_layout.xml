@@ -118,13 +118,13 @@
             android:text="@string/you_will_save_approximately_300_30_per_month"
             android:textColor="@color/common_clr"
             android:textSize="@dimen/_14sp"
-            app:layout_constraintEnd_toStartOf="@+id/riminder_switch"
+            app:layout_constraintEnd_toStartOf="@+id/vault_spare_switch"
             app:layout_constraintStart_toStartOf="@+id/textView754"
             app:layout_constraintTop_toBottomOf="@+id/textView754" />
 
 
         <com.google.android.material.switchmaterial.SwitchMaterial
-            android:id="@+id/riminder_switch"
+            android:id="@+id/vault_spare_switch"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_17dp"
             android:layout_marginEnd="32dp"
