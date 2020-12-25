@@ -197,6 +197,7 @@
 
 
             <TextView
+                android:id="@+id/recurring_fund"
                 style="@style/medium_text_style"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -209,6 +210,7 @@
 
 
             <TextView
+                android:id="@+id/vault_info"
                 style="@style/medium_text_style"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

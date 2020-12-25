@@ -916,6 +916,11 @@
     <string name="frequency_">Frequency</string>
     <string name="edit_recurring_transfer">Edit recurring transfer</string>
     <string name="set_up_a_recurring_transfer_for_any_amount_to_your_vault_daily_weekly_or_monthly">Set up a recurring transfer for any amount to your vault - daily, weekly or monthly</string>
+    <string name="your_recurring_payment_of_500_will_be_deactivated_you_will_be_able_to_activate_it_at_any_time_later">Your recurring payment of ৳500 will be deactivated. You will be able to activate it at any time later.</string>
+    <string name="dactivate_recurring_payment">Dactivate recurring payment?</string>
+    <string name="delete_recurring_payment_test">Delete recurring payment test?</string>
+    <string name="your_recurring_payment_of_500_will_be_deleted_permanently">Your recurring payment of ৳500 will be deleted permanently.</string>
+    <string name="how_often_to_repeat">How often to repeat</string>
 
 
 </resources>

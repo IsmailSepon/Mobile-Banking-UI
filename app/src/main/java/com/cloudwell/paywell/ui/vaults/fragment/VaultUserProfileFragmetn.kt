@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.vaults.dialog.VAultDeactiveDialog
+import com.cloudwell.paywell.ui.vaults.dialog.VaultDelateDialog
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.vault_userprofile_layout.view.*
 
@@ -30,6 +32,21 @@ class VaultUserProfileFragmetn : Fragment() {
 
         view.uservault_back.setOnClickListener(View.OnClickListener {
             FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
+        view.vault_deactive.setOnClickListener(View.OnClickListener {
+
+            val dialog: VAultDeactiveDialog = VAultDeactiveDialog()
+            dialog.show(activity?.supportFragmentManager!!, "trxProfileDialog")
+
+        })
+
+
+        view.vault_close.setOnClickListener(View.OnClickListener {
+
+            val dialog: VaultDelateDialog = VaultDelateDialog()
+            dialog.show(activity?.supportFragmentManager!!, "trxProfileDialog")
+
         })
 
 

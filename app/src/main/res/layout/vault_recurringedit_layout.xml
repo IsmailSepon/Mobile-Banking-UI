@@ -206,7 +206,7 @@
 
 
     <Button
-        android:id="@+id/intro_one_btn"
+        android:id="@+id/recurring_confirm"
         android:layout_width="@dimen/btn_width"
         android:layout_height="@dimen/btn_hight"
         android:background="@drawable/round_btn_visable"

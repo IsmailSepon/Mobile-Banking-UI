@@ -29,9 +29,9 @@ class VaultRecurringEditFragmetn : Fragment() {
 
 
 
-//        view.uservault_back.setOnClickListener(View.OnClickListener {
-//            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
-//        })
+        view.recurring_confirm.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
 
 

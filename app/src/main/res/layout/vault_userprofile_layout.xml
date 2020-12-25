@@ -142,6 +142,7 @@
 
 
         <TextView
+            android:id="@+id/vault_deactive"
             style="@style/medium_text_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -154,6 +155,7 @@
 
 
         <TextView
+            android:id="@+id/vault_close"
             style="@style/medium_text_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
