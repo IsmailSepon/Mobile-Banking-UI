@@ -921,6 +921,7 @@
     <string name="delete_recurring_payment_test">Delete recurring payment test?</string>
     <string name="your_recurring_payment_of_500_will_be_deleted_permanently">Your recurring payment of ৳500 will be deleted permanently.</string>
     <string name="how_often_to_repeat">How often to repeat</string>
+    <string name="date_time"><![CDATA[Date & time]]></string>
 
 
 </resources>

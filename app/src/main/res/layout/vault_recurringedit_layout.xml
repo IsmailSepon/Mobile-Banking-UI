@@ -142,7 +142,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout64"
+        android:id="@+id/repeat_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -219,7 +219,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout64"
+        app:layout_constraintTop_toBottomOf="@+id/repeat_layout"
         app:layout_constraintVertical_bias="0.39"
         tools:targetApi="lollipop" />
 

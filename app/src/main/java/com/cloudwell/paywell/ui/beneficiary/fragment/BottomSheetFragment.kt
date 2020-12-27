@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
@@ -33,6 +34,9 @@ class BottomSheetFragment : BottomSheetDialogFragment(), IbeneficeryVIew {
         beneficeryViewModel!!.setView(this)
         binding.bottomsheetModel = beneficeryViewModel
         binding.lifecycleOwner = this
+
+
+        dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
 
         return binding.root
     }

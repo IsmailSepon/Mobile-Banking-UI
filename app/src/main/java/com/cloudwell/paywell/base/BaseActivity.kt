@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.cloudwell.paywell.appController.AppController
 import com.cloudwell.paywell.ui.registration.SignupActivity
+import com.cloudwell.paywell.ui.registration.SignupPasswordActivity
 
 
 /**
@@ -44,7 +45,7 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, I
 
     override fun doLogout() {
         Log.e(class_Name, "Time Out + log out")
-        val intent = Intent(this, SignupActivity::class.java)
+        val intent = Intent(this, SignupPasswordActivity::class.java)
         finishAffinity()
         this.finish()
         startActivity(intent)

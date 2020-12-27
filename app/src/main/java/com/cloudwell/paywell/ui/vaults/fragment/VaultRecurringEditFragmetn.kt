@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.vaults.dialog.VaultRepeatDialog
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.vault_recurringedit_layout.view.*
 import kotlinx.android.synthetic.main.vault_userprofile_layout.view.*
@@ -31,6 +32,14 @@ class VaultRecurringEditFragmetn : Fragment() {
 
         view.recurring_confirm.setOnClickListener(View.OnClickListener {
             FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
+        view.repeat_layout.setOnClickListener(View.OnClickListener {
+
+            val dialog: VaultRepeatDialog = VaultRepeatDialog()
+            dialog.show(activity?.supportFragmentManager!!, "trxProfileDialog")
+
+
         })
 
 
