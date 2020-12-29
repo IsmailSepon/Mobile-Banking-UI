@@ -8,6 +8,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
+
     defaultConfig {
         applicationId "com.cloudwell.paywell"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -16,6 +17,8 @@ android {
         versionName "0.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+        renderscriptTargetApi 28 //must match target sdk and build tools
+        renderscriptSupportModeEnabled true
 
         //Enable the use of support library for vector drawables
         vectorDrawables.useSupportLibrary = true
@@ -177,6 +180,11 @@ dependencies {
 
     //GraphView for budget
     implementation 'com.github.swapnil1104:CurveGraphView:2.1'
+
+
+    //blurview android
+    implementation 'com.eightbitlab:blurview:1.6.5'
+    implementation 'jp.wasabeef:blurry:4.0.0'
 
 
 }

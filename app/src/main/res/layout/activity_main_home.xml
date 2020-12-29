@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/coordinatorLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,15 +10,19 @@
 
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout35"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="@color/white"
+        android:id="@+id/coordinatorLayout"
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintTop_toTopOf="parent">
 
-        <fragment
+
+
+
+        <androidx.fragment.app.FragmentContainerView
             android:id="@+id/nav_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
@@ -28,7 +31,8 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="0dp" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <com.cloudwell.paywell.base.customView.FabBottomNavigationView
         android:id="@+id/nav_view"
@@ -46,9 +50,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-
-
-
     <LinearLayout
         android:id="@+id/fab_bg"
         android:layout_width="@dimen/_220dp"
@@ -62,8 +63,6 @@
             android:id="@+id/include"
             layout="@layout/fab_layout" />
     </LinearLayout>
-
-
 
     <ImageView
         android:id="@+id/fab_btn"
@@ -80,23 +79,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription" />
-
-
-
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab_btn"-->
-<!--        android:backgroundTint="@color/keypad_text_clr"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:clickable="true"-->
-<!--        android:focusable="true"-->
-<!--        app:layout_anchor="@id/nav_view"-->
-<!--        app:layout_anchorGravity="fill_vertical|center_horizontal"-->
-<!--        app:elevation="1dp"-->
-<!--        tools:ignore="ContentDescription" />-->
-
-
-
 
 
 

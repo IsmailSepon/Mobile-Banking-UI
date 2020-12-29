@@ -6,10 +6,12 @@ import android.os.Build
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
+import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.annotation.RequiresApi
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseActivity
@@ -21,6 +23,8 @@ import com.cloudwell.paywell.ui.dashboard.DashboardFragment
 import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardMenuFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import eightbitlab.com.blurview.RenderScriptBlur
+import jp.wasabeef.blurry.Blurry
 import kotlinx.android.synthetic.main.activity_main_home.*
 import kotlinx.android.synthetic.main.budget_marchent_item.*
 import kotlinx.android.synthetic.main.fab_layout.*
@@ -38,7 +42,7 @@ class MainHomeActivity : BaseActivity() {
     var fab2: TextView? = null
     var fab3: TextView? = null
     var rootLayout: LinearLayout? = null
-
+    var framerootLayout: ConstraintLayout? = null
 
     private var FAB_Status = false
 
@@ -61,6 +65,7 @@ class MainHomeActivity : BaseActivity() {
         val sharePreference : Preference = Preference.getInstance(this)
         userType = sharePreference.getData(getString(R.string.userType))
         rootLayout = findViewById<LinearLayout>(R.id.fab_bg)
+        framerootLayout = coordinatorLayout
 
 
         val navView: FabBottomNavigationView = findViewById(R.id.nav_view)
@@ -238,7 +243,10 @@ class MainHomeActivity : BaseActivity() {
 
 
 
+    @SuppressLint("Range")
     private fun expandFAB() {
+       // framerootLayout?.alpha = 0.1f
+        setBlur()
         FAB_Status = true
         fab!!.startAnimation(AnimationUtils.loadAnimation(applicationContext, R.anim.fab_rotate))
         fab!!.background = application.getDrawable(R.drawable.fab_border)
@@ -276,7 +284,8 @@ class MainHomeActivity : BaseActivity() {
 
     @SuppressLint("Range")
     private fun hideFAB() {
-
+       // framerootLayout!!.alpha = 100f
+        hideBlur()
         FAB_Status = false
         fab!!.startAnimation(
             AnimationUtils.loadAnimation(
@@ -287,7 +296,6 @@ class MainHomeActivity : BaseActivity() {
         fab!!.background = application.getDrawable(R.drawable.fab_no_border)
         fab!!.setImageResource(R.drawable.add_ic_white)
 
-//        rootLayout!!.alpha = 100f
         rootLayout!!.background = null//resources.getDrawable(R.drawable.half_moon)
 
         //Floating Action Button 1
@@ -314,6 +322,20 @@ class MainHomeActivity : BaseActivity() {
         fab3!!.startAnimation(hide_fab_3)
         fab3!!.isClickable = false
     }
+
+
+    private fun setBlur(){
+
+       Blurry.with(this).radius(25).sampling(1).async().onto(framerootLayout)
+
+    }
+
+    private fun hideBlur(){
+
+       Blurry.delete(framerootLayout) //.radius(0).sampling(1).async().onto(framerootLayout)
+        
+    }
+
 
 
 
