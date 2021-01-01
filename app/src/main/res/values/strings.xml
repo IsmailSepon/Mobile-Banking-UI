@@ -922,6 +922,11 @@
     <string name="your_recurring_payment_of_500_will_be_deleted_permanently">Your recurring payment of ৳500 will be deleted permanently.</string>
     <string name="how_often_to_repeat">How often to repeat</string>
     <string name="date_time"><![CDATA[Date & time]]></string>
+    <string name="payment_from">Payment from</string>
+    <string name="next_payment">Next payment</string>
+    <string name="started_on">Started on</string>
+    <string name="total_paid">Total paid</string>
+    <string name="report_an_issue">Report an issue</string>
 
 
 </resources>

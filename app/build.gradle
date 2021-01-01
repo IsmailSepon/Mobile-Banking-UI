@@ -183,7 +183,6 @@ dependencies {
 
 
     //blurview android
-    implementation 'com.eightbitlab:blurview:1.6.5'
     implementation 'jp.wasabeef:blurry:4.0.0'
 
 

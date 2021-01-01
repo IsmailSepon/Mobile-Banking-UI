@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_30dp"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView706"
+            style="@style/text_style"
+            android:layout_width="@dimen/_250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="left"
+            android:text="We’ll return all remaining funds to your BDT account: Your funds will arrive immediately"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView769" />
+
+        <TextView
+            android:id="@+id/gotit_txt"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/confirm"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView706"
+            app:layout_constraintTop_toBottomOf="@+id/textView706" />
+
+        <TextView
+            android:id="@+id/textView769"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:text="Do you want to close this vault?"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/medium_text_style"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_15sp"
+            android:id="@+id/textView786"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="21dp"
+            android:text="Cancel"
+            app:layout_constraintEnd_toStartOf="@+id/gotit_txt"
+            app:layout_constraintTop_toTopOf="@+id/gotit_txt" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.vaults.dialog.SuccessDialog
+import com.cloudwell.paywell.ui.vaults.dialog.VaultCloseDialog
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.vault_profile_layout.view.*
 
@@ -36,6 +38,14 @@ class VaultProfileFragmetn : Fragment() {
 
         view.vault_info.setOnClickListener(View.OnClickListener {
             FragmentHelper.replaceFragment(VaultInfoFragmetn(), requireActivity().supportFragmentManager, R.id.vault_intro_container)
+        })
+
+
+        view.vault_close.setOnClickListener(View.OnClickListener {
+            //FragmentHelper.replaceFragment(VaultInfoFragmetn(), requireActivity().supportFragmentManager, R.id.vault_intro_container)
+            val dialog: VaultCloseDialog = VaultCloseDialog()
+            dialog.dialog?.setCanceledOnTouchOutside(true)
+            dialog.show(activity?.supportFragmentManager!!, "VaultCloseDialog")
         })
 
 

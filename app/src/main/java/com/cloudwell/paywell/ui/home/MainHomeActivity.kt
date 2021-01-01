@@ -23,7 +23,6 @@ import com.cloudwell.paywell.ui.dashboard.DashboardFragment
 import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardMenuFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import eightbitlab.com.blurview.RenderScriptBlur
 import jp.wasabeef.blurry.Blurry
 import kotlinx.android.synthetic.main.activity_main_home.*
 import kotlinx.android.synthetic.main.budget_marchent_item.*
@@ -246,14 +245,14 @@ class MainHomeActivity : BaseActivity() {
     @SuppressLint("Range")
     private fun expandFAB() {
        // framerootLayout?.alpha = 0.1f
-        setBlur()
         FAB_Status = true
         fab!!.startAnimation(AnimationUtils.loadAnimation(applicationContext, R.anim.fab_rotate))
+        //floatting button background after click
         fab!!.background = application.getDrawable(R.drawable.fab_border)
         fab!!.setImageResource(R.drawable.add_ic)
 
 
-        rootLayout!!.background = resources.getDrawable(R.drawable.half_moon)
+      //  rootLayout!!.background = resources.getDrawable(R.drawable.half_moon)
 
         //Floating Action Button 1
         val layoutParams = fab1!!.layoutParams as FrameLayout.LayoutParams
@@ -278,6 +277,8 @@ class MainHomeActivity : BaseActivity() {
         fab3!!.layoutParams = layoutParams3
         fab3!!.startAnimation(show_fab_3)
         fab3!!.isClickable = true
+
+        setBlur()
     }
 
 
@@ -296,7 +297,7 @@ class MainHomeActivity : BaseActivity() {
         fab!!.background = application.getDrawable(R.drawable.fab_no_border)
         fab!!.setImageResource(R.drawable.add_ic_white)
 
-        rootLayout!!.background = null//resources.getDrawable(R.drawable.half_moon)
+      //  rootLayout!!.background = null//resources.getDrawable(R.drawable.half_moon)
 
         //Floating Action Button 1
         val layoutParams = fab1!!.layoutParams as FrameLayout.LayoutParams
@@ -333,7 +334,7 @@ class MainHomeActivity : BaseActivity() {
     private fun hideBlur(){
 
        Blurry.delete(framerootLayout) //.radius(0).sampling(1).async().onto(framerootLayout)
-        
+
     }
 
 
