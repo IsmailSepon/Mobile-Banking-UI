@@ -2,7 +2,7 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillAfter="true">
 
-    <!--Move-->
+<!--    &lt;!&ndash;Move&ndash;&gt;-->
 <!--    <translate-->
 <!--        android:duration="1000"-->
 <!--        android:fromXDelta="-25%"-->
@@ -11,6 +11,24 @@
 <!--        android:toXDelta="0%"-->
 <!--        android:toYDelta="0%" />-->
 
+    <!--Move-->
+    <translate
+        android:duration="1000"
+        android:fromXDelta="-100%"
+        android:fromYDelta="-170%"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:toXDelta="0%"
+        android:toYDelta="0%" />
+
+
+    <!--Move-->
+<!--    <translate-->
+<!--        android:duration="1000"-->
+<!--        android:fromXDelta="-100%"-->
+<!--        android:fromYDelta="170%"-->
+<!--        android:interpolator="@android:anim/linear_interpolator"-->
+<!--        android:toXDelta="0%"-->
+<!--        android:toYDelta="0%" />-->
 
     <!--Fade Out-->
     <alpha

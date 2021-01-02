@@ -19,6 +19,7 @@ import com.cloudwell.paywell.base.Preference
 import com.cloudwell.paywell.base.customView.FabBottomNavigationView
 import com.cloudwell.paywell.ui.account.fragment.AccountFragment
 import com.cloudwell.paywell.ui.budget.fragment.BudgetMainFragment
+import com.cloudwell.paywell.ui.cards.fragment.CardsFragment
 import com.cloudwell.paywell.ui.dashboard.DashboardFragment
 import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardMenuFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment
@@ -182,7 +183,7 @@ class MainHomeActivity : BaseActivity() {
         //fab.setCanceledOnTouchOutside()
 
         fab1!!.setOnClickListener {
-            Toast.makeText(this, "fab 1", Toast.LENGTH_SHORT).show()
+          //  Toast.makeText(this, "fab 1", Toast.LENGTH_SHORT).show()
             hideFAB()
         }
 
@@ -193,8 +194,8 @@ class MainHomeActivity : BaseActivity() {
         }
 
         fab3!!.setOnClickListener {
-            Toast.makeText(this, "fab 3", Toast.LENGTH_SHORT).show()
-
+          //  Toast.makeText(this, "fab 3", Toast.LENGTH_SHORT).show()
+            loadFragment(CardsFragment())
             hideFAB()
         }
 

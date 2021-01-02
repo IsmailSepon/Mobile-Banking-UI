@@ -13,6 +13,14 @@
 
 
 
+    <translate
+        android:duration="600"
+        android:fromXDelta="-100%"
+        android:toXDelta="0%"
+        android:fromYDelta="-500%"
+        android:toYDelta="0%"
+        android:interpolator="@android:anim/linear_interpolator" />
+
 
     <!--Fade Out-->
     <alpha

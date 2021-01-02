@@ -1,8 +1,11 @@
 package com.cloudwell.paywell.ui.vaults.dialog
 
-import android.app.Dialog
+import android.graphics.Color
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.DialogFragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
 
@@ -16,11 +19,18 @@ class VaultCloseDialog : BaseDialog() {
     ): View? {
         val view = layoutInflater.inflate(R.layout.vault_close_dialog, null)
         this.dialog?.setCanceledOnTouchOutside(true)
+        setStyle(DialogFragment.STYLE_NO_TITLE, R.style.MyDialog);
 
 
 
         return view
     }
+
+//    override fun onStart() {
+//        super.onStart()
+//        val window = dialog!!.window
+//        window!!.setBackgroundDrawableResource(R.color.keypad_text_clr)
+//    }
 
 
 

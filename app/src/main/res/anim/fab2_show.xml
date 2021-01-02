@@ -16,10 +16,10 @@
     <!--Move-->
 
     <translate
-        android:duration="300"
+        android:duration="600"
         android:fromXDelta="100%"
         android:toXDelta="0%"
-        android:fromYDelta="1000%"
+        android:fromYDelta="500%"
         android:toYDelta="0%"
         android:interpolator="@android:anim/linear_interpolator" />
 
