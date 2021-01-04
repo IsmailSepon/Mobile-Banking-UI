@@ -18,7 +18,8 @@
 <!--        android:title="@string/pay" />-->
 
     <item
-        android:enabled="false"
+        android:id="@+id/blank_item"
+        android:enabled="true"
         android:title="@null" />
 
 <!--    <item-->

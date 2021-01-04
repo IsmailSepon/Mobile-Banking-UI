@@ -1,7 +1,10 @@
 package com.cloudwell.paywell.ui.home
 
 import android.annotation.SuppressLint
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.graphics.Rect
+import android.graphics.drawable.DrawableWrapper
 import android.os.Build
 import android.os.Bundle
 import android.view.MotionEvent
@@ -12,6 +15,7 @@ import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseActivity
@@ -24,6 +28,7 @@ import com.cloudwell.paywell.ui.dashboard.DashboardFragment
 import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardMenuFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import jp.wasabeef.blurry.Blurry
 import kotlinx.android.synthetic.main.activity_main_home.*
 import kotlinx.android.synthetic.main.budget_marchent_item.*
@@ -36,8 +41,8 @@ class MainHomeActivity : BaseActivity() {
 
     var userType : String? = null
 
-    var fab: ImageView? = null
-    //var fab: FloatingActionButton? = null
+    var mFab : ImageView? = null
+   // var mFab: FloatingActionButton? = null
     var fab1: TextView? = null
     var fab2: TextView? = null
     var fab3: TextView? = null
@@ -137,6 +142,24 @@ class MainHomeActivity : BaseActivity() {
                     return@setOnNavigationItemSelectedListener true
                 }
 
+                R.id.blank_item ->{
+
+
+               //     Toast.makeText(this, "che ck", Toast.LENGTH_SHORT).show()
+                    FAB_Status = if (FAB_Status  == false) {
+                        //Display FAB menu
+
+                        expandFAB()
+                        true
+                    } else {
+                        //Close FAB menu
+
+                        hideFAB()
+                        false
+                    }
+
+                }
+
             }
             false
 
@@ -150,7 +173,14 @@ class MainHomeActivity : BaseActivity() {
 
 
 
-        fab = fab_btn
+        mFab = fab_btn
+       // fab.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#mycolor")));
+        //fab?.setBackgroundResource(R.drawable.fab_no_border)
+       // mFab?.background = getDrawable(R.drawable.fab_no_border)
+        //mFab?.setBackgroundTintList(ColorStateList.valueOf(R.drawable.fab_no_border));
+      //  mFab?.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.fab_no_border));
+            //ColorStateList.valueOf(resources.getDrawable(R.drawable.fab_no_border, null))
+
         fab1 = fab_1
         fab2 = fab_2
         fab3 = fab_3
@@ -165,7 +195,7 @@ class MainHomeActivity : BaseActivity() {
         show_fab_3 = AnimationUtils.loadAnimation(application, R.anim.fab3_show)
         hide_fab_3 = AnimationUtils.loadAnimation(application, R.anim.fab3_hide)
 
-        fab!!.setOnClickListener {
+        mFab!!.setOnClickListener {
             FAB_Status = if (FAB_Status  == false) {
                 //Display FAB menu
 
@@ -213,7 +243,7 @@ class MainHomeActivity : BaseActivity() {
                     }
 
         }
-         return super.dispatchTouchEvent(ev);
+         return super.dispatchTouchEvent(ev)
     }
 
 
@@ -247,10 +277,10 @@ class MainHomeActivity : BaseActivity() {
     private fun expandFAB() {
        // framerootLayout?.alpha = 0.1f
         FAB_Status = true
-        fab!!.startAnimation(AnimationUtils.loadAnimation(applicationContext, R.anim.fab_rotate))
+        mFab!!.startAnimation(AnimationUtils.loadAnimation(applicationContext, R.anim.fab_rotate))
         //floatting button background after click
-        fab!!.background = application.getDrawable(R.drawable.fab_border)
-        fab!!.setImageResource(R.drawable.add_ic)
+        mFab!!.background = application.getDrawable(R.drawable.fab_border)
+        mFab!!.setImageResource(R.drawable.add_ic)
 
 
       //  rootLayout!!.background = resources.getDrawable(R.drawable.half_moon)
@@ -289,14 +319,14 @@ class MainHomeActivity : BaseActivity() {
        // framerootLayout!!.alpha = 100f
         hideBlur()
         FAB_Status = false
-        fab!!.startAnimation(
+        mFab!!.startAnimation(
             AnimationUtils.loadAnimation(
                 applicationContext,
                 R.anim.fab_rotate_back
             )
         )
-        fab!!.background = application.getDrawable(R.drawable.fab_no_border)
-        fab!!.setImageResource(R.drawable.add_ic_white)
+        mFab!!.background = application.getDrawable(R.drawable.fab_no_border)
+        mFab!!.setImageResource(R.drawable.add_ic_white)
 
       //  rootLayout!!.background = null//resources.getDrawable(R.drawable.half_moon)
 

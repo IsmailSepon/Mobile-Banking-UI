@@ -43,27 +43,43 @@
         tools:ignore="ContentDescription" />
 
 
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/budget_picker"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="34dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.50"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/selection_spinner" />-->
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/budget_picker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        android:layout_marginTop="@dimen/_34dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/selection_spinner" />
 
 
     <com.broooapps.graphview.CurveGraphView
         android:id="@+id/budget_graphview"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_200dp"
         android:layout_margin="@dimen/_5dp"
-        android:paddingBottom="-30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="5dp"
         android:background="@drawable/graph_border"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/budget_picker" />
+
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -82,7 +98,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/paywell_type" />
+            app:srcCompat="@drawable/paywell_type"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView719"
@@ -126,6 +143,7 @@
         android:layout_height="1dp"
         android:layout_marginTop="32dp"
         android:background="@color/tollbar_bg"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout60" />
 
 

@@ -20,14 +20,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-
-
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/nav_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="0dp" />
 
@@ -42,7 +41,7 @@
         android:background="#f3f6fa"
         app:fab_cradle_margin="8dp"
         app:fab_cradle_rounded_corner_radius="8dp"
-        app:fab_size="50dp"
+        app:fab_size="@dimen/_50dp"
         app:itemIconTint="@color/keypad_text_clr"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,20 +58,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <include
-            android:id="@+id/include"
-            layout="@layout/fab_layout" />
+        <include android:id="@+id/include"  layout="@layout/fab_layout" />
+
     </LinearLayout>
+
+
 
     <ImageView
         android:id="@+id/fab_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/_55dp"
+        android:layout_height="@dimen/_55dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/fab_no_border"
         android:padding="@dimen/_15dp"
         android:src="@drawable/add_ic_white"
-        app:elevation="16dp"
         app:layout_anchor="@id/nav_view"
         app:layout_anchorGravity="fill_vertical|center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,6 +79,22 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription" />
 
+
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:src="@drawable/add_ic_white"-->
+<!--        app:elevation="@dimen/_0dp"-->
+<!--        app:layout_anchor="@id/nav_view"-->
+<!--        app:fabSize="auto"-->
+<!--        app:layout_anchorGravity="fill_vertical|center_horizontal"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        tools:ignore="ContentDescription"/>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

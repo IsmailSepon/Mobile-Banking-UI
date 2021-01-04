@@ -8,6 +8,6 @@ import com.cloudwell.paywell.R
 
 class SliderItemViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
 
-    val tvItem: TextView? = itemView?.findViewById(R.id.tv_item)
-    val tvItemmonth: TextView? = itemView?.findViewById(R.id.month_txt)
+    val tvItem: TextView? = itemView?.findViewById(R.id.budget_item)
+    val tvItemmonth: TextView? = itemView?.findViewById(R.id.budget_month_txt)
 }

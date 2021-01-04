@@ -23,6 +23,8 @@ import com.cloudwell.paywell.ui.budget.adapter.BudgetPagerAdapter
 import com.cloudwell.paywell.ui.budget.layoutManager.BudgetLayoutManager
 import com.cloudwell.paywell.ui.budget.model.BudgetPOjo
 import com.example.nbtk.slider.ScreenUtils
+import com.example.nbtk.slider.SliderAdapter
+import com.example.nbtk.slider.SliderLayoutManager
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.budget_main_layout.*
 import kotlinx.android.synthetic.main.budget_main_layout.view.*
@@ -81,32 +83,25 @@ class BudgetMainFragment : Fragment() {
 
         }
 
-        data.add("300")
-        data.add("500")
-        data.add("1000")
-        data.add("1500")
-        data.add("2000")
-        data.add("2500")
-        data.add("3000")
 
 
-        val p  = BudgetPOjo()
-        p.amount = "৳0"
-        p.month = "This month"
 
-        slidedata.add(p)
-        slidedata.add(p)
-        slidedata.add(p)
-        slidedata.add(p)
-        slidedata.add(p)
-        slidedata.add(p)
-        slidedata.add(p)
-        slidedata.add(p)
-        slidedata.add(p)
-        slidedata.add(p)
-
-
-        setHorizontalPicker(view)
+//        val p  = BudgetPOjo()
+//        p.amount = "৳0"
+//        p.month = "This month"
+//
+//        slidedata.add(p)
+//        slidedata.add(p)
+//        slidedata.add(p)
+//        slidedata.add(p)
+//        slidedata.add(p)
+//        slidedata.add(p)
+//        slidedata.add(p)
+//        slidedata.add(p)
+//        slidedata.add(p)
+//        slidedata.add(p)
+//        rvHorizontalPicker = view.budget_picker
+       // setHorizontalPicker(view)
 
 
         curveGraphView = view.budget_graphview
@@ -209,14 +204,13 @@ class BudgetMainFragment : Fragment() {
     }
 
 
+
+
     private fun setHorizontalPicker(view: View) {
-        rvHorizontalPicker = view.findViewById(R.id.budget_picker)
+      //  rvHorizontalPicker = view.findViewById(R.id.budget_picker)
 
         // Setting the padding such that the items will appear in the middle of the screen
-        val padding: Int = ScreenUtils.getScreenWidth(view.context) / 2  - ScreenUtils.dpToPx(
-            view.context,
-            100
-        )
+        val padding: Int = ScreenUtils.getScreenWidth(view.context) / 2  - ScreenUtils.dpToPx(view.context, 100)
 
         rvHorizontalPicker.setPadding(padding, 0, padding, 0)
         val layoutManager = LinearLayoutManager(requireContext())
@@ -224,14 +218,15 @@ class BudgetMainFragment : Fragment() {
 
         rvHorizontalPicker.layoutManager = layoutManager
         // Setting layout manager
-        rvHorizontalPicker.layoutManager = BudgetLayoutManager(view.context).apply {
-            callback = object : BudgetLayoutManager.OnItemSelectedListener {
-                override fun onItemSelected(layoutPosition: Int) {
-//                    tvSelectedItem.text = data[layoutPosition]
-                    sliderAdapter.setSelectedItem(layoutPosition)
-                }
-            }
-        }
+
+//        rvHorizontalPicker.layoutManager = BudgetLayoutManager(view.context).apply {
+//            callback = object : BudgetLayoutManager.OnItemSelectedListener {
+//                override fun onItemSelected(layoutPosition: Int) {
+////                    tvSelectedItem.text = data[layoutPosition]
+//                    sliderAdapter.setSelectedItem(layoutPosition)
+//                }
+//            }
+//        }
 
         // Setting Adapter
         sliderAdapter = BudgetAdapter(requireContext())
