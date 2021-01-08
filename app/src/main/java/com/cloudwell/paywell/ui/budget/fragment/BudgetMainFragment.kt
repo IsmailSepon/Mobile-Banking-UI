@@ -20,13 +20,9 @@ import com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel
 import com.cloudwell.paywell.ui.budget.BudgetHostActivity
 import com.cloudwell.paywell.ui.budget.adapter.BudgetAdapter
 import com.cloudwell.paywell.ui.budget.adapter.BudgetPagerAdapter
-import com.cloudwell.paywell.ui.budget.layoutManager.BudgetLayoutManager
 import com.cloudwell.paywell.ui.budget.model.BudgetPOjo
 import com.example.nbtk.slider.ScreenUtils
-import com.example.nbtk.slider.SliderAdapter
-import com.example.nbtk.slider.SliderLayoutManager
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.budget_main_layout.*
 import kotlinx.android.synthetic.main.budget_main_layout.view.*
 
 class BudgetMainFragment : Fragment() {

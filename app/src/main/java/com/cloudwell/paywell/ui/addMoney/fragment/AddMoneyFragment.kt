@@ -52,7 +52,6 @@ class AddMoneyFragment : Fragment(), IaddMoneyVIew {
         data.add("3000000")
 
         setTvSelectedItem(binding.root)
-       // setHorizontalPicker(binding.root)
         setPicker(binding.root)
 
 
@@ -92,37 +91,6 @@ class AddMoneyFragment : Fragment(), IaddMoneyVIew {
         tvSelectedItem = view.findViewById(R.id.textView29)
     }
 
-    private fun setHorizontalPicker(view: View) {
-        rvHorizontalPicker = view.findViewById(R.id.rv_horizontal_picker)
-
-        // Setting the padding such that the items will appear in the middle of the screen
-        val padding: Int = ScreenUtils.getScreenWidth(view.context) / 2 - ScreenUtils.dpToPx(
-            view.context,
-            40
-        )
-        rvHorizontalPicker.setPadding(padding, 0, padding, 0)
-
-        // Setting layout manager
-        rvHorizontalPicker.layoutManager = SliderLayoutManager(view.context).apply {
-            callback = object : SliderLayoutManager.OnItemSelectedListener {
-                override fun onItemSelected(layoutPosition: Int) {
-                    tvSelectedItem.text = data[layoutPosition]
-                }
-            }
-        }
-
-        // Setting Adapter
-        rvHorizontalPicker.adapter = AmountPickerAdapter().apply {
-            setData(data)
-            callback = object : AmountPickerAdapter.Callback {
-                override fun onItemClicked(view: View) {
-                    rvHorizontalPicker.smoothScrollToPosition(
-                        rvHorizontalPicker.getChildLayoutPosition(view)
-                    )
-                }
-            }
-        }
-    }
 
 
     private fun setPicker(view: View) {
