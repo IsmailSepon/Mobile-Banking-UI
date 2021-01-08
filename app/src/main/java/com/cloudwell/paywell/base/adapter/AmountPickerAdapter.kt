@@ -1,4 +1,4 @@
-package com.example.nbtk.slider
+package com.cloudwell.paywell.base.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,10 +7,8 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.base.adapter.PickerItemViewHolder
 
-
-class SliderAdapter(mContext: Context) : RecyclerView.Adapter<PickerItemViewHolder>() {
+class AmountPickerAdapter : RecyclerView.Adapter<PickerItemViewHolder>() {
 
     private val data: ArrayList<String> = ArrayList()
     var callback: Callback? = null
@@ -46,12 +44,15 @@ class SliderAdapter(mContext: Context) : RecyclerView.Adapter<PickerItemViewHold
             }
             else -> holder.tvItem?.setTextColor(ContextCompat.getColor(ctx!!, R.color.common_clr))
         }
-
-
     }
 
     fun setSelectedItem(position: Int) {
         selectedItem = position
+        notifyDataSetChanged()
+    }
+
+    fun checkedItem(pos: Int) {
+        selectedItem = pos
         notifyDataSetChanged()
     }
 

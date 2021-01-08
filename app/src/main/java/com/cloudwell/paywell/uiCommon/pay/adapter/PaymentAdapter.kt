@@ -54,6 +54,7 @@ class PaymentAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
             notifyDataSetChanged()
 
         })
+
         if (index==position){
 
             holder.icon.setColorFilter(mContext.getColor(R.color.colorPrimaryDark))

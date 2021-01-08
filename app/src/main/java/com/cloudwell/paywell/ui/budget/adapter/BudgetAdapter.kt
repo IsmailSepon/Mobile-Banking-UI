@@ -46,7 +46,7 @@ class BudgetAdapter (mContext: Context) : RecyclerView.Adapter<SliderItemViewHol
     override fun onBindViewHolder(holder: SliderItemViewHolder, position: Int) {
        // holder.tvItem?.text = data[position]
         holder.tvItem?.text = data2.get(position).amount
-        holder.tvItemmonth?.text = data2.get(position).month
+       // holder.tvItemmonth?.text = data2.get(position).month
 
         when (selectedItem) {
             position -> {
