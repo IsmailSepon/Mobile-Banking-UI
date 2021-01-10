@@ -1,72 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/dialog_round_bg"
+    android:background="@color/transparent"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/textView151"
-        style="@style/medium_text_style"
-        android:layout_width="@dimen/_220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="40dp"
-        android:gravity="left"
-        android:text="@string/are_you_sure_you_want_to_ndelete_this_beneficiary"
-        android:textColor="@color/keypad_text_clr"
-        android:textSize="@dimen/_15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.01"
-        app:layout_constraintStart_toStartOf="@+id/imageView163"
-        app:layout_constraintTop_toBottomOf="@+id/imageView163"
-        tools:ignore="RtlHardcoded" />
-
-    <Button
-        android:id="@+id/confirm_mobile_finc"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@color/transparent"
-        android:fontFamily="@font/roboto_regular"
-        android:gravity="left"
-        android:text="@string/confirm"
-        android:textAllCaps="false"
-        android:textColor="@color/text_link_clr"
-        android:textSize="@dimen/_15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView151"
-        app:layout_constraintTop_toBottomOf="@+id/textView151"
-        tools:ignore="RtlHardcoded" />
+        android:background="@drawable/cardview_shadow"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView151"
+            style="@style/medium_text_style"
+            android:layout_width="@dimen/_220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="left"
+            android:text="@string/are_you_sure_you_want_to_ndelete_this_beneficiary"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toStartOf="@+id/imageView163"
+            app:layout_constraintTop_toBottomOf="@+id/imageView163"
+            tools:ignore="RtlHardcoded" />
 
-    <Button
-        android:id="@+id/cancel_mobile_finc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/transparent"
-        android:fontFamily="@font/roboto_regular"
-        android:gravity="left"
-        android:text="@string/cancel"
-        android:textAllCaps="false"
-        android:textColor="@color/text_link_clr"
-        android:textSize="@dimen/_15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/confirm_mobile_finc"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_mobile_finc" />
+        <Button
+            android:id="@+id/confirm_mobile_finc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="left"
+            android:text="@string/confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView151"
+            app:layout_constraintTop_toBottomOf="@+id/textView151"
+            tools:ignore="RtlHardcoded" />
 
-    <ImageView
-        android:id="@+id/imageView163"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="22dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/delate_ic"
-        tools:ignore="ContentDescription" />
+        <Button
+            android:id="@+id/cancel_mobile_finc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="left"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/confirm_mobile_finc"
+            app:layout_constraintTop_toBottomOf="@+id/confirm_mobile_finc" />
+
+        <ImageView
+            android:id="@+id/imageView163"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="22dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/delate_ic"
+            tools:ignore="ContentDescription" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</RelativeLayout>

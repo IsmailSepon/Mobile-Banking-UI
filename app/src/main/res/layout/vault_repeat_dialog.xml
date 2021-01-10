@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="300dp"
+    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="@dimen/_10dp"
-    android:background="@color/white"
-    android:layout_height="wrap_content">
+    android:background="@color/transparent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:paddingBottom="@dimen/_30dp"
-        android:layout_height="match_parent">
+        android:background="@drawable/cardview_shadow"
+        android:layout_height="wrap_content">
 
 
 
@@ -21,6 +23,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
+            android:layout_gravity="left"
+            android:gravity="left"
             android:layout_marginTop="30dp"
             android:text="@string/how_often_to_repeat"
             android:textColor="@color/keypad_text_clr"
@@ -146,4 +150,4 @@
 
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+</RelativeLayout>

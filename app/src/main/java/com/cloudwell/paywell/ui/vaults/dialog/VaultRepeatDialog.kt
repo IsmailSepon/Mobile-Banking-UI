@@ -2,6 +2,7 @@ package com.cloudwell.paywell.ui.vaults.dialog
 
 import android.os.Bundle
 import android.view.*
+import androidx.fragment.app.DialogFragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
 import com.cloudwell.paywell.ui.vaults.fragment.bottomsheet.VaultBottomSheetFragment

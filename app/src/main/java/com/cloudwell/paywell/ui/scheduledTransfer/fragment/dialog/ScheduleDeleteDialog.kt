@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
+import kotlinx.android.synthetic.main.schedule_delete_dialog.view.*
 
 class ScheduleDeleteDialog : BaseDialog() {
 
@@ -21,6 +22,15 @@ class ScheduleDeleteDialog : BaseDialog() {
 //        view.submit_button.setOnClickListener(View.OnClickListener {
 //            dialog.dismiss()
 //        })
+
+
+        view.sc_cancle_btn.setOnClickListener(View.OnClickListener {
+            dismiss()
+        })
+
+        view.sc_delate_btn.setOnClickListener(View.OnClickListener {
+            dismiss()
+        })
 
         return view
     }

@@ -927,6 +927,7 @@
     <string name="started_on">Started on</string>
     <string name="total_paid">Total paid</string>
     <string name="report_an_issue">Report an issue</string>
+    <string name="your_spare_change_settings_have_been_updated">Your spare change settings have been updated</string>
 
 
 </resources>

@@ -22,8 +22,8 @@ class SuccessDialog : BaseDialog() {
 //            requireActivity().supportFragmentManager,
 //            R.id.vault_intro_container
 //        )
+             setDialogGravity(Gravity.BOTTOM )
 
-        setDialogGravity(Gravity.BOTTOM )
 
         return view
     }
