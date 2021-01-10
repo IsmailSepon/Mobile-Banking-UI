@@ -19,6 +19,7 @@ class MonthlyLimitDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.monthly_limits_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
         view.currency_spinner.onItemSelectedListener

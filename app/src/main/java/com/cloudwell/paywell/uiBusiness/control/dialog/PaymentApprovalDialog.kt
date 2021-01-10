@@ -16,6 +16,7 @@ class PaymentApprovalDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.payment_approval_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
 

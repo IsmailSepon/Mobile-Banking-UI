@@ -15,6 +15,7 @@ class ScheduleActivationDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.schedule_activation_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 //        view.title_txt.text = title
 //        view.message.text = message

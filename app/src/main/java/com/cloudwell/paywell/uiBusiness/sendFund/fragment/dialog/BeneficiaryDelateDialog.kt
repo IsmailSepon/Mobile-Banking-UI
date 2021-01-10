@@ -15,6 +15,7 @@ class BeneficiaryDelateDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.beneficiary_delate_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
         return view

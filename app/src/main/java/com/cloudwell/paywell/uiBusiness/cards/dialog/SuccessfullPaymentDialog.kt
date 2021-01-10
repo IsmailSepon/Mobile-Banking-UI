@@ -16,6 +16,7 @@ class SuccessfullPaymentDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.success_payment_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
 //        view.close_btn.setOnClickListener(View.OnClickListener {

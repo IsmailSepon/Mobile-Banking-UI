@@ -16,6 +16,7 @@ class VaultCloseDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.vault_close_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
         return view
     }

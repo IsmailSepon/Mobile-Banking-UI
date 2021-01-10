@@ -17,6 +17,7 @@ class ViewCardPinDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.view_card_pin_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
 

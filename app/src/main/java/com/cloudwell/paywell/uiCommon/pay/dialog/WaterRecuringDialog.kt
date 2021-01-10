@@ -16,6 +16,7 @@ class WaterRecuringDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.water_recuring_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
 

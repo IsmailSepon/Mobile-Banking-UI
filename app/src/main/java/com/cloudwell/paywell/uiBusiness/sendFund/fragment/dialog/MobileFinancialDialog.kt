@@ -18,6 +18,7 @@ class MobileFinancialDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.movile_financial_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
         view.confirm_mobile_finc.setOnClickListener(View.OnClickListener {
             dismiss()

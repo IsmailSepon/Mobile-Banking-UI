@@ -16,6 +16,7 @@ class StatmentDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.statment_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 //        dialog!!.getWindow()!!.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
 //       // DialogUtils.setMargins( dialog, 0, 150, 50, 75 );

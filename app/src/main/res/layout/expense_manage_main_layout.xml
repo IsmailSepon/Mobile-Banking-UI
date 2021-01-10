@@ -18,8 +18,9 @@
             android:id="@+id/expense_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginStart="@dimen/_18dp"
+            android:layout_marginTop="@dimen/_18dp"
+            android:padding="@dimen/_10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/back"
@@ -34,8 +35,8 @@
             android:text="@string/expenses"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_26sp"
-            app:layout_constraintStart_toStartOf="@+id/imageView225"
-            app:layout_constraintTop_toBottomOf="@+id/imageView225" />
+            app:layout_constraintStart_toStartOf="@+id/expense_back"
+            app:layout_constraintTop_toBottomOf="@+id/expense_back" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

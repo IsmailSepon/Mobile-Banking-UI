@@ -15,6 +15,7 @@ class SendFundlDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.send_fund_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
 

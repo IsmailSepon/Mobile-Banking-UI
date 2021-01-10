@@ -16,6 +16,7 @@ class BusinessCardTerminateDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.bu_card_terminate_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
 
