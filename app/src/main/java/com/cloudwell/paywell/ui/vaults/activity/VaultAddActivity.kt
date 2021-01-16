@@ -19,13 +19,13 @@ class VaultAddActivity : AppCompatActivity() {
 
         if (menu == 0){
 
-            FragmentHelper.replaceFragment(VaultIntroMainFragment(), supportFragmentManager, R.id.vault_intro_container)
+            FragmentHelper.addFirstFragment(VaultIntroMainFragment(), supportFragmentManager, R.id.vault_intro_container)
         }else if (menu == 1){
 
-            FragmentHelper.replaceFragment(PersonilizeVaultFragmetn(), supportFragmentManager, R.id.vault_intro_container)
+            FragmentHelper.addFirstFragment(PersonilizeVaultFragmetn(), supportFragmentManager, R.id.vault_intro_container)
         }else if (menu == 2){
 
-            FragmentHelper.replaceFragment(VaultProfileFragmetn(), supportFragmentManager, R.id.vault_intro_container)
+            FragmentHelper.addFirstFragment(VaultProfileFragmetn(), supportFragmentManager, R.id.vault_intro_container)
         }
 
 

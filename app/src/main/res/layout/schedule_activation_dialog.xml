@@ -56,7 +56,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView127" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/schedule_cancle_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_28dp"
@@ -69,11 +69,11 @@
             android:textSize="@dimen/_15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button9"
+            app:layout_constraintEnd_toStartOf="@+id/schedule_deactive_btn"
             app:layout_constraintTop_toBottomOf="@+id/textView151" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/schedule_deactive_btn"
             android:textColor="@color/text_link_clr"
             android:textSize="@dimen/_15sp"
             android:textStyle="bold"
@@ -85,7 +85,7 @@
             android:layout_marginEnd="@dimen/_20dp"
             android:text="@string/deactivate"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/button8" />
+            app:layout_constraintTop_toTopOf="@+id/schedule_cancle_btn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

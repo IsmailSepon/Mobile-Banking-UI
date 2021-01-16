@@ -76,7 +76,7 @@
                 android:textColor="@color/text_link_clr"
                 android:textSize="@dimen/_14sp"
                 style="@style/medium_text_style"
-                android:id="@+id/textView666"
+                android:id="@+id/approve_confirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -89,14 +89,14 @@
                 android:textColor="@color/text_link_clr"
                 android:textSize="@dimen/_14sp"
                 style="@style/medium_text_style"
-                android:id="@+id/textView667"
+                android:id="@+id/approve_cancle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="33dp"
                 android:layout_marginEnd="19dp"
                 android:text="@string/cancel"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView666" />
+                app:layout_constraintTop_toBottomOf="@+id/approve_confirm" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

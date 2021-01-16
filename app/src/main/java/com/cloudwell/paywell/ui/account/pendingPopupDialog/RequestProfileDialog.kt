@@ -16,6 +16,7 @@ class RequestProfileDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.request_profile_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
         view.remind_btn.setOnClickListener(View.OnClickListener {
             val dialog: ReminderDialog = ReminderDialog()

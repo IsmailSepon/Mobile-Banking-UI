@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
+import kotlinx.android.synthetic.main.expense_approve_dialog.view.*
 
 
 class ExpenseApproveDialog : BaseDialog() {
@@ -19,6 +20,13 @@ class ExpenseApproveDialog : BaseDialog() {
         this.dialog?.setCanceledOnTouchOutside(true)
 
 
+        view.approve_confirm.setOnClickListener(View.OnClickListener {
+            dismiss()
+        })
+
+        view.approve_cancle.setOnClickListener(View.OnClickListener {
+            dismiss()
+        })
 
         return view
     }

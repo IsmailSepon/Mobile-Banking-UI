@@ -125,7 +125,7 @@
                     android:textSize="@dimen/_14sp"
                     android:textColor="#416186"
                     android:lineHeight="@dimen/_15sp"
-                    android:id="@+id/textView283"
+                    android:id="@+id/not_now_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"

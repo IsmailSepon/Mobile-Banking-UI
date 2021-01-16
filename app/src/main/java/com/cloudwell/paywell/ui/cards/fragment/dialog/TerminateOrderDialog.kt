@@ -33,6 +33,11 @@ class TerminateOrderDialog : BaseDialog() {
             dismiss()
         })
 
+        view.textView271.setOnClickListener(View.OnClickListener {
+
+            dismiss()
+        })
+
 
         return view
     }

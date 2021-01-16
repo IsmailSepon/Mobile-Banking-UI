@@ -34,6 +34,12 @@ class BusinessDeliveryTrackingDialog : BaseDialog() {
 
         })
 
+        view.not_now_btn.setOnClickListener(View.OnClickListener {
+
+            dismiss()
+
+        })
+
 
         return view
     }

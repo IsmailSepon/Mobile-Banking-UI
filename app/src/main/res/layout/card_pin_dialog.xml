@@ -68,7 +68,7 @@
 
 
         <Button
-            android:id="@+id/spilt_bill_btn"
+            android:id="@+id/card_pin_done"
             android:layout_width="@dimen/btn_width"
             android:layout_height="@dimen/btn_hight"
             android:layout_marginStart="37dp"

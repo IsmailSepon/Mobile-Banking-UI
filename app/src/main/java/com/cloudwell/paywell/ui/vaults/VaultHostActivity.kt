@@ -23,7 +23,7 @@ class VaultHostActivity : AppCompatActivity() {
 
 
 
-        FragmentHelper.replaceFragment(VaultViewFragment(), supportFragmentManager, R.id.vault_container)
+        FragmentHelper.addFirstFragment(VaultViewFragment(), supportFragmentManager, R.id.vault_container)
 
 
 

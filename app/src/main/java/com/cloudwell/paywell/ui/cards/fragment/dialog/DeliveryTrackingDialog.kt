@@ -33,6 +33,12 @@ class DeliveryTrackingDialog : BaseDialog() {
 
         })
 
+//        view.textView283.setOnClickListener(View.OnClickListener {
+//
+//            dismiss()
+//
+//        })
+
 
         return view
     }

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
+import kotlinx.android.synthetic.main.reject_request_dialog.view.*
 
 
 class RejectRequestDialog : BaseDialog() {
@@ -20,6 +21,16 @@ class RejectRequestDialog : BaseDialog() {
 
 
 
+
+        this.dialog?.setCanceledOnTouchOutside(true)
+        view.textView245.setOnClickListener(View.OnClickListener {
+
+            dialog?.dismiss()
+        })
+        view.textView246.setOnClickListener(View.OnClickListener {
+
+            dialog?.dismiss()
+        })
 
 
         return view

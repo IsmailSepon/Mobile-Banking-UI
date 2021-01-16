@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
+import kotlinx.android.synthetic.main.view_card_pin_dialog.view.*
 
 
 class ViewCardPinDialog : BaseDialog() {
@@ -21,6 +22,9 @@ class ViewCardPinDialog : BaseDialog() {
 
 
 
+        view.view_pin_btn.setOnClickListener(View.OnClickListener {
+            dismiss()
+        })
 
         return view
     }

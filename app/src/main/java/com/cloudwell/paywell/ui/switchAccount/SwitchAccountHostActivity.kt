@@ -9,6 +9,8 @@ import com.cloudwell.paywell.databinding.ActivitySwitchAccountHostBinding
 import com.cloudwell.paywell.ui.switchAccount.fragment.ManageSwitchAccountFragment
 import com.cloudwell.paywell.ui.switchAccount.view.SwitchAccountHostFactory
 import com.cloudwell.paywell.ui.switchAccount.viewModel.SwitchAccountHostViewModel
+import com.cloudwell.paywell.ui.vaults.fragment.VaultProfileFragmetn
+import com.cloudwell.paywell.utils.FragmentHelper
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
@@ -28,12 +30,9 @@ class SwitchAccountHostActivity : BaseActivity(), KodeinAware {
         viewModel = ViewModelProviders.of(this, factory).get(SwitchAccountHostViewModel::class.java)
         binding.viewModelSwitchAccountHost = viewModel as SwitchAccountHostViewModel
 
-        val manageSwitchAccountFragment = ManageSwitchAccountFragment()
-        val manager = supportFragmentManager
-        val transaction = manager.beginTransaction()
-        transaction.replace(R.id.switch_account_host_container, manageSwitchAccountFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+
+        FragmentHelper.addFirstFragment(ManageSwitchAccountFragment(), supportFragmentManager, R.id.switch_account_host_container)
+
     }
 
 }

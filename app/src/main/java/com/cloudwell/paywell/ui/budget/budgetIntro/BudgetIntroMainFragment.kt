@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
@@ -20,6 +21,7 @@ class BudgetIntroMainFragment : Fragment() {
 //    var  viewPager  : ViewPager2? = null
     lateinit var viewPager: ViewPager2
     var position : Int = -1
+    lateinit var tab: TabLayout
 
 
     override fun onCreateView(
@@ -31,6 +33,7 @@ class BudgetIntroMainFragment : Fragment() {
             inflater.inflate(R.layout.expence_managment_main_layout, container, false)
 
         viewPager = view.expence_viewpager
+        tab = view.expence_tab_layout
 
         val pagerAdapter = ScreenSlidePagerAdapter(this)
         viewPager.adapter = pagerAdapter
