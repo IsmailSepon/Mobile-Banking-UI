@@ -12,6 +12,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel
 import com.cloudwell.paywell.ui.budget.adapter.BudgetAdapter
 import com.cloudwell.paywell.ui.budget.adapter.BudgetMarchentAdapter
+import com.cloudwell.paywell.ui.budget.adapter.MarchentPickerAdapter
 import com.cloudwell.paywell.ui.budget.layoutManager.BudgetLayoutManager
 import com.cloudwell.paywell.ui.budget.model.BudgetMachentPOjo
 import com.cloudwell.paywell.ui.budget.model.BudgetPOjo
@@ -24,7 +25,7 @@ class BudgetMarchantFragment : Fragment() {
     private lateinit var addMoneyViewmodel: AddMoneyViewModel
     private lateinit var rvHorizontalPicker: RecyclerView
     private lateinit var tvSelectedItem: TextView
-    private lateinit var sliderAdapter: BudgetAdapter
+    private lateinit var sliderAdapter: MarchentPickerAdapter
     private val slidedata: ArrayList<BudgetPOjo> = ArrayList()
 
 
@@ -140,11 +141,11 @@ class BudgetMarchantFragment : Fragment() {
         }
 
         // Setting Adapter
-        sliderAdapter = BudgetAdapter(requireContext())
+        sliderAdapter = MarchentPickerAdapter()
         sliderAdapter.setSelectedItem(0)
         rvHorizontalPicker.adapter = sliderAdapter.apply {
             setData(slidedata)
-            callback = object : BudgetAdapter.Callback {
+            callback = object : MarchentPickerAdapter.Callback {
                 override fun onItemClicked(view: View) {
                     rvHorizontalPicker.smoothScrollToPosition(
                         rvHorizontalPicker.getChildLayoutPosition(

@@ -173,7 +173,6 @@
             android:id="@+id/budget_view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/_30dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     </LinearLayout>
@@ -185,7 +184,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/selection_spinner"
         app:layout_constraintStart_toEndOf="@+id/selection_spinner"
         app:layout_constraintTop_toTopOf="@+id/selection_spinner"
-        app:srcCompat="@drawable/spinner_bg" />
+        app:srcCompat="@drawable/spinner_bg"
+        tools:ignore="ContentDescription" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

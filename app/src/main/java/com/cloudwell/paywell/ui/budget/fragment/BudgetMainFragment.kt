@@ -138,7 +138,6 @@ class BudgetMainFragment : Fragment() {
 
 
 //            requireContext().startActivity(Intent(requireContext(), BudgetHostActivity::class.java))
-//
 //            FragmentHelper.replaceFragment(BudgetSpendingFragment(), requireActivity().supportFragmentManager, R.id.budget_container)
 
         })
