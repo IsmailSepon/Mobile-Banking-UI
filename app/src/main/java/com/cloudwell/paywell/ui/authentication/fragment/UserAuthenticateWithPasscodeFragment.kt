@@ -20,8 +20,7 @@ import com.cloudwell.paywell.ui.registration.RegistrationUserOptionActivity
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.user_auth_for_switch_pw_account_two.view.*
 
-class UserAuthenticateWithPasscodeFragment : Fragment(),
-    CustomKeyboardWithFingerprint.CustomKeyboardClickListener {
+class UserAuthenticateWithPasscodeFragment : Fragment(),  CustomKeyboardWithFingerprint.CustomKeyboardClickListener {
 
     lateinit var keyboard: CustomKeyboardWithFingerprint
     lateinit var editTextCreatePin: PinEntryEditText
@@ -49,21 +48,18 @@ class UserAuthenticateWithPasscodeFragment : Fragment(),
                 context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imgr.hideSoftInputFromWindow(editTextCreatePin.windowToken, 0)
         })
-        if (editTextCreatePin != null) {
-
-            editTextCreatePin.setOnPinEnteredListener(PinEntryEditText.OnPinEnteredListener { str ->
+        editTextCreatePin.setOnPinEnteredListener(PinEntryEditText.OnPinEnteredListener { str ->
 
 
-                if (str.toString().length == 4) {
+            if (str.toString().length == 4) {
 
-                    requireActivity().finish()
-                    startActivity(Intent(requireContext(), RegistrationUserOptionActivity::class.java))
+                requireActivity().finish()
+                startActivity(Intent(requireContext(), RegistrationUserOptionActivity::class.java))
 
-                } else {
-                    editTextCreatePin.setAnimateText(true)
-                }
-            })
-        }
+            } else {
+                editTextCreatePin.setAnimateText(true)
+            }
+        })
 
         view.imageViewUAS21.setOnClickListener(View.OnClickListener {
             FragmentHelper.replaceFragment(

@@ -1,6 +1,7 @@
 package com.cloudwell.paywell.ui.budget.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +17,8 @@ class BudgetViewFragment : Fragment() {
 
 
     private val data: ArrayList<String> = ArrayList()
+    lateinit var  viewPager: ViewPager
+    lateinit var tabs: TabLayout
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,16 +30,9 @@ class BudgetViewFragment : Fragment() {
 
 
 
-
-
-        val beneficiaryDetailsPagerAdapter = BudgetPagerAdapter(requireActivity().applicationContext,requireActivity().supportFragmentManager)
-        val viewPager: ViewPager = view.findViewById(R.id.budgetview_viewpager)
-        viewPager.adapter = beneficiaryDetailsPagerAdapter
-        val tabs: TabLayout = view.findViewById(R.id.budgetview_tab)
-        tabs.setupWithViewPager(viewPager)
-
-
-
+        viewPager= view.findViewById(R.id.budgetview_viewpager)
+        tabs = view.findViewById(R.id.budgetview_tab)
+       // initlizePagerAdapter()
 
 
 
@@ -48,6 +44,35 @@ class BudgetViewFragment : Fragment() {
         })
 
         return view
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("TEst", "onResume")
+
+        initlizePagerAdapter()
+
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        Log.e("TEst", "onDetach")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.e("TEst", "onPause")
+    }
+
+    private fun initlizePagerAdapter() {
+
+
+        val beneficiaryDetailsPagerAdapter = BudgetPagerAdapter(requireActivity().applicationContext,requireActivity().supportFragmentManager)
+        viewPager.adapter = beneficiaryDetailsPagerAdapter
+        tabs.setupWithViewPager(viewPager)
+
+
     }
 
 

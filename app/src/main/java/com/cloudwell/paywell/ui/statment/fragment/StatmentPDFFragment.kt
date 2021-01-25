@@ -9,6 +9,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiBusiness.control.fragment.user.AddAnUserFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.business_user_control_layout.view.*
+import kotlinx.android.synthetic.main.statment_pdf_layout.view.*
 
 class StatmentPDFFragment : Fragment() {
 
@@ -21,6 +22,12 @@ class StatmentPDFFragment : Fragment() {
         val view = inflater.inflate(R.layout.statment_pdf_layout, container, false)
 
 
+
+        view.pdf_get_statment.setOnClickListener(View.OnClickListener {
+
+
+
+        })
 
         return view
     }

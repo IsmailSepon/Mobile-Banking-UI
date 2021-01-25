@@ -23,10 +23,10 @@ class BudgetPagerAdapter(private val context: Context, fm: FragmentManager) :
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
-            0 -> BudgetCategoryFragment.newInstance(0)
-            1 -> BudgetMarchantFragment.newInstance(1)
-            2 -> BudgetMarchantFragment.newInstance(2)
-            else -> BudgetCategoryFragment.newInstance(0)
+            0 -> BudgetCategoryFragment()//.newInstance(0)
+            1 -> BudgetMarchantFragment()//.newInstance(1)
+            2 -> BudgetMarchantFragment()//.newInstance(2)
+            else -> BudgetCategoryFragment()//.newInstance(0)
         }
 
 

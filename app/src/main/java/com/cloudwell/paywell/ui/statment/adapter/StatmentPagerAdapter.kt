@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.ui.statment.fragment.StatmentCSVragment
+import com.cloudwell.paywell.ui.statment.fragment.StatmentExcelragment
 import com.cloudwell.paywell.ui.statment.fragment.StatmentPDFFragment
 
 private val TAB_TITLES = arrayOf(
@@ -23,8 +25,8 @@ class StatmentPagerAdapter(private val context: Context, fm: FragmentManager) :
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> StatmentPDFFragment.newInstance(0)
-            1 -> StatmentPDFFragment.newInstance(1)
-            2 -> StatmentPDFFragment.newInstance(2)
+            1 -> StatmentExcelragment.newInstance(1)
+            2 -> StatmentCSVragment.newInstance(2)
             else -> StatmentPDFFragment.newInstance(0)
         }
 
