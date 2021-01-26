@@ -58,7 +58,7 @@ public class CustomKeyboardWithFingerprint extends LinearLayout implements View.
         button9.setOnClickListener(this);
         button0 = findViewById(R.id.button_0);
         button0.setOnClickListener(this);
-        buttonForget = findViewById(R.id.button_delete);
+        buttonForget = findViewById(R.id.button_forgot);
         buttonForget.setOnClickListener(this);
         buttonFingerPrint = findViewById(R.id.imageViewFingerPrint);
         buttonFingerPrint.setOnClickListener(this);
@@ -73,7 +73,7 @@ public class CustomKeyboardWithFingerprint extends LinearLayout implements View.
         keyValues.put(R.id.button_8, "8");
         keyValues.put(R.id.button_9, "9");
         keyValues.put(R.id.button_0, "0");
-        keyValues.put(R.id.button_delete, "delate");
+        keyValues.put(R.id.button_forgot, "forgot");
         keyValues.put(R.id.imageViewFingerPrint, "finger");
 
         mContext = context;
@@ -92,6 +92,10 @@ public class CustomKeyboardWithFingerprint extends LinearLayout implements View.
 //            } else {
 //                inputConnection.commitText("00", 1);
 //            }
+        }else if (view.getId() == R.id.button_forgot){
+
+                OnClick.onForgotClick();
+
         }else if (view.getId() == R.id.imageViewFingerPrint){
 
                 OnClick.onFingerClick();
@@ -113,5 +117,6 @@ public class CustomKeyboardWithFingerprint extends LinearLayout implements View.
 
     public interface CustomKeyboardClickListener {
         void onFingerClick();
+        void onForgotClick();
     }
 }

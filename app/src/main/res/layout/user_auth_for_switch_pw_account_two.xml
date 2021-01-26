@@ -26,7 +26,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonBackUAS"
-        app:srcCompat="@drawable/ic_pw_logo" />
+        app:srcCompat="@drawable/ic_pw_logo"
+        tools:ignore="ContentDescription" />
 
     <com.alimuzaffar.lib.pin.PinEntryEditText
         android:id="@+id/editTextUAS1"

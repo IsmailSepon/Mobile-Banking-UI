@@ -61,13 +61,13 @@ class UserAuthenticateWithPasscodeFragment : Fragment(),  CustomKeyboardWithFing
             }
         })
 
-        view.imageViewUAS21.setOnClickListener(View.OnClickListener {
-            FragmentHelper.replaceFragment(
-                UserAuthenticateWithPhnFragment(),
-                activity?.supportFragmentManager,
-                R.id.user_auth_host_container
-            )
-        })
+//        view.imageViewUAS21.setOnClickListener(View.OnClickListener {
+//            FragmentHelper.replaceFragment(
+//                UserAuthenticateWithPhnFragment(),
+//                activity?.supportFragmentManager,
+//                R.id.user_auth_host_container
+//            )
+//        })
 
         return view
     }
@@ -89,8 +89,17 @@ class UserAuthenticateWithPasscodeFragment : Fragment(),  CustomKeyboardWithFing
 
 
 
+
     }
 
+    override fun onForgotClick() {
+
+        FragmentHelper.replaceFragment(
+            UserAuthenticateWithPhnFragment(),
+            activity?.supportFragmentManager,
+            R.id.user_auth_host_container
+        )
+    }
 
 
     private fun checkFingerprint() {

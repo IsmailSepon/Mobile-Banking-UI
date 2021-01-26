@@ -10,13 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.linkedAccount.adapter.LinkedBankAdapter
 import com.cloudwell.paywell.ui.linkedAccount.model.BankListPojo
-import com.cloudwell.paywell.ui.vaults.adapter.VaultAdapter
-import com.cloudwell.paywell.ui.vaults.vaultPOjo.VaulttPojo
 import com.cloudwell.paywell.utils.FragmentHelper
-import com.yanzhenjie.recyclerview.SwipeRecyclerView
 import kotlinx.android.synthetic.main.linkedac_bank_list_layout.view.*
-import kotlinx.android.synthetic.main.vault_main_layout.view.*
-import kotlinx.android.synthetic.main.vault_main_layout.view.vault_recycler
 
 class LinkedACBankListFragment : Fragment(),
     LinkedBankAdapter.BankListItemClickListener {
@@ -30,7 +25,7 @@ class LinkedACBankListFragment : Fragment(),
         val view: View =
             inflater.inflate(R.layout.linkedac_bank_list_layout, container, false)
 
-        var   banklistrecyclerview : RecyclerView = view.bankList_recyclerview
+        val banklistrecyclerview : RecyclerView = view.bankList_recyclerview
         setBankListRecycler(view, banklistrecyclerview)
 
 
@@ -53,17 +48,17 @@ class LinkedACBankListFragment : Fragment(),
         )
         banklistrecyclerview.layoutManager = linearLayoutManager
 
-        var pojo = BankListPojo()
+        val pojo = BankListPojo()
         pojo.name = "BRAC Bank"
         pojo.icon = R.drawable.brack
 
 
-        var pojo1 = BankListPojo()
+        val pojo1 = BankListPojo()
         pojo1.name = "The Ctiy Bank"
         pojo1.icon = R.drawable.city
 
 
-        var list = ArrayList<BankListPojo>()
+        val list = ArrayList<BankListPojo>()
         list.add(pojo)
         list.add(pojo)
         list.add(pojo)
