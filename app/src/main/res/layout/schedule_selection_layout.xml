@@ -15,11 +15,14 @@
 
         <ImageButton
             android:id="@+id/back_btn"
-            android:layout_width="@dimen/_22dp"
-            android:layout_height="@dimen/_12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="@dimen/_24dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/transparent"
             android:foregroundGravity="center_vertical"
+            android:padding="@dimen/_10dp"
             android:src="@drawable/back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,15 +38,14 @@
             android:text="@string/scheduled_transfer"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/back_btn"
             app:layout_constraintStart_toEndOf="@+id/back_btn"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.512" />
+            app:layout_constraintTop_toTopOf="@+id/back_btn" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0.8dp"
-            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginTop="20dp"
             android:background="@color/common_clr"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView73"
@@ -65,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout12"
         app:srcCompat="@drawable/add_beneficery" />

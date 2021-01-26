@@ -18,6 +18,7 @@
 
             <ImageView
                 android:id="@+id/company_back_btn"
+                android:padding="@dimen/_10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

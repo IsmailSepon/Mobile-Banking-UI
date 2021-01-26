@@ -17,7 +17,7 @@ class BeneficeryHostActivity : AppCompatActivity() {
         type = intent.getIntExtra(applicationContext.getString(R.string.beneficery_type), 0)
 
         if (type == 1) {
-            FragmentHelper.replaceFragment(
+            FragmentHelper.addFirstFragment(
                 SendFundTransferTypeFragment(),
                 supportFragmentManager,
                 R.id.beneficery_host_container

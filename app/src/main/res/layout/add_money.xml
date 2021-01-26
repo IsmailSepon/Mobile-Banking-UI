@@ -20,37 +20,38 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout9"
             android:layout_width="match_parent"
-        android:layout_height="@dimen/fouty_dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
             <ImageView
                 android:id="@+id/add_money_back_btn"
-                android:layout_width="@dimen/_16dp"
-                android:layout_height="@dimen/_16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="8dp"
                 android:onClick="@{addmoneyView::add_money_back_btn}"
+                android:padding="@dimen/_10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/cross_btn"
                 tools:ignore="ContentDescription,MissingConstraints" />
 
-        <TextView
-            style="@style/medium_text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/add_money"
-            android:textColor="@color/keypad_text_clr"
-            android:textSize="@dimen/_16sp"
-            android:theme="@style/medium_text_style"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.538"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                style="@style/medium_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_money"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_16sp"
+                android:theme="@style/medium_text_style"
+                app:layout_constraintBottom_toBottomOf="@+id/add_money_back_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/add_money_back_btn"
+                tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

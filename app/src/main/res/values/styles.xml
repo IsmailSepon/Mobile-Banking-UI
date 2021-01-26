@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!--        parent="Theme.MaterialComponents.Light.NoActionBar">-->
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -40,6 +40,7 @@
         <item name="colorOnError">@color/color_red</item>
         <item name="colorOnSurface">@color/design_default_color_surface</item>
         <item name="scrimBackground">@color/background</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
     <style name="FullScreen" parent="AppTheme">

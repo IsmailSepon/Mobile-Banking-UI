@@ -12,17 +12,18 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout9"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:padding="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_10dp"
             android:id="@+id/bank_list_back_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:paddingStart="@dimen/_20dp"
-            android:onClick="@{addmoneyBanklistxml::bank_list_back_btn}"
             android:src="@drawable/back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,6 +31,7 @@
             tools:ignore="ContentDescription,MissingConstraints" />
 
         <TextView
+            android:id="@+id/textView283"
             style="@style/medium_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,7 +42,7 @@
             android:theme="@style/medium_text_style"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/bank_list_back_btn"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bank_list_back_btn"
             tools:ignore="MissingConstraints" />
 
         <ImageView
@@ -48,11 +50,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginEnd="@dimen/_10dp"
-            android:paddingEnd="@dimen/_22dp"
             android:paddingStart="@dimen/_22dp"
+            android:paddingEnd="@dimen/_22dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView283"
             app:srcCompat="@drawable/ic_search" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,6 +34,13 @@ class LinkedACBankListFragment : Fragment(),
         setBankListRecycler(view, banklistrecyclerview)
 
 
+        view.bank_list_back_btn.setOnClickListener(View.OnClickListener {
+            requireActivity().finish()
+        })
+
+
+
+
         return view
     }
 
