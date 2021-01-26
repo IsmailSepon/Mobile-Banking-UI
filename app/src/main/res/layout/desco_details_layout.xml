@@ -4,10 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView313"
+        android:id="@+id/desco_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -45,7 +46,7 @@
         android:drawableEnd="@drawable/ic_info_orange"
         android:drawablePadding="@dimen/_10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView313" />
+        app:layout_constraintTop_toBottomOf="@+id/desco_back" />
 
 
     <EditText
@@ -126,8 +127,8 @@
 
     <ImageView
         android:id="@+id/dessco_ic"
-        android:layout_width="@dimen/_50dp"
-        android:layout_height="@dimen/_40dp"
+        android:layout_width="@dimen/_80dp"
+        android:layout_height="@dimen/_50dp"
         android:layout_marginEnd="28dp"
         app:layout_constraintBottom_toBottomOf="@+id/desco_details"
         app:layout_constraintEnd_toEndOf="parent"

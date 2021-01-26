@@ -32,12 +32,12 @@ class PersonalDetailstwoEditFrg : Fragment() {
         val root: View = inflater.inflate(R.layout.bu_personal_address_edit_layout, container, false)
 
 
-       var country_sp : Spinner = root!!.findViewById(R.id.towncity_sp)
+       var country_sp : Spinner = root.findViewById(R.id.towncity_sp)
 
         val aa: ArrayAdapter<*> =
             ArrayAdapter<Any?>(requireActivity(), R.layout.spinner_item, country)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        country_sp.setAdapter(aa)
+        country_sp.adapter = aa
 
 
         root.address_done_btn.setOnClickListener(View.OnClickListener {
@@ -50,6 +50,11 @@ class PersonalDetailstwoEditFrg : Fragment() {
             )
 
 
+        })
+
+
+        root.imageView197.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
         })
 
 

@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.expence_managment_layout.view.*
 
 class ExpenceManagmentFragment : Fragment(){
@@ -43,6 +44,10 @@ class ExpenceManagmentFragment : Fragment(){
         })
 
 
+
+        view.imageView211.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return view
     }

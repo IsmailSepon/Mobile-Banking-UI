@@ -16,6 +16,7 @@ class NewCustomerDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.new_customer_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
 //        view.close_btn.setOnClickListener(View.OnClickListener {

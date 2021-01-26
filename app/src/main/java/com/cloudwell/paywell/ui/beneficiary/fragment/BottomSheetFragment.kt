@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
@@ -34,11 +35,13 @@ class BottomSheetFragment : BottomSheetDialogFragment(), IbeneficeryVIew {
         binding.bottomsheetModel = beneficeryViewModel
         binding.lifecycleOwner = this
 
+
+        dialog?.window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+
         return binding.root
     }
 
     override fun startBeneficeryHostActivity(i: Int) {
-        //Toast.makeText(context, "INTERFACE"+i, Toast.LENGTH_SHORT).show()
         startActivity(i)
     }
 

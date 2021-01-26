@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.dialog.GasConfirmDialog
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.gas_details_layout.view.*
 import kotlinx.android.synthetic.main.topup_details_layout.view.operator_ic
@@ -52,6 +53,10 @@ class GasDetailsFragment : Fragment() {
         })
 
 
+
+        view.gas_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return view
     }

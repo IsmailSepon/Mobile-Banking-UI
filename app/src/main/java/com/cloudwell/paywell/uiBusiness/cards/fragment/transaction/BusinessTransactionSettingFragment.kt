@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiBusiness.cards.adapter.CardsTransactionPagerAdapter
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.business_transaction_satting_layout.view.*
 
 class BusinessTransactionSettingFragment : Fragment() {
 
@@ -28,6 +30,18 @@ class BusinessTransactionSettingFragment : Fragment() {
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = view.findViewById(R.id.transaction_tabs)
         tabs.setupWithViewPager(viewPager)
+
+
+
+
+
+
+
+
+
+        view.ts_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return view
     }

@@ -68,15 +68,33 @@ class CardsFragment : Fragment() {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 var position: Int = tab.position
 
-                if (position == 1) {
+                 if (position == 0){
+                    root.layout2.visibility = View.GONE
+                    root.layout3.visibility = View.GONE
+                    root.titile_text?.text = getString(R.string.paywell_cards)
+
+                    root.constraintLayout18.visibility  = View.VISIBLE
+                    root.view_pin_layout.visibility  = View.VISIBLE
+
+                }else if (position == 1) {
                     root.layout2.visibility = View.VISIBLE
                     root.layout3.visibility = View.GONE
                     root.titile_text?.text = getString(R.string.paywell_cards)
+
+                    root.constraintLayout18.visibility  = View.GONE
+                    root.view_pin_layout.visibility  = View.GONE
+
                 } else if (position == 2) {
                     root.layout2.visibility = View.GONE
                     root.layout3.visibility = View.VISIBLE
                     root.titile_text?.text = "Add new card"
-                } else {
+
+
+                    root.constraintLayout18.visibility  = View.GONE
+                    root.view_pin_layout.visibility  = View.GONE
+
+
+                }else {
                     root.layout2.visibility = View.GONE
                     root.layout3.visibility = View.GONE
                     root.titile_text?.text = getString(R.string.paywell_cards)

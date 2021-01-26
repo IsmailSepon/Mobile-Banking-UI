@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView313"
+        android:id="@+id/water_details_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -46,7 +46,7 @@
         android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/_15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView313" />
+        app:layout_constraintTop_toBottomOf="@+id/water_details_back" />
 
 
     <EditText
@@ -127,7 +127,7 @@
     <ImageView
         android:id="@+id/operator_ic"
         android:layout_width="@dimen/_50dp"
-        android:layout_height="@dimen/_40dp"
+        android:layout_height="@dimen/_50dp"
         android:layout_marginEnd="28dp"
         app:layout_constraintBottom_toBottomOf="@+id/water_details"
         app:layout_constraintEnd_toEndOf="parent"

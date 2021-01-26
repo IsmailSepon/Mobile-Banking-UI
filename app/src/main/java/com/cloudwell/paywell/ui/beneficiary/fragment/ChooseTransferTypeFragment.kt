@@ -16,7 +16,7 @@ class ChooseTransferTypeFragment : Fragment() {
     private lateinit var chooseViewModel: ChooseTransferViewModel
     var select: Int = 1
     var continer : String = "1"
-    var continers : Int = 1
+    var continers : Int = 0
 
 
     fun newInstance(): ChooseTransferTypeFragment? {
@@ -102,11 +102,11 @@ class ChooseTransferTypeFragment : Fragment() {
             transaction?.addToBackStack(null)
             transaction?.commit()
         }else if (continers==2){
-            val manager = activity?.supportFragmentManager
-            val transaction = manager?.beginTransaction()
-            transaction?.replace(R.id.payment_container, fragment)
-            transaction?.addToBackStack(null)
-            transaction?.commit()
+//            val manager = activity?.supportFragmentManager
+//            val transaction = manager?.beginTransaction()
+//            transaction?.replace(R.id.payment_container, fragment)
+//            transaction?.addToBackStack(null)
+//            transaction?.commit()
         }
 
     }

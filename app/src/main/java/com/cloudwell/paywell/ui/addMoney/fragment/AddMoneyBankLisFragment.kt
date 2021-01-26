@@ -25,8 +25,7 @@ class AddMoneyBankLisFragment : Fragment(), IaddMoneyBankListVIew {
     ): View? {
         addMoneyBanklistViewmodel =
             ViewModelProviders.of(this).get(AddMoneyBankListViewModel::class.java)
-        val binding: AddMoneyBanklistLayoutBinding =
-            DataBindingUtil.inflate(inflater, R.layout.add_money_banklist_layout, container, false)
+        val binding: AddMoneyBanklistLayoutBinding = DataBindingUtil.inflate(inflater, R.layout.add_money_banklist_layout, container, false)
         addMoneyBanklistViewmodel.setView(this)
         binding.addmoneyBanklistxml = addMoneyBanklistViewmodel
         binding.lifecycleOwner = this
@@ -41,11 +40,7 @@ class AddMoneyBankLisFragment : Fragment(), IaddMoneyBankListVIew {
     }
 
     override fun addmoneyBankListBankOnclick() {
-        FragmentHelper.replaceFragment(
-            AddMoneyfromBankConfirmFragment(),
-            activity?.supportFragmentManager,
-            R.id.add_money_container
-        )
+        FragmentHelper.replaceFragment(AddMoneyfromBankConfirmFragment(), activity?.supportFragmentManager, R.id.add_money_container)
     }
 
     override fun noInternetConnectionFound() {

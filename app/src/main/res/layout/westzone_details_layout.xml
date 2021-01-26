@@ -125,8 +125,8 @@
 
     <ImageView
         android:id="@+id/westzone_ic"
-        android:layout_width="@dimen/_24dp"
-        android:layout_height="@dimen/_24dp"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
         android:layout_marginEnd="28dp"
         app:layout_constraintBottom_toBottomOf="@+id/westzone_details"
         app:layout_constraintEnd_toEndOf="parent"

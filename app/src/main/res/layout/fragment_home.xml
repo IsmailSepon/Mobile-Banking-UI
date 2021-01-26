@@ -15,6 +15,7 @@
     <LinearLayout
         android:paddingBottom="@dimen/_60dp"
         android:orientation="vertical"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -153,6 +154,7 @@
                 tools:ignore="MissingConstraints" />
 
             <Button
+                android:onClick="@{viewmode::linkedAccount}"
                 android:id="@+id/button14"
                 style="@style/HomeButton"
                 android:layout_weight="1"
@@ -167,6 +169,7 @@
 
 
             <Button
+                android:onClick="@{viewmode::statmentAccount}"
                 android:id="@+id/button15"
                 style="@style/HomeButton"
                 android:layout_weight="1"
@@ -178,6 +181,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/button14"
                 tools:ignore="MissingConstraints" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.core.widget.NestedScrollView

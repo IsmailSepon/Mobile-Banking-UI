@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:paddingBottom="@dimen/_30dp"
+        android:background="@drawable/cardview_shadow"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/textView706"
+            style="@style/text_style"
+            android:layout_width="@dimen/_250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="left"
+            android:text="@string/when_you_use_the_spare_change_accelerator_you_can_multiply_the_change_from_each_payment_you_make_with_your_paywell_card_by_2_3_4_or_even_10_times_the_original_amount_which_means_you_ll_fill_your_vault_even_faster"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView769" />
+
+        <TextView
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_15sp"
+            style="@style/medium_text_style"
+            android:textStyle="bold"
+            android:id="@+id/gotit_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/got_it"
+            app:layout_constraintEnd_toEndOf="@+id/textView706"
+            app:layout_constraintTop_toBottomOf="@+id/textView706" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            style="@style/medium_text_style"
+            android:id="@+id/textView769"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Spare change accelerator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

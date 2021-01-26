@@ -3,8 +3,12 @@ package com.cloudwell.paywell.uiCommon.pay.fragment.recurringBillPay
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.Dialog
+import android.app.TimePickerDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.graphics.Point
+import android.graphics.Rect
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
@@ -25,8 +29,11 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.adapter.PaymentAdapter
 import com.cloudwell.paywell.uiCommon.pay.adapter.TooltipAdapter
 import com.cloudwell.paywell.uiCommon.pay.model.MyPaymentPOjo
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.recurring_bill_schedule_layout.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickListener,
@@ -55,7 +62,6 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
         val view = inflater.inflate(R.layout.recurring_bill_schedule_layout, container, false)
 
         bill_profile_pic = view.bill_profile_pic
-
         bgLayout  = view.hader_layout
         part2 = view.part2
         part = view.main_layout
@@ -69,6 +75,7 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
             LinearLayoutManager.HORIZONTAL,
             false
         )
+
         recurring_recycler.layoutManager = linearLayoutManager
 
 
@@ -107,30 +114,60 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
         adapter.setClickListener(this)
 
 
-       // val navmenu : BottomNavigationView = view.recurring_schedule_bottomnav
-//        bottomNavigationView.visibility = View.INVISIBLE
-//
-//        view.schedule_scrollview.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
-//            //Log.d(TAG, "onScrollChangeForY - scrollY: $scrollY oldScrollY: $oldScrollY")
-//            var MOVE = -1
-//            val SCROLL_UP = 0
-//            val SCROLL_DOWN = 1
-//            val initialPositionY: Float = view.scrollview.y
-//            MOVE = if (scrollY > oldScrollY) SCROLL_UP else SCROLL_DOWN
-//            if (MOVE == SCROLL_UP) {
-//                bottomNavigationView.visibility =  View.VISIBLE
-//            }
-//        })
 
+        view.timer_txt.setOnClickListener(View.OnClickListener {
+
+            //show Clock
+
+            timepicker()
+
+        })
+
+
+
+        view.recuring_schidule_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
 
         return view
     }
 
+    fun timepicker() {
 
+        val mcurrentTime = Calendar.getInstance()
+        val hour = mcurrentTime[Calendar.HOUR_OF_DAY]
+        val minute = mcurrentTime[Calendar.MINUTE]
+        val mTimePicker: TimePickerDialog
+        mTimePicker = TimePickerDialog(
+            requireActivity(), R.style.DatePickerDialogTheme,
+            TimePickerDialog.OnTimeSetListener { timePicker, selectedHour, selectedMinute ->
+                // eReminderTime.setText("$selectedHour:$selectedMinute")
+            },
+            hour,
+            minute,
+            false
+        ) //Yes 24 hour time
+        mTimePicker.setButton(
+            DialogInterface.BUTTON_POSITIVE,
+            "Finished"
+        ) { dialog, which ->
+            //Your code
+        }
+        mTimePicker.setOnShowListener(DialogInterface.OnShowListener { // This is hiding the "Cancel" button:
+            mTimePicker.getButton(Dialog.BUTTON_NEGATIVE).visibility = View.GONE
+        })
+        mTimePicker.show()
+
+    }
 
     override fun onPaymentClick(pojo: MyPaymentPOjo, view: View, position: Int) {
-
+        val myViewRect = Rect()
+        view.getGlobalVisibleRect(myViewRect)
+        val x: Int = myViewRect.left
+        val y: Int = myViewRect.top
+        Log.e("margin-x", x.toString())
+        Log.e("margin-y", y.toString())
 
         setAlpha()
 
@@ -140,7 +177,7 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
         p!!.x = location[0]
         p!!.y = location[1]
 
-        if (p != null) showPopup(requireActivity(), p!!, position, view)
+        if (p != null) showPopup(requireActivity(), p!!, position, view, x)
     }
 
 
@@ -167,7 +204,7 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
 
 
     // The method that displays the popup.
-    private fun showPopup(context: Activity, p: Point, position: Int, view: View) {
+    private fun showPopup(context: Activity, p: Point, position: Int, view: View, marginLeft : Int) {
 
         val popupWidth = LinearLayout.LayoutParams.MATCH_PARENT
         val popupHeight = LinearLayout.LayoutParams.WRAP_CONTENT
@@ -199,37 +236,23 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
         val recyclerView : RecyclerView  = layout.findViewById(R.id.tooltipRecycler)
 
 
-
-
-        var leftMargin : Int = 140
         if (position==1){
-
-            leftMargin  += 210
-
             electricRecycler(recyclerView)
 
-
         }else if (position == 2){
-            leftMargin  += 410
-
             waterRecycler(recyclerView)
 
-
         }else if (position == 3){
-            leftMargin  += 600
             gasRecycler(recyclerView)
-
 
         }else if (position == 0){
             topupRecycler(recyclerView, cardView)
-
         }
 
 
 
-        Log.e("POsition ", leftMargin.toString())
         val lparams = arrow.layoutParams as LinearLayout.LayoutParams
-        lparams.setMargins(leftMargin, 150, 0, 0)
+        lparams.setMargins(marginLeft, 150, 0, 0)
         arrow.layoutParams = lparams
 
 
@@ -273,7 +296,7 @@ class RecurringBillScheduleFragment : Fragment(), PaymentAdapter.PaymentClickLis
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
         params.gravity = Gravity.LEFT
-        params.setMargins(40, -80, 40, 15)
+        params.setMargins(0, -70, 0, 0)
         cardView.layoutParams = params
 
         // cardView.gravity = Gravity.START

@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    app:cardElevation="@dimen/_10dp"
-    app:cardCornerRadius="@dimen/_10dp"
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/transparent"
     android:layout_width="match_parent"
-    android:paddingBottom="@dimen/_20dp"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
 
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout34"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:paddingBottom="@dimen/_20dp"
-        android:layout_height="match_parent">
+        android:background="@drawable/cardview_shadow"
+        android:layout_height="wrap_content">
 
 
         <TextView
@@ -37,17 +35,18 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:textColor="@color/text_link_clr"
-            android:textSize="@dimen/_15sp"
-            android:gravity="left"
-            style="@style/text_style"
-            android:textStyle="bold"
             android:id="@+id/yest_txt"
+            style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
+            android:gravity="left"
             android:text="@string/yes_please_terminate"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/no_txt"
             app:layout_constraintStart_toStartOf="@+id/textView467"
             app:layout_constraintTop_toBottomOf="@+id/textView467" />
 
@@ -68,4 +67,4 @@
 
 
 
-</androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -15,6 +15,7 @@ class trxProfileDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.trx_profile_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
         view.close_btn.setOnClickListener(View.OnClickListener {

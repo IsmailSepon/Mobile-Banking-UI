@@ -71,6 +71,16 @@ class DescoDetailsFragment : Fragment() {
         })
 
 
+
+
+
+
+
+
+        view.desco_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
         return view
     }
 

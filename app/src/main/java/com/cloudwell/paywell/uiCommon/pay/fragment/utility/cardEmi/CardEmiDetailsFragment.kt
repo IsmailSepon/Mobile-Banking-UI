@@ -79,6 +79,10 @@ class CardEmiDetailsFragment : Fragment() {
 
 
 
+        view.cardemi_back.setOnClickListener(View.OnClickListener {
+            activity?.finish()  // FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
         return view
     }
 

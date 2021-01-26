@@ -20,6 +20,7 @@ class TerminateOrderDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.terminate_order_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
         view.terminate_order_btn.setOnClickListener(View.OnClickListener {
@@ -29,6 +30,11 @@ class TerminateOrderDialog : BaseDialog() {
                 activity?.supportFragmentManager,
                 R.id.Cards_container
             )
+            dismiss()
+        })
+
+        view.textView271.setOnClickListener(View.OnClickListener {
+
             dismiss()
         })
 

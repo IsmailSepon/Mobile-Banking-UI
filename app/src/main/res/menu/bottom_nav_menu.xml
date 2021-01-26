@@ -2,28 +2,40 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/navigation_business"
+        android:icon="@drawable/nav_bus_selector"
+        android:title="@string/business" />
+
+    <item
         android:id="@+id/navigation_account"
-        android:icon="@drawable/ac"
+        android:icon="@drawable/nav_account_selector"
         android:title="@string/account" />
+
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_pay"-->
+<!--        android:icon="@drawable/pay"-->
+<!--        android:title="@string/pay" />-->
+
+    <item
+        android:id="@+id/blank_item"
+        android:enabled="true"
+        android:title="@null" />
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_cards"-->
+<!--        android:icon="@drawable/card"-->
+<!--        android:title="@string/cards" />-->
+
 
     <item
         android:id="@+id/navigation_budget"
-        android:icon="@drawable/budget"
+        android:icon="@drawable/nav_budget_selector"
         android:title="@string/budget" />
 
     <item
-        android:id="@+id/navigation_pay"
-        android:icon="@drawable/pay"
-        android:title="@string/pay" />
-
-    <item
-        android:id="@+id/navigation_cards"
-        android:icon="@drawable/card"
-        android:title="@string/cards" />
-
-    <item
         android:id="@+id/navigation_control"
-        android:icon="@drawable/control"
+        android:icon="@drawable/nav_control_selector"
         android:title="@string/control" />
 
 </menu>

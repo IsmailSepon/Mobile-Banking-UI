@@ -9,7 +9,9 @@ import com.cloudwell.paywell.databinding.ActivityFreeCardHostBinding
 import com.cloudwell.paywell.ui.freeCard.fragment.GetFreeCardFirstFragment
 import com.cloudwell.paywell.ui.freeCard.view.FreeCardHostFactory
 import com.cloudwell.paywell.ui.freeCard.viewModel.FreeCardHostViewModel
+import com.cloudwell.paywell.ui.help.fragment.UserHelpFragment
 import com.cloudwell.paywell.ui.switchAccount.fragment.ManageSwitchAccountFragment
+import com.cloudwell.paywell.utils.FragmentHelper
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
@@ -29,12 +31,15 @@ class FreeCardHostActivity : BaseActivity(), KodeinAware {
         viewModel = ViewModelProviders.of(this, factory).get(FreeCardHostViewModel::class.java)
         binding.viewModelFreeCardHost = viewModel as FreeCardHostViewModel
 
-        val getFreeCardFirstFragment = GetFreeCardFirstFragment()
-        val manager = supportFragmentManager
-        val transaction = manager.beginTransaction()
-        transaction.replace(R.id.free_card_host_container, getFreeCardFirstFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+//        val getFreeCardFirstFragment = GetFreeCardFirstFragment()
+//        val manager = supportFragmentManager
+//        val transaction = manager.beginTransaction()
+//        transaction.replace(R.id.free_card_host_container, getFreeCardFirstFragment)
+//        transaction.addToBackStack(null)
+//        transaction.commit()
+
+        FragmentHelper.addFirstFragment(GetFreeCardFirstFragment(), supportFragmentManager, R.id.free_card_host_container)
+
     }
 
 }

@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.corporation_details_edit_layout.view.*
 
 
@@ -55,6 +56,11 @@ class CorporationDetailsEdit : Fragment() {
 //        })
 //
 
+
+
+        root.corporation_edit_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return root
 

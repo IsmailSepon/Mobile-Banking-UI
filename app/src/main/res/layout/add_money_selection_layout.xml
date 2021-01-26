@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -9,11 +11,10 @@
             type="com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneySelectionViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools">
+        android:background="@color/white">
 
         <ImageButton
             android:onClick="@{addMoneySelectionxml::add_money_selection_back}"
@@ -22,24 +23,24 @@
             android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"
         android:layout_marginTop="@dimen/_24dp"
-        android:background="@drawable/back"
+        android:background="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription,MissingConstraints" />
 
-    <TextView
+        <TextView
 
-        android:id="@+id/textView66"
-        style="@style/medium_text_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5dp"
-        android:text="@string/select_how_to_add_money"
-        android:textColor="@color/keypad_text_clr"
-        android:textSize="@dimen/_17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_money_selection_back" />
+            android:id="@+id/textView66"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_how_to_add_money"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/add_money_selection_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/add_money_selection_back" />
 
     <TextView
         android:id="@+id/textView67"
@@ -70,7 +71,8 @@
             android:layout_height="@dimen/_34dp"
             android:layout_marginStart="@dimen/_24dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/bank_round" />
+            app:srcCompat="@drawable/bank_round"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView68"
@@ -92,7 +94,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView68"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView68"
-            app:srcCompat="@drawable/beneficery_info" />
+            app:srcCompat="@drawable/beneficery_info"
+            tools:ignore="ContentDescription" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -110,7 +113,8 @@
             android:layout_marginStart="@dimen/_24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/round_bank" />
+            app:srcCompat="@drawable/round_bank"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:onClick="@{addMoneySelectionxml::bankItem2Onclick}"
@@ -134,7 +138,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView69"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView69"
-            app:srcCompat="@drawable/beneficery_info" />
+            app:srcCompat="@drawable/beneficery_info"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView70"
@@ -168,7 +173,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView71"
         app:srcCompat="@drawable/direct_bank_addmoney"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="ContentDescription,MissingConstraints" />
 
     <TextView
         android:id="@+id/textView72"
@@ -188,24 +193,24 @@
         android:id="@+id/bankList"
         android:layout_width="@dimen/_200dp"
         android:layout_height="wrap_content"
-        android:text="Recommended - Usually arrives instantly from leading banks"
+        android:text="@string/recommended_usually_arrives_instantly_from_leading_banks"
         android:textColor="@color/common_clr"
         android:textSize="@dimen/_12sp"
         app:layout_constraintStart_toStartOf="@+id/textView72"
         app:layout_constraintTop_toBottomOf="@+id/textView72" />
 
-    <TextView
-        android:id="@+id/textView74"
-        android:layout_width="@dimen/_55dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_24dp"
-        android:drawableEnd="@drawable/right_arrow"
-        android:text="@string/fees_vary"
-        android:textSize="@dimen/_10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView72"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView72"
-        tools:ignore="SmallSp" />
+        <TextView
+            android:id="@+id/textView74"
+            android:layout_width="@dimen/_55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_24dp"
+            android:drawableEnd="@drawable/right_arrow"
+            android:text="@string/fees_vary"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/bankList"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView72"
+            tools:ignore="SmallSp" />
 
     <ImageView
         android:id="@+id/imageView58"

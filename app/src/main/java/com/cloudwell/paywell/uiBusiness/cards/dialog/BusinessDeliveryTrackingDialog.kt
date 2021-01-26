@@ -20,6 +20,7 @@ class BusinessDeliveryTrackingDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.delivery_tracking_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
         view.terminate_reorder_btn.setOnClickListener(View.OnClickListener {
 
@@ -29,6 +30,12 @@ class BusinessDeliveryTrackingDialog : BaseDialog() {
                 activity?.supportFragmentManager,
                 R.id.bu_Cards_container
             )
+            dismiss()
+
+        })
+
+        view.not_now_btn.setOnClickListener(View.OnClickListener {
+
             dismiss()
 
         })

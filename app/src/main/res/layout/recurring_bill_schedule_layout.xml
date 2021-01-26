@@ -28,6 +28,7 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                android:id="@+id/recuring_schidule_back"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/back"
                 android:layout_width="wrap_content"
@@ -140,13 +141,14 @@
                         style="@style/text_style"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="80dp"
                         android:gravity="left"
                         android:text="@string/on_which_date_of_every_month_this_payment_will_be_processed"
                         android:textColor="@color/common_clr"
                         android:textSize="@dimen/_12sp"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@+id/imageView322"
                         app:layout_constraintTop_toBottomOf="@+id/textView733" />
 
@@ -175,7 +177,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView732" />
 
                     <TextView
-                        android:id="@+id/textView734"
+                        android:id="@+id/timer_txt"
                         style="@style/medium_text_style"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -205,8 +207,8 @@
 
                     <ImageView
                         android:id="@+id/bill_profile_pic"
-                        android:layout_width="@dimen/_40dp"
-                        android:layout_height="@dimen/_35dp"
+                        android:layout_width="@dimen/_70dp"
+                        android:layout_height="@dimen/_40dp"
                         android:layout_marginEnd="22dp"
                         app:layout_constraintBottom_toBottomOf="@+id/editText10"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -226,13 +228,13 @@
                         tools:ignore="ContentDescription" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="30dp"
                         android:layout_marginTop="18dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="32dp"
                         android:orientation="vertical"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView735">
 
@@ -240,7 +242,6 @@
                         <include layout="@layout/calender_view" />
 
                     </LinearLayout>
-
 
 
 

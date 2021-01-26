@@ -7,7 +7,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseActivity
 import com.cloudwell.paywell.databinding.ActivityUserAuthenticationHostBinding
 import com.cloudwell.paywell.ui.authentication.fragment.UserAuthenticateWithPasscodeFragment
-import com.cloudwell.paywell.ui.authentication.fragment.UserAuthenticateWithPhnFragment
+import com.cloudwell.paywell.ui.authentication.fragment.UserAuthenticateWithPhnFragment     //this for forgot password
 import com.cloudwell.paywell.ui.authentication.view.UserAuthenticationHostFactory
 import com.cloudwell.paywell.ui.authentication.viewModel.UserAuthenticationHostViewModel
 import com.cloudwell.paywell.utils.FragmentHelper

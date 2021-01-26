@@ -15,7 +15,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView242"
+            android:id="@+id/newinvoice_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -34,9 +34,9 @@
             android:text="@string/new_invoice_details"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView242"
-            app:layout_constraintStart_toEndOf="@+id/imageView242"
-            app:layout_constraintTop_toTopOf="@+id/imageView242" />
+            app:layout_constraintBottom_toBottomOf="@+id/newinvoice_back"
+            app:layout_constraintStart_toEndOf="@+id/newinvoice_back"
+            app:layout_constraintTop_toTopOf="@+id/newinvoice_back" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

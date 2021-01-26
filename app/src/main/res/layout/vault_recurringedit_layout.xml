@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/recurringedit_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="13dp"
+        android:padding="@dimen/_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_16_7sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView776"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="@string/edit_recurring_transfer"
+        app:layout_constraintBottom_toBottomOf="@+id/recurringedit_back"
+        app:layout_constraintStart_toEndOf="@+id/recurringedit_back"
+        app:layout_constraintTop_toTopOf="@+id/recurringedit_back" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_24sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView777"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/recurring_transfer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recurringedit_back" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:gravity="left"
+        android:textSize="@dimen/_15sp"
+        style="@style/text_style"
+        android:id="@+id/textView778"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/set_up_a_recurring_transfer_for_any_amount_to_your_vault_daily_weekly_or_monthly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView777"
+        app:layout_constraintTop_toBottomOf="@+id/textView777" />
+
+    <TextView
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_24sp"
+        style="@style/medium_text_style"
+        android:id="@+id/textView779"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="BDT"
+        app:layout_constraintStart_toStartOf="@+id/textView778"
+        app:layout_constraintTop_toBottomOf="@+id/textView778" />
+
+
+    <EditText
+        android:id="@+id/vault_enteramount"
+        android:textSize="@dimen/_23dp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/keypad_text_clr"
+        android:textAlignment="textEnd"
+        android:text="৳500"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/textView779"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView779"
+        tools:ignore="SpUsage"
+        android:importantForAutofill="no" />
+
+
+    <ImageView
+        android:id="@+id/imageView344"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/common_clr"
+        app:layout_constraintEnd_toEndOf="@+id/vault_enteramount"
+        app:layout_constraintStart_toStartOf="@+id/textView779"
+        app:layout_constraintTop_toBottomOf="@+id/textView779"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_15sp"
+        style="@style/text_style"
+        android:id="@+id/textView780"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:text="Balance:  "
+        app:layout_constraintStart_toStartOf="@+id/textView779"
+        app:layout_constraintTop_toBottomOf="@+id/imageView344" />
+
+    <Spinner
+        android:id="@+id/amount_sp"
+
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/spinner_bg"
+        android:paddingEnd="@dimen/_20dp"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/textView780"
+        app:layout_constraintStart_toEndOf="@+id/textView780"
+        app:layout_constraintTop_toTopOf="@+id/textView780"
+        tools:ignore="RtlSymmetry" />
+
+
+    <ImageView
+        android:id="@+id/imageView345"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/common_clr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView344"
+        app:layout_constraintVertical_bias="0.6"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/repeat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView345"
+        tools:ignore="DuplicateIds">
+
+
+        <ImageView
+            android:id="@+id/imageView300"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/paywell_spare_ic"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView754"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="@string/repeat"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView300"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView763"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="27dp"
+            android:text="@string/change"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView755"
+            style="@style/text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Daily from 7 Dec 2020"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toStartOf="@+id/textView754"
+            app:layout_constraintTop_toBottomOf="@+id/textView754" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/recurring_confirm"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:background="@drawable/round_btn_visable"
+        android:elevation="@dimen/evelation_five"
+        android:text="@string/confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeat_layout"
+        app:layout_constraintVertical_bias="0.39"
+        tools:targetApi="lollipop" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

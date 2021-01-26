@@ -14,6 +14,7 @@ class ToolTipDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.recurr_tooltip_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
         dialog!!.window!!.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)

@@ -43,6 +43,10 @@ class BuProfileManageFragment : Fragment() {
 
 
 
+        root.manage_profile_back.setOnClickListener(View.OnClickListener {
+            activity?.finish()  // FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
 
         return root
 

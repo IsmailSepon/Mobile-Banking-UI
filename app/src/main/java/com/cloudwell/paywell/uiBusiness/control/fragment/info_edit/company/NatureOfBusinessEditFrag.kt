@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.nature_of_business_edit_layout.view.*
 
 
@@ -60,6 +61,13 @@ class NatureOfBusinessEditFrag : Fragment() {
         val aa3: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), R.layout.spinner_item_regular, yearly_turnover)
         aa3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         sp3.adapter = aa3
+
+
+
+
+        root.buNature_edit.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return root
 

@@ -19,6 +19,7 @@ class CardEmiConfirmDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.card_emi_confirm_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 //
         view.card_emi_confirm_btn.setOnClickListener(View.OnClickListener {

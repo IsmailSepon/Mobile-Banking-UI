@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.dialog.WaterConfirmDialog
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.topup_details_layout.view.operator_ic
 import kotlinx.android.synthetic.main.water_details_layout.view.*
@@ -48,6 +49,11 @@ class WaterDetailsFragment : Fragment() {
 
         })
 
+
+
+        view.water_details_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
 
         return view

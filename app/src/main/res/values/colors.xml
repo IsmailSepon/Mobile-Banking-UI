@@ -3,7 +3,7 @@
     <color name="colorPrimary">#00203F</color>
     <color name="colorPrimaryDark">#F15A24</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="background">#FAFAFA</color>
+    <color name="background">#FFFFFF</color>
     <color name="color_red">#E00201</color>
     <color name="white">#FFFFFF</color>
     <color name="common_clr">#8EA0B6</color>
@@ -46,6 +46,12 @@
     <color name="upload_txt_clr">#2d2d2d</color>
     <color name="expence_divider">#d7e1ee</color>
     <color name="bottom_nav_bg">#f9fbff</color>
+    <color name="bottom_nav_bg2">#f3f6fa</color>
+    <color name="graphBlue">#3300203f</color>
+    <color name="graphBlue2">#2600203f</color>
+    <color name="graphorange">#33F15A24</color>
+    <color name="graphorange2">#26F15A24</color>
+    <color name="windowBackground">#cc00203f</color>
 
 
 

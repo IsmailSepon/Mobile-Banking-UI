@@ -32,12 +32,12 @@ class CompanyAddressEditFrg : Fragment() {
         val root: View = inflater.inflate(R.layout.company_address_layout, container, false)
 
 
-        var country_sp : Spinner = root!!.findViewById(R.id.company_towncity_sp)
+        var country_sp : Spinner = root.findViewById(R.id.company_towncity_sp)
 
         val aa: ArrayAdapter<*> =
             ArrayAdapter<Any?>(requireActivity(), R.layout.spinner_item_regular, country)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        country_sp.setAdapter(aa)
+        country_sp.adapter = aa
 
 
         root.address_save_btn.setOnClickListener(View.OnClickListener {
@@ -53,6 +53,9 @@ class CompanyAddressEditFrg : Fragment() {
         })
 
 
+        view?.imageView197?.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return root
 

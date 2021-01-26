@@ -9,6 +9,8 @@ import com.cloudwell.paywell.databinding.ActivityUserHelpHostBinding
 import com.cloudwell.paywell.ui.help.fragment.UserHelpFragment
 import com.cloudwell.paywell.ui.help.view.UserHelpHostFactory
 import com.cloudwell.paywell.ui.help.viewModel.UserHelpHostViewModel
+import com.cloudwell.paywell.ui.switchAccount.fragment.ManageSwitchAccountFragment
+import com.cloudwell.paywell.utils.FragmentHelper
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
@@ -23,17 +25,12 @@ class UserHelpHostActivity : BaseActivity(), KodeinAware {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_profile_host)
 
-        val binding: ActivityUserHelpHostBinding =
-            DataBindingUtil.setContentView(this, R.layout.activity_user_help_host)
+        val binding: ActivityUserHelpHostBinding = DataBindingUtil.setContentView(this, R.layout.activity_user_help_host)
         viewModel = ViewModelProviders.of(this, factory).get(UserHelpHostViewModel::class.java)
         binding.viewModelUserHelpHost = viewModel as UserHelpHostViewModel
 
-        val manageSwitchAccountFragment = UserHelpFragment()
-        val manager = supportFragmentManager
-        val transaction = manager.beginTransaction()
-        transaction.replace(R.id.user_help_host_container, manageSwitchAccountFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+        FragmentHelper.addFirstFragment(UserHelpFragment(), supportFragmentManager, R.id.user_help_host_container)
+
     }
 
 }

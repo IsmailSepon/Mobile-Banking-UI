@@ -10,6 +10,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.bu_details_edit_layout.view.*
 
 
@@ -31,6 +32,11 @@ class BusinessDetailsEditFrg : Fragment() {
 //            )
 //
 //        })
+
+
+        root.imageView197?.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         var reg = arrayOf("Place of Registration", "City Bank", "Brack Bank")
         var date_reg = arrayOf("Date of Registration", "City Bank", "Brack Bank")
@@ -54,8 +60,8 @@ class BusinessDetailsEditFrg : Fragment() {
                 position: Int,
                 id: Long
             ) {
-                val index: Int = parent!!.getSelectedItemPosition()
-                (sp.getSelectedView() as TextView).setTextColor(resources.getColor(R.color.keypad_text_clr))
+                val index: Int = parent!!.selectedItemPosition
+                (sp.selectedView as TextView).setTextColor(resources.getColor(R.color.keypad_text_clr))
 
 
 

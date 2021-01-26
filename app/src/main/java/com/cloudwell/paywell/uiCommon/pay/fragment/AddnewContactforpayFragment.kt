@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.dialog.TextDialog
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.add_newcontact_layout.view.*
 
 class AddnewContactforpayFragment : Fragment() {
@@ -27,6 +28,15 @@ class AddnewContactforpayFragment : Fragment() {
             dialog.show(activity?.supportFragmentManager!!, "TextDialog")
 
 
+        })
+
+
+
+
+
+
+        view.newcontact_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
         })
 
 

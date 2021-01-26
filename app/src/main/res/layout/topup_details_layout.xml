@@ -4,10 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView313"
+        android:id="@+id/topupdetails_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -43,7 +44,7 @@
         android:layout_marginTop="68dp"
         android:text="@string/your_top_up_details"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView313" />
+        app:layout_constraintTop_toBottomOf="@+id/topupdetails_back" />
 
 
     <RadioGroup
@@ -211,8 +212,8 @@
 
     <ImageView
         android:id="@+id/operator_ic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="28dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView713"
         app:layout_constraintEnd_toEndOf="parent"

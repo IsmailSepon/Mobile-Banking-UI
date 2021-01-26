@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import kotlinx.android.synthetic.main.request_money_done_frg_layout.view.*
 
 class RequestMoneyDoneFragment : Fragment() {
 
@@ -18,7 +19,7 @@ class RequestMoneyDoneFragment : Fragment() {
         val view = inflater.inflate(R.layout.request_money_done_frg_layout, container, false)
 
 
-        view.setOnClickListener(View.OnClickListener {
+        view.req_money_done_btn.setOnClickListener(View.OnClickListener {
             activity?.finish()
         })
 

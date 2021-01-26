@@ -27,7 +27,7 @@ class ReminderDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.reminder_dialog, null)
-
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
         view.date_pick_btn.setOnClickListener(View.OnClickListener {
@@ -39,6 +39,8 @@ class ReminderDialog : BaseDialog() {
         view.time_pick_btn.setOnClickListener(View.OnClickListener {
             timepicker()
         })
+
+
 
 
         return view

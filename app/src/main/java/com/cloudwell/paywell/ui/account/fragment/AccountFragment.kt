@@ -44,8 +44,7 @@ class AccountFragment : Fragment(), IaccountVIew, DatePickerDialog.OnDateSetList
         savedInstanceState: Bundle?
     ): View? {
         homeViewModel = ViewModelProviders.of(this).get(AccountViewModel::class.java)
-        val binding: FragmentHomeBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+        val binding: FragmentHomeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
 //         val viewmodel = ViewModelProviders.of(this).get(AccountViewModel::class.java)
         binding.viewmode = homeViewModel
         binding.lifecycleOwner = this
@@ -69,11 +68,9 @@ class AccountFragment : Fragment(), IaccountVIew, DatePickerDialog.OnDateSetList
         item.amount = "300"
         var list = ArrayList<CoursesItem>()
         list.add(item)
-        binding.root.spilt_bill_recyclerview.adapter =
-            TestAdapter(activity?.applicationContext, list)
+        binding.root.spilt_bill_recyclerview.adapter = TestAdapter(activity?.applicationContext, list)
 
-        val itemTouchHelper =
-            ItemTouchHelper(object : SwipeHelper(binding.root.spilt_bill_recyclerview) {
+        val itemTouchHelper = ItemTouchHelper(object : SwipeHelper(binding.root.spilt_bill_recyclerview) {
                 override fun instantiateUnderlayButton(position: Int): List<UnderlayButton> {
                     var buttons = listOf<UnderlayButton>()
                     val deleteButton = deleteButton(position)

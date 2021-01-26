@@ -23,6 +23,7 @@ import com.cloudwell.paywell.uiCommon.pay.fragment.utility.water.WaterDetailsFra
 import com.cloudwell.paywell.uiCommon.pay.model.UtilityPOjo
 import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.utlity_pay_layout.view.*
 
 
 class UtilityMainFragment : Fragment(), ItemClickListener,
@@ -166,6 +167,9 @@ class UtilityMainFragment : Fragment(), ItemClickListener,
 
 
 
+        view.imageView310.setOnClickListener(View.OnClickListener {
+            activity?.finish()   //FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return view
     }

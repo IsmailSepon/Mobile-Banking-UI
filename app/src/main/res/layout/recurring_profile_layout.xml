@@ -16,7 +16,6 @@
         android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_marginStart="@dimen/_24_7dp"
         android:layout_marginTop="@dimen/_20dp"
         android:id="@+id/hader_layout"
         android:orientation="horizontal"
@@ -156,7 +155,7 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked="true"
+                    android:checked="false"
                     android:fontFamily="@font/roboto_medium"
                     android:text="@string/pre_paid"
                     android:textColor="@drawable/text_radio_selector"
@@ -240,7 +239,7 @@
                     android:id="@+id/recur_everyday_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked="false"
+                    android:checked="true"
                     android:fontFamily="@font/roboto_medium"
                     android:text="@string/every_day"
                     android:textColor="@drawable/text_radio_selector"
@@ -261,7 +260,7 @@
 
 
                 <RadioGroup
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:layout_marginTop="@dimen/_5dp"
                     android:layout_marginStart="@dimen/_3dp"
                     android:layout_marginBottom="@dimen/_20dp"
@@ -279,7 +278,7 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:fontFamily="@font/roboto_medium"
                         android:text="@string/s"
-                        android:layout_marginEnd="@dimen/_24dp"
+                        android:layout_marginEnd="@dimen/_15dp"
                         android:background="@drawable/schedule_radiobtn_bg"
                         android:textColor="@drawable/schedule_radio_txt_clr"
                         android:textSize="@dimen/_15sp"
@@ -293,7 +292,7 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:fontFamily="@font/roboto_medium"
                         android:text="@string/m"
-                        android:layout_marginEnd="@dimen/_24dp"
+                        android:layout_marginEnd="@dimen/_15dp"
                         android:background="@drawable/schedule_radiobtn_bg"
                         android:textColor="@drawable/schedule_radio_txt_clr"
                         android:textSize="@dimen/_15sp"
@@ -307,7 +306,7 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:fontFamily="@font/roboto_medium"
                         android:text="@string/t"
-                        android:layout_marginEnd="@dimen/_24dp"
+                        android:layout_marginEnd="@dimen/_15dp"
                         android:background="@drawable/schedule_radiobtn_bg"
                         android:textColor="@drawable/schedule_radio_txt_clr"
                         android:textSize="@dimen/_15sp"
@@ -321,7 +320,7 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:fontFamily="@font/roboto_medium"
                         android:text="@string/w"
-                        android:layout_marginEnd="@dimen/_24dp"
+                        android:layout_marginEnd="@dimen/_15dp"
                         android:background="@drawable/schedule_radiobtn_bg"
                         android:textColor="@drawable/schedule_radio_txt_clr"
                         android:textSize="@dimen/_15sp"
@@ -335,7 +334,7 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:fontFamily="@font/roboto_medium"
                         android:text="@string/t"
-                        android:layout_marginEnd="@dimen/_24dp"
+                        android:layout_marginEnd="@dimen/_15dp"
                         android:background="@drawable/schedule_radiobtn_bg"
                         android:textColor="@drawable/schedule_radio_txt_clr"
                         android:textSize="@dimen/_15sp"
@@ -349,7 +348,7 @@
                         android:layout_marginTop="@dimen/_5dp"
                         android:fontFamily="@font/roboto_medium"
                         android:text="@string/f"
-                        android:layout_marginEnd="@dimen/_24dp"
+                        android:layout_marginEnd="@dimen/_15dp"
                         android:background="@drawable/schedule_radiobtn_bg"
                         android:textColor="@drawable/schedule_radio_txt_clr"
                         android:textSize="@dimen/_15sp"
@@ -388,15 +387,13 @@
             </RadioGroup>
 
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/calender_lay"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="@dimen/_10dp"
                 android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/day_radio_group">
 
@@ -428,8 +425,8 @@
 
             <ImageView
                 android:id="@+id/recu_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
                 android:layout_marginEnd="20dp"
                 app:layout_constraintBottom_toBottomOf="@+id/editText13"
                 app:layout_constraintEnd_toEndOf="parent"

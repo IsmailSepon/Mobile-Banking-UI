@@ -9,120 +9,131 @@
     android:layout_height="match_parent">
 
 
-    <ImageView
-        android:layout_marginBottom="@dimen/_40dp"
-        android:layout_gravity="right"
-        android:src="@drawable/cross_wht"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:ignore="ContentDescription,RtlHardcoded" />
+        tools:ignore="UselessParent">
 
 
-    <androidx.cardview.widget.CardView
-        app:cardCornerRadius="@dimen/_10dp"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginBottom="@dimen/_40dp"
+            android:layout_gravity="right"
+            android:src="@drawable/cross_wht"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription,RtlHardcoded" />
 
 
-        <LinearLayout
-            android:background="@color/white"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="@dimen/_10dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_16_7sp"
-                style="@style/medium_text_style"
-                android:id="@+id/textView618"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="35dp"
-                android:text="@string/new_item"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-
-
-
-
-            <EditText
-                android:layout_marginStart="@dimen/_30dp"
-                android:layout_marginTop="@dimen/_30dp"
-                android:layout_marginEnd="@dimen/_30dp"
-                style="@style/edittext_style"
+            <LinearLayout
+                android:background="@color/white"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/name"
-                android:imeOptions="actionNext"
-                android:importantForAutofill="no"
-                android:paddingTop="@dimen/_15dp"
-                tools:ignore="TextFields" />
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_16_7sp"
+                    style="@style/medium_text_style"
+                    android:id="@+id/textView618"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="35dp"
+                    android:text="@string/new_item"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+                <EditText
+                    android:layout_marginStart="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:layout_marginEnd="@dimen/_30dp"
+                    style="@style/edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:paddingTop="@dimen/_15dp"
+                    tools:ignore="TextFields" />
 
 
 
 
 
 
-            <EditText
-                android:layout_marginStart="@dimen/_30dp"
-                android:layout_marginTop="@dimen/_20dp"
-                android:layout_marginEnd="@dimen/_30dp"
-                style="@style/edittext_style"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/rate_per_unit"
-                android:imeOptions="actionNext"
-                android:importantForAutofill="no"
-                android:paddingTop="@dimen/_15dp"
-                tools:ignore="TextFields" />
+                <EditText
+                    android:layout_marginStart="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_marginEnd="@dimen/_30dp"
+                    style="@style/edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/rate_per_unit"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:paddingTop="@dimen/_15dp"
+                    tools:ignore="TextFields" />
 
 
 
 
 
 
-            <EditText
-                android:layout_marginStart="@dimen/_30dp"
-                android:layout_marginTop="@dimen/_20dp"
-                android:layout_marginEnd="@dimen/_30dp"
-                style="@style/edittext_style"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/description"
-                android:imeOptions="actionNext"
-                android:importantForAutofill="no"
-                android:paddingTop="@dimen/_15dp"
-                tools:ignore="TextFields" />
+                <EditText
+                    android:layout_marginStart="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_marginEnd="@dimen/_30dp"
+                    style="@style/edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/description"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:paddingTop="@dimen/_15dp"
+                    tools:ignore="TextFields" />
 
 
 
-            <Button
-                android:id="@+id/ac_created_btn"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/btn_hight"
-                android:elevation="@dimen/evelation_five"
-                android:background="@drawable/round_btn_visable"
-                android:text="@string/add"
-                android:layout_marginEnd="@dimen/_36dp"
-                android:layout_marginStart="@dimen/_36dp"
-                android:layout_marginBottom="@dimen/_40dp"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_40dp"
-                tools:targetApi="lollipop" />
+                <Button
+                    android:id="@+id/ac_created_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_hight"
+                    android:elevation="@dimen/evelation_five"
+                    android:background="@drawable/round_btn_visable"
+                    android:text="@string/add"
+                    android:layout_marginEnd="@dimen/_36dp"
+                    android:layout_marginStart="@dimen/_36dp"
+                    android:layout_marginBottom="@dimen/_40dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_40dp"
+                    tools:targetApi="lollipop" />
 
 
 
 
 
-        </LinearLayout>
+            </LinearLayout>
 
 
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
 
 </LinearLayout>

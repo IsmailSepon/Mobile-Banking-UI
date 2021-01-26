@@ -39,6 +39,12 @@ class RequestMoneyLocationAccessFragment : Fragment() {
 
         })
 
+
+
+        view.imageView296.setOnClickListener(View.OnClickListener {
+            activity?.finish() //FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
         return view
     }
 

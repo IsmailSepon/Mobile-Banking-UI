@@ -3,9 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent">
 
     <ImageView
+        android:visibility="invisible"
         android:id="@+id/buttonBackUAS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +26,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonBackUAS"
-        app:srcCompat="@drawable/ic_pw_logo" />
+        app:srcCompat="@drawable/ic_pw_logo"
+        tools:ignore="ContentDescription" />
 
     <com.alimuzaffar.lib.pin.PinEntryEditText
         android:id="@+id/editTextUAS1"
@@ -62,7 +65,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextUAS1"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.45"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,6 +30,9 @@ class EnterPaymentDetailsFragment : Fragment() {
         })
 
 
+        view.req_link_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return view
     }

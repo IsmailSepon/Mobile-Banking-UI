@@ -31,6 +31,10 @@ class BuIncorporationDetailsFrg : Fragment() {
 //
 
 
+        root.incorporation_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
         return root
 
     }

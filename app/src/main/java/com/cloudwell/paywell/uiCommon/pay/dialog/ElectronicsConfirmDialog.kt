@@ -39,6 +39,7 @@ class ElectronicsConfirmDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.electricity_confirm_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
         typeDetails = view.type_details_txt
         typeTitle = view.typeTitle

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.bulk_expence_mng_layout.*
 
 class BulkExpenceMngActivity : AppCompatActivity() {
@@ -18,6 +19,9 @@ class BulkExpenceMngActivity : AppCompatActivity() {
 
 
 
+        bulk_expence_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(supportFragmentManager)
+        })
 
 
     }

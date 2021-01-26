@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
+import kotlinx.android.synthetic.main.recive_money_dialog.view.*
 
 
 class ReciveMoneyDialog : BaseDialog() {
@@ -20,6 +21,11 @@ class ReciveMoneyDialog : BaseDialog() {
 
 
 
+        this.dialog?.setCanceledOnTouchOutside(true)
+        view.recivemoney_close_btn.setOnClickListener(View.OnClickListener {
+
+            dialog?.dismiss()
+        })
 
 
         return view

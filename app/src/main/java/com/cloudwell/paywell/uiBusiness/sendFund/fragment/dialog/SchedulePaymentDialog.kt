@@ -15,6 +15,7 @@ class SchedulePaymentDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.schedule_payment_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
 

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
+import kotlinx.android.synthetic.main.card_pin_dialog.view.*
 
 
 class CreateCardPinDialog : BaseDialog() {
@@ -17,9 +18,14 @@ class CreateCardPinDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.card_pin_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
 
+        view.card_pin_done.setOnClickListener(View.OnClickListener {
+
+            dismiss()
+        })
 
         return view
     }

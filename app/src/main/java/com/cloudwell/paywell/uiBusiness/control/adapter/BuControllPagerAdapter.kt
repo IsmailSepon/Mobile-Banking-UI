@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardUsersFragment
 import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessvirtualCardFragment
+import com.cloudwell.paywell.uiBusiness.control.fragment.BusinessAPIFragment
 import com.cloudwell.paywell.uiBusiness.control.fragment.BusinessGeneralControlFragment
 import com.cloudwell.paywell.uiBusiness.control.fragment.BusinessUserControlFragment
 
@@ -27,7 +28,7 @@ class BuControllPagerAdapter(private val context: Context, fm: FragmentManager) 
         return when (position) {
             0 -> BusinessGeneralControlFragment.newInstance(0)
             1 -> BusinessUserControlFragment.newInstance(1)
-            2 -> BusinessCardUsersFragment.newInstance(2)
+            2 -> BusinessAPIFragment.newInstance(2)
             else -> BusinessGeneralControlFragment.newInstance(0)
         }
 

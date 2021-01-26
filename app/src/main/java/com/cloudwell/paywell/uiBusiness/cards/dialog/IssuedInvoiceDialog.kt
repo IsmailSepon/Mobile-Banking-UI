@@ -19,6 +19,7 @@ class IssuedInvoiceDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.issued_invoice_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 
         view.issue_invoice_btn.setOnClickListener(View.OnClickListener {

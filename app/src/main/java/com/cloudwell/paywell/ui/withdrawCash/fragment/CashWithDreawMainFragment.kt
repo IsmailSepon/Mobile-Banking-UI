@@ -8,9 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.base.adapter.AmountPickerAdapter
 import com.cloudwell.paywell.utils.FragmentHelper
 import com.example.nbtk.slider.ScreenUtils
-import com.example.nbtk.slider.SliderAdapter
 import com.example.nbtk.slider.SliderLayoutManager
 import kotlinx.android.synthetic.main.cash_withdraw_main_layout.view.*
 
@@ -18,6 +18,7 @@ class CashWithDreawMainFragment : Fragment() {
 
     private lateinit var rvHorizontalPicker: RecyclerView
     private lateinit var tvSelectedItem: TextView
+    private lateinit var sliderAdapter: AmountPickerAdapter
 
     private val data: ArrayList<String> = ArrayList()
 
@@ -37,7 +38,7 @@ class CashWithDreawMainFragment : Fragment() {
         data.add("3000")
 
         setTvSelectedItem(view)
-        setHorizontalPicker(view)
+        setPicker(view)
 
         view.cashwithdraw_btn.setOnClickListener(View.OnClickListener {
 
@@ -49,7 +50,7 @@ class CashWithDreawMainFragment : Fragment() {
         })
 
 
-        view.setOnClickListener(View.OnClickListener {
+        view.atm_withdraw_back.setOnClickListener(View.OnClickListener {
             activity?.finish()
         })
 
@@ -68,27 +69,34 @@ class CashWithDreawMainFragment : Fragment() {
         tvSelectedItem = view.findViewById(R.id.textView29)
     }
 
-    private fun setHorizontalPicker(view: View) {
+
+    private fun setPicker(view: View) {
         rvHorizontalPicker = view.findViewById(R.id.rv_horizontal_picker)
 
         // Setting the padding such that the items will appear in the middle of the screen
-        val padding: Int =
-            ScreenUtils.getScreenWidth(view.context) / 2 - ScreenUtils.dpToPx(view.context, 40)
+        val padding: Int = ScreenUtils.getScreenWidth(requireContext()) / 2 - ScreenUtils.dpToPx(
+            requireContext(),
+            40
+        )
         rvHorizontalPicker.setPadding(padding, 0, padding, 0)
 
         // Setting layout manager
-        rvHorizontalPicker.layoutManager = SliderLayoutManager(view.context).apply {
+        val layoutManager = SliderLayoutManager(requireContext())
+        rvHorizontalPicker.layoutManager = layoutManager.apply {
             callback = object : SliderLayoutManager.OnItemSelectedListener {
                 override fun onItemSelected(layoutPosition: Int) {
+                    sliderAdapter.setSelectedItem(layoutPosition)
                     tvSelectedItem.text = data[layoutPosition]
                 }
             }
         }
 
+
         // Setting Adapter
-        rvHorizontalPicker.adapter = SliderAdapter(view.context).apply {
+        sliderAdapter = AmountPickerAdapter()
+        rvHorizontalPicker.adapter = sliderAdapter.apply {
             setData(data)
-            callback = object : SliderAdapter.Callback {
+            callback = object : AmountPickerAdapter.Callback {
                 override fun onItemClicked(view: View) {
                     rvHorizontalPicker.smoothScrollToPosition(
                         rvHorizontalPicker.getChildLayoutPosition(
@@ -98,6 +106,22 @@ class CashWithDreawMainFragment : Fragment() {
                 }
             }
         }
+
+
+        layoutManager.callback?.onItemSelected(4)
+        selectMiddleItem(4)
+
     }
+
+
+    private fun selectMiddleItem(position : Int) {
+
+        val centeredItemPosition: Int = ScreenUtils.getScreenWidth(requireContext()) / 2
+        rvHorizontalPicker.smoothScrollToPosition(position)
+        rvHorizontalPicker.setScrollY(centeredItemPosition)
+
+    }
+
+
 
 }

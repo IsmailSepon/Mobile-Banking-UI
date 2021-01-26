@@ -9,6 +9,7 @@ import androidx.viewpager.widget.ViewPager
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.uiCommon.pay.adapter.WhoToPayAdapter
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.who_topay_layout.view.*
 
 class WhoToPayFragment : Fragment() {
 
@@ -32,6 +33,9 @@ class WhoToPayFragment : Fragment() {
 
 
 
+        view.whotopay_back_btn.setOnClickListener(View.OnClickListener {
+            activity?.finish()  // FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return view
     }

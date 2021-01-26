@@ -20,6 +20,7 @@ class DeliveryTrackingDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.delivery_tracking_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
         view.terminate_reorder_btn.setOnClickListener(View.OnClickListener {
 
@@ -31,6 +32,12 @@ class DeliveryTrackingDialog : BaseDialog() {
             dismiss()
 
         })
+
+//        view.textView283.setOnClickListener(View.OnClickListener {
+//
+//            dismiss()
+//
+//        })
 
 
         return view

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView210"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/budget_control_ic"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView506"
+        style="@style/medium_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:text="@string/daily_budget_reminders"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView210" />
+
+    <TextView
+        android:id="@+id/textView507"
+        style="@style/text_style"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="left"
+        android:paddingStart="@dimen/_15dp"
+        android:paddingEnd="@dimen/_15dp"
+        android:text="@string/if_you_need_a_little_help_sticking_to_your_daily_budget_our_handy_reminders_should_keep_you_on_track_with_instant_updates_you_ll_know_how_much_you_have_left_to_spend_when_you_re_nearing_your_daily_limit_or_when_you_ve_overspent_think_of_it_as_your_monthly_budget_broken_down_into_manageable_slices"
+        android:textAlignment="center"
+        android:textColor="@color/common_clr"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView506"
+        tools:ignore="RtlCompat" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

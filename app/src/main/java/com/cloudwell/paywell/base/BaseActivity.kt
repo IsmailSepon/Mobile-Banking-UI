@@ -1,5 +1,6 @@
 package com.cloudwell.paywell.base
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.text.Spannable
@@ -13,10 +14,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.cloudwell.paywell.appController.AppController
 import com.cloudwell.paywell.ui.registration.SignupActivity
+import com.cloudwell.paywell.ui.registration.SignupPasswordActivity
 
 
 /**
- * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2019-09-08.
+ * Created by Ismail Hossain Sepon Email: ismailhossainsepon@gmail.com  Mobile: +8801612250477
  */
 open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, IBaseView {
 
@@ -43,7 +45,7 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, I
 
     override fun doLogout() {
         Log.e(class_Name, "Time Out + log out")
-        val intent = Intent(this, SignupActivity::class.java)
+        val intent = Intent(this, SignupPasswordActivity::class.java)
         finishAffinity()
         this.finish()
         startActivity(intent)
@@ -52,6 +54,7 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, I
 
 
 
+    @SuppressLint("Assert")
     fun setToolbar(title: String, color: Int) {
         assert(supportActionBar != null)
         if (supportActionBar != null) {

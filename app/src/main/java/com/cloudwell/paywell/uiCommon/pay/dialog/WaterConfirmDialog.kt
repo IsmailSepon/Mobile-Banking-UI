@@ -19,6 +19,7 @@ class WaterConfirmDialog : BaseDialog() {
         savedInstanceState: Bundle?
     ): View? {
         val view = layoutInflater.inflate(R.layout.water_confirm_dialog, null)
+        this.dialog?.setCanceledOnTouchOutside(true)
 
 //
         view.confirm_btn.setOnClickListener(View.OnClickListener {

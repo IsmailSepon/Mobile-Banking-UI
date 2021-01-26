@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FragmentHelper
+import kotlinx.android.synthetic.main.profile_doc_fragment.view.*
 
 class BuDocumentFragment : Fragment() {
 
@@ -15,6 +17,14 @@ class BuDocumentFragment : Fragment() {
     ): View? {
         val view: View =
             inflater.inflate(R.layout.profile_doc_fragment, container, false)
+
+
+
+
+
+        view.document_back_btn.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
         return view
     }
 }

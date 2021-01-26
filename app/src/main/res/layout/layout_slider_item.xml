@@ -9,17 +9,20 @@
     android:paddingLeft="4dp"
     android:paddingRight="4dp">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_item"
         android:layout_width="wrap_content"
+        android:paddingStart="@dimen/_15dp"
+        android:paddingEnd="@dimen/_15dp"
+        android:lines="1"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:textSize="20sp"
-        style="@style/medium_text_style"
-        tools:text="1"
+        android:textSize="@dimen/_27sp"
+        style="@style/text_style"
+        tools:text="100"
         android:textColor="@color/common_clr" />
 
 

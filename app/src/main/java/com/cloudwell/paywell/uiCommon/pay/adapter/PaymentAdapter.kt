@@ -49,12 +49,12 @@ class PaymentAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
             clickListener?.onPaymentClick(courselist.get(position), it, position)
 
 
+
             index = position
             notifyDataSetChanged()
 
-
-
         })
+
         if (index==position){
 
             holder.icon.setColorFilter(mContext.getColor(R.color.colorPrimaryDark))
@@ -97,6 +97,7 @@ class PaymentAdapter(mContext: Context, courselist: List<MyPaymentPOjo>) :
         this.mContext = mContext
         this.courselist = courselist
     }
+
     fun setClickListener(itemClickListener: PaymentClickListener) {
         clickListener = itemClickListener
     }

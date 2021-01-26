@@ -28,6 +28,10 @@ class BuCardClaimExpenceFragment : Fragment() {
 
         })
 
+        view.imageView257.setOnClickListener(View.OnClickListener {
+            activity?.finish()  // FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
         return view
     }
 }

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    <data>-->
+
+<!--        <variable-->
+<!--            name="addMoneyBankConfirmxml"-->
+<!--            type="com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyBankConfirmViewModel" />-->
+<!--    </data>-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:scrollbarSize="15sp">
+
+        <TextView
+            android:id="@+id/textView76"
+            style="@style/medium_text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:text="You have linked an account with BRAC Bank Ltd."
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_13_3sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.534"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.19999999" />
+
+        <ImageView
+            android:id="@+id/imageView44"
+            android:layout_width="@dimen/_122dp"
+            android:layout_height="@dimen/_122dp"
+            android:layout_marginTop="34dp"
+            app:layout_constraintBottom_toTopOf="@+id/bank_confirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView76"
+            app:layout_constraintVertical_bias="0.100000024"
+            app:srcCompat="@drawable/brack_selected"
+            tools:ignore="ContentDescription" />
+
+        <Button
+            android:id="@+id/bankdone"
+            android:layout_width="@dimen/_250dp"
+            android:layout_height="@dimen/_50dp"
+            android:background="@drawable/round_btn_visable"
+            android:elevation="@dimen/_5dp"
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.89"
+            tools:targetApi="lollipop" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
