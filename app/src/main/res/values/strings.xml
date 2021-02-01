@@ -929,6 +929,9 @@
     <string name="report_an_issue">Report an issue</string>
     <string name="your_spare_change_settings_have_been_updated">Your spare change settings have been updated</string>
     <string name="share_statement">Share statement</string>
+    <string name="change_currency">Change currency</string>
+    <string name="you_can_change_the_currency_settings_at_any_time_later">You can change the currency settings at any time later.</string>
+    <string name="has_been_set_as_your_default_currency">Has been set as your default currency</string>
 
 
 </resources>

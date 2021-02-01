@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.cloudwell.paywell.ui.registration.SignupActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.120000005"
+        app:srcCompat="@drawable/splash_logo" />
+
+    <Button
+        android:id="@+id/pre_login_btn"
+        android:layout_width="@dimen/_250dp"
+        android:layout_height="@dimen/fifty_dp"
+        android:background="@drawable/round_btn"
+        android:elevation="@dimen/evelation_five"
+        android:text="@string/continue_txt"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fifteen_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88"
+        tools:targetApi="lollipop" />
+
+    <TextView
+        android:id="@+id/pre_lost_access_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lost_access_to_your_number"
+        android:textAlignment="center"
+        android:textColor="@color/keypad_text_clr"
+        app:layout_constraintBottom_toTopOf="@+id/pre_login_btn"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.83"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/pre_login_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.36"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="@dimen/_75dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3dp"
+                android:text="@string/country"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/twelve_sp" />
+
+            <Spinner
+                android:id="@+id/pre_country_code_spinner"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_26dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_13dp"
+                android:background="@drawable/spinner_bg"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2dp"
+                android:background="@color/common_clr"
+                tools:ignore="ContentDescription" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3dp"
+                android:text="@string/phonenumber"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"/>
+
+
+            <EditText
+                android:id="@+id/pre_et_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:ems="13"
+                android:hint="@string/enter_your_mobile_number"
+                android:inputType="number"
+                android:textColorHint="#8ea0b6"
+                android:textSize="16sp"
+                tools:ignore="TextFields"
+                tools:targetApi="lollipop" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:text="@string/full_name"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_10sp"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@+id/fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_et_bg"
+            android:ems="13"
+            android:hint="@string/name"
+            android:inputType="textCapWords"
+            android:textColor="@color/keypad_text_clr"
+            android:windowSoftInputMode="stateVisible" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:text="@string/dateofbirth_Require"
+            android:textColor="@color/common_clr"
+            android:textSize="@dimen/_10sp"
+            app:layout_constraintBottom_toTopOf="@+id/date_of_birth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.201"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@+id/date_of_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_et_bg"
+            android:ems="13"
+            android:focusable="false"
+            android:hint="@string/_01_20_1988"
+            android:textColor="@color/keypad_text_clr"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

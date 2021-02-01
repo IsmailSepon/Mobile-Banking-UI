@@ -1,8 +1,10 @@
 package com.cloudwell.paywell.PrePSPVersion
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.PAuthenticationHostActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.ApplockManager
 
@@ -25,15 +27,15 @@ class PrePSPsplashActivity : AppCompatActivity() {
         Handler().postDelayed({
 
 //            if (userMobileNumber!= ""){
-//                val mainIntent = Intent(this, UserAuthenticationHostActivity::class.java)
-//                this.startActivity(mainIntent)
+                val mainIntent = Intent(this, PAuthenticationHostActivity::class.java)
+                this.startActivity(mainIntent)
 //            }else{
 //                val mainIntent = Intent(this, SignupActivity::class.java)
 //                this.startActivity(mainIntent)
 //            }
 
 
-          //  this.finish()
+            this.finish()
         }, SPLASH_DISPLAY_LENGTH.toLong())
     }
 }

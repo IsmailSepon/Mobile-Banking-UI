@@ -27,7 +27,6 @@ class SignupActivity : AppCompatActivity() {
         setContentView(R.layout.activity_signup)
 
 
-      //  checkFingerprint()
 
         country_code_spinner.onItemSelectedListener
         val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(this, android.R.layout.simple_spinner_item, country)
