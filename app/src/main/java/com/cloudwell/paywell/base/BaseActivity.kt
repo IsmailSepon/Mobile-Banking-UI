@@ -12,6 +12,7 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.PAuthenticationHostActivity
 import com.cloudwell.paywell.appController.AppController
 import com.cloudwell.paywell.ui.registration.SignupActivity
 import com.cloudwell.paywell.ui.registration.SignupPasswordActivity
@@ -20,6 +21,7 @@ import com.cloudwell.paywell.ui.registration.SignupPasswordActivity
 /**
  * Created by Ismail Hossain Sepon Email: ismailhossainsepon@gmail.com  Mobile: +8801612250477
  */
+
 open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, IBaseView {
 
     val class_Name: String = this.javaClass.simpleName
@@ -45,7 +47,8 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, I
 
     override fun doLogout() {
         Log.e(class_Name, "Time Out + log out")
-        val intent = Intent(this, SignupPasswordActivity::class.java)
+       // val intent = Intent(this, SignupPasswordActivity::class.java)
+        val intent = Intent(this, PAuthenticationHostActivity::class.java)   //for pre PSP
         finishAffinity()
         this.finish()
         startActivity(intent)
