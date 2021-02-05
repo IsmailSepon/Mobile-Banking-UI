@@ -52,7 +52,7 @@
         tools:targetApi="lollipop" />
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_marginStart="@dimen/_46dp"
         android:layout_marginEnd="@dimen/_46dp"
         android:id="@+id/linearLayout5"
@@ -70,21 +70,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="-5dp"
             android:background="@drawable/spinner_bg"
             android:gravity="center"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="@dimen/_1dp"
+            android:layout_marginBottom="5dp"
             android:background="@color/common_clr"
             android:src="@drawable/arrowspinner"
+            app:layout_constraintBottom_toBottomOf="@+id/pre_country_spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             tools:ignore="ContentDescription" />
 
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
