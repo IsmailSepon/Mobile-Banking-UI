@@ -65,9 +65,9 @@ class RegistrationPersonalDetailsFragment : Fragment() {
 
 
 
-                        FragmentHelper.replaceFragment(AddressFregment(), requireActivity().supportFragmentManager, R.id.pre_psp_auth_container)
 
 
+                        FragmentHelper.addFirstFragment(OtpCheckFegment(), requireActivity().supportFragmentManager, R.id.pre_psp_auth_container)
                     })
                 } else {
                     view.pre_login_btn.setBackgroundResource(R.drawable.round_btn)
