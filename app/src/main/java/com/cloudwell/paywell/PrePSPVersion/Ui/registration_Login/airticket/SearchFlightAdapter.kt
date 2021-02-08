@@ -3,16 +3,16 @@ package com.cloudwell.paywell.services.activity.eticket.airticket
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.multiCity.MultiCityFragment
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
 import com.cloudwell.paywell.services.activity.eticket.airticket.fragment.IndianWayFragment
 import com.cloudwell.paywell.services.activity.eticket.airticket.fragment.OneWayV2Fragment
 import com.cloudwell.paywell.services.activity.eticket.airticket.fragment.RoundTripFragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.multiCity.MultiCityFragment
-import com.cloudwell.paywell.services.app.AppController
 
-class SearchFlightAdapter(fm: FragmentManager?, var item: Datum = Datum()) : FragmentPagerAdapter(fm) {
-    override fun getItem(position: Int): Fragment? {
+class SearchFlightAdapter(fm: FragmentManager?, var item: Datum = Datum()) : FragmentPagerAdapter(fm!!) {
+    override fun getItem(position: Int): Fragment {
 
         if (item.mSearchLog.size == 0) {
 
@@ -25,7 +25,7 @@ class SearchFlightAdapter(fm: FragmentManager?, var item: Datum = Datum()) : Fra
                 -> return MultiCityFragment()
                 3
                 -> return IndianWayFragment()
-                else -> return null
+                else -> return OneWayV2Fragment()
             }
 
         } else {
@@ -41,7 +41,7 @@ class SearchFlightAdapter(fm: FragmentManager?, var item: Datum = Datum()) : Fra
             }
 
         }
-        return null
+        return OneWayV2Fragment()
     }
 
     override fun getCount(): Int {
@@ -59,16 +59,16 @@ class SearchFlightAdapter(fm: FragmentManager?, var item: Datum = Datum()) : Fra
         if (item.mSearchLog.size == 0) {
             when (position) {
                 0 -> {
-                    return AppController.getContext().getString(R.string.one_way_menu_title)
+                    return AppController2.getContext().getString(R.string.one_way_menu_title)
                 }
                 1 -> {
-                    return AppController.getContext().getString(R.string.round_trip_menu_title)
+                    return AppController2.getContext().getString(R.string.round_trip_menu_title)
                 }
                 2 -> {
-                    return AppController.getContext().getString(R.string.multi_city_menu_title)
+                    return AppController2.getContext().getString(R.string.multi_city_menu_title)
                 }
                 3 -> {
-                    return AppController.getContext().getString(R.string.indian_menu_title)
+                    return AppController2.getContext().getString(R.string.indian_menu_title)
                 }
                 else -> {
                     return ""
@@ -76,14 +76,14 @@ class SearchFlightAdapter(fm: FragmentManager?, var item: Datum = Datum()) : Fra
             }
         } else {
             if (item.journeyType.equals("Oneway")) {
-                return AppController.getContext().getString(R.string.one_way_menu_title)
+                return AppController2.getContext().getString(R.string.one_way_menu_title)
 
             } else if (item.journeyType.equals("Return")) {
-                return AppController.getContext().getString(R.string.round_trip_menu_title)
+                return AppController2.getContext().getString(R.string.round_trip_menu_title)
 
             } else if (item.journeyType.equals("MultiStop")) {
 
-                return AppController.getContext().getString(R.string.multi_city_menu_title)
+                return AppController2.getContext().getString(R.string.multi_city_menu_title)
             }
 
         }
