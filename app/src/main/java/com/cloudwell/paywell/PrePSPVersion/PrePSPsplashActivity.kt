@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.PAuthenticationHostActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.ApplockManager
+import com.cloudwell.paywell.services.activity.eticket.airticket.menu.AirTicketMenuActivity
 
 class PrePSPsplashActivity : AppCompatActivity() {
 
@@ -27,8 +28,10 @@ class PrePSPsplashActivity : AppCompatActivity() {
         Handler().postDelayed({
 
 //            if (userMobileNumber!= ""){
-                val mainIntent = Intent(this, PAuthenticationHostActivity::class.java)
-                this.startActivity(mainIntent)
+//            val mainIntent = Intent(this, PAuthenticationHostActivity::class.java)
+
+            startActivity(Intent(this, AirTicketMenuActivity::class.java))
+            //this.startActivity(mainIntent)
 //            }else{
 //                val mainIntent = Intent(this, SignupActivity::class.java)
 //                this.startActivity(mainIntent)

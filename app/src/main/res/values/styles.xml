@@ -16,6 +16,8 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
+
+
         <!-- New MaterialComponents attributes. -->
         <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialComponents.Headline1</item>
         <item name="textAppearanceHeadline2">@style/TextAppearance.MaterialComponents.Headline2</item>
@@ -42,6 +44,12 @@
         <item name="scrimBackground">@color/background</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
+
+
+    <style name="AppTheme.AppBarOverlay.Search" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
 
     <style name="FullScreen" parent="AppTheme">
         <item name="android:windowActionBar">false</item>

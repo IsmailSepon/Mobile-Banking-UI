@@ -7,15 +7,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.TextView;
-
-import com.cloudwell.paywell.services.R;
+import com.cloudwell.paywell.R;
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport;
-import com.cloudwell.paywell.services.utils.FormatHelper;
-
+import com.cloudwell.paywell.utils.FormatHelper;
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.annotation.NonNull;
 
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 24/3/19.
@@ -53,7 +49,7 @@ public class AirportSerachAdapter extends ArrayAdapter<Airport> {
         return subjectDataFilter;
     }
 
-    @NonNull
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 

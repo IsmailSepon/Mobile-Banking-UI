@@ -52,6 +52,9 @@
     <color name="graphorange">#33F15A24</color>
     <color name="graphorange2">#26F15A24</color>
     <color name="windowBackground">#cc00203f</color>
+    <color name="color_tab_background_bus">#00203f</color>
+    <color name="tab_background">#189d49</color>
+    <color name="tab_indicator">#8de291</color>
 
 
 

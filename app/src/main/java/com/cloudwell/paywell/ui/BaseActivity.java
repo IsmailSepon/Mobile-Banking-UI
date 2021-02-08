@@ -21,7 +21,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.cloudwell.paywell.R;
-import com.cloudwell.paywell.appController.AllConstant;
 import com.cloudwell.paywell.appController.AppController;
 import com.cloudwell.paywell.utils.ConnectionDetector;
 import com.google.android.material.snackbar.Snackbar;

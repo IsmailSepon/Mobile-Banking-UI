@@ -5,10 +5,9 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
+import com.cloudwell.paywell.R
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
 import kotlinx.android.synthetic.main.activity_air_ticket_main.*
 

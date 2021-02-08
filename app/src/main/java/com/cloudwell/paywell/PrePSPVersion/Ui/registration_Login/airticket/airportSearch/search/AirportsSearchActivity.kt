@@ -6,29 +6,27 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.DisplayMetrics
-import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.adapter.AirportSerachAdapter
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.search.adapter.AirportSerachAdapter
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.data.preferences.AppStorageBox
+import com.cloudwell.paywell.eventBus.GlobalApplicationBus
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.adapter.HeaderAirportRecyclerViewSection
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.adapter.HeaderAirportRecyclerViewSectionFilter
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.viewModel.AirportSerachViewModel
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.eventBus.GlobalApplicationBus
-import com.cloudwell.paywell.services.utils.UniqueKeyGenerator
+import com.cloudwell.paywell.utils.UniqueKeyGenerator
 import com.orhanobut.logger.Logger
 import com.squareup.otto.Subscribe
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapter
 import kotlinx.android.synthetic.main.activity_city_search.*
-import kotlinx.android.synthetic.main.content_airport_serach.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 import java.util.*
@@ -177,9 +175,9 @@ class AirportsSearchActivity : AirTricketBaseActivity() {
     private fun handleStatus(it: AirportSeachStatus) {
 
         if (it.isShowProcessIndicatior) {
-            progressBar.visibility = View.VISIBLE
+           // progressBar.visibility = View.VISIBLE
         } else {
-            progressBar.visibility = View.INVISIBLE
+         //   progressBar.visibility = View.INVISIBLE
         }
 
 

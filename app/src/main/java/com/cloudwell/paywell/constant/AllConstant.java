@@ -1,7 +1,7 @@
-package com.cloudwell.paywell.appController;
+package com.cloudwell.paywell.constant;
 
 /**
- * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2019-09-01.
+ * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 6/1/19.
  */
 public class AllConstant {
     public static final String COUNTER_FAVORITE = "COUNTER_FAVORITE";
@@ -30,4 +30,6 @@ public class AllConstant {
     public static final String Action_Void = "Ticket Void";
     public static final String Action_Refund = "Ticket Refund";
     public static final String Action_DOCS_UPDATE = "Docs/info update";
+
+
 }

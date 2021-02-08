@@ -13,18 +13,17 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.model.ResCancellationMapping
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.services.activity.base.newBase.MVVMBaseActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
 import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.fragment.CancellationStatusMessageFragment
 import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.fragment.UserAcceptDialogFragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.model.ResCancellationMapping
 import com.cloudwell.paywell.services.activity.eticket.airticket.dosInfoUpdate.UpdateDocOrInfomationRequestActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.ticketCencel.model.ResSingleBooking
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.constant.AllConstant
-import com.cloudwell.paywell.services.retrofit.ApiUtils
-import com.cloudwell.paywell.services.utils.UniqueKeyGenerator
+import com.cloudwell.paywell.utils.UniqueKeyGenerator
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.JsonObject
 import retrofit2.Call
@@ -71,28 +70,27 @@ open class AirTricketBaseActivity : MVVMBaseActivity() {
 
     fun callCancelMapping(userName: String, bookingId: String, reason: String, typeOfRequest: String, item: Datum) {
 
-        showProgressDialog()
-        val uniqueKey = UniqueKeyGenerator.getUniqueKey(AppHandler.getmInstance(this)!!.rid)
-
-        ApiUtils.getAPIService().getCancelMap(userName, bookingId,uniqueKey).enqueue(object : Callback<ResCancellationMapping> {
-            override fun onResponse(call: Call<ResCancellationMapping>, response: Response<ResCancellationMapping>) {
-                dismissProgressDialog()
-                assert(response.body() != null)
-                if (response.body()!!.status == 200) {
-                    showUserCancelData(bookingId, reason, response.body(), typeOfRequest, item)
-                } else {
-                    showMsg(response.body()!!.message, response.body()!!.status)
-                }
-            }
-
-            override fun onFailure(call: Call<ResCancellationMapping>, t: Throwable) {
-                dismissProgressDialog()
-                showSnackMessageWithTextMessage(getString(R.string.please_try_again))
-
-            }
-
-
-        })
+//        showProgressDialog()
+//        val uniqueKey = UniqueKeyGenerator.getUniqueKey(AppHandler.getmInstance(this)!!.rid)
+//        ApiUtils.getAPIService().getCancelMap(userName, bookingId,uniqueKey).enqueue(object : Callback<ResCancellationMapping> {
+//            override fun onResponse(call: Call<ResCancellationMapping>, response: Response<ResCancellationMapping>) {
+//                dismissProgressDialog()
+//                assert(response.body() != null)
+//                if (response.body()!!.status == 200) {
+//                    showUserCancelData(bookingId, reason, response.body(), typeOfRequest, item)
+//                } else {
+//                    showMsg(response.body()!!.message, response.body()!!.status)
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<ResCancellationMapping>, t: Throwable) {
+//                dismissProgressDialog()
+//                showSnackMessageWithTextMessage(getString(R.string.please_try_again))
+//
+//            }
+//
+//
+//        })
     }
 
     private fun showUserCancelData(bookingId: String, reason: String, r: ResCancellationMapping?, typeOfRequest: String, item: Datum) {
@@ -197,7 +195,7 @@ open class AirTricketBaseActivity : MVVMBaseActivity() {
                 snackbar.show()
             }
         }
-        builder.setNegativeButton(R.string.cancel_btn) { dialogInterface, i -> dialogInterface.dismiss() }
+        builder.setNegativeButton(R.string.cancel) { dialogInterface, i -> dialogInterface.dismiss() }
         val alert = builder.create()
         alert.show()
     }

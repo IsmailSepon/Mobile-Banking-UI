@@ -932,6 +932,14 @@
     <string name="change_currency">Change currency</string>
     <string name="you_can_change_the_currency_settings_at_any_time_later">You can change the currency settings at any time later.</string>
     <string name="has_been_set_as_your_default_currency">Has been set as your default currency</string>
+    <string name="please_try_again">Please try again</string>
+    <string name="pin_no_title_msg">PIN Number</string>
+    <string name="okay_btn">OK</string>
+    <string name="pin_no_error_msg">Enter PIN number</string>
+    <string name="search_flights">Search Flights</string>
+    <string name="from" translatable="false">From</string>
+    <string name="to" translatable="false">To</string>
+    <string name="airport_search_hit">Airport name or code or country name </string>
 
 
 </resources>
