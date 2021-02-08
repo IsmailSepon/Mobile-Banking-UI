@@ -16,20 +16,21 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.cloudwell.paywell.services.R;
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity;
+import androidx.appcompat.app.AlertDialog;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity;
+import com.cloudwell.paywell.R;
+import com.cloudwell.paywell.app.AppHandler;
+import com.cloudwell.paywell.retrofit.ApiUtils;
 import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.fragment.CancellationStatusMessageFragment;
-import com.cloudwell.paywell.services.app.AppHandler;
-import com.cloudwell.paywell.services.retrofit.ApiUtils;
-import com.cloudwell.paywell.services.utils.ConnectionDetector;
-import com.cloudwell.paywell.services.utils.UniqueKeyGenerator;
+import com.cloudwell.paywell.utils.ConnectionDetector;
+import com.cloudwell.paywell.utils.UniqueKeyGenerator;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import mehdi.sakout.fancybuttons.FancyButton;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -178,7 +179,7 @@ public class BookingCancelActivity extends AirTricketBaseActivity {
                 }
             }
         });
-        builder.setNegativeButton(R.string.cancel_btn, new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();

@@ -10,7 +10,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class PassengerBottomSheetDialog : BottomSheetDialogFragment() {

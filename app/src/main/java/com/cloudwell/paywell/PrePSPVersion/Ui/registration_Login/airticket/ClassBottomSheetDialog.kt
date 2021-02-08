@@ -10,7 +10,8 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.data.preferences.AppStorageBox.check
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 
@@ -21,7 +22,7 @@ class ClassBottomSheetDialog : BottomSheetDialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val className: String? = arguments!!.getString("myClassName")
+        val className: String? = requireArguments().getString("myClassName")
         val view = inflater.inflate(R.layout.class_item_list_dialog, container, false)
 
         val listView = view.findViewById<ListView>(R.id.listViewAirTicketClass)

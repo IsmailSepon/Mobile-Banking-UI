@@ -22,10 +22,12 @@ import androidx.core.content.FileProvider
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.BookingCancelActivity
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.constant.AllConstant
 import com.cloudwell.paywell.data.preferences.AppStorageBox
-import com.cloudwell.paywell.services.R
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.BookingCancelActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.fragment.PriceChangeFragment
 import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.fragment.TicketActionMenuFragment
 import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.fragment.TicketStatusFragment
@@ -68,9 +70,9 @@ open class TransitionLogBaseActivity : AirTricketBaseActivity() {
             handleViewCommonStatus(it)
         })
 
-        mViewMode.mViewStatus.observe(this, Observer {
-            it?.let { it1 -> handleViewStatus(it1) }
-        })
+//        mViewMode.mViewStatus.observe(this, Observer {
+//            it?.let { it1 -> handleViewStatus(it1) }
+//        })
     }
 
 
@@ -344,7 +346,7 @@ open class TransitionLogBaseActivity : AirTricketBaseActivity() {
 
             }
         }
-        builder.setNegativeButton(R.string.cancel_btn) { dialogInterface, i -> dialogInterface.dismiss() }
+        builder.setNegativeButton(R.string.cancel) { dialogInterface, i -> dialogInterface.dismiss() }
         val alert = builder.create()
         alert.show()
     }

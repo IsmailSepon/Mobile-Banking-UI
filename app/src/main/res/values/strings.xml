@@ -940,6 +940,10 @@
     <string name="from" translatable="false">From</string>
     <string name="to" translatable="false">To</string>
     <string name="airport_search_hit">Airport name or code or country name </string>
+    <string name="tile_cencel_booking">Cancel Booking</string>
+    <string name="multicity_limit_msg" translatable="false">Currently we are accepting only 5 requests</string>
+    <string name="passengers">Passengers</string>
+    <string name="booking_instructions_for_children_infants">Booking instructions for children/infants</string>
 
 
 </resources>

@@ -1,7 +1,7 @@
 package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.model;
 
+import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Segment;
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Fare;
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Segment;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;

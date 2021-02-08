@@ -20,7 +20,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
-import com.cloudwell.paywell.services.R;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.SearchLog;
+import com.cloudwell.paywell.R;
+import com.cloudwell.paywell.app.AppHandler;
+import com.cloudwell.paywell.appController.AppController2;
+import com.cloudwell.paywell.data.preferences.AppStorageBox;
 import com.cloudwell.paywell.services.activity.eticket.airticket.AirThicketRepository;
 import com.cloudwell.paywell.services.activity.eticket.airticket.AirTicketMainActivity;
 import com.cloudwell.paywell.services.activity.eticket.airticket.ClassBottomSheetDialog;
@@ -31,12 +39,8 @@ import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.m
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Segment;
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity;
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport;
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.SearchLog;
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.FlightSearchViewActivity;
-import com.cloudwell.paywell.services.app.AppController;
-import com.cloudwell.paywell.services.app.AppHandler;
-import com.cloudwell.paywell.services.app.storage.AppStorageBox;
-import com.cloudwell.paywell.services.utils.FormatHelper;
+import com.cloudwell.paywell.utils.FormatHelper;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.jetbrains.annotations.NotNull;
@@ -48,9 +52,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import mehdi.sakout.fancybuttons.FancyButton;
 
 /**
@@ -390,7 +391,7 @@ public class MultiCityFragment extends Fragment {
         tsMultiCityTripFrom.setAlpha(0.5f);
 
 
-        new AirThicketRepository(AppController.getContext()).getAirportBy(originPort).observeForever(new Observer<Airport>() {
+        new AirThicketRepository(AppController2.getContext()).getAirportBy(originPort).observeForever(new Observer<Airport>() {
             @Override
             public void onChanged(@Nullable Airport airport) {
 
@@ -408,7 +409,7 @@ public class MultiCityFragment extends Fragment {
         tsMultiCityTripTo.setAlpha(0.5f);
 
 
-        new AirThicketRepository(AppController.getContext()).getAirportBy(destinationPort).observeForever(new Observer<Airport>() {
+        new AirThicketRepository(AppController2.getContext()).getAirportBy(destinationPort).observeForever(new Observer<Airport>() {
             @Override
             public void onChanged(@Nullable Airport airport) {
 

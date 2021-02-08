@@ -2,6 +2,14 @@ package com.cloudwell.paywell.services.activity.eticket.airticket
 
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.FileUploadReqSearchPara
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.RequestAirPrebookingSearchParams
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.RequestAirPrebookingSearchParamsForServer
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.RequestAirPriceSearch
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.data.preferences.AppStorageBox
+import com.cloudwell.paywell.database.DatabaseClient
+import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.ReposeAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
@@ -9,20 +17,16 @@ import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.s
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.BookingList
 import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.model.ResIssueTicket
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.*
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.RequestAirPriceSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.ResposeAirPriceSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.airRules.ResposeAirRules
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.model.Passenger
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.ResCommistionMaping
 import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.model.ResInvoideEmailAPI
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.database.DatabaseClient
-import com.cloudwell.paywell.services.retrofit.ApiUtils
-import com.cloudwell.paywell.services.utils.InternalStorageHelper
-import com.cloudwell.paywell.services.utils.UniqueKeyGenerator
+import com.cloudwell.paywell.utils.InternalStorageHelper
+import com.cloudwell.paywell.utils.UniqueKeyGenerator
 import com.google.gson.Gson
 import com.google.gson.JsonObject
+import com.orhanobut.logger.Logger
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 import retrofit2.Call
@@ -56,7 +60,7 @@ class AirThicketRepository(private val mContext: Context) {
             }
 
             override fun onFailure(call: Call<ReposeAirSearch>, t: Throwable) {
-                com.orhanobut.logger.Logger.e("" + t.message)
+                Logger.e("" + t.message)
                 data.value = ReposeAirSearch(t)
             }
         })
@@ -81,7 +85,7 @@ class AirThicketRepository(private val mContext: Context) {
             }
 
             override fun onFailure(call: Call<ResGetAirports>, t: Throwable) {
-                com.orhanobut.logger.Logger.e("" + t.message)
+                Logger.e("" + t.message)
                 data.value = ResGetAirports(t)
             }
         })
@@ -120,7 +124,7 @@ class AirThicketRepository(private val mContext: Context) {
             }
 
             override fun onFailure(call: Call<ResposeAirPriceSearch>, t: Throwable) {
-                com.orhanobut.logger.Logger.e("" + t.message)
+                Logger.e("" + t.message)
                 data.value = ResposeAirPriceSearch(t)
             }
         })
@@ -146,7 +150,7 @@ class AirThicketRepository(private val mContext: Context) {
             }
 
             override fun onFailure(call: Call<ResposeAirRules>, t: Throwable) {
-                com.orhanobut.logger.Logger.e("" + t.message)
+                Logger.e("" + t.message)
                 data.value = ResposeAirRules(t)
             }
         })
@@ -199,7 +203,7 @@ class AirThicketRepository(private val mContext: Context) {
             }
 
             override fun onFailure(call: Call<ResAirPreBooking>, t: Throwable) {
-                com.orhanobut.logger.Logger.e("" + t.message)
+                Logger.e("" + t.message)
                 data.value = ResAirPreBooking(t)
             }
         })
@@ -230,7 +234,7 @@ class AirThicketRepository(private val mContext: Context) {
             }
 
             override fun onFailure(call: Call<JsonObject>, t: Throwable) {
-                com.orhanobut.logger.Logger.e("" + t.message)
+                Logger.e("" + t.message)
 
 
             }
@@ -263,7 +267,7 @@ class AirThicketRepository(private val mContext: Context) {
             }
 
             override fun onFailure(call: Call<ResInvoideEmailAPI>, t: Throwable) {
-                com.orhanobut.logger.Logger.e("" + t.message)
+                Logger.e("" + t.message)
                 data.value = ResInvoideEmailAPI(t)
 
             }
@@ -317,7 +321,7 @@ class AirThicketRepository(private val mContext: Context) {
             }
 
             override fun onFailure(call: Call<ResBookingAPI>, t: Throwable) {
-                com.orhanobut.logger.Logger.e("" + t.message)
+                Logger.e("" + t.message)
                 data.value = ResBookingAPI(t)
             }
         })
@@ -343,7 +347,7 @@ class AirThicketRepository(private val mContext: Context) {
             }
 
             override fun onFailure(call: Call<BookingList>, t: Throwable) {
-                com.orhanobut.logger.Logger.e("" + t.message)
+                Logger.e("" + t.message)
                 data.value = BookingList(throwable = t)
             }
         })
@@ -367,7 +371,7 @@ class AirThicketRepository(private val mContext: Context) {
             }
 
             override fun onFailure(call: Call<ResCommistionMaping>, t: Throwable) {
-                com.orhanobut.logger.Logger.e("" + t.message)
+                Logger.e("" + t.message)
                 data.value = ResCommistionMaping(throwable = t)
             }
         })
@@ -391,7 +395,7 @@ class AirThicketRepository(private val mContext: Context) {
             }
 
             override fun onFailure(call: Call<ResIssueTicket>, t: Throwable) {
-                com.orhanobut.logger.Logger.e("" + t.message)
+                Logger.e("" + t.message)
                 data.value = ResIssueTicket(throwable = t)
             }
         })
@@ -528,7 +532,7 @@ class AirThicketRepository(private val mContext: Context) {
             DatabaseClient.getInstance(mContext).appDatabase.mAirtricketDab().insertAirportList(airports)
 
             uiThread {
-                com.orhanobut.logger.Logger.v("Data insert successfully")
+                Logger.v("Data insert successfully")
             }
         }
 
@@ -543,7 +547,7 @@ class AirThicketRepository(private val mContext: Context) {
 
             uiThread {
                 data.value = true
-                com.orhanobut.logger.Logger.v("Data insert successfully")
+                Logger.v("Data insert successfully")
             }
         }
 

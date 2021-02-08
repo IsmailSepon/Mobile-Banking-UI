@@ -1,6 +1,7 @@
 package com.cloudwell.paywell.services.activity.eticket.airticket
 
 import com.cloudwell.paywell.appController.AppController
+import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.base.BaseViewModel
 
 /**
@@ -10,7 +11,7 @@ open class AirTicketBaseViewMode : BaseViewModel() {
     var mAirTicketRepository: AirThicketRepository
 
     init {
-        mAirTicketRepository = AirThicketRepository(AppController.getContext())
+        mAirTicketRepository = AirThicketRepository(AppController2.getContext())
     }
 
 
