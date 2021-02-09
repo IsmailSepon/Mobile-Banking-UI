@@ -206,9 +206,17 @@ dependencies {
 
 
     // android architecture components
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.0.0'
-    implementation 'androidx.lifecycle:lifecycle-reactivestreams:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-reactivestreams:2.2.0'
     implementation 'com.github.medyo:fancybuttons:1.9.0'
 
+
+    // android view depancncy libaray
+    implementation 'com.github.silvestrpredko:dot-progress-bar:1.1'
+    implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.0.4'
+
+
+    implementation 'com.github.mukeshsolanki:country-picker-android:2.0.1'
+    implementation 'su.j2e:rv-joiner:1.0.9'
 }

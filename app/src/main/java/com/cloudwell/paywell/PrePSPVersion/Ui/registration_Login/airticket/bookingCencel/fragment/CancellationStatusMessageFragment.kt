@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import com.cloudwell.paywell.R
 import kotlinx.android.synthetic.main.fragment_status_cencelation.view.*
 
 
@@ -30,7 +31,7 @@ class CancellationStatusMessageFragment : DialogFragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val v = inflater.inflate(com.cloudwell.paywell.services.R.layout.fragment_status_cencelation, container, false)
+        val v = inflater.inflate(R.layout.fragment_status_cencelation, container, false)
         isCancelable = false
         v.tvFree.text = message
 

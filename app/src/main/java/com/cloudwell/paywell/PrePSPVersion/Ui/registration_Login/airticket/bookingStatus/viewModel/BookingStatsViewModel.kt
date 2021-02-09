@@ -1,7 +1,7 @@
 package com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.viewModel
 
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.SingleLiveEvent
 import com.cloudwell.paywell.services.activity.base.newBase.BaseViewState
-import com.cloudwell.paywell.services.activity.base.newBase.SingleLiveEvent
 import com.cloudwell.paywell.services.activity.eticket.airticket.AirTicketBaseViewMode
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.BookingList
 import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.model.BookingStatuViewStatus

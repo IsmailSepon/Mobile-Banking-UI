@@ -1,26 +1,26 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.dosInfoUpdate.adapter
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.dosInfoUpdate.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Passenger
-import com.cloudwell.paywell.services.utils.CountryUtility
+import com.cloudwell.paywell.utils.CountryUtility
 import kotlinx.android.synthetic.main.passenger_list_item_final.view.*
-import kotlinx.android.synthetic.main.passenger_list_item_final.view.tvContactNumber
-import kotlinx.android.synthetic.main.passenger_list_item_final.view.tvCountry
-import kotlinx.android.synthetic.main.passenger_list_item_final.view.tvDateOfBirth
-import kotlinx.android.synthetic.main.passenger_list_item_final.view.tvEmailAddress
-import kotlinx.android.synthetic.main.passenger_list_item_final.view.tvFirstName
-import kotlinx.android.synthetic.main.passenger_list_item_final.view.tvGender
-import kotlinx.android.synthetic.main.passenger_list_item_final.view.tvLastName
-import kotlinx.android.synthetic.main.passenger_list_item_final.view.tvPassengerTypeFinal
-import kotlinx.android.synthetic.main.passenger_list_item_final.view.tvPasswordFinal
-import kotlinx.android.synthetic.main.passenger_list_item_final.view.tvShortFirstNameLastName
-import kotlinx.android.synthetic.main.passenger_list_item_final.view.tvTitle
 import kotlinx.android.synthetic.main.passenger_list_item_reissue.view.*
+import kotlinx.android.synthetic.main.passenger_list_item_reissue.view.tvContactNumber
+import kotlinx.android.synthetic.main.passenger_list_item_reissue.view.tvCountry
+import kotlinx.android.synthetic.main.passenger_list_item_reissue.view.tvDateOfBirth
+import kotlinx.android.synthetic.main.passenger_list_item_reissue.view.tvEmailAddress
+import kotlinx.android.synthetic.main.passenger_list_item_reissue.view.tvFirstName
+import kotlinx.android.synthetic.main.passenger_list_item_reissue.view.tvGender
+import kotlinx.android.synthetic.main.passenger_list_item_reissue.view.tvLastName
+import kotlinx.android.synthetic.main.passenger_list_item_reissue.view.tvPassengerTypeFinal
+import kotlinx.android.synthetic.main.passenger_list_item_reissue.view.tvPasswordFinal
+import kotlinx.android.synthetic.main.passenger_list_item_reissue.view.tvShortFirstNameLastName
+import kotlinx.android.synthetic.main.passenger_list_item_reissue.view.tvTitle
 
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2019-05-13.

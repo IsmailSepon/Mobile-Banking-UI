@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.finalReview
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -20,8 +20,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.adapter.AdapterForPassengersFinalList
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.adapter.AirportListAdapter
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.fragment.BookingStatusFragment
@@ -36,7 +37,6 @@ import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.FlightSearchViewActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.menu.AirTicketMenuActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.AddPassengerActivity
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.all_summaray_bottom_sheet.*
 import kotlinx.android.synthetic.main.contant_summary_contant.*
@@ -250,7 +250,7 @@ class AllSummaryActivity : AirTricketBaseActivity() {
         pinNoET.transformationMethod = PasswordTransformationMethod.getInstance()
         builder.setView(pinNoET)
 
-        builder.setPositiveButton(com.cloudwell.paywell.services.R.string.okay_btn) { dialogInterface, id ->
+        builder.setPositiveButton(R.string.okay_btn) { dialogInterface, id ->
             val inMethMan = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             inMethMan.hideSoftInputFromWindow(pinNoET.windowToken, 0)
 
@@ -262,7 +262,7 @@ class AllSummaryActivity : AirTricketBaseActivity() {
 
 
             } else {
-                showSnackMessageWithTextMessage(getString(com.cloudwell.paywell.services.R.string.pin_no_error_msg))
+                showSnackMessageWithTextMessage(getString(R.string.pin_no_error_msg))
             }
         }
         val alert = builder.create()
@@ -282,9 +282,9 @@ class AllSummaryActivity : AirTricketBaseActivity() {
             handleViewCommonStatus(it)
         })
 
-        mViewModel.mViewStatus.observe(this, Observer {
-            it?.let { it1 -> handleViewStatus(it1) }
-        })
+//        mViewModel.mViewStatus.observe(this, Observer {
+//            it?.let { it1 -> handleViewStatus(it1) }
+//        })
 
         mViewModel.mListMutableLiveDPassengers.observe(this, Observer {
             it?.let { it1 -> handlePassengerList(it1) }

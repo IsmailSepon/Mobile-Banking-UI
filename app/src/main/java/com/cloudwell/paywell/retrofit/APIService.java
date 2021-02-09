@@ -3,6 +3,7 @@ package com.cloudwell.paywell.retrofit;
 
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.RequestAirPrebookingSearchParamsForServer;
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.RequestAirPriceSearch;
+import com.cloudwell.paywell.app.APIResposeGenerateToken;
 import com.cloudwell.paywell.notification.model.ResposeReScheduleNotificationAccept;
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.ReposeAirSearch;
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch;
@@ -22,16 +23,21 @@ import com.cloudwell.paywell.services.activity.notification.model.deletetNotific
 import com.cloudwell.paywell.utils.ParameterUtility;
 import com.google.gson.JsonObject;
 
+import java.util.Map;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
+import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 7/29/18.
@@ -39,6 +45,10 @@ import retrofit2.http.Query;
 public interface APIService {
 
 
+
+    @POST()
+    @FormUrlEncoded
+    Call<APIResposeGenerateToken> callGenerateToken(@Url String ur, @Header("Authorization") String AuthorizationKey, @FieldMap Map<String, String> params);
 
     @POST("Notification/NotificationSystem/userNotificationDelete")
     Call<ReposeDeletedNotification> deleteNotification(@Body RequestDeletedNotification requestDeletedNotification);
@@ -193,6 +203,11 @@ public interface APIService {
                                  @Field("departure_date") String departure_date,
                                  @Field("seat_ids") String seat_ids,
                                  @Field(ParameterUtility.KEY_REF_ID) String refId);
+
+
+
+    @POST("Authantication/PaywellAuth/refreshToken")
+    Call<ResposeAppsAuth> refreshToken(@Header("Authorization") String AuthorizationKey, @Body RequestRefreshToken body);
 
 
 }

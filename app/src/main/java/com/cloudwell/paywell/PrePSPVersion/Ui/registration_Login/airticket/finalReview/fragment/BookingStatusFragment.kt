@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.ResAirPreBooking
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Fare
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.utils.CalculationHelper
-import com.cloudwell.paywell.services.utils.DateUtils
+import com.cloudwell.paywell.utils.CalculationHelper
+import com.cloudwell.paywell.utils.DateUtils
 import kotlinx.android.synthetic.main.fragment_booking.view.*
 
 
@@ -38,7 +38,7 @@ class BookingStatusFragment : DialogFragment() {
 
         val v = inflater.inflate(R.layout.fragment_booking, container, false)
 
-        resAirPreBooking = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.AIR_PRE_BOOKKING) as ResAirPreBooking
+        resAirPreBooking = activity?.applicationContext?.let { AppStorageBox.get(it, AppStorageBox.Key.AIR_PRE_BOOKKING) } as ResAirPreBooking
 
         val fareType = resAirPreBooking.data?.results?.get(0)?.fareType
         if (fareType.equals("InstantTicketing")) {
@@ -50,7 +50,7 @@ class BookingStatusFragment : DialogFragment() {
 
         val segments = resAirPreBooking.data?.results
 
-        val AIRLINE_CODE = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.AIRLINE_CODE) as String
+        val AIRLINE_CODE = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.AIRLINE_CODE) as String
         val totalFare = resAirPreBooking.data?.results?.get(0)?.fares?.let { CalculationHelper.getTotalFareDetati(it, AIRLINE_CODE) }
 
         v.tvFare.text = activity?.getString(R.string.total_fare_text) + ": TK. " + totalFare

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Airport
 import kotlinx.android.synthetic.main.item_airport_summay.view.*
 
@@ -32,13 +32,13 @@ class AirportListAdapter(var context: Context, var items: List<Airport>) : Recyc
 
         val counter = position + 1
         holder.tvAirport.text = context.getString(R.string.airport) + " " + counter
-        holder.tvAirportCode.text = context.getString(com.cloudwell.paywell.services.R.string.airport_code) + " ${airport?.airportCode}"
-        holder.tvAirportName.text = context.getString(com.cloudwell.paywell.services.R.string.airport_name) + " ${airport?.airportName}"
-        holder.tvTerminal.text = context.getString(com.cloudwell.paywell.services.R.string.terminal) + " ${airport?.terminal}"
-        holder.tvCityCode.text = context.getString(com.cloudwell.paywell.services.R.string.city_code) + " ${airport?.cityCode}"
-        holder.tvCityName.text = context.getString(com.cloudwell.paywell.services.R.string.city_name) + " ${airport?.cityName}"
-        holder.tvCountryCode.text = context.getString(com.cloudwell.paywell.services.R.string.country_code) + " ${airport?.countryCode}"
-        holder.tvCountryName.text = context.getString(com.cloudwell.paywell.services.R.string.country_name) + " ${airport?.countryName}"
+        holder.tvAirportCode.text = context.getString(R.string.airport_code) + " ${airport?.airportCode}"
+        holder.tvAirportName.text = context.getString(R.string.airport_name) + " ${airport?.airportName}"
+        holder.tvTerminal.text = context.getString(R.string.terminal) + " ${airport?.terminal}"
+        holder.tvCityCode.text = context.getString(R.string.city_code) + " ${airport?.cityCode}"
+        holder.tvCityName.text = context.getString(R.string.city_name) + " ${airport?.cityName}"
+        holder.tvCountryCode.text = context.getString(R.string.country_code) + " ${airport?.countryCode}"
+        holder.tvCountryName.text = context.getString(R.string.country_name) + " ${airport?.countryName}"
 
 
     }

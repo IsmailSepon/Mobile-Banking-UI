@@ -4,14 +4,15 @@ import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.eventBus.GlobalApplicationBus
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
-import com.cloudwell.paywell.services.eventBus.GlobalApplicationBus
-import com.cloudwell.paywell.services.utils.FormatHelper
+import com.cloudwell.paywell.utils.FormatHelper
 import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection
 
 
-class HeaderAirportRecyclerViewSection(var key: String, var list: List<Airport>) : StatelessSection(R.layout.header_airport_country, R.layout.item_airport) {
+class HeaderAirportRecyclerViewSection(var key: String, var list: List<Airport>) : StatelessSection(
+    R.layout.header_airport_country, R.layout.item_airport) {
 
 
     override fun getContentItemsTotal(): Int {

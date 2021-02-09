@@ -2,8 +2,8 @@ package com.cloudwell.paywell.services.retrofit
 
 import android.content.Context
 import android.util.Base64
-import com.cloudwell.paywell.services.app.AppController
-import com.cloudwell.paywell.services.app.AppHandler
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.appController.AppController2
 import org.json.JSONObject
 import java.security.*
 import java.security.spec.PKCS8EncodedKeySpec
@@ -20,15 +20,15 @@ import javax.crypto.spec.SecretKeySpec
     companion object {
 
         public fun getTokenBaseOnRSAlgorithm(obj: JSONObject): String {
-            val envlopeString = AppHandler.getmInstance(AppController.getContext()).envlope
+            val envlopeString = AppHandler.getmInstance(AppController2.getContext()).envlope
 
-            val p = RSAUtilty.Companion.getPrivateKey(AppController.getContext())
+            val p = RSAUtilty.Companion.getPrivateKey(AppController2.getContext())
             val rowEnvlopeDecrytionKey = getRowEnvlopeDecrytionKey(p, envlopeString)
             val envlpeDecryptionKey = Base64.encodeToString(rowEnvlopeDecrytionKey, Base64.DEFAULT)
 
 
             /* Decrypt the message, given derived encContentValues and initialization vector. */
-            val sealedDataString = AppHandler.getmInstance(AppController.getContext()).sealedData
+            val sealedDataString = AppHandler.getmInstance(AppController2.getContext()).sealedData
             val sealDataDecode = Base64.decode(sealedDataString.toByteArray(Charsets.UTF_8), Base64.DEFAULT)
 
             val secretKeySpec = SecretKeySpec(rowEnvlopeDecrytionKey, "RC4")
@@ -39,7 +39,7 @@ import javax.crypto.spec.SecretKeySpec
             val sealDecryptionKeyDecodeFormate = String(Base64.decode(sealDecryptionKey, Base64.NO_WRAP))
 
 
-            val appsSecurityToken = AppHandler.getmInstance(AppController.getContext()).appsSecurityToken
+            val appsSecurityToken = AppHandler.getmInstance(AppController2.getContext()).appsSecurityToken
             val encodeAppsSecurityToken = Base64.encodeToString(appsSecurityToken.toByteArray(Charsets.UTF_8), Base64.NO_WRAP)
 
             val toJson = obj.toString()

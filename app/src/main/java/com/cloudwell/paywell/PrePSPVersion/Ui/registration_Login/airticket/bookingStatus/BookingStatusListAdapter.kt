@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.cloudwell.paywell.R
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.BookingList
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
 import com.orhanobut.logger.Logger
@@ -21,7 +22,7 @@ class BookingStatusListAdapter(val responseList: BookingList, val context: Conte
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(com.cloudwell.paywell.services.R.layout.item_booking_status, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_booking_status, parent, false)
 
         return ViewHolder(view)
     }

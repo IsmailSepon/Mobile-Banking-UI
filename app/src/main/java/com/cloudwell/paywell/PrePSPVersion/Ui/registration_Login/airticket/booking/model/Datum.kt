@@ -1,5 +1,6 @@
 package com.cloudwell.paywell.services.activity.eticket.airticket.booking.model
 
+import com.cloudwell.paywell.services.activity.eticket.airticket.ticketCencel.model.SearchLog
 import com.google.gson.annotations.SerializedName
 
 class Datum {

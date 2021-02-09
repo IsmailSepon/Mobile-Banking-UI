@@ -15,17 +15,17 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Passenger
 import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.fragment.ShowMessageFragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.dosInfoUpdate.adapter.AdapterForPassengersReIssue
-import com.cloudwell.paywell.services.activity.eticket.airticket.dosInfoUpdate.editReissuePassengerActivity.DosInfoUpdatePassengerActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.dosInfoUpdate.adapter.AdapterForPassengersReIssue
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.dosInfoUpdate.editReissuePassengerActivity.DosInfoUpdatePassengerActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.dosInfoUpdate.model.ReissuePassenger
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.retrofit.ApiUtils
-import com.cloudwell.paywell.services.utils.UniqueKeyGenerator
+import com.cloudwell.paywell.utils.UniqueKeyGenerator
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import com.google.gson.JsonObject
@@ -33,14 +33,13 @@ import kotlinx.android.synthetic.main.activity_docs_update_ticket.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import su.j2e.rvjoiner.RvJoiner
 
 class UpdateDocOrInfomationRequestActivity : AirTricketBaseActivity(), ShowMessageFragment.MyInterface {
     override fun onOkButtonClick() {
 
     }
 
-    private val rvJoiner = RvJoiner(true)//auto update ON, stable ids ON
+   // private val rvJoiner = RvJoiner(true)//auto update ON, stable ids ON
 
     companion object {
         lateinit var item: Datum
@@ -140,7 +139,7 @@ class UpdateDocOrInfomationRequestActivity : AirTricketBaseActivity(), ShowMessa
                 snackbar.show()
             }
         }
-        builder.setNegativeButton(R.string.cancel_btn) { dialogInterface, i -> dialogInterface.dismiss() }
+        builder.setNegativeButton(R.string.cancel) { dialogInterface, i -> dialogInterface.dismiss() }
         val alert = builder.create()
         alert.show()
 
@@ -190,7 +189,7 @@ class UpdateDocOrInfomationRequestActivity : AirTricketBaseActivity(), ShowMessa
                 snackbar.show()
             }
         }
-        builder.setNegativeButton(R.string.cancel_btn) { dialogInterface, i -> dialogInterface.dismiss() }
+        builder.setNegativeButton(R.string.cancel) { dialogInterface, i -> dialogInterface.dismiss() }
         val alert = builder.create()
         alert.show()
     }

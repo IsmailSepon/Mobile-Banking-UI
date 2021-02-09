@@ -1,7 +1,6 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.dosInfoUpdate.editReissuePassengerActivity
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.dosInfoUpdate.editReissuePassengerActivity
 
 import android.Manifest
-import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.net.Uri
@@ -11,8 +10,11 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.view.WindowManager
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.constant.AllConstant.emailPattern
+import com.cloudwell.paywell.data.preferences.AppStorageBox
+import com.cloudwell.paywell.libarary.imagePickerAndCrop.ImagePickerActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Passenger
 import com.cloudwell.paywell.services.activity.eticket.airticket.dosInfoUpdate.UpdateDocOrInfomationRequestActivity
@@ -21,11 +23,8 @@ import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.fr
 import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.fragment.PassengerTypeSheetDialog
 import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.model.MyCountry
 import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.view.PassgerAddViewStatus
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.constant.AllConstant.emailPattern
-import com.cloudwell.paywell.services.libaray.imagePickerAndCrop.ImagePickerActivity
 import com.cloudwell.paywell.services.utils.AssetHelper
-import com.cloudwell.paywell.services.utils.CountryUtility
+import com.cloudwell.paywell.utils.CountryUtility
 import com.google.gson.Gson
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
@@ -638,8 +637,9 @@ class DosInfoUpdatePassengerActivity : AirTricketBaseActivity() {
 
     @Override
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_IMAGE) {
-            if (resultCode == Activity.RESULT_OK) {
+            if (resultCode == RESULT_OK) {
                 val uri: Uri = data!!.getParcelableExtra("path");
                 try {
                     // You can update this bitmap to your server

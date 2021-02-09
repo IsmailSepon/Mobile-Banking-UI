@@ -1,12 +1,12 @@
-package com.cloudwell.paywell.services.retrofit
+package com.cloudwell.paywell.retrofit
 
 import android.util.Base64
 import android.util.Log
-import com.cloudwell.paywell.services.activity.utility.AllUrl
-import com.cloudwell.paywell.services.app.AppController
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.eventBus.GlobalApplicationBus
-import com.cloudwell.paywell.services.eventBus.model.MessageToBottom
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.appController.AppController2
+import com.cloudwell.paywell.data.network.AllUrl
+import com.cloudwell.paywell.eventBus.GlobalApplicationBus
+import com.cloudwell.paywell.eventBus.model.MessageToBottom
 import okhttp3.Authenticator
 import okhttp3.Request
 import okhttp3.Response
@@ -22,13 +22,13 @@ class TokenAuthenticator : Authenticator {
 
 
         Log.e("authenticate", "authenticate")
-        if (response.code() == 401) {
+        if (response.code == 401) {
             val userName = "paywell"
             val password = "PayWell@321"
             val base = "$userName:$password"
             val authorization = "Basic " + Base64.encodeToString(base.toByteArray(), Base64.NO_WRAP)
 
-            val mAppHandler = AppHandler.getmInstance(AppController.getContext())
+            val mAppHandler = AppHandler.getmInstance(AppController2.getContext())
 
 
             val params = HashMap<String, String>()
@@ -46,13 +46,13 @@ class TokenAuthenticator : Authenticator {
             if (apiResposeGenerateToken!!.status == 200) {
 
                 val securityToken = apiResposeGenerateToken.token!!.securityToken
-                AppHandler.getmInstance(AppController.getContext()).token = securityToken
+                AppHandler.getmInstance(AppController2.getContext()).token = securityToken
 
 
 
 
 
-                return response.request().newBuilder()
+                return response.request.newBuilder()
                         .header("Authorization", "Bearer $securityToken")
                         .build()
 

@@ -1,7 +1,7 @@
 package com.cloudwell.paywell.retrofit;
 
-import com.cloudwell.paywell.services.activity.utility.AllUrl;
-import com.cloudwell.paywell.services.retrofit.RetrofitClient;
+import com.cloudwell.paywell.data.network.AllUrl;
+import com.cloudwell.paywell.data.network.RetrofitClient;
 
 import okhttp3.OkHttpClient;
 
