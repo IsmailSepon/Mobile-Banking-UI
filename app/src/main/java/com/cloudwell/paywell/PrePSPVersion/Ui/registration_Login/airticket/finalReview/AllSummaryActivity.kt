@@ -34,7 +34,7 @@ import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.vie
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Airport
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.ResposeAirPriceSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.model.Passenger
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.FlightSearchViewActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.FlightSearchViewActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.menu.AirTicketMenuActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.AddPassengerActivity
 import com.google.android.material.bottomsheet.BottomSheetBehavior

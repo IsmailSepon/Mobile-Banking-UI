@@ -1,6 +1,5 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -18,27 +17,22 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.FlightDetails1Activity
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.appController.AppController2
+import com.cloudwell.paywell.customView.clearableEditText.IDatePicker
+import com.cloudwell.paywell.data.preferences.AppStorageBox
+import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Result
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.view.SeachViewStatus
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
 import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.fragment.ShowMessageFragment
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.FlightDetails1Activity
-import com.cloudwell.paywell.R
-import com.cloudwell.paywell.appController.AppController2
-import com.cloudwell.paywell.customView.clearableEditText.IDatePicker
-import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.adapter.FlightAdapterNew
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.adapter.OnClickListener
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.viewModel.FlightSearchViewModel
 import com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.AirThicketTranslationLogActivity
-import com.cloudwell.paywell.services.app.AppController
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.customView.horizontalDatePicker.commincation.IDatePicker
-import com.cloudwell.paywell.services.retrofit.ApiUtils
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.JsonObject
@@ -222,7 +216,7 @@ class FlightSearchViewActivity : AirTricketBaseActivity(), IDatePicker {
                 snackbar.show()
             }
         }
-        builder.setNegativeButton(R.string.cancel_btn) { dialogInterface, i -> dialogInterface.dismiss() }
+        builder.setNegativeButton(R.string.cancel) { dialogInterface, i -> dialogInterface.dismiss() }
         val alert = builder.create()
         alert.show()
 
@@ -303,7 +297,7 @@ class FlightSearchViewActivity : AirTricketBaseActivity(), IDatePicker {
                 snackbar.show()
             }
         }
-        builder.setNegativeButton(R.string.cancel_btn) { dialogInterface, i -> dialogInterface.dismiss() }
+        builder.setNegativeButton(R.string.cancel) { dialogInterface, i -> dialogInterface.dismiss() }
         val alert = builder.create()
         alert.show()
     }

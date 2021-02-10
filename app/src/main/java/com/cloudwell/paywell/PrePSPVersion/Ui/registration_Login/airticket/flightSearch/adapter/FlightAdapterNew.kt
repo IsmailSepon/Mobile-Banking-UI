@@ -10,11 +10,11 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.data.network.AllUrl
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Result
-import com.cloudwell.paywell.services.activity.utility.AllUrl
-import com.cloudwell.paywell.services.utils.CalculationHelper
+import com.cloudwell.paywell.utils.CalculationHelper
 import kotlinx.android.synthetic.main.flight_list_item_new.view.*
 
 
@@ -33,11 +33,11 @@ class FlightAdapterNew(val items: List<Result>, val requestAirSearch: RequestAir
         holder.tvAirlessName.text = model.segments.get(0).airline?.airlineName
 
         if (position == 0) {
-            holder.ivTake.setImageResource(com.cloudwell.paywell.services.R.drawable.ic_tk_symbol_low)
+            holder.ivTake.setImageResource(R.drawable.ic_tk_symbol_low)
             val parseColor = Color.parseColor("#f15a24")
             holder.tvPrices.setTextColor(parseColor)
         } else {
-            holder.ivTake.setImageResource(com.cloudwell.paywell.services.R.drawable.ic_tk_symbol_normal)
+            holder.ivTake.setImageResource(R.drawable.ic_tk_symbol_normal)
             val parseColor = Color.BLACK
             holder.tvPrices.setTextColor(parseColor)
         }
@@ -90,7 +90,7 @@ class FlightAdapterNew(val items: List<Result>, val requestAirSearch: RequestAir
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderNew {
-        val view = LayoutInflater.from(context).inflate(com.cloudwell.paywell.services.R.layout.flight_list_item_new, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.flight_list_item_new, parent, false)
         return ViewHolderNew(view)
     }
 
