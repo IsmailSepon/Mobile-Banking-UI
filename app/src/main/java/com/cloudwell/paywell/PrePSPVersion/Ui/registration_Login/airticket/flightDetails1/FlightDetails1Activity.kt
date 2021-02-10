@@ -1,26 +1,28 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1
 
 import android.content.Intent
 import android.os.Bundle
 import android.text.Html
 import android.view.View
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.RequestAirPriceSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.Segment
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
+import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.FlightDetails1Status
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.adapter.FlightSequenceAdapter
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.fragment.AirlessDialogFragment
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.fragment.FlightFareDialogFragment
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Airline
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.RequestAirPriceSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.ResposeAirPriceSearch
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Segment
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.viewModel.FlightDetails1ViewModel
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.FlightDetails2Activity
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.utils.CalculationHelper
-import com.cloudwell.paywell.services.utils.DateUtils
-import com.cloudwell.paywell.services.utils.DateUtils.differenceMilliSecond
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.FlightDetails2Activity
+import com.cloudwell.paywell.utils.CalculationHelper
+import com.cloudwell.paywell.utils.DateUtils
+import com.cloudwell.paywell.utils.DateUtils.differenceMilliSecond
 import kotlinx.android.synthetic.main.contant_flight_details.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -49,7 +51,7 @@ class FlightDetails1Activity : AirTricketBaseActivity() {
     private fun initViewModel() {
         mFlightDetails1ViewModel = ViewModelProviders.of(this).get(FlightDetails1ViewModel::class.java)
 
-        mFlightDetails1ViewModel.baseViewStatus.observe(this, androidx.lifecycle.Observer {
+        mFlightDetails1ViewModel.baseViewStatus.observe(this, Observer {
             handleViewCommonStatus(it)
         })
 
@@ -124,7 +126,7 @@ class FlightDetails1Activity : AirTricketBaseActivity() {
             AppStorageBox.put(applicationContext, AppStorageBox.Key.orignAirportAnddestinationairportCode, orignAirtportCode + " - " + destinationairportCode)
 
 
-            val date = segments.get(0).origin?.depTime?.let { DateUtils.getFormatDepTime(it) }
+            val date = segments.get(0).origin?.depTime?.let { DateUtils.getFormatDepTime(it.toString()) }
             AppStorageBox.put(applicationContext, AppStorageBox.Key.humanReadAbleDate, date)
             tvNameOfDate.text = date
 
@@ -187,9 +189,9 @@ class FlightDetails1Activity : AirTricketBaseActivity() {
 
 
         if (result.passportMadatory!!) {
-            tvPassportMandatory.text = getString(com.cloudwell.paywell.services.R.string.passport_mandatory)
+            tvPassportMandatory.text = getString(R.string.passport_mandatory)
         } else {
-            tvPassportMandatory.text = getString(com.cloudwell.paywell.services.R.string.passport_not_mandatory)
+            tvPassportMandatory.text = getString(R.string.passport_not_mandatory)
         }
 
         if (result.extraServices == null) {
@@ -199,9 +201,9 @@ class FlightDetails1Activity : AirTricketBaseActivity() {
         }
 
         if (result.isRefundable!!) {
-            tvRefunable.text = getString(R.string.refundable) + ": " + getString(com.cloudwell.paywell.services.R.string.yes)
+            tvRefunable.text = getString(R.string.refundable) + ": " + getString(R.string.yes)
         } else {
-            tvRefunable.text = getString(R.string.refundable) + ": " + getString(com.cloudwell.paywell.services.R.string.no)
+            tvRefunable.text = getString(R.string.refundable) + ": " + getString(R.string.no)
 
         }
 

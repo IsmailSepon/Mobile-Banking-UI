@@ -29,7 +29,7 @@ import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.fra
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.fragment.BookingSuccessDialog
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.fragment.RePriceStatusFragment
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.ResAirPreBooking
-import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.viewModel.AllSummaryActivityViewModel
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.viewModel.AllSummaryActivityViewModel
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.viewModel.view.AllSummaryStatus
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Airport
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.ResposeAirPriceSearch

@@ -178,7 +178,7 @@ object CalculationHelper {
     }
 
 
-    fun getTotalFareDetati(fares: List<Fare>, airlineCode: String): String {
+    fun getTotalFareDetati(fares: MutableList<com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Fare>, airlineCode: String): String {
         val readData = InternalStorageHelper.readData(InternalStorageHelper.CombustionfileName)
         val commission = Gson().fromJson(readData, Commission::class.java)
         val retailerCommission = commission.retailerCommission

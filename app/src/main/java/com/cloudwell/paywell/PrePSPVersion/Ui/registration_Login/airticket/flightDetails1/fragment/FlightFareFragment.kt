@@ -8,10 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.adapter.FareListAdapter
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.adapter.FareListAdapter
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Fare
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.utils.CalculationHelper
+import com.cloudwell.paywell.utils.CalculationHelper
 import kotlinx.android.synthetic.main.fragment_flight_fare_fragment.view.*
 
 
@@ -25,21 +26,21 @@ class FlightFareFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        fare = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.FARE_DATA) as MutableList<Fare>
+        fare = activity?.applicationContext?.let { AppStorageBox.get(it, AppStorageBox.Key.FARE_DATA) } as MutableList<Fare>
 
-        val v = inflater.inflate(com.cloudwell.paywell.services.R.layout.fragment_flight_fare_fragment, container, false)
+        val v = inflater.inflate(R.layout.fragment_flight_fare_fragment, container, false)
 
 
 
         v.rvFareList.setNestedScrollingEnabled(false)
-        val mLayoutManager = LinearLayoutManager(activity!!.applicationContext)
+        val mLayoutManager = LinearLayoutManager(requireActivity().applicationContext)
         v.rvFareList.setLayoutManager(mLayoutManager)
         v.rvFareList.setItemAnimator(DefaultItemAnimator())
 
 
         val temp = mutableListOf<Fare>()
 
-        val AIRLINE_CODE = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.AIRLINE_CODE) as String
+        val AIRLINE_CODE = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.AIRLINE_CODE) as String
 
 
         for (f in fare) {
@@ -48,7 +49,7 @@ class FlightFareFragment : Fragment() {
         }
 
 
-        fare = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.FARE_DATA) as MutableList<Fare>
+        fare = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.FARE_DATA) as MutableList<Fare>
 
         val total = CalculationHelper.getTotalFareDetati(fare, AIRLINE_CODE)
         val fare1 = Fare()

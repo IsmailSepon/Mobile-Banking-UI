@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
 
 
 class BaggeFragment : Fragment() {

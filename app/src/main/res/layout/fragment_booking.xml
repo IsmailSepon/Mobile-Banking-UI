@@ -142,7 +142,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="#f36743"
-        android:text="@string/cencel"
+        android:text="@string/cancel"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

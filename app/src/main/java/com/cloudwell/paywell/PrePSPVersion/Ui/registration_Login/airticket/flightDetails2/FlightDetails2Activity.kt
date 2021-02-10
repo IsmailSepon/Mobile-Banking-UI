@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -8,11 +8,12 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.AllSummaryActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.BaggageAndPoliciesActiivty
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.BaggageAndPoliciesActiivty
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.data.preferences.AppStorageBox
+import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.fragment.FlightFareDialogFragment
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.ResposeAirPriceSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.adapter.AdapterForPassengers
@@ -20,9 +21,8 @@ import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.viewmodel.FlightDetails2ViewModel
 import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.AddPassengerActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.passengerList.PassengerListActivity
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.utils.CalculationHelper
-import com.cloudwell.paywell.services.utils.RecyclerItemClickListener
+import com.cloudwell.paywell.utils.CalculationHelper
+import com.cloudwell.paywell.utils.RecyclerItemClickListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.contant_flight_details_2.*
 import kotlinx.android.synthetic.main.review_bottom_sheet.*
@@ -245,7 +245,7 @@ class FlightDetails2Activity : AirTricketBaseActivity() {
 
     private fun handleViewStatus(it: List<Passenger>) {
 
-        val recyclerView = findViewById(com.cloudwell.paywell.services.R.id.recyclerViewPassenger) as RecyclerView
+        val recyclerView = findViewById(R.id.recyclerViewPassenger) as RecyclerView
         recyclerView.setHasFixedSize(true)
 
         val columns = 2
@@ -316,9 +316,11 @@ class FlightDetails2Activity : AirTricketBaseActivity() {
 
                     }
 
-                    override fun onLongItemClick(view: View, position: Int) {
-                        // do whatever
+                    override fun onLongItemClick(view: View?, position: Int) {
+
                     }
+
+
                 })
         )
 

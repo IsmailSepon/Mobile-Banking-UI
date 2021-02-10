@@ -58,6 +58,7 @@
     <color name="card_background">@color/colorText</color>
     <color name="colorText">#ffffff</color>
     <color name="black33333">#000000</color>
+    <color name="default_progress_background">#ccc</color>
 
 
 

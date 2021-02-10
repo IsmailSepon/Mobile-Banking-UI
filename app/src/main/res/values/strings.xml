@@ -1019,6 +1019,36 @@
     <string name="refundable">Refundable</string>
     <string name="depart_time_">Departure Time: </string>
     <string name="arrival_time">Arrival Time: </string>
+    <string name="booking_id">Booking ID: </string>
+    <string name="ticket_status">Ticket status :</string>
+    <string name="message">Message</string>
+    <string name="please_search_for_another_flight">Please search for another flight</string>
+    <string name="back_to_search">Back To Search</string>
+    <string name="title_activity_baggage_and_policies_actiivty">Air Rules &amp; Fare</string>
+    <string name="fares">Fare</string>
+    <string name="roles">Air Rules</string>
+    <string name="earnings">Earnings</string>
+    <string name="title_booking_and_review">Review and Book</string>
+    <string name="class_text">Class</string>
+    <string name="passport_mandatory">Passport Mandatory</string>
+    <string name="passport_not_mandatory">Passport not mandatory</string>
+    <string name="extra_serviex">Extra Services</string>
+    <string name="n_a">N/A</string>
+    <string name="price_details">Price Details</string>
+    <string name="baggage_policy_details"><![CDATA[Baggage & Policy Details]]></string>
+    <string name="book_text">Book</string>
+    <string name="rules">Rules:</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="select_a_saved_passenger_or_add_a_new_one">Select a saved passenger or add a new one</string>
+    <string name="flight_information">Flight Information</string>
+    <string name="discount">Discount</string>
+    <string name="paxtype">Pax Type</string>
+    <string name="passenger_count">Passenger Count</string>
+    <string name="service_fee">Service Fee</string>
+    <string name="fares_information">Fare Information</string>
+    <string name="base_fare">Base Fare</string>
+    <string name="othercharges">Other Charges</string>
+    <string name="review">Review</string>
 
 
 

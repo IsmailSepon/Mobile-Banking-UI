@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import com.cloudwell.paywell.R
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Fare
 import kotlinx.android.synthetic.main.fragment_flight_fare.view.*
 
@@ -27,7 +28,7 @@ class FlightFareDialogFragment() : DialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val v = inflater.inflate(com.cloudwell.paywell.services.R.layout.fragment_flight_fare, container, false)
+        val v = inflater.inflate(R.layout.fragment_flight_fare, container, false)
         v.tvFare.text = "${fare.baseFare}"
         v.tvTax.text = "${fare.tax}"
         v.tvDepartTime.text = "${fare.currency}"

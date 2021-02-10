@@ -1,5 +1,6 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.fragment
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,13 +9,14 @@ import android.widget.ExpandableListView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.BaggageAndPoliciesActiivty
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.BaggageAndPoliciesActiivty
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.RequestAirPriceSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.airRules.Datum
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.FlightDetails1Status
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.adapter.ExpandableListAdapter
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.RequestAirPriceSearch
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.airRules.Datum
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.viewModel.FlightDetails1ViewModel
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
 import kotlinx.android.synthetic.main.fragment_roles.view.*
 
 
@@ -33,12 +35,13 @@ class RolesFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        mFlightDetails1ViewModel = ViewModelProviders.of(activity!!).get(FlightDetails1ViewModel::class.java!!)
+        mFlightDetails1ViewModel = ViewModelProviders.of(requireActivity()).get(FlightDetails1ViewModel::class.java!!)
     }
 
+    @SuppressLint("FragmentLiveDataObserve")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val v = inflater.inflate(com.cloudwell.paywell.services.R.layout.fragment_roles, container, false)
+        val v = inflater.inflate(R.layout.fragment_roles, container, false)
 
 
         // preparing list data
@@ -56,14 +59,14 @@ class RolesFragment : Fragment() {
         })
 
 
-        mFlightDetails1ViewModel.mListMutableLiveDataAirRules.observe(this, Observer {
+        mFlightDetails1ViewModel.mListMutableLiveDataAirRules.observe(  this, Observer {
 
             it?.let { it1 -> displayData(it1) }
 
         })
 
-        val serachId = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.SERACH_ID) as String
-        val requestID = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.Request_ID) as String
+        val serachId = activity?.applicationContext?.let { AppStorageBox.get(it, AppStorageBox.Key.SERACH_ID) } as String
+        val requestID = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.Request_ID) as String
 
 
         val requestAirPriceSearch = RequestAirPriceSearch()

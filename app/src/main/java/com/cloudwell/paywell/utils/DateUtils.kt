@@ -1,5 +1,6 @@
 package com.cloudwell.paywell.utils
 
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.Segment
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.OutputSegment
 import java.text.SimpleDateFormat
 import java.util.*
@@ -216,5 +217,37 @@ object DateUtils {
 
     }
 
+
+    fun getDartingJanuaryTimeNew(duration: Segment): String {
+        val sb = StringBuilder(64)
+
+
+        val diffMinutes: Int
+        val diffHours: Int
+
+        var durationInt = 0
+
+
+        durationInt = durationInt + duration.journeyDuration.toInt()
+
+
+
+        diffHours = (durationInt / 60)
+        diffMinutes = (durationInt % 60)
+
+
+        if (diffHours != 0) {
+            sb.append(diffHours)
+            sb.append("h ")
+        }
+
+        if (diffMinutes != 0) {
+            sb.append(diffMinutes)
+            sb.append("m")
+        }
+
+        return sb.toString()
+
+    }
 
 }

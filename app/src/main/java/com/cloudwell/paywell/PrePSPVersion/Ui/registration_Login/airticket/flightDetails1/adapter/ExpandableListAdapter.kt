@@ -8,9 +8,8 @@ import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.ImageView
 import android.widget.TextView
-
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.utils.FormatHelper
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.utils.FormatHelper
 
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 6/3/19.

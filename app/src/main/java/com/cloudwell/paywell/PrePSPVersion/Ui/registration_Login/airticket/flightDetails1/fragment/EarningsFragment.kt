@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Fare
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.utils.CalculationHelper
+import com.cloudwell.paywell.utils.CalculationHelper
 import kotlinx.android.synthetic.main.fragment_earnings.view.*
 
 
@@ -21,8 +22,8 @@ class EarningsFragment() : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        fare = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.FARE_DATA) as MutableList<Fare>
-        val v = inflater.inflate(com.cloudwell.paywell.services.R.layout.fragment_earnings, container, false)
+        fare = activity?.applicationContext?.let { AppStorageBox.get(it, AppStorageBox.Key.FARE_DATA) } as MutableList<Fare>
+        val v = inflater.inflate(R.layout.fragment_earnings, container, false)
 
 
         val retailerEaring = CalculationHelper.retailerEarning(fare)

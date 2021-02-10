@@ -9,11 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.AirTicketMainActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.ResAirPreBooking
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.ResBookingAPI
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Fare
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
 import kotlinx.android.synthetic.main.fragment_booking_success.view.*
 
 
@@ -38,8 +39,8 @@ class BookingSuccessDialog : DialogFragment() {
 
         isCancelable = false
 
-        val v = inflater.inflate(com.cloudwell.paywell.services.R.layout.fragment_booking_success, container, false)
-        resBookingAPI = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.AIR_BOOKKING) as ResBookingAPI
+        val v = inflater.inflate(R.layout.fragment_booking_success, container, false)
+        resBookingAPI = activity?.applicationContext?.let { AppStorageBox.get(it, AppStorageBox.Key.AIR_BOOKKING) } as ResBookingAPI
 
         v.tvFare.text = resBookingAPI.bookingID
         v.tvMessage.text = resBookingAPI.message

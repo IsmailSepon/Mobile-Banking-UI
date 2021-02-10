@@ -1,6 +1,6 @@
 package com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.adapter
 
-import com.cloudwell.paywell.services.libaray.SequenceAdapter
+import com.cloudwell.paywell.libarary.imagePickerAndCrop.SequenceAdapter
 import com.cloudwell.paywell.services.libaray.SequenceStep
 import kotlinx.android.synthetic.main.sequence_step.view.*
 

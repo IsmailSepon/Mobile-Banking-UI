@@ -219,4 +219,9 @@ dependencies {
 
     implementation 'com.github.mukeshsolanki:country-picker-android:2.0.1'
     implementation 'su.j2e:rv-joiner:1.0.9'
+
+    implementation 'com.github.zagum:Android-ExpandIcon:1.2.1'
+
+
+    implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
 }

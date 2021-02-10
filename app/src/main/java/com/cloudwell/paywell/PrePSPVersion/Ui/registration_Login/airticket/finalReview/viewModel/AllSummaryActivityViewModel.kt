@@ -1,21 +1,21 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.viewModel
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.viewModel
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.Base64
 import androidx.lifecycle.MutableLiveData
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.SingleLiveEvent
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.FileUploadReqSearchPara
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.RequestAirPrebookingSearchParams
+import com.cloudwell.paywell.appController.AppController2
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.base.newBase.BaseViewState
-import com.cloudwell.paywell.services.activity.base.newBase.SingleLiveEvent
 import com.cloudwell.paywell.services.activity.eticket.airticket.AirTicketBaseViewMode
-import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.FileUploadReqSearchPara
-import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.RequestAirPrebookingSearchParams
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.ResAirPreBooking
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.ResBookingAPI
 import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.viewModel.view.AllSummaryStatus
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.ResposeAirPriceSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.model.Passenger
-import com.cloudwell.paywell.services.app.AppController
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
 import java.io.ByteArrayOutputStream
 
 
@@ -45,7 +45,7 @@ class AllSummaryActivityViewModel : AirTicketBaseViewMode() {
         } else {
             mViewStatus.value = AllSummaryStatus(noSerachFoundMessage = "", isShowProcessIndicatior = true)
 
-            val resposeAirPriceSearch = AppStorageBox.get(AppController.getContext(), AppStorageBox.Key.AIR_PRE_BOOKKING) as ResAirPreBooking
+            val resposeAirPriceSearch = AppStorageBox.get(AppController2.getContext(), AppStorageBox.Key.AIR_PRE_BOOKKING) as ResAirPreBooking
 
 
             mAirTicketRepository.getAllPassengers(passengerIDS.split(",")).observeForever {
@@ -86,7 +86,7 @@ class AllSummaryActivityViewModel : AirTicketBaseViewMode() {
             mAirTicketRepository.getAllPassengers(passengerIDS.split(",")).observeForever {
                 it?.let {
 
-                    val resposeAirPriceSearch = AppStorageBox.get(AppController.getContext(), AppStorageBox.Key.ResposeAirPriceSearch) as ResposeAirPriceSearch
+                    val resposeAirPriceSearch = AppStorageBox.get(AppController2.getContext(), AppStorageBox.Key.ResposeAirPriceSearch) as ResposeAirPriceSearch
 
                     requestModel = RequestAirPrebookingSearchParams()
                     requestModel.resultID = resposeAirPriceSearch.data?.results?.get(0)?.resultID
