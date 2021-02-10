@@ -224,4 +224,9 @@ dependencies {
 
 
     implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
+
+
+    //ShimmerRecyclerView
+    implementation 'com.github.sharish:ShimmerRecyclerView:v1.3'
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
 }

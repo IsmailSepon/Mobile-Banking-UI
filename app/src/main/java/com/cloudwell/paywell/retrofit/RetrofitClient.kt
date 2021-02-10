@@ -1,10 +1,8 @@
-package com.cloudwell.paywell.services.retrofit
+package com.cloudwell.paywell.retrofit
 
 
-import com.cloudwell.paywell.retrofit.AppsAuthHeaderTokenInterceptor
-import com.cloudwell.paywell.retrofit.TokenAuthenticator
-import com.cloudwell.paywell.services.BuildConfig
-import com.cloudwell.paywell.services.app.AppController
+import com.cloudwell.paywell.BuildConfig
+import com.cloudwell.paywell.appController.AppController2
 import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
 import okhttp3.CipherSuite
 import okhttp3.ConnectionSpec
@@ -67,7 +65,7 @@ object RetrofitClient {
             val httpClient = OkHttpClient.Builder()
             httpClient.connectTimeout(90, TimeUnit.SECONDS).readTimeout(90, TimeUnit.SECONDS).writeTimeout(90, TimeUnit.SECONDS)
 
-            httpClient.addInterceptor(HeaderTokenInterceptor(AppController.getContext()))
+            httpClient.addInterceptor(HeaderTokenInterceptor(AppController2.getContext()))
 
             if (BuildConfig.DEBUG) {
                 val logging = HttpLoggingInterceptor()
@@ -81,7 +79,9 @@ object RetrofitClient {
 
 
             okHttpClient = httpClient.build()
-            retrofitPHP7 = Retrofit.Builder().baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create()).client(okHttpClient)
+            retrofitPHP7 = Retrofit.Builder().baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create()).client(
+                okHttpClient
+            )
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(ScalarsConverterFactory.create())
                     .build()
@@ -115,7 +115,7 @@ object RetrofitClient {
             val httpClient = OkHttpClient.Builder()
             httpClient.connectTimeout(90, TimeUnit.SECONDS).readTimeout(90, TimeUnit.SECONDS).writeTimeout(90, TimeUnit.SECONDS)
 
-            httpClient.addInterceptor(AppsAuthHeaderTokenInterceptor(AppController.getContext()))
+            httpClient.addInterceptor(AppsAuthHeaderTokenInterceptor(AppController2.getContext()))
 
             httpClient.connectionSpecs(Collections.singletonList(spec))
             if (BuildConfig.DEBUG) {
@@ -128,7 +128,9 @@ object RetrofitClient {
             }
 
             okHttpClient = httpClient.build()
-            retrofitV2 = Retrofit.Builder().baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create()).client(okHttpClient)
+            retrofitV2 = Retrofit.Builder().baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create()).client(
+                okHttpClient
+            )
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(ScalarsConverterFactory.create())
                     .build()

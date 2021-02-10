@@ -1,5 +1,6 @@
 package com.cloudwell.paywell.retrofit
 
+import com.cloudwell.paywell.app.Token
 import com.google.gson.annotations.SerializedName
 
 class ResposeAppsAuth {

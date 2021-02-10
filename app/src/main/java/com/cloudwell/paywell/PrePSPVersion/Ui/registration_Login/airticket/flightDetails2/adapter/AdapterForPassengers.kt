@@ -1,11 +1,11 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.adapter
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.model.Passenger
 import kotlinx.android.synthetic.main.flight_list_item.view.*
 import kotlinx.android.synthetic.main.passenger_list_item_defalt_add.view.*
@@ -38,7 +38,7 @@ class AdapterForPassengers(var context: Context, var items: List<Passenger>) : R
                 return ViewHolder(view)
             }
             else -> {
-                val view = LayoutInflater.from(context).inflate(com.cloudwell.paywell.services.R.layout.passenger_list_item_with_title, parent, false)
+                val view = LayoutInflater.from(context).inflate(R.layout.passenger_list_item_with_title, parent, false)
                 return ViewHolder(view)
             }
         }

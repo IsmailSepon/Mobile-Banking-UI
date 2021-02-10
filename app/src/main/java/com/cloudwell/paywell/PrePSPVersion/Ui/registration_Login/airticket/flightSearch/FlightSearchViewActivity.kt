@@ -17,6 +17,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.services.R
 import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
@@ -25,6 +26,10 @@ import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.v
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
 import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.fragment.ShowMessageFragment
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.FlightDetails1Activity
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.appController.AppController2
+import com.cloudwell.paywell.customView.clearableEditText.IDatePicker
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.adapter.FlightAdapterNew
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.adapter.OnClickListener
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.viewModel.FlightSearchViewModel
@@ -84,11 +89,11 @@ class FlightSearchViewActivity : AirTricketBaseActivity(), IDatePicker {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.cloudwell.paywell.services.R.layout.activity_search_view)
+        setContentView(R.layout.activity_search_view)
 
-        setToolbar(getString(com.cloudwell.paywell.services.R.string.title_serach_view))
+        setToolbar(getString(R.string.title_serach_view))
 
-        requestAirSearch = AppStorageBox.get(AppController.getContext(), AppStorageBox.Key.REQUEST_AIR_SERACH) as RequestAirSearch
+        requestAirSearch = AppStorageBox.get(AppController2.getContext(), AppStorageBox.Key.REQUEST_AIR_SERACH) as RequestAirSearch
 
         if (requestAirSearch.journeyType.equals("Oneway")) {
             val split = requestAirSearch.segments.get(0).departureDateTime.split("-")
@@ -191,7 +196,7 @@ class FlightSearchViewActivity : AirTricketBaseActivity(), IDatePicker {
         builder.setView(pinNoET)
 
         builder.setPositiveButton(R.string.okay_btn) { dialogInterface, id ->
-            val inMethMan = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            val inMethMan = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
             inMethMan.hideSoftInputFromWindow(pinNoET.windowToken, 0)
 
             if (pinNoET.text.toString().length != 0) {
@@ -267,7 +272,7 @@ class FlightSearchViewActivity : AirTricketBaseActivity(), IDatePicker {
         builder.setView(pinNoET)
 
         builder.setPositiveButton(R.string.okay_btn) { dialogInterface, id ->
-            val inMethMan = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            val inMethMan = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
             inMethMan.hideSoftInputFromWindow(pinNoET.windowToken, 0)
 
             if (pinNoET.text.toString().length != 0) {
