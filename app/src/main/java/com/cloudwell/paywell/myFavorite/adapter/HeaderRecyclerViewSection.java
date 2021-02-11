@@ -3,17 +3,16 @@ package com.cloudwell.paywell.myFavorite.adapter;
 
 import android.view.View;
 
-import com.cloudwell.paywell.services.R;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.cloudwell.paywell.R;
+import com.cloudwell.paywell.appController.AppController2;
 import com.cloudwell.paywell.services.activity.myFavorite.model.FavoriteMenu;
 import com.cloudwell.paywell.services.activity.myFavorite.model.MessageEvent;
-import com.cloudwell.paywell.services.app.AppController;
-import com.cloudwell.paywell.services.eventBus.GlobalApplicationBus;
-import com.cloudwell.paywell.services.utils.ResorceHelper;
 import com.orhanobut.logger.Logger;
 
 import java.util.List;
 
-import androidx.recyclerview.widget.RecyclerView;
 import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection;
 
 
@@ -52,17 +51,17 @@ public class HeaderRecyclerViewSection extends StatelessSection {
         final FavoriteMenu favoriteMenu = list.get(position);
 
         Logger.v(favoriteMenu.getName());
-        iHolder.itemContent.setText(ResorceHelper.getResId(favoriteMenu.getName(), R.string.class));
-        int resId = ResorceHelper.getResId(favoriteMenu.getIcon(), R.drawable.class);
+//        iHolder.itemContent.setText(ResorceHelper.getResId(favoriteMenu.getName(), R.string.class));
+//        int resId = ResorceHelper.getResId(favoriteMenu.getIcon(), R.drawable.class);
 
-        iHolder.ivIcon.setBackgroundResource(resId);
+  //      iHolder.ivIcon.setBackgroundResource(resId);
 
         iHolder.rootLiarLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 MessageEvent messageEvent = new MessageEvent(mIndex, position, title, favoriteMenu);
-                GlobalApplicationBus.getBus().post(messageEvent);
+            //    GlobalApplicationBus.getBus().post(messageEvent);
 
             }
         });
@@ -72,7 +71,7 @@ public class HeaderRecyclerViewSection extends StatelessSection {
             public void onClick(View v) {
 
                 MessageEvent messageEvent = new MessageEvent(mIndex, position, title, favoriteMenu);
-                GlobalApplicationBus.getBus().post(messageEvent);
+             //   GlobalApplicationBus.getBus().post(messageEvent);
 
             }
         });
@@ -82,16 +81,16 @@ public class HeaderRecyclerViewSection extends StatelessSection {
             public void onClick(View v) {
 
                 MessageEvent messageEvent = new MessageEvent(mIndex, position, title, favoriteMenu);
-                GlobalApplicationBus.getBus().post(messageEvent);
+             //   GlobalApplicationBus.getBus().post(messageEvent);
 
 
             }
         });
 
         if (mIsEnglish) {
-            iHolder.itemContent.setTypeface(AppController.getInstance().getOxygenLightFont());
+            iHolder.itemContent.setTypeface(AppController2.getInstance().getOxygenLightFont());
         } else {
-            iHolder.itemContent.setTypeface(AppController.getInstance().getAponaLohitFont());
+            iHolder.itemContent.setTypeface(AppController2.getInstance().getAponaLohitFont());
         }
 
 
@@ -108,9 +107,9 @@ public class HeaderRecyclerViewSection extends StatelessSection {
         hHolder.headerTitle.setText(title);
 
         if (mIsEnglish) {
-            hHolder.headerTitle.setTypeface(AppController.getInstance().getOxygenLightFont());
+            hHolder.headerTitle.setTypeface(AppController2.getInstance().getOxygenLightFont());
         } else {
-            hHolder.headerTitle.setTypeface(AppController.getInstance().getAponaLohitFont());
+            hHolder.headerTitle.setTypeface(AppController2.getInstance().getAponaLohitFont());
         }
     }
 

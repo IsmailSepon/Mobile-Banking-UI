@@ -15,7 +15,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.cloudwell.paywell.R;
-import com.cloudwell.paywell.appController.AppController;
+import com.cloudwell.paywell.appController.AppController2;
 import com.cloudwell.paywell.utils.ConnectionDetector;
 import com.orhanobut.logger.Logger;
 
@@ -767,7 +767,7 @@ public class AppHandler {
 
         String rSAPrivateKey = mPref.getString(KEY_RSA_PRIVATE_KEY, UNKNOWN);
         if (rSAPrivateKey.equals(UNKNOWN)){
-            ArrayList<String> rsaKays = AppHelper.getRSAKays();
+            ArrayList<String> rsaKays = AppHandler.getRSAKays();
             String privateKey = rsaKays.get(0);
             String publicKey = rsaKays.get(1);
 
@@ -890,7 +890,7 @@ public class AppHandler {
             builder.setMessage(R.string.connection_error_msg)
                     .setPositiveButton(R.string.retry_btn, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-                            cd = new ConnectionDetector(AppController.getContext());
+                            cd = new ConnectionDetector(AppController2.getContext());
                             if (cd.isConnectingToInternet()) {
                                 dismiss();
                             } else {

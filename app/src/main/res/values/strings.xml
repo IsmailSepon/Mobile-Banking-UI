@@ -1098,6 +1098,8 @@
     <string name="title_activity_my_favorite_menu">My Favorites</string>
     <string name="can_not_add_more_than">Can\'t add more than 8 menu</string>
     <string name="details">Details</string>
+    <string name="internet_connection_title_msg">Internet Connection</string>
+    <string name="retry_btn">Retry</string>
 
 
 </resources>

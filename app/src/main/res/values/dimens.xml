@@ -25,6 +25,7 @@
     <dimen name="fifteen_sp">15sp</dimen>
     <dimen name="thirty_dp">30dp</dimen>
     <dimen name="fifty_dp">50dp</dimen>
+    <dimen name="mti_timeline_lbl_day_text">10sp</dimen>
     <dimen name="twenty_two_dp">22dp</dimen>
     <dimen name="twelve_dp">12dp</dimen>
     <dimen name="twelve_sp">12sp</dimen>

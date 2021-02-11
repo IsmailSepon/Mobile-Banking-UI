@@ -4,7 +4,7 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 
-import com.cloudwell.paywell.services.app.AppHandler;
+import com.cloudwell.paywell.app.AppHandler;
 
 import java.io.IOException;
 

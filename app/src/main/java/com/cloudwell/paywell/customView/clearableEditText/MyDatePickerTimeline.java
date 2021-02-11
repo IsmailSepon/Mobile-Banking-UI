@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.cloudwell.paywell.services.R;
+import com.cloudwell.paywell.R;
 
 import java.util.Calendar;
 

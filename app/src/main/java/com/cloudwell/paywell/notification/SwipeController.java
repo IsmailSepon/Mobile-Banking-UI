@@ -14,8 +14,7 @@ import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.ItemTouchHelper.Callback;
 
-
-import com.cloudwell.paywell.services.R;
+import com.cloudwell.paywell.R;
 
 import static androidx.recyclerview.widget.ItemTouchHelper.ACTION_STATE_SWIPE;
 import static androidx.recyclerview.widget.ItemTouchHelper.LEFT;
@@ -186,7 +185,7 @@ public class SwipeController extends Callback {
         RectF rightButton = new RectF(itemView.getRight() - buttonWidth - 50, itemView.getTop() + 12, itemView.getRight() - 30, itemView.getBottom() - 12);
         p.setColor(Color.parseColor("#ec4219"));
         c.drawRoundRect(rightButton, corners, corners, p);
-        Bitmap bmp = BitmapFactory.decodeResource(((Context)buttonsActions).getResources(), R.drawable.notification_delete);
+        Bitmap bmp = BitmapFactory.decodeResource(((Context)buttonsActions).getResources(), R.drawable.delate);
         int imageTop= (int) ((itemView.getTop()) + ((itemView.getBottom()-itemView.getTop())/2.6));
         int imageLeft = (int) (itemView.getRight() - (buttonWidthWithoutPadding / 1.2));
         c.drawBitmap(bmp, imageLeft, imageTop, null); // 24 is the height of image

@@ -16,8 +16,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.cloudwell.paywell.services.R;
-import com.cloudwell.paywell.services.app.AppController;
+import com.cloudwell.paywell.R;
+import com.cloudwell.paywell.appController.AppController2;
 
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
@@ -344,16 +344,16 @@ public class MyDateTimelineViewRecyclerView extends RecyclerView {
 
 
             if (position == selectedPosition) {
-                holder.linearLayout.setBackgroundResource(R.drawable.layout_round_bg);
-                holder.tvDate.setTextColor(AppController.getContext().getResources().getColor((R.color.text_color_white)));
-                holder.tvDay.setTextColor(AppController.getContext().getResources().getColor((R.color.text_color_white)));
-                holder.tvMinValue.setTextColor(AppController.getContext().getResources().getColor((R.color.text_color_white)));
+                holder.linearLayout.setBackgroundResource(R.drawable.round_bg);
+                holder.tvDate.setTextColor(AppController2.getContext().getResources().getColor((R.color.white)));
+                holder.tvDay.setTextColor(AppController2.getContext().getResources().getColor((R.color.white)));
+                holder.tvMinValue.setTextColor(AppController2.getContext().getResources().getColor((R.color.white)));
 
             } else {
                 holder.linearLayout.setBackgroundResource(R.color.white);
-                holder.tvDate.setTextColor(AppController.getContext().getResources().getColor((R.color.text_color)));
-                holder.tvDay.setTextColor(AppController.getContext().getResources().getColor((R.color.text_color)));
-                holder.tvMinValue.setTextColor(AppController.getContext().getResources().getColor((R.color.text_color)));
+                holder.tvDate.setTextColor(AppController2.getContext().getResources().getColor((R.color.keypad_text_clr)));
+                holder.tvDay.setTextColor(AppController2.getContext().getResources().getColor((R.color.keypad_text_clr)));
+                holder.tvMinValue.setTextColor(AppController2.getContext().getResources().getColor((R.color.keypad_text_clr)));
 
             }
 
