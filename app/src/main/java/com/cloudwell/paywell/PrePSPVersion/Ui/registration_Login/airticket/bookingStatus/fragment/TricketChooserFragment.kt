@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.fragment
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
 import kotlinx.android.synthetic.main.fragment_tricket_chooser.view.*
 
 

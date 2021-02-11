@@ -2,9 +2,6 @@ package com.cloudwell.paywell.services.activity.eticket.airticket
 
 import android.content.Context
 import androidx.lifecycle.MutableLiveData
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.FileUploadReqSearchPara
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.RequestAirPrebookingSearchParams
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.RequestAirPrebookingSearchParamsForServer
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.RequestAirPriceSearch
 import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.data.preferences.AppStorageBox
@@ -14,12 +11,12 @@ import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.m
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.ResGetAirports
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.BookingList
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.model.ResIssueTicket
-import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.*
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.ResposeAirPriceSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.BookingList
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.model.ResIssueTicket
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.*
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.ResposeAirPriceSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.airRules.ResposeAirRules
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.model.Passenger
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.ResCommistionMaping
 import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.model.ResInvoideEmailAPI
 import com.cloudwell.paywell.utils.InternalStorageHelper

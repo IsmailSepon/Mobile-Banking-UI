@@ -1,7 +1,7 @@
 package com.cloudwell.paywell.services.activity.notification.allNotificaiton.viewModel
 
 import androidx.lifecycle.MutableLiveData
-import com.cloudwell.paywell.services.activity.base.newBase.BaseViewState
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.BaseViewState
 import com.cloudwell.paywell.services.activity.base.newBase.SingleLiveEvent
 import com.cloudwell.paywell.services.activity.notification.BaseNotifcationViewModel
 import com.cloudwell.paywell.services.activity.notification.allNotificaiton.view.NotificationViewStatus

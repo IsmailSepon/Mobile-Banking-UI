@@ -4,10 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.PAuthenticationHostActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.ApplockManager
-import com.cloudwell.paywell.services.activity.eticket.airticket.menu.AirTicketMenuActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.menu.AirTicketMenuActivity
 
 class PrePSPsplashActivity : AppCompatActivity() {
 

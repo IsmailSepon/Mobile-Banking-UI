@@ -27,10 +27,10 @@ import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Result
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.view.SeachViewStatus
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.fragment.ShowMessageFragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.adapter.FlightAdapterNew
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.adapter.OnClickListener
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.fragment.ShowMessageFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.adapter.FlightAdapterNew
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.adapter.OnClickListener
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.viewModel.FlightSearchViewModel
 import com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.AirThicketTranslationLogActivity
 import com.facebook.drawee.backends.pipeline.Fresco

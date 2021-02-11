@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CompoundButton
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Passenger
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Passenger
 import kotlinx.android.synthetic.main.item_mail_list.view.*
 
 

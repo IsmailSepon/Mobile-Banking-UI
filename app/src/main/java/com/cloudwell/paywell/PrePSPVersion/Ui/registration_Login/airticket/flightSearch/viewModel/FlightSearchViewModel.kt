@@ -2,7 +2,7 @@ package com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.v
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
-import com.cloudwell.paywell.services.activity.base.newBase.BaseViewState
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.BaseViewState
 import com.cloudwell.paywell.services.activity.base.newBase.SingleLiveEvent
 import com.cloudwell.paywell.services.activity.eticket.airticket.AirTicketBaseViewMode
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.ReposeAirSearch
@@ -11,9 +11,7 @@ import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.m
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Segment
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.view.SeachViewStatus
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.ResCommistionMaping
-import com.cloudwell.paywell.services.app.AppHandler
 import com.cloudwell.paywell.services.utils.CalculationHelper
-import com.cloudwell.paywell.services.utils.UniqueKeyGenerator
 import java.util.*
 
 /**

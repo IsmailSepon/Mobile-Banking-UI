@@ -23,7 +23,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.services.R
 import com.cloudwell.paywell.services.activity.MainActivity
-import com.cloudwell.paywell.services.activity.base.newBase.MVVMBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.MVVMBaseActivity
 import com.cloudwell.paywell.services.activity.notification.SwipeController
 import com.cloudwell.paywell.services.activity.notification.SwipeController.SwipeControllerActions
 import com.cloudwell.paywell.services.activity.notification.allNotificaiton.view.NotificationViewStatus

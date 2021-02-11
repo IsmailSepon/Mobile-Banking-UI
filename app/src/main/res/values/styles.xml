@@ -374,4 +374,30 @@
 
 
 
+    <style name="TicketFrom">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="TicketTo">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+    <style name="TicketFromPort">
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="TicketToPort">
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+
+    <style name="SlyCalendarTimeDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+    <item name="colorAccent">@color/slycalendar_defHeaderColor</item>
+    <item name="colorControlNormal">@color/slycalendar_defHeaderColor</item>
+    </style>
+
 </resources>

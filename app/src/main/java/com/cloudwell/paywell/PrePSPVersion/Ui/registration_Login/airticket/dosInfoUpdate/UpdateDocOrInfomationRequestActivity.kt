@@ -19,9 +19,9 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.retrofit.ApiUtils
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Passenger
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.fragment.ShowMessageFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Passenger
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.fragment.ShowMessageFragment
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.dosInfoUpdate.adapter.AdapterForPassengersReIssue
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.dosInfoUpdate.editReissuePassengerActivity.DosInfoUpdatePassengerActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.dosInfoUpdate.model.ReissuePassenger

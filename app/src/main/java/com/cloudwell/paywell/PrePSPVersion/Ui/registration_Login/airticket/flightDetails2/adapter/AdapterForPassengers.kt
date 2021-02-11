@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.model.Passenger
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
 import kotlinx.android.synthetic.main.flight_list_item.view.*
 import kotlinx.android.synthetic.main.passenger_list_item_defalt_add.view.*
 import kotlinx.android.synthetic.main.passenger_list_item_with_title.view.*

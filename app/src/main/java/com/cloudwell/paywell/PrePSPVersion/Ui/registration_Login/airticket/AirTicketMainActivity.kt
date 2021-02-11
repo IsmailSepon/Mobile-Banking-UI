@@ -8,7 +8,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
 import kotlinx.android.synthetic.main.activity_air_ticket_main.*
 
 open class AirTicketMainActivity : AirTricketBaseActivity() {

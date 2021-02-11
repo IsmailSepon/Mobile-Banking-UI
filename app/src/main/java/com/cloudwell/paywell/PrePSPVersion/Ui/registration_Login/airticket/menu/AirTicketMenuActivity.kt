@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.menu
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.menu
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,24 +8,28 @@ import android.widget.CompoundButton
 import android.widget.RadioButton
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDialog
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.BookingList
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.BookingCancelActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.issueTicket.IssueTicketRequestActivity
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.appController.AppController2
+import com.cloudwell.paywell.constant.AllConstant
+import com.cloudwell.paywell.constant.IconConstant
 import com.cloudwell.paywell.services.activity.eticket.airticket.AirTicketMainActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.BookingList
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.BookingCancelActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.issueTicket.IssueTicketRequestActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.ticketCencel.TicketCancelActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.AirThicketTranslationLogActivity
-import com.cloudwell.paywell.services.app.AppController
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.constant.AllConstant
-import com.cloudwell.paywell.services.constant.IconConstant
 import com.cloudwell.paywell.services.recentList.model.RecentUsedMenu
-import com.cloudwell.paywell.services.utils.ConnectionDetector
-import com.cloudwell.paywell.services.utils.LanuageConstant.KEY_BANGLA
-import com.cloudwell.paywell.services.utils.LanuageConstant.KEY_ENGLISH
-import com.cloudwell.paywell.services.utils.StringConstant
+import com.cloudwell.paywell.utils.ConnectionDetector
+import com.cloudwell.paywell.utils.LanuageConstant.KEY_BANGLA
+import com.cloudwell.paywell.utils.LanuageConstant.KEY_ENGLISH
+import com.cloudwell.paywell.utils.StringConstant
 import kotlinx.android.synthetic.main.activity_air_ticket_main_contain.*
+import kotlinx.android.synthetic.main.fragment_tricket_action_menu.*
+import kotlinx.android.synthetic.main.fragment_tricket_action_menu.btCencel
+import kotlinx.android.synthetic.main.fragment_tricket_action_menu.btTicketRefund
+import kotlinx.android.synthetic.main.fragment_tricket_action_menu.btTicketVoid
 import java.util.*
 
 
@@ -73,14 +77,15 @@ class AirTicketMenuActivity : AirTricketBaseActivity(), View.OnClickListener, Co
         btTicketDocsInfoUpdateRequest.setOnClickListener(this)
 
 
-        cd = ConnectionDetector(AppController.getContext())
+        cd = ConnectionDetector(AppController2.getContext())
         mAppHandler = AppHandler.getmInstance(applicationContext)
 
 
-        val recentUsedMenu = RecentUsedMenu(StringConstant.home_eticket_air
+        val recentUsedMenu = RecentUsedMenu(
+            StringConstant.home_eticket_air
                 , StringConstant.KEY_home_ticket, IconConstant.KEY_air_ticket, 0, 3)
 
-        addItemToRecentListInDB(recentUsedMenu)
+        //addItemToRecentListInDB(recentUsedMenu)
 
 
     }

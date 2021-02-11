@@ -9,13 +9,13 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.final
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.RequestAirPrebookingSearchParams
 import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.data.preferences.AppStorageBox
-import com.cloudwell.paywell.services.activity.base.newBase.BaseViewState
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.BaseViewState
 import com.cloudwell.paywell.services.activity.eticket.airticket.AirTicketBaseViewMode
-import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.ResAirPreBooking
-import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.ResBookingAPI
-import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.viewModel.view.AllSummaryStatus
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.ResposeAirPriceSearch
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.model.Passenger
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.ResAirPreBooking
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.ResBookingAPI
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.viewModel.view.AllSummaryStatus
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.ResposeAirPriceSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
 import java.io.ByteArrayOutputStream
 
 

@@ -1,6 +1,6 @@
-package com.cloudwell.paywell.services.activity.base.newBase
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase
 
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.fragment.CancellationStatusMessageFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.fragment.CancellationStatusMessageFragment
 import com.cloudwell.paywell.ui.BaseActivity
 
 /**

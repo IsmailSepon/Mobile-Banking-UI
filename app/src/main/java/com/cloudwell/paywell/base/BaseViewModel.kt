@@ -3,7 +3,7 @@ package com.cloudwell.paywell.base
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.SingleLiveEvent
-import com.cloudwell.paywell.services.activity.base.newBase.BaseViewState
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.BaseViewState
 import com.cloudwell.paywell.utils.exception.ApiException
 import com.cloudwell.paywell.utils.exception.NoInternetException
 

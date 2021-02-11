@@ -18,10 +18,10 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.constant.AllConstant
 import com.cloudwell.paywell.retrofit.ApiUtils
-import com.cloudwell.paywell.services.activity.base.newBase.MVVMBaseActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.fragment.CancellationStatusMessageFragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.fragment.UserAcceptDialogFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.MVVMBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.fragment.CancellationStatusMessageFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.fragment.UserAcceptDialogFragment
 import com.cloudwell.paywell.services.activity.eticket.airticket.dosInfoUpdate.UpdateDocOrInfomationRequestActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.ticketCencel.model.ResSingleBooking
 import com.cloudwell.paywell.utils.UniqueKeyGenerator

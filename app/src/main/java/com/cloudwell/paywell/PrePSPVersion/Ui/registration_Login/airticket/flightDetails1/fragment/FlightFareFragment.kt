@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.fragment
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.adapter.FareListAdapter
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.data.preferences.AppStorageBox
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Fare
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.Fare
 import com.cloudwell.paywell.utils.CalculationHelper
 import kotlinx.android.synthetic.main.fragment_flight_fare_fragment.view.*
 

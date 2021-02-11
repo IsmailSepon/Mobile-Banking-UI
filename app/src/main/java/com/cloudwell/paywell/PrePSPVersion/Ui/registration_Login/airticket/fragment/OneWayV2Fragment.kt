@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.fragment
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.fragment
 
 
 import android.app.Activity
@@ -14,18 +14,18 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.fragment.app.Fragment
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.FlightSearchViewActivity
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.appController.AppController2
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.*
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Segment
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.FlightSearchViewActivity
-import com.cloudwell.paywell.services.app.AppController
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.utils.FormatHelper
-import com.cloudwell.paywell.services.utils.FormatHelper.getPortLevelText
+import com.cloudwell.paywell.utils.FormatHelper
+import com.cloudwell.paywell.utils.FormatHelper.getPortLevelText
 import com.franmontiel.fullscreendialog.FullScreenDialogFragment
 import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.fragment__one_way_v2.*
@@ -159,7 +159,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         tsToPort.setCurrentText(activity?.application?.getString(R.string.airport))
         view.tvHitTo.visibility = View.INVISIBLE
 
-        val fromCacheAirport = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.FROM_CACHE) as Airport?
+        val fromCacheAirport = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.FROM_CACHE) as Airport?
         if (fromCacheAirport != null) {
             view.tsOneWayTripFrom.setText(fromCacheAirport.iata)
             view.tsOneWayTripFromPort.setText(fromCacheAirport.airportName)
@@ -175,7 +175,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         }
 
 
-        val toCacheAirport = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.TO_CACHE) as Airport?
+        val toCacheAirport = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.TO_CACHE) as Airport?
         if (toCacheAirport != null) {
 
             view.tsOneWayTripTo.setText(toCacheAirport.iata)
@@ -218,14 +218,14 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
             val fromAirTricket = Airport()
             fromAirTricket.airportName = searchRoundTripModel.fromPort
             fromAirTricket.iata = searchRoundTripModel.getFromName()
-            AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.FROM_CACHE, fromAirTricket)
+            AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.FROM_CACHE, fromAirTricket)
 
 
             val toAirTricket = Airport()
             toAirTricket.airportName = searchRoundTripModel.toPort
             toAirTricket.iata = searchRoundTripModel.getToName()
 
-            AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.TO_CACHE, toAirTricket)
+            AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.TO_CACHE, toAirTricket)
 
 
             try {
@@ -243,26 +243,26 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         fromAirTricket.airportName = searchRoundTripModel.fromPort
         fromAirTricket.iata = searchRoundTripModel.getFromName()
 
-        AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.FROM_CACHE, fromAirTricket)
+        AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.FROM_CACHE, fromAirTricket)
 
 
         val toAirTricket = Airport()
         fromAirTricket.airportName = searchRoundTripModel.toPort
         fromAirTricket.iata = searchRoundTripModel.getToName()
 
-        AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.TO_CACHE, fromAirTricket)
+        AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.TO_CACHE, fromAirTricket)
 
 
-        val crachDepartureDate = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.DEPART_DATE) as String?
+        val crachDepartureDate = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.DEPART_DATE) as String?
         if (crachDepartureDate != null) {
             view.tvDepartDate.text = "" + crachDepartureDate
             view.tvDepartDate.setTextColor(Color.BLACK)
-            val departDate = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.DEPART_DATE_API_formate) as String
+            val departDate = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.DEPART_DATE_API_formate) as String
             searchRoundTripModel.departDate = departDate
 
         }
 
-        val classModel = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.CLASS_TYPE) as ClassModel?
+        val classModel = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.CLASS_TYPE) as ClassModel?
         if (classModel == null) {
 
             mClassModel = ClassModel("Economy", "Economy", true)
@@ -272,19 +272,19 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         }
 
 
-        val infanntPass = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.INFANT_PSNGER) as Int?
+        val infanntPass = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.INFANT_PSNGER) as Int?
         if (infanntPass != null) {
             onInfantPsngrTextChange("" + infanntPass)
         }
 
 
-        val kidPsnGer = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.KID_PSNGER) as Int?
+        val kidPsnGer = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.KID_PSNGER) as Int?
         if (kidPsnGer != null) {
             onKidPsngrTextChange("" + kidPsnGer)
         }
 
 
-        val adulPassger = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.ADUL_PSNGER) as Int?
+        val adulPassger = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.ADUL_PSNGER) as Int?
         if (adulPassger != null) {
             onAdultPsngrTextChange("" + adulPassger)
         }
@@ -292,21 +292,21 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
 
         // only run when reschedule
 
-        if (AirTicketMainActivity.item.mSearchLog.size != 0) {
+        if (AirTicketMainActivity.item.mSearchLog.isNotEmpty()) {
             isReSchuduler = true
 
             val mSearchLog = AirTicketMainActivity.item.mSearchLog.get(0)
 
-            val originPort = mSearchLog.originPort
-            val destinationPort = mSearchLog.destinationPort
-            val cabinClass = mSearchLog.cabinClass
-            val adultQty = mSearchLog.adultQty
-            val childQty = mSearchLog.childQty
-            val infantQty = mSearchLog.infantQty
+            val originPort = mSearchLog.origin_port
+            val destinationPort = mSearchLog.destination_port
+            val cabinClass = mSearchLog.cabin_class
+            val adultQty = mSearchLog.adult_qty
+            val childQty = mSearchLog.child_qty
+            val infantQty = mSearchLog.infant_qty
 
 
             tsFrom.setCurrentText(originPort)
-            AirThicketRepository(AppController.getContext()).getAirportBy(originPort).observeForever {
+            AirThicketRepository(AppController2.getContext()).getAirportBy(originPort).observeForever {
                 tsFromPort.setCurrentText(getPortLevelText(it))
                 tsFromPort.isEnabled = false
                 tsFromPort.alpha = 0.5f
@@ -320,7 +320,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
             }
 
             tsTo.setCurrentText(destinationPort)
-            AirThicketRepository(AppController.getContext()).getAirportBy(destinationPort).observeForever {
+            AirThicketRepository(AppController2.getContext()).getAirportBy(destinationPort).observeForever {
                 tsToPort.setCurrentText(getPortLevelText(it))
                 tsToPort.isEnabled = false
                 tsToPort.alpha = 0.5f
@@ -481,7 +481,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
 
         })
         passengerBottomSheet.arguments = b
-        passengerBottomSheet.show(fragmentManager, "psngrBottomSheet")
+        passengerBottomSheet.show(fragmentManager!!, "psngrBottomSheet")
     }
 
 
@@ -489,7 +489,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         airTicketAdult.setText(text)
         val toInt = text.toInt()
 
-        AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.ADUL_PSNGER, toInt)
+        AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.ADUL_PSNGER, toInt)
 
         if (toInt > 0) {
             airTicketAdult.setTextColor(getResources().getColor(R.color.black33333))
@@ -502,7 +502,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         airTicketKid.setText(text)
         val toInt = text.toInt()
 
-        AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.KID_PSNGER, toInt)
+        AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.KID_PSNGER, toInt)
 
         if (toInt > 0) {
             airTicketKid.setTextColor(getResources().getColor(R.color.black33333))
@@ -514,7 +514,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
     fun onInfantPsngrTextChange(text: String) {
         airTicketInfant.setText(text)
         val toInt = text.toInt()
-        AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.INFANT_PSNGER, toInt)
+        AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.INFANT_PSNGER, toInt)
 
         if (toInt > 0) {
             airTicketInfant.setTextColor(getResources().getColor(R.color.black33333))
@@ -534,14 +534,14 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
 
                 airTicketClass.setText(classModel.className)
 
-                AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.CLASS_TYPE, classModel)
+                AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.CLASS_TYPE, classModel)
 
             }
 
         })
 
         bottomSheet.arguments = b
-        bottomSheet.show(fragmentManager, "classBottomSheet")
+        bottomSheet.show(fragmentManager!!, "classBottomSheet")
     }
 
     private fun showDepartDatePicker() {
@@ -549,7 +549,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         val calendar = Calendar.getInstance()
 
         if (!tvDepartDate.text.equals(getString(R.string.date))) {
-            val crachDepartureDate = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.DEPART_DATE_API_formate) as String?
+            val crachDepartureDate = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.DEPART_DATE_API_formate) as String?
 
             val date = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).parse(crachDepartureDate) as Date
             calendar.time = date
@@ -575,7 +575,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
                         tvDepartDate.text = "$nameOfDayOfWeek, $day $nameOfMonth"
                         tvDepartDate.setTextColor(Color.BLACK);
 
-                        AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.DEPART_DATE, "" + "$nameOfDayOfWeek, $day $nameOfMonth")
+                        AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.DEPART_DATE, "" + "$nameOfDayOfWeek, $day $nameOfMonth")
 
 
                         val mMonth = month + 1;
@@ -588,7 +588,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
 
                         searchRoundTripModel.departDate = humanReadAbleDate
 
-                        AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.DEPART_DATE_API_formate, "" + humanReadAbleDate)
+                        AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.DEPART_DATE_API_formate, "" + humanReadAbleDate)
 
 
                     }, year, thismonth, dayOfMonth)
@@ -613,7 +613,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == Activity.RESULT_OK) {
-            val get = AppStorageBox.get(activity?.applicationContext, AppStorageBox.Key.AIRPORT) as Airport
+            val get = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.AIRPORT) as Airport
 
             when (requestCode) {
                 REQ_CODE_FROM -> {
@@ -636,7 +636,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
 
                     fromAirport.airportName = FormatHelper.formatText(cityOrStatusName + get.airportName).toString()
 
-                    AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.FROM_CACHE, get)
+                    AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.FROM_CACHE, get)
 
                 }
 
@@ -661,7 +661,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
 
                     toAirport.airportName = FormatHelper.formatText(cityOrStatusName + get.airportName).toString()
 
-                    AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.TO_CACHE, get)
+                    AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.TO_CACHE, get)
 
                 }
 
@@ -671,13 +671,13 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
 
     private fun handleSearchClick() {
 
-        if (searchRoundTripModel.getFromName().equals(OneWayV2Fragment.KEY_FROM)) {
+        if (searchRoundTripModel.getFromName().equals(KEY_FROM)) {
             Toast.makeText(activity?.applicationContext, getString(R.string.please_select_from_airport), Toast.LENGTH_LONG).show()
 
             return
         }
 
-        if (searchRoundTripModel.getToName().equals(OneWayV2Fragment.KEY_To)) {
+        if (searchRoundTripModel.getToName().equals(KEY_To)) {
             Toast.makeText(activity?.applicationContext, getString(R.string.please_select_arrival_airport), Toast.LENGTH_LONG).show()
             return
         }
@@ -694,8 +694,8 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
 
         val requestAirSearch = RequestAirSearch(airTicketAdult.text.toString().toLong(), airTicketKid.text.toString().toLong(), airTicketInfant.text.toString().toLong(), "Oneway", list)
 
-        AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.REQUEST_AIR_SERACH, requestAirSearch)
-        AppStorageBox.put(activity?.applicationContext, AppStorageBox.Key.REQUEST_API_reschedule, AirTicketMainActivity.item)
+        AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.REQUEST_AIR_SERACH, requestAirSearch)
+        AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.REQUEST_API_reschedule, AirTicketMainActivity.item)
 
 
         val intent = Intent(activity?.applicationContext, FlightSearchViewActivity::class.java)

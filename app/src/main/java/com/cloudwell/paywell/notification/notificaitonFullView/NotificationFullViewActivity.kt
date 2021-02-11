@@ -16,7 +16,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.newBase.MVVMBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.MVVMBaseActivity
 import com.cloudwell.paywell.services.activity.notification.ImageViewActivity
 import com.cloudwell.paywell.services.activity.notification.allNotificaiton.NotificationAllActivity
 import com.cloudwell.paywell.services.activity.notification.allNotificaiton.NotificationAllActivity.Companion.IS_NOTIFICATION_SHOWN

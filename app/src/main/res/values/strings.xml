@@ -1052,6 +1052,21 @@
     <string name="no_search_results">No search results</string>
     <string name="search_again">Search again</string>
     <string name="title_serach_view">Search Flights</string>
+    <string name="please_select_from_airport">Please select from airport</string>
+    <string name="please_select_arrival_airport">Please select arrival airport</string>
+    <string name="please_select_depart_date">Please select depart date</string>
+    <string name="slycalendar_dates_period" translatable="false">%1$s – %2$s</string>
+    <string name="title_issue_ticket">Issue Ticket</string>
+    <string name="home_eticket_air">Air Ticket</string>
+    <string name="ticket_issue_menu_text">Issue Ticket</string>
+    <string name="ticket_void_menu_text">Ticket Void</string>
+    <string name="ticket_refund_menu_text">Ticket Refund</string>
+    <string name="ticket_reissue_menu_text">Re-issue Ticket</string>
+    <string name="ticket_docs_update_info_menu_text">Docs/Info update</string>
+    <string name="ticket_issue_menu_text">Issue Ticket</string>
+    <string name="transaction_log">Booking Log</string>
+    <string name="booking_log_limit_title_msg">Booking Log Limit</string>
+    <string name="book">Booking Status</string>
 
 
 

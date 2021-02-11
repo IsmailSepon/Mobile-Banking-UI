@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Fare
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.Fare
 import kotlinx.android.synthetic.main.list_item_fare_data.view.*
 import java.text.NumberFormat
 

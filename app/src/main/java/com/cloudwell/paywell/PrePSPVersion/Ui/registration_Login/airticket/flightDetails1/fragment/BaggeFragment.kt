@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.fragment
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

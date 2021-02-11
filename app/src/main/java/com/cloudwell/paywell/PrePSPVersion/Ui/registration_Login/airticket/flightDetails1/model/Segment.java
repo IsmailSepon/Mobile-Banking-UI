@@ -1,7 +1,5 @@
 package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model;
 
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Airline;
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Destination;
 import com.google.gson.annotations.SerializedName;
 
 

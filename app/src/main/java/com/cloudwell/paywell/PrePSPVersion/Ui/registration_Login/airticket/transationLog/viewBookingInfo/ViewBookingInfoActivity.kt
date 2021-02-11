@@ -3,7 +3,6 @@ package com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
@@ -13,8 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.services.R
 import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Airport
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.Airport
 import com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.viewBookingInfo.adapter.AdapterForPassengersBookingInfo
 import com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.viewBookingInfo.adapter.AirportListBookingInfoAdapter
 import su.j2e.rvjoiner.JoinableAdapter

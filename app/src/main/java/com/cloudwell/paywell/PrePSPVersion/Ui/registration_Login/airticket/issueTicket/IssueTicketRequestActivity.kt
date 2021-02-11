@@ -1,13 +1,14 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.issueTicket
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.issueTicket
 
 import android.graphics.Color
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.eticket.airticket.base.TransitionLogBaseActivity
-import com.cloudwell.paywell.services.constant.AllConstant
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.TransitionLogBaseActivity
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.constant.AllConstant
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_cencel_booking.*
 import kotlinx.android.synthetic.main.activity_issue_ticket_request.*
 
 class IssueTicketRequestActivity : TransitionLogBaseActivity() {
@@ -18,12 +19,12 @@ class IssueTicketRequestActivity : TransitionLogBaseActivity() {
 
         setToolbar(getString(R.string.title_issue_ticket))
 
-        cancelBookingBtn.setOnClickListener(View.OnClickListener {
-            if (!bookingIdET.getText().toString().isEmpty()) {
-                askForPin(bookingIdET.getText().toString(), AllConstant.Action_IsisThicket)
+        cancelBookingBtn_tickeet_issue.setOnClickListener(View.OnClickListener {
+            if (!bookingIdET_issue.getText().toString().isEmpty()) {
+                askForPin(bookingIdET_issue.getText().toString(), AllConstant.Action_IsisThicket)
             } else {
                 hideUserKeyboard()
-                val snackbar = Snackbar.make(cancelMainLayout, "Please Enter all the fields first", Snackbar.LENGTH_LONG)
+                val snackbar = Snackbar.make(cancelMainLayout_issue, "Please Enter all the fields first", Snackbar.LENGTH_LONG)
                 snackbar.setActionTextColor(Color.parseColor("#ffffff"))
                 val snackBarView = snackbar.view
                 snackBarView.setBackgroundColor(Color.parseColor("#4CAF50"))

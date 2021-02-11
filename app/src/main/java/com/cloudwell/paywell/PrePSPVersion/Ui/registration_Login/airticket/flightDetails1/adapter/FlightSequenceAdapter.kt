@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.adapter
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.adapter
 
 import com.cloudwell.paywell.libarary.imagePickerAndCrop.SequenceAdapter
 import com.cloudwell.paywell.services.libaray.SequenceStep

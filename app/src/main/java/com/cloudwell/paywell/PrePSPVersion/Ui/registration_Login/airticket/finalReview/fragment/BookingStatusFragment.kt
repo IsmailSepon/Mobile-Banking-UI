@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.fragment
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.data.preferences.AppStorageBox
-import com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.model.ResAirPreBooking
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Fare
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.ResAirPreBooking
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.Fare
 import com.cloudwell.paywell.utils.CalculationHelper
 import com.cloudwell.paywell.utils.DateUtils
 import kotlinx.android.synthetic.main.fragment_booking.view.*

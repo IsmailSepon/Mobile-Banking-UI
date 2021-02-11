@@ -58,7 +58,17 @@
     <color name="card_background">@color/colorText</color>
     <color name="colorText">#ffffff</color>
     <color name="black33333">#000000</color>
+    <color name="blackcccccc">#000000</color>
     <color name="default_progress_background">#ccc</color>
+
+
+
+    <color name="slycalendar_defBackgroundColor">#ffffff</color>
+    <color name="slycalendar_defHeaderColor">#5aac40</color>
+    <color name="slycalendar_defHeaderTextColor">#ffffff</color>
+    <color name="slycalendar_defTextColor">#333333</color>
+    <color name="slycalendar_defSelectedColor">#5aac40</color>
+    <color name="slycalendar_defSelectedTextColor">#ffffff</color>
 
 
 

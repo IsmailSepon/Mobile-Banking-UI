@@ -6,10 +6,10 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.multiCity.MultiCityFragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.appController.AppController2
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
-import com.cloudwell.paywell.services.activity.eticket.airticket.fragment.IndianWayFragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.fragment.OneWayV2Fragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.fragment.RoundTripFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.fragment.IndianWayFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.fragment.OneWayV2Fragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.fragment.RoundTripFragment
 
 class SearchFlightAdapter(fm: FragmentManager?, var item: Datum = Datum()) : FragmentPagerAdapter(fm!!) {
     override fun getItem(position: Int): Fragment {

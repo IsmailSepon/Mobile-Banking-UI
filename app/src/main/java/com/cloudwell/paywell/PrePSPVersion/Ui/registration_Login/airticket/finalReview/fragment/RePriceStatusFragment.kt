@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.fragment
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

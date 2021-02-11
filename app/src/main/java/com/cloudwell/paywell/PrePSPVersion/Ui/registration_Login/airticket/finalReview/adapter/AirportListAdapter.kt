@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.finalReview.adapter
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.model.Airport
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.Airport
 import kotlinx.android.synthetic.main.item_airport_summay.view.*
 
 class AirportListAdapter(var context: Context, var items: List<Airport>) : RecyclerView.Adapter<AirportListAdapter.ViewHolder>() {

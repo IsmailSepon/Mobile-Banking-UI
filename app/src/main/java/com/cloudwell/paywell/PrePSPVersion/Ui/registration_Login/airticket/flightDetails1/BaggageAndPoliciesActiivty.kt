@@ -8,8 +8,8 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.fragment.EarningsFragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.fragment.FlightFareFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.fragment.EarningsFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.fragment.FlightFareFragment
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.fragment.RolesFragment
 import kotlinx.android.synthetic.main.activity_baggage_and_policies_actiivty.*
 import java.util.*

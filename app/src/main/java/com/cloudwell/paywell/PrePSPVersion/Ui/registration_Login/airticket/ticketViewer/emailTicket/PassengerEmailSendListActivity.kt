@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cloudwell.paywell.services.R
 import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Passenger
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Passenger
 import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.EmailAddFragment
 import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.emailTicket.adapter.EmailListAdapterAdapter
 import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.model.EmailListViewStatus

@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.base
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base
 
 import android.Manifest
 import android.app.DownloadManager
@@ -21,20 +21,19 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.content.FileProvider
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.BookingCancelActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.constant.AllConstant
 import com.cloudwell.paywell.data.preferences.AppStorageBox
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.fragment.PriceChangeFragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.fragment.TicketActionMenuFragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.fragment.TicketStatusFragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.fragment.TricketChooserFragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.model.BookingStatuViewStatus
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.model.ResIssueTicket
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus.viewModel.BookingStatsViewModel
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.fragment.PriceChangeFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.fragment.TicketActionMenuFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.fragment.TicketStatusFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.fragment.TricketChooserFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.model.BookingStatuViewStatus
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.model.ResIssueTicket
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.viewModel.BookingStatsViewModel
 import com.cloudwell.paywell.services.activity.eticket.airticket.ticketCencel.TicketCancelActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.TicketViewerActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.emailTicket.PassengerEmailSendListActivity

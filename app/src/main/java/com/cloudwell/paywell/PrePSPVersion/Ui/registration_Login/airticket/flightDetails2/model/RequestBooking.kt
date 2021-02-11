@@ -1,6 +1,7 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails2.model
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model
 
 import androidx.room.Entity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
 import com.google.gson.annotations.SerializedName
 
 @Entity

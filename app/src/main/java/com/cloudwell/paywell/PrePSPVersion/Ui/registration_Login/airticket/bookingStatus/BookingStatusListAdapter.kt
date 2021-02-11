@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.bookingStatus
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus
 
 
 import android.content.Context
@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.BookingList
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.Datum
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.BookingList
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
 import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.item_booking_status.view.*
 import java.text.SimpleDateFormat

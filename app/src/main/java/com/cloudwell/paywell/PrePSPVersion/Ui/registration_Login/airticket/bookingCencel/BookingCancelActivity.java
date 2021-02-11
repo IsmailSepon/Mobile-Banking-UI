@@ -23,7 +23,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.
 import com.cloudwell.paywell.R;
 import com.cloudwell.paywell.app.AppHandler;
 import com.cloudwell.paywell.retrofit.ApiUtils;
-import com.cloudwell.paywell.services.activity.eticket.airticket.bookingCencel.fragment.CancellationStatusMessageFragment;
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.fragment.CancellationStatusMessageFragment;
 import com.cloudwell.paywell.utils.ConnectionDetector;
 import com.cloudwell.paywell.utils.UniqueKeyGenerator;
 import com.google.android.material.snackbar.Snackbar;
