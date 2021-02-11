@@ -10,7 +10,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.final
 import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.BaseViewState
-import com.cloudwell.paywell.services.activity.eticket.airticket.AirTicketBaseViewMode
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.AirTicketBaseViewMode
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.ResAirPreBooking
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.ResBookingAPI
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.viewModel.view.AllSummaryStatus

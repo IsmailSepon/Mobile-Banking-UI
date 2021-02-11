@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket
 
 import android.content.Context
 import android.content.Intent
@@ -17,7 +17,7 @@ open class AirTicketMainActivity : AirTricketBaseActivity() {
         var item: Datum = Datum()
         fun newIntent(context: Context, item: Datum): Intent {
             val intent = Intent(context, AirTicketMainActivity::class.java)
-            this.item = item
+            Companion.item = item
             return intent
         }
     }

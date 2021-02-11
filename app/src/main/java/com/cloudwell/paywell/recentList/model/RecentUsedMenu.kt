@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.recentList.model
+package com.cloudwell.paywell.recentList.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

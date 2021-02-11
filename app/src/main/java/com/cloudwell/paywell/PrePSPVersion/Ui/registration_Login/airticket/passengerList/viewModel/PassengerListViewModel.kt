@@ -1,11 +1,11 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.passengerList.viewModel
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerList.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.BaseViewState
-import com.cloudwell.paywell.services.activity.base.newBase.SingleLiveEvent
-import com.cloudwell.paywell.services.activity.eticket.airticket.AirTicketBaseViewMode
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.SingleLiveEvent
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.AirTicketBaseViewMode
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerList.view.PassengerListViewStatus
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerList.view.PassengerListViewStatus
 
 class PassengerListViewModel : AirTicketBaseViewMode() {
 

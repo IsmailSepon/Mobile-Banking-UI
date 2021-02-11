@@ -2,14 +2,14 @@ package com.cloudwell.paywell.services.activity.notification.allNotificaiton.vie
 
 import androidx.lifecycle.MutableLiveData
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.BaseViewState
-import com.cloudwell.paywell.services.activity.base.newBase.SingleLiveEvent
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.SingleLiveEvent
 import com.cloudwell.paywell.services.activity.notification.BaseNotifcationViewModel
 import com.cloudwell.paywell.services.activity.notification.allNotificaiton.view.NotificationViewStatus
 import com.cloudwell.paywell.services.activity.notification.model.NotificationDetailMessage
 import com.cloudwell.paywell.services.activity.notification.model.ResNotificationAPI
 import com.cloudwell.paywell.services.activity.notification.model.deletetNotification.ReposeDeletedNotification
 import com.cloudwell.paywell.services.activity.notification.notificaitonFullView.model.NotificationDetailMessageSync
-import com.cloudwell.paywell.services.utils.DateUtils.notificationDateFormat
+import com.cloudwell.paywell.utils.DateUtils.notificationDateFormat
 import com.google.gson.Gson
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread

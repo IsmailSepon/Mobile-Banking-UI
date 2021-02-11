@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.fragment
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.fragment
 
 import android.content.Context
 import android.graphics.Color
@@ -10,8 +10,8 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.model.Gender
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.model.Gender
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.class_item_list_dialog.view.*
 
@@ -22,7 +22,7 @@ class GenderBottomSheetDialog : BottomSheetDialogFragment() {
     lateinit var data: ArrayList<Gender>
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val className: String = arguments!!.getString("myGenderName").toString()
+        val className: String = requireArguments().getString("myGenderName").toString()
         val view = inflater.inflate(R.layout.class_item_list_dialog, container, false)
         view.tvCatagory.text = getString(R.string.gender)
 

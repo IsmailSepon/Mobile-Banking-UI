@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.myFavorite
+package com.cloudwell.paywell.myFavorite
 
 import android.graphics.Color
 import android.os.Bundle
@@ -9,24 +9,24 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.myFavorite.adapter.AdapterForFavList
-import com.cloudwell.paywell.services.activity.myFavorite.adapter.HeaderRecyclerViewSection
-import com.cloudwell.paywell.services.activity.myFavorite.adapter.ItemMoveCallback
-import com.cloudwell.paywell.services.activity.myFavorite.adapter.StartDragListener
-import com.cloudwell.paywell.services.activity.myFavorite.helper.MenuStatus
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.analytics.AnalyticsManager
+import com.cloudwell.paywell.analytics.AnalyticsParameters
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.constant.AllConstant
+import com.cloudwell.paywell.database.DatabaseClient
+import com.cloudwell.paywell.eventBus.GlobalApplicationBus
+import com.cloudwell.paywell.myFavorite.adapter.AdapterForFavList
+import com.cloudwell.paywell.myFavorite.adapter.HeaderRecyclerViewSection
+import com.cloudwell.paywell.myFavorite.adapter.ItemMoveCallback
+import com.cloudwell.paywell.myFavorite.adapter.StartDragListener
+import com.cloudwell.paywell.myFavorite.helper.MenuStatus
+import com.cloudwell.paywell.preference.FavoritePreference
 import com.cloudwell.paywell.services.activity.myFavorite.model.FavoriteMenu
 import com.cloudwell.paywell.services.activity.myFavorite.model.MessageEvent
 import com.cloudwell.paywell.services.activity.myFavorite.model.MessageEventFavDeleted
 import com.cloudwell.paywell.services.activity.myFavorite.model.MessageEventPositionMove
-import com.cloudwell.paywell.services.analytics.AnalyticsManager
-import com.cloudwell.paywell.services.analytics.AnalyticsParameters
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.constant.AllConstant
-import com.cloudwell.paywell.services.database.DatabaseClient
-import com.cloudwell.paywell.services.eventBus.GlobalApplicationBus
-import com.cloudwell.paywell.services.preference.FavoritePreference
-import com.cloudwell.paywell.services.utils.ResorceHelper
+import com.cloudwell.paywell.utils.ResorceHelper
 import com.google.android.material.snackbar.Snackbar
 import com.orhanobut.logger.Logger
 import com.squareup.otto.Subscribe
@@ -110,7 +110,7 @@ class MyFavoriteMenuActivity : AppCompatActivity(), StartDragListener {
 
                 uiThread {
                     val resId = ResorceHelper.getResId(event.favoriteMenu.name, R.string::class.java)
-                    Toast.makeText(applicationContext, getString(R.string.Added) + getString(resId), Toast.LENGTH_LONG).show()
+                    Toast.makeText(applicationContext, getString(R.string.add) + getString(resId), Toast.LENGTH_LONG).show()
                     getAllUnFavoriteItem()
                     getAllFavoriteDate()
                 }

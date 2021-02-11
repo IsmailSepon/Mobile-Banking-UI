@@ -2,7 +2,7 @@ package com.cloudwell.paywell.base;
 
 import androidx.annotation.Nullable;
 
-import com.cloudwell.paywell.services.recentList.model.RecentUsedMenu;
+import com.cloudwell.paywell.recentList.model.RecentUsedMenu;
 
 import java.util.ArrayList;
 import java.util.Collection;

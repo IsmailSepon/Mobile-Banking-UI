@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.passengerList
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerList
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
@@ -10,13 +10,13 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.AddPassengerActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerList.view.PassengerListViewStatus
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerList.viewModel.PassengerListViewModel
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.AddPassengerActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerList.view.PassengerListViewStatus
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerList.viewModel.PassengerListViewModel
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import kotlinx.android.synthetic.main.contant_passenger_list.*
 
 
@@ -31,9 +31,9 @@ class PassengerListActivity : AirTricketBaseActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.cloudwell.paywell.services.R.layout.activity_passenger_list_activity)
+        setContentView(R.layout.activity_passenger_list_activity)
 
-        setToolbar(getString(com.cloudwell.paywell.services.R.string.title_passenger_list))
+        setToolbar(getString(R.string.title_passenger_list))
 
         isValidation = intent.extras?.getBoolean("isValidation", false) ?: false
 
@@ -77,7 +77,7 @@ class PassengerListActivity : AirTricketBaseActivity() {
 
     private fun handlePassgegerList(it: List<Passenger>) {
 
-        val recyclerView = findViewById(com.cloudwell.paywell.services.R.id.recyclerViewPassenger) as RecyclerView
+        val recyclerView = findViewById(R.id.recyclerViewPassenger) as RecyclerView
         recyclerView.setHasFixedSize(true)
 
         val columns = 1;
@@ -121,7 +121,7 @@ class PassengerListActivity : AirTricketBaseActivity() {
                     viewMode.deletePassenger(model)
 
                 })
-                .setNegativeButton(getString(R.string.cencel), DialogInterface.OnClickListener { dialog, id ->
+                .setNegativeButton(getString(R.string.cancel), DialogInterface.OnClickListener { dialog, id ->
 
                 })
         val alert = builder.create()

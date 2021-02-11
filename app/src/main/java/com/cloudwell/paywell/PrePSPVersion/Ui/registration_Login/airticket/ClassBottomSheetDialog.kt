@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket
 
 import android.content.Context
 import android.graphics.Color
@@ -11,7 +11,6 @@ import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.data.preferences.AppStorageBox.check
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 

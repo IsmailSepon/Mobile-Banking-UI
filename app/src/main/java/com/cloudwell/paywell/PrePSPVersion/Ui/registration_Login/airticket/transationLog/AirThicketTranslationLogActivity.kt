@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.transationLog
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.transationLog
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -6,14 +6,14 @@ import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.TransitionLogBaseActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.BookingList
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.menu.AirTicketMenuActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.adapter.TransitionRVSectionAdapter
-import com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.viewBookingInfo.ViewBookingInfoActivity
-import com.cloudwell.paywell.services.app.AppHandler
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.transationLog.adapter.TransitionRVSectionAdapter
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.transationLog.viewBookingInfo.ViewBookingInfoActivity
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapter
 import kotlinx.android.synthetic.main.activity_transtionlog.*
 

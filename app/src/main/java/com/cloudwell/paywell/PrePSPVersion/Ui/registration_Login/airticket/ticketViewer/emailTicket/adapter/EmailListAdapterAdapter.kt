@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.emailTicket.adapter
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.emailTicket.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.CompoundButton
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Passenger
+import com.cloudwell.paywell.R
 import kotlinx.android.synthetic.main.item_mail_list.view.*
 
 
@@ -17,7 +18,7 @@ class EmailListAdapterAdapter(var passengers: MutableList<Passenger>, val contex
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(com.cloudwell.paywell.services.R.layout.item_mail_list, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_mail_list, parent, false)
         return ViewHolder(view)
 
     }

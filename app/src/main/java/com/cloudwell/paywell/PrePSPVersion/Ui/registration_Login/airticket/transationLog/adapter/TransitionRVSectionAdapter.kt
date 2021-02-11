@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.adapter
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.transationLog.adapter
 
 import android.content.ClipboardManager
 import android.content.Context
@@ -9,10 +9,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
-import com.cloudwell.paywell.services.app.AppController
-import com.cloudwell.paywell.services.constant.AllConstant
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.appController.AppController2
+import com.cloudwell.paywell.constant.AllConstant
 import com.orhanobut.logger.Logger
 import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection
 import java.text.NumberFormat
@@ -48,14 +48,14 @@ class TransitionRVSectionAdapter(val mContext: Context, private val title: Strin
 
 
         if (mIsEnglish) {
-            iHolder.tvBookingId.typeface = AppController.getInstance().oxygenLightFont
-            iHolder.tvTricketPrices.typeface = AppController.getInstance().oxygenLightFont
-            iHolder.tvStatus.typeface = AppController.getInstance().oxygenLightFont
+            iHolder.tvBookingId.typeface = AppController2.getInstance().oxygenLightFont
+            iHolder.tvTricketPrices.typeface = AppController2.getInstance().oxygenLightFont
+            iHolder.tvStatus.typeface = AppController2.getInstance().oxygenLightFont
 
         } else {
-            iHolder.tvBookingId.typeface = AppController.getInstance().aponaLohitFont
-            iHolder.tvTricketPrices.typeface = AppController.getInstance().aponaLohitFont
-            iHolder.tvStatus.typeface = AppController.getInstance().aponaLohitFont
+            iHolder.tvBookingId.typeface = AppController2.getInstance().aponaLohitFont
+            iHolder.tvTricketPrices.typeface = AppController2.getInstance().aponaLohitFont
+            iHolder.tvStatus.typeface = AppController2.getInstance().aponaLohitFont
         }
 
         iHolder.tvBookingId.text = "Booking ID: " + model.bookingId!!
@@ -137,9 +137,9 @@ class TransitionRVSectionAdapter(val mContext: Context, private val title: Strin
         val hHolder = holder as HeaderViewHolder?
         hHolder!!.tvHeader.text = title
         if (mIsEnglish) {
-            hHolder.tvHeader.typeface = AppController.getInstance().oxygenLightFont
+            hHolder.tvHeader.typeface = AppController2.getInstance().oxygenLightFont
         } else {
-            hHolder.tvHeader.typeface = AppController.getInstance().aponaLohitFont
+            hHolder.tvHeader.typeface = AppController2.getInstance().aponaLohitFont
         }
     }
 

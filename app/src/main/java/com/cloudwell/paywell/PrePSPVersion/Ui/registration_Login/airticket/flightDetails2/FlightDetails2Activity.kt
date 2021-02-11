@@ -19,8 +19,8 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.fligh
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.adapter.AdapterForPassengers
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.viewmodel.FlightDetails2ViewModel
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.AddPassengerActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerList.PassengerListActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.AddPassengerActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerList.PassengerListActivity
 import com.cloudwell.paywell.utils.CalculationHelper
 import com.cloudwell.paywell.utils.RecyclerItemClickListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior

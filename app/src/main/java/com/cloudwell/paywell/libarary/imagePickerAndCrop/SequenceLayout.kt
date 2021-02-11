@@ -13,10 +13,8 @@ import android.view.animation.LinearInterpolator
 import android.widget.FrameLayout
 import androidx.annotation.ColorInt
 import androidx.annotation.StyleRes
-import androidx.core.view.children
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.services.libaray.SequenceStep
-import com.cloudwell.paywell.services.libaray.SequenceStepDot
 import kotlinx.android.synthetic.main.sequence_layout.view.*
 
 

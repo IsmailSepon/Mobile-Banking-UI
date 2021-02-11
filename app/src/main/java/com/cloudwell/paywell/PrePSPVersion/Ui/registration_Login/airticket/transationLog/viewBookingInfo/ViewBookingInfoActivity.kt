@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.viewBookingInfo
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.transationLog.viewBookingInfo
 
 import android.content.Context
 import android.content.Intent
@@ -10,12 +10,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.Airport
-import com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.viewBookingInfo.adapter.AdapterForPassengersBookingInfo
-import com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.viewBookingInfo.adapter.AirportListBookingInfoAdapter
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.transationLog.viewBookingInfo.adapter.AdapterForPassengersBookingInfo
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.transationLog.viewBookingInfo.adapter.AirportListBookingInfoAdapter
 import su.j2e.rvjoiner.JoinableAdapter
 import su.j2e.rvjoiner.JoinableLayout
 import su.j2e.rvjoiner.RvJoiner
@@ -28,7 +28,7 @@ class ViewBookingInfoActivity : AirTricketBaseActivity() {
         lateinit var item: Datum
         fun newIntent(context: Context, item: Datum): Intent {
             val intent = Intent(context, ViewBookingInfoActivity::class.java)
-            this.item = item
+            Companion.item = item
             return intent
         }
     }

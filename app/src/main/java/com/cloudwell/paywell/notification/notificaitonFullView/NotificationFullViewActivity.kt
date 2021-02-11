@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.notification.notificaitonFullView
+package com.cloudwell.paywell.notification.notificaitonFullView
 
 
 import android.content.DialogInterface
@@ -15,24 +15,19 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.cloudwell.paywell.services.R
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.MVVMBaseActivity
-import com.cloudwell.paywell.services.activity.notification.ImageViewActivity
-import com.cloudwell.paywell.services.activity.notification.allNotificaiton.NotificationAllActivity
-import com.cloudwell.paywell.services.activity.notification.allNotificaiton.NotificationAllActivity.Companion.IS_NOTIFICATION_SHOWN
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.analytics.AnalyticsManager
+import com.cloudwell.paywell.analytics.AnalyticsParameters
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.appController.AppController2
+import com.cloudwell.paywell.notification.allNotificaiton.NotificationAllActivity
+import com.cloudwell.paywell.notification.allNotificaiton.NotificationAllActivity.Companion.IS_NOTIFICATION_SHOWN
+import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.services.activity.notification.model.NotificationDetailMessage
 import com.cloudwell.paywell.services.activity.notification.model.RequestSDABalancceRetrun
 import com.cloudwell.paywell.services.activity.notification.notificaitonFullView.view.NotificationFullViewStatus
 import com.cloudwell.paywell.services.activity.notification.notificaitonFullView.viewModel.NotificationFullNotifcationViewModel
-import com.cloudwell.paywell.services.activity.utility.pallibidyut.bill.PBBillPayNewActivity
-import com.cloudwell.paywell.services.activity.utility.pallibidyut.model.REBNotification
-import com.cloudwell.paywell.services.activity.utility.pallibidyut.registion.PBRegistrationActivity
-import com.cloudwell.paywell.services.analytics.AnalyticsManager
-import com.cloudwell.paywell.services.analytics.AnalyticsParameters
-import com.cloudwell.paywell.services.app.AppController
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.retrofit.ApiUtils
-import com.cloudwell.paywell.services.utils.AppHelper.startNotificationSyncService
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import com.orhanobut.logger.Logger
@@ -55,7 +50,7 @@ class NotificationFullViewActivity : MVVMBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notification_full_view)
-        setToolbar(getString(R.string.home_notification_details))
+        setToolbar(getString(R.string.details))
 
         mAppHandler = AppHandler.getmInstance(applicationContext)
 
@@ -96,19 +91,19 @@ class NotificationFullViewActivity : MVVMBaseActivity() {
 
     private fun handleViewStatus(status: NotificationFullViewStatus?) {
         when (status) {
-            NotificationFullViewStatus.START_NOTIFICATION_SERVICE -> startNotificationSyncService(applicationContext)
+       //     NotificationFullViewStatus.START_NOTIFICATION_SERVICE -> startNotificationSyncService(applicationContext)
         }
 
     }
 
     fun handleLanguage() {
         if (mAppHandler?.getAppLanguage().equals("en")) {
-            notiTitle?.setTypeface(AppController.getInstance().getOxygenLightFont())
-            notiMessage?.setTypeface(AppController.getInstance().getOxygenLightFont())
+            notiTitle?.setTypeface(AppController2.getInstance().getOxygenLightFont())
+            notiMessage?.setTypeface(AppController2.getInstance().getOxygenLightFont())
 
         } else {
-            notiTitle?.setTypeface(AppController.getInstance().getAponaLohitFont())
-            notiMessage?.setTypeface(AppController.getInstance().getAponaLohitFont())
+            notiTitle?.setTypeface(AppController2.getInstance().getAponaLohitFont())
+            notiMessage?.setTypeface(AppController2.getInstance().getAponaLohitFont())
         }
     }
 
@@ -179,9 +174,9 @@ class NotificationFullViewActivity : MVVMBaseActivity() {
                             }
                         })
                 notiImg.setOnClickListener {
-                    ImageViewActivity.TAG_IMAGE_URL = model?.imageUrl
-                    val intent = Intent(this, ImageViewActivity::class.java)
-                    startActivity(intent)
+                //    ImageViewActivity.TAG_IMAGE_URL = model?.imageUrl
+//                    val intent = Intent(this, ImageViewActivity::class.java)
+//                    startActivity(intent)
 
                 }
             }
@@ -241,41 +236,41 @@ class NotificationFullViewActivity : MVVMBaseActivity() {
                 message = message.replace("\\\\\\\\", "")
                 message = message.replace("\\\\\\\\\\\\", "")
 
-                val rn: REBNotification = Gson().fromJson(message, REBNotification::class.java)
+             //   val rn: REBNotification = Gson().fromJson(message, REBNotification::class.java)
 
                 val m = StringEscapeUtils.unescapeJava(message)
                 val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
 
-                if (rn.ServiceType == "REB_BILL") {
-                    if (rn.TrxData.StatusCode == 200 || rn.TrxData.StatusCode == 303 || rn.TrxData.StatusCode == 100 || rn.TrxData.StatusCode == 327) {
-
-                    } else {
-                        btResubmitREB.setText(getString(R.string.re_submit_reb));
-                        btResubmitREB.visibility = View.VISIBLE
-                        btResubmitREB.setOnClickListener {
-
-                            val intentActionAccept = Intent(applicationContext, PBBillPayNewActivity::class.java)
-                            intentActionAccept.putExtra("REBNotification", Gson().toJson(rn))
-                            startActivity(intentActionAccept)
-
-                        }
-                    }
-                } else if (rn.ServiceType == "REB_REG") {
-                    if (rn.TrxData.StatusCode == 200 || rn.TrxData.StatusCode == 328 || rn.TrxData.StatusCode == 100) {
-
-                    } else {
-                        btResubmitREB.setText(getString(R.string.re_submit_reb));
-                        btResubmitREB.visibility = View.VISIBLE
-                        btResubmitREB.setOnClickListener {
-
-                            val intentActionAccept = Intent(applicationContext, PBRegistrationActivity::class.java)
-                            intentActionAccept.putExtra("REBNotification", Gson().toJson(rn))
-                            startActivity(intentActionAccept)
-
-                        }
-
-                    }
-                }
+//                if (rn.ServiceType == "REB_BILL") {
+//                    if (rn.TrxData.StatusCode == 200 || rn.TrxData.StatusCode == 303 || rn.TrxData.StatusCode == 100 || rn.TrxData.StatusCode == 327) {
+//
+//                    } else {
+//                        btResubmitREB.setText(getString(R.string.re_submit_reb));
+//                        btResubmitREB.visibility = View.VISIBLE
+//                        btResubmitREB.setOnClickListener {
+//
+//                            val intentActionAccept = Intent(applicationContext, PBBillPayNewActivity::class.java)
+//                            intentActionAccept.putExtra("REBNotification", Gson().toJson(rn))
+//                            startActivity(intentActionAccept)
+//
+//                        }
+//                    }
+//                } else if (rn.ServiceType == "REB_REG") {
+//                    if (rn.TrxData.StatusCode == 200 || rn.TrxData.StatusCode == 328 || rn.TrxData.StatusCode == 100) {
+//
+//                    } else {
+//                        btResubmitREB.setText(getString(R.string.re_submit_reb));
+//                        btResubmitREB.visibility = View.VISIBLE
+//                        btResubmitREB.setOnClickListener {
+//
+//                            val intentActionAccept = Intent(applicationContext, PBRegistrationActivity::class.java)
+//                            intentActionAccept.putExtra("REBNotification", Gson().toJson(rn))
+//                            startActivity(intentActionAccept)
+//
+//                        }
+//
+//                    }
+//                }
             }catch (e:java.lang.Exception){
 
             }
@@ -299,14 +294,14 @@ class NotificationFullViewActivity : MVVMBaseActivity() {
                     val message = jsonObject.getString("StatusName")
                     showTransferMessage(status, message)
                 } catch (ex: Exception) {
-                    showTryAgainDialog()
+                  //  showTryAgainDialog()
                 }
 
             }
 
             override fun onFailure(call: retrofit2.Call<ResponseBody>, t: Throwable) {
                 dismissProgressDialog()
-                showTryAgainDialog()
+              //  showTryAgainDialog()
 
             }
 
@@ -412,10 +407,10 @@ class NotificationFullViewActivity : MVVMBaseActivity() {
 
         val builder = AlertDialog.Builder(this)
         if (status_code.equals("200", ignoreCase = true)) {
-            builder.setTitle(Html.fromHtml("<font color='#66cc00'>" + getString(R.string.success_msg) + "</font>"))
-            builder.setMessage(getString(R.string.amount_transfer_msg))
+            builder.setTitle(Html.fromHtml("<font color='#66cc00'>" + getString(R.string.completed_successfully) + "</font>"))
+            builder.setMessage(getString(R.string.amount))
         } else {
-            builder.setTitle(Html.fromHtml("<font color='#e62e00'>" + getString(R.string.request_failed_msg) + "</font>"))
+            builder.setTitle(Html.fromHtml("<font color='#e62e00'>" + getString(R.string.failed) + "</font>"))
             builder.setMessage(message)
         }
 

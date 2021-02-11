@@ -1063,11 +1063,41 @@
     <string name="ticket_refund_menu_text">Ticket Refund</string>
     <string name="ticket_reissue_menu_text">Re-issue Ticket</string>
     <string name="ticket_docs_update_info_menu_text">Docs/Info update</string>
-    <string name="ticket_issue_menu_text">Issue Ticket</string>
     <string name="transaction_log">Booking Log</string>
     <string name="booking_log_limit_title_msg">Booking Log Limit</string>
     <string name="book">Booking Status</string>
-
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="adult">Adult</string>
+    <string name="child">Child</string>
+    <string name="infant">Infant</string>
+    <string name="mr">Mr</string>
+    <string name="ms">Ms</string>
+    <string name="mrs">Mrs</string>
+    <string name="mstr">Mstr</string>
+    <string name="miss">Miss</string>
+    <string name="title_flightDetails2">Review page 2</string>
+    <string name="title_passenger_list">Passenger Info</string>
+    <string name="title_add_passenger">Add Passenger</string>
+    <string name="passport_image_mandatory">passport image mandatory</string>
+    <string name="visa_image_mandatory">Visa image mandatory</string>
+    <string name="passenger_deleted_message">Passenger info cannot be recovered once deleted. Are you sure you want to delete?</string>
+    <string name="email_address_already_exists">Email address already exists</string>
+    <string name="please_select_atleast_one_email_address">Please select atleast one email address</string>
+    <string name="title_email_list">Email List</string>
+    <string name="title_ticket_viewer">Ticket View</string>
+    <string name="send_email_with_fare">Send Email With Fare</string>
+    <string name="slycalendar_save">Save</string>
+    <string name="slycalendar_cancel">Cancel</string>
+    <string name="slycalendar_next">Next</string>
+    <string name="flight">Flight</string>
+    <string name="outbound">Outbound</string>
+    <string name="inbound">Inbound</string>
+    <string name="booking_info">Booking Info</string>
+    <string name="title_activity_my_favorite_menu">My Favorites</string>
+    <string name="can_not_add_more_than">Can\'t add more than 8 menu</string>
+    <string name="details">Details</string>
 
 
 </resources>

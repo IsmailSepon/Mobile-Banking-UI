@@ -18,7 +18,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.fligh
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.airRules.ResposeAirRules
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.ResCommistionMaping
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.model.ResInvoideEmailAPI
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.model.ResInvoideEmailAPI
 import com.cloudwell.paywell.utils.InternalStorageHelper
 import com.cloudwell.paywell.utils.UniqueKeyGenerator
 import com.google.gson.Gson

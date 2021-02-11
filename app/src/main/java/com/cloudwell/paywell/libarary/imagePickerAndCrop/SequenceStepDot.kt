@@ -1,9 +1,10 @@
-package com.cloudwell.paywell.services.libaray
+package com.cloudwell.paywell.libarary.imagePickerAndCrop
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
 import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
@@ -13,7 +14,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
 import androidx.annotation.ColorInt
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
 import kotlinx.android.synthetic.main.sequence_dot.view.*
 
 
@@ -70,8 +71,9 @@ internal class SequenceStepDot(context: Context?, attrs: AttributeSet?, defStyle
         }
     }
 
+    @SuppressLint("ResourceType")
     private fun setupAnimator() {
-        pulseAnimator = AnimatorInflater.loadAnimator(context, R.animator.fading_pulse) as AnimatorSet
+        pulseAnimator = AnimatorInflater.loadAnimator(context, R.anim.fading_pulse) as AnimatorSet
         pulseAnimator!!.setTarget(pulseView)
         pulseAnimator!!.addListener(object : AnimatorListenerAdapter() {
             override fun onAnimationEnd(animator: Animator) {

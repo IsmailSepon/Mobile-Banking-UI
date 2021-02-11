@@ -15,11 +15,13 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.final
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.ResposeAirPriceSearch;
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.airRules.ResposeAirRules;
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.ResCommistionMaping;
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketCencel.model.ResSingleBooking;
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.model.ResInvoideEmailAPI;
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketCencel.model.ResSingleBooking;
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.model.ResInvoideEmailAPI;
 import com.cloudwell.paywell.services.activity.notification.model.RequestSDABalancceRetrun;
+import com.cloudwell.paywell.services.activity.notification.model.ResNotificationAPI;
 import com.cloudwell.paywell.services.activity.notification.model.deletetNotification.ReposeDeletedNotification;
 import com.cloudwell.paywell.services.activity.notification.model.deletetNotification.RequestDeletedNotification;
+import com.cloudwell.paywell.services.activity.notification.model.getNotification.RequestNotificationAll;
 import com.cloudwell.paywell.utils.ParameterUtility;
 import com.google.gson.JsonObject;
 
@@ -210,4 +212,6 @@ public interface APIService {
     Call<ResposeAppsAuth> refreshToken(@Header("Authorization") String AuthorizationKey, @Body RequestRefreshToken body);
 
 
+    @POST("Notification/NotificationSystem/getNotificationsbyType")
+    Call<ResNotificationAPI> callNotificationAPI(@Body RequestNotificationAll requestNotification);
 }

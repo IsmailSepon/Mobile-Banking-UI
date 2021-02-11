@@ -14,7 +14,6 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.data.network.AllUrl
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Result
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.adapter.FlightRecycleViewAdapter
 import com.cloudwell.paywell.utils.CalculationHelper
 import kotlinx.android.synthetic.main.flight_list_item_new.view.*
 

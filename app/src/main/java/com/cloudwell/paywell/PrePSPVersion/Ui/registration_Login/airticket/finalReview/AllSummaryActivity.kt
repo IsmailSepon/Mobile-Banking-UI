@@ -36,7 +36,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.fligh
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.FlightSearchViewActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.menu.AirTicketMenuActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.AddPassengerActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.AddPassengerActivity
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.all_summaray_bottom_sheet.*
 import kotlinx.android.synthetic.main.contant_summary_contant.*

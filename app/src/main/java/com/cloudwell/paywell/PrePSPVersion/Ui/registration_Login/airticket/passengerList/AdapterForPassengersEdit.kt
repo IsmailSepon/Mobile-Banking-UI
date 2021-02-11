@@ -1,12 +1,12 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.passengerList
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerList
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
+import com.cloudwell.paywell.R
 import kotlinx.android.synthetic.main.passenger_list_item_defalt_edit.view.*
 
 class AdapterForPassengersEdit(var context: Context, var items: List<Passenger>, private var onClickListener: OnClickListener) : RecyclerView.Adapter<AdapterForPassengersEdit.ViewHolder>() {
@@ -17,17 +17,17 @@ class AdapterForPassengersEdit(var context: Context, var items: List<Passenger>,
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterForPassengersEdit.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
 
         val view = LayoutInflater.from(context).inflate(R.layout.passenger_list_item_defalt_edit, parent, false)
-        return AdapterForPassengersEdit.ViewHolder(view)
+        return ViewHolder(view)
 
 
     }
 
 
-    override fun onBindViewHolder(holder: AdapterForPassengersEdit.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val model = items.get(position)
         holder.tvShortFirstNameLastName.text = "${model.firstName} / ${model.lastName}"
 //        holder.tvPassport.text = "${model.firstName} | ${model.lastName}"

@@ -1,14 +1,14 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.adapter
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.OutputSegment
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
-import com.cloudwell.paywell.services.utils.DateUtils
+import com.cloudwell.paywell.utils.DateUtils
 import kotlinx.android.synthetic.main.simple_list_item_segment.view.*
 
 
@@ -29,7 +29,7 @@ class FlightRecycleViewAdapter(val mContext: Context, val mSegments: List<Output
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VHolder {
 
-        val view = LayoutInflater.from(mContext).inflate(com.cloudwell.paywell.services.R.layout.simple_list_item_segment, parent, false)
+        val view = LayoutInflater.from(mContext).inflate(R.layout.simple_list_item_segment, parent, false)
         return VHolder(view)
     }
 

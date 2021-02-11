@@ -7,7 +7,7 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.cloudwell.paywell.services.activity.myFavorite.model.FavoriteMenu;
-import com.cloudwell.paywell.services.recentList.model.RecentUsedMenu;
+import com.cloudwell.paywell.recentList.model.RecentUsedMenu;
 
 import java.util.List;
 

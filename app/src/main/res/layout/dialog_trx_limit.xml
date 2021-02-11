@@ -157,7 +157,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:maxLines="2"
-                android:text="@string/cancel_btn" />
+                android:text="@string/cancel" />
 
             <Button
                 android:id="@+id/buttonOk"

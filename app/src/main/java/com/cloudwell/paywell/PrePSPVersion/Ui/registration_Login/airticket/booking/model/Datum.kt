@@ -1,6 +1,6 @@
 package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model
 
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketCencel.model.SearchLog
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketCencel.model.SearchLog
 import com.google.gson.annotations.SerializedName
 
 class Datum {

@@ -23,7 +23,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booki
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.fragment.CancellationStatusMessageFragment
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.fragment.UserAcceptDialogFragment
 import com.cloudwell.paywell.services.activity.eticket.airticket.dosInfoUpdate.UpdateDocOrInfomationRequestActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketCencel.model.ResSingleBooking
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketCencel.model.ResSingleBooking
 import com.cloudwell.paywell.utils.UniqueKeyGenerator
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.JsonObject

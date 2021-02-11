@@ -31,8 +31,8 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booki
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.fragment.ShowMessageFragment
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.adapter.FlightAdapterNew
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.adapter.OnClickListener
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.viewModel.FlightSearchViewModel
-import com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.AirThicketTranslationLogActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.viewModel.FlightSearchViewModel
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.transationLog.AirThicketTranslationLogActivity
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.JsonObject

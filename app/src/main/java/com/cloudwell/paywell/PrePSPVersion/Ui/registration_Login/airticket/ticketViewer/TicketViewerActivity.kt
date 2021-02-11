@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer
 
 import android.app.ProgressDialog
 import android.graphics.Bitmap
@@ -6,7 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
+import com.cloudwell.paywell.R
 import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.activity_ticket_view.*
 
@@ -18,8 +19,8 @@ class TicketViewerActivity : AirTricketBaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.cloudwell.paywell.services.R.layout.activity_ticket_view)
-        setToolbar(getString(com.cloudwell.paywell.services.R.string.title_ticket_viewer))
+        setContentView(R.layout.activity_ticket_view)
+        setToolbar(getString(R.string.title_ticket_viewer))
 
         val stringExtra = intent.getStringExtra("url")
         initViewInitialization(stringExtra)

@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd
 
 import android.Manifest
 import android.app.Activity
@@ -15,22 +15,22 @@ import android.view.WindowManager
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.ItemTouchHelper
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.ResposeAirPriceSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.fragment.GenderBottomSheetDialog
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.fragment.NameTitleSheetDialog
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.fragment.PassengerTypeSheetDialog
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.model.MyCountry
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.view.PassgerAddViewStatus
-import com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.viewmodel.AddPassengerViewModel
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.constant.AllConstant.emailPattern
-import com.cloudwell.paywell.services.libaray.imagePickerAndCrop.ImagePickerActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.fragment.GenderBottomSheetDialog
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.fragment.NameTitleSheetDialog
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.fragment.PassengerTypeSheetDialog
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.model.MyCountry
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.view.PassgerAddViewStatus
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.viewmodel.AddPassengerViewModel
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.constant.AllConstant.emailPattern
+import com.cloudwell.paywell.data.preferences.AppStorageBox
+import com.cloudwell.paywell.libarary.imagePickerAndCrop.ImagePickerActivity
+import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.utils.AssetHelper
-import com.cloudwell.paywell.services.utils.CountryUtility
+import com.cloudwell.paywell.utils.CountryUtility
 import com.google.gson.Gson
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
@@ -40,7 +40,7 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.mukesh.countrypicker.Country
 import com.mukesh.countrypicker.CountryPicker
 import com.mukesh.countrypicker.listeners.OnCountryPickerListener
-import kotlinx.android.synthetic.main.contant_add_passenger.*
+import kotlinx.android.synthetic.main.contant_reissue_containt.*
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -739,6 +739,7 @@ class AddPassengerActivity : AirTricketBaseActivity() {
 
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_IMAGE) {
             if (resultCode == Activity.RESULT_OK) {
                 val uri: Uri = data!!.getParcelableExtra("path");

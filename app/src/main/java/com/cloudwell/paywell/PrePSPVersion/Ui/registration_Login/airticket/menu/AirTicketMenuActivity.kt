@@ -17,10 +17,10 @@ import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.constant.AllConstant
 import com.cloudwell.paywell.constant.IconConstant
-import com.cloudwell.paywell.services.activity.eticket.airticket.AirTicketMainActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketCencel.TicketCancelActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.transationLog.AirThicketTranslationLogActivity
-import com.cloudwell.paywell.services.recentList.model.RecentUsedMenu
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.AirTicketMainActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketCencel.TicketCancelActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.transationLog.AirThicketTranslationLogActivity
+import com.cloudwell.paywell.recentList.model.RecentUsedMenu
 import com.cloudwell.paywell.utils.ConnectionDetector
 import com.cloudwell.paywell.utils.LanuageConstant.KEY_BANGLA
 import com.cloudwell.paywell.utils.LanuageConstant.KEY_ENGLISH

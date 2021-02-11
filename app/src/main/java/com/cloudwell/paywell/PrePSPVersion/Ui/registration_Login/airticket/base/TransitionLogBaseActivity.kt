@@ -34,9 +34,9 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booki
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.model.BookingStatuViewStatus
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.model.ResIssueTicket
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.viewModel.BookingStatsViewModel
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketCencel.TicketCancelActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.TicketViewerActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.emailTicket.PassengerEmailSendListActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketCencel.TicketCancelActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.TicketViewerActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.emailTicket.PassengerEmailSendListActivity
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken

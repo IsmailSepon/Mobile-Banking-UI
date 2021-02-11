@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.fragment.app.Fragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.*
 import com.cloudwell.paywell.services.activity.eticket.airticket.*
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Segment

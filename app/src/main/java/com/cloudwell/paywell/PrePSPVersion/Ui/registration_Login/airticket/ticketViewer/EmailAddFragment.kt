@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer
 
 import android.os.Bundle
 import android.text.Editable
@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.constant.AllConstant.emailPattern
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.constant.AllConstant.emailPattern
 import kotlinx.android.synthetic.main.fragment_add_email.*
 import kotlinx.android.synthetic.main.fragment_add_email.view.*
 
@@ -23,7 +23,7 @@ class EmailAddFragment : DialogFragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val v = inflater.inflate(com.cloudwell.paywell.services.R.layout.fragment_add_email, container, false)
+        val v = inflater.inflate(R.layout.fragment_add_email, container, false)
 
         v.etEmailAddress.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {

@@ -7,9 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.services.activity.notification.model.NotificationDetailMessage
-import com.cloudwell.paywell.services.app.AppController
-import com.cloudwell.paywell.services.app.AppHandler
 import org.json.JSONObject
 
 /**
@@ -36,11 +37,11 @@ class MsgAdapter(private val mContext: Context, val t: List<NotificationDetailMe
         var convertView = convertView
         val viewHolder: ViewHolder
         if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(com.cloudwell.paywell.services.R.layout.dialog_notification, parent, false)
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.dialog_notification, parent, false)
             viewHolder = ViewHolder()
-            viewHolder.title = convertView!!.findViewById(com.cloudwell.paywell.services.R.id.title)
-            viewHolder.date = convertView.findViewById(com.cloudwell.paywell.services.R.id.date)
-            viewHolder.msg = convertView.findViewById(com.cloudwell.paywell.services.R.id.message)
+            viewHolder.title = convertView!!.findViewById(R.id.title)
+            viewHolder.date = convertView.findViewById(R.id.date)
+            viewHolder.msg = convertView.findViewById(R.id.message)
             convertView.tag = viewHolder
         } else {
             viewHolder = convertView.tag as ViewHolder
@@ -58,13 +59,13 @@ class MsgAdapter(private val mContext: Context, val t: List<NotificationDetailMe
         viewHolder.date!!.text = model.addedDatetime
         viewHolder.msg!!.text = model.message
         if (mAppHandler!!.appLanguage.equals("en", ignoreCase = true)) {
-            viewHolder.title!!.typeface = AppController.getInstance().oxygenLightFont
-            viewHolder.date!!.typeface = AppController.getInstance().oxygenLightFont
-            viewHolder.msg!!.typeface = AppController.getInstance().oxygenLightFont
+            viewHolder.title!!.typeface = AppController2.getInstance().oxygenLightFont
+            viewHolder.date!!.typeface = AppController2.getInstance().oxygenLightFont
+            viewHolder.msg!!.typeface = AppController2.getInstance().oxygenLightFont
         } else {
-            viewHolder.title!!.typeface = AppController.getInstance().aponaLohitFont
-            viewHolder.date!!.typeface = AppController.getInstance().aponaLohitFont
-            viewHolder.msg!!.typeface = AppController.getInstance().aponaLohitFont
+            viewHolder.title!!.typeface = AppController2.getInstance().aponaLohitFont
+            viewHolder.date!!.typeface = AppController2.getInstance().aponaLohitFont
+            viewHolder.msg!!.typeface = AppController2.getInstance().aponaLohitFont
         }
 
 

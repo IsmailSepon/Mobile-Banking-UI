@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.ticketCencel.model
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketCencel.model
 
 data class SearchLog(
     val adult_qty: String,

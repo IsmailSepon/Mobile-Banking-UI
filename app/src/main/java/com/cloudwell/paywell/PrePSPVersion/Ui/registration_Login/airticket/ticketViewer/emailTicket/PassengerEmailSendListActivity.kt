@@ -1,19 +1,19 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.emailTicket
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.emailTicket
 
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.AirTricketBaseActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Passenger
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.EmailAddFragment
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.emailTicket.adapter.EmailListAdapterAdapter
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.model.EmailListViewStatus
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.viewModel.EmailListViewModel
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.emailTicket.adapter.EmailListAdapterAdapter
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.data.preferences.AppStorageBox
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.EmailAddFragment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.model.EmailListViewStatus
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.viewModel.EmailListViewModel
 import kotlinx.android.synthetic.main.activity_ticket_email.*
 
 
@@ -74,8 +74,8 @@ class PassengerEmailSendListActivity : AirTricketBaseActivity(), View.OnClickLis
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.cloudwell.paywell.services.R.layout.activity_ticket_email)
-        setToolbar(getString(com.cloudwell.paywell.services.R.string.title_email_list))
+        setContentView(R.layout.activity_ticket_email)
+        setToolbar(getString(R.string.title_email_list))
 
         datum = AppStorageBox.get(applicationContext, AppStorageBox.Key.BOOKING_STATUS_ITEM) as Datum
 

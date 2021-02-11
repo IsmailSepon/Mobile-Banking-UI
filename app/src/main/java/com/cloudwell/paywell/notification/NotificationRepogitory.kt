@@ -1,22 +1,22 @@
-package com.cloudwell.paywell.services.activity.notification
+package com.cloudwell.paywell.notification
 
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.LiveDataReactiveStreams
 import androidx.lifecycle.MutableLiveData
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.data.preferences.AppStorageBox
+import com.cloudwell.paywell.database.DatabaseClient
+import com.cloudwell.paywell.notification.model.ResposeReScheduleNotificationAccept
+import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.services.activity.notification.model.NotificationDetailMessage
 import com.cloudwell.paywell.services.activity.notification.model.ResNotificationAPI
-import com.cloudwell.paywell.services.activity.notification.model.ResposeReScheduleNotificationAccept
 import com.cloudwell.paywell.services.activity.notification.model.deletetNotification.ReposeDeletedNotification
 import com.cloudwell.paywell.services.activity.notification.model.deletetNotification.RequestDeletedNotification
 import com.cloudwell.paywell.services.activity.notification.model.getNotification.RequestNotificationAll
 import com.cloudwell.paywell.services.activity.notification.notificaitonFullView.model.NotificationDetailMessageSync
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.database.DatabaseClient
-import com.cloudwell.paywell.services.retrofit.ApiUtils
-import com.cloudwell.paywell.services.utils.UniqueKeyGenerator
+import com.cloudwell.paywell.utils.UniqueKeyGenerator
 import com.orhanobut.logger.Logger
 import retrofit2.Call
 import retrofit2.Callback
@@ -167,7 +167,7 @@ class NotificationRepogitory(private val mContext: Context) {
 
             override fun onFailure(call: Call<ReposeDeletedNotification>, t: Throwable) {
                 val ReposeDeletedNotification = ReposeDeletedNotification()
-                ReposeDeletedNotification.message = mContext.getString(R.string.try_again_msg)
+                ReposeDeletedNotification.message = mContext.getString(R.string.please_try_again)
                 responseData.value = ReposeDeletedNotification
 
             }

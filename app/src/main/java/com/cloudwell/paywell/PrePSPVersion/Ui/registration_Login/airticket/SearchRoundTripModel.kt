@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket
 
 class SearchRoundTripModel {
     var from: String

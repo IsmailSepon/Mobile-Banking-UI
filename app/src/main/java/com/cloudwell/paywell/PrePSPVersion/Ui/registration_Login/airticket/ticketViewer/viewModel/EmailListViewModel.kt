@@ -1,10 +1,10 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.viewModel
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.viewModel
 
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.BaseViewState
-import com.cloudwell.paywell.services.activity.base.newBase.SingleLiveEvent
-import com.cloudwell.paywell.services.activity.eticket.airticket.AirTicketBaseViewMode
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.model.EmailListViewStatus
-import com.cloudwell.paywell.services.activity.eticket.airticket.ticketViewer.model.ResInvoideEmailAPI
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.AirTicketBaseViewMode
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.SingleLiveEvent
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.model.EmailListViewStatus
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.model.ResInvoideEmailAPI
 
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 4/3/19.

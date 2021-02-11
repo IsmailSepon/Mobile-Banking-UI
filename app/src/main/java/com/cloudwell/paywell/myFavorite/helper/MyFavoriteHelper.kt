@@ -1,11 +1,11 @@
-package com.cloudwell.paywell.services.activity.myFavorite.helper
+package com.cloudwell.paywell.myFavorite.helper
 
 import android.content.Context
 import android.os.AsyncTask
+import com.cloudwell.paywell.constant.IconConstant
+import com.cloudwell.paywell.database.DatabaseClient
 import com.cloudwell.paywell.services.activity.myFavorite.model.FavoriteMenu
-import com.cloudwell.paywell.services.constant.IconConstant
-import com.cloudwell.paywell.services.database.DatabaseClient
-import com.cloudwell.paywell.services.utils.StringConstant
+import com.cloudwell.paywell.utils.StringConstant
 
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2/1/19.

@@ -1,9 +1,8 @@
-package com.cloudwell.paywell.services.activity.notification.allNotificaiton
+package com.cloudwell.paywell.notification.allNotificaiton
 
 import android.content.Context
 import android.content.Intent
 import android.graphics.Canvas
-import android.graphics.Color
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.util.Linkify
@@ -14,37 +13,34 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.cardview.widget.CardView
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.MainActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.MVVMBaseActivity
-import com.cloudwell.paywell.services.activity.notification.SwipeController
-import com.cloudwell.paywell.services.activity.notification.SwipeController.SwipeControllerActions
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.analytics.AnalyticsManager
+import com.cloudwell.paywell.analytics.AnalyticsParameters
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.data.preferences.AppStorageBox
+import com.cloudwell.paywell.notification.SwipeController
 import com.cloudwell.paywell.services.activity.notification.allNotificaiton.view.NotificationViewStatus
 import com.cloudwell.paywell.services.activity.notification.allNotificaiton.viewModel.NotificationNotifcationViewModel
 import com.cloudwell.paywell.services.activity.notification.model.NotificationDetailMessage
-import com.cloudwell.paywell.services.activity.notification.notificaitonFullView.NotificationFullViewActivity
-import com.cloudwell.paywell.services.analytics.AnalyticsManager
-import com.cloudwell.paywell.services.analytics.AnalyticsParameters
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.utils.AppHelper.startNotificationSyncService
+import com.cloudwell.paywell.notification.notificaitonFullView.NotificationFullViewActivity
 import com.orhanobut.logger.Logger
+import com.readystatesoftware.chuck.internal.ui.MainActivity
 import kotlinx.android.synthetic.main.activity_notification_view.*
 import kotlinx.android.synthetic.main.activity_notification_view.view.*
-import kotlinx.android.synthetic.main.dialog_notification.view.*
 import kotlinx.android.synthetic.main.layout_notificaiton_all.*
+import kotlinx.android.synthetic.main.sequence_step.view.*
 import org.apache.commons.lang3.StringEscapeUtils
 import org.json.JSONObject
 
 
-class NotificationAllActivity : MVVMBaseActivity(), SwipeControllerActions {
+class NotificationAllActivity : MVVMBaseActivity(), SwipeController.SwipeControllerActions {
     private var listView: RecyclerView? = null
     private var mAppHandler: AppHandler? = null
     private var mLinearLayout: CoordinatorLayout? = null
@@ -60,7 +56,7 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeControllerActions {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        changeAppThemeForNoActionBar();
+  //      changeAppThemeForNoActionBar();
         setContentView(R.layout.activity_notification_view)
 
         initializer()
@@ -79,14 +75,14 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeControllerActions {
             handleViewCommonStatus(it)
         })
 
-        viewModel.mViewStatus.observe(this, Observer {
-            handleViewStatus(it)
-        })
+//        viewModel.mViewStatus.observe(this, Observer {
+//            handleViewStatus(it)
+//        })
 
         subscribeDataStreams(viewModel)
 
         // call for data
-        val isFlowForComingNewNotification = intent.getBooleanExtra(MainActivity.KEY_COMMING_NEW_NOTIFICATION, false);
+       // val isFlowForComingNewNotification = intent.getBooleanExtra(MainActivity.KEY_COMMING_NEW_NOTIFICATION, false);
 
         // check to need snc data or not
 
@@ -105,7 +101,7 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeControllerActions {
                 startNotificationFullViewActivity()
             }
 
-            NotificationViewStatus.START_NOTIFICATION_SERVICE -> startNotificationSyncService(applicationContext)
+  //          NotificationViewStatus.START_NOTIFICATION_SERVICE -> startNotificationSyncService(applicationContext)
 
             NotificationViewStatus.NOTIFY_DATA_SET_CHANGE -> {
                 adapter.notifyDataSetChanged()
@@ -116,7 +112,7 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeControllerActions {
             }
 
             NotificationViewStatus.SHOW_NO_NOTIFICAITON_FOUND -> {
-                showSnackMessageWithTextMessage(getString(R.string.no_notification_msg))
+                showSnackMessageWithTextMessage(getString(R.string.chuck_notification_title))
 
                 listViewNotification.visibility = View.GONE
                 noNotificationIMG.visibility = View.VISIBLE
@@ -138,7 +134,7 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeControllerActions {
 
     private fun setupAdapter(t: List<NotificationDetailMessage>) {
 
-        adapter=SimpleAdapter(ArrayList<NotificationDetailMessage>(), this)
+        adapter= SimpleAdapter(ArrayList<NotificationDetailMessage>(), this)
         adapter.notifyDataSetChanged()
         adapter = SimpleAdapter(t, this)
         listView!!.adapter = adapter
@@ -230,7 +226,7 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeControllerActions {
         var counter=0
         var context: Context=context
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.dialog_notification, parent, false)
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.notification_counter_txt, parent, false)
             return ViewHolder(view)
         }
 
@@ -258,7 +254,7 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeControllerActions {
 
                 val spannableString = SpannableString(mesage);
                 Linkify.addLinks(spannableString, Linkify.WEB_URLS);
-                holder.message.text = mesage
+ //               holder.message.text = mesage
             }else{
 
 
@@ -267,12 +263,12 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeControllerActions {
                 val spannableString = SpannableString(mMesage);
                 Linkify.addLinks(spannableString, Linkify.WEB_URLS);
                 // for normal notification
-                holder.message.text = mMesage
+//                holder.message.text = mMesage
             }
 
 
             holder.date.text=t.get(position).addedDatetime
-            holder.notificationRandomImage.setImageResource(getImageDrawable(counter))
+//            holder.notificationRandomImage.setImageResource(getImageDrawable(counter))
 
             counter++
             holder.itemView.setOnClickListener() {
@@ -284,9 +280,9 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeControllerActions {
             val model = t[position]
 
             if (model.status.equals("Unread")) {
-                holder.notificationCardView.setCardBackgroundColor(Color.parseColor("#DAFBFB"))
+//                holder.notificationCardView.setCardBackgroundColor(Color.parseColor("#DAFBFB"))
             } else {
-                holder.notificationCardView.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
+ //               holder.notificationCardView.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
             }
 
         }
@@ -323,10 +319,10 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeControllerActions {
 
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             val title = view.title
-            val message = view.message
+//            val message = view.message
             val date = view.date
-            val notificationRandomImage = view.notificationRandomImage
-            val notificationCardView:CardView = view.notificationCardView
+//            val notificationRandomImage = view.notificationRandomImage
+//            val notificationCardView:CardView = view.notificationCardView
         }
     }
 

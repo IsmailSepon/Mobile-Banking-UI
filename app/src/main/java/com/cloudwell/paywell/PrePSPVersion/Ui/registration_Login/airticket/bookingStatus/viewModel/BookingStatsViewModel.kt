@@ -2,7 +2,7 @@ package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.book
 
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.SingleLiveEvent
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.BaseViewState
-import com.cloudwell.paywell.services.activity.eticket.airticket.AirTicketBaseViewMode
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.AirTicketBaseViewMode
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.BookingList
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.model.BookingStatuViewStatus
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.model.ResIssueTicket
