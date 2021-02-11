@@ -102,34 +102,34 @@ class AirTicketMenuActivity : AirTricketBaseActivity(), View.OnClickListener, Co
             }
 
             R.id.btCencel -> {
-                startActivity(Intent(applicationContext, BookingCancelActivity::class.java))
+             //   startActivity(Intent(applicationContext, BookingCancelActivity::class.java))
             }
 
             R.id.btIssueTicket -> {
-                startActivity(Intent(applicationContext, IssueTicketRequestActivity::class.java))
+             //   startActivity(Intent(applicationContext, IssueTicketRequestActivity::class.java))
             }
 
             R.id.btTicketVoid -> {
-                val intent = Intent(applicationContext, TicketCancelActivity::class.java)
-                intent.putExtra(TicketCancelActivity.KEY_TITLE, AllConstant.Action_Void)
-                startActivity(intent)
+//                val intent = Intent(applicationContext, TicketCancelActivity::class.java)
+//                intent.putExtra(TicketCancelActivity.KEY_TITLE, AllConstant.Action_Void)
+//                startActivity(intent)
             }
             R.id.btTicketRefund -> {
-                val intent = Intent(applicationContext, TicketCancelActivity::class.java)
-                intent.putExtra(TicketCancelActivity.KEY_TITLE, AllConstant.Action_Refund)
-                startActivity(intent)
+//                val intent = Intent(applicationContext, TicketCancelActivity::class.java)
+//                intent.putExtra(TicketCancelActivity.KEY_TITLE, AllConstant.Action_Refund)
+//                startActivity(intent)
             }
 
             R.id.btTicketReissue -> {
-                val intent = Intent(applicationContext, TicketCancelActivity::class.java)
-                intent.putExtra(TicketCancelActivity.KEY_TITLE, AllConstant.Action_reIssueTicket)
-                startActivity(intent)
+//                val intent = Intent(applicationContext, TicketCancelActivity::class.java)
+//                intent.putExtra(TicketCancelActivity.KEY_TITLE, AllConstant.Action_reIssueTicket)
+//                startActivity(intent)
             }
 //
             R.id.btTicketDocsInfoUpdateRequest -> {
-                val intent = Intent(applicationContext, TicketCancelActivity::class.java)
-                intent.putExtra(TicketCancelActivity.KEY_TITLE, AllConstant.Action_DOCS_UPDATE)
-                startActivity(intent)
+//                val intent = Intent(applicationContext, TicketCancelActivity::class.java)
+//                intent.putExtra(TicketCancelActivity.KEY_TITLE, AllConstant.Action_DOCS_UPDATE)
+//                startActivity(intent)
             }
 
 

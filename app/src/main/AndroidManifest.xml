@@ -27,6 +27,10 @@
         android:theme="@style/FullScreen"
         tools:replace="android:allowBackup">
 
+        <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.menu.AirTicketMenuActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.AirTicketMainActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.transationLog.AirThicketTranslationLogActivity"/>
         <activity android:name=".PrePSPVersion.Ui.registration_Login.PAuthenticationHostActivity"/>
         <activity android:name=".PrePSPVersion.PrePSPsplashActivity">
             <intent-filter>
@@ -34,7 +38,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Pre______________________________________PSP -->
+        </activity> <!-- Pre________________________k______________PSP -->
 
         <!--
             Regular Version Pre

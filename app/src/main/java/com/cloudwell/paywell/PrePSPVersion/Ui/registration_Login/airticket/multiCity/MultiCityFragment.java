@@ -182,8 +182,8 @@ public class MultiCityFragment extends Fragment {
                 if (isCityHasProblem || isDateNotAvailable) {
 //                    Toast.makeText(getContext(), "Please provide all the data.", Toast.LENGTH_SHORT).show();
                 } else {
-                    AppStorageBox.put(getContext(), AppStorageBox.Key.REQUEST_AIR_SERACH, requestAirSearch);
-                    AppStorageBox.put(getActivity().getApplicationContext(), AppStorageBox.Key.REQUEST_API_reschedule, AirTicketMainActivity.Companion.getItem());
+//                    AppStorageBox.put(getContext(), AppStorageBox.Key.REQUEST_AIR_SERACH, requestAirSearch);
+//                    AppStorageBox.put(getActivity().getApplicationContext(), AppStorageBox.Key.REQUEST_API_reschedule, AirTicketMainActivity.Companion.getItem());
                     Intent intent = new Intent(getActivity().getApplicationContext(), FlightSearchViewActivity.class);
                     intent.putExtra("isReSchuduler", isReSchuduler);
                     startActivity(intent);
@@ -196,31 +196,31 @@ public class MultiCityFragment extends Fragment {
         if (AirTicketMainActivity.Companion.getItem().getMSearchLog().size() != 0) {
             isReSchuduler = true;
 
-            for (int i = 0; i < AirTicketMainActivity.Companion.getItem().getMSearchLog().size(); i++) {
-                SearchLog searchLog = AirTicketMainActivity.Companion.getItem().getMSearchLog().get(i);
-                addAnotherNo(searchLog);
-            }
+//            for (int i = 0; i < AirTicketMainActivity.Companion.getItem().getMSearchLog().size(); i++) {
+//                SearchLog searchLog = AirTicketMainActivity.Companion.getItem().getMSearchLog().get(i);
+//                addAnotherNo(searchLog);
+//            }
+//
+//            SearchLog searchLog = AirTicketMainActivity.Companion.getItem().getMSearchLog().get(0);
+//            String adultQty = searchLog.getAdultQty();
+//            String childQty = searchLog.getChildQty();
+//            String infantQty = searchLog.getInfantQty();
 
-            SearchLog searchLog = AirTicketMainActivity.Companion.getItem().getMSearchLog().get(0);
-            String adultQty = searchLog.getAdultQty();
-            String childQty = searchLog.getChildQty();
-            String infantQty = searchLog.getInfantQty();
-
-            TextView airTicketAdult = parentView.findViewById(R.id.airTicketAdult);
-            TextView airTicketKid = parentView.findViewById(R.id.airTicketKid);
-            TextView airTicketInfant = parentView.findViewById(R.id.airTicketInfant);
-
-            airTicketAdult.setText(adultQty);
-            airTicketAdult.setEnabled(false);
-            airTicketAdult.setAlpha(0.5f);
-
-            airTicketKid.setText(childQty);
-            airTicketKid.setEnabled(false);
-            airTicketKid.setAlpha(0.5f);
-
-            airTicketInfant.setText(infantQty);
-            airTicketInfant.setEnabled(false);
-            airTicketInfant.setAlpha(0.5f);
+//            TextView airTicketAdult = parentView.findViewById(R.id.airTicketAdult);
+//            TextView airTicketKid = parentView.findViewById(R.id.airTicketKid);
+//            TextView airTicketInfant = parentView.findViewById(R.id.airTicketInfant);
+//
+//            airTicketAdult.setText(adultQty);
+//            airTicketAdult.setEnabled(false);
+//            airTicketAdult.setAlpha(0.5f);
+//
+//            airTicketKid.setText(childQty);
+//            airTicketKid.setEnabled(false);
+//            airTicketKid.setAlpha(0.5f);
+//
+//            airTicketInfant.setText(infantQty);
+//            airTicketInfant.setEnabled(false);
+//            airTicketInfant.setAlpha(0.5f);
 
         } else {
             for (int i = 0; i < 2; i++) {
@@ -514,34 +514,34 @@ public class MultiCityFragment extends Fragment {
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == REQ_CODE_MULTI_CITY) {
 
-                int position = Integer.parseInt(data.getStringExtra("from"));
-                boolean isTo = data.getBooleanExtra("isTo", false);
-                Airport get = (Airport) AppStorageBox.get(getContext(), AppStorageBox.Key.AIRPORT);
-
-                String cityOrStatusName = "";
-                if (!get.getCity().equals("")) {
-                    cityOrStatusName = get.getCity() + "/";
-                } else if (!get.getState().equals("")) {
-                    cityOrStatusName = get.getStatus() + "/";
-                }
-
-
-                if (isTo) {
-                    searchRoundTripModel.setToName(get.getIata());
-
-
-                    searchRoundTripModel.setToPortName("" + FormatHelper.INSTANCE.formatText(cityOrStatusName + get.getAirportName()));
-                    ((TextView) getActivity().findViewById(android.R.id.content).findViewWithTag(position).findViewById(R.id.toTextTV)).setVisibility(View.VISIBLE);
-                    ((TextSwitcher) getActivity().findViewById(android.R.id.content).findViewWithTag(position).findViewById(R.id.tsMultiCityTripTo)).setText(searchRoundTripModel.getToName());
-                    ((TextSwitcher) getActivity().findViewById(android.R.id.content).findViewWithTag(position).findViewById(R.id.tsMultiCityTripToPort)).setText("" + FormatHelper.INSTANCE.formatText(cityOrStatusName + get.getAirportName()));
-
-                } else {
-                    searchRoundTripModel.setFromName(get.getIata());
-                    searchRoundTripModel.setFromPortName("" + FormatHelper.INSTANCE.formatText(cityOrStatusName + get.getAirportName()));
-                    ((TextView) getActivity().findViewById(android.R.id.content).findViewWithTag(position).findViewById(R.id.fromTextTV)).setVisibility(View.VISIBLE);
-                    ((TextSwitcher) getActivity().findViewById(android.R.id.content).findViewWithTag(position).findViewById(R.id.tsMultiCityTripFrom)).setText(searchRoundTripModel.getFromName());
-                    ((TextSwitcher) getActivity().findViewById(android.R.id.content).findViewWithTag(position).findViewById(R.id.tsMultiCityTripFromPort)).setText(FormatHelper.INSTANCE.formatText(cityOrStatusName + get.getAirportName()));
-                }
+//                int position = Integer.parseInt(data.getStringExtra("from"));
+//                boolean isTo = data.getBooleanExtra("isTo", false);
+//                Airport get = (Airport) AppStorageBox.get(getContext(), AppStorageBox.Key.AIRPORT);
+//
+//                String cityOrStatusName = "";
+//                if (!get.getCity().equals("")) {
+//                    cityOrStatusName = get.getCity() + "/";
+//                } else if (!get.getState().equals("")) {
+//                    cityOrStatusName = get.getStatus() + "/";
+//                }
+//
+//
+//                if (isTo) {
+//                    searchRoundTripModel.setToName(get.getIata());
+//
+//
+//                    searchRoundTripModel.setToPortName("" + FormatHelper.INSTANCE.formatText(cityOrStatusName + get.getAirportName()));
+//                    ((TextView) getActivity().findViewById(android.R.id.content).findViewWithTag(position).findViewById(R.id.toTextTV)).setVisibility(View.VISIBLE);
+//                    ((TextSwitcher) getActivity().findViewById(android.R.id.content).findViewWithTag(position).findViewById(R.id.tsMultiCityTripTo)).setText(searchRoundTripModel.getToName());
+//                    ((TextSwitcher) getActivity().findViewById(android.R.id.content).findViewWithTag(position).findViewById(R.id.tsMultiCityTripToPort)).setText("" + FormatHelper.INSTANCE.formatText(cityOrStatusName + get.getAirportName()));
+//
+//                } else {
+//                    searchRoundTripModel.setFromName(get.getIata());
+//                    searchRoundTripModel.setFromPortName("" + FormatHelper.INSTANCE.formatText(cityOrStatusName + get.getAirportName()));
+//                    ((TextView) getActivity().findViewById(android.R.id.content).findViewWithTag(position).findViewById(R.id.fromTextTV)).setVisibility(View.VISIBLE);
+//                    ((TextSwitcher) getActivity().findViewById(android.R.id.content).findViewWithTag(position).findViewById(R.id.tsMultiCityTripFrom)).setText(searchRoundTripModel.getFromName());
+//                    ((TextSwitcher) getActivity().findViewById(android.R.id.content).findViewWithTag(position).findViewById(R.id.tsMultiCityTripFromPort)).setText(FormatHelper.INSTANCE.formatText(cityOrStatusName + get.getAirportName()));
+//                }
             }
         }
     }

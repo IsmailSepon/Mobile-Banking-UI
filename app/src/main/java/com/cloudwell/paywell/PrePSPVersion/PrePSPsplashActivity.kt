@@ -28,9 +28,10 @@ class PrePSPsplashActivity : AppCompatActivity() {
 
 //            if (userMobileNumber!= ""){
 //            val mainIntent = Intent(this, PAuthenticationHostActivity::class.java)
+            val mainIntent = Intent(this, AirTicketMenuActivity::class.java)
 
-            startActivity(Intent(this, AirTicketMenuActivity::class.java))
-            //this.startActivity(mainIntent)
+           // startActivity(Intent(this, AirTicketMenuActivity::class.java))
+            this.startActivity(mainIntent)
 //            }else{
 //                val mainIntent = Intent(this, SignupActivity::class.java)
 //                this.startActivity(mainIntent)

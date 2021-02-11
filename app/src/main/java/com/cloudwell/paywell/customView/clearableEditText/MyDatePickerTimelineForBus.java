@@ -124,17 +124,17 @@ public class MyDatePickerTimelineForBus extends LinearLayout implements View.OnC
 
         datePickerDialog.getDatePicker().setMinDate((calendar.getTimeInMillis() - 10000));
 
-        try {
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
-            String validateDate = (String) AppStorageBox.get(getContext(), AppStorageBox.Key.BUS_VALIDATE_DATE);
-
-            Date date = null;
-            date = sdf.parse(validateDate);
-            long millis = date.getTime();
-            datePickerDialog.getDatePicker().setMaxDate(millis);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+//            String validateDate = (String) AppStorageBox.get(getContext(), AppStorageBox.Key.BUS_VALIDATE_DATE);
+//
+//            Date date = null;
+//            date = sdf.parse(validateDate);
+//            long millis = date.getTime();
+//            datePickerDialog.getDatePicker().setMaxDate(millis);
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
         datePickerDialog.show();
 
         datePickerDialog.show();
