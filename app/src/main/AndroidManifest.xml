@@ -32,6 +32,7 @@
         <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.AirTicketMainActivity"/>
         <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.transationLog.AirThicketTranslationLogActivity"/>
         <activity android:name=".PrePSPVersion.Ui.registration_Login.PAuthenticationHostActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.bookingCencel.BookingCancelActivity"/>
         <activity android:name=".PrePSPVersion.PrePSPsplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

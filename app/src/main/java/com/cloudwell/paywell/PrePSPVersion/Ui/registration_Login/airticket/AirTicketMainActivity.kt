@@ -27,13 +27,13 @@ open class AirTicketMainActivity : AirTricketBaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_air_ticket_main)
 
-        assert(supportActionBar != null)
-        if (supportActionBar != null) {
-            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-            supportActionBar!!.setTitle(getString(R.string.search_flights))
-            supportActionBar!!.elevation = 0f
-            supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#189d49")));
-        }
+//        assert(supportActionBar != null)
+//        if (supportActionBar != null) {
+//            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+//            supportActionBar!!.setTitle(getString(R.string.search_flights))
+//            supportActionBar!!.elevation = 0f
+//            supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#189d49")));
+//        }
 
         val fragmentAdapter = SearchFlightAdapter(supportFragmentManager, item)
         viewpager_main.adapter = fragmentAdapter

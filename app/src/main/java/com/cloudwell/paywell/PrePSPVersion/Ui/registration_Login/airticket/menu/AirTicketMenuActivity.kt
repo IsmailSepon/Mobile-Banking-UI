@@ -66,7 +66,7 @@ class AirTicketMenuActivity : AirTricketBaseActivity(), View.OnClickListener, Co
         }
 
         setContentView(R.layout.activity_air_tricket_menu)
-        setToolbar(getString(R.string.home_eticket_air))
+       // setToolbar(getString(R.string.home_eticket_air))
         btViewTricket.setOnClickListener(this)
         btCencel.setOnClickListener(this)
         btTransationLog.setOnClickListener(this)
@@ -102,7 +102,7 @@ class AirTicketMenuActivity : AirTricketBaseActivity(), View.OnClickListener, Co
             }
 
             R.id.btCencel -> {
-             //   startActivity(Intent(applicationContext, BookingCancelActivity::class.java))
+                startActivity(Intent(applicationContext, BookingCancelActivity::class.java))
             }
 
             R.id.btIssueTicket -> {
