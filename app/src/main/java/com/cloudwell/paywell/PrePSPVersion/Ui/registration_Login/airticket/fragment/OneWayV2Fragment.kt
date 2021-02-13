@@ -482,7 +482,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
 
         })
         passengerBottomSheet.arguments = b
-        passengerBottomSheet.show(fragmentManager!!, "psngrBottomSheet")
+        passengerBottomSheet.show(requireFragmentManager(), "psngrBottomSheet")
     }
 
 
@@ -542,7 +542,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         })
 
         bottomSheet.arguments = b
-        bottomSheet.show(fragmentManager!!, "classBottomSheet")
+        bottomSheet.show(requireFragmentManager(), "classBottomSheet")
     }
 
     private fun showDepartDatePicker() {

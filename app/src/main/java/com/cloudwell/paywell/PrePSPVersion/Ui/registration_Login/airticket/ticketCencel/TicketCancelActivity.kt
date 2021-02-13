@@ -40,8 +40,8 @@ class TicketCancelActivity : AirTricketBaseActivity() {
 
         if (intent.getStringExtra(KEY_TITLE) != null) {
             title = intent.getStringExtra(KEY_TITLE)
-            supportActionBar!!.title = title
-            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+//            supportActionBar!!.title = title
+//            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         }
 
         cd = ConnectionDetector(applicationContext)

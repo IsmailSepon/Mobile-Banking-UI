@@ -28,6 +28,8 @@
         tools:replace="android:allowBackup">
 
         <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.ticketCencel.TicketCancelActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.issueTicket.IssueTicketRequestActivity"/>
         <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.menu.AirTicketMenuActivity"/>
         <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.AirTicketMainActivity"/>
         <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.transationLog.AirThicketTranslationLogActivity"/>
