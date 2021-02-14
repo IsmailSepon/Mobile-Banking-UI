@@ -160,7 +160,9 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         tsToPort.setCurrentText(activity?.application?.getString(R.string.airport))
         view.tvHitTo.visibility = View.INVISIBLE
 
-        val fromCacheAirport = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.FROM_CACHE) as Airport?
+//        val fromCacheAirport = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.FROM_CACHE) as Airport?
+         val fromCacheAirport = AppStorageBox.get(requireContext(), AppStorageBox.Key.FROM_CACHE) as Airport
+
         if (fromCacheAirport != null) {
             view.tsOneWayTripFrom.setText(fromCacheAirport.iata)
             view.tsOneWayTripFromPort.setText(fromCacheAirport.airportName)
@@ -254,7 +256,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.TO_CACHE, fromAirTricket)
 
 
-        val crachDepartureDate = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.DEPART_DATE) as String?
+        val crachDepartureDate = AppStorageBox.get(requireContext(), AppStorageBox.Key.DEPART_DATE) as String?
         if (crachDepartureDate != null) {
             view.tvDepartDate.text = "" + crachDepartureDate
             view.tvDepartDate.setTextColor(Color.BLACK)

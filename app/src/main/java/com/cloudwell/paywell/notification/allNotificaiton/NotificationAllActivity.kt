@@ -49,8 +49,6 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeController.SwipeControl
     lateinit var adapter: SimpleAdapter
     private var isNotificationFlow: Boolean = false
 
-    lateinit var viewModel: NotificationNotifcationViewModel
-
     var previousPosition=-1
 
 
@@ -69,9 +67,9 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeController.SwipeControl
     }
 
     private fun initViewModel() {
-        viewModel = ViewModelProviders.of(this).get(NotificationNotifcationViewModel::class.java)
+        Companion.viewModel = ViewModelProviders.of(this).get(NotificationNotifcationViewModel::class.java)
 
-        viewModel.baseViewStatus.observe(this, Observer {
+        Companion.viewModel.baseViewStatus.observe(this, Observer {
             handleViewCommonStatus(it)
         })
 
@@ -79,7 +77,7 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeController.SwipeControl
 //            handleViewStatus(it)
 //        })
 
-        subscribeDataStreams(viewModel)
+        subscribeDataStreams(Companion.viewModel)
 
         // call for data
        // val isFlowForComingNewNotification = intent.getBooleanExtra(MainActivity.KEY_COMMING_NEW_NOTIFICATION, false);
@@ -91,7 +89,7 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeController.SwipeControl
             userUsedNotificationFLow = true
         }
 
-        viewModel.onPullRequested(isInternetConnection, userUsedNotificationFLow)
+        Companion.viewModel.onPullRequested(isInternetConnection, userUsedNotificationFLow)
 
     }
 
@@ -154,7 +152,7 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeController.SwipeControl
     private fun setupToolbarTitle() {
 
         notification_toolbar.clear_all_ConstraintLayout.setOnClickListener {
-            if (viewModel.mListMutableLiveData.value != null && viewModel.mListMutableLiveData.value!!.size > 0) {
+            if (Companion.viewModel.mListMutableLiveData.value != null && Companion.viewModel.mListMutableLiveData.value!!.size > 0) {
                 confirmDelete("Want to delete all notifications?")
             } else {
                 Toast.makeText(applicationContext, "No notification available!!!", Toast.LENGTH_SHORT).show()
@@ -217,6 +215,7 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeController.SwipeControl
     companion object {
         const val IS_NOTIFICATION_SHOWN = "isNotificationShown"
         var length: Int = 0
+        lateinit var viewModel: NotificationNotifcationViewModel
 
     }
 
@@ -331,11 +330,11 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeController.SwipeControl
         val positions: ArrayList<Int> = ArrayList()
         positions.add(position)
         val singleNotification = ArrayList<NotificationDetailMessage>()
-        singleNotification.add(viewModel.mListMutableLiveData.value!!.get(position))
+        singleNotification.add(Companion.viewModel.mListMutableLiveData.value!!.get(position))
         deleteNotificationFromServer(singleNotification, positions)
     }
     override fun onRecyclerViewItemClick(position: Int, parent:String) {
-        viewModel.onItemClick(position)
+        Companion.viewModel.onItemClick(position)
 
     }
 
@@ -351,13 +350,13 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeController.SwipeControl
             previousPosition=positions.get(x)-1
         }
 
-        viewModel.deleteNotification(messageIdListString.toString()).observeForever {
+        Companion.viewModel.deleteNotification(messageIdListString.toString()).observeForever {
             dismissProgressDialog()
             if (it != null) {
                 val jsonObject = it
                 val status = jsonObject.status
                 if (status == 200) {
-                    viewModel.deleteNotificationFromLocal(messageIdList)
+                    Companion.viewModel.deleteNotificationFromLocal(messageIdList)
                     Toast.makeText(applicationContext, "Successfully deleted", Toast.LENGTH_SHORT).show()
                     Log.d("TEST", "Successfully deleted/ " + messageIdListString.toString())
                 } else {
@@ -369,7 +368,7 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeController.SwipeControl
 
     fun confirmDelete(message: String) {
         val positions: ArrayList<Int> = ArrayList()
-        for (x in 0 until viewModel.mListMutableLiveData.value!!.size) {
+        for (x in 0 until Companion.viewModel.mListMutableLiveData.value!!.size) {
             positions.add(x)
         }
 
@@ -377,7 +376,7 @@ class NotificationAllActivity : MVVMBaseActivity(), SwipeController.SwipeControl
         builder.setMessage(message)
                 .setCancelable(true)
                 .setPositiveButton("Delete") { dialog, which ->
-                    deleteNotificationFromServer(viewModel.mListMutableLiveData.value!!, positions)
+                    deleteNotificationFromServer(Companion.viewModel.mListMutableLiveData.value!!, positions)
 
                 }.setNegativeButton("Cancel") { dialogInterface, i ->
                     dialogInterface.dismiss()

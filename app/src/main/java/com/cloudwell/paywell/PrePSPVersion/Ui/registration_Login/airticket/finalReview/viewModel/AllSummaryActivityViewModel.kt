@@ -8,7 +8,6 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.FileUploadReqSearchPara
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.RequestAirPrebookingSearchParams
 import com.cloudwell.paywell.appController.AppController2
-import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.BaseViewState
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.AirTicketBaseViewMode
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.ResAirPreBooking
@@ -16,6 +15,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.final
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.viewModel.view.AllSummaryStatus
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.ResposeAirPriceSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import java.io.ByteArrayOutputStream
 
 

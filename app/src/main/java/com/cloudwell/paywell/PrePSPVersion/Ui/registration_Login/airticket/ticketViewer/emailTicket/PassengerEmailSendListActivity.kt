@@ -10,10 +10,10 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booki
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Passenger
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.emailTicket.adapter.EmailListAdapterAdapter
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.EmailAddFragment
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.model.EmailListViewStatus
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.viewModel.EmailListViewModel
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import kotlinx.android.synthetic.main.activity_ticket_email.*
 
 

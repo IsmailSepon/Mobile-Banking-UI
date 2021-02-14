@@ -34,16 +34,34 @@ import org.kodein.di.generic.singleton
 /**
  * Created by Android on 12/1/2015.
  */
-class AppController : Application(), KodeinAware {
-    private val mContext: AppController? = null
+open class AppController : Application(), KodeinAware {
 
     override val kodein = Kodein.lazy {
         initilizationDI()
         initilizationLogger()
     }
 
-    fun getContext(): AppController? {
-        return mContext
+   companion object {
+
+       private var mContext: AppController? = null
+
+
+//       fun getContext(): AppController? {
+//       return mContext
+//   }
+
+       fun getContext():AppController?{
+           return mContext
+       }
+
+
+   }
+
+
+    override fun onCreate() {
+        super.onCreate()
+
+        mContext = this
     }
 
     private fun Kodein.MainBuilder.initilizationDI() {
@@ -143,7 +161,7 @@ class AppController : Application(), KodeinAware {
 
 
     fun touch() {
-        ApplockManager.getInstance().updateTouch()
+//        ApplockManager.getInstance().updateTouch()
     }
 
 }

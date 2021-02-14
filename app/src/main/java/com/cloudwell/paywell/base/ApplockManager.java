@@ -23,6 +23,6 @@ public class ApplockManager {
     }
 
     public void updateTouch(){
-        currentAppLocker.updateTouch();
+//        currentAppLocker.updateTouch();
     }
 }

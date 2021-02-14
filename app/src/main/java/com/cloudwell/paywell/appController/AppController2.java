@@ -54,7 +54,7 @@ import io.reactivex.schedulers.Schedulers;
  * Created by Android on 12/1/2015.
  */
 @SuppressWarnings("ALL")
-public class AppController2 extends Application {
+public class AppController2 extends AppController {
 
     private static final String APONA_LOHIT = "fonts/AponaLohit.ttf";
     private static final String OXYGEN_LIGHT = "fonts/Oxygen-Light.ttf";

@@ -10,7 +10,6 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.RequestAirPriceSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.Segment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.adapter.FlightSequenceAdapter
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.fragment.AirlessDialogFragment
@@ -19,6 +18,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.fligh
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.ResposeAirPriceSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.viewModel.FlightDetails1ViewModel
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.FlightDetails2Activity
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.utils.CalculationHelper
 import com.cloudwell.paywell.utils.DateUtils
 import com.cloudwell.paywell.utils.DateUtils.differenceMilliSecond
@@ -126,7 +126,7 @@ class FlightDetails1Activity : AirTricketBaseActivity() {
 
 
             val date = segments.get(0).origin?.depTime?.let { DateUtils.getFormatDepTime(it.toString()) }
-            AppStorageBox.put(applicationContext, AppStorageBox.Key.humanReadAbleDate, date)
+            AppStorageBox.put(applicationContext, AppStorageBox.Key.humanReadAbleDate, date!!)
             tvNameOfDate.text = date
 
 
@@ -272,7 +272,7 @@ class FlightDetails1Activity : AirTricketBaseActivity() {
 
 
         val get = mFlightDetails1ViewModel.mListMutableLiveDataResults.value?.data?.results?.get(0)?.fares?.get(0)
-        AppStorageBox.put(applicationContext, AppStorageBox.Key.Airline_details, airline)
+        AppStorageBox.put(applicationContext, AppStorageBox.Key.Airline_details, airline!!)
 
         val args = Bundle()
         args.putParcelable("object", get)
@@ -310,7 +310,9 @@ class FlightDetails1Activity : AirTricketBaseActivity() {
         btBook.setOnClickListener {
 
 
-            AppStorageBox.put(applicationContext, AppStorageBox.Key.ResposeAirPriceSearch, mFlightDetails1ViewModel.mListMutableLiveDataResults.value)
+            AppStorageBox.put(applicationContext, AppStorageBox.Key.ResposeAirPriceSearch,
+                mFlightDetails1ViewModel.mListMutableLiveDataResults.value!!
+            )
             val s = Intent(this.applicationContext, FlightDetails2Activity::class.java)
             startActivity(s)
 
@@ -323,7 +325,7 @@ class FlightDetails1Activity : AirTricketBaseActivity() {
 
 
             val get = mFlightDetails1ViewModel.mListMutableLiveDataResults.value?.data?.results?.get(0)?.fares
-            AppStorageBox.put(applicationContext, AppStorageBox.Key.FARE_DATA, get)
+            AppStorageBox.put(applicationContext, AppStorageBox.Key.FARE_DATA, get!!)
 
             val s = Intent(this.applicationContext, BaggageAndPoliciesActiivty::class.java)
             startActivity(s)
@@ -385,7 +387,7 @@ class FlightDetails1Activity : AirTricketBaseActivity() {
 
         val date = outputSegment.get(0).origin?.depTime?.let { DateUtils.getFormatDepTime(it) }
 
-        AppStorageBox.put(applicationContext, AppStorageBox.Key.humanReadAbleDate, date)
+        AppStorageBox.put(applicationContext, AppStorageBox.Key.humanReadAbleDate, date!!)
         tvNameOfDate.text = date
 
 

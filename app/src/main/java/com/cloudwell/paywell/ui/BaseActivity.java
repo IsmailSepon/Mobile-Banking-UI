@@ -31,7 +31,7 @@ import java.util.Locale;
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2019-09-01.
  */
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends com.cloudwell.paywell.base.BaseActivity {
 
     public ProgressDialog progressDialog;
     boolean isFlowFromFavorite;
@@ -45,25 +45,25 @@ public class BaseActivity extends AppCompatActivity {
 
 //        mCd = new ConnectionDetector(AppController.getContext());
     }
-
-    public void setToolbar(String title, int color) {
-        assert getSupportActionBar() != null;
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            SpannableString spannablerTitle = new SpannableString(title);
-            spannablerTitle.setSpan(new ForegroundColorSpan(color), 0, spannablerTitle.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-            getSupportActionBar().setTitle(spannablerTitle);
-        }
-    }
-
-    public void setToolbar(String title) {
-        assert getSupportActionBar() != null;
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(title);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        }
-    }
+//
+//    public void setToolbar(String title, int color) {
+//        assert getSupportActionBar() != null;
+//        if (getSupportActionBar() != null) {
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//            SpannableString spannablerTitle = new SpannableString(title);
+//            spannablerTitle.setSpan(new ForegroundColorSpan(color), 0, spannablerTitle.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//            getSupportActionBar().setTitle(spannablerTitle);
+//        }
+//    }
+//
+//    public void setToolbar(String title) {
+////        assert getSupportActionBar() != null;
+//        if (getSupportActionBar() != null) {
+//            getSupportActionBar().setTitle(title);
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//
+//        }
+//    }
 
 
     @Override
@@ -153,17 +153,17 @@ public class BaseActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
-    public void hideUserKeyboard() {
-        View view = this.getCurrentFocus();
-        if (view != null) {
-            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
-    }
-
-    public void hiddenSoftKeyboard() {
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-    }
+//    public void hideUserKeyboard() {
+//        View view = this.getCurrentFocus();
+//        if (view != null) {
+//            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+//            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+//        }
+//    }
+//
+//    public void hiddenSoftKeyboard() {
+//        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+//    }
 
     public void showDialogMessage(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -222,7 +222,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     public void onUserInteraction() {
         super.onUserInteraction();
-        getApp().touch();
+//        getApp().touch();
         Log.d("TAG", "User interaction to " + this.toString());
     }
 

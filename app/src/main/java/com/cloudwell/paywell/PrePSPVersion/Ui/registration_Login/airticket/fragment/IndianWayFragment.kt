@@ -17,11 +17,11 @@ import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.FlightSearchViewActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.app.AppHandler
-import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ClassBottomSheetDialog
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ClassModel
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.PassengerBottomSheetDialog
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.SearchRoundTripModel
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Segment
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity

@@ -22,7 +22,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.adapter.AdapterForPassengersFinalList
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.adapter.AirportListAdapter
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.fragment.BookingStatusFragment
@@ -37,6 +36,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.fligh
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.FlightSearchViewActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.menu.AirTicketMenuActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.AddPassengerActivity
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.all_summaray_bottom_sheet.*
 import kotlinx.android.synthetic.main.contant_summary_contant.*
@@ -334,7 +334,9 @@ class AllSummaryActivity : AirTricketBaseActivity() {
 
         if (status.resBookingAPI != null) {
 
-            AppStorageBox.put(applicationContext, AppStorageBox.Key.AIR_BOOKKING, status.resBookingAPI)
+            AppStorageBox.put(applicationContext, AppStorageBox.Key.AIR_BOOKKING,
+                status.resBookingAPI!!
+            )
 
             val dialogFragment = BookingSuccessDialog()
             dialogFragment.show(supportFragmentManager, "dialog")
@@ -347,13 +349,15 @@ class AllSummaryActivity : AirTricketBaseActivity() {
                 dialogFragment.bookingDialogListener = object : BookingStatusFragment.BookingDialogListener {
                     override fun onBooking(resAirPreBooking: ResAirPreBooking) {
 
-                        AppStorageBox.put(applicationContext, AppStorageBox.Key.AIR_PRE_BOOKKING, status.resAirPreBooking)
+                        AppStorageBox.put(applicationContext, AppStorageBox.Key.AIR_PRE_BOOKKING, status.resAirPreBooking!!)
                         askForPin()
 
                     }
 
                 }
-                AppStorageBox.put(applicationContext, AppStorageBox.Key.AIR_PRE_BOOKKING, status.resAirPreBooking)
+                AppStorageBox.put(applicationContext, AppStorageBox.Key.AIR_PRE_BOOKKING,
+                    status.resAirPreBooking!!
+                )
 
                 dialogFragment.show(supportFragmentManager, "dialog")
 

@@ -59,7 +59,7 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, I
 
     @SuppressLint("Assert")
     fun setToolbar(title: String, color: Int) {
-        assert(supportActionBar != null)
+//        assert(supportActionBar != null)
         if (supportActionBar != null) {
             supportActionBar!!.setDisplayHomeAsUpEnabled(true)
             val spannablerTitle = SpannableString(title)
@@ -74,7 +74,7 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, I
     }
 
     fun setToolbar(title: String) {
-        assert(supportActionBar != null)
+//        assert(supportActionBar != null)
         if (supportActionBar != null) {
             supportActionBar!!.title = title
             supportActionBar!!.setDisplayHomeAsUpEnabled(true)
@@ -82,7 +82,7 @@ open class BaseActivity : AppCompatActivity(), LogOutTimerUtil.LogOutListener, I
     }
 
     fun setToolbarWithOutBack(title: String) {
-        assert(supportActionBar != null)
+//        assert(supportActionBar != null)
         if (supportActionBar != null) {
             supportActionBar!!.title = title
         }

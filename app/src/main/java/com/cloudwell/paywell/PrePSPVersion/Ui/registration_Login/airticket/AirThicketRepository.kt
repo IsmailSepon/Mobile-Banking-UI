@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.RequestAirPriceSearch
 import com.cloudwell.paywell.app.AppHandler
-import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.database.DatabaseClient
 import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.ReposeAirSearch
@@ -19,6 +18,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.fligh
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.ResCommistionMaping
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.model.ResInvoideEmailAPI
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.utils.InternalStorageHelper
 import com.cloudwell.paywell.utils.UniqueKeyGenerator
 import com.google.gson.Gson
@@ -455,7 +455,7 @@ class AirThicketRepository(private val mContext: Context) {
             uiThread {
                 if (insert != -1) {
                     if (insert == 1) {
-                        AppStorageBox.put(mContext, AppStorageBox.Key.COUNTER_PASSENGER, null)
+                //        AppStorageBox.put(mContext, AppStorageBox.Key.COUNTER_PASSENGER, null)
                     } else {
                         AppStorageBox.put(mContext, AppStorageBox.Key.COUNTER_PASSENGER, insert)
                     }

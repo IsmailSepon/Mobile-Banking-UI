@@ -45,7 +45,6 @@ class NotificationFullViewActivity : MVVMBaseActivity() {
     private var mAppHandler: AppHandler? = null
 
     internal var isNotificationFlow: Boolean = false
-    private lateinit var viewModel: NotificationFullNotifcationViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,17 +62,17 @@ class NotificationFullViewActivity : MVVMBaseActivity() {
     }
 
     private fun initViewModel() {
-        viewModel = ViewModelProviders.of(this).get(NotificationFullNotifcationViewModel::class.java)
+        Companion.viewModel = ViewModelProviders.of(this).get(NotificationFullNotifcationViewModel::class.java)
 
-        viewModel.baseViewStatus.observe(this, Observer {
+        Companion.viewModel.baseViewStatus.observe(this, Observer {
             handleViewCommonStatus(it)
         })
 
-        viewModel.mViewStatus.observe(this, Observer {
+        Companion.viewModel.mViewStatus.observe(this, Observer {
             handleViewStatus(it)
         })
 
-        viewModel.mListMutableLiveData.observe(this, Observer {
+        Companion.viewModel.mListMutableLiveData.observe(this, Observer {
             displayData(it)
         })
 
@@ -86,7 +85,7 @@ class NotificationFullViewActivity : MVVMBaseActivity() {
             fcmNotificationDetails = ""
         }
 
-        viewModel.init(isNotificationFlow, fcmNotificationDetails)
+        Companion.viewModel.init(isNotificationFlow, fcmNotificationDetails)
     }
 
     private fun handleViewStatus(status: NotificationFullViewStatus?) {
@@ -365,7 +364,7 @@ class NotificationFullViewActivity : MVVMBaseActivity() {
 
     private fun callReject(id: Int) {
         showProgressDialog()
-        viewModel.callReScheduleNotificationAccept(id, 2).observeForever {
+        Companion.viewModel.callReScheduleNotificationAccept(id, 2).observeForever {
             dismissProgressDialog()
             if (it != null) {
                 showdialogMessageWithFinishedActivity(it.message)
@@ -375,7 +374,7 @@ class NotificationFullViewActivity : MVVMBaseActivity() {
 
     private fun callAccept(id: Int) {
         showProgressDialog()
-        viewModel.callReScheduleNotificationAccept(id, 1).observeForever {
+        Companion.viewModel.callReScheduleNotificationAccept(id, 1).observeForever {
             dismissProgressDialog()
             if (it != null) {
                 showdialogMessageWithFinishedActivity(it.message)
@@ -425,6 +424,10 @@ class NotificationFullViewActivity : MVVMBaseActivity() {
         val alert = builder.create()
         alert.show()
         alert.setCanceledOnTouchOutside(false)
+    }
+
+    companion object {
+        lateinit var viewModel: NotificationFullNotifcationViewModel
     }
 
 }

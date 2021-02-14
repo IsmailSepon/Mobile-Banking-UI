@@ -104,7 +104,7 @@ class NotificationRepogitory(private val mContext: Context) {
     }
 
     fun saveNotificationDetailsData(json: String?) {
-        AppStorageBox.put(mContext, AppStorageBox.Key.NOTIFICATION_DETAILS, json);
+        AppStorageBox.put(mContext, AppStorageBox.Key.NOTIFICATION_DETAILS, json!!);
     }
 
     fun getNotificationDetailsData(): String {

@@ -143,11 +143,11 @@ class ViewBookingInfoActivity : AirTricketBaseActivity() {
 
 
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item!!.itemId == android.R.id.home)
-            onBackPressed()
-        return super.onOptionsItemSelected(item)
-    }
+//    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+//        if (item!!.itemId == android.R.id.home)
+//            onBackPressed()
+//        return super.onOptionsItemSelected(item)
+//    }
 
     override fun onBackPressed() {
         finish()

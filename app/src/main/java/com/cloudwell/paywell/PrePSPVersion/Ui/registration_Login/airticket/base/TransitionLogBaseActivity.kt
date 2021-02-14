@@ -25,7 +25,6 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booki
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.constant.AllConstant
-import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.fragment.PriceChangeFragment
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.fragment.TicketActionMenuFragment
@@ -37,6 +36,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booki
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketCencel.TicketCancelActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.TicketViewerActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.emailTicket.PassengerEmailSendListActivity
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken

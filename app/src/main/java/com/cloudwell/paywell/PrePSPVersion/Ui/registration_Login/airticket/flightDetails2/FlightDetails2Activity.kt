@@ -12,7 +12,6 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.AllSummaryActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.BaggageAndPoliciesActiivty
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.fragment.FlightFareDialogFragment
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.ResposeAirPriceSearch
@@ -21,6 +20,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.fligh
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.viewmodel.FlightDetails2ViewModel
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerAdd.AddPassengerActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerList.PassengerListActivity
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.utils.CalculationHelper
 import com.cloudwell.paywell.utils.RecyclerItemClickListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -372,7 +372,7 @@ class FlightDetails2Activity : AirTricketBaseActivity() {
 
             val get = resposeAirPriceSearch.data?.results?.get(0)?.fares
 
-            AppStorageBox.put(applicationContext, AppStorageBox.Key.FARE_DATA, get)
+            AppStorageBox.put(applicationContext, AppStorageBox.Key.FARE_DATA, get!!)
 
             val s = Intent(this.applicationContext, BaggageAndPoliciesActiivty::class.java)
             startActivity(s)
