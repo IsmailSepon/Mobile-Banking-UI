@@ -59,16 +59,16 @@ class SearchFlightAdapter(fm: FragmentManager?, var item: Datum = Datum()) : Fra
         if (item.mSearchLog.size == 0) {
             when (position) {
                 0 -> {
-                    return "One Way"//AppController2.getContext().getString(R.string.one_way_menu_title)
+                    return "One-way"//AppController2.getContext().getString(R.string.one_way_menu_title)
                 }
                 1 -> {
-                    return "Round Trip"//AppController2.getContext().getString(R.string.round_trip_menu_title)
+                    return "Round-trip"//AppController2.getContext().getString(R.string.round_trip_menu_title)
                 }
                 2 -> {
-                    return "Multi City"//AppController2.getContext().getString(R.string.multi_city_menu_title)
+                    return "Multi-city"//AppController2.getContext().getString(R.string.multi_city_menu_title)
                 }
                 3 -> {
-                    return "India trip"//AppController2.getContext().getString(R.string.indian_menu_title)
+                    return "Indian"//AppController2.getContext().getString(R.string.indian_menu_title)
                 }
                 else -> {
                     return "One way"

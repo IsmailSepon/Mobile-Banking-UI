@@ -7,23 +7,139 @@
     android:orientation="vertical"
     tools:context="com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.AirTicketMainActivity">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout_main"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabBackground="@color/tab_background"
-        app:tabIndicatorColor="@color/tab_indicator"
-        app:tabIndicatorHeight="3dp"
-        app:tabMode="fixed"
-        android:background="@color/tab_selected_clr"
-        app:tabSelectedTextColor="@color/white"
-        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-        app:tabTextColor="@color/white"/>
+        android:background="@color/hader_bg"
+        android:layout_height="@dimen/_50dp">
+
+
+        <ImageView
+            android:padding="@dimen/_10dp"
+            android:id="@+id/search_flight_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16_7sp"
+            style="@style/medium_text_style"
+            android:id="@+id/textView789"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/search_flights"
+            app:layout_constraintBottom_toBottomOf="@+id/search_flight_back"
+            app:layout_constraintStart_toEndOf="@+id/search_flight_back"
+            app:layout_constraintTop_toTopOf="@+id/search_flight_back" />
+
+        <ImageView
+            android:id="@+id/imageView64"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView225"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user" />
+
+        <ImageView
+            android:id="@+id/imageView225"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dash_setting" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:id="@+id/tabLayout_main"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:tabBackground="@color/hader_bg"-->
+<!--        app:tabIndicatorColor="@color/tab_indicator"-->
+<!--        app:tabIndicatorHeight="3dp"-->
+<!--        app:tabMode="fixed"-->
+<!--        android:background="@color/tab_selected_clr"-->
+<!--        app:tabSelectedTextColor="@color/white"-->
+<!--        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"-->
+<!--        app:tabTextColor="@color/white"/>-->
+
+<!--    <androidx.viewpager.widget.ViewPager-->
+<!--        android:id="@+id/viewpager_main"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tabLayout_main"/>-->
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/hader_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            android:background="@color/hader_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDFUsername">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-13dp"
+                android:background="@color/hader_bg"
+                android:elevation="@dimen/_0dp"
+                android:textAlignment="viewStart"
+                app:tabBackground="@drawable/tab_layout_selector"
+                app:tabGravity="start"
+                app:tabIndicatorColor="@color/text_link_clr"
+                app:tabIndicatorFullWidth="false"
+                app:tabMaxWidth="0dp"
+                app:tabMode="scrollable"
+                app:tabRippleColor="@color/text_link_clr"
+                app:tabSelectedTextColor="@color/text_link_clr"
+                app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                app:tabTextColor="@color/common_clr"
+                tools:ignore="RtlCompat" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout_main"/>
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
 
 </LinearLayout>

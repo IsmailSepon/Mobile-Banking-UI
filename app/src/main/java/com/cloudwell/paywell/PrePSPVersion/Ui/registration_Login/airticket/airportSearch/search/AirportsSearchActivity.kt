@@ -75,7 +75,7 @@ class AirportsSearchActivity : AirTricketBaseActivity() {
         initViewModel()
 
 
-        hiddenSoftKeyboard()
+        //hiddenSoftKeyboard()
 
     }
 

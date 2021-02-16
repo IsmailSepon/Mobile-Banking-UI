@@ -10,7 +10,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.RequestAirPriceSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.Segment
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.adapter.FlightSequenceAdapter
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.fragment.AirlessDialogFragment
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.fragment.FlightFareDialogFragment

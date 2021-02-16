@@ -1,11 +1,10 @@
 package com.cloudwell.paywell.appController
 
 import android.app.Application
-import com.cloudwell.paywell.base.ApplockManager
 import com.cloudwell.paywell.data.db.AppDatabase
-import com.cloudwell.paywell.data.network.APIService
 import com.cloudwell.paywell.data.network.interceptor.HeaderTokenInterceptor
 import com.cloudwell.paywell.data.network.interceptor.NetworkConnectionInterceptor
+import com.cloudwell.paywell.retrofit.APIService
 import com.cloudwell.paywell.ui.addMoney.factory.AddMoneyRepository
 import com.cloudwell.paywell.ui.authentication.view.UserAuthenticationHostFactory
 import com.cloudwell.paywell.ui.authentication.view.UserAuthenticationHostRepository
@@ -70,7 +69,7 @@ open class AppController : Application(), KodeinAware {
         bind() from singleton { NetworkConnectionInterceptor(instance()) }
         bind() from singleton { HeaderTokenInterceptor(instance()) }
         bind() from singleton { OkHttpProfilerInterceptor() }
-        bind() from singleton { APIService(instance()) }
+ //       bind() from singleton { APIService(instance()) }
         bind() from singleton { AppDatabase(instance()) }
 //        bind() from singleton { BaseRepository(instance(), instance()) }
         bind() from singleton {

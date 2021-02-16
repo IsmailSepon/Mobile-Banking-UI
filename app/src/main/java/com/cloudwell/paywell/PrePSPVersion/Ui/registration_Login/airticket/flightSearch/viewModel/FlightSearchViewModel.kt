@@ -6,9 +6,9 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.AirTicketBaseViewMode
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.newBase.SingleLiveEvent
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.ReposeAirSearch
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Result
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Segment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.Segment
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.view.SeachViewStatus
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.ResCommistionMaping
 import com.cloudwell.paywell.utils.CalculationHelper

@@ -21,6 +21,7 @@ import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 
@@ -28,15 +29,14 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booki
 import com.cloudwell.paywell.R;
 import com.cloudwell.paywell.app.AppHandler;
 import com.cloudwell.paywell.appController.AppController2;
-import com.cloudwell.paywell.data.preferences.AppStorageBox;
 import com.cloudwell.paywell.services.activity.eticket.airticket.AirThicketRepository;
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.AirTicketMainActivity;
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ClassBottomSheetDialog;
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ClassModel;
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.PassengerBottomSheetDialog;
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.SearchRoundTripModel;
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch;
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Segment;
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.RequestAirSearch;
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.Segment;
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity;
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport;
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.FlightSearchViewActivity;
@@ -60,7 +60,7 @@ import mehdi.sakout.fancybuttons.FancyButton;
 public class MultiCityFragment extends Fragment {
     private static final int REQ_CODE_MULTI_CITY = 184;
     private LinearLayout mainLayout, passengerQuantityLL;
-    private FancyButton buttonSearch;
+    private ConstraintLayout buttonSearch;
     private FancyButton addAnotherFlightBtn;
     private TranslateAnimation slideInAnim = new TranslateAnimation(
             Animation.RELATIVE_TO_PARENT, 0, Animation.RELATIVE_TO_PARENT, 0,

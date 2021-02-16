@@ -23,7 +23,7 @@ import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.customView.clearableEditText.IDatePicker
 import com.cloudwell.paywell.retrofit.ApiUtils
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Result
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.view.SeachViewStatus
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum

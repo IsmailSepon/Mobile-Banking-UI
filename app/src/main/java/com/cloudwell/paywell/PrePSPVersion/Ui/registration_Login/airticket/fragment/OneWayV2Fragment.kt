@@ -21,8 +21,8 @@ import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.airticket.*
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Segment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.RequestAirSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.Segment
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
 import com.cloudwell.paywell.utils.FormatHelper
@@ -87,8 +87,8 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         val tvDepartDate = view.findViewById<TextView>(R.id.tvDepartDate)
         val airTicketClass = view.findViewById<TextView>(R.id.airTicketClass)
         val llPassenger = view.findViewById<LinearLayout>(R.id.llPsngr)
-        val btnSearch = view.findViewById<FancyButton>(R.id.btn_search)
-        val tvFrom = view.findViewById<LinearLayout>(R.id.tvFrom)
+        val btnSearch = view.btn_search
+        val tvFrom = view.findViewById<LinearLayout>(R.id.tvFrom_f1)
         val layoutTo = view.findViewById<LinearLayout>(R.id.layoutTo)
         val layoutDeaprtDate = view.findViewById<LinearLayout>(R.id.layoutDeaprtDate)
 
@@ -362,7 +362,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
             llPassenger.alpha = 0.5f
 
 
-            view.btn_search.setText("Reschedule search")
+            view.search_txt.setText("Reschedule search")
 
             view.tsOneWayTripFromPort.visibility = View.INVISIBLE
             view.tsOneWayTripToPort.visibility = View.INVISIBLE
@@ -403,7 +403,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
                 handleSearchClick()
             }
 
-            R.id.tvFrom -> {
+            R.id.tvFrom_f1 -> {
 
                 val intent = Intent(context, AirportsSearchActivity::class.java)
                 intent.putExtra("from", 1)

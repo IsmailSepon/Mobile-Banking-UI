@@ -22,8 +22,8 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.Class
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.PassengerBottomSheetDialog
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.SearchRoundTripModel
 import com.cloudwell.paywell.data.preferences.AppStorageBox
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Segment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.RequestAirSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.Segment
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
 import com.cloudwell.paywell.utils.FormatHelper
@@ -77,7 +77,7 @@ class IndianWayFragment : Fragment(), View.OnClickListener, FullScreenDialogFrag
         val tvDepartDate = view.findViewById<TextView>(R.id.tvDepartDate)
         val airTicketClass = view.findViewById<TextView>(R.id.airTicketClass)
         val llPassenger = view.findViewById<LinearLayout>(R.id.llPsngr)
-        val btnSearch = view.findViewById<FancyButton>(R.id.btn_search)
+        val btnSearch = view.btn_search
         val tvFrom = view.findViewById<LinearLayout>(R.id.tvFrom)
         val layoutTo = view.findViewById<LinearLayout>(R.id.layoutTo)
         val layoutDeaprtDate = view.findViewById<LinearLayout>(R.id.layoutDeaprtDate)

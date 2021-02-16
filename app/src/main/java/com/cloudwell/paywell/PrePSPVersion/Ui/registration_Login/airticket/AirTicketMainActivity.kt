@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
@@ -39,6 +40,10 @@ open class AirTicketMainActivity : AirTricketBaseActivity() {
         viewpager_main.adapter = fragmentAdapter
 
         tabLayout_main.setupWithViewPager(viewpager_main)
+
+        search_flight_back.setOnClickListener(View.OnClickListener {
+            this.finish()
+        })
     }
 
 

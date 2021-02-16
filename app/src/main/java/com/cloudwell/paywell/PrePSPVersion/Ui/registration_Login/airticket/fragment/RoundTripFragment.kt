@@ -13,8 +13,8 @@ import android.widget.*
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.*
 import com.cloudwell.paywell.services.activity.eticket.airticket.*
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Segment
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.RequestAirSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.Segment
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightSearch.FlightSearchViewActivity
@@ -265,7 +265,7 @@ class RoundTripFragment : Fragment(), View.OnClickListener, SlyCalendarDialog.Ca
         val tvDepartDate = view.findViewById<TextView>(R.id.tvDepartDate)
         val airTicketClass = view.findViewById<TextView>(R.id.airTicketClass)
         val llPassenger = view.findViewById<LinearLayout>(R.id.llPassenger)
-        val btnSearch = view.findViewById<FancyButton>(R.id.btn_search)
+        val btnSearch = view.btn_search
         val tvFrom = view.findViewById<LinearLayout>(R.id.tvFrom)
         val layoutTo = view.findViewById<LinearLayout>(R.id.layoutTo)
         val layoutDepart = view.findViewById<LinearLayout>(R.id.layoutDepart)
@@ -572,7 +572,7 @@ class RoundTripFragment : Fragment(), View.OnClickListener, SlyCalendarDialog.Ca
             llPassenger.alpha = 0.5f
 
 
-            view.btn_search.setText("Reschedule search")
+            view.search_txt.setText("Reschedule search")
 
             view.tsRoundTripFromPort.visibility = View.INVISIBLE
             view.tsRoundTripToPort.visibility = View.INVISIBLE

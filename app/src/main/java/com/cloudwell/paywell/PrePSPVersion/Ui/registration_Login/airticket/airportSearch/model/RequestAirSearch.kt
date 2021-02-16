@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model
+package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model
 
 import com.google.gson.annotations.SerializedName
 

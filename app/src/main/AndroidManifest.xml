@@ -17,7 +17,7 @@
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
     <application
-        android:name=".appController.AppController"
+        android:name=".appController.AppController2"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:installLocation="internalOnly"
@@ -27,6 +27,7 @@
         android:theme="@style/FullScreen"
         tools:replace="android:allowBackup">
 
+        <activity android:name=".services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity"/>
         <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity"/>
         <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.ticketCencel.TicketCancelActivity"/>
         <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.issueTicket.IssueTicketRequestActivity"/>
@@ -198,6 +199,11 @@
         <activity
             android:name=".ui.authentication.UserAuthenticationHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
+
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
     </application>
+
 
 </manifest>

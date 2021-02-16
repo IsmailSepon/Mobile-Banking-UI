@@ -20,6 +20,7 @@ import com.cloudwell.paywell.constant.IconConstant
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.AirTicketMainActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketCencel.TicketCancelActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.transationLog.AirThicketTranslationLogActivity
+import com.cloudwell.paywell.appController.AppController
 import com.cloudwell.paywell.recentList.model.RecentUsedMenu
 import com.cloudwell.paywell.utils.ConnectionDetector
 import com.cloudwell.paywell.utils.LanuageConstant.KEY_BANGLA
@@ -77,7 +78,7 @@ class AirTicketMenuActivity : AirTricketBaseActivity(), View.OnClickListener, Co
         btTicketDocsInfoUpdateRequest.setOnClickListener(this)
 
 
-        cd = ConnectionDetector(AppController2.getContext())
+        cd = ConnectionDetector(AppController2.getContext( ))
         mAppHandler = AppHandler.getmInstance(applicationContext)
 
 

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.OutputSegment
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.utils.DateUtils
 import kotlinx.android.synthetic.main.simple_list_item_segment.view.*
 

@@ -13,7 +13,7 @@ open class AirTicketBaseViewMode : BaseViewModel() {
 
     init {
 //       mAirTicketRepository = AirThicketRepository(AppController2.getContext())
-        mAirTicketRepository = AirThicketRepository(AppController.getContext()!!)
+        mAirTicketRepository = AirThicketRepository(AppController2.getContext())
     }
 
 

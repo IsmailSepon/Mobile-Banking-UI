@@ -7,7 +7,7 @@ import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.database.DatabaseClient
 import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.ReposeAirSearch
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.RequestAirSearch
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.ResGetAirports
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.BookingList

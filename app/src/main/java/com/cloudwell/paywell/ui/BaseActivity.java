@@ -22,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.cloudwell.paywell.R;
 import com.cloudwell.paywell.appController.AppController;
+import com.cloudwell.paywell.appController.AppController2;
 import com.cloudwell.paywell.constant.AllConstant;
 import com.cloudwell.paywell.utils.ConnectionDetector;
 import com.google.android.material.snackbar.Snackbar;
@@ -43,7 +44,7 @@ public class BaseActivity extends com.cloudwell.paywell.base.BaseActivity {
         isFlowFromFavorite = getIntent().getBooleanExtra(AllConstant.IS_FLOW_FROM_FAVORITE, false);
 
 
-//        mCd = new ConnectionDetector(AppController.getContext());
+        mCd = new ConnectionDetector(AppController2.getContext());
     }
 //
 //    public void setToolbar(String title, int color) {
@@ -219,12 +220,12 @@ public class BaseActivity extends com.cloudwell.paywell.base.BaseActivity {
         return (AppController) this.getApplication();
     }
 
-    @Override
-    public void onUserInteraction() {
-        super.onUserInteraction();
-//        getApp().touch();
-        Log.d("TAG", "User interaction to " + this.toString());
-    }
+//    @Override
+//    public void onUserInteraction() {
+//        super.onUserInteraction();
+////        getApp().touch();
+//        Log.d("TAG", "User interaction to " + this.toString());
+//    }
 
 //    override fun onUserInteraction() {
 //        super.onUserInteraction()

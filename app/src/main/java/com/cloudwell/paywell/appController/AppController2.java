@@ -54,7 +54,7 @@ import io.reactivex.schedulers.Schedulers;
  * Created by Android on 12/1/2015.
  */
 @SuppressWarnings("ALL")
-public class AppController2 extends AppController {
+public class AppController2 extends Application {
 
     private static final String APONA_LOHIT = "fonts/AponaLohit.ttf";
     private static final String OXYGEN_LIGHT = "fonts/Oxygen-Light.ttf";
@@ -286,7 +286,7 @@ public class AppController2 extends AppController {
     }
 
     private HttpClient createTrustedHttpsClient() {
-        HttpParams httpParameters = new BasicHttpParams();
+          HttpParams httpParameters = new BasicHttpParams();
         // Set the timeout in milliseconds until a connection is
         // established.
         int timeoutConnection = 1000000;

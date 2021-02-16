@@ -16,15 +16,17 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/fbCardView"
+            android:layout_marginTop="@dimen/_25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_8dp"
-            android:layout_marginRight="@dimen/_8dp"
+            android:layout_marginLeft="@dimen/_15dp"
+            android:layout_marginRight="@dimen/_15dp"
             card_view:cardBackgroundColor="@color/card_background"
             card_view:cardCornerRadius="8dp"
             card_view:cardUseCompatPadding="true">
 
             <LinearLayout
+                android:paddingBottom="@dimen/_40dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -73,7 +75,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.4"
                         android:contentDescription="@string/app_name"
-                        android:src="@drawable/ic_round_trip"/>
+                        android:src="@drawable/from_to"/>
 
                     <LinearLayout
                         android:id="@+id/layoutTo"
@@ -319,18 +321,51 @@
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
                     android:background="#c0c0c0"/>
 
-                <mehdi.sakout.fancybuttons.FancyButton
+<!--                <mehdi.sakout.fancybuttons.FancyButton-->
+<!--                    android:id="@+id/btn_search"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_margin="@dimen/activity_horizontal_margin"-->
+<!--                    android:textAppearance="?android:attr/textAppearanceMedium"-->
+<!--                    fancy:fb_defaultColor="#9fd34c"-->
+<!--                    fancy:fb_fontIconResource="&#xf002;"-->
+<!--                    fancy:fb_iconPosition="left"-->
+<!--                    fancy:fb_radius="2dp"-->
+<!--                    fancy:fb_text="@string/search"-->
+<!--                    fancy:fb_textColor="#FFFFFF"/>-->
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="@dimen/_250dp"
                     android:id="@+id/btn_search"
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_margin="@dimen/activity_horizontal_margin"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    fancy:fb_defaultColor="#9fd34c"
-                    fancy:fb_fontIconResource="&#xf002;"
-                    fancy:fb_iconPosition="left"
-                    fancy:fb_radius="2dp"
-                    fancy:fb_text="@string/search"
-                    fancy:fb_textColor="#FFFFFF"/>
+                    android:layout_marginTop="@dimen/_50dp"
+                    android:layout_height="@dimen/btn_hight"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/round_btn_visable">
+
+
+                    <TextView
+                        android:id="@+id/search_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_flights"
+                        android:textColor="@color/white"
+                        android:drawableStart="@drawable/search_white_clr"
+                        android:drawablePadding="@dimen/_5dp"
+                        android:textSize="@dimen/_15sp"
+                        style="@style/text_style"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
