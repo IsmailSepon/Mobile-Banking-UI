@@ -38,17 +38,19 @@
             app:layout_constraintTop_toTopOf="@+id/search_flight_back" />
 
         <ImageView
+            android:padding="@dimen/_5dp"
             android:id="@+id/imageView64"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView225"
+            app:layout_constraintEnd_toStartOf="@+id/air_control"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/user" />
 
         <ImageView
-            android:id="@+id/imageView225"
+            android:padding="@dimen/_5dp"
+            android:id="@+id/air_control"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="28dp"
