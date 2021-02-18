@@ -100,17 +100,13 @@ open class AirTicketMainActivity : AirTricketBaseActivity() {
         popup!!.setBackgroundDrawable(null)
         popup!!.showAtLocation(layout, Gravity.NO_GRAVITY, p.x + OFFSET_X, p.y + OFFSET_Y)
 
-        val arrow = layout.findViewById<LinearLayout>(R.id.setting_liner)
-
-
-        val layoutParams = arrow.layoutParams as LinearLayout.LayoutParams
-
-        layoutParams.setMargins(30, 20, 30, 0)
-
-
-        arrow.layoutParams = layoutParams
-
-
+//        val arrow = layout.findViewById<LinearLayout>(R.id.setting_liner)
+////
+////
+//        val layoutParams = layout.layoutParams as LinearLayout.LayoutParams
+//        layoutParams.setMargins(30, 20, 30, 0)
+////        arrow.layoutParams = layoutParams
+//        layout.layoutParams = layoutParams
 
     }
 

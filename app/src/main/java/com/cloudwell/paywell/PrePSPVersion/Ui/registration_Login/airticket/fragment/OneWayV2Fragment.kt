@@ -161,7 +161,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         view.tvHitTo.visibility = View.INVISIBLE
 
 //        val fromCacheAirport = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.FROM_CACHE) as Airport?
-         val fromCacheAirport = AppStorageBox.get(requireContext(), AppStorageBox.Key.FROM_CACHE) as Airport
+         val fromCacheAirport = AppStorageBox.get(requireContext(), AppStorageBox.Key.FROM_CACHE) as Airport?
 
         if (fromCacheAirport != null) {
             view.tsOneWayTripFrom.setText(fromCacheAirport.iata)
@@ -178,7 +178,7 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         }
 
 
-        val toCacheAirport = AppStorageBox.get(activity?.applicationContext!!, AppStorageBox.Key.TO_CACHE) as Airport?
+        val toCacheAirport = AppStorageBox.get(requireContext(), AppStorageBox.Key.TO_CACHE) as Airport?
         if (toCacheAirport != null) {
 
             view.tsOneWayTripTo.setText(toCacheAirport.iata)

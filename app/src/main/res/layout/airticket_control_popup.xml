@@ -1,129 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:background="@color/transparent"
-    android:orientation="vertical"
-    android:id="@+id/setting_liner"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical">
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/setting_card"
-        android:layout_width="@dimen/_200dp"
-        android:padding="@dimen/_5dp"
-        app:cardElevation="@dimen/_5dp"
+    <ImageView
+        android:layout_marginRight="@dimen/_20dp"
+        android:id="@+id/arrow_up2"
+        android:layout_width="@dimen/_70_5dp"
+        android:layout_height="30dp"
+        android:elevation="4dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrowp"
         android:layout_gravity="right"
-        android:layout_margin="@dimen/_5dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.67"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <LinearLayout
+        android:layout_marginRight="@dimen/_20dp"
+        android:layout_gravity="right"
+        android:id="@+id/view"
+        android:layout_marginTop="-13dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:background="@color/white"
-            android:paddingBottom="@dimen/_30dp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/setting_card"
             android:layout_width="wrap_content"
+            android:padding="@dimen/_5dp"
+            app:cardElevation="@dimen/_5dp"
+            app:cardCornerRadius="@dimen/_5dp"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/_5dp"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:drawableStart="@drawable/ic_info_gray"
-                android:drawablePadding="@dimen/_10"
-                android:layout_marginTop="@dimen/_30dp"
-                android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_13_3sp"
-                style="@style/medium_text_style"
-                android:text="Issue ticket"
-                android:layout_marginEnd="@dimen/_35dp"
-                android:layout_marginStart="@dimen/_20dp"
+
+            <LinearLayout
+                android:layout_marginTop="-10dp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/_30dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:drawableStart="@drawable/ic_info_gray"
-                android:drawablePadding="@dimen/_10"
-                android:layout_marginTop="@dimen/_30dp"
-                android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_13_3sp"
-                style="@style/medium_text_style"
-                android:text="Booking cancellation"
-                android:layout_marginEnd="@dimen/_35dp"
-                android:layout_marginStart="@dimen/_20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                <TextView
+                    android:drawableStart="@drawable/ticket_issue"
+                    android:drawablePadding="@dimen/_10"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    style="@style/medium_text_style"
+                    android:text="Issue ticket"
+                    android:layout_marginEnd="@dimen/_35dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-            <TextView
-                android:drawableStart="@drawable/ic_info_gray"
-                android:drawablePadding="@dimen/_10"
-                android:layout_marginTop="@dimen/_30dp"
-                android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_13_3sp"
-                style="@style/medium_text_style"
-                android:text="Ticket void"
-                android:layout_marginEnd="@dimen/_35dp"
-                android:layout_marginStart="@dimen/_20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                <TextView
+                    android:drawableStart="@drawable/booking_cancel"
+                    android:drawablePadding="@dimen/_10"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    style="@style/medium_text_style"
+                    android:text="Booking cancellation"
+                    android:layout_marginEnd="@dimen/_35dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-            <TextView
-                android:drawableStart="@drawable/ic_info_gray"
-                android:drawablePadding="@dimen/_10"
-                android:layout_marginTop="@dimen/_30dp"
-                android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_13_3sp"
-                style="@style/medium_text_style"
-                android:text="Ticket refund"
-                android:layout_marginEnd="@dimen/_35dp"
-                android:layout_marginStart="@dimen/_20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                <TextView
+                    android:drawableStart="@drawable/ticket_void"
+                    android:drawablePadding="@dimen/_10"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    style="@style/medium_text_style"
+                    android:text="Ticket void"
+                    android:layout_marginEnd="@dimen/_35dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-            <TextView
-                android:drawableStart="@drawable/ic_info_gray"
-                android:drawablePadding="@dimen/_10"
-                android:layout_marginTop="@dimen/_30dp"
-                android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_13_3sp"
-                style="@style/medium_text_style"
-                android:text="Re-issue ticket"
-                android:layout_marginEnd="@dimen/_35dp"
-                android:layout_marginStart="@dimen/_20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                <TextView
+                    android:drawableStart="@drawable/refund"
+                    android:drawablePadding="@dimen/_10"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    style="@style/medium_text_style"
+                    android:text="Ticket refund"
+                    android:layout_marginEnd="@dimen/_35dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-            <TextView
-                android:drawableStart="@drawable/ic_info_gray"
-                android:drawablePadding="@dimen/_10"
-                android:layout_marginTop="@dimen/_30dp"
-                android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_13_3sp"
-                style="@style/medium_text_style"
-                android:text="Docs/Info update"
-                android:layout_marginEnd="@dimen/_35dp"
-                android:layout_marginStart="@dimen/_20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                <TextView
+                    android:drawableStart="@drawable/re_issue"
+                    android:drawablePadding="@dimen/_10"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    style="@style/medium_text_style"
+                    android:text="Re-issue ticket"
+                    android:layout_marginEnd="@dimen/_35dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-            <TextView
-                android:drawableStart="@drawable/ic_info_gray"
-                android:drawablePadding="@dimen/_10"
-                android:layout_marginTop="@dimen/_30dp"
-                android:textColor="@color/keypad_text_clr"
-                android:textSize="@dimen/_13_3sp"
-                style="@style/medium_text_style"
-                android:text="Docs/Booking log"
-                android:layout_marginEnd="@dimen/_35dp"
-                android:layout_marginStart="@dimen/_20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                <TextView
+                    android:drawableStart="@drawable/doc_info"
+                    android:drawablePadding="@dimen/_10"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    style="@style/medium_text_style"
+                    android:text="Docs/Info update"
+                    android:layout_marginEnd="@dimen/_35dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:drawableStart="@drawable/booking_log"
+                    android:drawablePadding="@dimen/_10"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    style="@style/medium_text_style"
+                    android:text="Docs/Booking log"
+                    android:layout_marginEnd="@dimen/_35dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
 
-        </LinearLayout>
+            </LinearLayout>
 
 
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
+    </LinearLayout>
 
 
 </LinearLayout>
