@@ -7,14 +7,14 @@
     android:orientation="vertical">
 
     <ImageView
-        android:layout_marginRight="@dimen/_20dp"
         android:id="@+id/arrow_up2"
         android:layout_width="@dimen/_70_5dp"
         android:layout_height="30dp"
         android:elevation="4dp"
-        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_40dp"
         android:scaleType="fitXY"
-        android:src="@drawable/arrowp"
+        android:src="@drawable/conrol_arrow"
         android:layout_gravity="right"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintHorizontal_bias="0.67"
@@ -24,10 +24,10 @@
 
 
     <LinearLayout
-        android:layout_marginRight="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_35dp"
         android:layout_gravity="right"
         android:id="@+id/view"
-        android:layout_marginTop="-13dp"
+        android:layout_marginTop="-19dp"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">

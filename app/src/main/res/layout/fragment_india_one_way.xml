@@ -226,7 +226,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginRight="5dp"
                                     android:layout_gravity="center"
-                                    android:src="@drawable/ic_adult"/>
+                                    android:src="@drawable/adult"/>
 
                                 <TextView
                                     android:id="@+id/airTicketAdult"
@@ -249,7 +249,7 @@
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_marginRight="5dp"
-                                    android:src="@drawable/ic_kid"/>
+                                    android:src="@drawable/teenjer"/>
 
                                 <TextView
                                     android:id="@+id/airTicketKid"
@@ -273,7 +273,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginRight="5dp"
                                     android:layout_gravity="center"
-                                    android:src="@drawable/ic_infant"/>
+                                    android:src="@drawable/baby"/>
 
                                 <TextView
                                     android:id="@+id/airTicketInfant"
