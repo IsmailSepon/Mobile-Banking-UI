@@ -29,8 +29,7 @@ class BottomSheetFragment : BottomSheetDialogFragment(), IbeneficeryVIew {
         savedInstanceState: Bundle?
     ): View? {
         beneficeryViewModel = ViewModelProviders.of(this).get(BeneficeryViewModel::class.java)
-        val binding: BenefuceryBottomSheetBinding =
-            DataBindingUtil.inflate(inflater, R.layout.benefucery_bottom_sheet, container, false)
+        val binding: BenefuceryBottomSheetBinding = DataBindingUtil.inflate(inflater, R.layout.benefucery_bottom_sheet, container, false)
         beneficeryViewModel!!.setView(this)
         binding.bottomsheetModel = beneficeryViewModel
         binding.lifecycleOwner = this

@@ -25,6 +25,7 @@ class SearchFlightAdapter(fm: FragmentManager?, var item: Datum = Datum()) : Fra
                 -> return MultiCityFragment()
                 3
                 -> return IndianWayFragment()
+
                 else -> return OneWayV2Fragment()
             }
 

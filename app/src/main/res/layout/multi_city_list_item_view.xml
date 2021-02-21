@@ -18,9 +18,10 @@
             android:layout_width="0dp"
             android:layout_height="20dp"
             android:layout_weight=".6"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/fab_no_border"
             android:gravity="center"
             android:text="1"
+            style="@style/text_style"
             android:textColor="#ffffff"
             android:textSize="10dp"/>
 
@@ -34,6 +35,7 @@
             android:layout_marginRight="10dp"
             android:gravity="center_vertical"
             android:padding="5dp"
+            style="@style/text_style"
             android:textColor="@color/black"/>
 
         <ImageView
@@ -74,7 +76,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="From"
-                android:textColor="#999999"
+                android:textColor="@color/common_clr"
+                style="@style/text_style"
                 android:visibility="invisible"/>
 
             <TextSwitcher
@@ -100,7 +103,7 @@
             android:layout_gravity="center"
             android:layout_weight="0.4"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_one_way"/>
+            android:src="@drawable/from_to"/>
 
         <LinearLayout
             android:id="@+id/toLL"
@@ -118,7 +121,8 @@
                 android:layout_gravity="end"
                 android:layout_weight="1"
                 android:text="To"
-                android:textColor="#999999"
+                android:textColor="@color/common_clr"
+                style="@style/text_style"
                 android:visibility="invisible"/>
 
             <TextSwitcher
@@ -162,14 +166,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Depart"
-                android:textColor="#999999"/>
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:textColor="@color/common_clr"/>
 
             <TextView
+                android:textSize="@dimen/_12sp"
+                style="@style/medium_text_style"
+                android:textColor="@color/keypad_text_clr"
                 android:id="@+id/tvDepartDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                android:text="Date"/>
 
         </LinearLayout>
 
@@ -183,6 +191,11 @@
             android:orientation="vertical">
 
             <TextView
+                android:textSize="@dimen/_12sp"
+                style="@style/text_style"
+                android:textColor="@color/common_clr"
+                android:layout_gravity="right"
+                android:gravity="right"
                 android:id="@+id/tvClassL"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -190,13 +203,14 @@
                 android:text="Class"/>
 
             <TextView
+                android:textSize="@dimen/_12sp"
+                style="@style/medium_text_style"
+                android:textColor="@color/keypad_text_clr"
                 android:id="@+id/airTicketClass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:text="Economy"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/black"/>
+                android:gravity="end"
+                android:text="Economy"/>
         </LinearLayout>
 
     </LinearLayout>

@@ -68,7 +68,7 @@
                             fancy:fb_iconPosition="left"
                             fancy:fb_radius="2dp"
                             fancy:fb_text="Add another flight"
-                            fancy:fb_textColor="#9fd34c"/>
+                            fancy:fb_textColor="@color/text_link_clr"/>
 
 
                         <LinearLayout
@@ -100,7 +100,7 @@
                                     android:layout_weight="1"
                                     android:gravity="center"
                                     android:text="@string/passengers"
-                                    android:textColor="#999999"/>
+                                    android:textColor="@color/common_clr"/>
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -120,17 +120,17 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginRight="5dp"
-                                            android:src="@drawable/ic_adult"/>
+                                            android:src="@drawable/adult"/>
 
                                         <TextView
                                             android:id="@+id/airTicketAdult"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_gravity="bottom"
-                                            android:gravity="bottom"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
                                             android:text="1"
-                                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                            android:textColor="@color/black"
+                                            android:textColor="@color/keypad_text_clr"
+                                            style="@style/medium_text_style"
                                             />
                                     </LinearLayout>
 
@@ -146,16 +146,17 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginRight="5dp"
-                                            android:src="@drawable/ic_kid"/>
+                                            android:src="@drawable/teenjer"/>
 
                                         <TextView
                                             android:id="@+id/airTicketKid"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
-                                            android:layout_gravity="bottom"
-                                            android:gravity="bottom"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
                                             android:text="0"
-                                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                            android:textColor="@color/keypad_text_clr"
+                                            style="@style/medium_text_style"
                                             />
                                     </LinearLayout>
 
@@ -171,16 +172,17 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginRight="5dp"
-                                            android:src="@drawable/ic_infant"/>
+                                            android:src="@drawable/baby"/>
 
                                         <TextView
                                             android:id="@+id/airTicketInfant"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
-                                            android:layout_gravity="bottom"
-                                            android:gravity="bottom"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
                                             android:text="0"
-                                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                            android:textColor="@color/keypad_text_clr"
+                                            style="@style/medium_text_style"
                                             />
                                     </LinearLayout>
                                 </LinearLayout>

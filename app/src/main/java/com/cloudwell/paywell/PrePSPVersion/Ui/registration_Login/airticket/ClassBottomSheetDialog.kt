@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.ListView
@@ -23,7 +24,6 @@ class ClassBottomSheetDialog : BottomSheetDialogFragment() {
                               savedInstanceState: Bundle?): View? {
         val className: String? = requireArguments().getString("myClassName")
         val view = inflater.inflate(R.layout.class_item_list_dialog, container, false)
-
         val listView = view.findViewById<ListView>(R.id.listViewAirTicketClass)
 
         classes = ArrayList()
@@ -92,13 +92,14 @@ class ClassBottomSheetDialog : BottomSheetDialogFragment() {
             val holder = ViewHolder()
             holder.tvUserClass = view.findViewById(R.id.tv_user_class)
             holder.ivCheckBox = view.findViewById(R.id.iv_check_box)
+            holder.tvUserClass.setTextColor(Color.parseColor("#00203f"))
 
             val model = classList.get(position)
 
             holder.tvUserClass.setText(model.getClassSelectedName())
             if (model.isSelected) {
-                holder.tvUserClass.setTextColor(Color.parseColor("#36b24a"))
-                holder.ivCheckBox.setBackgroundResource(R.drawable.check)
+                holder.tvUserClass.setTextColor(Color.parseColor("#0066cb"))
+                holder.ivCheckBox.setBackgroundResource(R.drawable.selected)
             } else
                 holder.ivCheckBox.visibility = View.INVISIBLE
 

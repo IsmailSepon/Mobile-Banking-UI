@@ -19,38 +19,38 @@ class PassengerBottomSheetDialog : BottomSheetDialogFragment() {
     lateinit var userType: ArrayList<UserTypeModel>
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val adultNumber: String? = arguments?.getString("myAdult")
-        val kidNumber: String? = arguments?.getString("myKid")
-        val infantNumber: String? = arguments?.getString("myInfant")
+//        val adultNumber: String? = arguments?.getString("myAdult")
+//        val kidNumber: String? = arguments?.getString("myKid")
+//        val infantNumber: String? = arguments?.getString("myInfant")
 
         val view = inflater.inflate(R.layout.fragment_passenger_bottom_sheet_dialog, container, false)
 
-        val listView = view.findViewById(R.id.listViewAirTicketPassengers) as ListView
-        val ivClose = view.findViewById<ImageView>(R.id.btnCloseAirTicket)
-        val tvDone = view.findViewById<TextView>(R.id.tvDone)
-
-        userType = ArrayList()
-        userType.add(UserTypeModel("Adults", 0))
-        userType.add(UserTypeModel("Children", 0))
-        userType.add(UserTypeModel("Infants", 0))
-
-        userType.get(0).setSelectedPsngrCount(Integer.parseInt(adultNumber.toString()))
-        userType.get(1).setSelectedPsngrCount(Integer.parseInt(kidNumber.toString()))
-        userType.get(2).setSelectedPsngrCount(Integer.parseInt(infantNumber.toString()))
-
-        val customAdapter = CustomAdapter(context, userType, mListenerPsngr)
-        listView.adapter = customAdapter
-
-
-        ivClose.setOnClickListener {
-            dismiss()
-        }
-        tvDone.setOnClickListener {
-            mListenerPsngr.onAdultButtonClickListener("" + userType.get(0).getSelectedPsngrCount())
-            mListenerPsngr.onKidButtonClickListener("" + userType.get(1).getSelectedPsngrCount())
-            mListenerPsngr.onInfantButtonClickListener("" + userType.get(2).getSelectedPsngrCount())
-            dismiss()
-        }
+//        val listView = view.findViewById(R.id.listViewAirTicketPassengers) as ListView
+//        val ivClose = view.findViewById<ImageView>(R.id.btnCloseAirTicket)
+//        val tvDone = view.findViewById<TextView>(R.id.tvDone)
+//
+//        userType = ArrayList()
+//        userType.add(UserTypeModel("Adults", 0))
+//        userType.add(UserTypeModel("Children", 0))
+//        userType.add(UserTypeModel("Infants", 0))
+//
+//        userType.get(0).setSelectedPsngrCount(Integer.parseInt(adultNumber.toString()))
+//        userType.get(1).setSelectedPsngrCount(Integer.parseInt(kidNumber.toString()))
+//        userType.get(2).setSelectedPsngrCount(Integer.parseInt(infantNumber.toString()))
+//
+//        val customAdapter = CustomAdapter(context, userType, mListenerPsngr)
+//        listView.adapter = customAdapter
+//
+//
+//        ivClose.setOnClickListener {
+//            dismiss()
+//        }
+//        tvDone.setOnClickListener {
+//            mListenerPsngr.onAdultButtonClickListener("" + userType.get(0).getSelectedPsngrCount())
+//            mListenerPsngr.onKidButtonClickListener("" + userType.get(1).getSelectedPsngrCount())
+//            mListenerPsngr.onInfantButtonClickListener("" + userType.get(2).getSelectedPsngrCount())
+//            dismiss()
+//        }
 
         return view
     }
