@@ -58,7 +58,7 @@ public class MyDatePickerTimeline extends LinearLayout implements View.OnClickLi
 
         myDateTimelineViewRecyclerView.setLastDate(2019, 01, 31);
 
-        TextView ivMore = view.findViewById(R.id.textView4);
+        LinearLayout ivMore = view.findViewById(R.id.linearLayout4);
         ivMore.setOnClickListener(this);
 
         view.findViewById(R.id.imageView).setOnClickListener(this);

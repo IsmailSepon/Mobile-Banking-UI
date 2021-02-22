@@ -27,6 +27,9 @@
         android:theme="@style/FullScreen"
         tools:replace="android:allowBackup">
 
+        <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.flightSearch.FlightSearchViewActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.FlightDetails1Activity"/>
+        <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.FlightDetails2Activity"/>
         <activity android:name=".services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity"

@@ -495,9 +495,9 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.ADUL_PSNGER, toInt)
 
         if (toInt > 0) {
-            airTicketAdult.setTextColor(getResources().getColor(R.color.black33333))
+            airTicketAdult.setTextColor(getResources().getColor(R.color.keypad_text_clr))
         } else {
-            airTicketAdult.setTextColor(getResources().getColor(R.color.blackcccccc))
+            airTicketAdult.setTextColor(getResources().getColor(R.color.keypad_text_clr))
         }
     }
 
@@ -508,9 +508,9 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.KID_PSNGER, toInt)
 
         if (toInt > 0) {
-            airTicketKid.setTextColor(getResources().getColor(R.color.black33333))
+            airTicketKid.setTextColor(getResources().getColor(R.color.keypad_text_clr))
         } else {
-            airTicketKid.setTextColor(getResources().getColor(R.color.blackcccccc))
+            airTicketKid.setTextColor(getResources().getColor(R.color.keypad_text_clr))
         }
     }
 
@@ -520,9 +520,9 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
         AppStorageBox.put(activity?.applicationContext!!, AppStorageBox.Key.INFANT_PSNGER, toInt)
 
         if (toInt > 0) {
-            airTicketInfant.setTextColor(getResources().getColor(R.color.black33333))
+            airTicketInfant.setTextColor(getResources().getColor(R.color.keypad_text_clr))
         } else {
-            airTicketInfant.setTextColor(getResources().getColor(R.color.blackcccccc))
+            airTicketInfant.setTextColor(getResources().getColor(R.color.keypad_text_clr))
         }
     }
 

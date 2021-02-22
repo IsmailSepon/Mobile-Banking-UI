@@ -67,13 +67,13 @@ class AirThicketRepository(private val mContext: Context) {
     fun getAirports(iso: String, uniqueKey: String): MutableLiveData<ResGetAirports> {
 
         mAppHandler = AppHandler.getmInstance(mContext)
-        val userName = mAppHandler!!.userName
+        val userName = "01912250477"//mAppHandler!!.userName
 //        val userName = "cwntcl"
 
 
         val data = MutableLiveData<ResGetAirports>()
 
-        val callAirSearch = ApiUtils.getAPIService().getAirports(userName, "json", iso, uniqueKey)
+        val callAirSearch = ApiUtils.getAPIService().getAirports(userName, "json", iso, "AND1613981242146s4p3nlhtjnskS12050043936")
         callAirSearch.enqueue(object : Callback<ResGetAirports> {
             override fun onResponse(call: Call<ResGetAirports>, response: Response<ResGetAirports>) {
                 if (response.isSuccessful) {

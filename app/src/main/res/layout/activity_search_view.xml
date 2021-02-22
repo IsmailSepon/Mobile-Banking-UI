@@ -64,8 +64,6 @@
         app:layout_constraintTop_toTopOf="@+id/shimmer_recycler_view">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#F1FDFF">
@@ -75,14 +73,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="120dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/no_serach_found_icon"/>
+                app:srcCompat="@drawable/no_search_flight" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -90,33 +86,69 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/no_search_results"
-                android:textSize="26sp"
+                android:textSize="@dimen/_14sp"
+                style="@style/text_style"
+                android:textColor="@color/keypad_text_clr"
                 app:layout_constraintEnd_toEndOf="@+id/imageView4"
                 app:layout_constraintStart_toStartOf="@+id/imageView4"
                 app:layout_constraintTop_toBottomOf="@+id/imageView4"/>
 
+
+            <!--            <Button-->
+<!--                android:id="@+id/btSerachAgain"-->
+<!--                android:layout_width="250dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                android:background="@drawable/air_ticket_round_button"-->
+<!--                android:drawableLeft="@drawable/search"-->
+<!--                android:drawablePadding="-60dp"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingLeft="50dp"-->
+<!--                android:text="@string/search_again"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="16sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.496"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView2"/>-->
+
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/please_press_the_try_again_button"
+                android:textColor="@color/common_clr"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
             <Button
                 android:id="@+id/btSerachAgain"
-                android:layout_width="250dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:background="@drawable/air_ticket_round_button"
-                android:drawableLeft="@drawable/search"
-                android:drawablePadding="-60dp"
-                android:gravity="center"
-                android:paddingLeft="50dp"
-                android:text="@string/search_again"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_hight"
+                android:elevation="@dimen/evelation_five"
+                android:background="@drawable/round_btn_visable"
+                android:text="@string/please_try_again"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.88"
+                tools:targetApi="lollipop" />
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 

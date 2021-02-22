@@ -18,7 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="20dp"
             android:layout_weight=".6"
-            android:background="@drawable/fab_no_border"
+            android:background="@drawable/text_bg"
             android:gravity="center"
             android:text="1"
             style="@style/text_style"
@@ -49,12 +49,6 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:background="#c0c0c0"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -146,6 +140,15 @@
         </LinearLayout>
     </LinearLayout>
 
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/half_one"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:background="#c0c0c0"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -216,7 +219,9 @@
     </LinearLayout>
 
     <View
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/half_one"
         android:background="#c0c0c0"/>
 </LinearLayout>

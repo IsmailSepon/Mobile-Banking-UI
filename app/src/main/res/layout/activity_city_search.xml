@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.eticket.airticket.airportSearch.search.AirportsSearchActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay.Search">
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:theme="@style/AppTheme.AppBarOverlay.Search">-->
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,33 +24,72 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:padding="@dimen/_10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/close_orng_small"/>
+                app:srcCompat="@drawable/cross_btn"/>
+
+
+
 
             <EditText
                 android:id="@+id/etSearch"
+                style="@style/edittext_style"
                 android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/rounded_corner_for_airport_search"
-                android:drawablePadding="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:hint="@string/airport_search_hit"
-                android:paddingLeft="10dp"
+                android:layout_marginStart="@dimen/_40dp"
+                android:layout_marginEnd="@dimen/_40dp"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:paddingTop="@dimen/_10dp"
+                android:paddingBottom="@dimen/_10dp"
                 android:ems="10"
+                android:textColorHint="@color/keypad_text_clr"
+                android:textColor="@color/keypad_text_clr"
                 android:singleLine="true"
-                android:inputType="textPersonName"
-                android:textColor="#323232"
-                android:textColorHint="@color/black"
+                android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivClose"
-                />
+                tools:ignore="TextFields" />
+
+            <ImageView
+                android:layout_width="@dimen/_14dp"
+                android:layout_height="@dimen/_14dp"
+                android:src="@drawable/search"
+                android:layout_marginEnd="@dimen/_10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/etSearch"
+                app:layout_constraintEnd_toEndOf="@+id/etSearch"
+                app:layout_constraintTop_toTopOf="@+id/etSearch" />
+
+<!--            <EditText-->
+<!--                style="@style/edittext_style"-->
+<!--                android:drawableEnd="@drawable/search"-->
+<!--                android:id="@+id/etSearch"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:background="#F6F5FA"-->
+<!--                android:drawablePadding="10dp"-->
+<!--                android:hint="@string/airport_search_hit"-->
+<!--                android:paddingLeft="10dp"-->
+<!--                android:ems="10"-->
+<!--                android:singleLine="true"-->
+<!--                android:inputType="textPersonName"-->
+<!--                android:textColor="#323232"-->
+<!--                android:textColorHint="@color/black"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/ivClose"-->
+<!--                />-->
+
+
 
             <TextView
                 android:id="@+id/tvToOrFrom"
@@ -62,8 +103,8 @@
                 app:layout_constraintTop_toTopOf="@+id/ivClose"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </com.google.android.material.appbar.AppBarLayout>
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
 
     <include layout="@layout/content_airport_serach"/>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>
