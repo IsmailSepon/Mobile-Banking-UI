@@ -21,7 +21,8 @@ import kotlinx.android.synthetic.main.flight_list_item_new.view.*
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 19/2/19.
  */
-class FlightAdapterNew(val items: List<Result>, val requestAirSearch: RequestAirSearch, val context: Context, var isReSchuduler: Boolean, val onClickListener: OnClickListener) : RecyclerView.Adapter<ViewHolderNew>() {
+class FlightAdapterNew(val items: List<Result>, val requestAirSearch: RequestAirSearch, val context: Context, var isReSchuduler: Boolean,
+                       val onClickListener: OnClickListener) : RecyclerView.Adapter<ViewHolderNew>() {
 
 
     @SuppressLint("SetTextI18n")

@@ -126,7 +126,7 @@ public class AppHandler {
     private static final String APP_LANGUAGE = "en";
     private static final String APP_STATUS = "registered_v1";
 
-    private static final String USERNAME = "username";
+    private static final String USERNAME = "01912250477";   //change to username after API done
     private static final String PHONE_NUMBER = "phone";
 
     private static final String QR_CODE_BITMAP = "bitmap";

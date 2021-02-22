@@ -350,7 +350,7 @@ public class MyDateTimelineViewRecyclerView extends RecyclerView {
                 holder.tvMinValue.setTextColor(AppController2.getContext().getResources().getColor((R.color.white)));
 
             } else {
-                holder.linearLayout.setBackgroundResource(R.color.white);
+                holder.linearLayout.setBackgroundResource(R.color.hader_bg);
                 holder.tvDate.setTextColor(AppController2.getContext().getResources().getColor((R.color.keypad_text_clr)));
                 holder.tvDay.setTextColor(AppController2.getContext().getResources().getColor((R.color.keypad_text_clr)));
                 holder.tvMinValue.setTextColor(AppController2.getContext().getResources().getColor((R.color.keypad_text_clr)));

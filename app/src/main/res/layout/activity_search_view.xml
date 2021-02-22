@@ -6,7 +6,7 @@
     android:id="@+id/linearLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3FDFF"
+    android:background="@color/white"
     >
 
 
@@ -14,7 +14,7 @@
         android:id="@+id/myDateTimelineView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="60dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F1FDFF">
+            android:background="@color/white">
 
             <ImageView
                 android:id="@+id/imageView4"
@@ -151,6 +151,52 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
+
+    <ImageView
+        android:padding="@dimen/_10dp"
+        android:id="@+id/flightsearch_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        style="@style/medium_text_style"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_16_7sp"
+        android:id="@+id/textView792"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/search_flights"
+        app:layout_constraintBottom_toBottomOf="@+id/flightsearch_back"
+        app:layout_constraintStart_toEndOf="@+id/flightsearch_back"
+        app:layout_constraintTop_toTopOf="@+id/flightsearch_back" />
+
+    <ImageView
+        android:id="@+id/imageView343"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:padding="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView792"
+        app:layout_constraintEnd_toStartOf="@+id/imageView348"
+        app:layout_constraintTop_toTopOf="@+id/textView792"
+        app:srcCompat="@drawable/user" />
+
+    <ImageView
+        android:id="@+id/imageView348"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:padding="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView792"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView792"
+        app:srcCompat="@drawable/dash_setting" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -111,6 +111,10 @@ class FlightSearchViewActivity : AirTricketBaseActivity(), IDatePicker {
         btSerachAgain.setOnClickListener {
             finish()
         }
+        flightsearch_back.setOnClickListener {
+            finish()
+        }
+
 
     }
 

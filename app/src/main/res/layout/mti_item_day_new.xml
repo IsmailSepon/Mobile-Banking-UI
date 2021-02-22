@@ -4,7 +4,7 @@
                                                    android:id="@+id/linearLayout"
                                                    android:layout_width="60dp"
                                                    android:layout_height="wrap_content"
-                                                   android:background="@color/white"
+                                                   android:background="#f4f6f8"
                                                    android:gravity="center">
 
     <TextView
@@ -26,7 +26,6 @@
         android:id="@+id/tvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="27"
         android:textColor="@color/keypad_text_clr"
@@ -34,29 +33,27 @@
         app:layout_constraintBottom_toTopOf="@+id/tvMinValue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDay"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvDay" />
 
     <TextView
         android:id="@+id/tvMinValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:text="Search"
-        android:textColor="@color/keypad_text_clr"
 
+        android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/mti_timeline_lbl_day_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDate"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvDate" />
 
     <View
         android:id="@+id/view2"
         android:layout_width="0.5dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
+        android:background="#d7e1ee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
