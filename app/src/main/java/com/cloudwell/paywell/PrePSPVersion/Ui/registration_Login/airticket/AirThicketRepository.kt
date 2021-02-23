@@ -67,7 +67,7 @@ class AirThicketRepository(private val mContext: Context) {
     fun getAirports(iso: String, uniqueKey: String): MutableLiveData<ResGetAirports> {
 
         mAppHandler = AppHandler.getmInstance(mContext)
-        val userName = "01912250477"//mAppHandler!!.userName
+        val userName = mAppHandler!!.userName
 //        val userName = "cwntcl"
 
 

@@ -9,7 +9,7 @@
                                                    android:background="@color/white">
 
     <TextView
-        android:fontFamily="@font/oxygen_light"
+        android:fontFamily="@font/roboto_regular"
         android:id="@+id/tvStringTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -129,11 +129,15 @@
     <Button
         android:id="@+id/btDetails"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="@dimen/_24dp"
         android:layout_marginBottom="16dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/card_details"
-        android:fontFamily="@font/oxygen_light"
+        android:background="@drawable/round_btn_blue"
+        android:text="@string/details"
+        android:fontFamily="@font/roboto_regular"
+        android:textStyle="bold"
+        android:textSize="@dimen/_10sp"
+        android:elevation="@dimen/_5dp"
+        android:padding="@dimen/_5dp"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
