@@ -84,14 +84,15 @@
 
     <TextView
         android:id="@+id/tvTotalPrices"
+        style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_16dp"
         android:text="Total Price"
         android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/_10sp"
-        style="@style/text_style"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAirlessName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvAirlessName" />
 

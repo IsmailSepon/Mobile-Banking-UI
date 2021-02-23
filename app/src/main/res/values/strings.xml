@@ -1101,6 +1101,7 @@
     <string name="internet_connection_title_msg">Internet Connection</string>
     <string name="retry_btn">Retry</string>
     <string name="please_press_the_try_again_button">Please press the try again button</string>
+    <string name="review_book"><![CDATA[Review & book]]></string>
 
 
 </resources>

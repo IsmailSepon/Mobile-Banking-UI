@@ -48,8 +48,8 @@ class FlightAdapterNew(val items: List<Result>, val requestAirSearch: RequestAir
         holder.tvPrices.text = totalPrice
 
 
-        holder.tvAdult.text = "${requestAirSearch.adultQuantity}  Adult"
-        holder.tvchildAndInfant.text = "${requestAirSearch.childQuantity}  Child, ${requestAirSearch.infantQuantity} Infant"
+        holder.tvAdult.text = "(Discount ৳168.00)"//"${requestAirSearch.adultQuantity}  Adult"
+        holder.tvchildAndInfant.text = "${requestAirSearch.adultQuantity}  Adult ${requestAirSearch.childQuantity}  Child, ${requestAirSearch.infantQuantity} Infant"
 
 
         val recyclerViewLayoutManager = GridLayoutManager(context, 2)

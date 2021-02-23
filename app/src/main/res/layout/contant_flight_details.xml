@@ -5,10 +5,63 @@
               android:id="@+id/rootLayout"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="#F2F3F8"
+              android:background="@color/white"
               android:orientation="vertical"
               tools:context="com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.FlightDetails1Activity">
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/flightdetails_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:padding="@dimen/_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/flightdetils_controll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:padding="@dimen/_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/flightdetails_back"
+            app:srcCompat="@drawable/dash_setting" />
+
+        <ImageView
+            android:id="@+id/flightdetils_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:padding="@dimen/_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/flightdetils_controll"
+            app:layout_constraintTop_toTopOf="@+id/flightdetails_back"
+            app:srcCompat="@drawable/user" />
+
+        <TextView
+            android:id="@+id/textView794"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/review_book"
+            style="@style/medium_text_style"
+            android:textSize="@dimen/_16_7sp"
+            android:textColor="@color/keypad_text_clr"
+            app:layout_constraintBottom_toBottomOf="@+id/flightdetails_back"
+            app:layout_constraintStart_toEndOf="@+id/flightdetails_back"
+            app:layout_constraintTop_toTopOf="@+id/flightdetails_back" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -36,9 +89,7 @@
                 android:id="@+id/viewDeartSectionWithColor"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
                 android:background="@drawable/layout_white_round_bg"
                 app:layout_constraintBottom_toBottomOf="@+id/textView9"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -47,17 +98,17 @@
 
             <TextView
                 android:id="@+id/tvDepart2"
+                style="@style/text_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:background="@color/colorAccent"
                 android:padding="4dp"
                 android:text="Depart"
-                android:textColor="@color/white"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintStart_toStartOf="@+id/viewDeartSectionWithColor"
-                app:layout_constraintTop_toTopOf="@+id/viewDeartSectionWithColor"/>
+                app:layout_constraintTop_toTopOf="@+id/viewDeartSectionWithColor" />
 
             <TextView
                 android:id="@+id/tvNameOfDate"
@@ -65,8 +116,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:textColor="@color/black33333"
-                android:textStyle="bold"
+                android:textColor="@color/keypad_text_clr"
+                style="@style/text_style"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tvDepart2"
                 app:layout_constraintStart_toEndOf="@+id/tvDepart2"
                 app:layout_constraintTop_toTopOf="@+id/tvDepart2"
@@ -78,8 +130,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:textColor="@color/black33333"
-                android:textStyle="bold"
+                android:textColor="@color/common_clr"
+                style="@style/text_style"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintStart_toEndOf="@+id/tvDepart2"
                 app:layout_constraintTop_toBottomOf="@+id/tvNameOfDate"
                 tools:text="HHB-DXB "/>
@@ -89,7 +142,7 @@
                 android:layout_width="1dp"
                 android:layout_height="12dp"
                 android:layout_marginStart="4dp"
-                android:background="#c0c0c0"
+                android:background="#f4f6f8"
                 app:layout_constraintBottom_toBottomOf="@+id/tvOrginAndDestinationAirportCode"
                 app:layout_constraintStart_toEndOf="@+id/tvOrginAndDestinationAirportCode"
                 android:layout_marginLeft="4dp"
@@ -104,8 +157,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:textColor="@color/black33333"
-                android:textStyle="bold"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_12sp                         "
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/lineView"
@@ -118,8 +171,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:textColor="@color/black33333"
-                android:textStyle="bold"
+                android:textColor="@color/keypad_text_clr"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/tvNameOfDate"
                 app:layout_constraintStart_toEndOf="@+id/tvNameOfDate"
@@ -128,6 +180,7 @@
 
             <com.github.zagum.expandicon.ExpandIconView
                 android:id="@+id/ivUpDown"
+                android:visibility="gone"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginTop="8dp"
@@ -175,6 +228,7 @@
 
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -188,6 +242,7 @@
             <com.github.zagum.expandicon.ExpandIconView
                 android:id="@+id/ivUpDown2"
                 android:layout_width="20dp"
+                android:visibility="gone"
                 android:layout_height="20dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -208,29 +263,37 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView9"
                 >
 
+                <View
+                    android:id="@+id/view17"
+                    android:layout_width="match_parent"
+                    android:layout_height="7dp"
+                    android:background="#f5f4f7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:id="@+id/tvPriceDetails"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
                     android:text="@string/price_details"
-                    android:textColor="@color/black33333"
-                    android:textSize="16dp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_14sp"
+                    style="@style/text_style"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toBottomOf="@+id/view17" />
 
                 <ImageView
                     android:id="@+id/imageView7"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_width="@dimen/_14dp"
+                    android:layout_height="@dimen/_14dp"
+                    android:layout_marginStart="16dp"
                     app:layout_constraintBottom_toBottomOf="@+id/tvTotalFair"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/tvTotalFair"
-                    app:srcCompat="@drawable/ic_taka_small"/>
+                    app:srcCompat="@drawable/ic_tk_symbol_low" />
 
                 <TextView
                     android:id="@+id/tvTotalFair"
@@ -239,8 +302,10 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="4dp"
-                    android:textColor="#189d49"
-                    android:textSize="22sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="bold"
+                    style="@style/text_style"
                     app:layout_constraintBottom_toTopOf="@+id/tvClass"
                     app:layout_constraintStart_toEndOf="@+id/imageView7"
                     app:layout_constraintTop_toBottomOf="@+id/tvPriceDetails"
@@ -250,17 +315,18 @@
                     android:id="@+id/tvClass"
                     android:layout_width="wrap_content"
                     android:layout_height="22sp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="4dp"
 
-                    android:textColor="@color/black33333"
-                    android:textSize="16dp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_12sp"
+                    style="@style/text_style"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvTotalFair"
-                    tools:text="Economy Class"/>
+                    tools:text="Economy Class" />
 
                 <ImageView
+                    android:visibility="gone"
                     android:id="@+id/ivFareInfo"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
@@ -272,19 +338,31 @@
                     app:layout_constraintVertical_bias="0.545"
                     app:srcCompat="@drawable/ic_prices_details"/>
 
+
+                <View
+                    android:id="@+id/view18"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/hader_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvClass" />
+
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/text_style"
+                    android:layout_marginTop="10dp"
                     android:text="@string/baggage_policy_details"
-                    android:textColor="@color/black33333"
-                    android:textSize="16dp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvClass"/>
+                    app:layout_constraintTop_toBottomOf="@+id/view18" />
 
                 <ImageView
                     android:id="@+id/imageView9"
@@ -295,152 +373,173 @@
                     app:layout_constraintBottom_toBottomOf="@+id/textView10"
                     app:layout_constraintStart_toEndOf="@+id/textView10"
                     app:layout_constraintTop_toTopOf="@+id/textView10"
-                    app:srcCompat="@drawable/ic_baggage_details"/>
+                    app:srcCompat="@drawable/info_passenger_blue"/>
 
-                <ImageView
-                    android:id="@+id/imageView11"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10"
-                    app:srcCompat="@drawable/ic_baggage_info"/>
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView11"-->
+<!--                    android:layout_width="16dp"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView10"-->
+<!--                    app:srcCompat="@drawable/ic_baggage_info" />-->
 
                 <TextView
                     android:id="@+id/tvBaggage"
+                    style="@style/text_style"
+                    android:textSize="@dimen/_12sp"
+                    android:textColor="@color/common_clr"
+                    android:layout_marginTop="@dimen/_7dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    app:layout_constraintStart_toEndOf="@+id/imageView11"
-                    app:layout_constraintTop_toTopOf="@+id/imageView11"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10"
                     tools:text="Baggage : 20 KG per adult ticket " />
 
-                <Button
-                    android:id="@+id/btBook"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:background="#69C630"
-                    android:text="@string/book_text"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-                <ImageView
-                    android:id="@+id/imageView17"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView19"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView19"
-                    app:srcCompat="@drawable/ic_rules"/>
+                <!--                <ImageView-->
+<!--                    android:id="@+id/imageView17"-->
+<!--                    android:layout_width="16dp"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/textView19"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/textView19"-->
+<!--                    app:srcCompat="@drawable/ic_rules" />-->
 
                 <TextView
                     android:id="@+id/textView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
                     android:layout_marginBottom="16dp"
                     android:text="@string/rules"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_12sp"
+                    style="@style/text_style"
+                    android:layout_marginTop="7dp"
+                    android:drawableEnd="@drawable/info_passenger_blue"
+                    android:drawablePadding="@dimen/_10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView17"
-                    app:layout_constraintTop_toBottomOf="@+id/tvBaggage"
-                    />
+                    app:layout_constraintStart_toStartOf="@+id/tvBaggage"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBaggage" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constaniLayoutForOther"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="@dimen/_14dp"
                 android:background="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constrainlayoutPricesDetailsView">
+                app:layout_constraintTop_toBottomOf="@+id/view19">
 
                 <ImageView
                     android:id="@+id/imageView13"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="16dp"
+                    android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="@+id/tvPassportMandatory"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/tvPassportMandatory"
-                    app:srcCompat="@drawable/ic_passport_mangatory"/>
+                    app:srcCompat="@drawable/ic_passport_mangatory" />
 
                 <TextView
                     android:id="@+id/tvPassportMandatory"
+                    style="@style/text_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="@dimen/_16dp"
                     android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toEndOf="@+id/imageView13"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="Passport Mandatory"/>
+                    tools:text="Passport not mandatory" />
 
                 <ImageView
                     android:id="@+id/imageView14"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
+                    android:visibility="gone"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvPassportMandatory"
-                    app:srcCompat="@drawable/ic_extra_services"/>
+                    app:srcCompat="@drawable/ic_extra_services" />
 
                 <TextView
                     android:id="@+id/tvExtraService"
+                    style="@style/text_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="@dimen/_16dp"
                     android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toEndOf="@+id/imageView14"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvPassportMandatory"
-                    tools:text="@string/extra_serviex"/>
+                    tools:text="Extra services: " />
 
                 <ImageView
                     android:id="@+id/imageView15"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
+                    android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView14"
                     app:layout_constraintVertical_bias="0.49"
-                    app:srcCompat="@drawable/ic_refundable"/>
+                    app:srcCompat="@drawable/ic_refundable" />
 
                 <TextView
                     android:id="@+id/tvRefunable"
+                    style="@style/text_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="@dimen/_16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView15"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvExtraService"
-                    tools:text="Is Refundable"/>
+                    tools:text="Refundable:" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view19"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginTop="@dimen/_14dp"
+                android:background="@color/hader_bg"
+                app:layout_constraintTop_toBottomOf="@+id/constrainlayoutPricesDetailsView" />
+
+
+            <Button
+                android:id="@+id/btBook"
+                android:layout_width="@dimen/_250dp"
+                android:layout_height="@dimen/_43dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="24dp"
+                android:text="Book now"
+                android:textSize="@dimen/_15sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/round_btn_visable"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constaniLayoutForOther" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
         <!--</LinearLayout>-->
     </ScrollView>

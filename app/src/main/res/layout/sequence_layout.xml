@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            tools:background="@android:color/darker_gray"/>
+            tools:background="#e4e8ed"/>
 
         <View
             android:id="@+id/progressBarForeground"
