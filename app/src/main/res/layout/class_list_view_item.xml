@@ -7,6 +7,8 @@
     <TextView
         android:layout_marginStart="@dimen/_26dp"
         android:text="Economy / Premium Economy"
+        android:textSize="@dimen/_13_3sp"
+        style="@style/text_style"
         android:id="@+id/tv_user_class"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2
+ package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.AllSummaryActivity
@@ -42,9 +43,13 @@ class FlightDetails2Activity : AirTricketBaseActivity() {
         setToolbar(getString(R.string.title_booking_and_review))
 
         initializationView()
-        initilizationReviewBottomSheet()
+    //    initilizationReviewBottomSheet()
         initViewModel()
 
+        viewReview.setOnClickListener {
+
+            handleLReviewButton()
+        }
 
     }
 
@@ -249,8 +254,8 @@ class FlightDetails2Activity : AirTricketBaseActivity() {
         recyclerView.setHasFixedSize(true)
 
         val columns = 2
-
-        val glm = GridLayoutManager(applicationContext, columns)
+        val glm : LinearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+       // val glm = LinearLayoutManager()//LinearLayoutManager(applicationContext, columns)
         recyclerView.layoutManager = glm
 
 
@@ -349,7 +354,7 @@ class FlightDetails2Activity : AirTricketBaseActivity() {
 
     private fun initializationView() {
         try {
-            resposeAirPriceSearch = AppStorageBox.get(applicationContext, AppStorageBox.Key.ResposeAirPriceSearch) as ResposeAirPriceSearch
+            resposeAirPriceSearch = AppStorageBox.get(applicationContext, AppStorageBox.Key.ResposeAirPriceSearch) as ResposeAirPriceSearch;
 
             var allAirportCodeString = ""
 

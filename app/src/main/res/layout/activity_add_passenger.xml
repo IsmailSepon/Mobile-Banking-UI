@@ -1,10 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".activity.eticket.airticket.flightDetails2.FlightDetails2Activity">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:padding="@dimen/_10dp"
+            android:id="@+id/airpolicy_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+
+        <TextView
+            android:id="@+id/textView795"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/add_passenger"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16_7sp"
+            app:layout_constraintBottom_toBottomOf="@+id/airpolicy_back"
+            app:layout_constraintStart_toEndOf="@+id/airpolicy_back"
+            app:layout_constraintTop_toTopOf="@+id/airpolicy_back" />
+
+        <ImageView
+            android:padding="@dimen/_10dp"
+            android:id="@+id/imageView349"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="17dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView795"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView795"
+            app:srcCompat="@drawable/dash_setting" />
+
+        <ImageView
+            android:padding="@dimen/_10dp"
+            android:id="@+id/imageView350"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView349"
+            app:layout_constraintEnd_toStartOf="@+id/imageView349"
+            app:layout_constraintTop_toTopOf="@+id/imageView349"
+            app:srcCompat="@drawable/user" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <include
@@ -14,4 +75,4 @@
     </include>
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

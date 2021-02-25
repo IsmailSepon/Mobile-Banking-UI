@@ -2,6 +2,7 @@ package com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flig
 
 
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -26,6 +27,10 @@ class BaggageAndPoliciesActiivty : AirTricketBaseActivity() {
         tabs_policy!!.setupWithViewPager(viewpager)
 
 
+        airpolicy_back.setOnClickListener(View.OnClickListener {
+            finish()
+        })
+
 
     }
 
@@ -33,7 +38,7 @@ class BaggageAndPoliciesActiivty : AirTricketBaseActivity() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(RolesFragment(), getString(R.string.roles))
         adapter.addFragment(FlightFareFragment(), getString(R.string.fares))
-        adapter.addFragment(EarningsFragment(), getString(R.string.earnings))
+       // adapter.addFragment(EarningsFragment(), getString(R.string.earnings))
         viewPager.adapter = adapter
 
     }

@@ -4,7 +4,7 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="#F2F3F8"
+              android:background="@color/white"
               android:orientation="vertical"
               app:layout_behavior="@string/appbar_scrolling_view_behavior"
               tools:context="com.cloudwell.paywell.services.activity.eticket.airticket.flightDetails1.FlightDetails1Activity">
@@ -23,10 +23,6 @@
                 android:id="@+id/layoutAddPassenger"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
                 android:background="@drawable/layout_white_round_bg"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -36,12 +32,13 @@
                     android:id="@+id/tvNameOfDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="@dimen/_17_7dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:text="tvDateAndTimeDuration"
-                    android:textColor="@color/black33333"
-                    android:textStyle="bold"
+                    android:textColor="@color/keypad_text_clr"
+                    style="@style/text_style"
+                    android:textSize="@dimen/_12sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="Thu, Jan 24"/>
@@ -50,86 +47,123 @@
                     android:id="@+id/view6"
                     android:layout_width="wrap_content"
                     android:layout_height="1dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:background="@color/black"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/hader_bg"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvNameOfDate"/>
+                    app:layout_constraintTop_toBottomOf="@+id/tvNameOfDate" />
 
                 <ImageView
                     android:id="@+id/imageView12"
                     android:layout_width="wrap_content"
                     android:layout_height="18dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="@dimen/_17_7dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="16dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/view6"
-                    app:srcCompat="@drawable/ic_book"/>
+                    app:srcCompat="@drawable/passport_review"/>
 
                 <TextView
+                    android:textSize="@dimen/_12sp"
+                    style="@style/text_style"
                     android:id="@+id/tvPoliciesAndBaggageAllowance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/baggage_policy_details"
-                    android:textColor="#545454"
+                    android:textColor="@color/text_link_clr"
+                    android:layout_marginStart="@dimen/_10dp"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView12"
                     app:layout_constraintStart_toEndOf="@+id/imageView12"
                     app:layout_constraintTop_toTopOf="@+id/imageView12"/>
 
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTotalPrice"
+                    app:layout_constraintEnd_toStartOf="@+id/tvTotalPrice"
+                    app:layout_constraintTop_toTopOf="@+id/tvTotalPrice"
+                    app:srcCompat="@drawable/ic_tk_symbol_low" />
+
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/_20sp"
+                    style="@style/text_style"
+                    android:id="@+id/tvTotalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="5,075.00"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvNameOfDate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvNameOfDate" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+            <View
+                android:id="@+id/view21"
+                android:layout_width="match_parent"
+                android:layout_height="6.3dp"
+                android:layout_marginTop="8dp"
+                android:background="#f5f4f7"
+                app:layout_constraintTop_toBottomOf="@+id/layoutAddPassenger"
+                tools:layout_editor_absoluteX="0dp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constrainlayoutPricesDetailsView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="60dp"
                 android:background="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutAddPassenger">
+                app:layout_constraintTop_toBottomOf="@+id/view21">
 
                 <TextView
                     android:id="@+id/tvPriceDetails"
+                    style="@style/text_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="@dimen/_16dp"
                     android:layout_marginTop="8dp"
                     android:text="@string/passengers"
-                    android:textColor="@color/black33333"
-                    android:textSize="16dp"
+                    android:textColor="@color/keypad_text_clr"
+                    android:textSize="@dimen/_12sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView11"
+                    style="@style/text_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="@dimen/_16dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:text="@string/select_a_saved_passenger_or_add_a_new_one"
+                    android:textColor="@color/common_clr"
+                    android:textSize="@dimen/_12sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvPriceDetails"/>
+                    app:layout_constraintTop_toBottomOf="@+id/tvPriceDetails" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewPassenger"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
@@ -137,7 +171,21 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11"/>
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <TextView
+                    android:textColor="@color/text_link_clr"
+                    android:textSize="@dimen/_13_3sp"
+                    style="@style/text_style"
+                    android:drawableStart="@drawable/air_preview"
+                    android:drawablePadding="@dimen/_15dp"
+                    android:id="@+id/viewReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="26dp"
+                    android:text="@string/preview"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvPriceDetails" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

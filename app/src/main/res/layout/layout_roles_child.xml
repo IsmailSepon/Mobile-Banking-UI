@@ -3,6 +3,7 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="55dip"
+              android:background="@color/white"
               android:orientation="vertical">
 
     <TextView
@@ -13,7 +14,7 @@
         android:paddingTop="5dp"
         android:autoLink="web"
         android:paddingBottom="5dp"
-        android:textColor="#808080"
+        android:textColor="@color/common_clr"
         tools:text="Test"/>
 
 </LinearLayout>

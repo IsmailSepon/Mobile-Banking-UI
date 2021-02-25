@@ -14,9 +14,13 @@ import android.widget.PopupWindow
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.Datum
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
 import kotlinx.android.synthetic.main.activity_air_ticket_main.*
 
 open class AirTicketMainActivity : AirTricketBaseActivity() {
+
+
+    private var mAppHandler: AppHandler? = null
 
     companion object {
         var item: Datum = Datum()
@@ -43,6 +47,12 @@ open class AirTicketMainActivity : AirTricketBaseActivity() {
 //            supportActionBar!!.elevation = 0f
 //            supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#189d49")));
 //        }
+
+        mAppHandler = AppHandler.getmInstance(this)
+        mAppHandler?.userName = "01912250477"
+        mAppHandler?.rid = "S12050043936"
+
+
 
         val fragmentAdapter = SearchFlightAdapter(supportFragmentManager, item)
         viewpager_main.adapter = fragmentAdapter

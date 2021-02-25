@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.Airline
+import com.cloudwell.paywell.base.BaseDialog
 import com.cloudwell.paywell.data.preferences.AppStorageBox
 import kotlinx.android.synthetic.main.fragment_airless_info.view.*
 
 
-class AirlessDialogFragment : DialogFragment() {
+class AirlessDialogFragment : BaseDialog() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

@@ -996,13 +996,13 @@
     <string name="invalid_country_name">Invalid Country Name</string>
     <string name="invalid_passenger_type">Invalid passenger type</string>
     <string name="title_all_summary">All Summary</string>
-    <string name="airline_code">Airlines code: </string>
-    <string name="airless_name">Airlines Name: </string>
-    <string name="flight_number">Flight number: </string>
-    <string name="booking_class">Booking Class: </string>
-    <string name="cabin_class">Cabin class :</string>
-    <string name="operating_carrier">Operating carrier: </string>
-    <string name="baggage">Baggage :</string>
+    <string name="airline_code">Airlines code </string>
+    <string name="airless_name">Airlines Name </string>
+    <string name="flight_number">Flight number </string>
+    <string name="booking_class">Booking Class </string>
+    <string name="cabin_class">Cabin class </string>
+    <string name="operating_carrier">Operating carrier </string>
+    <string name="baggage">Baggage </string>
     <string name="kg_per_adult">per adult ticket</string>
     <string name="baggage_info">Baggage info</string>
     <string name="airport">Airport</string>
@@ -1045,7 +1045,7 @@
     <string name="paxtype">Pax Type</string>
     <string name="passenger_count">Passenger Count</string>
     <string name="service_fee">Service Fee</string>
-    <string name="fares_information">Fare Information</string>
+    <string name="fares_information">Fare details</string>
     <string name="base_fare">Base Fare</string>
     <string name="othercharges">Other Charges</string>
     <string name="review">Review</string>
@@ -1102,6 +1102,7 @@
     <string name="retry_btn">Retry</string>
     <string name="please_press_the_try_again_button">Please press the try again button</string>
     <string name="review_book"><![CDATA[Review & book]]></string>
+    <string name="air_rules_fare"><![CDATA[Air rules & fare]]></string>
 
 
 </resources>

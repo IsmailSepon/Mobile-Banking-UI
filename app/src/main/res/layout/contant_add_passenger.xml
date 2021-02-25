@@ -5,7 +5,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               xmlns:fancy="http://schemas.android.com/apk/res-auto"
-              android:background="#F2F3F8"
+              android:background="@color/white"
               android:orientation="vertical"
               tools:context="com.cloudwell.paywell.services.activity.eticket.airticket.passengerAdd.AddPassengerActivity">
 
@@ -27,8 +27,9 @@
                     android:id="@+id/layoutAddPassenger"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/white"
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -36,18 +37,21 @@
 
                     <TextView
                         android:id="@+id/textView13"
+                        style="@style/text_style"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="32dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="8dp"
+                        android:gravity="left"
                         android:text="@string/please_enter_the_passenger_"
-                        android:textColor="#313235"
+                        android:textColor="@color/common_clr"
+                        android:textSize="@dimen/_12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -66,22 +70,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="16dp"
                         android:text="@string/lead_passenger"
                         android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/constrainlayoutPricesDetailsView"
-                        tools:visibility="visible"/>
+                        tools:visibility="visible" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayoutPassengerType"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/isLeadPassenger">
@@ -91,16 +92,21 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:editable="false"
-                            android:hint="@string/passenger_type"/>
+                            android:textColor="@color/keypad_text_clr"
+                            android:textColorHint="@color/common_clr"
+                            android:gravity="left"
+                            android:textSize="@dimen/_14sp"
+                            style="@style/text_style"
+                            android:hint="@string/passenger_type" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayoutTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
+                        android:layout_marginEnd="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassengerType">
@@ -111,8 +117,13 @@
                             android:layout_height="match_parent"
                             android:editable="false"
                             android:hint="@string/title"
+                            android:textColor="@color/keypad_text_clr"
+                            android:textColorHint="@color/common_clr"
+                            android:gravity="left"
+                            android:textSize="@dimen/_14sp"
+                            style="@style/text_style"
                             tools:layout_editor_absoluteX="8dp"
-                            tools:layout_editor_absoluteY="0dp"/>
+                            tools:layout_editor_absoluteY="0dp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -120,107 +131,132 @@
                         android:id="@+id/textInputLayoutFirstName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTitle">
 
                         <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
                             android:id="@+id/etFirstName"
+                            android:textColor="@color/keypad_text_clr"
+                            android:textColorHint="@color/common_clr"
+                            android:gravity="left"
+                            android:textSize="@dimen/_14sp"
+                            style="@style/text_style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ _"
-                            android:lines="1"
-                            android:hint="@string/first_name"/>
+                            android:hint="@string/first_name"
+                            android:lines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayoutLastName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
+                        android:layout_marginEnd="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutFirstName">
 
                         <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
                             android:id="@+id/etLastName"
+                            android:textColor="@color/keypad_text_clr"
+                            android:textColorHint="@color/common_clr"
+                            android:gravity="left"
+                            android:textSize="@dimen/_14sp"
+                            style="@style/text_style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ _"
-                            android:lines="1"
-                            android:hint="@string/last_name"/>
+                            android:hint="@string/last_name"
+                            android:lines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayoutGender"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
+                        android:layout_marginEnd="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDateOfBirthday">
 
                         <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
                             android:id="@+id/etGender"
+                            android:textColor="@color/keypad_text_clr"
+                            android:textColorHint="@color/common_clr"
+                            android:gravity="left"
+                            android:textSize="@dimen/_14sp"
+                            style="@style/text_style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:editable="false"
-                            android:hint="@string/gender"/>
+                            android:hint="@string/gender" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayoutCountry"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
+                        android:layout_marginEnd="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLastName">
 
                         <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
                             android:id="@+id/etCountry"
+                            android:textColor="@color/keypad_text_clr"
+                            android:textColorHint="@color/common_clr"
+                            android:gravity="left"
+                            android:textSize="@dimen/_14sp"
+                            style="@style/text_style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:editable="false"
-                            android:hint="@string/country"/>
+                            android:hint="@string/country" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayoutContactNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
+                        android:layout_marginEnd="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutGender">
 
                         <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
                             android:id="@+id/etContactNumber"
+                            android:textColor="@color/keypad_text_clr"
+                            android:textColorHint="@color/common_clr"
+                            android:gravity="left"
+                            android:textSize="@dimen/_14sp"
+                            style="@style/text_style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/contact_number"
                             android:inputType="phone"
-                            android:maxLength="15"/>
+                            android:maxLength="15" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayoutEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
+                        android:layout_marginEnd="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutContactNumber">
@@ -230,28 +266,31 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/email"
-                            android:inputType="textEmailAddress"/>
+                            android:inputType="textEmailAddress" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayoutDateOfBirthday"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCountry">
 
                         <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
                             android:id="@+id/etDateOfBirth"
+                            android:textColor="@color/keypad_text_clr"
+                            android:textColorHint="@color/common_clr"
+                            android:gravity="left"
+                            android:textSize="@dimen/_14sp"
+                            style="@style/text_style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:editable="false"
-                            android:hint="@string/date_of_birth"/>
+                            android:hint="@string/date_of_birth" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -265,6 +304,10 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
+                    android:textColor="@color/common_clr"
+                    android:gravity="left"
+                    android:textSize="@dimen/_12sp"
+                    style="@style/text_style"
                     android:layout_marginBottom="8dp"
                     android:text="@string/please_ensure_the_id_is_valid_for_at_least_6_months_after_the_date_of_departure"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
@@ -320,32 +363,35 @@
                             />
                     </LinearLayout>
 
-                    <mehdi.sakout.fancybuttons.FancyButton
-                        android:id="@+id/btn_add"
-                        android:layout_width="match_parent"
+                    <Button
+                        android:id="@+id/btn_add_passanger"
+                        android:layout_width="@dimen/_250dp"
                         android:layout_height="40dp"
                         android:layout_margin="@dimen/activity_horizontal_margin"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="32dp"
+                        android:layout_marginTop="@dimen/_50dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:background="@drawable/round_btn_visable"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutNId"
-                        fancy:fb_defaultColor="#9fd34c"
-                        fancy:fb_iconPosition="left"
-                        fancy:fb_radius="2dp"
-                        fancy:fb_text="@string/add_passenger"
-                        fancy:fb_textColor="#FFFFFF"/>
+                        android:text="@string/add_passenger"/>
+
+
+
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayoutPassport"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
                         android:visibility="visible"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -353,10 +399,15 @@
 
                         <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
                             android:id="@+id/etNidorPassportNumber"
+                            android:textColor="@color/keypad_text_clr"
+                            android:textColorHint="@color/common_clr"
+                            android:gravity="left"
+                            android:textSize="@dimen/_14sp"
+                            style="@style/text_style"
                             android:layout_width="match_parent"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ _0123456789"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hit_passport_number"/>
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ _0123456789"
+                            android:hint="@string/hit_passport_number" />
                     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -364,11 +415,9 @@
                         android:id="@+id/textInputLayoutNId"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="16dp"
                         android:layout_marginBottom="100dp"
                         android:visibility="visible"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -380,53 +429,64 @@
                             android:id="@+id/etNationalIDNumber"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/keypad_text_clr"
+                            android:textColorHint="@color/common_clr"
+                            android:gravity="left"
+                            android:textSize="@dimen/_14sp"
+                            style="@style/text_style"
                             android:hint="@string/national_id"
-                            android:visibility="visible"/>
+                            android:visibility="visible" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayoutPassportExpiryDate"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassport">
 
                         <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
                             android:id="@+id/etPassportExpiryDate"
+                            android:textColor="@color/keypad_text_clr"
+                            android:textColorHint="@color/common_clr"
+                            android:gravity="left"
+                            android:textSize="@dimen/_14sp"
+                            style="@style/text_style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:editable="false"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ _0123456789"
+                            android:editable="false"
 
-                            android:hint="@string/passport_expiry_date"/>
+                            android:hint="@string/passport_expiry_date" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textLayoutPassportNationality"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassportExpiryDate">
 
                         <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
                             android:id="@+id/etpassportNationality"
+                            android:textColor="@color/keypad_text_clr"
+                            android:textColorHint="@color/common_clr"
+                            android:gravity="left"
+                            android:textSize="@dimen/_14sp"
+                            style="@style/text_style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:editable="false"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ _0123456789"
-                            android:hint="@string/passport_nationality_mannotory"/>
+                            android:editable="false"
+                            android:hint="@string/passport_nationality_mannotory" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

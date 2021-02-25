@@ -400,9 +400,9 @@ class OneWayV2Fragment : Fragment(), View.OnClickListener, FullScreenDialogFragm
 
             R.id.btn_search -> {
 
-                mAppHandler = AppHandler.getmInstance(requireContext())
-                mAppHandler?.userName = "01912250477"
-                mAppHandler?.rid = "S12050043936"
+//                mAppHandler = AppHandler.getmInstance(requireContext())
+//                mAppHandler?.userName = "01912250477"
+//                mAppHandler?.rid = "S12050043936"
                 handleSearchClick()
 
             }

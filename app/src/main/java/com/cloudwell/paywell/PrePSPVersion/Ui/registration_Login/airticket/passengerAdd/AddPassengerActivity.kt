@@ -40,7 +40,38 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.mukesh.countrypicker.Country
 import com.mukesh.countrypicker.CountryPicker
 import com.mukesh.countrypicker.listeners.OnCountryPickerListener
+import kotlinx.android.synthetic.main.contant_add_passenger.*
 import kotlinx.android.synthetic.main.contant_reissue_containt.*
+import kotlinx.android.synthetic.main.contant_reissue_containt.btn_add
+import kotlinx.android.synthetic.main.contant_reissue_containt.etContactNumber
+import kotlinx.android.synthetic.main.contant_reissue_containt.etCountry
+import kotlinx.android.synthetic.main.contant_reissue_containt.etDateOfBirth
+import kotlinx.android.synthetic.main.contant_reissue_containt.etEmail
+import kotlinx.android.synthetic.main.contant_reissue_containt.etFirstName
+import kotlinx.android.synthetic.main.contant_reissue_containt.etGender
+import kotlinx.android.synthetic.main.contant_reissue_containt.etLastName
+import kotlinx.android.synthetic.main.contant_reissue_containt.etNationalIDNumber
+import kotlinx.android.synthetic.main.contant_reissue_containt.etNidorPassportNumber
+import kotlinx.android.synthetic.main.contant_reissue_containt.etPassengerType
+import kotlinx.android.synthetic.main.contant_reissue_containt.etPassportExpiryDate
+import kotlinx.android.synthetic.main.contant_reissue_containt.etTitle
+import kotlinx.android.synthetic.main.contant_reissue_containt.etpassportNationality
+import kotlinx.android.synthetic.main.contant_reissue_containt.isLeadPassenger
+import kotlinx.android.synthetic.main.contant_reissue_containt.ivPassportPageUpload
+import kotlinx.android.synthetic.main.contant_reissue_containt.ivVisaPageUpload
+import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutContactNumber
+import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutCountry
+import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutDateOfBirthday
+import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutEmail
+import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutFirstName
+import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutGender
+import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutLastName
+import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutNId
+import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutPassengerType
+import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutPassport
+import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutPassportExpiryDate
+import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutTitle
+import kotlinx.android.synthetic.main.contant_reissue_containt.textLayoutPassportNationality
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -211,7 +242,7 @@ class AddPassengerActivity : AirTricketBaseActivity() {
                 this.countryCode = oldPassenger.countryCode
 
 
-                btn_add.setText(getString(R.string.edit))
+                btn_add_passanger.setText(getString(R.string.edit))
 
 
             }
@@ -219,7 +250,7 @@ class AddPassengerActivity : AirTricketBaseActivity() {
             com.orhanobut.logger.Logger.e("" + e.message)
         }
 
-        btn_add.setOnClickListener {
+        btn_add_passanger.setOnClickListener {
             addPassenger()
         }
 
