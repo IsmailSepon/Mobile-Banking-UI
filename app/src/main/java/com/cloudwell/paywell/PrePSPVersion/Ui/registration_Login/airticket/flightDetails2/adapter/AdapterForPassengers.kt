@@ -74,11 +74,11 @@ class AdapterForPassengers(var context: Context, var items: List<Passenger>) : R
                     holder.tvPassportNumber.text = model.nIDnumber
                 }
 
-                if (model.isPassengerSleted) {
-                    holder.ivIsSeleted.visibility = View.VISIBLE
-                } else {
-                    holder.ivIsSeleted.visibility = View.INVISIBLE
-                }
+//                if (model.isPassengerSleted) {
+//                    holder.ivIsSeleted.visibility = View.VISIBLE
+//                } else {
+//                    holder.ivIsSeleted.visibility = View.INVISIBLE
+//                }
 
             }
         }
@@ -95,6 +95,7 @@ class AdapterForPassengers(var context: Context, var items: List<Passenger>) : R
         val tvFirstNameLastName = view.tvFirstNameAndLastName
         val tvPassportNumber = view.tvPassportNumber
         val ivIsSeleted = view.ivIsSeleted
+        val passanger_ic = view.passanger_ic
 
     }
 

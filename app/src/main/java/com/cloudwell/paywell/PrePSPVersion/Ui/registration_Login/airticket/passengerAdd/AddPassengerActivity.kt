@@ -41,37 +41,35 @@ import com.mukesh.countrypicker.Country
 import com.mukesh.countrypicker.CountryPicker
 import com.mukesh.countrypicker.listeners.OnCountryPickerListener
 import kotlinx.android.synthetic.main.contant_add_passenger.*
+import kotlinx.android.synthetic.main.contant_add_passenger.etContactNumber
+import kotlinx.android.synthetic.main.contant_add_passenger.etDateOfBirth
+import kotlinx.android.synthetic.main.contant_add_passenger.etEmail
+import kotlinx.android.synthetic.main.contant_add_passenger.etFirstName
+import kotlinx.android.synthetic.main.contant_add_passenger.etGender
+import kotlinx.android.synthetic.main.contant_add_passenger.etLastName
+import kotlinx.android.synthetic.main.contant_add_passenger.etNationalIDNumber
+import kotlinx.android.synthetic.main.contant_add_passenger.etNidorPassportNumber
+import kotlinx.android.synthetic.main.contant_add_passenger.etPassengerType
+import kotlinx.android.synthetic.main.contant_add_passenger.etPassportExpiryDate
+import kotlinx.android.synthetic.main.contant_add_passenger.etTitle
+import kotlinx.android.synthetic.main.contant_add_passenger.etpassportNationality
+import kotlinx.android.synthetic.main.contant_add_passenger.isLeadPassenger
+import kotlinx.android.synthetic.main.contant_add_passenger.ivPassportPageUpload
+import kotlinx.android.synthetic.main.contant_add_passenger.ivVisaPageUpload
+import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutContactNumber
+import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutCountry
+import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutDateOfBirthday
+import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutEmail
+import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutFirstName
+import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutGender
+import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutLastName
+import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutNId
+import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutPassengerType
+import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutPassport
+import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutPassportExpiryDate
+import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutTitle
+import kotlinx.android.synthetic.main.contant_add_passenger.textLayoutPassportNationality
 import kotlinx.android.synthetic.main.contant_reissue_containt.*
-import kotlinx.android.synthetic.main.contant_reissue_containt.btn_add
-import kotlinx.android.synthetic.main.contant_reissue_containt.etContactNumber
-import kotlinx.android.synthetic.main.contant_reissue_containt.etCountry
-import kotlinx.android.synthetic.main.contant_reissue_containt.etDateOfBirth
-import kotlinx.android.synthetic.main.contant_reissue_containt.etEmail
-import kotlinx.android.synthetic.main.contant_reissue_containt.etFirstName
-import kotlinx.android.synthetic.main.contant_reissue_containt.etGender
-import kotlinx.android.synthetic.main.contant_reissue_containt.etLastName
-import kotlinx.android.synthetic.main.contant_reissue_containt.etNationalIDNumber
-import kotlinx.android.synthetic.main.contant_reissue_containt.etNidorPassportNumber
-import kotlinx.android.synthetic.main.contant_reissue_containt.etPassengerType
-import kotlinx.android.synthetic.main.contant_reissue_containt.etPassportExpiryDate
-import kotlinx.android.synthetic.main.contant_reissue_containt.etTitle
-import kotlinx.android.synthetic.main.contant_reissue_containt.etpassportNationality
-import kotlinx.android.synthetic.main.contant_reissue_containt.isLeadPassenger
-import kotlinx.android.synthetic.main.contant_reissue_containt.ivPassportPageUpload
-import kotlinx.android.synthetic.main.contant_reissue_containt.ivVisaPageUpload
-import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutContactNumber
-import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutCountry
-import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutDateOfBirthday
-import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutEmail
-import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutFirstName
-import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutGender
-import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutLastName
-import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutNId
-import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutPassengerType
-import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutPassport
-import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutPassportExpiryDate
-import kotlinx.android.synthetic.main.contant_reissue_containt.textInputLayoutTitle
-import kotlinx.android.synthetic.main.contant_reissue_containt.textLayoutPassportNationality
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -194,7 +192,7 @@ class AddPassengerActivity : AirTricketBaseActivity() {
                 etLastName.setText(oldPassenger.lastName)
                 etGender.setText(oldPassenger.gender)
                 etDateOfBirth.setText(oldPassenger.dateOfBirth)
-                etCountry.setText(oldPassenger.country)
+                ap_etCountry.setText(oldPassenger.country)
                 etContactNumber.setText(oldPassenger.contactNumber)
                 etEmail.setText(oldPassenger.email)
                 etNidorPassportNumber.setText(oldPassenger.passportNumber)
@@ -238,7 +236,7 @@ class AddPassengerActivity : AirTricketBaseActivity() {
 
 
                 val countryCode1 = CountryUtility.getCountryCode(oldPassenger.countryCode)
-                etCountry.setText("" + countryCode1.toString())
+                ap_etCountry.setText("" + countryCode1.toString())
                 this.countryCode = oldPassenger.countryCode
 
 
@@ -267,10 +265,10 @@ class AddPassengerActivity : AirTricketBaseActivity() {
         })
 
 
-        etCountry.setOnClickListener {
+        ap_etCountry.setOnClickListener {
             handleCountry(KEY_COUNTRY)
         }
-        etCountry.setOnFocusChangeListener(OnFocusChangeListener { view, hasFocus ->
+        ap_etCountry.setOnFocusChangeListener(OnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
                 handleCountry(KEY_COUNTRY)
             }
@@ -444,14 +442,14 @@ class AddPassengerActivity : AirTricketBaseActivity() {
                 .listener(object : OnCountryPickerListener {
                     override fun onSelectCountry(country: Country) {
                         if (KEY_COUNTRY.equals(key)) {
-                            etCountry.setText("" + country.name)
+                            ap_etCountry.setText("" + country.name)
                             countryCode = country.code
                         } else if (KEY_PASSPORT_NATIONALITY.equals(key)) {
                             etpassportNationality.setText("" + country.name)
 
 
                             var nationality = "";
-                            val countriesString = AssetHelper().loadJSONFromAsset(applicationContext, "countries.json")
+                            val countriesString = AssetHelper().loadJSONFromAsset(this@AddPassengerActivity, "countries.json")
                             val countries = Gson().fromJson(countriesString, Array<MyCountry>::class.java)
                             countries.forEach {
                                 if (it.en_short_name.equals(country.name)) {
@@ -511,7 +509,7 @@ class AddPassengerActivity : AirTricketBaseActivity() {
         val title = this.etTitle.text.toString().trim()
         val firstName = this.etFirstName.text.toString().trim()
         val lastName = this.etLastName.text.toString().trim()
-        val country = this.etCountry.text.toString().trim()
+        val country = this.ap_etCountry.text.toString().trim()
         val gender = this.etGender.text.toString().trim()
         val dateOfBirthDay = this.etDateOfBirth.text.toString().trim()
         val contactNumber = this.etContactNumber.text.toString().trim()
@@ -590,14 +588,14 @@ class AddPassengerActivity : AirTricketBaseActivity() {
         }
 
 
-        var nationality = "";
-        val countriesString = AssetHelper().loadJSONFromAsset(applicationContext, "countries.json")
-        val countries = Gson().fromJson(countriesString, Array<MyCountry>::class.java)
-        countries.forEach {
-            if (it.en_short_name.equals(country)) {
-                nationality = it.nationality
-            }
-        }
+        var nationality = "Bangladeshi";
+//        val countriesString = AssetHelper().loadJSONFromAsset(this, "countries.json")
+//        val countries = Gson().fromJson(countriesString, Array<MyCountry>::class.java)
+//        countries.forEach {
+//            if (it.en_short_name.equals(country)) {
+//                nationality = it.nationality
+//            }
+//        }
 
 
         if (passportMadatory) {

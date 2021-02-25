@@ -12,41 +12,73 @@
 
     <TextView
         android:id="@+id/tvFirstNameAndLastName"
-        android:layout_width="0dp"
+        style="@style/medium_text_style"
+        android:layout_width="wrap_content"
         android:layout_height="23dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="2dp"
         android:ellipsize="end"
+        android:gravity="left"
         android:maxLines="1"
-        android:textColor="#666666"
-        app:layout_constraintEnd_toStartOf="@+id/ivIsSeleted"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text=""/>
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/passanger_ic"
+        app:layout_constraintStart_toEndOf="@+id/passanger_ic"
+        app:layout_constraintTop_toTopOf="@+id/passanger_ic"
+        tools:text="Mohammad Kudratullah" />
 
     <TextView
+        android:textColor="#ff0000"
+        android:textSize="@dimen/_10sp"
+        style="@style/text_style"
         android:id="@+id/tvPassportNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:textColor="#808080"
         app:layout_constraintEnd_toStartOf="@+id/ivIsSeleted"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvFirstNameAndLastName"
         app:layout_constraintTop_toBottomOf="@+id/tvFirstNameAndLastName"
-        tools:text="Passport"/>
+        tools:text="Passport expired" />
 
     <ImageView
+        android:visibility="gone"
         android:id="@+id/ivIsSeleted"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/selected"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/passanger_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/adult" />
+
+    <ImageView
+        android:id="@+id/imageView351"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvFirstNameAndLastName"
+        app:srcCompat="@drawable/delate_noborder" />
+
+    <ImageView
+        android:id="@+id/imageView352"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView351"
+        app:layout_constraintTop_toTopOf="@+id/tvFirstNameAndLastName"
+        app:srcCompat="@drawable/edit_noborder" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
