@@ -1,6 +1,6 @@
 package com.cloudwell.paywell.utils
 
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.Segment
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.model.Segment
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.OutputSegment
 import java.text.SimpleDateFormat
 import java.util.*

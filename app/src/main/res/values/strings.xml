@@ -1103,6 +1103,47 @@
     <string name="please_press_the_try_again_button">Please press the try again button</string>
     <string name="review_book"><![CDATA[Review & book]]></string>
     <string name="air_rules_fare"><![CDATA[Air rules & fare]]></string>
+    <string name="network_error">Network error!</string>
+    <string name="bus_transction_log_title">Transaction Log</string>
+    <string name="no_data_found">No data found.</string>
+    <string name="departure_ticket" translatable="false">Departure</string>
+    <string name="round_bus" translatable="false">Return Ticket</string>
+    <string name="custom_filter" translatable="false">Custom filter</string>
+    <string name="no_search_results">No search results</string>
+    <string name="journey_date" translatable="false">Journey Date</string>
+    <string name="journey_type" translatable="false">Journey type</string>
+    <string name="journey_time" translatable="false">Journey time</string>
+    <string name="time" translatable="false">Time</string>
+    <string name="include_prices" translatable="false">(include charges)</string>
+    <string name="search_text_bus" translatable="false">Search</string>
+    <string name="booked" translatable="false">Booked</string>
+    <string name="available" translatable="false">Available</string>
+    <string name="place_a_barcode_inside_the_rectangle_to_scan_it" translatable="false">Place a Barcode inside the rectangle to scan it</string>
+    <string name="all_city" translatable="false">All City</string>
+    <string name="search_city" translatable="false">Search City</string>
+    <string name="going_to" translatable="false">Going To</string>
+    <string name="leaving_from" translatable="false">Leaving From</string>
+    <string name="cancel_ticket_list_button">Cancel Ticket</string>
+    <string name="sort_by_price" translatable="false">Sort by price</string>
+    <string name="coach_no" translatable="false">Coach no</string>
+    <string name="departure" translatable="false">Departure</string>
+    <string name="available_seat" translatable="false">Available Seat</string>
+    <string name="ticket_cancelable" translatable="false">Ticket Cancelable</string>
+    <string name="bus_address" translatable="false">Address *</string>
+    <string name="not_available">Not available</string>
+    <string name="totat_amont_bus" translatable="false">Total amount </string>
+    <string name="bus_info_gender" translatable="false">Gender</string>
+    <string name="invalid_full_name">Invalid full name</string>
+    <string name="Invalid_mobile_number">Invalid mobile number</string>
+    <string name="invalid_age">Invalid age</string>
+    <string name="invalid_address">Invalid address</string>
+    <string name="selected_seat" translatable="false">Selected seat:</string>
+    <string name="total_amount_bus" translatable="false">Total amount:</string>
+    <string name="select_your_seat">Select your seat</string>
+    <string name="this_ticket_can_t_be_cancelable" translatable="false">This ticket can’t be cancelable</string>
+    <string name="any_kind_of_ticket_cancellation_bus" translatable="false">Any kind of ticket cancellation might not be allowed during Public Holidays journey as per bus company decision.</string>
+    <string name="any_kind_of_ticket_cancellation_lunch" translatable="false">Any kind of ticket cancellation might not be allowed during public holidays journey as per launch company decision.​</string>
+
 
 
 </resources>

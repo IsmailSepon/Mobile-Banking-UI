@@ -4,13 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.PAuthenticationHostActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.ApplockManager
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.menu.AirTicketMenuActivity
 
 class PrePSPsplashActivity : AppCompatActivity() {
 
-    private val SPLASH_DISPLAY_LENGTH = 3000
+    private val SPLASH_DISPLAY_LENGTH = 1000
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +27,8 @@ class PrePSPsplashActivity : AppCompatActivity() {
         Handler().postDelayed({
 
 //            if (userMobileNumber!= ""){
-//            val mainIntent = Intent(this, PAuthenticationHostActivity::class.java)
-            val mainIntent = Intent(this, AirTicketMenuActivity::class.java)
+            val mainIntent = Intent(this, PAuthenticationHostActivity::class.java)
+           // val mainIntent = Intent(this, AirTicketMenuActivity::class.java)
 
            // startActivity(Intent(this, AirTicketMenuActivity::class.java))
             this.startActivity(mainIntent)

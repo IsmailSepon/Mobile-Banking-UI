@@ -71,5 +71,12 @@
     <color name="slycalendar_defSelectedTextColor">#ffffff</color>
 
 
+    <color name="bus_ticket_status_color">#00001a</color>
+    <color name="bus_ticket_toolbar_title_text_color">#ffffff</color>
+    <color name="bus_ticket_toolbar_backgroud_color">#00203f</color>
+    <color name="bus_button_color">#00203f</color>
+    <color name="bus_action_menu_text_color">#268472</color>
+
+
 
 </resources>

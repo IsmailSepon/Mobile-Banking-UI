@@ -7,7 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.menu.AirTicketMenuActivity
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.analytics.AnalyticsManager
+import com.cloudwell.paywell.analytics.AnalyticsParameters
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.uiCommon.PaymentMainActivity
 import com.cloudwell.paywell.uiCommon.pay.adapter.PayAdapter
 import com.cloudwell.paywell.uiCommon.pay.adapter.PaymentAdapter
@@ -16,7 +20,7 @@ import com.cloudwell.paywell.uiCommon.pay.model.PaytoPOjo
 import kotlinx.android.synthetic.main.payments_main_layout.view.*
 
 
-class PaymentsMainFragment : Fragment() {
+class PaymentsMainFragment : Fragment(), PaymentAdapter.PaymentClickListener {
 
 
     override fun onCreateView(
@@ -86,9 +90,9 @@ class PaymentsMainFragment : Fragment() {
         paymentlist.add(payment4)
         paymentlist.add(payment5)
 
-        recycler1.adapter  = activity?.applicationContext?.let { PaymentAdapter(it, paymentlist) }
-
-
+        val adapter= PaymentAdapter(requireContext(), paymentlist)
+        recycler1.adapter  = adapter //activity?.applicationContext?.let { PaymentAdapter(it, paymentlist) }
+        adapter.setClickListener(this)
 
 
         view.username_txt.setOnClickListener(View.OnClickListener {
@@ -145,9 +149,34 @@ class PaymentsMainFragment : Fragment() {
         })
 
 
+        view.ticket_btn.setOnClickListener(View.OnClickListener {
+
+            val intent = Intent(view.context, PaymentMainActivity::class.java)
+            intent.putExtra("payments", "7")
+            view.context.startActivity(intent)
+
+        })
+
+
 
 
         return view
+    }
+
+    override fun onPaymentClick(pojo: MyPaymentPOjo, view: View, position: Int) {
+
+        if (pojo.name.equals("Bus ticket")){
+
+//            AppStorageBox.put(requireContext(), AppStorageBox.Key.IS_BUS_Ticket_USER_FLOW, true)
+//            AnalyticsManager.sendScreenView(AnalyticsParameters.KEY_BUS_TICKET)
+//            startActivity(Intent(requireContext(), BusTicketMenuActivity::class.java))
+
+        }else if (pojo.name.equals("Air ticket")){
+             val mainIntent = Intent(requireContext(), AirTicketMenuActivity::class.java)
+            this.startActivity(mainIntent)
+        }
+
+
     }
 
 

@@ -1,22 +1,41 @@
 package com.cloudwell.paywell.retrofit;
 
 
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.booking.model.BookingList;
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.bookingStatus.model.ResIssueTicket;
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.RequestAirPrebookingSearchParamsForServer;
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.ResAirPreBooking;
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.finalReview.model.ResBookingAPI;
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.RequestAirPriceSearch;
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.ResposeAirPriceSearch;
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails1.model.airRules.ResposeAirRules;
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketCencel.model.ResSingleBooking;
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.ticketViewer.model.ResInvoideEmailAPI;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.booking.model.BookingList;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.bookingStatus.model.ResIssueTicket;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.finalReview.model.RequestAirPrebookingSearchParamsForServer;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.finalReview.model.ResAirPreBooking;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.finalReview.model.ResBookingAPI;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.model.RequestAirPriceSearch;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.model.ResposeAirPriceSearch;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.model.airRules.ResposeAirRules;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.ticketCencel.model.ResSingleBooking;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.ticketViewer.model.ResInvoideEmailAPI;
 import com.cloudwell.paywell.app.APIResposeGenerateToken;
 import com.cloudwell.paywell.notification.model.ResposeReScheduleNotificationAccept;
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.ReposeAirSearch;
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.airportSearch.model.RequestAirSearch;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.RequestAirSearch;
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.ResGetAirports;
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.ResCommistionMaping;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransactionLog.RequestBusTranstionLog;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.RequestTicketInformationForCancel;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.ResponseTicketInformationCancel;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.RequestRenerateOtpForCancelTicket;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResGetBusListData;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResPaymentBookingAPI;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.BusLunCityRequest;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.BusLunCityResponse;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.CancelBookedTicketReques;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.CancelBookedTicketResponse;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.GetSeatViewRquestPojo;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.RequestScheduledata;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.SeatBlockRequestPojo;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.TicketInformationForCancelRequest;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ReqConfirmTicket;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResBookAPI;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm_cancel.ConfirmTicketCancelResponse;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.transactionLog.TransactionLogDetailsModel;
 import com.cloudwell.paywell.services.activity.notification.model.RequestSDABalancceRetrun;
 import com.cloudwell.paywell.services.activity.notification.model.ResNotificationAPI;
 import com.cloudwell.paywell.services.activity.notification.model.deletetNotification.ReposeDeletedNotification;
@@ -241,15 +260,16 @@ public interface APIService {
 //    @Multipart
 //    Call<ResEKReport> getReport(@Url String url, @Part("uid") String rid, @Part("start_date") String start_date, @Part("end_date") String end_date, @Part("order_code") String order_code, @Part(ParameterUtility.KEY_REF_ID) String refId);
 //
-//    @POST("PaywellParibahanService/getBusListData")
-//    @FormUrlEncoded
-//    Call<ResGetBusListData> getBusListData(@Field("username") String username, @Field("skey") String skey, @Field(ParameterUtility.KEY_REF_ID) String refId);
-//
-//
-//    @POST("PaywellParibahanService/getBusSchedule?")
-//    @FormUrlEncoded
-//    Call<ResponseBody> getBusSchedule(@Field("username") String username, @Field("transport_id") String transport_id, @Field("skey") String skey, @Field("accessKey") String accessKey, @Field(ParameterUtility.KEY_REF_ID) String refId);
-//
+    @POST("PaywellParibahanService/getBusListData")
+    @FormUrlEncoded
+    Call<ResGetBusListData> getBusListData(@Field("username") String username, @Field("skey") String skey, @Field(ParameterUtility.KEY_REF_ID) String refId);
+
+
+
+    @POST("PaywellParibahanService/getBusSchedule?")
+    @FormUrlEncoded
+    Call<ResponseBody> getBusSchedule(@Field("username") String username, @Field("transport_id") String transport_id, @Field("skey") String skey, @Field("accessKey") String accessKey, @Field(ParameterUtility.KEY_REF_ID) String refId);
+
 //
 //    @FormUrlEncoded
 //    @POST("PaywellParibahanService/seatCheck")
@@ -264,9 +284,9 @@ public interface APIService {
 //                                 @Field("seat_ids") String seat_ids,
 //                                 @Field(ParameterUtility.KEY_REF_ID) String refId);
 //
-//
-//    @POST("Tickets/BusAndLaunchService/getTransactionData")
-//    Call<TransactionLogDetailsModel> getBusTransactionLogFromServer(@Body RequestBusTranstionLog requestBusTranstionLog);
+
+    @POST("Tickets/BusAndLaunchService/getTransactionData")
+    Call<TransactionLogDetailsModel> getBusTransactionLogFromServer(@Body RequestBusTranstionLog requestBusTranstionLog);
 //
 //    @POST
 //    @FormUrlEncoded
@@ -297,21 +317,21 @@ public interface APIService {
 //                                                @Field("ticket_price") Double ticket_price,
 //                                                @Field("total_amount") String total_amount,
 //                                                @Field(ParameterUtility.KEY_REF_ID) String refId);
-//
-//    @FormUrlEncoded
-//    @POST("PaywellParibahanService/confirmPayment")
-//    Call<ResPaymentBookingAPI> confirmPayment(@Field("username") String username,
-//                                              @Field("skey") String skey,
-//                                              @Field("accessKey") String accessKey,
-//                                              @Field("transactionId") String transactionId,
-//                                              @Field("customerName") String customerName,
-//                                              @Field("customerPhone") String customerPhone,
-//                                              @Field("customerAddress") String customerAddress,
-//                                              @Field("customerEmail") String customerEmail,
-//                                              @Field("customerAge") String customerAge,
-//                                              @Field("customerGender") String customerGender,
-//                                              @Field("password") String password,
-//                                              @Field(ParameterUtility.KEY_REF_ID) String refId);
+
+    @FormUrlEncoded
+    @POST("PaywellParibahanService/confirmPayment")
+    Call<ResPaymentBookingAPI> confirmPayment(@Field("username") String username,
+                                              @Field("skey") String skey,
+                                              @Field("accessKey") String accessKey,
+                                              @Field("transactionId") String transactionId,
+                                              @Field("customerName") String customerName,
+                                              @Field("customerPhone") String customerPhone,
+                                              @Field("customerAddress") String customerAddress,
+                                              @Field("customerEmail") String customerEmail,
+                                              @Field("customerAge") String customerAge,
+                                              @Field("customerGender") String customerGender,
+                                              @Field("password") String password,
+                                              @Field(ParameterUtility.KEY_REF_ID) String refId);
 //
 //    @POST("Utility/PollyBiddyutSystem/pollyBiddyutBillPayAsync")
 //    Call<PalliBidyutBillPayResponse> postPalliBidyutBills(@Body PalliBidyutBillPayRequest body);
@@ -592,43 +612,43 @@ public interface APIService {
 //
 //
 //    //Bus lunch ticket new version
+
+    @POST("Tickets/BusAndLaunchService/busAndLaunchCities")
+    Call<BusLunCityResponse> getbusAndLaunchCities(@Body BusLunCityRequest busLunCityRequest);
+
+    @POST("Tickets/BusAndLaunchService/getScheduleData")
+    Call<ResponseBody> getScheduleData(@Body RequestScheduledata requestScheduledata);
+
+    @POST("Tickets/BusAndLaunchService/getSeatView")
+    Call<ResponseBody> getSeatView(@Body GetSeatViewRquestPojo getSeatViewRquestPojo);
+
 //
-//    @POST("Tickets/BusAndLaunchService/busAndLaunchCities")
-//    Call<BusLunCityResponse> getbusAndLaunchCities(@Body BusLunCityRequest busLunCityRequest);
-//
-//    @POST("Tickets/BusAndLaunchService/getScheduleData")
-//    Call<ResponseBody> getScheduleData(@Body RequestScheduledata requestScheduledata);
-//
-//    @POST("Tickets/BusAndLaunchService/getSeatView")
-//    Call<ResponseBody> getSeatView(@Body GetSeatViewRquestPojo getSeatViewRquestPojo);
-//
-//
-//    @POST("Tickets/BusAndLaunchService/getSeatStatus")
-//    Call<ResponseBody> getSeatStatus(@Body GetSeatViewRquestPojo GetSeatViewRquestPojo);
-//
-//    @POST("Tickets/BusAndLaunchService/seatBlock")
-//    Call<ResBookAPI> seatBlock(@Body SeatBlockRequestPojo seatBlockRequestPojo);
-//
-//    @POST("Tickets/BusAndLaunchService/cancelBookedTicket")
-//    Call<CancelBookedTicketResponse> cancelBookedTicket(@Body CancelBookedTicketReques cancelBookedTicketReques);
-//
-//    @POST("Tickets/BusAndLaunchService/confirmTicket")
-//    Call<ResposeTicketConfirm> confirmTicket(@Body ReqConfirmTicket reqConfirmTicket);
-//
-//    @POST("Tickets/BusAndLaunchService/ticketInformationForCancel")
-//    Call<ConfirmTicketCancelResponse> ticketInformationForCancel(@Body TicketInformationForCancelRequest ticketInformationForCancelRequest);
-//
-//
-//    @POST("Tickets/BusAndLaunchService/ticketInformationForCancel")
-//    Call<ResponseTicketInformationCancel> ticketInformationForCancel(@Body RequestTicketInformationForCancel RequestTicketInformationForCancel);
-//
-//
-//    @POST("Tickets/BusAndLaunchService/cancelTicket")
-//    Call<ResponseTicketInformationCancel> cancelTicket(@Body RequestTicketInformationForCancel RequestTicketInformationForCancel);
-//
-//
-//    @POST("Tickets/BusAndLaunchService/generateOtpForCancelTicket")
-//    Call<ResponseTicketInformationCancel> generateOtpForCancelTicket(@Body RequestRenerateOtpForCancelTicket requestRenerateOtpForCancelTicket);
+    @POST("Tickets/BusAndLaunchService/getSeatStatus")
+    Call<ResponseBody> getSeatStatus(@Body GetSeatViewRquestPojo GetSeatViewRquestPojo);
+
+    @POST("Tickets/BusAndLaunchService/seatBlock")
+    Call<ResBookAPI> seatBlock(@Body SeatBlockRequestPojo seatBlockRequestPojo);
+
+    @POST("Tickets/BusAndLaunchService/cancelBookedTicket")
+    Call<CancelBookedTicketResponse> cancelBookedTicket(@Body CancelBookedTicketReques cancelBookedTicketReques);
+
+    @POST("Tickets/BusAndLaunchService/confirmTicket")
+    Call<ResposeTicketConfirm> confirmTicket(@Body ReqConfirmTicket reqConfirmTicket);
+
+    @POST("Tickets/BusAndLaunchService/ticketInformationForCancel")
+    Call<ConfirmTicketCancelResponse> ticketInformationForCancel(@Body TicketInformationForCancelRequest ticketInformationForCancelRequest);
+
+
+    @POST("Tickets/BusAndLaunchService/ticketInformationForCancel")
+    Call<ResponseTicketInformationCancel> ticketInformationForCancel(@Body RequestTicketInformationForCancel RequestTicketInformationForCancel);
+
+
+    @POST("Tickets/BusAndLaunchService/cancelTicket")
+    Call<ResponseTicketInformationCancel> cancelTicket(@Body RequestTicketInformationForCancel RequestTicketInformationForCancel);
+
+
+    @POST("Tickets/BusAndLaunchService/generateOtpForCancelTicket")
+    Call<ResponseTicketInformationCancel> generateOtpForCancelTicket(@Body RequestRenerateOtpForCancelTicket requestRenerateOtpForCancelTicket);
 //
 //
 //    @POST("Registration/UserRegistration/verifyUserPhoneNumberForRegistration")

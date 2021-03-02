@@ -6,7 +6,7 @@
               android:layout_height="match_parent"
               android:background="#F2F3F8"
               android:orientation="vertical"
-              tools:context="com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.passengerList.PassengerListActivity">
+              tools:context=".PrePSPVersion.Ui.ticket.airticket.passengerList.PassengerListActivity">
 
 
     <ScrollView

@@ -2,10 +2,9 @@ package com.cloudwell.paywell.database;
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
-
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.busTicket.model.Transport;
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport;
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.airticket.flightDetails2.model.Passenger;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails2.model.Passenger;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.Transport;
 import com.cloudwell.paywell.services.activity.myFavorite.model.FavoriteMenu;
 import com.cloudwell.paywell.services.activity.notification.model.NotificationDetailMessage;
 import com.cloudwell.paywell.services.activity.notification.notificaitonFullView.model.NotificationDetailMessageSync;
@@ -26,5 +25,7 @@ public abstract class AppDatabase extends RoomDatabase {
 
     public abstract AirtricketDab mAirtricketDab();
 
+
+    public abstract BusTicketDab mBusTicketDab();
 
 }

@@ -10,13 +10,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_40dp"
         android:layout_height="wrap_content">
 
 
         <ImageView
             android:id="@+id/imageView282"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
             android:layout_marginStart="17dp"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -304,6 +305,7 @@
 
 
             <TextView
+                android:id="@+id/ticket_btn"
                 style="@style/text_style"
                 android:layout_width="@dimen/_0dp"
                 android:layout_height="wrap_content"

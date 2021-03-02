@@ -169,5 +169,6 @@ public class AnalyticsParameters {
     public static final String KEY_REGISTRATION_FORTH_PAGE = "RegistrationForthPage";
     public static final String KEY_PENDING = "Pending";
 
+    public static final String KEY_BUS_TICKET = "BusTicket";
 
 }
