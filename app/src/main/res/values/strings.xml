@@ -1143,7 +1143,15 @@
     <string name="this_ticket_can_t_be_cancelable" translatable="false">This ticket can’t be cancelable</string>
     <string name="any_kind_of_ticket_cancellation_bus" translatable="false">Any kind of ticket cancellation might not be allowed during Public Holidays journey as per bus company decision.</string>
     <string name="any_kind_of_ticket_cancellation_lunch" translatable="false">Any kind of ticket cancellation might not be allowed during public holidays journey as per launch company decision.​</string>
-
+    <string name="verify_your_phone_number">Verify phone number</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="home_settings_change_pin">Change PIN</string>
+    <string name="old_pin_error_msg">Enter old pin</string>
+    <string name="new_pin_error_msg">Enter correct new pin</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="no_internet_connection_please_check_your_internet_connection">No internet connection Please check your internet connection</string>
+    <string name="change_pin_status_msg">Your PIN changed successfully</string>
+    <string name="try_again_msg">Please try again!</string>
 
 
 </resources>

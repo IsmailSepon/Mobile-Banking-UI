@@ -1,15 +1,15 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel
 
 import android.content.Intent
 import android.os.Bundle
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.BusTricketBaseActivity
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.base.BusTricketBaseActivity
+import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.cancelList.CancelListActivity
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.RequestTicketInformationForCancel
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.ResponseTicketInformationCancel
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.retrofit.ApiUtils
-import com.cloudwell.paywell.services.utils.ConnectionDetector
+import com.cloudwell.paywell.utils.ConnectionDetector
 import kotlinx.android.synthetic.main.activity_cencel_booking_bus.*
 import org.jetbrains.anko.toast
 import retrofit2.Call

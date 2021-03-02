@@ -11,6 +11,9 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.mo
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.model.airRules.ResposeAirRules;
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.ticketCencel.model.ResSingleBooking;
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.ticketViewer.model.ResInvoideEmailAPI;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model.RequestOtpCheck;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model.ResposeOptCheck;
+import com.cloudwell.paywell.activity.model.RequestChangePin;
 import com.cloudwell.paywell.app.APIResposeGenerateToken;
 import com.cloudwell.paywell.notification.model.ResposeReScheduleNotificationAccept;
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.ReposeAirSearch;
@@ -36,6 +39,10 @@ import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm;
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm_cancel.ConfirmTicketCancelResponse;
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.transactionLog.TransactionLogDetailsModel;
+import com.cloudwell.paywell.services.activity.home.model.ReposeGenerateOTP;
+import com.cloudwell.paywell.services.activity.home.model.RequestGenerateOTP;
+import com.cloudwell.paywell.services.activity.home.model.forgetPin.ReposeForgetPIn;
+import com.cloudwell.paywell.services.activity.home.model.forgetPin.RequestForgetPin;
 import com.cloudwell.paywell.services.activity.notification.model.RequestSDABalancceRetrun;
 import com.cloudwell.paywell.services.activity.notification.model.ResNotificationAPI;
 import com.cloudwell.paywell.services.activity.notification.model.deletetNotification.ReposeDeletedNotification;
@@ -374,21 +381,21 @@ public interface APIService {
     @POST("Authantication/PaywellAuth/refreshToken")
     Call<ResposeAppsAuth> refreshToken(@Header("Authorization") String AuthorizationKey, @Body RequestRefreshToken body);
 //
+
+    @POST("Authantication/PaywellAuth/checkOTP")
+    Call<ResposeOptCheck> checkOTP(@Body RequestOtpCheck body);
 //
-//    @POST("Authantication/PaywellAuth/checkOTP")
-//    Call<ResposeOptCheck> checkOTP(@Body RequestOtpCheck body);
-//
-//
-//    @POST("Authantication/PaywellAuth/resetPassword")
-//    Call<ReposeForgetPIn> resetPassword(@Body RequestForgetPin body);
-//
-//
-//    @POST("Authantication/PaywellAuth/changePassword")
-//    Call<ReposeForgetPIn> changePassword(@Body RequestChangePin body);
-//
-//
-//    @POST("Authantication/PaywellAuth/generateOTP")
-//    Call<ReposeGenerateOTP> generateOTP(@Body RequestGenerateOTP body);
+
+    @POST("Authantication/PaywellAuth/resetPassword")
+    Call<ReposeForgetPIn> resetPassword(@Body RequestForgetPin body);
+
+
+    @POST("Authantication/PaywellAuth/changePassword")
+    Call<ReposeForgetPIn> changePassword(@Body RequestChangePin body);
+
+
+    @POST("Authantication/PaywellAuth/generateOTP")
+    Call<ReposeGenerateOTP> generateOTP(@Body RequestGenerateOTP body);
 //
 //
 //    @POST("Reports/TransactionReportSystem/TransactionReport")

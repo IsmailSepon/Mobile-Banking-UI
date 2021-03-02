@@ -21,6 +21,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.cloudwell.paywell.R;
+import com.cloudwell.paywell.activity.dialog.ErrorMsgDialog;
 import com.cloudwell.paywell.appController.AppController;
 import com.cloudwell.paywell.appController.AppController2;
 import com.cloudwell.paywell.constant.AllConstant;
@@ -214,6 +215,18 @@ public class BaseActivity extends com.cloudwell.paywell.base.BaseActivity {
 
         builder.show();
 
+    }
+
+    public void showErrorMessagev1(String message) {
+        ErrorMsgDialog errorMsgDialog = new ErrorMsgDialog(message);
+        errorMsgDialog.show(getSupportFragmentManager(), "oTPVerificationMsgDialog");
+    }
+
+
+
+    public void showTryAgainDialog() {
+        ErrorMsgDialog errorMsgDialog = new ErrorMsgDialog(getString(R.string.try_again_msg));
+        errorMsgDialog.show(getSupportFragmentManager(), "oTPVerificationMsgDialog");
     }
 
     public AppController getApp() {

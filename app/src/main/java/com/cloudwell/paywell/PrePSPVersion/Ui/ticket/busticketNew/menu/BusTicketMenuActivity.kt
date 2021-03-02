@@ -13,7 +13,7 @@ import com.cloudwell.paywell.services.R
 import com.cloudwell.paywell.services.activity.base.BusTricketBaseActivity
 import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.BookingList
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransactionLog.BusTransactionLogActivity
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.BusCancelActiivty
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.BusCancelActiivty
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.search.BusCitySearchActivity
 import com.cloudwell.paywell.services.app.AppController
 import com.cloudwell.paywell.services.app.AppHandler
@@ -24,8 +24,6 @@ import com.cloudwell.paywell.services.utils.ConnectionDetector
 import com.cloudwell.paywell.services.utils.LanuageConstant.KEY_BANGLA
 import com.cloudwell.paywell.services.utils.LanuageConstant.KEY_ENGLISH
 import com.cloudwell.paywell.services.utils.StringConstant
-import kotlinx.android.synthetic.main.activity_air_ticket_main_contain.btTransationLog
-import kotlinx.android.synthetic.main.activity_air_ticket_main_contain.btViewTricket
 import kotlinx.android.synthetic.main.activity_bus_tricket_menu.*
 import java.util.*
 

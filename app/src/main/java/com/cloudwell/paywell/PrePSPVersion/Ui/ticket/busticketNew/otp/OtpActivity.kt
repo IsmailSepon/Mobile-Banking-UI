@@ -1,29 +1,29 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel
+package com.cloudwell.paywell.services.activity.home
 
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.widget.Toast
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model.RequestOtpCheck
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model.ResposeOptCheck
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.otp.OtpReceivedInterface
-import com.cloudwell.paywell.R
-import com.cloudwell.paywell.activity.ChangePinActivity
-import com.cloudwell.paywell.activity.dialog.ErrorMsgDialog
-import com.cloudwell.paywell.app.AppHandler
-import com.cloudwell.paywell.base.BusTricketBaseActivity
-import com.cloudwell.paywell.broadcast.SmsBroadcastReceiver
-import com.cloudwell.paywell.retrofit.ApiUtils
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.RequestTicketInformationForCancel
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.ResponseTicketInformationCancel
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.TicketInfo
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.dialog.BusTicketSuccess
+import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.services.activity.AppLoadingActivity
+import com.cloudwell.paywell.services.activity.base.BaseActivity
+import com.cloudwell.paywell.services.activity.home.model.ReposeGenerateOTP
+import com.cloudwell.paywell.services.activity.home.model.RequestGenerateOTP
+import com.cloudwell.paywell.services.activity.home.model.RequestOtpCheck
+import com.cloudwell.paywell.services.activity.home.model.ResposeOptCheck
+import com.cloudwell.paywell.services.activity.settings.ChangePinActivity
+import com.cloudwell.paywell.services.activity.utility.pallibidyut.bill.dialog.ErrorMsgDialog
+import com.cloudwell.paywell.services.activity.utility.pallibidyut.bill.dialog.OTPVerificationMsgDialog
+import com.cloudwell.paywell.services.app.AppHandler
+import com.cloudwell.paywell.services.retrofit.ApiUtils
+import com.cloudwell.paywell.services.utils.AppsStatusConstant
+import com.dhruv.timerbutton.ButtonAnimationListener
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.phone.SmsRetriever
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
-import kotlinx.android.synthetic.main.otp_dialog_bus_cancel.*
-import org.jetbrains.anko.toast
+import com.orhanobut.logger.Logger
+import kotlinx.android.synthetic.main.otp_dialog.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -32,21 +32,20 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 
-class BusTicketCancelOtpActivity : BusTricketBaseActivity(), GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
-    OtpReceivedInterface {
+class OtpActivity : BaseActivity(), GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, OtpReceivedInterface {
 
     var userNeedToChangePassword = false;
     var OTPMessaage = ""
     var pin = ""
-    var mTicketInfo = TicketInfo()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.otp_dialog_bus_cancel)
+        setContentView(R.layout.otp_dialog)
 
-        setToolbar("OTP Verification")
+        setToolbar(getString(R.string.title_otp_verfication));
 
+        userNeedToChangePassword = intent.getBooleanExtra("userNeedToChangePassword", false)
+        OTPMessaage = intent.getStringExtra("OTPMessaage")
         pin = intent.getStringExtra("pin")
-        mTicketInfo = intent.getParcelableExtra<TicketInfo>("data")
 
         tvOtpMessage.text = OTPMessaage
 
@@ -55,8 +54,7 @@ class BusTicketCancelOtpActivity : BusTricketBaseActivity(), GoogleApiClient.Con
 
             val otp = etMobileOrRID.text
 
-            mTicketInfo.otp = otp.toString()
-            callCancelAPI(mTicketInfo, pin)
+            callCheckOTP("" + otp)
 
         }
 
@@ -67,9 +65,74 @@ class BusTicketCancelOtpActivity : BusTricketBaseActivity(), GoogleApiClient.Con
         }
 
 
+        timer_button.setDuration(60000L);
+
+
+        timer_button.setButtonAnimationListener(object : OnClickHandler, ButtonAnimationListener {
+            override fun otpAutoCall(mobileNumber: String) {
+
+            }
+
+            override fun otpManualCall(mobileNumber: String) {
+
+            }
+
+            override fun onAnimationEnd() {
+
+
+            }
+
+            override fun onAnimationStart() {
+                calledResendOtp();
+            }
+
+            override fun onAnimationReset() {
+                Logger.v("")
+
+            }
+
+
+        })
+
+
     }
 
+    private fun calledResendOtp() {
+        showProgressDialog()
 
+        val m = RequestGenerateOTP()
+        m.username = AppHandler.getmInstance(applicationContext).userName
+
+        ApiUtils.getAPIServiceV2().generateOTP(m).enqueue(object : Callback<ReposeGenerateOTP> {
+            override fun onResponse(call: Call<ReposeGenerateOTP>, response: Response<ReposeGenerateOTP>) {
+                dismissProgressDialog()
+                if (response.isSuccessful) {
+
+                    response.body().let {
+                        if (it?.apiStatus ?: 0 == 200) {
+                            if (it?.responseDetails!!.status == 200) {
+                                Toast.makeText(applicationContext, it.responseDetails?.statusName, Toast.LENGTH_LONG).show()
+                            } else {
+                                Toast.makeText(applicationContext, it.responseDetails?.statusName, Toast.LENGTH_LONG).show()
+                                timer_button.reset()
+                            }
+                        } else {
+                            val errorMsgDialog = it?.apiStatusName?.let { it1 -> ErrorMsgDialog(it1) }
+                            errorMsgDialog?.show(supportFragmentManager, "oTPVerificationMsgDialog")
+                        }
+                    }
+
+                }
+            }
+
+            override fun onFailure(call: Call<ReposeGenerateOTP>, t: Throwable) {
+                dismissProgressDialog()
+                showTryAgainDialog()
+            }
+        })
+
+
+    }
 
     private var mGoogleApiClient: GoogleApiClient? = null
     private lateinit var mSmsBroadcastReceiver: SmsBroadcastReceiver
@@ -202,17 +265,17 @@ class BusTicketCancelOtpActivity : BusTricketBaseActivity(), GoogleApiClient.Con
 
 
                                     if (userNeedToChangePassword) {
-                                        val i = Intent(this@BusTicketCancelOtpActivity, ChangePinActivity::class.java)
+                                        val i = Intent(this@OtpActivity, ChangePinActivity::class.java)
                                         i.putExtra("isFirstTime", true);
                                         i.putExtra("pin", pin)
                                         startActivity(i)
                                         finish()
 
                                     } else {
-//                                        AppHandler.getmInstance(applicationContext).appStatus = AppsStatusConstant.KEY_login
-//                                        val i = Intent(this@BusTicketCancelOtpActivity, AppLoadingActivity::class.java)
-//                                        i.putExtra("pin", pin)
-//                                        startActivity(i)i
+                                        AppHandler.getmInstance(applicationContext).appStatus = AppsStatusConstant.KEY_login
+                                        val i = Intent(this@OtpActivity, AppLoadingActivity::class.java)
+                                        i.putExtra("pin", pin)
+                                        startActivity(i)
                                         finish()
                                     }
 
@@ -245,62 +308,14 @@ class BusTicketCancelOtpActivity : BusTricketBaseActivity(), GoogleApiClient.Con
     }
 
 
+
+
     private fun toHexString(bytes: ByteArray): String? {
         val formatter = Formatter()
         for (b in bytes) {
             formatter.format("%02x", b)
         }
         return formatter.toString()
-    }
-
-
-    private fun callCancelAPI(ticketInfo: TicketInfo, password: String) {
-
-        showProgressDialog()
-        var mAppHandler = AppHandler.getmInstance(applicationContext)
-
-        val userName = mAppHandler.userName
-
-        val m = RequestTicketInformationForCancel()
-        m.trxId = ticketInfo.trxId
-        m.ticketNo = ticketInfo.ticketNo
-        m.username = userName
-        m.password = password
-        m.otp = ticketInfo.otp
-
-        ApiUtils.getAPIServiceV2().cancelTicket(m).enqueue(object : Callback<ResponseTicketInformationCancel?> {
-            override fun onResponse(call: Call<ResponseTicketInformationCancel?>, response: Response<ResponseTicketInformationCancel?>) {
-                dismissProgressDialog()
-                if (response.isSuccessful) {
-                    val body = response.body()
-                    if (body?.statusCode == 200) {
-                        val dialog = body?.message?.let {
-                            BusTicketSuccess(it, object : BusTicketSuccess.OnClick {
-                                override fun onClick() {
-                                    finish()
-                                }
-                            })
-                        }
-                        dialog?.show(supportFragmentManager, "dialog");
-
-
-                    } else {
-                        body?.message?.let { showBusTicketErrorDialog(it, false) }
-
-                    }
-                } else {
-                    showBusTicketErrorDialog(getString(R.string.network_error))
-                }
-
-            }
-
-            override fun onFailure(call: Call<ResponseTicketInformationCancel?>, t: Throwable) {
-                toast(getString(R.string.network_error))
-                dismissProgressDialog()
-
-            }
-        })
-
     }
 
 }

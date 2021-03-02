@@ -243,5 +243,10 @@ dependencies {
     implementation 'com.github.franmontiel:FullScreenDialog:1.0.1'
 
 
+    // lib for SMS verification (Phone Auth)
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.0.0'
+
+
     
 }
