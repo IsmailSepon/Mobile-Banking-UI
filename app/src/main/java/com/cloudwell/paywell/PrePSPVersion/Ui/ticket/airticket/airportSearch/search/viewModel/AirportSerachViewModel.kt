@@ -1,11 +1,11 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.viewModel
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.viewModel
 
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.base.newBase.SingleLiveEvent
 import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.base.newBase.BaseViewState
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.AirTicketBaseViewMode
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.AirportSeachStatus
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.model.Airport
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.ResGetAirports
 
 /**
@@ -66,7 +66,7 @@ class AirportSerachViewModel : AirTicketBaseViewMode() {
     private fun getAirportListForRemoteAPI(serachParameter: String, appHandler: AppHandler, uniqueKey: String) {
         mViewStatus.value = AirportSeachStatus(noSerachFoundMessage = "", isShowProcessIndicatior = true)
 
-        mAirTicketRepository.getAirports(serachParameter, uniqueKey).observeForever {
+        mAirTicketRepository.getAirports(serachParameter).observeForever {
             val checkNetworkAndStatusCode = isOkNetworkAndStatusCode(it)
             if (checkNetworkAndStatusCode) {
 

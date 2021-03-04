@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
@@ -8,16 +8,16 @@ import kotlinx.android.parcel.Parcelize
 class Airline : Parcelable {
 
     @SerializedName("AirlineCode")
-    var airlineCode: String = ""
+    var airlineCode = ""
     @SerializedName("AirlineName")
-    var airlineName: String = ""
+    var airlineName = ""
     @SerializedName("BookingClass")
-    var bookingClass: String = ""
+    var bookingClass = ""
     @SerializedName("CabinClass")
-    var cabinClass: String = ""
+    var cabinClass = ""
     @SerializedName("FlightNumber")
-    var flightNumber: String = ""
+    var flightNumber = ""
     @SerializedName("OperatingCarrier")
-    var operatingCarrier: String = ""
+    var operatingCarrier = ""
 
 }

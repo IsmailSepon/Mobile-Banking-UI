@@ -27,18 +27,18 @@ open class BusTricketBaseActivity : MVVMBaseActivity() {
 
         changeAppTheme()
 
-        assert(supportActionBar != null)
-
-        if (supportActionBar != null) {
-            supportActionBar!!.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.bus_ticket_toolbar_backgroud_color)))
-            setActionbarTextColor(supportActionBar!!, resources.getColor(R.color.bus_ticket_toolbar_title_text_color))
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                window.statusBarColor = resources.getColor(R.color.bus_ticket_status_color, this.theme)
-            } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                window.statusBarColor = resources.getColor(R.color.bus_ticket_status_color)
-            }
-        }
+//        assert(supportActionBar != null)
+//
+//        if (supportActionBar != null) {
+//            supportActionBar!!.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.bus_ticket_toolbar_backgroud_color)))
+//            setActionbarTextColor(supportActionBar!!, resources.getColor(R.color.bus_ticket_toolbar_title_text_color))
+//
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                window.statusBarColor = resources.getColor(R.color.bus_ticket_status_color, this.theme)
+//            } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                window.statusBarColor = resources.getColor(R.color.bus_ticket_status_color)
+//            }
+//        }
     }
 
     fun setActionbarTextColor(actBar: ActionBar, color: Int) {

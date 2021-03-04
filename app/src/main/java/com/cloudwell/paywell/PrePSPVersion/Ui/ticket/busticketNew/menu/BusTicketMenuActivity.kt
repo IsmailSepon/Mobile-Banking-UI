@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.menu
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.menu
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,21 +9,21 @@ import android.widget.RadioButton
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDialog
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.BusTricketBaseActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.booking.model.BookingList
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransactionLog.BusTransactionLogActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.booking.model.BookingList
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransactionLog.BusTransactionLogActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.BusCancelActiivty
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.search.BusCitySearchActivity
-import com.cloudwell.paywell.services.app.AppController
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
-import com.cloudwell.paywell.services.constant.IconConstant
-import com.cloudwell.paywell.services.recentList.model.RecentUsedMenu
-import com.cloudwell.paywell.services.utils.ConnectionDetector
-import com.cloudwell.paywell.services.utils.LanuageConstant.KEY_BANGLA
-import com.cloudwell.paywell.services.utils.LanuageConstant.KEY_ENGLISH
-import com.cloudwell.paywell.services.utils.StringConstant
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.appController.AppController
+import com.cloudwell.paywell.base.BusTricketBaseActivity
+import com.cloudwell.paywell.constant.IconConstant
+import com.cloudwell.paywell.data.preferences.AppStorageBox
+import com.cloudwell.paywell.recentList.model.RecentUsedMenu
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.search.BusCitySearchActivity
+import com.cloudwell.paywell.utils.ConnectionDetector
+import com.cloudwell.paywell.utils.LanuageConstant.KEY_BANGLA
+import com.cloudwell.paywell.utils.LanuageConstant.KEY_ENGLISH
+import com.cloudwell.paywell.utils.StringConstant
 import kotlinx.android.synthetic.main.activity_bus_tricket_menu.*
 import java.util.*
 
@@ -89,10 +89,10 @@ class BusTicketMenuActivity : BusTricketBaseActivity(), View.OnClickListener, Co
     private fun addRecentUsedList(isBusTicket: Boolean) {
         if (isBusTicket) {
             val recentUsedMenu = RecentUsedMenu(StringConstant.KEY_home_bus, StringConstant.KEY_home_ticket, IconConstant.KEY_ic_ticket, 0, 34)
-            addItemToRecentListInDB(recentUsedMenu)
+         //   addItemToRecentListInDB(recentUsedMenu)
         } else {
             val recentUsedMenu = RecentUsedMenu(StringConstant.KEY_launch, StringConstant.KEY_launch, IconConstant.KEY_ic_launch_ticket, 0, 35)
-            addItemToRecentListInDB(recentUsedMenu)
+         //   addItemToRecentListInDB(recentUsedMenu)
 
         }
     }

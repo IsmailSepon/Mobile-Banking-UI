@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="@+id/ivSelect"
         app:layout_constraintStart_toEndOf="@+id/textView64"
         app:layout_constraintTop_toTopOf="@+id/textView64"
-        android:background="@drawable/right_arraw_bus" />
+        android:background="@drawable/right_arrow" />
 
     <TextView
         android:id="@+id/textView64"

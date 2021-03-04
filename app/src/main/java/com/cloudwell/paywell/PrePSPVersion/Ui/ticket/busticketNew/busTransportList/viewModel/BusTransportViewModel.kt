@@ -12,10 +12,10 @@ import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.SeatBlockRequestPojo
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.scheduledata.ScheduleDataItem
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.seatview.BordingPoint
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.viewMode.BusTicketBaseViewMode
-import com.cloudwell.paywell.services.app.AppController
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.retrofit.ApiUtils
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.viewMode.BusTicketBaseViewMode
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.appController.AppController2
+import com.cloudwell.paywell.retrofit.ApiUtils
 import com.google.gson.Gson
 import org.json.JSONObject
 import java.text.SimpleDateFormat
@@ -65,7 +65,7 @@ class BusTransportViewModel : BusTicketBaseViewMode() {
 
     fun cancelAllRequest() {
         if (ApiUtils.getClient() != null) {
-            ApiUtils.getClient().dispatcher().cancelAll()
+            ApiUtils.getClient().dispatcher.cancelAll()
         }
 
     }
@@ -319,7 +319,7 @@ class BusTransportViewModel : BusTicketBaseViewMode() {
 
     fun needToUpdateData(position: Int, model: ScheduleDataItem, retrunTriple: Boolean) {
 
-        val userName = AppHandler.getmInstance(AppController.getContext()).userName
+        val userName = AppHandler.getmInstance(AppController2.getContext()).userName
 
         val po = GetSeatViewRquestPojo()
 

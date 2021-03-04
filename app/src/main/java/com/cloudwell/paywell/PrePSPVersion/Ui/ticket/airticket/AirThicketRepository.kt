@@ -8,7 +8,7 @@ import com.cloudwell.paywell.database.DatabaseClient
 import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.ReposeAirSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.RequestAirSearch
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.model.Airport
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.ResGetAirports
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.booking.model.BookingList
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.bookingStatus.model.ResIssueTicket
@@ -64,7 +64,7 @@ class AirThicketRepository(private val mContext: Context) {
         return data
     }
 
-    fun getAirports(iso: String, uniqueKey: String): MutableLiveData<ResGetAirports> {
+    fun getAirports(iso: String): MutableLiveData<ResGetAirports> {
 
         mAppHandler = AppHandler.getmInstance(mContext)
         val userName = mAppHandler!!.userName

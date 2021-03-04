@@ -37,8 +37,8 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.PassengerBottomSh
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.SearchRoundTripModel;
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.RequestAirSearch;
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.Segment;
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity;
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.AirportsSearchActivity;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.model.Airport;
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightSearch.FlightSearchViewActivity;
 import com.cloudwell.paywell.utils.FormatHelper;
 import com.google.android.material.snackbar.Snackbar;

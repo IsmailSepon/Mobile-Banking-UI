@@ -24,8 +24,8 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.SearchRoundTripMo
 import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.Segment
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.AirportsSearchActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.model.Airport
 import com.cloudwell.paywell.utils.FormatHelper
 import com.franmontiel.fullscreendialog.FullScreenDialogFragment
 import kotlinx.android.synthetic.main.fragment_india_one_way.*

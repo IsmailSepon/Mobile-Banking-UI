@@ -802,17 +802,17 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
     }
 
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-
-        val busHosttActivity = activity as BusHosttActivity
-        if (!isRetrunTriple) {
-            busHosttActivity.setToolbar("Departure Ticket", resources.getColor(R.color.bus_ticket_toolbar_title_text_color))
-        } else {
-            busHosttActivity.setToolbar("Return Ticket", resources.getColor(R.color.bus_ticket_toolbar_title_text_color))
-        }
-
-    }
+//    override fun onBackPressed() {
+//        super.onBackPressed()
+//
+//        val busHosttActivity = activity as BusHosttActivity
+//        if (!isRetrunTriple) {
+//            busHosttActivity.setToolbar("Departure Ticket", resources.getColor(R.color.bus_ticket_toolbar_title_text_color))
+//        } else {
+//            busHosttActivity.setToolbar("Return Ticket", resources.getColor(R.color.bus_ticket_toolbar_title_text_color))
+//        }
+//
+//    }
 
     override fun onAttachFragment(childFragment: Fragment) {
         super.onAttachFragment(childFragment)

@@ -15,8 +15,8 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.*
 import com.cloudwell.paywell.services.activity.eticket.airticket.*
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.Segment
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.AirportsSearchActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.model.Airport
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightSearch.FlightSearchViewActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.app.AppHandler

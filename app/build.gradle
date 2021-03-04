@@ -23,6 +23,12 @@ android {
 
         //Enable the use of support library for vector drawables
         vectorDrawables.useSupportLibrary = true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+
 
     }
     buildTypes {
@@ -246,6 +252,9 @@ dependencies {
     // lib for SMS verification (Phone Auth)
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
     implementation 'com.google.android.gms:play-services-auth-api-phone:17.0.0'
+
+
+    implementation 'com.dt:timerbutton:0.1'
 
 
     

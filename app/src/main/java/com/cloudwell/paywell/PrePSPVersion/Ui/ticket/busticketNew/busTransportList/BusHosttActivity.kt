@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.fragment.TransportListFragment
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.view.IbusTransportListView
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.fragment.SortFragmentDialog
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.fragment.SortFragmentDialog
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResSeatCheckBookAPI
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.Transport
 import com.cloudwell.paywell.R
@@ -238,7 +238,7 @@ class BusHosttActivity : BusTricketBaseActivity(), IbusTransportListView, Transp
     private fun tellFragments() {
         val fragments: List<Fragment> = supportFragmentManager.fragments
         for (f in fragments) {
-            if (f is BaseFragment) f.onBackPressed()
+           // if (f is BaseFragment) f.onBackPressed()
         }
     }
 

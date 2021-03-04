@@ -1,9 +1,9 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.search.viewModel
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.search.viewModel
 
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTicketRepository.BusTicketRepository
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.search.view.ICitySerach
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.BusLunCityRequest
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.search.view.ICitySerach
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.viewMode.BusTicketBaseViewMode
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.viewMode.BusTicketBaseViewMode
 
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2019-06-24.

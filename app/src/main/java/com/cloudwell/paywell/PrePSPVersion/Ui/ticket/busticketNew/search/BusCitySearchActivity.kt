@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.search
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.search
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -9,19 +9,18 @@ import android.view.animation.AnimationUtils
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
 import androidx.lifecycle.ViewModelProviders
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.BusTricketBaseActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.BusHosttActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResSeatCheckBookAPI
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.appController.AppController2
+import com.cloudwell.paywell.base.BusTricketBaseActivity
+import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.view.IbusTransportListView
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResSeatCheckBookAPI
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.CitiesListItem
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.RequestScheduledata
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.scheduledata.ScheduleDataItem
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.search.FullScreenDialogBus.OnCitySet
-import com.cloudwell.paywell.services.app.AppController
-import com.cloudwell.paywell.services.app.storage.AppStorageBox
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_bus_city_search_new.*
 import kotlinx.android.synthetic.main.bus_advance_setttings.*
@@ -32,7 +31,7 @@ import java.util.*
 
 
 class
-BusCitySearchActivity : BusTricketBaseActivity(), OnCitySet, IbusTransportListView, OnItemSelectedListener {
+BusCitySearchActivity : BusTricketBaseActivity(), IbusTransportListView, OnItemSelectedListener {
 
     private var fromCitiesListItem: CitiesListItem? = null
     private var toCitiesListItem: CitiesListItem? = null
@@ -136,21 +135,21 @@ BusCitySearchActivity : BusTricketBaseActivity(), OnCitySet, IbusTransportListVi
 
         })
         fromLL.setOnClickListener(View.OnClickListener {
-            val dialog = FullScreenDialogBus()
-            val b = Bundle()
-            b.putString(FullSCREEN_DIALOG_HEADER, FROM_STRING)
-            dialog.arguments = b
-
-            val ft = supportFragmentManager.beginTransaction()
-            dialog.show(ft, FullScreenDialogBus.TAG)
+//            val dialog = FullScreenDialogBus()
+//            val b = Bundle()
+//            b.putString(FullSCREEN_DIALOG_HEADER, FROM_STRING)
+//            dialog.arguments = b
+//
+//            val ft = supportFragmentManager.beginTransaction()
+//            dialog.show(ft, FullScreenDialogBus.TAG)
         })
         toLL.setOnClickListener(View.OnClickListener { view: View? ->
-            val dialog = FullScreenDialogBus()
-            val b = Bundle()
-            b.putString(FullSCREEN_DIALOG_HEADER, TO_STRING)
-            dialog.arguments = b
-            val ft = supportFragmentManager.beginTransaction()
-            dialog.show(ft, FullScreenDialogBus.TAG)
+//            val dialog = FullScreenDialogBus()
+//            val b = Bundle()
+//            b.putString(FullSCREEN_DIALOG_HEADER, TO_STRING)
+//            dialog.arguments = b
+//            val ft = supportFragmentManager.beginTransaction()
+//            dialog.show(ft, FullScreenDialogBus.TAG)
         })
 
         radioGroupTripType.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->
@@ -361,7 +360,7 @@ BusCitySearchActivity : BusTricketBaseActivity(), OnCitySet, IbusTransportListVi
 
         val toJson = Gson().toJson(p)
 
-        AppStorageBox.put(AppController.getContext(), AppStorageBox.Key.RequestScheduledata, toJson)
+        AppStorageBox.put(AppController2.getContext(), AppStorageBox.Key.RequestScheduledata, toJson)
         val intent = Intent(applicationContext, BusHosttActivity::class.java)
         startActivity(intent)
 
@@ -454,20 +453,20 @@ BusCitySearchActivity : BusTricketBaseActivity(), OnCitySet, IbusTransportListVi
 
     }
 
-    override fun setCityData(citiesListItem: CitiesListItem, toOrFrom: String) {
-        if (toOrFrom == TO_STRING) {
-            busToCityTS.setText(citiesListItem.citiesName)
-            toString = citiesListItem.citiesName
-            toCitiesListItem  = citiesListItem
-        } else if (toOrFrom == FROM_STRING) {
-            busFromCityTS.setText(citiesListItem.citiesName)
-            fromString = citiesListItem.citiesName
-            fromCitiesListItem  = citiesListItem
-        } else {
-            Toast.makeText(this@BusCitySearchActivity, resources.getString(R.string.network_error), Toast.LENGTH_SHORT).show()
-        }
-        //getBoardingPoint();
-    }
+//    override fun setCityData(citiesListItem: CitiesListItem, toOrFrom: String) {
+//        if (toOrFrom == TO_STRING) {
+//            busToCityTS.setText(citiesListItem.citiesName)
+//            toString = citiesListItem.citiesName
+//            toCitiesListItem  = citiesListItem
+//        } else if (toOrFrom == FROM_STRING) {
+//            busFromCityTS.setText(citiesListItem.citiesName)
+//            fromString = citiesListItem.citiesName
+//            fromCitiesListItem  = citiesListItem
+//        } else {
+//            Toast.makeText(this@BusCitySearchActivity, resources.getString(R.string.network_error), Toast.LENGTH_SHORT).show()
+//        }
+//        //getBoardingPoint();
+//    }
 
 
     override fun showNoTripFoundUI() {

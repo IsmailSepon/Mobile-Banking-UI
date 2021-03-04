@@ -31,7 +31,7 @@ public interface BusTicketDab {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     long[] insertLocalBus(List<BusLocalDB> busLocalDBS);
-
+//
     @Query("DELETE FROM BusLocalDB")
     public void clearLocalBusDB();
 

@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.transportSelect.view
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.transportSelect.view
 
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.base.BaseView
 

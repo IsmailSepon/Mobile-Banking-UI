@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.dosInfoUpdate
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.dosInfoUpdate
 
 import android.content.Context
 import android.content.Intent
@@ -45,8 +45,8 @@ class UpdateDocOrInfomationRequestActivity : AirTricketBaseActivity(), ShowMessa
         lateinit var passengers: MutableList<Passenger>
         fun newIntent(context: Context, item: Datum): Intent {
             val intent = Intent(context, UpdateDocOrInfomationRequestActivity::class.java)
-            this.item = item
-            this.passengers = item.passengers as MutableList<Passenger>
+            Companion.item = item
+            passengers = item.passengers as MutableList<Passenger>
             return intent
         }
     }

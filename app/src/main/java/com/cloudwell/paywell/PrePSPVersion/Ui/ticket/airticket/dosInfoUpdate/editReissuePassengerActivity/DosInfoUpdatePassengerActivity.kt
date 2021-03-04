@@ -16,7 +16,7 @@ import com.cloudwell.paywell.constant.AllConstant.emailPattern
 import com.cloudwell.paywell.libarary.imagePickerAndCrop.ImagePickerActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.RequestAirSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.booking.model.Passenger
-import com.cloudwell.paywell.services.activity.eticket.airticket.dosInfoUpdate.UpdateDocOrInfomationRequestActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.dosInfoUpdate.UpdateDocOrInfomationRequestActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.passengerAdd.fragment.GenderBottomSheetDialog
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.passengerAdd.fragment.NameTitleSheetDialog
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.passengerAdd.fragment.PassengerTypeSheetDialog

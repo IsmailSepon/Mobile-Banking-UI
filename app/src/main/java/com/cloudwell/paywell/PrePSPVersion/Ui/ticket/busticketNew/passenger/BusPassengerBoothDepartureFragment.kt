@@ -20,7 +20,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.BusHosttActivity
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.view.IbusTransportListView
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.menu.BusTicketMenuActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.menu.BusTicketMenuActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.BoothInfo
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.RequestBusSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResSeatCheckBookAPI
@@ -334,15 +334,15 @@ class BusPassengerBoothDepartureFragment(var isRetrunTriple: Boolean) : BaseFrag
     }
 
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-
-        val busHosttActivity = activity as BusHosttActivity
-        if (!isRetrunTriple) {
-            busHosttActivity.setToolbar("Departure Ticket", resources.getColor(R.color.bus_ticket_toolbar_title_text_color))
-        } else {
-            busHosttActivity.setToolbar("Return Ticket", resources.getColor(R.color.bus_ticket_toolbar_title_text_color))
-        }
-
-    }
+//    override fun onBackPressed() {
+//        super.onBackPressed()
+//
+//        val busHosttActivity = activity as BusHosttActivity
+//        if (!isRetrunTriple) {
+//            busHosttActivity.setToolbar("Departure Ticket", resources.getColor(R.color.bus_ticket_toolbar_title_text_color))
+//        } else {
+//            busHosttActivity.setToolbar("Return Ticket", resources.getColor(R.color.bus_ticket_toolbar_title_text_color))
+//        }
+//
+//    }
 }

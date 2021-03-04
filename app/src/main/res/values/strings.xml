@@ -1049,7 +1049,6 @@
     <string name="base_fare">Base Fare</string>
     <string name="othercharges">Other Charges</string>
     <string name="review">Review</string>
-    <string name="no_search_results">No search results</string>
     <string name="search_again">Search again</string>
     <string name="title_serach_view">Search Flights</string>
     <string name="please_select_from_airport">Please select from airport</string>
@@ -1152,6 +1151,42 @@
     <string name="no_internet_connection_please_check_your_internet_connection">No internet connection Please check your internet connection</string>
     <string name="change_pin_status_msg">Your PIN changed successfully</string>
     <string name="try_again_msg">Please try again!</string>
+    <string name="bus_transction_log">Transaction Log</string>
+    <string name="cancel_ticket_list">Cancel Ticket</string>
+    <string name="title_ticket_cancel_list">Ticket cancel list</string>
+    <string name="home_eticket_bus">Bus Ticket</string>
+    <string name="launch">Launch Ticket</string>
+    <string name="title_otp_verfication">Mobile number verification</string>
+    <string name="search_transport_ticket">Search Bus Ticket</string>
+    <string name="search_transport_ticket_lunch">Search Launch Ticket</string>
+    <string name="text_bus_from_error">You must type the city from you want to travel</string>
+    <string name="text_bus_to_error">You must type the destination city you want to travel</string>
+    <string name="no_boarding_point_found">No boarding point found!!!</string>
+    <string name="transport">Transport</string>
+    <string name="services_alert_msg">Currently you are not authorized for this service</string>
+    <string name="one_way">One-way</string>
+    <string name="round_trip" translatable="false">Round trip</string>
+    <string name="please_select_a_transport">Please select a transport</string>
+    <string name="next_btn">Next</string>
+    <string name="star_sign">*</string>
+    <string name="old_pin_des">Old PIN Number:</string>
+    <string name="new_pin_des">New PIN Number:</string>
+    <string name="retype_pin_number">Retype PIN Number:</string>
+    <string name="advance_search" translatable="false">Advance search</string>
+    <string name="return_type" translatable="false">Return type</string>
+    <string name="return_time" translatable="false">Return time</string>
+    <string name="title_error_message">Message</string>
+    <string name="buy">Buy</string>
+    <string name="do_you_want_to_buy_this_ticket">Do you want to buy this ticket?</string>
+    <string name="didn_t_you_received_any_code">(If OTP is not received)</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="popular_city" translatable="false">Popular City</string>
+    <string name="finished">সম্পূর্ণ</string>
+    <string name="next_text">পরবর্তী</string>
+    <string name="we_have_send_you_an_sms_with_a_code_to_your_number">Verify  mobile number by entering  four digit OTP sent to your mobile number</string>
+    <string name="sort">Sort</string>
+    <string name="next">Next</string>
+
 
 
 </resources>

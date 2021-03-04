@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.model
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo

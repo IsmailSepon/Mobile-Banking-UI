@@ -1,10 +1,10 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.viewMode
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.viewMode
 
 
 import androidx.lifecycle.ViewModel
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTicketRepository.BusTicketRepository
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.Transport
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.transportSelect.view.IBusSeletedView
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.transportSelect.view.IBusSeletedView
 
 /**
  * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2019-06-24.

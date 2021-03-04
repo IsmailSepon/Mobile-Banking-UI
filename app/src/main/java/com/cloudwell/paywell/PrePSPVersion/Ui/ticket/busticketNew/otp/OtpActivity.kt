@@ -1,22 +1,21 @@
-package com.cloudwell.paywell.services.activity.home
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.otp
 
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.widget.Toast
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.AppLoadingActivity
-import com.cloudwell.paywell.services.activity.base.BaseActivity
-import com.cloudwell.paywell.services.activity.home.model.ReposeGenerateOTP
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model.RequestOtpCheck
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model.ResposeOptCheck
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.activity.ChangePinActivity
+import com.cloudwell.paywell.activity.dialog.ErrorMsgDialog
+import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.broadcast.SmsBroadcastReceiver
+import com.cloudwell.paywell.retrofit.ApiUtils
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.OTPVerificationMsgDialog
+import com.cloudwell.paywell.activity.model.ReposeGenerateOTP
 import com.cloudwell.paywell.services.activity.home.model.RequestGenerateOTP
-import com.cloudwell.paywell.services.activity.home.model.RequestOtpCheck
-import com.cloudwell.paywell.services.activity.home.model.ResposeOptCheck
-import com.cloudwell.paywell.services.activity.settings.ChangePinActivity
-import com.cloudwell.paywell.services.activity.utility.pallibidyut.bill.dialog.ErrorMsgDialog
-import com.cloudwell.paywell.services.activity.utility.pallibidyut.bill.dialog.OTPVerificationMsgDialog
-import com.cloudwell.paywell.services.app.AppHandler
-import com.cloudwell.paywell.services.retrofit.ApiUtils
-import com.cloudwell.paywell.services.utils.AppsStatusConstant
+import com.cloudwell.paywell.utils.AppsStatusConstant
 import com.dhruv.timerbutton.ButtonAnimationListener
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.phone.SmsRetriever
@@ -32,7 +31,8 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 
-class OtpActivity : BaseActivity(), GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, OtpReceivedInterface {
+class OtpActivity : com.cloudwell.paywell.ui.BaseActivity(), GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
+    OtpReceivedInterface {
 
     var userNeedToChangePassword = false;
     var OTPMessaage = ""
@@ -111,9 +111,9 @@ class OtpActivity : BaseActivity(), GoogleApiClient.ConnectionCallbacks, GoogleA
                     response.body().let {
                         if (it?.apiStatus ?: 0 == 200) {
                             if (it?.responseDetails!!.status == 200) {
-                                Toast.makeText(applicationContext, it.responseDetails?.statusName, Toast.LENGTH_LONG).show()
+                                Toast.makeText(applicationContext, it?.responseDetails?.statusName, Toast.LENGTH_LONG).show()
                             } else {
-                                Toast.makeText(applicationContext, it.responseDetails?.statusName, Toast.LENGTH_LONG).show()
+                                Toast.makeText(applicationContext, it?.responseDetails?.statusName, Toast.LENGTH_LONG).show()
                                 timer_button.reset()
                             }
                         } else {
@@ -273,9 +273,9 @@ class OtpActivity : BaseActivity(), GoogleApiClient.ConnectionCallbacks, GoogleA
 
                                     } else {
                                         AppHandler.getmInstance(applicationContext).appStatus = AppsStatusConstant.KEY_login
-                                        val i = Intent(this@OtpActivity, AppLoadingActivity::class.java)
-                                        i.putExtra("pin", pin)
-                                        startActivity(i)
+//                                        val i = Intent(this@OtpActivity, AppLoadingActivity::class.java)
+//                                        i.putExtra("pin", pin)
+//                                        startActivity(i)i
                                         finish()
                                     }
 

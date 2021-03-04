@@ -1,5 +1,6 @@
 package com.cloudwell.paywell.services.activity.eticket.busticketNew.model.transactionLog;
 
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.transactionLog.Datum;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;

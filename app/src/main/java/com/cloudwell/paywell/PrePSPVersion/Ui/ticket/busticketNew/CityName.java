@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew;
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew;
 
 /**
  * Created by YASIN on 25,June,2019

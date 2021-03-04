@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.cancelList
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cancelList
 
 import android.content.Context
 import android.content.Intent
@@ -12,16 +12,17 @@ import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.base.BusTricketBaseActivity
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cancelList.adapter.CancelListAdapter
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cancelList.adapter.CancelListAdapter.OnClick
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.BusTicketCancelOtpActivity
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.RequestTicketInformationForCancel
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.ResponseTicketInformationCancel
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.TicketInfo
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cancelList.adapter.CancelListAdapter
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cancelList.adapter.CancelListAdapter.OnClick
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.RequestRenerateOtpForCancelTicket
-import com.cloudwell.paywell.services.retrofit.ApiUtils
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.base.BusTricketBaseActivity
+import com.cloudwell.paywell.retrofit.ApiUtils
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.BusTicketCancelOtpActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model.RequestTicketInformationForCancel
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model.ResponseTicketInformationCancel
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model.TicketInfo
+import com.cloudwell.paywell.utils.viewUtil.toast
 import kotlinx.android.synthetic.main.activity_cancel_list.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -180,7 +181,7 @@ class CancelListActivity : BusTricketBaseActivity() {
 
             }
         }
-        builder.setNegativeButton(R.string.cancel_btn) { dialogInterface, i -> dialogInterface.dismiss() }
+        builder.setNegativeButton(R.string.cancel) { dialogInterface, i -> dialogInterface.dismiss() }
         val alert = builder.create()
         alert.show()
     }

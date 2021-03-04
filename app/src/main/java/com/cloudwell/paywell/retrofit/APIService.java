@@ -20,9 +20,9 @@ import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.m
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.RequestAirSearch;
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.ResGetAirports;
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.ResCommistionMaping;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransactionLog.RequestBusTranstionLog;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.RequestTicketInformationForCancel;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.ResponseTicketInformationCancel;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransactionLog.RequestBusTranstionLog;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model.RequestTicketInformationForCancel;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model.ResponseTicketInformationCancel;
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.RequestRenerateOtpForCancelTicket;
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResGetBusListData;
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResPaymentBookingAPI;
@@ -39,7 +39,7 @@ import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm;
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm_cancel.ConfirmTicketCancelResponse;
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.transactionLog.TransactionLogDetailsModel;
-import com.cloudwell.paywell.services.activity.home.model.ReposeGenerateOTP;
+import com.cloudwell.paywell.activity.model.ReposeGenerateOTP;
 import com.cloudwell.paywell.services.activity.home.model.RequestGenerateOTP;
 import com.cloudwell.paywell.services.activity.home.model.forgetPin.ReposeForgetPIn;
 import com.cloudwell.paywell.services.activity.home.model.forgetPin.RequestForgetPin;

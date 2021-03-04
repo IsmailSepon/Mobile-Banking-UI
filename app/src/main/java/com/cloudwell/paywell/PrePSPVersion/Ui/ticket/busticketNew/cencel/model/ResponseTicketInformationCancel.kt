@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

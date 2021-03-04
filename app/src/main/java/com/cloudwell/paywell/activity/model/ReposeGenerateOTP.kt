@@ -1,6 +1,5 @@
-package com.cloudwell.paywell.services.activity.home.model
+package com.cloudwell.paywell.activity.model
 
-import com.cloudwell.paywell.services.activity.utility.pallibidyut.bill.model.ResponseDetail
 import com.google.gson.annotations.SerializedName
 
 class ReposeGenerateOTP {
@@ -9,6 +8,6 @@ class ReposeGenerateOTP {
     @SerializedName("ApiStatusName")
     var apiStatusName: String =""
     @SerializedName("ResponseDetails")
-    var responseDetails: ResponseDetail? = null
+    var responseDetails: ResponseDetails? = null
 
 }

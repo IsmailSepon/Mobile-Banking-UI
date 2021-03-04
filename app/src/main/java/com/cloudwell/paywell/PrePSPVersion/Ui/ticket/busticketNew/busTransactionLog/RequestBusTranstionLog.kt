@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransactionLog
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransactionLog
 
 import com.google.gson.annotations.SerializedName
 

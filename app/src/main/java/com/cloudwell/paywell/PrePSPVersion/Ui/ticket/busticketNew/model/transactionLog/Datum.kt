@@ -1,5 +1,7 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.model.transactionLog
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.transactionLog
 
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.transactionLog.CustomerInfo
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.transactionLog.TicketInfo
 import com.google.gson.annotations.SerializedName
 
 

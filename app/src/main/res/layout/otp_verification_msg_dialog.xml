@@ -56,7 +56,6 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="32dp"
                 android:background="@drawable/round_btn_blue"
-                android:drawableLeft="@drawable/otp_ok_icon"
                 android:paddingLeft="16dp"
                 android:paddingTop="8dp"
                 android:paddingRight="16dp"

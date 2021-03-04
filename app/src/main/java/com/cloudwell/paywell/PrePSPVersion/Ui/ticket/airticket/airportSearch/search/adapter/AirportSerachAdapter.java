@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.TextView;
 import com.cloudwell.paywell.R;
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.model.Airport;
 import com.cloudwell.paywell.utils.FormatHelper;
 import java.util.ArrayList;
 import java.util.List;

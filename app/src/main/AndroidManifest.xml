@@ -27,12 +27,22 @@
         android:theme="@style/FullScreen"
         tools:replace="android:allowBackup">
 
+        <activity android:name=".base.BusTricketBaseActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.busTransactionLog.BusTransactionLogActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.busTransportList.BusHosttActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.cancelList.CancelListActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.cencel.BusCancelActiivty"/>
+        <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.cencel.BusTicketCancelOtpActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.menu.BusTicketMenuActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.otp.OtpActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.search.BusCitySearchActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.transportSelect.TransportSelectActivity"/>
         <activity android:name="com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.BaggageAndPoliciesActiivty"/>
         <activity android:name="com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.passengerAdd.AddPassengerActivity"/>
         <activity android:name="com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightSearch.FlightSearchViewActivity"/>
         <activity android:name="com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.FlightDetails1Activity"/>
         <activity android:name="com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails2.FlightDetails2Activity"/>
-        <activity android:name=".services.activity.eticket.airticket.airportSearch.search.AirportsSearchActivity"
+        <activity android:name=".PrePSPVersion.Ui.ticket.airticket.airportSearch.search.AirportsSearchActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name="com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.base.AirTricketBaseActivity"
             android:theme="@style/AppTheme.NoActionBar"/>

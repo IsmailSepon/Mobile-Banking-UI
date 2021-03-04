@@ -1,11 +1,11 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.fragment
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.cloudwell.paywell.services.R
+import com.cloudwell.paywell.R
 import kotlinx.android.synthetic.main.fragment_bus_status_fragment.view.*
 import kotlinx.android.synthetic.main.fragment_prices_change.view.tvYourSeats
 

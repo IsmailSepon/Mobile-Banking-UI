@@ -1,7 +1,7 @@
 package com.cloudwell.paywell.utils
 
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Airline
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.Fare
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.Airline
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.Fare
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.Commission
 import com.google.gson.Gson
 import java.text.NumberFormat

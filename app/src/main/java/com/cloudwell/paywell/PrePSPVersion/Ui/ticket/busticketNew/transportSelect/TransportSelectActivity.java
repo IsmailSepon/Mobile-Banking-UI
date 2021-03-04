@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.transportSelect;
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.transportSelect;
 
 
 import android.content.Intent;
@@ -8,20 +8,20 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.cloudwell.paywell.services.R;
-import com.cloudwell.paywell.services.activity.base.BusTricketBaseActivity;
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTicketRepository.BusTicketRepository;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.fragment.BusTicketStatusFragment;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.fragment.OnClickListener;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.fragment.BusTicketStatusFragment;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.fragment.OnClickListener;
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.Transport;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.search.BusCitySearchActivity;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.transportSelect.view.IBusSeletedView;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.transportSelect.viewmodel.BusSelectedViewModel;
-import com.cloudwell.paywell.services.app.AppHandler;
-import com.cloudwell.paywell.services.app.storage.AppStorageBox;
-import com.cloudwell.paywell.services.eventBus.GlobalApplicationBus;
-import com.cloudwell.paywell.services.eventBus.model.MessageToBottom;
-import com.cloudwell.paywell.services.utils.UniqueKeyGenerator;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.search.BusCitySearchActivity;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.transportSelect.view.IBusSeletedView;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.transportSelect.viewmodel.BusSelectedViewModel;
+import com.cloudwell.paywell.R;
+import com.cloudwell.paywell.app.AppHandler;
+import com.cloudwell.paywell.base.BusTricketBaseActivity;
+import com.cloudwell.paywell.data.preferences.AppStorageBox;
+import com.cloudwell.paywell.eventBus.GlobalApplicationBus;
+import com.cloudwell.paywell.eventBus.model.MessageToBottom;
+import com.cloudwell.paywell.utils.UniqueKeyGenerator;
 import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;

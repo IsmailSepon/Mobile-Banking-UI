@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/ic_right_arrow_bus"
+        android:background="@drawable/arrow_right"
         app:layout_constraintBottom_toBottomOf="@+id/ivSelect"
         app:layout_constraintEnd_toEndOf="@+id/ivSelect"
         app:layout_constraintTop_toTopOf="@+id/ivSelect" />
@@ -38,7 +38,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvTotalTotalPrices"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toTopOf="@+id/tvTotalTotalPrices"
-        app:srcCompat="@drawable/tk_bus" />
+        app:srcCompat="@drawable/ic_taka_small" />
 
     <ImageView
         android:id="@+id/imageView27"
@@ -46,7 +46,7 @@
         android:layout_height="10dp"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
-        android:background="@drawable/prices_changed_icon"
+        android:background="@drawable/price_plan_orange"
         app:layout_constraintBottom_toBottomOf="@+id/tvTotalTotalPrices"
         app:layout_constraintStart_toEndOf="@+id/tvTotalTotalPrices"
         app:layout_constraintTop_toTopOf="@+id/tvTotalTotalPrices" />

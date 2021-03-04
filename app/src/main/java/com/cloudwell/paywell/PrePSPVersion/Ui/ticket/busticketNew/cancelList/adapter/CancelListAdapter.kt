@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.cancelList.adapter
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cancelList.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.services.R
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.cencel.model.TicketInfo
+import com.cloudwell.paywell.R
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.cencel.model.TicketInfo
 
 /**
  * Created by YASIN on 03,July,2019

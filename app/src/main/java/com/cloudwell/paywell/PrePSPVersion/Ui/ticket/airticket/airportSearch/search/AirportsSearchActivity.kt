@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search
 
 import android.app.Activity
 import android.content.Intent
@@ -18,10 +18,11 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.eventBus.GlobalApplicationBus
+import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.AirportSeachStatus
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.adapter.HeaderAirportRecyclerViewSection
 import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.adapter.HeaderAirportRecyclerViewSectionFilter
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.Airport
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.viewModel.AirportSerachViewModel
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.model.Airport
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.viewModel.AirportSerachViewModel
 import com.cloudwell.paywell.utils.UniqueKeyGenerator
 import com.orhanobut.logger.Logger
 import com.squareup.otto.Subscribe

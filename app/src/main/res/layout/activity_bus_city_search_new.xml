@@ -9,7 +9,7 @@
     <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context="com.cloudwell.paywell.services.activity.eticket.busticketNew.search.BusCitySearchActivity">
+            tools:context="com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.search.BusCitySearchActivity">
 
 
         <include layout="@layout/tab_background_bus" />
@@ -23,8 +23,8 @@
                     android:id="@+id/fbCardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin_half"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+                    android:layout_marginLeft="@dimen/_8dp"
+                    android:layout_marginRight="@dimen/_8dp"
                     fancy:cardBackgroundColor="@color/card_background"
                     fancy:cardCornerRadius="4dp"
                     fancy:cardUseCompatPadding="true">
@@ -197,9 +197,9 @@
             <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin_half"
-                    android:layout_marginTop="@dimen/activity_horizontal_margin_half"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+                    android:layout_marginLeft="@dimen/_8dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:layout_marginRight="@dimen/_8dp"
                     fancy:cardBackgroundColor="@color/card_background"
                     fancy:cardCornerRadius="4dp"
                     fancy:cardUseCompatPadding="true">
@@ -388,9 +388,9 @@
             <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin_half"
+                    android:layout_marginLeft="@dimen/_8dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+                    android:layout_marginRight="@dimen/_8dp"
                     fancy:cardBackgroundColor="#00203f"
                     fancy:cardCornerRadius="4dp"
                     fancy:cardUseCompatPadding="true">
@@ -406,7 +406,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginLeft="16dp"
-                            android:background="@drawable/ic_advance_settings"
+                            android:background="@drawable/setting_2_ic"
                             fancy:layout_constraintBottom_toBottomOf="parent"
                             fancy:layout_constraintStart_toStartOf="parent"
                             fancy:layout_constraintTop_toTopOf="parent" />
@@ -440,8 +440,8 @@
             <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin_half"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin_half"
+                    android:layout_marginLeft="@dimen/_8dp"
+                    android:layout_marginRight="@dimen/_8dp"
                     fancy:cardBackgroundColor="#ffffff"
                     fancy:cardCornerRadius="4dp"
                     fancy:cardUseCompatPadding="true">

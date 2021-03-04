@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.menu.AirTicketMenuActivity
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.menu.BusTicketMenuActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.analytics.AnalyticsManager
 import com.cloudwell.paywell.analytics.AnalyticsParameters
@@ -167,9 +168,9 @@ class PaymentsMainFragment : Fragment(), PaymentAdapter.PaymentClickListener {
 
         if (pojo.name.equals("Bus ticket")){
 
-//            AppStorageBox.put(requireContext(), AppStorageBox.Key.IS_BUS_Ticket_USER_FLOW, true)
-//            AnalyticsManager.sendScreenView(AnalyticsParameters.KEY_BUS_TICKET)
-//            startActivity(Intent(requireContext(), BusTicketMenuActivity::class.java))
+            AppStorageBox.put(requireContext(), AppStorageBox.Key.IS_BUS_Ticket_USER_FLOW, true)
+            AnalyticsManager.sendScreenView(AnalyticsParameters.KEY_BUS_TICKET)
+            startActivity(Intent(requireContext(), BusTicketMenuActivity::class.java))
 
         }else if (pojo.name.equals("Air ticket")){
              val mainIntent = Intent(requireContext(), AirTicketMenuActivity::class.java)
