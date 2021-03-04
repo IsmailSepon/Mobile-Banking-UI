@@ -1,7 +1,7 @@
 package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.search.view;
 
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.base.BaseView;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.CitiesListItem;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v.CitiesListItem;
 
 import org.jetbrains.annotations.Nullable;
 

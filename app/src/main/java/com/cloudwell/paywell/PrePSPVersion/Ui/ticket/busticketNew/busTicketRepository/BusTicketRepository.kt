@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.base.newBase.SingleLiveEvent
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.*
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v.CitiesListItem
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.appController.AppController2
