@@ -16,7 +16,7 @@
 
 
         <ImageView
-            android:id="@+id/flightdetails_back"
+            android:id="@+id/flightdetails_back1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
@@ -35,7 +35,7 @@
             android:padding="@dimen/_10"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/flightdetails_back"
+            app:layout_constraintTop_toTopOf="@+id/flightdetails_back1"
             app:srcCompat="@drawable/dash_setting" />
 
         <ImageView
@@ -46,7 +46,7 @@
             android:padding="@dimen/_10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/flightdetils_controll"
-            app:layout_constraintTop_toTopOf="@+id/flightdetails_back"
+            app:layout_constraintTop_toTopOf="@+id/flightdetails_back1"
             app:srcCompat="@drawable/user" />
 
         <TextView
@@ -58,9 +58,9 @@
             style="@style/medium_text_style"
             android:textSize="@dimen/_16_7sp"
             android:textColor="@color/keypad_text_clr"
-            app:layout_constraintBottom_toBottomOf="@+id/flightdetails_back"
-            app:layout_constraintStart_toEndOf="@+id/flightdetails_back"
-            app:layout_constraintTop_toTopOf="@+id/flightdetails_back" />
+            app:layout_constraintBottom_toBottomOf="@+id/flightdetails_back1"
+            app:layout_constraintStart_toEndOf="@+id/flightdetails_back1"
+            app:layout_constraintTop_toTopOf="@+id/flightdetails_back1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView

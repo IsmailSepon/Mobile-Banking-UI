@@ -23,13 +23,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.CityName;
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v.CitiesListItem;
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.search.view.ICitySerach;
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.search.viewModel.CitySearchViewModel;
 import com.cloudwell.paywell.R;
 import com.cloudwell.paywell.app.AppHandler;
 import com.cloudwell.paywell.data.preferences.AppStorageBox;
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.BusLunCityRequest;
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v.CitiesListItem;
 import com.google.gson.Gson;
 
 import org.jetbrains.annotations.Nullable;
@@ -37,10 +37,9 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by YASIN on 24,June,2019
- * Email: yasinenubd5@gmail.com
- */
+import static java.util.Objects.requireNonNull;
+
+
 public class FullScreenDialogBus extends DialogFragment implements View.OnClickListener, ICitySerach {
 
     private static final int TRIGGER_AUTO_COMPLETE = 100;
@@ -107,7 +106,7 @@ public class FullScreenDialogBus extends DialogFragment implements View.OnClickL
         cityRecyclerView.setLayoutManager(gridLayoutManager);
 
 
-        isBusTicket = (Boolean) AppStorageBox.get(getContext(), AppStorageBox.Key.IS_BUS_Ticket_USER_FLOW);
+        isBusTicket = (Boolean) AppStorageBox.get(requireContext().getApplicationContext(), AppStorageBox.Key.IS_BUS_Ticket_USER_FLOW);
 
         if (isBusTicket) {
             predefineDataTL.setVisibility(View.VISIBLE);
@@ -177,7 +176,7 @@ public class FullScreenDialogBus extends DialogFragment implements View.OnClickL
 
 
 
-       viewMode.getbusAndLaunchCities(pojo);
+        viewMode.getbusAndLaunchCities(pojo);
 
 
     }
@@ -238,10 +237,10 @@ public class FullScreenDialogBus extends DialogFragment implements View.OnClickL
                 dismiss();
                 break;
             case R.id.coxBazarCityTV:
-                 citiesListItem = new CitiesListItem( "42", CityName.COXBAZAR_CITY);
-                 onCitySet.setCityData(citiesListItem, toOrFrom);
-                 setCityDataToSP(toOrFrom, citiesListItem);
-                 dismiss();
+                citiesListItem = new CitiesListItem( "42", CityName.COXBAZAR_CITY);
+                onCitySet.setCityData(citiesListItem, toOrFrom);
+                setCityDataToSP(toOrFrom, citiesListItem);
+                dismiss();
                 break;
             case R.id.benapoleCityTV:
                 citiesListItem = new CitiesListItem( "22", CityName.BENAPOLE_CITY);
@@ -397,5 +396,3 @@ public class FullScreenDialogBus extends DialogFragment implements View.OnClickL
     }
 
 }
-
-

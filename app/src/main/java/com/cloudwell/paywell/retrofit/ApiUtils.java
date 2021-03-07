@@ -19,9 +19,9 @@ public class ApiUtils {
     public static final String KEY_SKEY = "fLdjl3VX_OPOx6zvadOGuCvq2Ay0civ6v-HUQeiLVRg";
 
 
-    public static APIService getAPIService() {
-        return RetrofitClient.INSTANCE.getClient(BASE_URL).create(APIService.class);
-    }
+        public static APIService getAPIService() {
+            return RetrofitClient.INSTANCE.getClient(BASE_URL).create(APIService.class);
+        }
 
 
     public static APIService getAPIServicePHP7() {

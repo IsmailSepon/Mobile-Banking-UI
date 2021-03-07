@@ -24,7 +24,12 @@ import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.utils.CalculationHelper
 import com.cloudwell.paywell.utils.RecyclerItemClickListener
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import kotlinx.android.synthetic.main.activity_flight_details_2.*
 import kotlinx.android.synthetic.main.contant_flight_details_2.*
+import kotlinx.android.synthetic.main.contant_flight_details_2.tvNameOfDate
+import kotlinx.android.synthetic.main.contant_flight_details_2.tvPoliciesAndBaggageAllowance
+import kotlinx.android.synthetic.main.contant_flight_details_2.tvTotalPrice
+import kotlinx.android.synthetic.main.contant_flight_details_2.viewReview
 import kotlinx.android.synthetic.main.review_bottom_sheet.*
 
 
@@ -42,7 +47,7 @@ class FlightDetails2Activity : AirTricketBaseActivity() {
         setToolbar(getString(R.string.title_booking_and_review))
 
         initializationView()
-    //    initilizationReviewBottomSheet()
+        initilizationReviewBottomSheet()
         initViewModel()
 
         viewReview.setOnClickListener {
@@ -50,34 +55,40 @@ class FlightDetails2Activity : AirTricketBaseActivity() {
             handleLReviewButton()
         }
 
+
+        flightDetails_back.setOnClickListener(View.OnClickListener {
+
+            finish()
+        })
+
     }
 
     private fun initilizationReviewBottomSheet() {
-        val bottomSheetBehavior = BottomSheetBehavior.from(reviewBottonSheet)
-
-
-        bottomSheetBehavior.setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
-            override fun onStateChanged(bottomSheet: View, newState: Int) {
-                when (newState) {
-                    BottomSheetBehavior.STATE_HIDDEN -> {
-                    }
-                    BottomSheetBehavior.STATE_EXPANDED -> {
-
-                    }
-                    BottomSheetBehavior.STATE_COLLAPSED -> {
-
-                    }
-                    BottomSheetBehavior.STATE_DRAGGING -> {
-                    }
-                    BottomSheetBehavior.STATE_SETTLING -> {
-                    }
-                }
-            }
-
-            override fun onSlide(bottomSheet: View, slideOffset: Float) {
-
-            }
-        })
+//        val bottomSheetBehavior = BottomSheetBehavior.from(reviewBottonSheet)
+//
+//
+//        bottomSheetBehavior.setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
+//            override fun onStateChanged(bottomSheet: View, newState: Int) {
+//                when (newState) {
+//                    BottomSheetBehavior.STATE_HIDDEN -> {
+//                    }
+//                    BottomSheetBehavior.STATE_EXPANDED -> {
+//
+//                    }
+//                    BottomSheetBehavior.STATE_COLLAPSED -> {
+//
+//                    }
+//                    BottomSheetBehavior.STATE_DRAGGING -> {
+//                    }
+//                    BottomSheetBehavior.STATE_SETTLING -> {
+//                    }
+//                }
+//            }
+//
+//            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+//
+//            }
+//        })
 
         val AIRLINE_CODE = AppStorageBox.get(applicationContext, AppStorageBox.Key.AIRLINE_CODE) as String
         val totalFareDetati = resposeAirPriceSearch.data?.results?.get(0)?.fares?.let { CalculationHelper.getTotalFareDetati(it, AIRLINE_CODE) }

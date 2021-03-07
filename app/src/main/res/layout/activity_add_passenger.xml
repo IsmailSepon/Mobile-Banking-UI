@@ -19,7 +19,7 @@
 
         <ImageView
             android:padding="@dimen/_10dp"
-            android:id="@+id/airpolicy_back"
+            android:id="@+id/passanger_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -38,9 +38,9 @@
             android:text="@string/add_passenger"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_16_7sp"
-            app:layout_constraintBottom_toBottomOf="@+id/airpolicy_back"
-            app:layout_constraintStart_toEndOf="@+id/airpolicy_back"
-            app:layout_constraintTop_toTopOf="@+id/airpolicy_back" />
+            app:layout_constraintBottom_toBottomOf="@+id/passanger_back"
+            app:layout_constraintStart_toEndOf="@+id/passanger_back"
+            app:layout_constraintTop_toTopOf="@+id/passanger_back" />
 
         <ImageView
             android:padding="@dimen/_10dp"

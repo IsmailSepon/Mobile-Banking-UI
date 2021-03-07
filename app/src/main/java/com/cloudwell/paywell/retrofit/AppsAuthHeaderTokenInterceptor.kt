@@ -4,7 +4,7 @@ import android.content.Context
 import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.data.network.AllUrl
-import com.cloudwell.paywell.services.retrofit.RSAUtilty.Companion.getTokenBaseOnRSAlgorithm
+import com.cloudwell.paywell.retrofit.RSAUtilty.Companion.getTokenBaseOnRSAlgorithm
 import com.cloudwell.paywell.utils.DateUtils.getCurrentTimestamp
 import com.cloudwell.paywell.utils.UniqueKeyGenerator
 import com.google.gson.Gson

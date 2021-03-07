@@ -45,6 +45,10 @@ class FlightDetails1Activity : AirTricketBaseActivity() {
         initViewModel()
 
 
+        flightdetails_back1.setOnClickListener(View.OnClickListener {
+
+            finish()
+        })
     }
 
     private fun initViewModel() {

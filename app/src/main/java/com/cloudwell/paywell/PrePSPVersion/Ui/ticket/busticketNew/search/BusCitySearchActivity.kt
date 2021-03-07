@@ -30,8 +30,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class
-BusCitySearchActivity : BusTricketBaseActivity(), IbusTransportListView, OnItemSelectedListener {
+class BusCitySearchActivity : BusTricketBaseActivity(), FullScreenDialogBus.OnCitySet, IbusTransportListView, OnItemSelectedListener {
 
     private var fromCitiesListItem: CitiesListItem? = null
     private var toCitiesListItem: CitiesListItem? = null
@@ -548,6 +547,22 @@ BusCitySearchActivity : BusTricketBaseActivity(), IbusTransportListView, OnItemS
         const val FROM_STRING = "Leaving From"
     }
 
+    override fun setCityData(citiesListItem: CitiesListItem?, toOrFrom: String?) {
+
+        if (toOrFrom == TO_STRING) {
+            busToCityTS.setText(citiesListItem?.citiesName)
+            toString = citiesListItem?.citiesName
+            toCitiesListItem  = citiesListItem
+        } else if (toOrFrom == FROM_STRING) {
+            busFromCityTS.setText(citiesListItem?.citiesName)
+            fromString = citiesListItem?.citiesName
+            fromCitiesListItem  = citiesListItem
+        } else {
+            Toast.makeText(this@BusCitySearchActivity, resources.getString(R.string.network_error), Toast.LENGTH_SHORT).show()
+        }
+        //getBoardingPoint();
+
+    }
 
 
 }

@@ -40,6 +40,7 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.mukesh.countrypicker.Country
 import com.mukesh.countrypicker.CountryPicker
 import com.mukesh.countrypicker.listeners.OnCountryPickerListener
+import kotlinx.android.synthetic.main.activity_add_passenger.*
 import kotlinx.android.synthetic.main.contant_add_passenger.*
 import kotlinx.android.synthetic.main.contant_add_passenger.etContactNumber
 import kotlinx.android.synthetic.main.contant_add_passenger.etDateOfBirth
@@ -69,6 +70,7 @@ import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutPassp
 import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutPassportExpiryDate
 import kotlinx.android.synthetic.main.contant_add_passenger.textInputLayoutTitle
 import kotlinx.android.synthetic.main.contant_add_passenger.textLayoutPassportNationality
+import kotlinx.android.synthetic.main.contant_add_passenger.view.*
 import kotlinx.android.synthetic.main.contant_reissue_containt.*
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -251,6 +253,11 @@ class AddPassengerActivity : AirTricketBaseActivity() {
         btn_add_passanger.setOnClickListener {
             addPassenger()
         }
+
+
+        passanger_back.setOnClickListener(View.OnClickListener {
+            finish()
+        })
 
 
         etPassengerType.setOnClickListener {
