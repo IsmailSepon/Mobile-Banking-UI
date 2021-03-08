@@ -23,7 +23,7 @@
             card_view:cardUseCompatPadding="true">
 
             <LinearLayout
-                android:paddingBottom="@dimen/_40dp"
+                android:paddingBottom="@dimen/_20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -318,7 +318,8 @@
                     android:id="@+id/btn_search"
                     android:layout_marginTop="@dimen/_50dp"
                     android:layout_height="@dimen/btn_hight"
-                    android:elevation="@dimen/_10dp"
+                    android:elevation="@dimen/_5dp"
+                    android:layout_marginBottom="@dimen/_20dp"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/round_btn_visable">
 

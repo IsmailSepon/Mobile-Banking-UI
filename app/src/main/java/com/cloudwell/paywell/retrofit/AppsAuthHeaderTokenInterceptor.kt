@@ -1,10 +1,14 @@
 package com.cloudwell.paywell.retrofit
 
 import android.content.Context
+import android.content.Intent
+import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.PAuthenticationHostActivity
 import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.data.network.AllUrl
 import com.cloudwell.paywell.retrofit.RSAUtilty.Companion.getTokenBaseOnRSAlgorithm
+import com.cloudwell.paywell.utils.AppsStatusConstant
+import com.cloudwell.paywell.utils.DateUtils
 import com.cloudwell.paywell.utils.DateUtils.getCurrentTimestamp
 import com.cloudwell.paywell.utils.UniqueKeyGenerator
 import com.google.gson.Gson
@@ -19,10 +23,10 @@ import java.io.IOException
 
 class AppsAuthHeaderTokenInterceptor(val mContext: AppController2?) : Interceptor {
 
+
     var authHeader: String = ""
 
     fun HeaderTokenInterceptor(context: Context) {
-
 
     }
 
@@ -33,14 +37,14 @@ class AppsAuthHeaderTokenInterceptor(val mContext: AppController2?) : Intercepto
         val toString = chain.request().url.toString()
 
         if (toString.equals(AllUrl.gettoken) ||
-                toString.equals(AllUrl.ProfilingReg) ||
-                toString.equals(AllUrl.resetPassword) ||
-                toString.equals(AllUrl.refreshToken)
+            toString.equals(AllUrl.ProfilingReg) ||
+            toString.equals(AllUrl.resetPassword) ||
+            toString.equals(AllUrl.refreshToken)
         ) {
             val newRequest = chain.request().newBuilder().build()
             return chain.proceed(newRequest)
         } else {
-            val subtype: String = requestBody?.contentType()?.subtype ?: ""
+            val subtype: String = requestBody?.contentType()?.subtype?: ""
             if (subtype.contains("json")) {
                 //modify every json request body
                 val newProcessApplicationJsonRequestBody = processApplicationJsonRequestBody(requestBody!!)
@@ -48,9 +52,9 @@ class AppsAuthHeaderTokenInterceptor(val mContext: AppController2?) : Intercepto
             }
 
             val newRequest = chain.request().newBuilder()
-                    .addHeader("Authorization", authHeader)
-                    .post(requestBody!!)
-                    .build()
+                .addHeader("Authorization", authHeader)
+                .post(requestBody!!)
+                .build()
 
             val response = chain.proceed(newRequest)
             val code = response.code
@@ -81,26 +85,26 @@ class AppsAuthHeaderTokenInterceptor(val mContext: AppController2?) : Intercepto
                             val newProcessApplicationJsonRequestBody = processApplicationJsonRequestBody(requestBody)
                             val newRequest = newProcessApplicationJsonRequestBody?.let {
                                 chain.request().newBuilder()
-                                        .addHeader("Authorization", authHeader)
-                                        .post(it)
-                                        .build()
+                                    .addHeader("Authorization", authHeader)
+                                    .post(it)
+                                    .build()
                                 return chain.proceed(newRequest)
 
                             }
                         }else{
-//                            AppHandler.getmInstance(AppController2.getContext()).appStatus = AppsStatusConstant.KEY_logout
-//                            val intent = Intent(AppController2.getContext(), HomeActivity::class.java)
-//                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-//                            AppController2.getContext().startActivity(intent)
+                            AppHandler.getmInstance(AppController2.getContext()).appStatus = AppsStatusConstant.KEY_logout
+                            val intent = Intent(AppController2.getContext(), PAuthenticationHostActivity::class.java)
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                            AppController2.getContext().startActivity(intent)
                         }
 
                     } catch (e: JSONException) {
                         e.printStackTrace()
 
-//                        AppHandler.getmInstance(AppController2.getContext()).appStatus = AppsStatusConstant.KEY_logout
-//                        val intent = Intent(AppController2.getContext(), HomeActivity::class.java)
-//                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-//                        AppController2.getContext().startActivity(intent)
+                        AppHandler.getmInstance(AppController2.getContext()).appStatus = AppsStatusConstant.KEY_logout
+                        val intent = Intent(AppController2.getContext(), PAuthenticationHostActivity::class.java)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        AppController2.getContext().startActivity(intent)
                     }
                 }
             }
@@ -112,50 +116,50 @@ class AppsAuthHeaderTokenInterceptor(val mContext: AppController2?) : Intercepto
 
 
 
+        }
+
+
     }
 
 
-}
+    private fun processApplicationJsonRequestBody(requestBody: RequestBody): RequestBody? {
+        val customReq: String? = bodyToString(requestBody)
+        try {
+            val mAppHandler = AppHandler.getmInstance(mContext)
+
+            val uniqueKey = UniqueKeyGenerator.getUniqueKey(AppHandler.getmInstance(mContext)!!.rid)
 
 
-private fun processApplicationJsonRequestBody(requestBody: RequestBody): RequestBody? {
-    val customReq: String? = bodyToString(requestBody)
-    try {
-        val mAppHandler = AppHandler.getmInstance(mContext)
-
-        val uniqueKey = UniqueKeyGenerator.getUniqueKey(AppHandler.getmInstance(mContext)!!.rid)
-
-
-        val obj = JSONObject(customReq)
-        obj.put("deviceId", mAppHandler.androidID)
-        obj.put("timestamp", "" + com.cloudwell.paywell.utils.DateUtils.getCurrentTimestamp())
-        obj.put("format", "json")
-        obj.put("channel", "android")
-        obj.put("ref_id", uniqueKey)
+            val obj = JSONObject(customReq)
+            obj.put("deviceId", mAppHandler.androidID)
+            obj.put("timestamp", "" + DateUtils.getCurrentTimestamp())
+            obj.put("format", "json")
+            obj.put("channel", "android")
+            obj.put("ref_id", uniqueKey)
 
 
 
-        authHeader = getTokenBaseOnRSAlgorithm(obj)
+            authHeader = getTokenBaseOnRSAlgorithm(obj)
 
-        val create = RequestBody.create(requestBody.contentType(), obj.toString());
+            val create = RequestBody.create(requestBody.contentType(), obj.toString());
 
-        return create;
+            return create;
 //        return obj.toString().toRequestBody(requestBody.contentType())
-    } catch (e: JSONException) {
-        e.printStackTrace()
+        } catch (e: JSONException) {
+            e.printStackTrace()
+        }
+        return null
     }
-    return null
-}
 
 
-private fun bodyToString(request: RequestBody): String? {
-    return try {
-        val buffer = Buffer()
-        if (request != null) request.writeTo(buffer) else return ""
-        buffer.readUtf8()
-    } catch (e: IOException) {
-        "did not work"
+    private fun bodyToString(request: RequestBody): String? {
+        return try {
+            val buffer = Buffer()
+            if (request != null) request.writeTo(buffer) else return ""
+            buffer.readUtf8()
+        } catch (e: IOException) {
+            "did not work"
+        }
     }
-}
 
 }

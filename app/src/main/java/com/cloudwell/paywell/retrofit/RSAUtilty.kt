@@ -23,7 +23,7 @@ import javax.crypto.spec.SecretKeySpec
         public fun getTokenBaseOnRSAlgorithm(obj: JSONObject): String {
             val envlopeString = AppHandler.getmInstance(AppController2.getContext()).envlope
 
-            val p = RSAUtilty.Companion.getPrivateKey(AppController2.getContext())
+            val p = getPrivateKey(AppController2.getContext())
             val rowEnvlopeDecrytionKey = getRowEnvlopeDecrytionKey(p, envlopeString)
             val envlpeDecryptionKey = Base64.encodeToString(rowEnvlopeDecrytionKey, Base64.DEFAULT)
 

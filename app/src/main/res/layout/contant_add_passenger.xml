@@ -400,10 +400,7 @@
                         <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
                             android:id="@+id/etNidorPassportNumber"
                             android:textColor="@color/keypad_text_clr"
-                            android:textColorHint="@color/common_clr"
                             android:gravity="left"
-                            android:textSize="@dimen/_14sp"
-                            style="@style/text_style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ _0123456789"
@@ -430,10 +427,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textColor="@color/keypad_text_clr"
-                            android:textColorHint="@color/common_clr"
                             android:gravity="left"
-                            android:textSize="@dimen/_14sp"
-                            style="@style/text_style"
                             android:hint="@string/national_id"
                             android:visibility="visible" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -452,10 +446,7 @@
                         <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
                             android:id="@+id/etPassportExpiryDate"
                             android:textColor="@color/keypad_text_clr"
-                            android:textColorHint="@color/common_clr"
                             android:gravity="left"
-                            android:textSize="@dimen/_14sp"
-                            style="@style/text_style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ _0123456789"
@@ -478,10 +469,7 @@
                         <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
                             android:id="@+id/etpassportNationality"
                             android:textColor="@color/keypad_text_clr"
-                            android:textColorHint="@color/common_clr"
                             android:gravity="left"
-                            android:textSize="@dimen/_14sp"
-                            style="@style/text_style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ _0123456789"

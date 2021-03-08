@@ -446,33 +446,32 @@ class AddPassengerActivity : AirTricketBaseActivity() {
     private fun handleCountry(key: String) {
         hideUserKeyboard()
         val builder = CountryPicker.Builder().with(applicationContext)
-                .listener(object : OnCountryPickerListener {
-                    override fun onSelectCountry(country: Country) {
-                        if (KEY_COUNTRY.equals(key)) {
-                            ap_etCountry.setText("" + country.name)
-                            countryCode = country.code
-                        } else if (KEY_PASSPORT_NATIONALITY.equals(key)) {
-                            etpassportNationality.setText("" + country.name)
+                .listener { country ->
+                    if (KEY_COUNTRY.equals(key)) {
+                        ap_etCountry.setText("" + country.name)
+                        countryCode = country.code
+                    } else if (KEY_PASSPORT_NATIONALITY.equals(key)) {
+                        etpassportNationality.setText("" + country.name)
 
 
-                            var nationality = "";
-                            val countriesString = AssetHelper().loadJSONFromAsset(this@AddPassengerActivity, "countries.json")
-                            val countries = Gson().fromJson(countriesString, Array<MyCountry>::class.java)
-                            countries.forEach {
-                                if (it.en_short_name.equals(country.name)) {
-                                    nationality = it.nationality
-                                }
+                        var nationality = "";
+                        val countriesString = AssetHelper().loadJSONFromAsset(
+                            this@AddPassengerActivity,
+                            "countries.json"
+                        )
+                        val countries =
+                            Gson().fromJson(countriesString, Array<MyCountry>::class.java)
+                        countries.forEach {
+                            if (it.en_short_name.equals(country.name)) {
+                                nationality = it.nationality
                             }
-
-                            etpassportNationality.setText("" + nationality)
-
-
                         }
+
+                        etpassportNationality.setText("" + nationality)
 
 
                     }
-
-                })
+                }
         val picker = builder.build();
         picker.showDialog(this)
     }

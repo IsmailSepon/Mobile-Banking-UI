@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.cloudwell.paywell.R;
 import com.cloudwell.paywell.appController.AppController2;
+import com.cloudwell.paywell.utils.AppHelper;
 import com.cloudwell.paywell.utils.ConnectionDetector;
 import com.orhanobut.logger.Logger;
 
@@ -767,25 +768,25 @@ public class AppHandler {
 
         String rSAPrivateKey = mPref.getString(KEY_RSA_PRIVATE_KEY, UNKNOWN);
 
-//        if (rSAPrivateKey.equals(UNKNOWN)){
-//            ArrayList<String> rsaKays = AppHandler.getRSAKays();
-//            String privateKey = rsaKays.get(0);
-//            String publicKey = rsaKays.get(1);
-//
-//            data.add(privateKey);
-//            data.add(publicKey);
-//
-//            editor.putString(KEY_RSA_PRIVATE_KEY, privateKey);
-//            editor.putString(KEY_RSA_PUBLIC_KEY, publicKey);
-//        }else {
-//
-//            Logger.v("private: "+mPref.getString(KEY_RSA_PRIVATE_KEY, UNKNOWN));
-//            Logger.v("public: "+mPref.getString(KEY_RSA_PUBLIC_KEY, UNKNOWN));
-//
-//            data.add(mPref.getString(KEY_RSA_PRIVATE_KEY, UNKNOWN));
-//            data.add(mPref.getString(KEY_RSA_PUBLIC_KEY, UNKNOWN));
-//
-//        }
+        if (rSAPrivateKey.equals(UNKNOWN)){
+            ArrayList<String> rsaKays = AppHelper.getRSAKays();//AppHelper.getRSAKays();
+            String privateKey = rsaKays.get(0);
+            String publicKey = rsaKays.get(1);
+
+            data.add(privateKey);
+            data.add(publicKey);
+
+            editor.putString(KEY_RSA_PRIVATE_KEY, privateKey);
+            editor.putString(KEY_RSA_PUBLIC_KEY, publicKey);
+        }else {
+
+            Logger.v("private: "+mPref.getString(KEY_RSA_PRIVATE_KEY, UNKNOWN));
+            Logger.v("public: "+mPref.getString(KEY_RSA_PUBLIC_KEY, UNKNOWN));
+
+            data.add(mPref.getString(KEY_RSA_PRIVATE_KEY, UNKNOWN));
+            data.add(mPref.getString(KEY_RSA_PUBLIC_KEY, UNKNOWN));
+
+        }
 
 
         return data;
