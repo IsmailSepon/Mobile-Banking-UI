@@ -1186,7 +1186,7 @@
     <string name="we_have_send_you_an_sms_with_a_code_to_your_number">Verify  mobile number by entering  four digit OTP sent to your mobile number</string>
     <string name="sort">Sort</string>
     <string name="next">Next</string>
-
+    <string name="bus_ticket">Bus ticket</string>
 
 
 </resources>

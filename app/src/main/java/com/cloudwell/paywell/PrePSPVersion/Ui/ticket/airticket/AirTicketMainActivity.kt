@@ -5,17 +5,29 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Point
 import android.os.Bundle
+import android.util.Base64
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.PopupWindow
+import com.cloudwell.paywell.BuildConfig
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.base.AirTricketBaseActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.booking.model.Datum
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.app.AppHandler
+import com.cloudwell.paywell.retrofit.ApiUtils
+import com.cloudwell.paywell.retrofit.RequestAppsAuth
+import com.cloudwell.paywell.retrofit.ResposeAppsAuth
+import com.cloudwell.paywell.utils.AndroidIDUtility
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.iid.FirebaseInstanceId
+import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.activity_air_ticket_main.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 open class AirTicketMainActivity : AirTricketBaseActivity() {
 
@@ -77,7 +89,101 @@ open class AirTicketMainActivity : AirTricketBaseActivity() {
             if (p != null) showPopup(this, p!!)
 
         })
+
+        getFCMTokenAndSave()
+
+        val androidID1 = AndroidIDUtility.getAndroidID(applicationContext)
+        AppHandler.getmInstance(getApplicationContext()).setAndroidID(androidID1)
+
+
+        val androidId: String = AppHandler.getmInstance(applicationContext).androidID
+
+        val firebaseId = AppHandler.getmInstance(applicationContext).firebaseId
+
+        callGetTokenAPI("01912250477", "1234", androidID1, firebaseId)
+
     }
+
+
+    fun getFCMTokenAndSave() {
+        FirebaseInstanceId.getInstance().instanceId
+            .addOnCompleteListener(OnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Logger.w("getInstanceId failed", task.exception)
+                    return@OnCompleteListener
+                }
+
+                // Get new Instance ID token
+                val token = task.result?.token
+                AppHandler.getmInstance(applicationContext).setFirebaseId(token)
+            })
+
+
+    }
+
+
+
+    private fun callGetTokenAPI(userName: String, password: String, androidId: String, firebaseId: String) {
+
+        showProgressDialog()
+
+        val base = userName + ":" + password;
+        val authHeader = "Basic " + Base64.encodeToString(base.toByteArray(), Base64.NO_WRAP);
+
+
+        val channel = "android"
+        val currentTimestamp = System.currentTimeMillis()
+
+
+        val privateKey = AppHandler.getmInstance(applicationContext).getRSAKays().get(1);
+
+
+        var isDebug = 0
+        if (BuildConfig.DEBUG) {
+            isDebug = 0
+        } else {
+            isDebug = 1
+        }
+
+
+        val authRequestModel = RequestAppsAuth(isDebug, androidId, privateKey, channel, "" + currentTimestamp, firebaseId)
+
+        ApiUtils.getAPIServiceV2().getAppsAuthToken(authHeader, authRequestModel).enqueue(object :
+            Callback<ResposeAppsAuth> {
+            override fun onResponse(call: Call<ResposeAppsAuth>, response: Response<ResposeAppsAuth>) {
+
+                dismissProgressDialog()
+
+                val m = response.body()
+
+                m.let {
+                    if (m?.status == 200) {
+
+                        AppHandler.getmInstance(applicationContext).setSealedData(m?.sealedData)
+                        AppHandler.getmInstance(applicationContext).setEnvlope(m?.envlope)
+                        AppHandler.getmInstance(applicationContext).setAppsSecurityToken(m?.token?.securityToken)
+                        AppHandler.getmInstance(applicationContext).setAppsTokenExpTime(m?.token?.tokenExpTime)
+                        AppHandler.getmInstance(applicationContext).setUserName(userName)
+
+
+                    } else {
+                        it?.message?.let { it1 -> showErrorMessagev1(it1) }
+                    }
+
+                }
+
+
+            }
+
+            override fun onFailure(call: Call<ResposeAppsAuth>, t: Throwable) {
+                dismissProgressDialog();
+                showTryAgainDialog()
+
+            }
+        })
+
+    }
+
 
 
     // The method that displays the popup.

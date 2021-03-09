@@ -375,8 +375,8 @@ public interface APIService {
 //    @POST("Registration/UserRegistration/unverifiedDataUpdate")
 //    Call<ResponseBody> unverifiedDataCollectAndUpdate(@Body JsonObject body);
 //
-//    @POST("Authantication/PaywellAuth/getToken?")
-//    Call<ResposeAppsAuth> getAppsAuthToken(@Header("Authorization") String AuthorizationKey, @Body RequestAppsAuth body);
+    @POST("Authantication/PaywellAuth/getToken?")
+    Call<ResposeAppsAuth> getAppsAuthToken(@Header("Authorization") String AuthorizationKey, @Body RequestAppsAuth body);
 //
     @POST("Authantication/PaywellAuth/refreshToken")
     Call<ResposeAppsAuth> refreshToken(@Header("Authorization") String AuthorizationKey, @Body RequestRefreshToken body);

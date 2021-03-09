@@ -1,25 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:fancy="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#31476a">
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <FrameLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/hader_bg"
+        android:layout_height="@dimen/_50dp">
+
+
+        <ImageView
+            android:padding="@dimen/_10dp"
+            android:id="@+id/search_bus_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16_7sp"
+            style="@style/medium_text_style"
+            android:id="@+id/textView789"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/bus_ticket"
+            app:layout_constraintBottom_toBottomOf="@+id/search_bus_back"
+            app:layout_constraintStart_toEndOf="@+id/search_bus_back"
+            app:layout_constraintTop_toTopOf="@+id/search_bus_back" />
+
+
+
+        <ImageView
+            android:padding="@dimen/_5dp"
+            android:id="@+id/air_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dash_setting" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context="com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.search.BusCitySearchActivity">
 
 
-        <include layout="@layout/tab_background_bus" />
+            <include layout="@layout/tab_background_bus" />
 
-        <LinearLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fbCardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -29,56 +83,56 @@
                     fancy:cardCornerRadius="4dp"
                     fancy:cardUseCompatPadding="true">
 
-                <LinearLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                    <RelativeLayout
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                        <LinearLayout
+                            <LinearLayout
                                 android:id="@+id/tvFrom"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="@dimen/activity_horizontal_margin"
                                 android:orientation="vertical">
 
-                            <LinearLayout
-                                android:id="@+id/fromLL"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/tvHitFrom"
-                                    android:layout_width="wrap_content"
+                                <LinearLayout
+                                    android:id="@+id/fromLL"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginBottom="5dp"
-                                    android:text="@string/from"
-                                    android:textColor="#00203f" />
+                                    android:orientation="vertical">
 
-                                <TextSwitcher
-                                    android:id="@+id/busFromCityTS"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text=""
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-                            </LinearLayout>
+                                    <TextView
+                                        android:id="@+id/tvHitFrom"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="5dp"
+                                        android:text="@string/from"
+                                        android:textColor="#00203f" />
 
-                            <View
+                                    <TextSwitcher
+                                        android:id="@+id/busFromCityTS"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                                </LinearLayout>
+
+                                <View
                                     android:id="@+id/pointer"
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp" />
-                        </LinearLayout>
+                            </LinearLayout>
 
-                        <RelativeLayout
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_alignBottom="@+id/tvFrom">
 
-                            <View
+                                <View
                                     android:layout_width="match_parent"
                                     android:layout_height="1dp"
                                     android:layout_centerVertical="true"
@@ -89,7 +143,7 @@
                                     android:layout_marginBottom="7dp"
                                     android:background="#c0c0c0" />
 
-                            <ImageView
+                                <ImageView
                                     android:id="@+id/textSwitchIV"
                                     android:layout_width="31dp"
                                     android:layout_height="31dp"
@@ -97,23 +151,23 @@
                                     android:layout_marginEnd="51dp"
                                     android:layout_marginRight="154dp"
                                     android:src="@drawable/bus_swithcher_icon" />
+                            </RelativeLayout>
                         </RelativeLayout>
-                    </RelativeLayout>
 
-                    <LinearLayout
+                        <LinearLayout
                             android:id="@+id/layoutTo"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/activity_horizontal_margin"
                             android:orientation="vertical">
 
-                        <LinearLayout
+                            <LinearLayout
                                 android:id="@+id/toLL"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                            <TextView
+                                <TextView
                                     android:id="@+id/tvHitTo"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -121,26 +175,26 @@
                                     android:text="@string/to"
                                     android:textColor="#00203f" />
 
-                            <TextSwitcher
+                                <TextSwitcher
                                     android:id="@+id/busToCityTS"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-                        </LinearLayout>
+                            </LinearLayout>
 
-                        <View
+                            <View
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="7dp"
                                 android:background="#c0c0c0" />
-                    </LinearLayout>
+                        </LinearLayout>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                        <RadioGroup
+                            <RadioGroup
                                 android:id="@+id/radioGroupTripType"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -155,7 +209,7 @@
                                 fancy:layout_constraintStart_toStartOf="parent"
                                 fancy:layout_constraintTop_toTopOf="parent">
 
-                            <androidx.appcompat.widget.AppCompatRadioButton
+                                <androidx.appcompat.widget.AppCompatRadioButton
                                     android:id="@+id/radioButtonOneWay"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -163,7 +217,7 @@
                                     android:buttonTint="#00203f"
                                     android:text="@string/one_way" />
 
-                            <androidx.appcompat.widget.AppCompatRadioButton
+                                <androidx.appcompat.widget.AppCompatRadioButton
                                     android:id="@+id/radioButtonButtonRoud"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -171,10 +225,10 @@
                                     android:buttonTint="#00203f"
                                     android:checked="true"
                                     android:text="@string/round_trip" />
-                        </RadioGroup>
+                            </RadioGroup>
 
 
-                        <View
+                            <View
                                 android:id="@+id/viewBoardingPoint"
                                 android:layout_width="0dp"
                                 android:layout_height="1dp"
@@ -190,11 +244,11 @@
                                 fancy:layout_constraintStart_toStartOf="parent"
                                 fancy:layout_constraintTop_toBottomOf="@+id/radioGroupTripType" />
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_8dp"
@@ -204,7 +258,7 @@
                     fancy:cardCornerRadius="4dp"
                     fancy:cardUseCompatPadding="true">
 
-                <LinearLayout
+                    <LinearLayout
                         android:id="@+id/dateLL"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -212,20 +266,20 @@
                         android:padding="15dp">
 
 
-                    <LinearLayout
+                        <LinearLayout
                             android:id="@+id/llJourneyDate"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:orientation="horizontal">
 
-                        <LinearLayout
+                            <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="4"
                                 android:orientation="vertical">
 
-                            <TextView
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -235,13 +289,13 @@
                                     android:textSize="12sp" />
 
 
-                            <ImageView
+                                <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:src="@drawable/bus_calendar" />
 
-                            <TextView
+                                <TextView
                                     android:id="@+id/dayTV"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -251,7 +305,7 @@
                                     android:textColor="#00203f"
                                     android:textSize="14sp" />
 
-                            <LinearLayout
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
@@ -261,7 +315,7 @@
                                     android:padding="2dp">
 
 
-                                <TextView
+                                    <TextView
                                         android:id="@+id/monthTV"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -272,7 +326,7 @@
                                         android:textSize="14sp"
                                         android:textStyle="bold" />
 
-                                <TextView
+                                    <TextView
                                         android:id="@+id/dateTV"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -282,42 +336,42 @@
                                         android:textSize="14sp"
                                         android:textStyle="bold" />
 
+                                </LinearLayout>
+
                             </LinearLayout>
+
 
                         </LinearLayout>
 
 
-                    </LinearLayout>
-
-
-                    <LinearLayout
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent">
 
-                        <View
+                            <View
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
                                 android:background="#31476a">
 
-                        </View>
+                            </View>
 
-                    </LinearLayout>
+                        </LinearLayout>
 
 
-                    <LinearLayout
+                        <LinearLayout
                             android:id="@+id/llRetrunDate"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:orientation="horizontal">
 
-                        <LinearLayout
+                            <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="4"
                                 android:orientation="vertical">
 
-                            <TextView
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -327,14 +381,14 @@
                                     android:textSize="12sp" />
 
 
-                            <ImageView
+                                <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:src="@drawable/bus_calendar" />
 
 
-                            <TextView
+                                <TextView
                                     android:id="@+id/dayTVRound"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -344,7 +398,7 @@
                                     android:textColor="#00203f"
                                     android:textSize="14sp" />
 
-                            <LinearLayout
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
@@ -354,7 +408,7 @@
                                     android:padding="2dp">
 
 
-                                <TextView
+                                    <TextView
                                         android:id="@+id/monthTVRound"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -364,7 +418,7 @@
                                         android:textSize="14sp"
                                         android:textStyle="bold" />
 
-                                <TextView
+                                    <TextView
                                         android:id="@+id/dateTVRound"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -374,18 +428,18 @@
                                         android:textSize="14sp"
                                         android:textStyle="bold" />
 
+                                </LinearLayout>
+
                             </LinearLayout>
+
 
                         </LinearLayout>
 
 
                     </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginLeft="@dimen/_8dp"
@@ -395,12 +449,12 @@
                     fancy:cardCornerRadius="4dp"
                     fancy:cardUseCompatPadding="true">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/linearLayoutForAdvanceSearch"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                    <ImageView
+                        <ImageView
                             android:id="@+id/imageView32"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -411,7 +465,7 @@
                             fancy:layout_constraintStart_toStartOf="parent"
                             fancy:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
+                        <ImageView
                             android:id="@+id/ivUpDown"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -422,7 +476,7 @@
                             fancy:layout_constraintEnd_toEndOf="parent"
                             fancy:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
+                        <TextView
                             android:id="@+id/textView17"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -433,11 +487,11 @@
                             fancy:layout_constraintBottom_toBottomOf="parent"
                             fancy:layout_constraintStart_toEndOf="@+id/imageView32"
                             fancy:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
 
 
-            <androidx.cardview.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_8dp"
@@ -446,10 +500,10 @@
                     fancy:cardCornerRadius="4dp"
                     fancy:cardUseCompatPadding="true">
 
-                <include layout="@layout/bus_advance_setttings" />
-            </androidx.cardview.widget.CardView>
+                    <include layout="@layout/bus_advance_setttings" />
+                </androidx.cardview.widget.CardView>
 
-            <mehdi.sakout.fancybuttons.FancyButton
+                <mehdi.sakout.fancybuttons.FancyButton
                     android:id="@+id/btn_search"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -466,8 +520,12 @@
                     fancy:fb_textColor="#FFFFFF" />
 
 
-        </LinearLayout>
-    </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
 
 
-</ScrollView>
+
+    </ScrollView>
+
+
+</LinearLayout>
