@@ -17,12 +17,11 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.base.BusTricketBaseActivity
 import com.cloudwell.paywell.data.preferences.AppStorageBox
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.RequestScheduledata
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v.RequestScheduledata
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.scheduledata.ScheduleDataItem
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.passenger.BusPassengerBoothDepartureFragment
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.seatLayout.SeatLayoutFragment
-import com.cloudwell.paywell.base.newBase.BaseFragment
 import com.google.gson.Gson
 
 

@@ -1,9 +1,13 @@
 package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.search
 
+import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.Point
 import android.os.Bundle
+import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.*
@@ -18,10 +22,11 @@ import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.view.IbusTransportListView
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v.CitiesListItem
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.RequestScheduledata
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v.RequestScheduledata
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.scheduledata.ScheduleDataItem
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.activity_air_ticket_main.*
 import kotlinx.android.synthetic.main.activity_bus_city_search_new.*
 import kotlinx.android.synthetic.main.bus_advance_setttings.*
 import java.text.DateFormatSymbols
@@ -41,6 +46,10 @@ class BusCitySearchActivity : BusTricketBaseActivity(), FullScreenDialogBus.OnCi
     private lateinit var myCalenderRetrun: Calendar
     private var simpleDateFormat: SimpleDateFormat? = null
     private val dateString = String()
+
+    var popup : PopupWindow? = null
+    var p: Point? = null
+
 
     var viewBoardingPoint: View? = null
     private var viewMode: BusTransportViewModel? = null
@@ -259,7 +268,63 @@ class BusCitySearchActivity : BusTricketBaseActivity(), FullScreenDialogBus.OnCi
         }
 
 
+
+        bus_control.setOnClickListener(View.OnClickListener {
+
+
+            val view: View = bus_control//window.decorView.rootView
+            val location = IntArray(2)
+            view.getLocationOnScreen(location)
+
+            p = Point()
+            p!!.x = location[0]
+            p!!.y = location[1]
+
+            if (p != null) showPopup(this, p!!)
+
+        })
+
         initViewModel()
+
+    }
+
+    // The method that displays the popup.
+    private fun showPopup(
+        context: Activity,
+        p: Point
+    ) {
+
+
+        val popupWidth = LinearLayout.LayoutParams.MATCH_PARENT
+        val popupHeight = LinearLayout.LayoutParams.WRAP_CONTENT
+        val inflater = context.getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val layout = inflater.inflate(R.layout.bus_control_popup, null)
+
+
+        // Creating the PopupWindow
+        popup = PopupWindow(context)
+        popup!!.contentView = layout
+        popup!!.width = popupWidth
+        popup!!.height = popupHeight
+        popup!!.isFocusable = true
+        popup!!.isOutsideTouchable = true
+
+
+        val OFFSET_X = 30
+        val OFFSET_Y = 30
+
+
+        //Clear the default translucent background
+        popup!!.setBackgroundDrawable(null)
+        popup!!.showAtLocation(layout, Gravity.NO_GRAVITY, p.x + OFFSET_X, p.y + OFFSET_Y)
+
+//        val arrow = layout.findViewById<LinearLayout>(R.id.setting_liner)
+////
+////
+//        val layoutParams = layout.layoutParams as LinearLayout.LayoutParams
+//        layoutParams.setMargins(30, 20, 30, 0)
+////        arrow.layoutParams = layoutParams
+//        layout.layoutParams = layoutParams
 
     }
 

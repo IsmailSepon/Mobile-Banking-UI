@@ -27,7 +27,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResSeatC
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.TripScheduleInfoAndBusSchedule
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.Passenger
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.RequestScheduledata
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v.RequestScheduledata
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.scheduledata.ScheduleDataItem
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.dialog.BusSucessMsgWithFinlishDialog

@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v
 import com.google.gson.annotations.SerializedName
 
 class RequestScheduledata(
