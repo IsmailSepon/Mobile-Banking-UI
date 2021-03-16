@@ -1187,6 +1187,8 @@
     <string name="sort">Sort</string>
     <string name="next">Next</string>
     <string name="bus_ticket">Bus ticket</string>
+    <string name="return_date">Return date</string>
+    <string name="search_bus_tickets">Search bus tickets</string>
 
 
 </resources>

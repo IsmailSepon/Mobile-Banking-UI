@@ -45,7 +45,8 @@
         <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.cencel.BusTicketCancelOtpActivity"/>
         <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.menu.BusTicketMenuActivity"/>
         <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.otp.OtpActivity"/>
-        <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.search.BusCitySearchActivity"/>
+        <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.search.BusCitySearchActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".PrePSPVersion.Ui.ticket.busticketNew.transportSelect.TransportSelectActivity"/>
         <activity android:name="com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.BaggageAndPoliciesActiivty"/>
         <activity android:name="com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.passengerAdd.AddPassengerActivity"/>

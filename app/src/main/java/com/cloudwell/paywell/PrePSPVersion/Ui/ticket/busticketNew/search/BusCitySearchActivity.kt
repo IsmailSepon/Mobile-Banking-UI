@@ -67,7 +67,8 @@ class BusCitySearchActivity : BusTricketBaseActivity(), FullScreenDialogBus.OnCi
         AppStorageBox.put(this, AppStorageBox.Key.BUS_JOURNEY_DATE, simpleDateFormat!!.format(myCalender.timeInMillis))
         dateTV.text = myCalender.get(Calendar.DAY_OF_MONTH).toString()
         monthTV.text = DateFormatSymbols.getInstance(Locale.ENGLISH).months[myCalender.get(Calendar.MONTH)]
-        dayTV.text = DateFormatSymbols.getInstance(Locale.ENGLISH).weekdays[myCalender.get(Calendar.DAY_OF_WEEK)]
+        val text1 : String = DateFormatSymbols.getInstance(Locale.ENGLISH).weekdays[myCalender.get(Calendar.DAY_OF_WEEK)]
+        dayTV.text = text1.substring(0,3)//DateFormatSymbols.getInstance(Locale.ENGLISH).weekdays[myCalender.get(Calendar.DAY_OF_WEEK)]
 
 
 
@@ -76,7 +77,8 @@ class BusCitySearchActivity : BusTricketBaseActivity(), FullScreenDialogBus.OnCi
         myCalenderRetrun.add(Calendar.DATE, 1)
         dateTVRound.text = myCalenderRetrun.get(Calendar.DAY_OF_MONTH).toString()
         monthTVRound.text = DateFormatSymbols.getInstance(Locale.ENGLISH).months[myCalenderRetrun.get(Calendar.MONTH)]
-        dayTVRound.text = DateFormatSymbols.getInstance(Locale.ENGLISH).weekdays[myCalenderRetrun.get(Calendar.DAY_OF_WEEK)]
+        val text : String = DateFormatSymbols.getInstance(Locale.ENGLISH).weekdays[myCalenderRetrun.get(Calendar.DAY_OF_WEEK)]
+        dayTVRound.text = text.substring(0,3)
         AppStorageBox.put(this@BusCitySearchActivity, AppStorageBox.Key.BUS_RETURN_DATE, simpleDateFormat!!.format(myCalenderRetrun.timeInMillis))
 
 
@@ -192,10 +194,10 @@ class BusCitySearchActivity : BusTricketBaseActivity(), FullScreenDialogBus.OnCi
         linearLayoutForAdvanceSearch.setOnClickListener {
             if (advanceSearch.visibility == View.VISIBLE) {
                 advanceSearch.visibility = View.GONE
-                ivUpDown.setBackgroundResource(R.drawable.icon_down)
+                ivUpDown.setBackgroundResource(R.drawable.arrow_down)
             } else {
                 advanceSearch.visibility = View.VISIBLE
-                ivUpDown.setBackgroundResource(R.drawable.ic_up)
+                ivUpDown.setBackgroundResource(R.drawable.right_arrow)
             }
         }
 
@@ -399,6 +401,7 @@ class BusCitySearchActivity : BusTricketBaseActivity(), FullScreenDialogBus.OnCi
 
             if (fromCitiesListItem != null) {
                 busFromCityTS.setText(fromCitiesListItem?.citiesName)
+
                 fromString = fromCitiesListItem?.citiesName
 
             }
