@@ -1,11 +1,16 @@
 package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.fragment
 
+import android.app.Activity
 import android.content.Context
+import android.graphics.Point
 import android.net.Uri
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.PopupWindow
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,9 +26,13 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v.RequestScheduledata
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.scheduledata.ScheduleDataItem
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm
+import com.cloudwell.paywell.ui.BaseActivity
 import com.orhanobut.logger.Logger
+import kotlinx.android.synthetic.main.activity_bus_city_search_new.*
 import kotlinx.android.synthetic.main.bus_advance_filter.view.*
 import kotlinx.android.synthetic.main.fragment_transport_list.*
+import kotlinx.android.synthetic.main.fragment_transport_list.bus_control
+import kotlinx.android.synthetic.main.fragment_transport_list.view.*
 import kotlinx.android.synthetic.main.layout_filter.view.*
 
 
@@ -38,6 +47,9 @@ class TransportListFragment(val requestScheduledata: RequestScheduledata, val is
     private lateinit var viewMode: BusTransportViewModel
     private var listener: OnFragmentInteractionListener? = null
     lateinit var layoutManager: CustomGridLayoutManager
+    var popup : PopupWindow? = null
+    var p: Point? = null
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -112,17 +124,149 @@ class TransportListFragment(val requestScheduledata: RequestScheduledata, val is
 
     private fun initilization(view: View) {
         view.ivFilterUpDown.setImageResource(0)
-        view.ivFilterUpDown.setImageResource(R.drawable.icon_down)
+        view.ivFilterUpDown.setImageResource(R.drawable.arrow_down)
 
         view.llCustomFilterHeader.setOnClickListener {
             hiddenAndShowFilter(view)
         }
 
-        view.ivUp.setOnClickListener {
-            hiddenAndShowFilter(view)
+//        view.ivUp.setOnClickListener {
+//            hiddenAndShowFilter(view)
+//        }
+
+//        view.viewSearch.setOnClickListener {
+//            hiddenAndShowFilter(view)
+//
+//            val m = SearchFilter()
+//
+//            val checkedRadioButtonId = view.radioGroupJounyTime.checkedRadioButtonId
+//            val departingTime = when (checkedRadioButtonId) {
+//                R.id.radioJourneyTimeAll -> "Any"
+//                R.id.radioJourneyTimeAllMorning -> "Morning"
+//                R.id.radioJourneyTimeAllEvening -> "Evening"
+//                R.id.radioJourneyTimeAfterNoon -> "AfterNoon"
+//                R.id.radioJourneyTimeAllNight -> "Night"
+//
+//                else -> "Any"
+//            }
+//            m.departingTime = departingTime
+//
+//
+//            val id = view.radioGroupJounryType.checkedRadioButtonId
+//            val coachType = when (id) {
+//                R.id.radioBtmAll -> "All"
+//                R.id.radioBtmAC -> "Ac"
+//                R.id.radioBtmNonAC -> "NonAc"
+//                else -> "All"
+//            }
+//            m.coachType = coachType
+//
+//
+//            val radioGroupSortByid = view.radioGroupSortBy.checkedRadioButtonId
+//            val sortBy = when (radioGroupSortByid) {
+//                R.id.radioLowPrice -> "Low Price"
+//                R.id.radioHighPrice -> "HighPrice"
+//                else -> "Low Price"
+//            }
+//            m.sortBy = sortBy
+//            viewMode.onSort(m, isRetrunTriple)
+//
+//
+//        }
+    }
+
+    private fun hiddenAndShowFilter(view: View) {
+
+//        var size = 0
+//        if (!isRetrunTriple) {
+//            size = viewMode.singleTripTranportListMutableLiveData.value?.size ?: 0
+//        } else {
+//            size = viewMode.returnTripTransportListMutableLiveData.value?.size ?: 0
+//        }
+//        if (size > 0) {
+//
+//            if (view.llAdvaceSerach.visibility == View.VISIBLE) {
+//                view.llAdvaceSerach.visibility = View.GONE
+//                layoutManager.isScrollEnabled = true
+//                view.ivFilterUpDown.setImageResource(0)
+//                view.ivFilterUpDown.setImageResource(R.drawable.arrow_down)
+//            } else {
+//                view.llAdvaceSerach.visibility = View.VISIBLE
+//                layoutManager.isScrollEnabled = false
+//                view.ivFilterUpDown.setImageResource(0)
+//                view.ivFilterUpDown.setImageResource(R.drawable.arrow_up)
+//            }
+//        }
+
+
+
+        val view: View = view.llCustomFilterHeader//window.decorView.rootView
+        val location = IntArray(2)
+        view.getLocationOnScreen(location)
+
+        p = Point()
+        p!!.x = location[0]
+        p!!.y = location[1]
+
+        if (p != null) showPopup(requireActivity(), p!!, view)
+
+
+    }
+
+
+
+
+    // The method that displays the popup.
+    private fun showPopup(context: Activity, p: Point, view: View) {
+
+
+        val popupWidth = LinearLayout.LayoutParams.MATCH_PARENT
+        val popupHeight = LinearLayout.LayoutParams.WRAP_CONTENT
+        val inflater = context.getSystemService(BaseActivity.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val layout = inflater.inflate(R.layout.layout_filter, null)
+
+
+        // Creating the PopupWindow
+        popup = PopupWindow(context)
+        popup!!.contentView = layout
+        popup!!.width = popupWidth
+        popup!!.height = popupHeight
+        popup!!.isFocusable = true
+        popup!!.isOutsideTouchable = true
+
+
+        val OFFSET_X = 30
+        val OFFSET_Y = 30
+
+
+        //Clear the default translucent background
+        popup!!.setBackgroundDrawable(null)
+        popup!!.showAtLocation(layout, Gravity.NO_GRAVITY, p.x + OFFSET_X, p.y + OFFSET_Y)
+
+
+        var size = 0
+        if (!isRetrunTriple) {
+            size = viewMode.singleTripTranportListMutableLiveData.value?.size ?: 0
+        } else {
+            size = viewMode.returnTripTransportListMutableLiveData.value?.size ?: 0
+        }
+        if (size > 0) {
+
+//            if (layout.llAdvaceSerach.visibility == View.VISIBLE) {
+//                layout.llAdvaceSerach.visibility = View.GONE
+//                layoutManager.isScrollEnabled = true
+//                layout.ivFilterUpDown.setImageResource(0)
+//                layout.ivFilterUpDown.setImageResource(R.drawable.arrow_down)
+//            } else {
+//                layout.llAdvaceSerach.visibility = View.VISIBLE
+//                layoutManager.isScrollEnabled = false
+//                layout.ivFilterUpDown.setImageResource(0)
+//                layout.ivFilterUpDown.setImageResource(R.drawable.arrow_up)
+//            }
         }
 
-        view.viewSearch.setOnClickListener {
+
+        layout.viewSearch.setOnClickListener {
             hiddenAndShowFilter(view)
 
             val m = SearchFilter()
@@ -161,33 +305,9 @@ class TransportListFragment(val requestScheduledata: RequestScheduledata, val is
 
 
         }
-    }
-
-    private fun hiddenAndShowFilter(view: View) {
-
-        var size = 0
-        if (!isRetrunTriple) {
-            size = viewMode.singleTripTranportListMutableLiveData.value?.size ?: 0
-        } else {
-            size = viewMode.returnTripTransportListMutableLiveData.value?.size ?: 0
-        }
-        if (size > 0) {
-
-            if (view.llAdvaceSerach.visibility == View.VISIBLE) {
-                view.llAdvaceSerach.visibility = View.GONE
-                layoutManager.isScrollEnabled = true
-                view.ivFilterUpDown.setImageResource(0)
-                view.ivFilterUpDown.setImageResource(R.drawable.icon_down)
-            } else {
-                view.llAdvaceSerach.visibility = View.VISIBLE
-                layoutManager.isScrollEnabled = false
-                view.ivFilterUpDown.setImageResource(0)
-                view.ivFilterUpDown.setImageResource(R.drawable.ic_up)
-            }
-        }
-
 
     }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
