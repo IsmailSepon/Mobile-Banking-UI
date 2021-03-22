@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fancy="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:background="#f500203f"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
@@ -16,34 +17,32 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
             android:text="@string/journey_type"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/keypad_text_clr"
         android:textStyle="bold"
         fancy:layout_constraintStart_toStartOf="parent"
         fancy:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
-            android:id="@+id/tvLevelReturnType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/sort_by_price"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            fancy:layout_constraintStart_toStartOf="parent"
-            fancy:layout_constraintTop_toBottomOf="@+id/HorizontalScrollView" />
+        android:id="@+id/tvLevelReturnType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/sort_by_price"
+        android:textColor="@color/keypad_text_clr"
+        android:textStyle="bold"
+        fancy:layout_constraintStart_toStartOf="parent"
+        fancy:layout_constraintTop_toBottomOf="@+id/radioGroupJounyTime" />
 
     <TextView
         android:id="@+id/textView62"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/time"
-            android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:text="@string/time"
+        android:textColor="@color/keypad_text_clr"
         android:textStyle="bold"
         fancy:layout_constraintStart_toStartOf="parent"
         fancy:layout_constraintTop_toBottomOf="@+id/radioGroupJounryType" />
@@ -61,6 +60,7 @@
         fancy:layout_constraintTop_toBottomOf="@+id/textView61">
 
         <RadioButton
+            style="@style/text_style"
             android:id="@+id/radioBtmAll"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -68,68 +68,84 @@
             android:layout_weight="1"
             android:button="@null"
             android:checked="true"
-            android:drawableTop="@drawable/ic_all_seleted_filter_drawable"
-            android:drawablePadding="16dp"
+            android:drawableTop="@drawable/ic_all_seleted_drawable"
+            android:drawablePadding="8dp"
             android:gravity="center"
             android:text="All"
             android:textAlignment="center"
-            android:textColor="@drawable/bus_radio_button_text_color_filter" />
+            android:textColor="@drawable/bus_radio_button_text_color" />
 
         <RadioButton
+            style="@style/text_style"
             android:id="@+id/radioBtmAC"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/ic_ac_filter_drawable"
-            android:drawablePadding="16dp"
+            android:drawableTop="@drawable/ic_ac_drawable"
+            android:drawablePadding="8dp"
             android:gravity="center"
             android:text="AC"
             android:textAlignment="center"
-            android:textColor="@drawable/bus_radio_button_text_color_filter" />
+            android:textColor="@drawable/bus_radio_button_text_color" />
 
         <RadioButton
+            style="@style/text_style"
             android:id="@+id/radioBtmNonAC"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/ic_non_ac_filter_drawable"
-            android:drawablePadding="16dp"
+            android:drawableTop="@drawable/ic_non_ac_drawable"
+            android:drawablePadding="8dp"
             android:gravity="center"
             android:text="Non AC"
             android:textAlignment="center"
-            android:textColor="@drawable/bus_radio_button_text_color_filter" />
+            android:textColor="@drawable/bus_radio_button_text_color" />
 
     </RadioGroup>
 
 
     <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/half_one"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/common_clr"
+        fancy:layout_constraintBottom_toTopOf="@+id/textView62"
+        fancy:layout_constraintEnd_toEndOf="parent"
+        fancy:layout_constraintStart_toStartOf="parent"
+        fancy:layout_constraintTop_toBottomOf="@+id/radioGroupJounryType" />
+
+
+    <View
         android:id="@+id/viewLineRetrun"
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/half_one"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:background="#00203f"
+        android:background="@color/common_clr"
         fancy:layout_constraintBottom_toTopOf="@+id/tvLevelReturnType"
         fancy:layout_constraintEnd_toEndOf="parent"
         fancy:layout_constraintStart_toStartOf="parent"
-        fancy:layout_constraintTop_toBottomOf="@+id/HorizontalScrollView" />
+        fancy:layout_constraintTop_toBottomOf="@+id/radioGroupJounyTime" />
 
-    <HorizontalScrollView
-        android:id="@+id/HorizontalScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        fancy:layout_constraintEnd_toEndOf="parent"
-        fancy:layout_constraintStart_toStartOf="parent"
-        fancy:layout_constraintTop_toBottomOf="@+id/textView62">
+<!--    <HorizontalScrollView-->
+<!--        android:id="@+id/HorizontalScrollView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        fancy:layout_constraintEnd_toEndOf="parent"-->
+<!--        fancy:layout_constraintStart_toStartOf="parent"-->
+<!--        fancy:layout_constraintTop_toBottomOf="@+id/textView62">-->
 
 
         <RadioGroup
             android:id="@+id/radioGroupJounyTime"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="16dp"
@@ -137,80 +153,182 @@
             android:checked="true"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
-            android:weightSum="5"
+            android:weightSum="4"
             fancy:layout_constraintEnd_toEndOf="parent"
             fancy:layout_constraintStart_toStartOf="parent"
             fancy:layout_constraintTop_toBottomOf="@+id/textView62">
 
+
+<!--        <RadioGroup-->
+<!--            android:id="@+id/radioGroupJounyTime"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="16dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="4"-->
+<!--            fancy:layout_constraintEnd_toEndOf="parent"-->
+<!--            fancy:layout_constraintStart_toStartOf="parent"-->
+<!--            fancy:layout_constraintTop_toBottomOf="@+id/textView62">-->
+
+<!--            <RadioButton-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:id="@+id/radioJourneyTimeAll"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:button="@null"-->
+<!--                android:checked="true"-->
+<!--                android:drawableStart="@drawable/ic_time"-->
+<!--                android:drawableLeft="@drawable/ic_time"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:text="Any"-->
+<!--                android:textColor="@drawable/bus_radio_button_text_color_filter" />-->
+
+
             <RadioButton
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
+                style="@style/text_style"
+                android:gravity="left"
+                android:textSize="@dimen/_12sp"
                 android:id="@+id/radioJourneyTimeAll"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:button="@null"
                 android:checked="true"
                 android:drawableStart="@drawable/ic_time"
                 android:drawableLeft="@drawable/ic_time"
                 android:drawablePadding="4dp"
                 android:text="Any"
-                android:textColor="@drawable/bus_radio_button_text_color_filter" />
+                android:textColor="@drawable/bus_radio_button_text_color" />
+
+
+
+
+<!--            <RadioButton-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:id="@+id/radioJourneyTimeAllMorning"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:button="@null"-->
+<!--                android:drawableStart="@drawable/ic_time"-->
+<!--                android:drawableLeft="@drawable/ic_time"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:text="Morning"-->
+<!--                android:textColor="@drawable/bus_radio_button_text_color_filter" />-->
+
 
             <RadioButton
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
+                style="@style/text_style"
+                android:gravity="left"
                 android:id="@+id/radioJourneyTimeAllMorning"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:button="@null"
+                android:textSize="@dimen/_12sp"
                 android:drawableStart="@drawable/ic_time"
                 android:drawableLeft="@drawable/ic_time"
                 android:drawablePadding="4dp"
                 android:text="Morning"
-                android:textColor="@drawable/bus_radio_button_text_color_filter" />
+                android:textColor="@drawable/bus_radio_button_text_color" />
+
+
+<!--            <RadioButton-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:id="@+id/radioJourneyTimeAfterNoon"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:button="@null"-->
+<!--                android:drawableStart="@drawable/ic_time"-->
+<!--                android:drawableLeft="@drawable/ic_time"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:text="Afternoon"-->
+<!--                android:textColor="@drawable/bus_radio_button_text_color_filter" />-->
+
+
+<!--            <RadioButton-->
+<!--                style="@style/text_style"-->
+<!--                android:gravity="left"-->
+<!--                android:id="@+id/radioJourneyTimeAfterNoon"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:button="@null"-->
+<!--                android:textSize="@dimen/_12sp"-->
+<!--                android:drawableLeft="@drawable/ic_time"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:text="Evening"-->
+<!--                android:textColor="@drawable/bus_radio_button_text_color" />-->
+
+
+
+<!--            <RadioButton-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:id="@+id/radioJourneyTimeAllEvening"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:button="@null"-->
+<!--                android:drawableLeft="@drawable/ic_time"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:text="Evening"-->
+<!--                android:textColor="@drawable/bus_radio_button_text_color_filter" />-->
+
+
+
 
             <RadioButton
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
-                android:id="@+id/radioJourneyTimeAfterNoon"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableStart="@drawable/ic_time"
-                android:drawableLeft="@drawable/ic_time"
-                android:drawablePadding="4dp"
-                android:text="Afternoon"
-                android:textColor="@drawable/bus_radio_button_text_color_filter" />
-
-            <RadioButton
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
+                style="@style/text_style"
+                android:gravity="left"
                 android:id="@+id/radioJourneyTimeAllEvening"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:button="@null"
                 android:drawableLeft="@drawable/ic_time"
                 android:drawablePadding="4dp"
                 android:text="Evening"
-                android:textColor="@drawable/bus_radio_button_text_color_filter" />
+                android:textSize="@dimen/_12sp"
+                android:textColor="@drawable/bus_radio_button_text_color" />
+
+
+<!--            <RadioButton-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:id="@+id/radioJourneyTimeAllNight"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:button="@null"-->
+<!--                android:drawableStart="@drawable/ic_time"-->
+<!--                android:drawableLeft="@drawable/ic_time"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:text="Night"-->
+<!--                android:textColor="@drawable/bus_radio_button_text_color_filter" />-->
 
 
             <RadioButton
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
-                android:id="@+id/radioJourneyTimeAllNight"
-                android:layout_width="match_parent"
+                style="@style/text_style"
+                android:gravity="left"
+                android:id="@+id/radioJourneyTimeAllNightRetrun"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:button="@null"
                 android:drawableStart="@drawable/ic_time"
                 android:drawableLeft="@drawable/ic_time"
                 android:drawablePadding="4dp"
                 android:text="Night"
-                android:textColor="@drawable/bus_radio_button_text_color_filter" />
+                android:textSize="@dimen/_12sp"
+                android:textColor="@drawable/bus_radio_button_text_color" />
 
         </RadioGroup>
 
-    </HorizontalScrollView>
+<!--    </HorizontalScrollView>-->
 
 
     <RadioGroup
@@ -228,52 +346,93 @@
         fancy:layout_constraintTop_toBottomOf="@+id/tvLevelReturnType">
 
         <RadioButton
+            android:textSize="@dimen/_10sp"
             android:id="@+id/radioLowPrice"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
             android:checked="true"
-                android:drawablePadding="4dp"
-                android:text="Low to high"
-                android:textColor="@drawable/bus_radio_button_text_color_filter" />
+            android:drawablePadding="4dp"
+            android:text="Low Price"
+            android:textColor="@drawable/bus_radio_button_text_color_filter" />
 
         <RadioButton
+            android:textSize="@dimen/_10sp"
             android:id="@+id/radioHighPrice"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-                android:drawablePadding="4dp"
-                android:text="High to low"
-                android:textColor="@drawable/bus_radio_button_text_color_filter" />
+            android:drawablePadding="4dp"
+            android:text="High Price"
+            android:textColor="@drawable/bus_radio_button_text_color_filter" />
+
+        <RadioButton
+            android:textSize="@dimen/_10sp"
+            android:id="@+id/low_departure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="4dp"
+            android:text="Low Departure Time"
+            android:textColor="@drawable/bus_radio_button_text_color_filter" />
+
+        <RadioButton
+            android:textSize="@dimen/_10sp"
+            android:id="@+id/high_departure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="4dp"
+            android:text="Hight Departure Time"
+            android:textColor="@drawable/bus_radio_button_text_color_filter" />
 
 
     </RadioGroup>
 
 
-    <View
+    <Button
         android:id="@+id/viewSearch"
-        android:layout_width="60dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="32dp"
-        android:background="#31476a"
-        android:drawableLeft="@drawable/ic_search_filter"
-        android:drawablePadding="40dp"
-        android:gravity="center"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetRight="0dp"
-        android:insetBottom="0dp"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_hight"
+        android:background="@drawable/round_btn_visable"
+        android:elevation="@dimen/evelation_five"
+        android:text="Search Custom filter"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginTop="@dimen/_20dp"
         fancy:layout_constraintEnd_toEndOf="parent"
         fancy:layout_constraintStart_toStartOf="parent"
-        fancy:layout_constraintTop_toBottomOf="@+id/radioGroupSortBy" />
+        fancy:layout_constraintTop_toBottomOf="@+id/radioGroupSortBy"
+        tools:targetApi="lollipop" />
+
+
+
+<!--    <View-->
+<!--        android:id="@+id/viewSearch"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="28dp"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:drawableLeft="@drawable/search"-->
+<!--        android:drawablePadding="40dp"-->
+<!--        android:gravity="center"-->
+<!--        android:insetLeft="0dp"-->
+<!--        android:insetTop="0dp"-->
+<!--        android:insetRight="0dp"-->
+<!--        android:insetBottom="0dp"-->
+<!--        fancy:layout_constraintEnd_toEndOf="parent"-->
+<!--        fancy:layout_constraintStart_toStartOf="parent"-->
+<!--        fancy:layout_constraintTop_toBottomOf="@+id/radioGroupSortBy" />-->
 
     <ImageView
+        android:visibility="invisible"
         android:id="@+id/ivUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         fancy:layout_constraintBottom_toBottomOf="parent"
         fancy:layout_constraintEnd_toEndOf="@+id/viewSearch"
