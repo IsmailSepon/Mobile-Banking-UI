@@ -126,6 +126,19 @@ class TransportListFragment(val requestScheduledata: RequestScheduledata, val is
         view.ivFilterUpDown.setImageResource(0)
         view.ivFilterUpDown.setImageResource(R.drawable.arrow_down)
 
+        view.search_bus_back.setOnClickListener(View.OnClickListener {
+
+            requireActivity().finish()
+        })
+
+
+        view.bus_control.setOnClickListener(View.OnClickListener {
+
+
+
+        })
+
+
         view.llCustomFilterHeader.setOnClickListener {
             hiddenAndShowFilter(view)
         }

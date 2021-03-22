@@ -31,6 +31,8 @@ class ChangeCurrencyFragment : Fragment() {
 
 
             FragmentHelper.addFirstFragment(PreCreatePasswordFrag(), requireActivity().supportFragmentManager, R.id.pre_psp_auth_container)
+
+
         })
 
 
