@@ -1,4 +1,4 @@
-package com.example.nbtk.slider
+package com.cloudwell.paywell.utils.sendMoneyUtils
 
 import android.content.Context
 import androidx.recyclerview.widget.LinearLayoutManager

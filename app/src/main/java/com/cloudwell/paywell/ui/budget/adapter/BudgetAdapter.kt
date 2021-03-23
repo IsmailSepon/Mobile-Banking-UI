@@ -9,7 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.budget.model.BudgetPOjo
-import com.example.nbtk.slider.SliderItemViewHolder
+import com.cloudwell.paywell.utils.sendMoneyUtils.SliderItemViewHolder
 
 class BudgetAdapter (mContext: Context) : RecyclerView.Adapter<SliderItemViewHolder>() {
 

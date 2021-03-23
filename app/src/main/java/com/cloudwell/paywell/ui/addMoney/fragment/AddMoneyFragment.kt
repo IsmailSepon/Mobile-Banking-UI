@@ -16,8 +16,8 @@ import com.cloudwell.paywell.databinding.AddMoneyBinding
 import com.cloudwell.paywell.ui.addMoney.view.IaddMoneyVIew
 import com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel
 import com.cloudwell.paywell.utils.FragmentHelper
-import com.example.nbtk.slider.ScreenUtils
-import com.example.nbtk.slider.SliderLayoutManager
+import com.cloudwell.paywell.utils.sendMoneyUtils.ScreenUtils
+import com.cloudwell.paywell.utils.sendMoneyUtils.SliderLayoutManager
 
 class AddMoneyFragment : Fragment(), IaddMoneyVIew {
 

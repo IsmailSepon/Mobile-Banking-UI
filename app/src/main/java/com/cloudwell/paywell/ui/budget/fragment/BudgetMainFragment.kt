@@ -21,7 +21,7 @@ import com.cloudwell.paywell.ui.budget.BudgetHostActivity
 import com.cloudwell.paywell.ui.budget.adapter.BudgetAdapter
 import com.cloudwell.paywell.ui.budget.adapter.BudgetPagerAdapter
 import com.cloudwell.paywell.ui.budget.model.BudgetPOjo
-import com.example.nbtk.slider.ScreenUtils
+import com.cloudwell.paywell.utils.sendMoneyUtils.ScreenUtils
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.budget_main_layout.view.*
 

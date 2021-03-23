@@ -10,13 +10,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel
-import com.cloudwell.paywell.ui.budget.adapter.BudgetAdapter
 import com.cloudwell.paywell.ui.budget.adapter.BudgetMarchentAdapter
 import com.cloudwell.paywell.ui.budget.adapter.MarchentPickerAdapter
 import com.cloudwell.paywell.ui.budget.layoutManager.BudgetLayoutManager
 import com.cloudwell.paywell.ui.budget.model.BudgetMachentPOjo
 import com.cloudwell.paywell.ui.budget.model.BudgetPOjo
-import com.example.nbtk.slider.ScreenUtils
+import com.cloudwell.paywell.utils.sendMoneyUtils.ScreenUtils
 import kotlinx.android.synthetic.main.budget_marchent_layout.view.*
 
 class BudgetMarchantFragment : Fragment() {

@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
-import com.example.nbtk.slider.SliderItemViewHolder
+import com.cloudwell.paywell.utils.sendMoneyUtils.SliderItemViewHolder
 
 class BudgetRegularAdapter (mContext: Context) : RecyclerView.Adapter<SliderItemViewHolder>() {
 
