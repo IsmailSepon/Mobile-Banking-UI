@@ -1,4 +1,4 @@
-package com.example.nbtk.slider
+package com.cloudwell.paywell.utils.sendMoneyUtils
 
 import android.content.Context
 import android.util.DisplayMetrics
@@ -6,7 +6,7 @@ import android.util.TypedValue
 import android.view.WindowManager
 
 /**
- * Created by nbtk on 5/4/18.
+ * Created by Ismail Hossain Sepon on 5/4/20.
  */
 class ScreenUtils {
     companion object {

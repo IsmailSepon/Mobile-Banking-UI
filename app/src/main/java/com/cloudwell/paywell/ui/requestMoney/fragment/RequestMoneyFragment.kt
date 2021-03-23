@@ -12,8 +12,8 @@ import com.cloudwell.paywell.base.adapter.AmountPickerAdapter
 import com.cloudwell.paywell.consumer.ui.requestMoney.fragment.creat_link.RequestMoneyCreatLinkFragment
 import com.cloudwell.paywell.consumer.ui.requestMoney.fragment.nearMe.RequestNearDoneFragment
 import com.cloudwell.paywell.utils.FragmentHelper
-import com.example.nbtk.slider.ScreenUtils
-import com.example.nbtk.slider.SliderLayoutManager
+import com.cloudwell.paywell.utils.sendMoneyUtils.ScreenUtils
+import com.cloudwell.paywell.utils.sendMoneyUtils.SliderLayoutManager
 import kotlinx.android.synthetic.main.request_money.view.*
 
 class RequestMoneyFragment : Fragment() {

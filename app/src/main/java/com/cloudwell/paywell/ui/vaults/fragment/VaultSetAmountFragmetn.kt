@@ -11,8 +11,8 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.adapter.AmountPickerAdapter
 import com.cloudwell.paywell.ui.scheduledTransfer.fragment.schedule.ScheduleDateSelectionFragment
 import com.cloudwell.paywell.utils.FragmentHelper
-import com.example.nbtk.slider.ScreenUtils
-import com.example.nbtk.slider.SliderLayoutManager
+import com.cloudwell.paywell.utils.sendMoneyUtils.ScreenUtils
+import com.cloudwell.paywell.utils.sendMoneyUtils.SliderLayoutManager
 import kotlinx.android.synthetic.main.vault_setamount_layout.view.*
 
 class VaultSetAmountFragmetn : Fragment() {

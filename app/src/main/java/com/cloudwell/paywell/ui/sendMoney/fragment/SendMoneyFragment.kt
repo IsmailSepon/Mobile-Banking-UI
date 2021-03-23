@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.adapter.AmountPickerAdapter
-import com.example.nbtk.slider.ScreenUtils
-import com.example.nbtk.slider.SliderLayoutManager
+import com.cloudwell.paywell.utils.sendMoneyUtils.ScreenUtils
+import com.cloudwell.paywell.utils.sendMoneyUtils.SliderLayoutManager
 import kotlinx.android.synthetic.main.send_money.view.*
 
 class SendMoneyFragment : Fragment() {

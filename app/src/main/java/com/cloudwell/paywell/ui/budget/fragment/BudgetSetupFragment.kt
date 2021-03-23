@@ -10,10 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.adapter.AmountPickerAdapter
 import com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel
-import com.cloudwell.paywell.ui.budget.adapter.BudgetRegularAdapter
 import com.cloudwell.paywell.utils.FragmentHelper
-import com.example.nbtk.slider.ScreenUtils
-import com.example.nbtk.slider.SliderLayoutManager
+import com.cloudwell.paywell.utils.sendMoneyUtils.ScreenUtils
+import com.cloudwell.paywell.utils.sendMoneyUtils.SliderLayoutManager
 import kotlinx.android.synthetic.main.budget_setup_layout.view.*
 
 class BudgetSetupFragment : Fragment() {
