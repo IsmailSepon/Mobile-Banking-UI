@@ -8,15 +8,12 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.Spinner
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.view.IbusTransportListView
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.RequestBusSearch
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResSeatCheckBookAPI
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.Transport
@@ -80,12 +77,17 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
     private lateinit var seatLayoutBottonSheet: ConstraintLayout
     private lateinit var busListAdapter: Any
     private lateinit var boothList: Spinner
+    private lateinit var seat_bus_title: TextView
+    private lateinit var seat_bus_back: ImageView
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_seat_layout, container, false)
+
+        seat_bus_title = view.seat_bus_title
+        seat_bus_back = view.seat_bus_back
 
         seatLayoutBottonSheet = view.seatLayoutBottonSheet
         rootSeatLayout = view.findViewById<ViewGroup>(R.id.layoutSeat)
@@ -121,6 +123,11 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
         } else {
             view.tvUserHitmessage.setText(getString(R.string.any_kind_of_ticket_cancellation_lunch))
         }
+
+        seat_bus_back.setOnClickListener(View.OnClickListener {
+            requireActivity().finish()
+        })
+        seat_bus_title.text = scheduleDataItem.companyName
 
         return view
 
@@ -406,30 +413,31 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
 
 
     private fun initilizationReviewBottomSheet(seatLayoutBottonSheet: ConstraintLayout) {
-        bottomSheetBehavior = BottomSheetBehavior.from(seatLayoutBottonSheet)
 
-        bottomSheetBehavior.setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
-            override fun onStateChanged(bottomSheet: View, newState: Int) {
-                when (newState) {
-                    BottomSheetBehavior.STATE_HIDDEN -> {
-                    }
-                    BottomSheetBehavior.STATE_EXPANDED -> {
-
-                    }
-                    BottomSheetBehavior.STATE_COLLAPSED -> {
-
-                    }
-                    BottomSheetBehavior.STATE_DRAGGING -> {
-                    }
-                    BottomSheetBehavior.STATE_SETTLING -> {
-                    }
-                }
-            }
-
-            override fun onSlide(bottomSheet: View, slideOffset: Float) {
-
-            }
-        })
+//        bottomSheetBehavior = BottomSheetBehavior.from(seatLayoutBottonSheet)
+//
+//        bottomSheetBehavior.setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
+//            override fun onStateChanged(bottomSheet: View, newState: Int) {
+//                when (newState) {
+//                    BottomSheetBehavior.STATE_HIDDEN -> {
+//                    }
+//                    BottomSheetBehavior.STATE_EXPANDED -> {
+//
+//                    }
+//                    BottomSheetBehavior.STATE_COLLAPSED -> {
+//
+//                    }
+//                    BottomSheetBehavior.STATE_DRAGGING -> {
+//                    }
+//                    BottomSheetBehavior.STATE_SETTLING -> {
+//                    }
+//                }
+//            }
+//
+//            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+//
+//            }
+//        })
 
         seatLayoutBottonSheet.ivSelect.setOnClickListener {
 
@@ -499,13 +507,19 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
     }
 
     private fun hiddenButtonSheet() {
-        bottomSheetBehavior.isHideable = true//Important to add
-        bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
+        seatLayoutBottonSheet.visibility = View.GONE
+//        bottomSheetBehavior.isHideable = true//Important to add
+//        bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
     }
 
     private fun showButtonSheet() {
-        bottomSheetBehavior.isHideable = false//Important to add
-        bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+        seatLayoutBottonSheet.visibility = View.VISIBLE
+//        bottomSheetBehavior.isHideable = false//Important to add
+//        bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+
+
+
+
     }
 
     private fun displaySeatPattenv2() {

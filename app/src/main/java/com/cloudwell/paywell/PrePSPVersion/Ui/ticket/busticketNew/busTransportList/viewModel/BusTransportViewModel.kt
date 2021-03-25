@@ -1,4 +1,4 @@
-package com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.viewModel
+package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.viewModel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData

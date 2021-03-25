@@ -20,7 +20,7 @@ import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.base.BusTricketBaseActivity
 import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.view.IbusTransportListView
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v.CitiesListItem
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v.RequestScheduledata
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.scheduledata.ScheduleDataItem

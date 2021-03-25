@@ -1,16 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:fancy="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout68"
         android:layout_width="match_parent"
-        android:id="@+id/rootLayout"
-        android:layout_height="match_parent">
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/hader_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/search_bus_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:padding="@dimen/_10dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView789"
+            style="@style/medium_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/bus_ticket"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_16_7sp"
+            app:layout_constraintBottom_toBottomOf="@+id/search_bus_back"
+            app:layout_constraintStart_toEndOf="@+id/search_bus_back"
+            app:layout_constraintTop_toTopOf="@+id/search_bus_back" />
+
+
+        <ImageView
+            android:id="@+id/bus_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:padding="@dimen/_5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dash_setting" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <include layout="@layout/tab_background_bus" />
 
     <ScrollView
-            android:background="#31476a"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -22,9 +74,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_8dp"
-                android:layout_marginTop="@dimen/_8dp"
-                android:layout_marginRight="@dimen/_8dp"
+                android:layout_marginLeft="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginRight="@dimen/_16dp"
                 card_view:cardBackgroundColor="@color/card_background"
                 card_view:cardCornerRadius="8dp"
                 card_view:cardUseCompatPadding="true">
@@ -43,8 +95,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="4"
-                        android:orientation="vertical"
-                        android:padding="08dp">
+                        android:orientation="vertical">
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/textInputLayoutFirstName"
@@ -209,14 +260,11 @@
                 android:id="@+id/cardLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                card_view:cardBackgroundColor="#00203f"
+                android:layout_margin="@dimen/_16dp"
+                card_view:cardBackgroundColor="#F4F6F8"
                 card_view:cardCornerRadius="8dp"
+                android:elevation="@dimen/_5dp"
+                card_view:cardElevation="@dimen/_5dp"
                 card_view:cardUseCompatPadding="true">
 
                 <LinearLayout
@@ -234,7 +282,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="Total amount: 4000"
-                            android:textColor="#4CAF50"
+                            android:textColor="@color/keypad_text_clr"
                             android:textSize="18sp"
                             card_view:layout_constraintEnd_toEndOf="parent"
                             card_view:layout_constraintStart_toStartOf="parent"
@@ -274,7 +322,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Dhaka-Chg"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/keypad_text_clr"
+                            style="@style/medium_text_style"
                             android:textStyle="bold"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/textView70" />
@@ -285,8 +334,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Seat  No: "
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold"
+                            android:textColor="@color/keypad_text_clr"
+                            style="@style/text_style"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvBusNameOneWay" />
 
@@ -296,8 +345,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="boading Point"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold"
+                            android:textColor="@color/keypad_text_clr"
+                            style="@style/text_style"
+                            android:gravity="left"
                             card_view:layout_constraintEnd_toEndOf="parent"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvAddressOneWay2" />
@@ -310,8 +360,7 @@
                             android:layout_marginLeft="8dp"
                             android:layout_marginTop="4dp"
                             android:text="Seat  No: "
-                            android:textColor="#4CAF50"
-                            android:textStyle="bold"
+                            android:textColor="@color/keypad_text_clr"
                             card_view:layout_constraintEnd_toEndOf="parent"
                             card_view:layout_constraintStart_toEndOf="@+id/tvAddressOneWay2"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvBusNameOneWay" />
@@ -352,7 +401,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Dhaka-Chg"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/keypad_text_clr"
+                            style="@style/medium_text_style"
                             android:textStyle="bold"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvDeparture" />
@@ -363,8 +413,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Seat  No: "
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold"
+                            android:textColor="@color/keypad_text_clr"
+                            style="@style/text_style"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvBusNameRetrun" />
 
@@ -374,8 +424,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="boading Point"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold"
+                            android:textColor="@color/keypad_text_clr"
+                            style="@style/text_style"
+                            android:gravity="left"
                             card_view:layout_constraintEnd_toEndOf="parent"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvSeatRound" />
@@ -388,8 +439,7 @@
                             android:layout_marginLeft="4dp"
                             android:layout_marginTop="4dp"
                             android:text="Seat  No: "
-                            android:textColor="#4CAF50"
-                            android:textStyle="bold"
+                            android:textColor="@color/keypad_text_clr"
                             card_view:layout_constraintEnd_toEndOf="parent"
                             card_view:layout_constraintStart_toEndOf="@+id/tvSeatRound"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvBusNameRetrun" />

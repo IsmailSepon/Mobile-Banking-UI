@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.fragment.TransportListFragment
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.view.IbusTransportListView
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.fragment.SortFragmentDialog
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResSeatCheckBookAPI
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.Transport

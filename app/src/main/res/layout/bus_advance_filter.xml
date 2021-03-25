@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
+    android:paddingBottom="@dimen/_20dp"
     android:id="@+id/advanceSearch">
 
     <TextView
@@ -429,7 +430,7 @@
 <!--        fancy:layout_constraintTop_toBottomOf="@+id/radioGroupSortBy" />-->
 
     <ImageView
-        android:visibility="invisible"
+        android:visibility="gone"
         android:id="@+id/ivUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -441,15 +442,15 @@
         fancy:srcCompat="@drawable/ic_up" />
 
 
-    <ImageView
-        android:id="@+id/imageView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        fancy:layout_constraintBottom_toBottomOf="@+id/viewSearch"
-        fancy:layout_constraintEnd_toEndOf="@+id/viewSearch"
-        fancy:layout_constraintStart_toStartOf="@+id/viewSearch"
-        fancy:layout_constraintTop_toTopOf="@+id/viewSearch"
-        fancy:srcCompat="@drawable/ic_search_filter" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView43"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        fancy:layout_constraintBottom_toBottomOf="@+id/viewSearch"-->
+<!--        fancy:layout_constraintEnd_toEndOf="@+id/viewSearch"-->
+<!--        fancy:layout_constraintStart_toStartOf="@+id/viewSearch"-->
+<!--        fancy:layout_constraintTop_toTopOf="@+id/viewSearch"-->
+<!--        fancy:srcCompat="@drawable/ic_search_filter" />-->
 
     <!--    lsakjdfkl-->
 

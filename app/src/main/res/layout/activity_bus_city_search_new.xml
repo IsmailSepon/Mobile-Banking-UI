@@ -389,6 +389,8 @@
                                                     android:layout_height="wrap_content"
                                                     android:layout_margin="2dp"
                                                     android:text="23"
+                                                    android:drawableRight="@drawable/mini_calender_cmn"
+                                                    android:drawablePadding="@dimen/_5dp"
                                                     style="@style/text_style"
                                                     android:textColor="#f15a24"
                                                     android:textSize="14sp"
@@ -398,15 +400,15 @@
 
 
 
-                                            <ImageView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_marginBottom="5dp"
-                                                android:src="@drawable/mini_calender_cmn"
-                                                fancy:layout_constraintBottom_toBottomOf="parent"
-                                                fancy:layout_constraintEnd_toEndOf="parent"
-                                                fancy:layout_constraintTop_toTopOf="parent" />
+<!--                                            <ImageView-->
+<!--                                                android:layout_width="wrap_content"-->
+<!--                                                android:layout_height="wrap_content"-->
+<!--                                                android:layout_gravity="center"-->
+<!--                                                android:layout_marginBottom="5dp"-->
+<!--                                                android:src="@drawable/mini_calender_cmn"-->
+<!--                                                fancy:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                                fancy:layout_constraintEnd_toEndOf="parent"-->
+<!--                                                fancy:layout_constraintTop_toTopOf="parent" />-->
 
                                         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -429,7 +431,7 @@
                                     android:layout_height="match_parent">
 
                                     <View
-                                        android:layout_width="@dimen/_60dp"
+                                        android:layout_width="40dp"
                                         android:layout_height="match_parent"
                                         android:background="@color/transparent">
 
@@ -512,6 +514,8 @@
                                                     android:textStyle="bold" />
 
                                                 <TextView
+                                                    android:drawableRight="@drawable/mini_calender_cmn"
+                                                    android:drawablePadding="@dimen/_5dp"
                                                     android:id="@+id/dateTVRound"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
@@ -525,15 +529,15 @@
                                             </LinearLayout>
 
 
-                                            <ImageView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_marginBottom="5dp"
-                                                android:src="@drawable/mini_calender_cmn"
-                                                fancy:layout_constraintBottom_toBottomOf="parent"
-                                                fancy:layout_constraintEnd_toEndOf="parent"
-                                                fancy:layout_constraintTop_toTopOf="parent" />
+<!--                                            <ImageView-->
+<!--                                                android:layout_width="wrap_content"-->
+<!--                                                android:layout_height="wrap_content"-->
+<!--                                                android:layout_gravity="center"-->
+<!--                                                android:layout_marginBottom="5dp"-->
+<!--                                                android:src="@drawable/mini_calender_cmn"-->
+<!--                                                fancy:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                                fancy:layout_constraintEnd_toEndOf="parent"-->
+<!--                                                fancy:layout_constraintTop_toTopOf="parent" />-->
 
                                         </androidx.constraintlayout.widget.ConstraintLayout>
 

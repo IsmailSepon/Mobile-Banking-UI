@@ -19,7 +19,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.BusHosttActivity
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.view.IbusTransportListView
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.menu.BusTicketMenuActivity
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.BoothInfo
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.RequestBusSearch

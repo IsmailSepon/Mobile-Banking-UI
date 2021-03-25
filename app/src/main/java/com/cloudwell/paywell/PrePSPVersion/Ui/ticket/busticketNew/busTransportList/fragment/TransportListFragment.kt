@@ -12,8 +12,6 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.PopupWindow
-import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,7 +20,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportLi
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.adapter.OnClickListener
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.model.SearchFilter
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.view.IbusTransportListView
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
+import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.busTransportList.viewModel.BusTransportViewModel
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResSeatCheckBookAPI
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.ResSeatInfo
 import com.cloudwell.paywell.R
@@ -31,10 +29,8 @@ import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm
 import com.cloudwell.paywell.ui.BaseActivity
 import com.orhanobut.logger.Logger
-import kotlinx.android.synthetic.main.activity_bus_city_search_new.*
 import kotlinx.android.synthetic.main.bus_advance_filter.view.*
 import kotlinx.android.synthetic.main.fragment_transport_list.*
-import kotlinx.android.synthetic.main.fragment_transport_list.bus_control
 import kotlinx.android.synthetic.main.fragment_transport_list.view.*
 import kotlinx.android.synthetic.main.layout_filter.view.*
 
