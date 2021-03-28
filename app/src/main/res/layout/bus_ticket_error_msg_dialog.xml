@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#00203f"
+            android:background="@color/white"
             android:padding="10dp">
 
             <TextView
@@ -24,7 +24,7 @@
                 android:text="@string/title_error_message"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:textColor="@color/white"
+                android:textColor="@color/keypad_text_clr"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -38,7 +38,7 @@
             <ImageView
                 android:id="@+id/errorIV"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_24dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
@@ -85,7 +85,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="right"
             android:padding="8dp">
 
             <Button
@@ -94,9 +94,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
-                android:background="#00203f"
+                android:background="@color/transparent"
                 android:textSize="18sp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_link_clr"
                 android:paddingLeft="16dp"
                 android:paddingTop="8dp"
                 android:paddingRight="16dp"

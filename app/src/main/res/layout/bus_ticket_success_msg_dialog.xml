@@ -12,24 +12,24 @@
             android:orientation="vertical"
             android:gravity="center">
 
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#00203f"
-            android:padding="10dp">
+<!--        <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:background="#00203f"-->
+<!--            android:padding="10dp">-->
 
-            <TextView
-                android:id="@+id/otpErrorMsg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/title_error_message"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+<!--            <TextView-->
+<!--                android:id="@+id/otpErrorMsg"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/title_error_message"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </LinearLayout>-->
 
 
         <androidx.cardview.widget.CardView
@@ -42,7 +42,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            card_view:cardBackgroundColor="#00203f"
+            card_view:cardBackgroundColor="@color/white"
             card_view:cardCornerRadius="8dp"
             card_view:cardUseCompatPadding="true">
 
@@ -88,33 +88,34 @@
 
 
                     <TextView
+                        style="@style/text_style"
                         android:id="@+id/textView70"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Departure "
-                        android:textColor="#f15a24"
-                        android:textStyle="bold"
+                        android:textColor="@color/common_clr"
                         card_view:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        style="@style/text_style"
                         android:id="@+id/tvBusNameOneWay"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Desh Travel "
-                        android:textColor="#f15a24"
+                        android:textColor="@color/common_clr"
                         card_view:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toBottomOf="@+id/tvAddressOneWay" />
 
                     <TextView
+                        style="@style/text_style"
                         android:id="@+id/tvAddressOneWay"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Dhaka-Chg"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold"
+                        android:textColor="@color/common_clr"
                         card_view:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toBottomOf="@+id/textView70" />
 
@@ -124,8 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="boading Point"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold"
+                        android:textColor="@color/common_clr"
                         card_view:layout_constraintEnd_toEndOf="parent"
                         card_view:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toBottomOf="@+id/tvSeatNumberOneWay" />
@@ -136,8 +136,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Seat  No: "
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold"
+                        android:textColor="@color/common_clr"
+                        style="@style/text_style"
+                        android:gravity="left"
                         card_view:layout_constraintEnd_toEndOf="parent"
                         card_view:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toBottomOf="@+id/tvBusNameOneWay" />
@@ -176,8 +177,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Retrun "
-                        android:textColor="#f15a24"
-                        android:textStyle="bold"
+                        android:textColor="@color/common_clr"
                         card_view:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toTopOf="parent" />
 
@@ -187,7 +187,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Desh Travel"
-                        android:textColor="#f15a24"
+                        android:textColor="@color/common_clr"
                         card_view:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toBottomOf="@+id/tvAddressRetrun" />
 
@@ -197,8 +197,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Dhaka-Chg"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold"
+                        android:textColor="@color/common_clr"
                         card_view:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toBottomOf="@+id/tvDeparture" />
 
@@ -208,8 +207,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="boading Point"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold"
+                        android:textColor="@color/common_clr"
+                        style="@style/text_style"
+                        android:gravity="left"
                         card_view:layout_constraintEnd_toEndOf="parent"
                         card_view:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toBottomOf="@+id/tvSeatNumberRetrun" />
@@ -220,8 +220,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Seat  No: "
-                        android:textColor="#FFFFFF"
-                        android:textStyle="bold"
+                        android:textColor="@color/common_clr"
+                        style="@style/text_style"
+                        android:gravity="left"
                         card_view:layout_constraintEnd_toEndOf="parent"
                         card_view:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toBottomOf="@+id/tvBusNameRetrun" />
@@ -237,7 +238,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="right"
+            android:layout_marginTop="@dimen/_24dp"
             android:padding="8dp">
 
             <Button
@@ -245,9 +247,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:background="#00203f"
+                android:background="@color/transparent"
                 android:textSize="18sp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_link_clr"
                 android:paddingLeft="16dp"
                 android:paddingTop="8dp"
                 android:paddingRight="16dp"
