@@ -1189,6 +1189,7 @@
     <string name="bus_ticket">Bus ticket</string>
     <string name="return_date">Return date</string>
     <string name="search_bus_tickets">Search bus tickets</string>
+    <string name="continue_booking">Continue booking</string>
 
 
 </resources>

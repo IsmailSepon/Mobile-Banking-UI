@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:fancy="http://schemas.android.com/apk/res-auto"
@@ -15,13 +15,13 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50dp"
         android:background="@color/hader_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
 
 
         <ImageView
-            android:id="@+id/search_bus_back"
+            android:id="@+id/busdeparture_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_12dp"
@@ -40,9 +40,9 @@
             android:text="@string/bus_ticket"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_16_7sp"
-            app:layout_constraintBottom_toBottomOf="@+id/search_bus_back"
-            app:layout_constraintStart_toEndOf="@+id/search_bus_back"
-            app:layout_constraintTop_toTopOf="@+id/search_bus_back" />
+            app:layout_constraintBottom_toBottomOf="@+id/busdeparture_back"
+            app:layout_constraintStart_toEndOf="@+id/busdeparture_back"
+            app:layout_constraintTop_toTopOf="@+id/busdeparture_back" />
 
 
         <ImageView
@@ -60,14 +60,30 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <include layout="@layout/tab_background_bus" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100dp"
+        android:background="@color/hader_bg"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/constraintLayout68" />
+
+
+<!--    <include-->
+<!--        layout="@layout/tab_background_bus"-->
+<!--        card_view:layout_constraintEnd_toEndOf="parent"-->
+<!--        card_view:layout_constraintStart_toStartOf="parent"-->
+<!--        card_view:layout_constraintTop_toBottomOf="@+id/constraintLayout68" />-->
 
     <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/constraintLayout68">
 
         <LinearLayout
-                android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -75,11 +91,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_16dp"
-                android:layout_marginTop="@dimen/_16dp"
                 android:layout_marginRight="@dimen/_16dp"
+                android:elevation="@dimen/_5dp"
+                android:paddingBottom="@dimen/_5dp"
                 card_view:cardBackgroundColor="@color/card_background"
                 card_view:cardCornerRadius="8dp"
-                card_view:cardUseCompatPadding="true">
+                card_view:cardElevation="@dimen/_5dp">
 
                 <LinearLayout
                     android:id="@+id/dateLL"
@@ -88,6 +105,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="15dp"
                     android:paddingTop="15dp"
+                    android:paddingBottom="@dimen/_15dp"
                     android:paddingRight="15dp">
 
 
@@ -103,114 +121,222 @@
                             android:layout_height="wrap_content"
                             android:theme="@style/BusEditInputLayout">
 
-                            <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
+
+                            <EditText
+                                android:paddingTop="@dimen/_10"
                                 android:id="@+id/fullNameTV"
+                                android:hint="@string/full_name"
+                                android:inputType="textPersonName"
+                                android:textSize="@dimen/_14sp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:drawableStart="@drawable/human_avatar"
-                                android:drawableLeft="@drawable/human_avatar"
-                                android:drawablePadding="10dp"
-                                android:hint="@string/full_name"
-                                android:lines="1"
-                                android:padding="10dp"
-                                android:textSize="19sp"
-                                android:theme="@style/BusAppTheme" />
+                                android:background="@drawable/common_et_bg"
+                                android:ems="13"
+                                style="@style/edittext_style"
+                                android:drawablePadding="@dimen/_10dp"
+                                android:drawableStart="@drawable/user_bus"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/keypad_text_clr"
+                                tools:ignore="Autofill,MissingConstraints" />
+
+<!--                            <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText-->
+<!--                                android:id="@+id/fullNameTV"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:drawableStart="@drawable/user"-->
+<!--                                android:drawableLeft="@drawable/user"-->
+<!--                                android:drawablePadding="10dp"-->
+<!--                                android:hint="@string/full_name"-->
+<!--                                style="@style/edittext_style"-->
+<!--                                android:lines="1"-->
+<!--                                android:padding="10dp"-->
+<!--                                android:textSize="19sp"-->
+<!--                                android:theme="@style/BusAppTheme" />-->
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/textInputLayoutAge"
                             android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_10dp"
                             android:layout_height="wrap_content"
                             android:theme="@style/BusEditInputLayout">
 
-                            <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
+
+
+                            <EditText
                                 android:id="@+id/ageTV"
+                                android:hint="Age"
+                                android:paddingTop="@dimen/_10"
+                                android:inputType="number"
+                                android:textSize="@dimen/_14sp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:background="@drawable/common_et_bg"
+                                android:ems="13"
+                                style="@style/edittext_style"
+                                android:drawablePadding="@dimen/_10dp"
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
-                                android:drawableStart="@drawable/age_bus"
-                                android:drawableLeft="@drawable/age_bus"
-                                android:drawablePadding="10dp"
-                                android:hint="Age"
-                                android:inputType="number"
-                                android:lines="1"
-                                android:maxLength="3"
-                                android:padding="10dp"
-                                android:textSize="19sp"
-                                android:theme="@style/BusAppTheme" />
+                                android:drawableStart="@drawable/eighteen"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/keypad_text_clr"
+                                tools:ignore="Autofill,MissingConstraints" />
+
+<!--                            <EditText-->
+<!--                                android:id="@+id/ageTV"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"-->
+<!--                                android:drawableStart="@drawable/eighteen"-->
+<!--                                android:drawableLeft="@drawable/eighteen"-->
+<!--                                android:drawablePadding="10dp"-->
+<!--                                android:hint="Age"-->
+<!--                                style="@style/edittext_style"-->
+<!--                                android:inputType="number"-->
+<!--                                android:lines="1"-->
+<!--                                android:maxLength="3"-->
+<!--                                android:padding="10dp"-->
+<!--                                android:textSize="19sp"-->
+<!--                                android:theme="@style/BusAppTheme" />-->
                         </com.google.android.material.textfield.TextInputLayout>
 
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/textInputLayoutmobileNumber"
                             android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_10dp"
                             android:layout_height="wrap_content"
                             android:theme="@style/BusEditInputLayout">
 
-                            <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
+
+                            <EditText
+                                android:paddingTop="@dimen/_10"
                                 android:id="@+id/mobileNumberTV"
+                                android:hint="@string/mobile_number"
+                                android:textColorHint="@color/common_clr"
+                                android:inputType="phone"
+                                android:textSize="@dimen/_14sp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:background="@drawable/common_et_bg"
+                                android:ems="13"
+                                style="@style/edittext_style"
+                                android:drawablePadding="@dimen/_10dp"
                                 android:digits="1234567890"
-                                android:drawableStart="@drawable/mobile_bus"
-                                android:drawableLeft="@drawable/mobile_bus"
-                                android:drawablePadding="12dp"
-                                android:hint="@string/mobile_number"
-                                android:inputType="phone"
-                                android:lines="1"
-                                android:maxLength="11"
-                                android:padding="10dp"
-                                android:textSize="19sp"
-                                android:theme="@style/BusAppTheme" />
+                                android:drawableStart="@drawable/mobile"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/keypad_text_clr"
+                                tools:ignore="Autofill,MissingConstraints" />
+
+<!--                            <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText-->
+<!--                                android:id="@+id/mobileNumberTV"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:digits="1234567890"-->
+<!--                                android:drawableStart="@drawable/mobile"-->
+<!--                                android:drawableLeft="@drawable/mobile"-->
+<!--                                android:drawablePadding="12dp"-->
+<!--                                android:hint="@string/mobile_number"-->
+<!--                                android:inputType="phone"-->
+<!--                                android:lines="1"-->
+<!--                                style="@style/edittext_style"-->
+<!--                                android:maxLength="11"-->
+<!--                                android:padding="10dp"-->
+<!--                                android:textSize="19sp"-->
+<!--                                android:theme="@style/BusAppTheme" />-->
 
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/textInputLayoutAddress"
                             android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_10dp"
                             android:layout_height="wrap_content"
                             android:theme="@style/BusEditInputLayout">
 
-                            <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
+
+                            <EditText
+                                android:paddingTop="@dimen/_10"
                                 android:id="@+id/etAddress"
+                                android:hint="@string/bus_address"
+                                android:textColorHint="@color/common_clr"
+                                android:inputType="textPostalAddress"
+                                android:textSize="@dimen/_14sp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:drawableStart="@drawable/address_bus"
-                                android:drawableLeft="@drawable/address_bus"
-                                android:drawablePadding="12dp"
-                                android:hint="@string/bus_address"
-                                android:inputType="textPostalAddress"
-                                android:lines="1"
-                                android:padding="10dp"
-                                android:textSize="19sp"
-                                android:theme="@style/BusAppTheme" />
+                                android:background="@drawable/common_et_bg"
+                                android:drawablePadding="@dimen/_10dp"
+                                style="@style/edittext_style"
+                                android:drawableStart="@drawable/location_bus"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/keypad_text_clr" />
+
+<!--                            <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText-->
+<!--                                android:id="@+id/etAddress"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:drawableStart="@drawable/location_bus"-->
+<!--                                android:drawableLeft="@drawable/location_bus"-->
+<!--                                android:drawablePadding="12dp"-->
+<!--                                android:hint="@string/bus_address"-->
+<!--                                android:inputType="textPostalAddress"-->
+<!--                                android:lines="1"-->
+<!--                                style="@style/edittext_style"-->
+<!--                                android:padding="10dp"-->
+<!--                                android:textSize="19sp"-->
+<!--                                android:theme="@style/BusAppTheme" />-->
 
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/textInputLayoutmobilEmail"
                             android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_10dp"
                             android:layout_height="wrap_content"
                             android:theme="@style/BusEditInputLayout">
 
-                            <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText
+
+
+                            <EditText
+                                android:paddingTop="@dimen/_10"
                                 android:id="@+id/etEmail"
+                                android:hint="@string/email"
+                                android:textColorHint="@color/common_clr"
+                                android:inputType="textEmailAddress"
+                                android:textSize="@dimen/_14sp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:drawableStart="@drawable/email_bus"
-                                android:drawableLeft="@drawable/email_bus"
-                                android:drawablePadding="12dp"
-                                android:hint="@string/email"
-                                android:inputType="textEmailAddress"
+                                android:background="@drawable/common_et_bg"
+                                android:ems="13"
+                                style="@style/edittext_style"
+                                android:drawablePadding="@dimen/_10dp"
                                 android:lines="1"
-                                android:padding="10dp"
-                                android:textSize="19sp"
-                                android:theme="@style/BusAppTheme" />
+                                android:digits="1234567890"
+                                android:drawableStart="@drawable/mail_bus"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/keypad_text_clr"
+                                tools:ignore="Autofill,MissingConstraints" />
+
+
+<!--                            <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText-->
+<!--                                android:id="@+id/etEmail"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:drawableStart="@drawable/mail_bus"-->
+<!--                                android:drawableLeft="@drawable/mail_bus"-->
+<!--                                android:drawablePadding="12dp"-->
+<!--                                android:hint="@string/email"-->
+<!--                                android:inputType="textEmailAddress"-->
+<!--                                android:lines="1"-->
+<!--                                style="@style/edittext_style"-->
+<!--                                android:padding="10dp"-->
+<!--                                android:textSize="19sp"-->
+<!--                                android:theme="@style/BusAppTheme" />-->
 
                         </com.google.android.material.textfield.TextInputLayout>
 
 
                         <LinearLayout
+                            android:layout_marginTop="@dimen/_10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center|right"
@@ -225,7 +351,7 @@
                                 android:padding="5dp"
                                 android:text="@string/bus_info_gender"
                                 android:textColor="@color/bus_button_color"
-                                android:textSize="19sp" />
+                                android:textSize="@dimen/_14sp" />
 
                             <RadioGroup
                                 android:id="@+id/radioGroup"
@@ -239,6 +365,7 @@
                                     android:layout_height="wrap_content"
                                     android:checked="true"
                                     android:text="@string/male"
+                                    android:textSize="@dimen/_14sp"
                                     android:theme="@style/BusAppTheme" />
 
                                 <RadioButton
@@ -246,6 +373,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/female"
+                                    android:textSize="@dimen/_14sp"
                                     android:theme="@style/BusAppTheme" />
 
                             </RadioGroup>
@@ -262,15 +390,12 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_16dp"
                 card_view:cardBackgroundColor="#F4F6F8"
-                card_view:cardCornerRadius="8dp"
-                android:elevation="@dimen/_5dp"
-                card_view:cardElevation="@dimen/_5dp"
-                card_view:cardUseCompatPadding="true">
+                card_view:cardCornerRadius="8dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -282,6 +407,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="Total amount: 4000"
+                            style="@style/text_style"
+                            android:visibility="gone"
                             android:textColor="@color/keypad_text_clr"
                             android:textSize="18sp"
                             card_view:layout_constraintEnd_toEndOf="parent"
@@ -301,6 +428,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Departure "
+                            style="@style/text_style"
                             android:textColor="#f15a24"
                             android:textStyle="bold"
                             card_view:layout_constraintStart_toStartOf="parent"
@@ -312,42 +440,43 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Desh Travel "
+                            style="@style/text_style"
                             android:textColor="#f15a24"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvAddressOneWay" />
 
                         <TextView
                             android:id="@+id/tvAddressOneWay"
+                            style="@style/medium_text_style"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Dhaka-Chg"
                             android:textColor="@color/keypad_text_clr"
-                            style="@style/medium_text_style"
                             android:textStyle="bold"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/textView70" />
 
                         <TextView
                             android:id="@+id/tvAddressOneWay2"
+                            style="@style/text_style"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Seat  No: "
                             android:textColor="@color/keypad_text_clr"
-                            style="@style/text_style"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvBusNameOneWay" />
 
                         <TextView
                             android:id="@+id/tvBoardingPoint"
+                            style="@style/text_style"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
+                            android:gravity="left"
                             android:text="boading Point"
                             android:textColor="@color/keypad_text_clr"
-                            style="@style/text_style"
-                            android:gravity="left"
                             card_view:layout_constraintEnd_toEndOf="parent"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvAddressOneWay2" />
@@ -360,6 +489,8 @@
                             android:layout_marginLeft="8dp"
                             android:layout_marginTop="4dp"
                             android:text="Seat  No: "
+                            style="@style/text_style"
+                            android:gravity="left"
                             android:textColor="@color/keypad_text_clr"
                             card_view:layout_constraintEnd_toEndOf="parent"
                             card_view:layout_constraintStart_toEndOf="@+id/tvAddressOneWay2"
@@ -380,6 +511,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Retrun "
+                            style="@style/text_style"
                             android:textColor="#f15a24"
                             android:textStyle="bold"
                             card_view:layout_constraintStart_toStartOf="parent"
@@ -391,42 +523,43 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Desh Travel"
+                            style="@style/text_style"
                             android:textColor="#f15a24"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvAddressRetrun" />
 
                         <TextView
                             android:id="@+id/tvAddressRetrun"
+                            style="@style/medium_text_style"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Dhaka-Chg"
                             android:textColor="@color/keypad_text_clr"
-                            style="@style/medium_text_style"
                             android:textStyle="bold"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvDeparture" />
 
                         <TextView
                             android:id="@+id/tvSeatRound"
+                            style="@style/text_style"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Seat  No: "
                             android:textColor="@color/keypad_text_clr"
-                            style="@style/text_style"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvBusNameRetrun" />
 
                         <TextView
                             android:id="@+id/tvboadingPointRount"
+                            style="@style/text_style"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
+                            android:gravity="left"
                             android:text="boading Point"
                             android:textColor="@color/keypad_text_clr"
-                            style="@style/text_style"
-                            android:gravity="left"
                             card_view:layout_constraintEnd_toEndOf="parent"
                             card_view:layout_constraintStart_toStartOf="parent"
                             card_view:layout_constraintTop_toBottomOf="@+id/tvSeatRound" />
@@ -439,6 +572,8 @@
                             android:layout_marginLeft="4dp"
                             android:layout_marginTop="4dp"
                             android:text="Seat  No: "
+                            android:gravity="left"
+                            style="@style/text_style"
                             android:textColor="@color/keypad_text_clr"
                             card_view:layout_constraintEnd_toEndOf="parent"
                             card_view:layout_constraintStart_toEndOf="@+id/tvSeatRound"
@@ -452,23 +587,45 @@
             </androidx.cardview.widget.CardView>
 
 
-            <mehdi.sakout.fancybuttons.FancyButton
+<!--            <mehdi.sakout.fancybuttons.FancyButton-->
+<!--                android:id="@+id/btn_search"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_margin="@dimen/activity_horizontal_margin"-->
+<!--                android:paddingLeft="50dp"-->
+<!--                android:paddingRight="50dp"-->
+<!--                android:textAppearance="?android:attr/textAppearanceMedium"-->
+<!--                fancy:fb_defaultColor="@color/bus_button_color"-->
+<!--                fancy:fb_fontIconResource="&#xf274;"-->
+<!--                fancy:fb_iconPosition="left"-->
+<!--                fancy:fb_radius="5dp"-->
+<!--                fancy:fb_text="@string/continue_txt"-->
+<!--                fancy:fb_textColor="#FFFFFF" />-->
+
+
+
+
+            <Button
                 android:id="@+id/btn_search"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/activity_horizontal_margin"
-                android:paddingLeft="50dp"
-                android:paddingRight="50dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                fancy:fb_defaultColor="@color/bus_button_color"
-                fancy:fb_fontIconResource="&#xf274;"
-                fancy:fb_iconPosition="left"
-                fancy:fb_radius="5dp"
-                fancy:fb_text="@string/continue_txt"
-                fancy:fb_textColor="#FFFFFF" />
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_hight"
+                android:elevation="@dimen/evelation_five"
+                android:background="@drawable/round_btn_visable"
+                android:text="@string/continue_booking"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_40dp"
+                android:layout_marginTop="@dimen/_70dp"
+                tools:targetApi="lollipop" />
+
+
+
         </LinearLayout>
     </ScrollView>
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

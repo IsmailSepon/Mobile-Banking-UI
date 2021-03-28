@@ -1,6 +1,7 @@
 package com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.passenger
 
 
+import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -14,6 +15,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Spinner
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
@@ -33,9 +35,11 @@ import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.
 import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.dialog.BusSucessMsgWithFinlishDialog
 import com.cloudwell.paywell.base.newBase.BaseFragment
 import com.cloudwell.paywell.constant.AllConstant
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.activity_bus_booth_departure.*
 import kotlinx.android.synthetic.main.activity_bus_booth_departure.view.*
+import kotlinx.android.synthetic.main.ask_pin_layout.*
 import java.text.DecimalFormat
 
 
@@ -140,6 +144,12 @@ class BusPassengerBoothDepartureFragment(var isRetrunTriple: Boolean) : BaseFrag
         view.btn_search.setOnClickListener {
             handleBookingContinueBooking()
         }
+
+
+
+        view.busdeparture_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return view
 
@@ -294,13 +304,49 @@ class BusPassengerBoothDepartureFragment(var isRetrunTriple: Boolean) : BaseFrag
         passenger.passengerName = fullName
 
 
-        askForPin(busHosttActivity.isInternetConnection, passenger)
+        askpin(busHosttActivity.isInternetConnection, passenger)
 
+
+    }
+
+    private fun askpin(internetConnection: Boolean, passenger: Passenger){
+
+        val dialog : Dialog = Dialog(requireContext())
+        dialog.setContentView(R.layout.ask_pin_layout)
+
+        val pin_et : EditText = dialog.pin_et
+        val pin_ok : TextView = dialog.ok_txt
+
+        pin_ok.setOnClickListener(View.OnClickListener {
+
+            if (pin_et.text.toString().length != 0) {
+
+                val PIN_NO = pin_et.text.toString()
+                if (internetConnection) {
+                    viewMode.callSeatBookAndConfirmAPI(PIN_NO, passenger)
+                    dialog.dismiss()
+                } else {
+                    busHosttActivity.showBusTicketErrorDialog(getString(R.string.connection_error_msg))
+                    dialog.dismiss()
+                }
+            } else {
+                busHosttActivity.showBusTicketErrorDialog(getString(R.string.pin_no_error_msg))
+                dialog.dismiss()
+            }
+
+
+        })
+
+
+
+
+        dialog.show()
 
     }
 
     private fun askForPin(internetConnection: Boolean, passenger: Passenger) {
         val builder = AlertDialog.Builder(requireActivity())
+
         builder.setTitle(R.string.pin_no_title_msg)
 
         val pinNoET = EditText(requireContext())

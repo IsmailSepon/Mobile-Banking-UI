@@ -30,6 +30,7 @@ import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.seatview.BordingPoint
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.seatview.SeatstructureDetailsItem
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.bottom_seat_layout.*
@@ -125,7 +126,8 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
         }
 
         seat_bus_back.setOnClickListener(View.OnClickListener {
-            requireActivity().finish()
+
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
         })
         seat_bus_title.text = scheduleDataItem.companyName
 

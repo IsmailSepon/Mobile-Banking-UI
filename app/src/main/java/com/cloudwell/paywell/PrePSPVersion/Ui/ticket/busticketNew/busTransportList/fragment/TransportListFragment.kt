@@ -28,6 +28,7 @@ import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.new_v.Re
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.scheduledata.ScheduleDataItem
 import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm
 import com.cloudwell.paywell.ui.BaseActivity
+import com.cloudwell.paywell.utils.FragmentHelper
 import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.bus_advance_filter.view.*
 import kotlinx.android.synthetic.main.fragment_transport_list.*
@@ -127,7 +128,7 @@ class TransportListFragment(val requestScheduledata: RequestScheduledata, val is
 
         view.search_bus_back.setOnClickListener(View.OnClickListener {
 
-            requireActivity().finish()
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
         })
 
         view.llCustomFilterHeader.setOnClickListener(View.OnClickListener {

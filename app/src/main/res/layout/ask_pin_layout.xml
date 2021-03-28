@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_300dp"
+    android:background="@drawable/cardview_shadow"
+    android:paddingBottom="@dimen/_20dp"
+    android:layout_height="@dimen/_200dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_18_3sp"
+            style="@style/medium_text_style"
+            android:id="@+id/textView798"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="PIN"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/pin_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/common_et_bg"
+            android:ems="13"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="PIN*"
+            android:inputType="numberPassword"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView798"
+            app:layout_constraintTop_toBottomOf="@+id/textView798"
+            tools:ignore="Autofill,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/ok_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Ok"
+            android:textColor="@color/text_link_clr"
+            android:textSize="@dimen/_15sp"
+            style="@style/text_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</LinearLayout>
