@@ -56,6 +56,14 @@ public class BusTransactionLogActivity extends BusTricketBaseActivity {
         } else {
             Toast.makeText(this, "Internal error!!! limit can't be less than 5", Toast.LENGTH_SHORT).show();
         }
+
+        ImageView back = findViewById(R.id.trx_bus_back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     void getTransactionLog(String userName, String skey, String limit) {

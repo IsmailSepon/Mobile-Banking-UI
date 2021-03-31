@@ -20,7 +20,7 @@
 
 
         <ImageView
-            android:id="@+id/search_bus_back"
+            android:id="@+id/trx_bus_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_12dp"
@@ -39,9 +39,9 @@
             android:text="Trabsaction log"
             android:textColor="@color/keypad_text_clr"
             android:textSize="@dimen/_16_7sp"
-            app:layout_constraintBottom_toBottomOf="@+id/search_bus_back"
-            app:layout_constraintStart_toEndOf="@+id/search_bus_back"
-            app:layout_constraintTop_toTopOf="@+id/search_bus_back" />
+            app:layout_constraintBottom_toBottomOf="@+id/trx_bus_back"
+            app:layout_constraintStart_toEndOf="@+id/trx_bus_back"
+            app:layout_constraintTop_toTopOf="@+id/trx_bus_back" />
 
 
         <ImageView
