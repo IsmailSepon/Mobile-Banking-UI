@@ -11,6 +11,8 @@
 
 
     <TextView
+        style="@style/text_style"
+        android:textColor="@color/common_clr"
             android:id="@+id/bookingIdStringTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -20,23 +22,25 @@
             app:layout_constraintStart_toStartOf="@+id/WebBookingIDTV"
             app:layout_constraintTop_toBottomOf="@+id/webBookingId" />
 
-    <TextView
-            android:id="@+id/bookingIdTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:hint="Id number"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/bookingIdStringTV"
-            app:layout_constraintTop_toTopOf="@+id/bookingIdStringTV" />
-
 
     <TextView
+        android:id="@+id/bookingIdTV"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Id number"
+        android:textColor="@color/keypad_text_clr"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toEndOf="@+id/bookingIdStringTV"
+        app:layout_constraintTop_toTopOf="@+id/bookingIdStringTV" />
+
+    <TextView
+        style="@style/text_style"
+        android:textColor="@color/keypad_text_clr"
             android:id="@+id/tvTransactionId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,6 +53,8 @@
             tools:text="sdfsdfhsjkhdfkjhsfjkhsdjfkhjksdfh" />
 
     <TextView
+        style="@style/text_style"
+        android:textColor="@color/common_clr"
             android:id="@+id/WebBookingIDTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,6 +64,8 @@
             app:layout_constraintTop_toBottomOf="@+id/statusTV" />
 
     <TextView
+        style="@style/text_style"
+        android:textColor="@color/keypad_text_clr"
             android:id="@+id/webBookingId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,13 +89,14 @@
             app:srcCompat="@drawable/ic_bus_transtion_log" />
 
     <TextView
+        style="@style/text_style"
         android:id="@+id/priceTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:padding="5dp"
         android:text="8999"
-        android:textColor="#ff7178"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,6 +105,8 @@
 
 
     <TextView
+        style="@style/text_style"
+        android:textColor="@color/common_clr"
         android:id="@+id/statusStringTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -107,6 +118,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        style="@style/text_style"
+        android:gravity="left"
+        android:textColor="@color/keypad_text_clr"
         android:id="@+id/statusTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -114,7 +128,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:hint="booking"
-        android:textColor="#f15a24"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/statusStringTV"
@@ -122,6 +135,8 @@
         tools:text="sdflskdjflksdjfkljsdflkjsdklfjslkdfjklsjflkjslkdfjlksjdfksjdflkjsdlkf" />
 
     <TextView
+        style="@style/text_style"
+        android:textColor="@color/common_clr"
             android:id="@+id/textView34"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
