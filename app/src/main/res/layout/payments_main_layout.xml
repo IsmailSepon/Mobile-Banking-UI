@@ -280,6 +280,7 @@
 
 
             <TextView
+                android:id="@+id/top_up_btn"
                 style="@style/text_style"
                 android:layout_width="@dimen/_0dp"
                 android:layout_height="wrap_content"

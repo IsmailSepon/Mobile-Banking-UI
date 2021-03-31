@@ -17,29 +17,31 @@
         android:fontFamily="sans-serif-medium"
         android:lineSpacingExtra="6.7sp"
         android:text="Choose an action"
-        android:textColor="@color/recyclerview_title"
+        style="@style/medium_text_style"
+        android:textColor="@color/keypad_text_clr"
         android:textSize="@dimen/_15sp"
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageViewPDABS1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_42dp"
-        android:layout_marginTop="32.3dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPDABS1"
-        app:srcCompat="@drawable/ic_camera"
-        tools:ignore="VectorDrawableCompat" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageViewPDABS1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/_42dp"-->
+<!--        android:layout_marginTop="32.3dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewPDABS1"-->
+<!--        app:srcCompat="@drawable/ic_camera"-->
+<!--        tools:ignore="VectorDrawableCompat" />-->
 
     <TextView
         android:id="@+id/textViewPDABS2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44.7dp"
-        android:layout_marginTop="10.7dp"
+        android:layout_marginTop="32dp"
+        android:drawableTop="@drawable/ic_camera"
         android:fontFamily="sans-serif-medium"
         android:lineSpacingExtra="6.2sp"
         android:text="Camera"
@@ -47,25 +49,25 @@
         android:textSize="@dimen/_15sp"
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewPDABS1" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewPDABS1" />
 
-    <ImageView
-        android:id="@+id/imageViewPDABS2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_42dp"
-        android:layout_marginTop="26.3dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPDABS2"
-        app:srcCompat="@drawable/ic_download_blue"
-        tools:ignore="VectorDrawableCompat" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageViewPDABS2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="26.3dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewPDABS2"-->
+<!--        app:srcCompat="@drawable/ic_download_blue"-->
+<!--        tools:ignore="VectorDrawableCompat" />-->
 
     <TextView
         android:id="@+id/textViewPDABS3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8.3dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:drawableTop="@drawable/ic_download_blue"
         android:fontFamily="sans-serif-medium"
         android:lineSpacingExtra="6.2sp"
         android:text="Downloads"
@@ -73,7 +75,8 @@
         android:textSize="@dimen/_15sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewPDABS2" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewPDABS2"
+        app:layout_constraintStart_toStartOf="@+id/textViewPDABS2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPDABS2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

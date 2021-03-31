@@ -1,7 +1,10 @@
 package com.cloudwell.paywell.uiCommon.pay.fragment
 
 import android.content.Intent
+import android.database.Cursor
 import android.os.Bundle
+import android.provider.ContactsContract
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,6 +34,18 @@ class PaymentsMainFragment : Fragment(), PaymentAdapter.PaymentClickListener {
     ): View? {
         val view = inflater.inflate(R.layout.payments_main_layout, container, false)
 
+
+
+
+        setDemoRecycler(view)
+
+        initillizeView(view)
+
+
+        return view
+    }
+
+    private fun setDemoRecycler(view: View) {
 
         val layoutManager =
             LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
@@ -95,6 +110,9 @@ class PaymentsMainFragment : Fragment(), PaymentAdapter.PaymentClickListener {
         recycler1.adapter  = adapter //activity?.applicationContext?.let { PaymentAdapter(it, paymentlist) }
         adapter.setClickListener(this)
 
+    }
+
+    private fun initillizeView(view: View) {
 
         view.username_txt.setOnClickListener(View.OnClickListener {
             val intent = Intent(view.context, PaymentMainActivity::class.java)
@@ -160,8 +178,23 @@ class PaymentsMainFragment : Fragment(), PaymentAdapter.PaymentClickListener {
 
 
 
+        view.top_up_btn.setOnClickListener(View.OnClickListener {
 
-        return view
+            getContactList()
+
+        })
+
+
+    }
+
+    private fun getContactList() {
+
+
+        val intent = Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI)
+        intent.type = ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE
+       // startActivityForResult(intent, (topUpView.getTag() as Int))
+        startActivityForResult(intent, 1)
+
     }
 
     override fun onPaymentClick(pojo: MyPaymentPOjo, view: View, position: Int) {
@@ -180,5 +213,23 @@ class PaymentsMainFragment : Fragment(), PaymentAdapter.PaymentClickListener {
 
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 1){
+            val phones: Cursor = data!!.data?.let {
+                requireActivity().getContentResolver()
+                    .query(it, null, null, null, null)
+            }!!
+            while (phones.moveToNext()) {
+              val   phoneNumOne = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
+
+                Log.e("Contact", phoneNumOne.toString())
+
+            }
+            phones.close()
+
+        }
+    }
 
 }

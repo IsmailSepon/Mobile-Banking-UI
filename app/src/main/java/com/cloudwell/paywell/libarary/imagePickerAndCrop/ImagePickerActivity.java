@@ -3,6 +3,7 @@ package com.cloudwell.paywell.libarary.imagePickerAndCrop;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +13,8 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.provider.OpenableColumns;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -53,25 +56,51 @@ public class ImagePickerActivity extends AppCompatActivity {
 
     public static void showImagePickerOptions(Context context, PickerOptionListener listener) {
         // setup the alert builder
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(context.getString(R.string.lbl_set_profile_photo));
+//        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+//        builder.setTitle(context.getString(R.string.lbl_set_profile_photo));
 
-        // add a list
-        String[] animals = {context.getString(R.string.lbl_take_camera_picture), context.getString(R.string.lbl_choose_from_gallery)};
-        builder.setItems(animals, (dialog, which) -> {
-            switch (which) {
-                case 0:
-                    listener.onTakeCameraSelected();
-                    break;
-                case 1:
-                    listener.onChooseGallerySelected();
-                    break;
+        Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.picker_option);
+
+        TextView camera = dialog.findViewById(R.id.camera_picker);
+        TextView gallery = dialog.findViewById(R.id.gallery_picker);
+
+        camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                listener.onTakeCameraSelected();
+                dialog.dismiss();
             }
         });
 
-        // create and show the alert dialog
-        AlertDialog dialog = builder.create();
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                listener.onChooseGallerySelected();
+                dialog.dismiss();
+            }
+        });
+
         dialog.show();
+
+        // add a list
+//        String[] animals = {context.getString(R.string.lbl_take_camera_picture), context.getString(R.string.lbl_choose_from_gallery)};
+//        builder.setItems(animals, (dialog, which) -> {
+//            switch (which) {
+//                case 0:
+//                    listener.onTakeCameraSelected();
+//                    break;
+//                case 1:
+//                    listener.onChooseGallerySelected();
+//                    break;
+//            }
+//        });
+//
+//        // create and show the alert dialog
+//        AlertDialog dialog = builder.create();
+//        dialog.show();
     }
 
     private static String queryName(ContentResolver resolver, Uri uri) {

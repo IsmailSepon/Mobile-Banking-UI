@@ -553,7 +553,7 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
                 view.setPadding(0, 0, 0, 2 * seatGaping)
                 view.id = count
                 view.gravity = Gravity.CENTER
-                view.setBackgroundResource(R.drawable.ic_seat_booked)
+                view.setBackgroundResource(R.drawable.set_booked)
                 view.setTextColor(Color.WHITE)
                 view.tag = count
                 view.text = model.seatNo
@@ -571,7 +571,7 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
                 view.setPadding(0, 0, 0, 2 * seatGaping)
                 view.id = count
                 view.gravity = Gravity.CENTER
-                view.setBackgroundResource(R.drawable.ic_seat_avaliable)
+                view.setBackgroundResource(R.drawable.set_avilavle)
                 view.text = model.seatNo
                 view.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 9f)
                 view.setTextColor(Color.BLACK)
@@ -589,7 +589,7 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
                 view.setPadding(0, 0, 0, 2 * seatGaping)
                 view.id = count
                 view.gravity = Gravity.CENTER
-                view.setBackgroundResource(R.drawable.ic_seat_booked)
+                view.setBackgroundResource(R.drawable.set_booked)
                 view.text = model.seatNo
                 view.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 9f)
                 view.setTextColor(Color.WHITE)
@@ -640,7 +640,7 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
                 view.setPadding(0, 0, 0, 2 * seatGaping)
                 view.id = count
                 view.gravity = Gravity.CENTER
-                view.setBackgroundResource(R.drawable.ic_seat_booked)
+                view.setBackgroundResource(R.drawable.set_booked)
                 view.setTextColor(Color.WHITE)
                 view.tag = count
                 view.text = model.seatNo
@@ -658,7 +658,7 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
                 view.setPadding(0, 0, 0, 2 * seatGaping)
                 view.id = count
                 view.gravity = Gravity.CENTER
-                view.setBackgroundResource(R.drawable.ic_seat_avaliable)
+                view.setBackgroundResource(R.drawable.set_avilavle)
                 view.text = model.seatNo
                 view.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 9f)
                 view.setTextColor(Color.BLACK)
@@ -676,7 +676,7 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
                 view.setPadding(0, 0, 0, 2 * seatGaping)
                 view.id = count
                 view.gravity = Gravity.CENTER
-                view.setBackgroundResource(R.drawable.ic_seat_booked)
+                view.setBackgroundResource(R.drawable.set_booked)
                 view.text = model.seatNo
                 view.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 9f)
                 view.setTextColor(Color.WHITE)
@@ -702,14 +702,14 @@ class SeatLayoutFragment(val scheduleDataItem: ScheduleDataItem, val isRetrunTri
 
         if (model.status.equals("Available")) {
             if (!model.isUserSeleted) {
-                view.setBackgroundResource(R.drawable.ic_seat_seleted)
+                view.setBackgroundResource(R.drawable.set_selected)
                 val get = allBusSeat.get(view.tag as Int)
                 get.isUserSeleted = true
                 allBusSeat.set(view.tag as Int, get)
                 updateSeatLayuout()
                 Toast.makeText(requireContext(), "Seat " + model.seatNo + " is selected", Toast.LENGTH_SHORT).show()
             } else {
-                view.setBackgroundResource(R.drawable.ic_seat_avaliable)
+                view.setBackgroundResource(R.drawable.set_avilavle)
                 val get = allBusSeat.get(view.tag as Int)
                 get.isUserSeleted = false
                 allBusSeat.set(view.tag as Int, get)

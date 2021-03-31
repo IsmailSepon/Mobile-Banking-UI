@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_300dp"
+    android:background="@color/transparent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/cardview_shadow"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textViewPDABS1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22.7dp"
+            android:layout_marginTop="22.3dp"
+            android:fontFamily="sans-serif-medium"
+            android:lineSpacingExtra="6.7sp"
+            android:text="Choose an action"
+            style="@style/medium_text_style"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/camera_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44.7dp"
+            android:layout_marginTop="32dp"
+            android:drawableTop="@drawable/ic_camera"
+            android:fontFamily="sans-serif-medium"
+            android:lineSpacingExtra="6.2sp"
+            android:text="Camera"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPDABS1" />
+
+
+        <TextView
+            android:id="@+id/gallery_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:drawableTop="@drawable/ic_gallery"
+            android:fontFamily="sans-serif-medium"
+            android:lineSpacingExtra="6.2sp"
+            android:text="Downloads"
+            android:textColor="@color/keypad_text_clr"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/camera_picker"
+            app:layout_constraintTop_toTopOf="@+id/camera_picker" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
