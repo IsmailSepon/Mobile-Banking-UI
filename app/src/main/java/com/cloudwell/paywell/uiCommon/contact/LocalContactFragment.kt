@@ -3,7 +3,6 @@ package com.cloudwell.paywell.uiCommon.contact
 import android.annotation.SuppressLint
 import android.database.Cursor
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.util.Log
@@ -20,8 +19,6 @@ import androidx.loader.app.LoaderManager
 import androidx.loader.content.CursorLoader
 import androidx.loader.content.Loader
 import com.cloudwell.paywell.R
-import kotlinx.android.synthetic.main.local_contact_layout.view.*
-import kotlinx.android.synthetic.main.slycalendar_frame.*
 
 class LocalContactFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor>, AdapterView.OnItemClickListener {
 
@@ -82,19 +79,10 @@ class LocalContactFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor>, 
 
 
 
-//        contactsList = view.listview
-//        // Gets a CursorAdapter
-//        cursorAdapter = SimpleCursorAdapter(
-//            requireContext(), R.layout.contacts_list_item, null, FROM_COLUMNS, TO_IDS, 0
-//        )
-//        // Sets the adapter for the ListView
-//        contactsList.adapter = cursorAdapter
-//        contactsList.onItemClickListener = this
-
-        // Initializes the loader
         loaderManager.initLoader(0, null, this)
+     //   LoaderManager.getInstance(requireActivity());
 
-
+        Toast.makeText(requireContext(), "onCreateView", Toast.LENGTH_SHORT).show()
 
         return view
     }
@@ -105,7 +93,8 @@ class LocalContactFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor>, 
         activity?.also {
             contactsList = it.findViewById<ListView>(R.id.listview)
             // Gets a CursorAdapter
-            cursorAdapter = SimpleCursorAdapter(it, R.layout.contacts_list_item, null, FROM_COLUMNS, TO_IDS, 0
+            cursorAdapter = SimpleCursorAdapter(
+                it, R.layout.contacts_list_item, null, FROM_COLUMNS, TO_IDS, 0
             )
             // Sets the adapter for the ListView
             contactsList.adapter = cursorAdapter
@@ -130,6 +119,9 @@ class LocalContactFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor>, 
 
 
     override fun onCreateLoader(id: Int, args: Bundle?): Loader<Cursor> {
+
+        Toast.makeText(requireContext(), "onCreateLoader", Toast.LENGTH_SHORT).show()
+
        // selectionArgs[0] = "%$mSearchString%"
         // Starts the query
         val contentUri: Uri = Uri.withAppendedPath(
@@ -149,10 +141,33 @@ class LocalContactFragment : Fragment(), LoaderManager.LoaderCallbacks<Cursor>, 
         } ?: throw IllegalStateException()
     }
 
-    override fun onLoadFinished(loader: Loader<Cursor>, data: Cursor) {
+    override fun onLoadFinished(loader: Loader<Cursor>, cursor : Cursor) {
+
+        Toast.makeText(requireContext(), "onLoadFinished", Toast.LENGTH_SHORT).show()
 
  //       cursorAdapter?.swapCursor(data)
 
+        if (cursor.getCount() > 0) {
+            val stringBuilderQueryResult = StringBuilder("")
+            //cursor.moveToFirst();
+            while (cursor.moveToNext()) {
+                stringBuilderQueryResult.append(
+                    cursor.getString(0) + " , " +
+                            cursor.getString(1) + " , " +
+                            cursor.getString(2) + "\n"
+                )
+                val id: String =
+                    cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID))
+                val name: String =
+                    cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME))
+                Toast.makeText(requireContext(), "" + id, Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "" + name, Toast.LENGTH_SHORT).show()
+            }
+            Log.e("Contact", stringBuilderQueryResult.toString())
+        } else {
+            Log.e("Contact", "No Contacts in device")
+        }
+        cursor.close()
 
 
     }

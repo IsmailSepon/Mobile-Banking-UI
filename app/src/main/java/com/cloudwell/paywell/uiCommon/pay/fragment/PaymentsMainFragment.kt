@@ -18,11 +18,13 @@ import com.cloudwell.paywell.analytics.AnalyticsParameters
 import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.uiCommon.PaymentMainActivity
 import com.cloudwell.paywell.uiCommon.contact.ContactActivity
+import com.cloudwell.paywell.uiCommon.contact.LocalContactFragment
 import com.cloudwell.paywell.uiCommon.contact.PhoneContact
 import com.cloudwell.paywell.uiCommon.pay.adapter.PayAdapter
 import com.cloudwell.paywell.uiCommon.pay.adapter.PaymentAdapter
 import com.cloudwell.paywell.uiCommon.pay.model.MyPaymentPOjo
 import com.cloudwell.paywell.uiCommon.pay.model.PaytoPOjo
+import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.payments_main_layout.view.*
 
 
@@ -192,7 +194,7 @@ class PaymentsMainFragment : Fragment(), PaymentAdapter.PaymentClickListener {
 
     private fun getlocalContact() {
 
-      //  FragmentHelper.replaceFragment(LocalContactFragment(), requireActivity().supportFragmentManager, R.id.pre_psp_auth_container)
+     //   FragmentHelper.replaceFragment(LocalContactFragment(), requireActivity().supportFragmentManager, R.id.pre_psp_auth_container)
 
 
       //  val intent = Intent(requireContext(), LocalContactActivity::class.java)

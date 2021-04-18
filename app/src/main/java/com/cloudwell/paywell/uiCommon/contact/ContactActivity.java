@@ -1,6 +1,10 @@
 package com.cloudwell.paywell.uiCommon.contact;
 
+import android.app.SearchManager;
 import android.content.ContentResolver;
+import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -15,6 +19,12 @@ import com.cloudwell.paywell.R;
 public class ContactActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, android.app.LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final String TAG = "ContentProviderDemo";
+    Context mContext;
+
+    public static final String QUERY_KEY = "query";
+
+
+    public static final int CONTACT_QUERY_LOADER = 0;
 
     private String[] mColumnProjection = new String[]{
             ContactsContract.Contacts.DISPLAY_NAME_PRIMARY,
@@ -26,14 +36,38 @@ public class ContactActivity extends AppCompatActivity implements AdapterView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
 
-        getContactList();
+       // getContactList();
 
-     //   getLoaderManager().initLoader(1, null, this);
+//       getLoaderManager().initLoader(1, null, this);
 
       //  LoaderManager.getInstance(this);
+
+//        if (getIntent() != null) {
+            handleIntent(getIntent());
+       // }
+
+
     }
 
+    private void handleIntent(Intent intent) {
+        // Special processing of the incoming intent only occurs if the if the action specified
+        // by the intent is ACTION_SEARCH.
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            // SearchManager.QUERY is the key that a SearchManager will use to send a query string
+            // to an Activity.
+            String query = intent.getStringExtra(SearchManager.QUERY);
 
+            // We need to create a bundle containing the query string to send along to the
+            // LoaderManager, which will be handling querying the database and returning results.
+            Bundle bundle = new Bundle();
+            bundle.putString(QUERY_KEY, query);
+
+            ContactablesLoaderCallbacks loaderCallbacks = new ContactablesLoaderCallbacks(this);
+
+            // Start the loader with the new query, and an object that will handle all callbacks.
+            getLoaderManager().restartLoader(CONTACT_QUERY_LOADER, bundle, loaderCallbacks);
+        }
+    }
 
     @Override
     public android.content.Loader<Cursor> onCreateLoader(int id, Bundle args) {
@@ -41,8 +75,9 @@ public class ContactActivity extends AppCompatActivity implements AdapterView.On
 
         if (id == 1){
 
-            //return new CursorLoader(this,ContactsContract.Contacts.CONTENT_URI, mColumnProjection, null, null, null);
-            return new android.content.CursorLoader(this, ContactsContract.Contacts.CONTENT_URI, mColumnProjection, null, null, null);
+            return new CursorLoader(this,ContactsContract.Contacts.CONTENT_URI, mColumnProjection, null, null, null);
+//            return new android.content.CursorLoader(this, ContactsContract.Contacts.CONTENT_URI, mColumnProjection, null,
+//                    null, null);
 
         }
 
@@ -53,7 +88,7 @@ public class ContactActivity extends AppCompatActivity implements AdapterView.On
     public void onLoadFinished(android.content.Loader<Cursor> loader, Cursor cursor) {
         if (cursor != null && cursor.getCount() > 0) {
             StringBuilder stringBuilderQueryResult = new StringBuilder("");
-            //cursor.moveToFirst();
+            cursor.moveToFirst();
             while (cursor.moveToNext()) {
                 stringBuilderQueryResult.append(cursor.getString(0) + " , " +
                         cursor.getString(1) + " , " +
