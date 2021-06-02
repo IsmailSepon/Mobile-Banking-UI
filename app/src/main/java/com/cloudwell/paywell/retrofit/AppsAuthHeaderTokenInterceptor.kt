@@ -2,7 +2,7 @@ package com.cloudwell.paywell.retrofit
 
 import android.content.Context
 import android.content.Intent
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.PAuthenticationHostActivity
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.PAuthenticationHostActivity
 import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.data.network.AllUrl

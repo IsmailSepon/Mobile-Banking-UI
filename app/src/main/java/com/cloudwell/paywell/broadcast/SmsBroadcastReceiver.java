@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.otp.OtpReceivedInterface;
+import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.otp.OtpReceivedInterface;
 import com.google.android.gms.auth.api.phone.SmsRetriever;
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.common.api.Status;

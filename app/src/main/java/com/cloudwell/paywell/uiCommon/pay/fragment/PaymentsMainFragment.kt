@@ -10,21 +10,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.menu.AirTicketMenuActivity
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.menu.BusTicketMenuActivity
+import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.menu.AirTicketMenuActivity
+import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.menu.BusTicketMenuActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.analytics.AnalyticsManager
 import com.cloudwell.paywell.analytics.AnalyticsParameters
 import com.cloudwell.paywell.data.preferences.AppStorageBox
 import com.cloudwell.paywell.uiCommon.PaymentMainActivity
 import com.cloudwell.paywell.uiCommon.contact.ContactActivity
-import com.cloudwell.paywell.uiCommon.contact.LocalContactFragment
-import com.cloudwell.paywell.uiCommon.contact.PhoneContact
 import com.cloudwell.paywell.uiCommon.pay.adapter.PayAdapter
 import com.cloudwell.paywell.uiCommon.pay.adapter.PaymentAdapter
 import com.cloudwell.paywell.uiCommon.pay.model.MyPaymentPOjo
 import com.cloudwell.paywell.uiCommon.pay.model.PaytoPOjo
-import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.payments_main_layout.view.*
 
 

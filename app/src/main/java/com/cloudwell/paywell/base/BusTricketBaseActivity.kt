@@ -1,6 +1,5 @@
 package com.cloudwell.paywell.base
 
-import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
 import android.text.Spannable
@@ -8,10 +7,10 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.view.Menu
 import androidx.appcompat.app.ActionBar
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.base.newBase.MVVMBaseActivity
+import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.base.newBase.MVVMBaseActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.app.AppHandler
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.dialog.BusErrorMsgDialog
+import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.dialog.BusErrorMsgDialog
 import java.util.*
 
 /**

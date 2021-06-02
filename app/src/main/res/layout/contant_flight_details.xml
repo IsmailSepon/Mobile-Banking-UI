@@ -7,7 +7,7 @@
               android:layout_height="match_parent"
               android:background="@color/white"
               android:orientation="vertical"
-              tools:context=".PrePSPVersion.Ui.ticket.airticket.flightDetails1.FlightDetails1Activity">
+              tools:context=".prepspversion.ui.ticket.airticket.flightDetails1.FlightDetails1Activity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

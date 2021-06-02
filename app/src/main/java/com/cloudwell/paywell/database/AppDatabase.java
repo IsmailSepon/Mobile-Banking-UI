@@ -3,12 +3,12 @@ package com.cloudwell.paywell.database;
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.BusLocalDB;
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.BusSchedule;
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.TripScheduleInfo;
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.search.model.Airport;
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails2.model.Passenger;
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.model.Transport;
+import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.model.BusLocalDB;
+import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.model.BusSchedule;
+import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.model.TripScheduleInfo;
+import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.airportSearch.search.model.Airport;
+import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.flightDetails2.model.Passenger;
+import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.model.Transport;
 import com.cloudwell.paywell.services.activity.myFavorite.model.FavoriteMenu;
 import com.cloudwell.paywell.services.activity.notification.model.NotificationDetailMessage;
 import com.cloudwell.paywell.services.activity.notification.notificaitonFullView.model.NotificationDetailMessageSync;

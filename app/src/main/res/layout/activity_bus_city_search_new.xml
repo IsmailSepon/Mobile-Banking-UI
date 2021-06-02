@@ -64,7 +64,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context="com.cloudwell.paywell.PrePSPVersion.Ui.ticket.busticketNew.search.BusCitySearchActivity">
+            tools:context="com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.search.BusCitySearchActivity">
 
 
             <include layout="@layout/tab_background_bus" />

@@ -1,7 +1,7 @@
 package com.cloudwell.paywell.utils
 
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.Airline
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.airportSearch.model.Fare
+import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.airportSearch.model.Airline
+import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.airportSearch.model.Fare
 import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.Commission
 import com.google.gson.Gson
 import java.text.NumberFormat
@@ -108,7 +108,7 @@ object CalculationHelper {
         return isAirlines1
     }
 
-    fun getFare(fares: com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.model.Fare, airlineCode: String): com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.model.Fare {
+    fun getFare(fares: com.cloudwell.paywell.prepspversion.ui.ticket.airticket.flightDetails1.model.Fare, airlineCode: String): com.cloudwell.paywell.prepspversion.ui.ticket.airticket.flightDetails1.model.Fare {
         val readData = InternalStorageHelper.readData(InternalStorageHelper.CombustionfileName)
         val commission = Gson().fromJson(readData, Commission::class.java)
         val retailerCommission = commission.retailerCommission
@@ -178,7 +178,7 @@ object CalculationHelper {
     }
 
 
-    fun getTotalFareDetati(fares: MutableList<com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.model.Fare>, airlineCode: String): String {
+    fun getTotalFareDetati(fares: MutableList<com.cloudwell.paywell.prepspversion.ui.ticket.airticket.flightDetails1.model.Fare>, airlineCode: String): String {
         val readData = InternalStorageHelper.readData(InternalStorageHelper.CombustionfileName)
         val commission = Gson().fromJson(readData, Commission::class.java)
         val retailerCommission = commission.retailerCommission
@@ -238,7 +238,7 @@ object CalculationHelper {
         return format
     }
 
-    fun retailerEarning(fare: MutableList<com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.flightDetails1.model.Fare>): String? {
+    fun retailerEarning(fare: MutableList<com.cloudwell.paywell.prepspversion.ui.ticket.airticket.flightDetails1.model.Fare>): String? {
 
         val readData = InternalStorageHelper.readData(InternalStorageHelper.CombustionfileName)
         val commission = Gson().fromJson(readData, Commission::class.java)

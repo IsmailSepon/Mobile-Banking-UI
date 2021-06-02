@@ -15,7 +15,7 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.cloudwell.paywell.PrePSPVersion.Ui.ticket.airticket.base.newBase.MVVMBaseActivity
+import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.base.newBase.MVVMBaseActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.analytics.AnalyticsManager
 import com.cloudwell.paywell.analytics.AnalyticsParameters

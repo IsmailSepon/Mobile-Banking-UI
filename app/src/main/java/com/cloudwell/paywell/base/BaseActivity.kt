@@ -12,10 +12,8 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import com.cloudwell.paywell.PrePSPVersion.Ui.registration_Login.PAuthenticationHostActivity
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.PAuthenticationHostActivity
 import com.cloudwell.paywell.appController.AppController
-import com.cloudwell.paywell.ui.registration.SignupActivity
-import com.cloudwell.paywell.ui.registration.SignupPasswordActivity
 
 
 /**
