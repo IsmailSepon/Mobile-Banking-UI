@@ -7,9 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.Preference
+import com.cloudwell.paywell.databinding.AddMoneyBinding
+import com.cloudwell.paywell.databinding.RegPersonalDetailsFragmentBinding
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.viewmodel.AuthViewModel
+import com.cloudwell.paywell.ui.addMoney.viewModel.AddMoneyViewModel
 import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.reg_personal_details_fragment.view.*
 
@@ -23,10 +29,18 @@ class RegistrationPersonalDetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View =
-            inflater.inflate(R.layout.reg_personal_details_fragment, container, false)
+        //val view: View = inflater.inflate(R.layout.reg_personal_details_fragment, container, false)
 
+        val viewmodel = ViewModelProviders.of(this).get(AuthViewModel::class.java)
+        val binding: RegPersonalDetailsFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.reg_personal_details_fragment, container, false)
+        binding.viewmodel = viewmodel
 
+        initilizeViews(binding.root)
+
+        return binding.root
+    }
+
+    private fun initilizeViews(view: View) {
         view.pre_country_code_spinner.onItemSelectedListener
         val aa: ArrayAdapter<*> = ArrayAdapter<Any?>(requireContext(), android.R.layout.simple_spinner_item, country)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -50,7 +64,7 @@ class RegistrationPersonalDetailsFragment : Fragment() {
                 if (phone.length >= 10) {
                     view.pre_login_btn.setBackgroundResource(R.drawable.round_btn_visable)
                     view.pre_login_btn.setOnClickListener(View.OnClickListener {
-                       // finish()
+                        // finish()
                         //startActivity(Intent(applicationContext, MainHomeActivity::class.java))
 
                         val sharePreference : Preference = Preference.getInstance(requireContext())
@@ -79,6 +93,6 @@ class RegistrationPersonalDetailsFragment : Fragment() {
 
 
 
-        return view
+
     }
 }
