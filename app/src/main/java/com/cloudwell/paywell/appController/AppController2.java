@@ -51,7 +51,8 @@ import io.reactivex.schedulers.Schedulers;
 
 
 /**
- * Created by Android on 12/1/2015.
+ * Created by MD ISMAIL HOSSAIN SEPON on 08-Jun-21.
+ * ismailhossainsepon@gmail.com
  */
 @SuppressWarnings("ALL")
 public class AppController2 extends Application {

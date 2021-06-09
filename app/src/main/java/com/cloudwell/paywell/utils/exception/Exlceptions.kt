@@ -2,8 +2,10 @@ package com.cloudwell.paywell.utils.exception
 
 import java.io.IOException
 
+
 /**
- * Created by Kazi Md. Saidul Email: Kazimdsaidul@gmail.com  Mobile: +8801675349882 on 2019-09-04.
+ * Created by MD ISMAIL HOSSAIN SEPON on 07-Jun-21.
+ * ismailhossainsepon@gmail.com
  */
 class ApiException(message: String): IOException(message)
 class NoInternetException(message: String): IOException(message)

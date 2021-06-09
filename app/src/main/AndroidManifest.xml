@@ -27,7 +27,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
-        android:name=".appController.AppController2"
+        android:name=".appController.AppController3"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:installLocation="internalOnly"

@@ -3,6 +3,7 @@ package com.cloudwell.paywell.prepspversion.ui.registration_Login
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.cloudwell.paywell.R
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.fragment.RegistrationPersonalDetailsFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 
@@ -23,8 +24,8 @@ class PAuthenticationHostActivity : AppCompatActivity() {
 
 
 
-       // FragmentHelper.addFirstFragment(RegistrationPersonalDetailsFragment(), supportFragmentManager, R.id.pre_psp_auth_container)
-        FragmentHelper.addFirstFragment(PaymentsMainFragment(), supportFragmentManager, R.id.pre_psp_auth_container)
+        FragmentHelper.addFirstFragment(RegistrationPersonalDetailsFragment(), supportFragmentManager, R.id.pre_psp_auth_container)
+       // FragmentHelper.addFirstFragment(PaymentsMainFragment(), supportFragmentManager, R.id.pre_psp_auth_container)
 
 
 
