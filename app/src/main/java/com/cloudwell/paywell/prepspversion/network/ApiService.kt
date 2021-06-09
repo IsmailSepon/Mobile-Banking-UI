@@ -1,15 +1,13 @@
 package com.cloudwell.paywell.prepspversion.network
 
-import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.RegResponse
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.RegistrationRequest
 import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
-import retrofit2.Call
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
-import retrofit2.http.PO
+import retrofit2.http.POST
 
 /**
  * Created by MD ISMAIL HOSSAIN SEPON on 07-Jun-21.
