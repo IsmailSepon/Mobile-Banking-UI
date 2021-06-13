@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -95,6 +96,7 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
             try {
                 val authResponse = viewmodel.userSignup(reg)
                 Log.e("response", authResponse.toString())
+                Toast.makeText(requireContext(), authResponse.toString(), Toast.LENGTH_SHORT).show()
 
 //                if (authResponse.isSuccessful == true) {
 //                    //viewmodel.saveLoggedInUser(authResponse.user)
@@ -138,9 +140,18 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
                 if (phone.length >= 10) {
                     view.pre_login_btn.setBackgroundResource(R.drawable.round_btn_visable)
 
-                    view.pre_login_btn.setOnClickListener(View.OnClickListener {
-                        // finish()
-                        //startActivity(Intent(applicationContext, MainHomeActivity::class.java))
+                } else {
+                    view.pre_login_btn.setBackgroundResource(R.drawable.round_btn)
+                    //et_phone.setError("Input Field!")
+                }
+            }
+        })
+
+
+
+        view.pre_login_btn.setOnClickListener(View.OnClickListener {
+            // finish()
+            //startActivity(Intent(applicationContext, MainHomeActivity::class.java))
 
 //                        val sharePreference : Preference = Preference.getInstance(requireContext())
 //                        sharePreference.saveData("userMobileNumber", phone )
@@ -152,19 +163,11 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
 
 
 
-                        userSignup()
+            userSignup()
 
 
 
-                    })
-                } else {
-                    view.pre_login_btn.setBackgroundResource(R.drawable.round_btn)
-                    //et_phone.setError("Input Field!")
-                }
-            }
         })
-
-
 
 
 
