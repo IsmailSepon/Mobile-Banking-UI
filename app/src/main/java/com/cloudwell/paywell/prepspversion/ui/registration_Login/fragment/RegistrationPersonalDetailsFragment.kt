@@ -19,17 +19,23 @@ import com.cloudwell.paywell.databinding.RegPersonalDetailsFragmentBinding
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.factory.AuthViewModelFactory
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.DeviceProfile
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.RegistrationRequest
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.TokenResponse
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.User
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.viewmodel.AuthViewModel
+import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.utils.FragmentHelper
 import com.cloudwell.paywell.utils.exception.ApiException
 import com.cloudwell.paywell.utils.exception.NoInternetException
 import kotlinx.android.synthetic.main.activity_finger_auth.*
 import kotlinx.android.synthetic.main.reg_personal_details_fragment.view.*
 import kotlinx.coroutines.launch
+import okhttp3.ResponseBody
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.kodein
 import org.kodein.di.generic.instance
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.lang.Exception
 
 class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
@@ -88,30 +94,68 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
         reg.user = user
 
 
-
-
-
-
-        lifecycleScope.launch {
-            try {
-                val authResponse = viewmodel.userSignup(reg)
-                Log.e("response", authResponse.toString())
-                Toast.makeText(requireContext(), authResponse.toString(), Toast.LENGTH_SHORT).show()
-
-//                if (authResponse.isSuccessful == true) {
-//                    //viewmodel.saveLoggedInUser(authResponse.user)
-//                    FragmentHelper.addFirstFragment(OtpCheckFegment(), requireActivity().supportFragmentManager, R.id.pre_psp_auth_container)
-//                } else {
-//                //    binding.root.snackbar(authResponse.message!!)
+//        ApiUtils.getConsumerAPI().userRegister(reg).enqueue(object : Callback<ResponseBody>{
+//            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
+//
+//
+//                if ( response.isSuccessful ){
+//                    Toast.makeText(requireContext(), response.body().toString(), Toast.LENGTH_SHORT).show()
+//                }else{
+//
+//                    Toast.makeText(requireContext(), "Not Success!"+response.code() + " / "+ response.body(), Toast.LENGTH_SHORT).show()
 //                }
-            } catch (e: ApiException) {
-                e.printStackTrace()
-            } catch (e: NoInternetException) {
-                e.printStackTrace()
-            }catch (e : Exception){
-                Log.e("ecxception", e.toString())
+//
+//            }
+//
+//            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+//
+//            }
+//        })
+
+        val user1 = User()
+        user1.password = "cloudwell"
+        user1.username = "faizshiraji"
+
+        ApiUtils.getConsumerAPI().userToken(user1).enqueue(object : Callback<TokenResponse>{
+            override fun onResponse(call: Call<TokenResponse>, response: Response<TokenResponse>) {
+
+                if ( response.isSuccessful ){
+                    Toast.makeText(requireContext(), response.body()?.jwttoken.toString(), Toast.LENGTH_SHORT).show()
+                }else{
+
+                    Toast.makeText(requireContext(), "Not Success!"+response.code() + " / "+ response.body(), Toast.LENGTH_SHORT).show()
+                }
             }
-        }
+
+            override fun onFailure(call: Call<TokenResponse>, t: Throwable) {
+                Toast.makeText(requireContext(), t.message.toString(), Toast.LENGTH_SHORT).show()
+                Log.e("Error", t.message)
+            }
+        })
+
+
+
+
+//        lifecycleScope.launch {
+//            try {
+//                val authResponse = viewmodel.userSignup(reg)
+//                Log.e("response", authResponse.toString())
+//                Toast.makeText(requireContext(), authResponse.toString(), Toast.LENGTH_SHORT).show()
+//
+////                if (authResponse.isSuccessful == true) {
+////                    //viewmodel.saveLoggedInUser(authResponse.user)
+////                    FragmentHelper.addFirstFragment(OtpCheckFegment(), requireActivity().supportFragmentManager, R.id.pre_psp_auth_container)
+////                } else {
+////                //    binding.root.snackbar(authResponse.message!!)
+////                }
+//            } catch (e: ApiException) {
+//                e.printStackTrace()
+//            } catch (e: NoInternetException) {
+//                e.printStackTrace()
+//            }catch (e : Exception){
+//                Log.e("ecxception", e.toString())
+//            }
+//        }
     }
 
 

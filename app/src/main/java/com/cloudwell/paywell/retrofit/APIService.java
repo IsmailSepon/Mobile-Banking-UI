@@ -1,6 +1,9 @@
 package com.cloudwell.paywell.retrofit;
 
 
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.RegistrationRequest;
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.TokenResponse;
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.User;
 import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.booking.model.BookingList;
 import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.bookingStatus.model.ResIssueTicket;
 import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.finalReview.model.RequestAirPrebookingSearchParamsForServer;
@@ -656,18 +659,20 @@ public interface APIService {
 
     @POST("Tickets/BusAndLaunchService/generateOtpForCancelTicket")
     Call<ResponseTicketInformationCancel> generateOtpForCancelTicket(@Body RequestRenerateOtpForCancelTicket requestRenerateOtpForCancelTicket);
-//
-//
-//    @POST("Registration/UserRegistration/verifyUserPhoneNumberForRegistration")
-//    Call<ReposeVerifyPhoneNumberForRegistration> checkRetailerPhoneNumber(@Body RequestCheckRetailerPhoneNumber requestCheckRetailerPhoneNumber);
-//
-//    @POST("Registration/UserRegistration/verifyOTPForRegistration")
-//    Call<ReposeVerifyPhoneNumberForRegistration> verifyOTPForRegistration(@Body RequestRegOTPCheck RequestRegOTPCheck);
-//
-//    @POST("Registration/UserRegistration/regenerateOTPForRegistration")
-//    Call<ReposeGenerateOTPReg> generateOTPReg(@Body RequestGenerateOTPReg body);
-//
-//
-//    @POST("/")
-//    Call<RequestBody> test(@Body RequestGenerateOTPReg body);
+
+    @POST("register")
+    Call<ResponseBody> userRegister(@Body RegistrationRequest reg);
+
+
+
+    @POST("authenticate")
+    Call<TokenResponse> userToken(@Body User reg);
+
+
+
+
+
+
+
+
 }

@@ -62,6 +62,31 @@ object RetrofitClient {
     }
 
 
+    fun getConsumerClient(baseUrl: String): Retrofit? {
+        if (retrofit == null) {
+
+            val okHttpClient = OkHttpClient().newBuilder()
+
+
+            if (BuildConfig.DEBUG) {
+                val logging = HttpLoggingInterceptor()
+                logging.setLevel(HttpLoggingInterceptor.Level.BODY)
+                okHttpClient.addInterceptor(OkHttpProfilerInterceptor())
+            }
+
+            val build = okHttpClient.build()
+
+            retrofit = Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .addConverterFactory(ScalarsConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(build)
+                .build()
+        }
+        return retrofit
+    }
+
+
     fun getClientPHP(baseUrl: String): Retrofit? {
         if (retrofitPHP7 == null) {
             val httpClient = OkHttpClient.Builder()
