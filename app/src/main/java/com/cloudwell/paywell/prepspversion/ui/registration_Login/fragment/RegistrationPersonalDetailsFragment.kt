@@ -115,23 +115,23 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
         val user1 = User()
         user1.password = "cloudwell"
         user1.username = "faizshiraji"
-
-        ApiUtils.getConsumerAPI().userToken(user1).enqueue(object : Callback<TokenResponse>{
-            override fun onResponse(call: Call<TokenResponse>, response: Response<TokenResponse>) {
-
-                if ( response.isSuccessful ){
-                    Toast.makeText(requireContext(), response.body()?.jwttoken.toString(), Toast.LENGTH_SHORT).show()
-                }else{
-
-                    Toast.makeText(requireContext(), "Not Success!"+response.code() + " / "+ response.body(), Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onFailure(call: Call<TokenResponse>, t: Throwable) {
-                Toast.makeText(requireContext(), t.message.toString(), Toast.LENGTH_SHORT).show()
-                Log.e("Error", t.message)
-            }
-        })
+//
+//        ApiUtils.getConsumerAPI().userToken(user1).enqueue(object : Callback<TokenResponse>{
+//            override fun onResponse(call: Call<TokenResponse>, response: Response<TokenResponse>) {
+//
+//                if ( response.isSuccessful ){
+//                    Toast.makeText(requireContext(), response.body()?.jwttoken.toString(), Toast.LENGTH_SHORT).show()
+//                }else{
+//
+//                    Toast.makeText(requireContext(), "Not Success!"+response.code() + " / "+ response.body(), Toast.LENGTH_SHORT).show()
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<TokenResponse>, t: Throwable) {
+//                Toast.makeText(requireContext(), t.message.toString(), Toast.LENGTH_SHORT).show()
+//                Log.e("Error", t.message)
+//            }
+//        })
 
 
 
@@ -156,6 +156,21 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
 //                Log.e("ecxception", e.toString())
 //            }
 //        }
+
+
+        lifecycleScope.launch {
+            try {
+
+                val token = viewmodel.getRegToken(user1)
+                Log.e("API TOKEN", token.jwttoken)
+                Toast.makeText(requireContext(), token.jwttoken.toString(), Toast.LENGTH_SHORT).show()
+
+            }catch (e : Exception){
+
+
+            }
+        }
+
     }
 
 

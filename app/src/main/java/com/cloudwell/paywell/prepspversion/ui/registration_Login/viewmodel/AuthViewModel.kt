@@ -4,6 +4,7 @@ import android.util.Log
 import android.view.View
 import androidx.lifecycle.ViewModel
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.RegistrationRequest
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.User
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.repository.UserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -22,4 +23,8 @@ class AuthViewModel(private val repository: UserRepository) : ViewModel() {
     ) = withContext(Dispatchers.IO) { repository.userSignup(reg) }
 
 
+    suspend fun getRegToken( user : User) = withContext(Dispatchers.IO){
+        repository.getToken(user)
+
+    }
 }

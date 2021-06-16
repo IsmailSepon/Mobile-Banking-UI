@@ -13,7 +13,7 @@ abstract class SafeApiRequest {
             return response.body()!!
         }else{
             val error = response.errorBody()?.string()
-            val message = StringBuilder()
+                val message = StringBuilder()
             error?.let{
                 try{
                     message.append(JSONObject(it).getString("message"))

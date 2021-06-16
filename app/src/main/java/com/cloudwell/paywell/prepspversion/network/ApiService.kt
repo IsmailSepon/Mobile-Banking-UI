@@ -1,6 +1,8 @@
 package com.cloudwell.paywell.prepspversion.network
 
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.RegistrationRequest
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.TokenResponse
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.User
 import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
 import retrofit2.Response
@@ -27,6 +29,10 @@ interface ApiService {
 
     @POST("register")
     suspend fun userSignup(@Body reg : RegistrationRequest) : Response<ResponseBody>
+
+
+    @POST("register")
+    suspend fun getRegToken(@Body reg : User) : Response<TokenResponse>
 
 //    @POST("Recharge/mobileRecharge/bulkTopup")
 //    fun callTopAPI(@Body requestTopup: RequestTopup?): Call<TopupReposeData?>?

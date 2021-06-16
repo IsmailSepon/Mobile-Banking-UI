@@ -4,6 +4,8 @@ import com.cloudwell.paywell.prepspversion.network.ApiService
 import com.cloudwell.paywell.prepspversion.network.SafeApiRequest
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.RegResponse
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.RegistrationRequest
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.TokenResponse
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.User
 import okhttp3.ResponseBody
 
 
@@ -20,6 +22,10 @@ class UserRepository(private val api: ApiService) : SafeApiRequest(){
 
     suspend fun userSignup( reg : RegistrationRequest ) : ResponseBody {
         return apiRequest{ api.userSignup(reg)}
+    }
+
+    suspend fun getToken(user : User) : TokenResponse{
+        return apiRequest { api.getRegToken(user) }
     }
 
 //    suspend fun saveUser(user: User) = db.getUserDao().upsert(user)
