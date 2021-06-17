@@ -61,7 +61,7 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.reg_personal_details_fragment, container, false)
-        viewmodel = ViewModelProvider(this, factory).get(AuthViewModel::class.java)
+        viewmodel = ViewModelProvider(this).get(AuthViewModel::class.java)
 
 
 

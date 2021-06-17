@@ -1,7 +1,5 @@
 package com.cloudwell.paywell.prepspversion.ui.registration_Login.viewmodel
 
-import android.util.Log
-import android.view.View
 import androidx.lifecycle.ViewModel
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.RegistrationRequest
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.User
