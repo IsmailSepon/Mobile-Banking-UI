@@ -20,6 +20,7 @@ object NetClient {
         val client: OkHttpClient = OkHttpClient.Builder() .addInterceptor(interceptor).build()
 
 
+
         retrofit = Retrofit.Builder()
             .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())

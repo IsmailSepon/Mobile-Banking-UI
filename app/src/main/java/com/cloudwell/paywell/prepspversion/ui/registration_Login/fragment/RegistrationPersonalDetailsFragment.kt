@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.cloudwell.paywell.R
-import com.cloudwell.paywell.base.Preference
 import com.cloudwell.paywell.databinding.RegPersonalDetailsFragmentBinding
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.factory.AuthViewModelFactory
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.DeviceProfile
@@ -24,19 +23,15 @@ import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.User
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.viewmodel.AuthViewModel
 import com.cloudwell.paywell.retrofit.ApiUtils
 import com.cloudwell.paywell.utils.FragmentHelper
-import com.cloudwell.paywell.utils.exception.ApiException
-import com.cloudwell.paywell.utils.exception.NoInternetException
 import kotlinx.android.synthetic.main.activity_finger_auth.*
 import kotlinx.android.synthetic.main.reg_personal_details_fragment.view.*
 import kotlinx.coroutines.launch
-import okhttp3.ResponseBody
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.kodein
 import org.kodein.di.generic.instance
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.lang.Exception
 
 class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
 
@@ -61,7 +56,7 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.reg_personal_details_fragment, container, false)
-        viewmodel = ViewModelProvider(this).get(AuthViewModel::class.java)
+        viewmodel = ViewModelProvider(this, factory).get(AuthViewModel::class.java)
 
 
 
@@ -86,6 +81,7 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
         profile.refId = "test Sepon by API"
         profile.model = "test Sepon by API"
         profile.appVersionNo = "test Sepon by API"
+
         val user = User()
         user.password = "12345"
         user.username = name
@@ -116,22 +112,22 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
         user1.password = "cloudwell"
         user1.username = "faizshiraji"
 //
-//        ApiUtils.getConsumerAPI().userToken(user1).enqueue(object : Callback<TokenResponse>{
-//            override fun onResponse(call: Call<TokenResponse>, response: Response<TokenResponse>) {
-//
-//                if ( response.isSuccessful ){
-//                    Toast.makeText(requireContext(), response.body()?.jwttoken.toString(), Toast.LENGTH_SHORT).show()
-//                }else{
-//
-//                    Toast.makeText(requireContext(), "Not Success!"+response.code() + " / "+ response.body(), Toast.LENGTH_SHORT).show()
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<TokenResponse>, t: Throwable) {
-//                Toast.makeText(requireContext(), t.message.toString(), Toast.LENGTH_SHORT).show()
-//                Log.e("Error", t.message)
-//            }
-//        })
+        ApiUtils.getConsumerAPI().userToken(user1).enqueue(object : Callback<TokenResponse> {
+            override fun onResponse(call: Call<TokenResponse>, response: Response<TokenResponse>) {
+
+                if ( response.isSuccessful ){
+                    Toast.makeText(requireContext(), response.body()?.jwttoken.toString(), Toast.LENGTH_SHORT).show()
+                }else{
+
+                    Toast.makeText(requireContext(), "Not Success!"+response.code() + " / "+ response.body(), Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<TokenResponse>, t: Throwable) {
+                Toast.makeText(requireContext(), t.message.toString(), Toast.LENGTH_SHORT).show()
+                Log.e("Error", t.message)
+            }
+        })
 
 
 
@@ -209,20 +205,31 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
 
 
         view.pre_login_btn.setOnClickListener(View.OnClickListener {
-            // finish()
-            //startActivity(Intent(applicationContext, MainHomeActivity::class.java))
 
-//                        val sharePreference : Preference = Preference.getInstance(requireContext())
-//                        sharePreference.saveData("userMobileNumber", phone )
-
-//                        startActivity(Intent(requireContext(),
-//                                // RegistationMainActivity::class.java      UserAuthenticationHostActivity
-//                            SignupPasswordActivity::class.java))
 //
+            val name = binding.root.fullname.text.toString().trim()
+            val number = binding.root.pre_et_phone.text.toString().trim()
+
+            if(name.isEmpty()){
+                binding.root.fullname.setError("required")
+            }else if (number.isEmpty()){
+                binding.root.pre_et_phone.setError("required")
+            }else{
+                val bundle = Bundle()
+                bundle.putString("userName", name)
+                bundle.putString("userNumber", number)
+                val addressFrg = AddressFregment()
+                addressFrg.setArguments(bundle)
+
+                FragmentHelper.addFirstFragment(addressFrg, requireActivity().supportFragmentManager, R.id.pre_psp_auth_container)
+
+            }
 
 
 
-            userSignup()
+
+
+        //    userSignup()
 
 
 

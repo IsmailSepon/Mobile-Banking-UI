@@ -18,6 +18,7 @@ open class BaseFragment : Fragment(), IView {
     }
 
     override fun showProgress() {
+
     }
 
 }

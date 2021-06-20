@@ -3,12 +3,14 @@ package com.cloudwell.paywell.prepspversion.ui.registration_Login.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,6 +32,8 @@ public class PreCreatePasswordFrag extends Fragment {
 
     PinEntryEditText creat_pin_et;
     CustomKeyboard keyboard;
+
+    String name , number;
 
     @Nullable
     @Override
@@ -63,8 +67,15 @@ public class PreCreatePasswordFrag extends Fragment {
 //                        RegistationMainActivity parent = (RegistationMainActivity) getActivity();
 //                        parent.setPagerFragment(1);
 
+                        Bundle bundle = new Bundle();
+                        bundle.putString("userName", name);
+                        bundle.putString("userNumber", number);
+                        bundle.putString("PIN", str.toString());
 
-                        FragmentHelper.addFirstFragment(new PreConfirmPasswordFeg(), getActivity().getSupportFragmentManager(), R.id.pre_psp_auth_container);
+                        PreConfirmPasswordFeg frg = new PreConfirmPasswordFeg();
+                        frg.setArguments(bundle);
+
+                        FragmentHelper.addFirstFragment(frg, getActivity().getSupportFragmentManager(), R.id.pre_psp_auth_container);
 
                     }
 //                    if (str.toString().equals("1234")) {
@@ -84,10 +95,21 @@ public class PreCreatePasswordFrag extends Fragment {
         }
 
 
+        getIntentData();
+
         return view;
     }
 
+    private void getIntentData() {
 
+        name = getArguments().getString("userName");
+        number = getArguments().getString("userNumber");
+
+
+
+        Log.e("User Name : ", name);
+        Log.e("User Number : ", number);
+    }
 
 
 }

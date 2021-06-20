@@ -3,6 +3,7 @@ package com.cloudwell.paywell.prepspversion.ui.registration_Login.fragment;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,11 +20,12 @@ import androidx.fragment.app.Fragment;
 
 import com.cloudwell.paywell.R;
 import com.cloudwell.paywell.utils.FragmentHelper;
+import com.cloudwell.paywell.utils.ToastHelper;
 
 /**
  * Created by Sepon on 4/15/2020.
  */
-public class AddressFregment extends Fragment {
+public class   AddressFregment  extends Fragment {
 
     EditText name_et, dateofbirth_et;
     String[] country = {"Select Country", "Bangladesh", "India", "USA", "China", "Japan", "Other"};
@@ -33,6 +36,7 @@ public class AddressFregment extends Fragment {
     EditText address_et;
     Button address_btn;
     ImageView backBtn;
+    String name , number;
 
     public static AddressFregment newInstance() {
         return new AddressFregment();
@@ -90,10 +94,21 @@ public class AddressFregment extends Fragment {
             address_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    RegistationMainActivity parent = (RegistationMainActivity) getActivity();
-//                    parent.setPagerFragment(5);
+//
+//                    val bundle = Bundle()
+//                    bundle.putString("userName", name)
+//                    bundle.putString("userNumber", number)
+//                    val addressFrg = AddressFregment()
+//                    addressFrg.setArguments(bundle)
 
-                    FragmentHelper.replaceFragment(new CurrencyFragment(), getActivity().getSupportFragmentManager(), R.id.pre_psp_auth_container);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("userName", name);
+                    bundle.putString("userNumber", number);
+
+                    PreCreatePasswordFrag frg = new PreCreatePasswordFrag();
+                            frg.setArguments(bundle);
+
+                    FragmentHelper.replaceFragment( frg, getActivity().getSupportFragmentManager(), R.id.pre_psp_auth_container);
 
 
                 }
@@ -113,8 +128,18 @@ public class AddressFregment extends Fragment {
         });
 
 
+        getIntentData();
 
         return view;
+    }
+
+    private void getIntentData() {
+
+        name = getArguments().getString("userName");
+        number = getArguments().getString("userNumber");
+
+        Log.e("User Name : ", name);
+        Log.e("User Number : ", number);
     }
 
 

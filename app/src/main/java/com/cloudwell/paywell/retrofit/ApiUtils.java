@@ -47,8 +47,8 @@ public class ApiUtils {
 
 
     public static APIService getConsumerAPI() {
-      //  return RetrofitClient.INSTANCE.getConsumerClient(CONSUMER).create(APIService.class);
-        return NetClient.INSTANCE.getClient(CONSUMER).create(APIService.class);
+        return RetrofitClient.INSTANCE.getConsumerClient(CONSUMER).create(APIService.class);
+      //  return NetClient.INSTANCE.getClient(CONSUMER).create(APIService.class);
     }
 
 
