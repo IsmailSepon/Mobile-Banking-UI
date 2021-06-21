@@ -186,6 +186,20 @@ public class PreConfirmPasswordFeg extends BaseFragment {
 
     private void getRefreshToken(String jwttoken) {
 
+        String auth = "Bearer "+jwttoken;
+
+        ApiUtils.getConsumerAPI().reFreshToken(auth, true).enqueue(new Callback<TokenResponse>() {
+            @Override
+            public void onResponse(Call<TokenResponse> call, Response<TokenResponse> response) {
+                TokenResponse tokenResponse = response.body();
+                Log.e("refresh TOKEN response", tokenResponse.getJwttoken());
+            }
+
+            @Override
+            public void onFailure(Call<TokenResponse> call, Throwable t) {
+
+            }
+        });
 
 
     }
