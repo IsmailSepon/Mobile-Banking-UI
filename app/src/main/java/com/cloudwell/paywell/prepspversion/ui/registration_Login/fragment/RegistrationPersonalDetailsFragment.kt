@@ -218,7 +218,7 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
                 val bundle = Bundle()
                 bundle.putString("userName", name)
                 bundle.putString("userNumber", number)
-                val addressFrg = AddressFregment()
+                val addressFrg = PreCreatePasswordFrag()
                 addressFrg.setArguments(bundle)
 
                 FragmentHelper.addFirstFragment(addressFrg, requireActivity().supportFragmentManager, R.id.pre_psp_auth_container)

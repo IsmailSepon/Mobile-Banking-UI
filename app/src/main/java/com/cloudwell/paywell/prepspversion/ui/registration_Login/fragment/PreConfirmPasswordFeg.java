@@ -130,7 +130,7 @@ public class PreConfirmPasswordFeg extends BaseFragment {
 
         User user = new User();
         user.setPassword(pin);
-        user.setUsername(name);
+        user.setUsername(number);
 
         registrationRequest.setDeviceProfile(profile);
         registrationRequest.setUser(user);
@@ -141,8 +141,11 @@ public class PreConfirmPasswordFeg extends BaseFragment {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
+
                 if (response.isSuccessful()){
                     getToken(user);
+                    Log.e("get TOKEN ", "tokrn API");
+
                 }
 
             }
@@ -170,6 +173,7 @@ public class PreConfirmPasswordFeg extends BaseFragment {
                // Toast.makeText(requireActivity(), " "+response.body().getJwttoken().toString(), Toast.LENGTH_SHORT).show();
                 TokenResponse tokenResponse = response.body();
                 Log.e("response", tokenResponse.getJwttoken());
+                getRefreshToken(tokenResponse.getJwttoken());
             }
 
             @Override
@@ -178,6 +182,12 @@ public class PreConfirmPasswordFeg extends BaseFragment {
                 dialog.dismiss();
             }
         });
+    }
+
+    private void getRefreshToken(String jwttoken) {
+
+
+
     }
 
 
