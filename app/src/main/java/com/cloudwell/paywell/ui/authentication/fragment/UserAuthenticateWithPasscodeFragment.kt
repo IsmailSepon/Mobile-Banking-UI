@@ -34,7 +34,6 @@ class UserAuthenticateWithPasscodeFragment : Fragment(),  CustomKeyboardWithFing
 
         keyboard = view.findViewById(R.id.customKeyboardUAS)
         editTextCreatePin = view.findViewById(R.id.editTextUAS1)
-
         editTextCreatePin.setRawInputType(InputType.TYPE_CLASS_TEXT)
         editTextCreatePin.setTextIsSelectable(true)
         val ic: InputConnection = editTextCreatePin.onCreateInputConnection(EditorInfo())
