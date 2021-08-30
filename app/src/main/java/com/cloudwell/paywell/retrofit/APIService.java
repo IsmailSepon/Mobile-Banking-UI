@@ -1,6 +1,7 @@
 package com.cloudwell.paywell.retrofit;
 
 
+import com.cloudwell.paywell.prepspversion.MovieResponse;
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.RegistrationRequest;
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.TokenResponse;
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.User;
@@ -52,6 +53,7 @@ import com.cloudwell.paywell.services.activity.notification.model.deletetNotific
 import com.cloudwell.paywell.services.activity.notification.model.deletetNotification.RequestDeletedNotification;
 import com.cloudwell.paywell.services.activity.notification.model.getNotification.RequestNotificationAll;
 import com.cloudwell.paywell.utils.ParameterUtility;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
 import com.google.gson.JsonObject;
 
 import java.util.Map;
@@ -669,13 +671,25 @@ public interface APIService {
     @POST("authenticate")
     Call<TokenResponse> userToken(@Body User reg);
 
+    @POST("user/checkotp")
+    Call<TokenResponse> checkconsumerOTp(@Header("Authorization" )String auth, @Body String reg);
+
 
 
 
 
     @POST("refreshtoken")
     @FormUrlEncoded
-    Call<TokenResponse> reFreshToken( @Header("Authorization") String AuthorizationKey, @Header("isRefreshToken")  boolean key);
+    Call<TokenResponse> reFreshToken( @Header("Authorization") String auth, @Header("isRefreshToken")  boolean key);
+
+
+
+
+
+    @GET("discover/movie")
+    Call<MovieResponse> testt(@Query("api_key") String username);
+
+
 
 
 

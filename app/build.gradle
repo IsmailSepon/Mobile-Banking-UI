@@ -80,34 +80,34 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${rootProject.ext.viewmodelKtxVersion}"
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
 
-//    retrofit
-//    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofitVersion}"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.retrofitVersion}"
-    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofitVersion}"
-    implementation "com.squareup.retrofit2:converter-scalars:${rootProject.ext.retrofitVersion}"
+    //    retrofit
+    //    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofitVersion}"
+        implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.retrofitVersion}"
+        implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofitVersion}"
+        implementation "com.squareup.retrofit2:converter-scalars:${rootProject.ext.retrofitVersion}"
 
-    //okhttp
-    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
-    implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.okhttpVersion}"
-    implementation "com.itkacher.okhttpprofiler:okhttpprofiler:${rootProject.ext.okhttpprofiler}"
+        //okhttp
+        implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+        implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.okhttpVersion}"
+        implementation "com.itkacher.okhttpprofiler:okhttpprofiler:${rootProject.ext.okhttpprofiler}"
 
-    //Android Room
-//    implementation "androidx.room:room-runtime:${rootProject.ext.room_version}"
-//    implementation "androidx.room:room-ktx:${rootProject.ext.room_version}"
+        //Android Room
+    //    implementation "androidx.room:room-runtime:${rootProject.ext.room_version}"
+    //    implementation "androidx.room:room-ktx:${rootProject.ext.room_version}"
 
-    annotationProcessor "androidx.room:room-compiler:$room_version"
-    implementation "androidx.room:room-rxjava2:${rootProject.ext.room_version}"
-//    kapt "androidx.room:room-compiler:$room_version"
+        annotationProcessor "androidx.room:room-compiler:$room_version"
+        implementation "androidx.room:room-rxjava2:${rootProject.ext.room_version}"
+    //    kapt "androidx.room:room-compiler:$room_version"
 
-//
-//    // rxjava
-//    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxandroidV}"
-//    implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxJavaVersion}"
-    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
-//
-//    // kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.ext.kotlin_version}"
-    implementation "org.jetbrains.anko:anko-common:${rootProject.ext.ankocommonVersion}"
+    //
+    //    // rxjava
+    //    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxandroidV}"
+    //    implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxJavaVersion}"
+        annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    //
+    //    // kotlin
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.ext.kotlin_version}"
+        implementation "org.jetbrains.anko:anko-common:${rootProject.ext.ankocommonVersion}"
 //
 //
 //

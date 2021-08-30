@@ -16,7 +16,13 @@ import androidx.fragment.app.Fragment;
 
 import com.cloudwell.paywell.R;
 import com.cloudwell.paywell.base.PinEntryEditText;
+import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.TokenResponse;
+import com.cloudwell.paywell.retrofit.ApiUtils;
 import com.cloudwell.paywell.utils.FragmentHelper;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Sepon on 4/15/2020.
@@ -53,9 +59,12 @@ public class OtpCheckFegment extends Fragment {
 
                 if (etMobileOrRID.getText().length() == 6) {
                     hideKeyboardFrom(getActivity(), etMobileOrRID);
+
+                    checkOTP(etMobileOrRID.getText());
+
 //                    RegistationMainActivity parent = (RegistationMainActivity) getActivity();
 //                    parent.setPagerFragment(3);
-                    FragmentHelper.replaceFragment(new AddressFregment(), getActivity().getSupportFragmentManager(), R.id.pre_psp_auth_container);
+                 //   FragmentHelper.replaceFragment(new AddressFregment(), getActivity().getSupportFragmentManager(), R.id.pre_psp_auth_container);
 
                 //    FragmentHelper.addFirstFragment(new RegistrationPersonalDetailsFragment(), getActivity().getSupportFragmentManager(), R.id.pre_psp_auth_container);
                 }
@@ -63,6 +72,23 @@ public class OtpCheckFegment extends Fragment {
         });
 
         return view;
+    }
+
+    private void checkOTP(Editable text) {
+        ApiUtils.getConsumerAPI().checkconsumerOTp("", "").enqueue(new Callback<TokenResponse>() {
+            @Override
+            public void onResponse(Call<TokenResponse> call, Response<TokenResponse> response) {
+                
+            }
+
+            @Override
+            public void onFailure(Call<TokenResponse> call, Throwable t) {
+
+            }
+        });
+
+
+
     }
 
     public static void hideKeyboardFrom(Context context, View view) {

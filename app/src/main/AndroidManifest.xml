@@ -87,11 +87,11 @@
         <activity
             android:name=".prepspversion.PrePSPsplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity> <!-- Pre________________________k______________PSP -->
         <!--
             Regular Version Pre
@@ -211,6 +211,12 @@
             android:theme="@style/AppTheme.NoActionBar">
 
             <!-- this is Luncher Activity for Regular version -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 

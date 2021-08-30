@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.databinding.RegPersonalDetailsFragmentBinding
+import com.cloudwell.paywell.prepspversion.MovieResponse
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.factory.AuthViewModelFactory
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.DeviceProfile
 import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.RegistrationRequest
@@ -26,6 +27,8 @@ import com.cloudwell.paywell.utils.FragmentHelper
 import kotlinx.android.synthetic.main.activity_finger_auth.*
 import kotlinx.android.synthetic.main.reg_personal_details_fragment.view.*
 import kotlinx.coroutines.launch
+import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.kodein
 import org.kodein.di.generic.instance
@@ -62,10 +65,30 @@ class RegistrationPersonalDetailsFragment : Fragment() , KodeinAware {
 
         initilizeViews(binding.root)
 
+       // userSignup()
+
+        test()
+
         return binding.root
     }
 
 
+    private fun test() {
+
+
+        ApiUtils.testclient().testt("eb8aa6f914f794f711fb1841fb141f12").enqueue(object : Callback<MovieResponse>{
+            override fun onResponse(call: Call<MovieResponse>, response: Response<MovieResponse>) {
+
+
+                Log.e("response", response.body()?.results?.size.toString())
+
+            }
+
+            override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+        })
+    }
 
     private fun userSignup() {
         val name = binding.root.fullname.text.toString().trim()

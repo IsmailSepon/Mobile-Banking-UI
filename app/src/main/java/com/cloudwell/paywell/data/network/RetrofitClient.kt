@@ -17,6 +17,12 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
 import java.util.*
 import java.util.concurrent.TimeUnit
+import com.google.gson.GsonBuilder
+
+import com.google.gson.Gson
+
+
+
 
 
 /**
@@ -76,10 +82,14 @@ object RetrofitClient {
 
             val build = okHttpClient.build()
 
+            val gson = GsonBuilder()
+                .setLenient()
+                .create()
+
             retrofit = Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(ScalarsConverterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(build)
                 .build()
         }

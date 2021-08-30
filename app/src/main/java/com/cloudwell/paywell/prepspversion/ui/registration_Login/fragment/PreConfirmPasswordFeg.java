@@ -188,19 +188,30 @@ public class PreConfirmPasswordFeg extends BaseFragment {
 
         String auth = "Bearer "+jwttoken;
 
-        ApiUtils.getConsumerAPI().reFreshToken(auth, true).enqueue(new Callback<TokenResponse>() {
-            @Override
-            public void onResponse(Call<TokenResponse> call, Response<TokenResponse> response) {
-                TokenResponse tokenResponse = response.body();
-                Log.e("refresh TOKEN response", tokenResponse.getJwttoken());
-            }
+        goForOtp("");
 
-            @Override
-            public void onFailure(Call<TokenResponse> call, Throwable t) {
+//        ApiUtils.getConsumerAPI().reFreshToken(auth, true).enqueue(new Callback<TokenResponse>() {
+//            @Override
+//            public void onResponse(Call<TokenResponse> call, Response<TokenResponse> response) {
+//                TokenResponse tokenResponse = response.body();
+//                Log.e("refresh TOKEN response", tokenResponse.getJwttoken());
+//
+//                goForOtp(tokenResponse.getJwttoken());
+//            }
+//
+//            @Override
+//            public void onFailure(Call<TokenResponse> call, Throwable t) {
+//
+//            }
+//        });
 
-            }
-        });
 
+    }
+
+    private void goForOtp(String jwttoken) {
+
+
+        FragmentHelper.addFirstFragment(new OtpCheckFegment(), getActivity().getSupportFragmentManager(), R.id.pre_psp_auth_container);
 
     }
 
