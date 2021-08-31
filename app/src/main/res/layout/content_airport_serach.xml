@@ -5,7 +5,7 @@
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
                                                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                                                   tools:context="com.cloudwell.paywell.prepspversion.ui.ticket.airticket.airportSearch.search.AirportsSearchActivity">
+                                                   tools:context=".ui.ticket.airticket.airportSearch.search.AirportsSearchActivity">
 
     <ProgressBar
         android:id="@+id/progressBar"

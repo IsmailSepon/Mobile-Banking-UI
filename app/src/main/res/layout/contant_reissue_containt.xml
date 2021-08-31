@@ -7,7 +7,7 @@
               android:layout_height="match_parent"
               android:background="#F2F3F8"
               android:orientation="vertical"
-              tools:context=".prepspversion.ui.ticket.airticket.passengerAdd.AddPassengerActivity">
+              tools:context=".ui.ticket.airticket.passengerAdd.AddPassengerActivity">
 
 
     <ScrollView

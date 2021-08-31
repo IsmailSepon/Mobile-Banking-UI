@@ -7,8 +7,8 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.airportSearch.search.model.Airport;
-import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.flightDetails2.model.Passenger;
+import com.cloudwell.paywell.ui.ticket.airticket.airportSearch.search.model.Airport;
+import com.cloudwell.paywell.ui.ticket.airticket.flightDetails2.model.Passenger;
 
 import java.util.List;
 

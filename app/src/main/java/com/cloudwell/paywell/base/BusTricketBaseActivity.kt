@@ -7,10 +7,10 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.view.Menu
 import androidx.appcompat.app.ActionBar
-import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.base.newBase.MVVMBaseActivity
+import com.cloudwell.paywell.ui.ticket.airticket.base.newBase.MVVMBaseActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.app.AppHandler
-import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.dialog.BusErrorMsgDialog
+import com.cloudwell.paywell.ui.ticket.busticketNew.dialog.BusErrorMsgDialog
 import java.util.*
 
 /**

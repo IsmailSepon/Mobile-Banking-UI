@@ -41,48 +41,48 @@
         <activity android:name=".uiCommon.contact.PhoneContact"/>
         <activity android:name=".uiCommon.contact.ContactActivity" />
         <activity android:name=".base.BusTricketBaseActivity" />
-        <activity android:name=".prepspversion.ui.ticket.busticketNew.busTransactionLog.BusTransactionLogActivity" />
-        <activity android:name=".prepspversion.ui.ticket.busticketNew.busTransportList.BusHosttActivity" />
-        <activity android:name=".prepspversion.ui.ticket.busticketNew.cancelList.CancelListActivity" />
-        <activity android:name=".prepspversion.ui.ticket.busticketNew.cencel.BusCancelActiivty" />
-        <activity android:name=".prepspversion.ui.ticket.busticketNew.cencel.BusTicketCancelOtpActivity" />
-        <activity android:name=".prepspversion.ui.ticket.busticketNew.menu.BusTicketMenuActivity" />
-        <activity android:name=".prepspversion.ui.ticket.busticketNew.otp.OtpActivity" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.busTransactionLog.BusTransactionLogActivity" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.busTransportList.BusHosttActivity" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.cancelList.CancelListActivity" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.cencel.BusCancelActiivty" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.cencel.BusTicketCancelOtpActivity" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.menu.BusTicketMenuActivity" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.otp.OtpActivity" />
         <activity
-            android:name=".prepspversion.ui.ticket.busticketNew.search.BusCitySearchActivity"
+            android:name="com.cloudwell.paywell.ui.ticket.busticketNew.search.BusCitySearchActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".prepspversion.ui.ticket.busticketNew.transportSelect.TransportSelectActivity" />
-        <activity android:name=".prepspversion.ui.ticket.airticket.flightDetails1.BaggageAndPoliciesActiivty" />
-        <activity android:name=".prepspversion.ui.ticket.airticket.passengerAdd.AddPassengerActivity" />
-        <activity android:name=".prepspversion.ui.ticket.airticket.flightSearch.FlightSearchViewActivity" />
-        <activity android:name=".prepspversion.ui.ticket.airticket.flightDetails1.FlightDetails1Activity" />
-        <activity android:name=".prepspversion.ui.ticket.airticket.flightDetails2.FlightDetails2Activity" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.transportSelect.TransportSelectActivity" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.airticket.flightDetails1.BaggageAndPoliciesActiivty" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.airticket.passengerAdd.AddPassengerActivity" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.airticket.flightSearch.FlightSearchViewActivity" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.airticket.flightDetails1.FlightDetails1Activity" />
+        <activity android:name="com.cloudwell.paywell.ui.ticket.airticket.flightDetails2.FlightDetails2Activity" />
         <activity
-            android:name=".prepspversion.ui.ticket.airticket.airportSearch.search.AirportsSearchActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".prepspversion.ui.ticket.airticket.base.AirTricketBaseActivity"
+            android:name="com.cloudwell.paywell.ui.ticket.airticket.airportSearch.search.AirportsSearchActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".prepspversion.ui.ticket.airticket.ticketCencel.TicketCancelActivity"
+            android:name="com.cloudwell.paywell.ui.ticket.airticket.base.AirTricketBaseActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".prepspversion.ui.ticket.airticket.issueTicket.IssueTicketRequestActivity"
+            android:name="com.cloudwell.paywell.ui.ticket.airticket.ticketCencel.TicketCancelActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".prepspversion.ui.ticket.airticket.menu.AirTicketMenuActivity"
+            android:name="com.cloudwell.paywell.ui.ticket.airticket.issueTicket.IssueTicketRequestActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".prepspversion.ui.ticket.airticket.AirTicketMainActivity"
+            android:name="com.cloudwell.paywell.ui.ticket.airticket.menu.AirTicketMenuActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".prepspversion.ui.ticket.airticket.transationLog.AirThicketTranslationLogActivity"
+            android:name="com.cloudwell.paywell.ui.ticket.airticket.AirTicketMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.cloudwell.paywell.ui.ticket.airticket.transationLog.AirThicketTranslationLogActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".prepspversion.ui.registration_Login.PAuthenticationHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".prepspversion.ui.ticket.airticket.bookingCencel.BookingCancelActivity"
+            android:name="com.cloudwell.paywell.ui.ticket.airticket.bookingCencel.BookingCancelActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".prepspversion.PrePSPsplashActivity"

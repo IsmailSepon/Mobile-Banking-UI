@@ -10,8 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.menu.AirTicketMenuActivity
-import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.menu.BusTicketMenuActivity
+import com.cloudwell.paywell.ui.ticket.airticket.menu.AirTicketMenuActivity
+import com.cloudwell.paywell.ui.ticket.busticketNew.menu.BusTicketMenuActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.analytics.AnalyticsManager
 import com.cloudwell.paywell.analytics.AnalyticsParameters

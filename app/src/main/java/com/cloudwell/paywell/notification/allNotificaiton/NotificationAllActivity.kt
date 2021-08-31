@@ -19,7 +19,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.cloudwell.paywell.prepspversion.ui.ticket.airticket.base.newBase.MVVMBaseActivity
+import com.cloudwell.paywell.ui.ticket.airticket.base.newBase.MVVMBaseActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.analytics.AnalyticsManager
 import com.cloudwell.paywell.analytics.AnalyticsParameters

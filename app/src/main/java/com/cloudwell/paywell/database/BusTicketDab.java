@@ -6,11 +6,11 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
-import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.model.BusLocalDB;
-import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.model.BusSchedule;
-import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.model.Transport;
-import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.model.TripScheduleInfo;
-import com.cloudwell.paywell.prepspversion.ui.ticket.busticketNew.model.TripScheduleInfoAndBusSchedule;
+import com.cloudwell.paywell.ui.ticket.busticketNew.model.BusLocalDB;
+import com.cloudwell.paywell.ui.ticket.busticketNew.model.BusSchedule;
+import com.cloudwell.paywell.ui.ticket.busticketNew.model.Transport;
+import com.cloudwell.paywell.ui.ticket.busticketNew.model.TripScheduleInfo;
+import com.cloudwell.paywell.ui.ticket.busticketNew.model.TripScheduleInfoAndBusSchedule;
 
 import java.util.List;
 
