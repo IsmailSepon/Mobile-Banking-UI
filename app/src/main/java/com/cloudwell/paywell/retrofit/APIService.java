@@ -1,10 +1,34 @@
 package com.cloudwell.paywell.retrofit;
 
 
-import com.cloudwell.paywell.prepspversion.MovieResponse;
-import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.RegistrationRequest;
-import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.TokenResponse;
-import com.cloudwell.paywell.prepspversion.ui.registration_Login.model.User;
+import com.cloudwell.paywell.activity.model.ReposeGenerateOTP;
+import com.cloudwell.paywell.activity.model.RequestChangePin;
+import com.cloudwell.paywell.app.APIResposeGenerateToken;
+import com.cloudwell.paywell.notification.model.ResposeReScheduleNotificationAccept;
+import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.ReposeAirSearch;
+import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.ResGetAirports;
+import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.ResCommistionMaping;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.BusLunCityRequest;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.BusLunCityResponse;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.CancelBookedTicketReques;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.CancelBookedTicketResponse;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.GetSeatViewRquestPojo;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.SeatBlockRequestPojo;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.TicketInformationForCancelRequest;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ReqConfirmTicket;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResBookAPI;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm_cancel.ConfirmTicketCancelResponse;
+import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.transactionLog.TransactionLogDetailsModel;
+import com.cloudwell.paywell.services.activity.home.model.RequestGenerateOTP;
+import com.cloudwell.paywell.services.activity.home.model.forgetPin.ReposeForgetPIn;
+import com.cloudwell.paywell.services.activity.home.model.forgetPin.RequestForgetPin;
+import com.cloudwell.paywell.services.activity.notification.model.RequestSDABalancceRetrun;
+import com.cloudwell.paywell.services.activity.notification.model.ResNotificationAPI;
+import com.cloudwell.paywell.services.activity.notification.model.deletetNotification.ReposeDeletedNotification;
+import com.cloudwell.paywell.services.activity.notification.model.deletetNotification.RequestDeletedNotification;
+import com.cloudwell.paywell.services.activity.notification.model.getNotification.RequestNotificationAll;
+import com.cloudwell.paywell.ui.ticket.airticket.airportSearch.model.RequestAirSearch;
 import com.cloudwell.paywell.ui.ticket.airticket.booking.model.BookingList;
 import com.cloudwell.paywell.ui.ticket.airticket.bookingStatus.model.ResIssueTicket;
 import com.cloudwell.paywell.ui.ticket.airticket.finalReview.model.RequestAirPrebookingSearchParamsForServer;
@@ -15,43 +39,15 @@ import com.cloudwell.paywell.ui.ticket.airticket.flightDetails1.model.ResposeAir
 import com.cloudwell.paywell.ui.ticket.airticket.flightDetails1.model.airRules.ResposeAirRules;
 import com.cloudwell.paywell.ui.ticket.airticket.ticketCencel.model.ResSingleBooking;
 import com.cloudwell.paywell.ui.ticket.airticket.ticketViewer.model.ResInvoideEmailAPI;
-import com.cloudwell.paywell.ui.ticket.busticketNew.cencel.model.RequestOtpCheck;
-import com.cloudwell.paywell.ui.ticket.busticketNew.cencel.model.ResposeOptCheck;
-import com.cloudwell.paywell.activity.model.RequestChangePin;
-import com.cloudwell.paywell.app.APIResposeGenerateToken;
-import com.cloudwell.paywell.notification.model.ResposeReScheduleNotificationAccept;
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.model.ReposeAirSearch;
-import com.cloudwell.paywell.ui.ticket.airticket.airportSearch.model.RequestAirSearch;
-import com.cloudwell.paywell.services.activity.eticket.airticket.airportSearch.search.model.ResGetAirports;
-import com.cloudwell.paywell.services.activity.eticket.airticket.flightSearch.model.ResCommistionMaping;
 import com.cloudwell.paywell.ui.ticket.busticketNew.busTransactionLog.RequestBusTranstionLog;
+import com.cloudwell.paywell.ui.ticket.busticketNew.cencel.model.RequestOtpCheck;
 import com.cloudwell.paywell.ui.ticket.busticketNew.cencel.model.RequestTicketInformationForCancel;
 import com.cloudwell.paywell.ui.ticket.busticketNew.cencel.model.ResponseTicketInformationCancel;
+import com.cloudwell.paywell.ui.ticket.busticketNew.cencel.model.ResposeOptCheck;
 import com.cloudwell.paywell.ui.ticket.busticketNew.model.RequestRenerateOtpForCancelTicket;
 import com.cloudwell.paywell.ui.ticket.busticketNew.model.ResGetBusListData;
 import com.cloudwell.paywell.ui.ticket.busticketNew.model.ResPaymentBookingAPI;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.BusLunCityRequest;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.BusLunCityResponse;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.CancelBookedTicketReques;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.CancelBookedTicketResponse;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.GetSeatViewRquestPojo;
 import com.cloudwell.paywell.ui.ticket.busticketNew.model.new_v.RequestScheduledata;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.SeatBlockRequestPojo;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.TicketInformationForCancelRequest;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ReqConfirmTicket;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResBookAPI;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm.ResposeTicketConfirm;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.new_v.ticket_confirm_cancel.ConfirmTicketCancelResponse;
-import com.cloudwell.paywell.services.activity.eticket.busticketNew.model.transactionLog.TransactionLogDetailsModel;
-import com.cloudwell.paywell.activity.model.ReposeGenerateOTP;
-import com.cloudwell.paywell.services.activity.home.model.RequestGenerateOTP;
-import com.cloudwell.paywell.services.activity.home.model.forgetPin.ReposeForgetPIn;
-import com.cloudwell.paywell.services.activity.home.model.forgetPin.RequestForgetPin;
-import com.cloudwell.paywell.services.activity.notification.model.RequestSDABalancceRetrun;
-import com.cloudwell.paywell.services.activity.notification.model.ResNotificationAPI;
-import com.cloudwell.paywell.services.activity.notification.model.deletetNotification.ReposeDeletedNotification;
-import com.cloudwell.paywell.services.activity.notification.model.deletetNotification.RequestDeletedNotification;
-import com.cloudwell.paywell.services.activity.notification.model.getNotification.RequestNotificationAll;
 import com.cloudwell.paywell.utils.ParameterUtility;
 import com.google.gson.JsonObject;
 
@@ -661,33 +657,33 @@ public interface APIService {
     @POST("Tickets/BusAndLaunchService/generateOtpForCancelTicket")
     Call<ResponseTicketInformationCancel> generateOtpForCancelTicket(@Body RequestRenerateOtpForCancelTicket requestRenerateOtpForCancelTicket);
 
-    @POST("register")
-    Call<ResponseBody> userRegister(@Body RegistrationRequest reg);
-
-
-
-    @POST("authenticate")
-    Call<TokenResponse> userToken(@Body User reg);
-
-    @POST("user/checkotp")
-    Call<TokenResponse> checkconsumerOTp(@Header("Authorization" )String auth, @Body String reg);
-
-
-
-
-
-    @POST("refreshtoken")
-    @FormUrlEncoded
-    Call<TokenResponse> reFreshToken( @Header("Authorization") String auth, @Header("isRefreshToken")  boolean key);
-
-
-
-
-
-    @GET("discover/movie")
-    Call<MovieResponse> testt(@Query("api_key") String username);
-
-
+//    @POST("register")
+//    Call<ResponseBody> userRegister(@Body RegistrationRequest reg);
+//
+//
+//
+//    @POST("authenticate")
+//    Call<TokenResponse> userToken(@Body User reg);
+//
+//    @POST("user/checkotp")
+//    Call<TokenResponse> checkconsumerOTp(@Header("Authorization" )String auth, @Body String reg);
+//
+//
+//
+//
+//
+//    @POST("refreshtoken")
+//    @FormUrlEncoded
+//    Call<TokenResponse> reFreshToken( @Header("Authorization") String auth, @Header("isRefreshToken")  boolean key);
+//
+//
+//
+//
+//
+//    @GET("discover/movie")
+//    Call<MovieResponse> testt(@Query("api_key") String username);
+//
+//
 
 
 

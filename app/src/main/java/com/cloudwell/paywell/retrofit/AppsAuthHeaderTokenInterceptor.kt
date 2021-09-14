@@ -2,7 +2,6 @@ package com.cloudwell.paywell.retrofit
 
 import android.content.Context
 import android.content.Intent
-import com.cloudwell.paywell.prepspversion.ui.registration_Login.PAuthenticationHostActivity
 import com.cloudwell.paywell.app.AppHandler
 import com.cloudwell.paywell.appController.AppController2
 import com.cloudwell.paywell.data.network.AllUrl
@@ -92,19 +91,19 @@ class AppsAuthHeaderTokenInterceptor(val mContext: AppController2?) : Intercepto
 
                             }
                         }else{
-                            AppHandler.getmInstance(AppController2.getContext()).appStatus = AppsStatusConstant.KEY_logout
-                            val intent = Intent(AppController2.getContext(), PAuthenticationHostActivity::class.java)
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                            AppController2.getContext().startActivity(intent)
+//                            AppHandler.getmInstance(AppController2.getContext()).appStatus = AppsStatusConstant.KEY_logout
+//                            val intent = Intent(AppController2.getContext(), PAuthenticationHostActivity::class.java)
+//                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+//                            AppController2.getContext().startActivity(intent)
                         }
 
                     } catch (e: JSONException) {
                         e.printStackTrace()
 
-                        AppHandler.getmInstance(AppController2.getContext()).appStatus = AppsStatusConstant.KEY_logout
-                        val intent = Intent(AppController2.getContext(), PAuthenticationHostActivity::class.java)
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                        AppController2.getContext().startActivity(intent)
+//                        AppHandler.getmInstance(AppController2.getContext()).appStatus = AppsStatusConstant.KEY_logout
+//                        val intent = Intent(AppController2.getContext(), PAuthenticationHostActivity::class.java)
+//                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+//                        AppController2.getContext().startActivity(intent)
                     }
                 }
             }

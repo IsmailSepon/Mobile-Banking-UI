@@ -17,6 +17,19 @@
       </map>
     </option>
   </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/font/roboto_medium.xml" value="0.36354166666666665" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_budget_host.xml" value="0.1574167507568113" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_main_home.xml" value="0.20923913043478262" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_payment_main.xml" value="0.20697463768115942" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_user_authentication_host.xml" value="0.20697463768115942" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/reg_personal_details_fragment.xml" value="0.1574167507568113" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/user_auth_for_switch_pw_account_two.xml" value="0.192481884057971" />
+      </map>
+    </option>
+  </component>
   <component name="EntryPointsManager">
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="com.google.gson.annotations.SerializedName" />
