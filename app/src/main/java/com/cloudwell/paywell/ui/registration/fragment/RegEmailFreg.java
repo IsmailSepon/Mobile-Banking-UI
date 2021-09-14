@@ -9,12 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.cloudwell.paywell.R;
+import com.cloudwell.paywell.ui.home.MainHomeActivity;
 import com.cloudwell.paywell.ui.registration.EmailVerificationActivity;
 
 /**
@@ -25,6 +27,7 @@ public class RegEmailFreg extends Fragment {
     EditText email_et;
     Button btn;
 
+    TextView not_now;
     public static RegEmailFreg newInstance() {
         return new RegEmailFreg();
     }
@@ -35,6 +38,7 @@ public class RegEmailFreg extends Fragment {
         View view = inflater.inflate(R.layout.reg_email_layout, container, false);
 
 
+        not_now = view.findViewById(R.id.not_now_mail);
         btn = view.findViewById(R.id.email_btn);
         email_et = view.findViewById(R.id.email_et);
         email_et.addTextChangedListener(new TextWatcher() {
@@ -62,6 +66,15 @@ public class RegEmailFreg extends Fragment {
             }
         });
 
+
+        not_now.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MainHomeActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
 
         return view;
     }
