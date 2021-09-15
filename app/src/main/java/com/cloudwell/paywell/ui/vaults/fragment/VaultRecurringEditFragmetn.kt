@@ -57,6 +57,11 @@ class VaultRecurringEditFragmetn : Fragment() {
             }
         }
 
+
+
+        view.recurringedit_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
         return view
     }
 }

@@ -6,6 +6,7 @@ import com.cloudwell.paywell.R
 import com.cloudwell.paywell.ui.beneficiary.fragment.ChooseTransferTypeFragment
 import com.cloudwell.paywell.ui.beneficiary.fragment.FindPayWellUserFrg
 import com.cloudwell.paywell.ui.sendMoney.fragment.SendFundTransferTypeFragment
+import com.cloudwell.paywell.ui.sendMoney.fragment.SendMoneyFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 
 class BeneficeryHostActivity : AppCompatActivity() {
@@ -32,6 +33,12 @@ class BeneficeryHostActivity : AppCompatActivity() {
         } else if (type == 3) {
             FragmentHelper.addFirstFragment(
                 ChooseTransferTypeFragment(),
+                supportFragmentManager,
+                R.id.beneficery_host_container
+            )
+        } else if (type == 4) {
+            FragmentHelper.addFirstFragment(
+                SendMoneyFragment(),
                 supportFragmentManager,
                 R.id.beneficery_host_container
             )

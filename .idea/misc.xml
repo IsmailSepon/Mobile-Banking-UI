@@ -8,17 +8,80 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/drawable/card_background.xml" value="0.3453125" />
         <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_account_creattion.xml" value="0.20878623188405798" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_add_passenger.xml" value="0.20153985507246377" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_business_control_host_layout.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_card_hoast.xml" value="0.20153985507246377" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_cash_withdraw_host.xml" value="0.20153985507246377" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_cencel_booking.xml" value="0.20153985507246377" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_change_pin.xml" value="0.20153985507246377" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_claiment_profile_details.xml" value="0.20153985507246377" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_contact.xml" value="0.20153985507246377" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_custom_login.xml" value="0.20153985507246377" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_dashboard_host.xml" value="0.20153985507246377" />
         <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_document_submit.xml" value="0.20878623188405798" />
         <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_email_verification.xml" value="0.20878623188405798" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_free_card_host.xml" value="0.14635416666666667" />
         <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_main_home.xml" value="0.23233695652173914" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_profile_host.xml" value="0.11927083333333334" />
         <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_reg_top_up.xml" value="0.20878623188405798" />
         <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_registation_main.xml" value="0.2653985507246377" />
         <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_registration_user_option.xml" value="0.2653985507246377" />
         <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/activity_signup.xml" value="0.2653985507246377" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/add_new_vault_layout.xml" value="0.29483695652173914" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/addaccount_layout.xml" value="0.33" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/addcardaccount_layout.xml" value="0.21105072463768115" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/addcompanyaccount_layout.xml" value="0.21105072463768115" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/atm_cashwithdraw_layout.xml" value="0.5" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/bank_beneficery_layout.xml" value="0.21105072463768115" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/bu_personal_profile_layout.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/business_account_fragment.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/business_beneficiary_contact_layout.xml" value="0.20153985507246377" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/change_profile_passcode_fragment.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/close_acc_fragment.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/dashboard_fragment.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/edit_personal_details_third.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/find_pay_well_user_frg_fragment.xml" value="0.21105072463768115" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/fragment_beneficiary.xml" value="0.5" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/fragment_manage_acc_profile.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/get_free_card_fifth_fragment.xml" value="0.14635416666666667" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/get_free_card_first_fragment.xml" value="0.14635416666666667" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/limit_fragment.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/manage_acc_profile_details_fragment.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/manage_acc_profile_personal_details.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/monthly_limits_fragment.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/personal_account_fragment.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/personal_details_action_bottom_sheet.xml" value="0.21829710144927536" />
         <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/personal_full_freg_layout.xml" value="0.20878623188405798" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/personalize_vault_layout.xml" value="0.29483695652173914" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/price_plan_manage_fragment.xml" value="0.21829710144927536" />
         <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/reg_email_layout.xml" value="0.20878623188405798" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/request_money_amount_frg_layout.xml" value="0.19429347826086957" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/request_money_create_link_layout.xml" value="0.5" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/request_money_main_frg_layout.xml" value="0.19429347826086957" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/schedule_contact_bottom_sheet.xml" value="0.31476449275362317" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/schedule_select_contact_layout.xml" value="0.31476449275362317" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/schedule_selection_layout.xml" value="0.33" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/send_money.xml" value="0.21105072463768115" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/send_money_done.xml" value="0.21105072463768115" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/send_money_done_detils.xml" value="0.21105072463768115" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/send_money_to_pay_well_account_fragment.xml" value="0.21105072463768115" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/sendfund_transfer_type.xml" value="0.21105072463768115" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/subscription_plan_fragment.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/user_acc_help_fragment.xml" value="0.21829710144927536" />
         <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/user_auth_for_switch_pw_account_two.xml" value="0.2653985507246377" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/user_privacy_settings_fragment.xml" value="0.21829710144927536" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/vault_close_dialog.xml" value="0.22509057971014493" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/vault_info_layout.xml" value="0.29483695652173914" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/vault_intro_main_layout.xml" value="0.29483695652173914" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/vault_main_layout.xml" value="0.5" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/vault_profile_layout.xml" value="0.29483695652173914" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/vault_recurringedit_layout.xml" value="0.22509057971014493" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/vault_setamount_layout.xml" value="0.22509057971014493" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/vault_spare_layout.xml" value="0.22509057971014493" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/vault_userprofile_layout.xml" value="0.29483695652173914" />
+        <entry key="..\:/Android Project/Consumer New/pw-cons-app/app/src/main/res/layout/virtual_account_details_fragment.xml" value="0.21829710144927536" />
         <entry key="..\:/android_sdk/platforms/android-29/data/res/layout/simple_spinner_dropdown_item.xml" value="0.2653985507246377" />
       </map>
     </option>

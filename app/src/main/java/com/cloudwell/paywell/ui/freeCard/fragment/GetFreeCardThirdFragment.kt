@@ -22,7 +22,7 @@ class GetFreeCardThirdFragment : Fragment() {
             FragmentHelper.replaceFragment(
                 GetFreeCardForthFragment(),
                 activity?.supportFragmentManager,
-                R.id.free_card_host_container
+                R.id.profile_host_container
             )
         })
 

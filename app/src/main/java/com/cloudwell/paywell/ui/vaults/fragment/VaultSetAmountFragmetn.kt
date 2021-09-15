@@ -70,6 +70,12 @@ class VaultSetAmountFragmetn : Fragment() {
         })
 
 
+        view.vault_amount_back.setOnClickListener(View.OnClickListener {
+
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
+
         return view
     }
 

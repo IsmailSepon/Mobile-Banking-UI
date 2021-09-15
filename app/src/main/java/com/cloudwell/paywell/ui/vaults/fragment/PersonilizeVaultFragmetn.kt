@@ -40,6 +40,10 @@ class PersonilizeVaultFragmetn : Fragment() {
 
         })
 
+        view.imageView307.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
+
 
         return view
     }

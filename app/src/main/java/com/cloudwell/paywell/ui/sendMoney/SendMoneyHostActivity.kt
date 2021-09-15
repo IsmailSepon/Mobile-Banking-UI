@@ -3,17 +3,12 @@ package com.cloudwell.paywell.ui.sendMoney
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseActivity
 import com.cloudwell.paywell.base.Preference
-import com.cloudwell.paywell.databinding.ActivitySendMoneyHostBinding
 import com.cloudwell.paywell.ui.beneficiary.BeneficeryHostActivity
 import com.cloudwell.paywell.ui.beneficiary.fragment.BeneficiaryFragment
 import com.cloudwell.paywell.ui.sendMoney.view.SendMoneyFactory
-import com.cloudwell.paywell.ui.sendMoney.viewmodel.SendMoneyViewModel
 import com.cloudwell.paywell.uiBusiness.sendFund.fragment.BusinessSendFundFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 import org.kodein.di.KodeinAware
@@ -32,18 +27,18 @@ class SendMoneyHostActivity : BaseActivity(), KodeinAware {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_send_money_host)
+        setContentView(R.layout.activity_send_money_host)
 
-        val binding: ActivitySendMoneyHostBinding =
-            DataBindingUtil.setContentView(this, R.layout.activity_send_money_host)
-        viewModel = ViewModelProviders.of(this, factory).get(SendMoneyViewModel::class.java)
-        binding.viewModel = viewModel as SendMoneyViewModel
-
-        (viewModel as SendMoneyViewModel).addBankAccountValue.observe(this, object : Observer<Int> {
-            override fun onChanged(t: Int) {
-                startActivity(t)
-            }
-        })
+//        val binding: ActivitySendMoneyHostBinding =
+//            DataBindingUtil.setContentView(this, R.layout.activity_send_money_host)
+//        viewModel = ViewModelProviders.of(this, factory).get(SendMoneyViewModel::class.java)
+//        binding.viewModel = viewModel as SendMoneyViewModel
+//
+//        (viewModel as SendMoneyViewModel).addBankAccountValue.observe(this, object : Observer<Int> {
+//            override fun onChanged(t: Int) {
+//                startActivity(t)
+//            }
+//        })
 
 
         val sharePreference : Preference = Preference.getInstance(this)
@@ -51,7 +46,7 @@ class SendMoneyHostActivity : BaseActivity(), KodeinAware {
 
 
 
-        setViewModelObserver()
+     //   setViewModelObserver()
 
         if (userType==getString(R.string.personalUser)){
 

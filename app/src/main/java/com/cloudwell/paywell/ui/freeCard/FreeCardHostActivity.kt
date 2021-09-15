@@ -24,12 +24,12 @@ class FreeCardHostActivity : BaseActivity(), KodeinAware {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_profile_host)
+        setContentView(R.layout.activity_profile_host)
 
-        val binding: ActivityFreeCardHostBinding =
-            DataBindingUtil.setContentView(this, R.layout.activity_free_card_host)
-        viewModel = ViewModelProviders.of(this, factory).get(FreeCardHostViewModel::class.java)
-        binding.viewModelFreeCardHost = viewModel as FreeCardHostViewModel
+//        val binding: ActivityFreeCardHostBinding =
+//            DataBindingUtil.setContentView(this, R.layout.activity_free_card_host)
+//        viewModel = ViewModelProviders.of(this, factory).get(FreeCardHostViewModel::class.java)
+//        binding.viewModelFreeCardHost = viewModel as FreeCardHostViewModel
 
 //        val getFreeCardFirstFragment = GetFreeCardFirstFragment()
 //        val manager = supportFragmentManager
@@ -38,7 +38,7 @@ class FreeCardHostActivity : BaseActivity(), KodeinAware {
 //        transaction.addToBackStack(null)
 //        transaction.commit()
 
-        FragmentHelper.addFirstFragment(GetFreeCardFirstFragment(), supportFragmentManager, R.id.free_card_host_container)
+        FragmentHelper.addFirstFragment(GetFreeCardFirstFragment(), supportFragmentManager, R.id.profile_host_container)
 
     }
 

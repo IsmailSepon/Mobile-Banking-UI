@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseDialog
+import kotlinx.android.synthetic.main.vault_close_dialog.view.*
 
 
 class VaultCloseDialog : BaseDialog() {
@@ -17,6 +18,11 @@ class VaultCloseDialog : BaseDialog() {
     ): View? {
         val view = layoutInflater.inflate(R.layout.vault_close_dialog, null)
         this.dialog?.setCanceledOnTouchOutside(true)
+
+
+        view.gotit_txt.setOnClickListener(View.OnClickListener {
+            dismiss()
+        })
 
         return view
     }

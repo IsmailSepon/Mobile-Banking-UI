@@ -50,6 +50,9 @@ class VaultViewFragment : Fragment(), VaultAdapter.VaultItemClickListener {
         })
 
 
+        view.vault_back.setOnClickListener(View.OnClickListener {
+            requireActivity().finish()
+        })
 
 
         return view

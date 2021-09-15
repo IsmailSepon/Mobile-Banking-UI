@@ -23,13 +23,13 @@ class UserHelpHostActivity : BaseActivity(), KodeinAware {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_profile_host)
+        setContentView(R.layout.activity_profile_host)
 
-        val binding: ActivityUserHelpHostBinding = DataBindingUtil.setContentView(this, R.layout.activity_user_help_host)
-        viewModel = ViewModelProviders.of(this, factory).get(UserHelpHostViewModel::class.java)
-        binding.viewModelUserHelpHost = viewModel as UserHelpHostViewModel
+//        val binding: ActivityUserHelpHostBinding = DataBindingUtil.setContentView(this, R.layout.activity_user_help_host)
+//        viewModel = ViewModelProviders.of(this, factory).get(UserHelpHostViewModel::class.java)
+//        binding.viewModelUserHelpHost = viewModel as UserHelpHostViewModel
 
-        FragmentHelper.addFirstFragment(UserHelpFragment(), supportFragmentManager, R.id.user_help_host_container)
+        FragmentHelper.addFirstFragment(UserHelpFragment(), supportFragmentManager, R.id.profile_host_container)
 
     }
 

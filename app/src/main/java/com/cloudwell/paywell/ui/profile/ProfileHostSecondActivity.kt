@@ -24,12 +24,12 @@ class ProfileHostSecondActivity : BaseActivity(), KodeinAware {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_profile_host)
+       setContentView(R.layout.activity_profile_host)
 
-        val binding: ActivityProfileHostBinding =
-            DataBindingUtil.setContentView(this, R.layout.activity_profile_host)
-        viewModel = ViewModelProviders.of(this, factory).get(ProfileHostViewModel::class.java)
-        binding.viewModelProfileHost = viewModel as ProfileHostViewModel
+//        val binding: ActivityProfileHostBinding =
+//            DataBindingUtil.setContentView(this, R.layout.activity_profile_host)
+//        viewModel = ViewModelProviders.of(this, factory).get(ProfileHostViewModel::class.java)
+//        binding.viewModelProfileHost = viewModel as ProfileHostViewModel
 
 //        val managePricePlanFragment = ManageSubscriptionPlanFragment()
 //        val manager = supportFragmentManager

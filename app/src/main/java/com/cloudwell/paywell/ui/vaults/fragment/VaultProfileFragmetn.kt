@@ -50,6 +50,9 @@ class VaultProfileFragmetn : Fragment() {
 
 
 
+        view.vault_profile_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
         return view
     }

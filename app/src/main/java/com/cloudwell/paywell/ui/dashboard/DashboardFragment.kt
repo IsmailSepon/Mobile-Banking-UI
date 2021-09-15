@@ -66,27 +66,27 @@ class DashboardFragment : Fragment() {
                  showDialog()
 
              }else{
-                 Intent(context, BusinessControlHostActivity::class.java).also {
+                 Intent(requireActivity(), BusinessControlHostActivity::class.java).also {
                      startActivity(it)
                  }
              }
         })
         binding.root.imageView6.setOnClickListener(View.OnClickListener {
-            Intent(context, UserHelpHostActivity::class.java).also {
+            Intent(requireActivity(), UserHelpHostActivity::class.java).also {
                 startActivity(it)
             }
         })
 
         binding.root.textView17.setOnClickListener(View.OnClickListener {
-            Intent(context, FreeCardHostActivity::class.java).also {
+            Intent(requireActivity(), FreeCardHostActivity::class.java).also {
                 startActivity(it)
             }
         })
 
         binding.root.textView18.setOnClickListener(View.OnClickListener {
-            Intent(context, UserAuthenticationHostActivity::class.java).also {
-                startActivity(it)
-            }
+//            Intent(requireActivity(), UserAuthenticationHostActivity::class.java).also {
+//                startActivity(it)
+//            }
         })
 
 
@@ -105,7 +105,7 @@ class DashboardFragment : Fragment() {
         val manageAcc = dialog.findViewById(R.id.manage_account) as TextView
         manageAcc.setOnClickListener {
             dialog.dismiss()
-            Intent(context, ProfileHostActivity::class.java).also {
+            Intent(requireActivity(), ProfileHostActivity::class.java).also {
                 startActivity(it)
             }
         }
@@ -113,7 +113,7 @@ class DashboardFragment : Fragment() {
         val upgrdAcc = dialog.findViewById(R.id.textViewPP1) as TextView
         upgrdAcc.setOnClickListener {
             dialog.dismiss()
-            Intent(context, ProfileHostSecondActivity::class.java).also {
+            Intent(requireActivity(), ProfileHostSecondActivity::class.java).also {
                 startActivity(it)
             }
         }
@@ -121,7 +121,7 @@ class DashboardFragment : Fragment() {
         val switchAcc = dialog.findViewById(R.id.textViewPP2) as TextView
         switchAcc.setOnClickListener {
             dialog.dismiss()
-            Intent(context, SwitchAccountHostActivity::class.java).also {
+            Intent(requireActivity(), SwitchAccountHostActivity::class.java).also {
                 startActivity(it)
             }
         }

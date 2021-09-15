@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.adapter.AmountPickerAdapter
-import com.cloudwell.paywell.consumer.ui.requestMoney.fragment.creat_link.RequestMoneyCreatLinkFragment
+import com.cloudwell.paywell.ui.requestMoney.fragment.creat_link.RequestMoneyCreatLinkFragment
 import com.cloudwell.paywell.consumer.ui.requestMoney.fragment.nearMe.RequestNearDoneFragment
 import com.cloudwell.paywell.utils.FragmentHelper
 import com.cloudwell.paywell.utils.sendMoneyUtils.ScreenUtils

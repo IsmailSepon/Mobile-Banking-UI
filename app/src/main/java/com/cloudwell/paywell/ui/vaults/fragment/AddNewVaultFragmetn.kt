@@ -75,6 +75,9 @@ class AddNewVaultFragmetn : Fragment() {
         })
 
 
+        view.newvault_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
 
 

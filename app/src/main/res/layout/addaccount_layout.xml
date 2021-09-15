@@ -19,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginStart="@dimen/_32dp"
+                android:layout_marginStart="22dp"
                 android:layout_marginTop="@dimen/_10dp"
                 android:padding="@dimen/_10dp"
                 android:src="@drawable/back"
@@ -81,7 +81,6 @@
                         style="@style/edittext_style"
                         android:layout_marginTop="@dimen/_5dp"
                         android:layout_marginBottom="@dimen/_2dp"
-                        android:hint="@string/beneficiary_first_name"
                         android:inputType="textPersonName"
                         android:text="Anisul"
                         tools:ignore="Autofill,MissingConstraints" />
@@ -132,6 +131,7 @@
                     tools:ignore="MissingConstraints" />
 
                 <Spinner
+                    android:id="@+id/division_sp"
                     android:layout_marginTop="@dimen/_33dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -151,6 +151,7 @@
                     tools:ignore="ContentDescription" />
 
                 <Spinner
+                    android:id="@+id/district_sp"
                     android:layout_marginTop="@dimen/_33dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

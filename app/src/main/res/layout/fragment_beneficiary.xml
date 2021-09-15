@@ -71,14 +71,16 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            app:layout_constraintTop_toBottomOf="@+id/textView21"
-            android:onClick="@{beneficeryViewModelxml::addBeneficery}"
-            android:layout_marginStart="@dimen/_48dp"
-            android:layout_marginTop="@dimen/_50dp"
-            android:padding="@dimen/_10dp"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/_50dp"
+            android:onClick="@{beneficeryViewModelxml::addBeneficery}"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21"
             tools:ignore="MissingConstraints">
 
             <ImageButton
@@ -87,7 +89,8 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:src="@drawable/add_beneficery"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="10dp" />
 
             <TextView
                 android:id="@+id/textView22"

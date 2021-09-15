@@ -108,37 +108,52 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/imageView111"
-            android:layout_width="@dimen/_33dp"
-            android:layout_height="@dimen/_33dp"
-            android:layout_marginTop="33dp"
-            app:layout_constraintStart_toStartOf="@+id/constraintLayout20"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout20"
-            app:srcCompat="@drawable/round_bank" />
 
-        <TextView
-            style="@style/text_style"
-            android:textSize="@dimen/_14sp"
-            android:textColor="@color/keypad_text_clr"
-            android:id="@+id/textView230"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bank_ac_layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:text="IPDC Finance Limited"
-            app:layout_constraintStart_toEndOf="@+id/imageView111"
-            app:layout_constraintTop_toTopOf="@+id/imageView111" />
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout20">
 
-        <TextView
-            style="@style/text_style"
-            android:textColor="@color/common_clr"
-            android:textSize="@dimen/_12sp"
-            android:id="@+id/textView231"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Account Number: 10321464"
-            app:layout_constraintStart_toStartOf="@+id/textView230"
-            app:layout_constraintTop_toBottomOf="@+id/textView230" />
+            <ImageView
+                android:id="@+id/imageView111"
+                android:layout_width="@dimen/_33dp"
+                android:layout_height="@dimen/_33dp"
+                android:layout_marginBottom="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/round_bank" />
+
+            <TextView
+                android:id="@+id/textView230"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:text="IPDC Finance Limited"
+                android:textColor="@color/keypad_text_clr"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView111"
+                app:layout_constraintTop_toTopOf="@+id/imageView111" />
+
+            <TextView
+                android:id="@+id/textView231"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Number: 10321464"
+                android:textColor="@color/common_clr"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="@+id/textView230"
+                app:layout_constraintTop_toBottomOf="@+id/textView230" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

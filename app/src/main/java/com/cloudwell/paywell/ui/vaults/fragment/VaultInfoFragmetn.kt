@@ -29,9 +29,9 @@ class VaultInfoFragmetn : Fragment() {
 
 
 
-//        view.recurring_confirm.setOnClickListener(View.OnClickListener {
-//            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
-//        })
+        view.uservault_back.setOnClickListener(View.OnClickListener {
+            FragmentHelper.removeFragment(requireActivity().supportFragmentManager)
+        })
 
 
 
