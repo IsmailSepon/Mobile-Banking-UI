@@ -63,20 +63,27 @@ class MainHomeActivity : BaseActivity() {
 
 
     @RequiresApi(Build.VERSION_CODES.M)
-    @SuppressLint("ResourceAsColor", "Range", "ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_home)
 
         val sharePreference : Preference = Preference.getInstance(this)
         userType = sharePreference.getData(getString(R.string.userType))
+
         rootLayout = findViewById<LinearLayout>(R.id.fab_bg)
         framerootLayout = coordinatorLayout
-
-
         val navView: FabBottomNavigationView = findViewById(R.id.nav_view)
-        navView.selectedItemId = 0
-        loadFragment(AccountFragment())
+
+        if (userType == "businessAccount"){
+
+            navView.selectedItemId =  0
+            loadFragment(BusinessCardMenuFragment())
+        }else{
+
+
+            navView.selectedItemId = R.id.navigation_account
+            loadFragment(AccountFragment())
+        }
 
 
 
