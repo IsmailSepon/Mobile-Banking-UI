@@ -28,10 +28,16 @@
         android:enabled="true"
         android:title="@null" />
 
-    <item
-        android:id="@+id/navigation_cards"
-        android:icon="@drawable/card"
-        android:title="@string/cards" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_cards"-->
+<!--        android:icon="@drawable/card"-->
+<!--        android:title="@string/cards" />-->
+
+
+        <item
+            android:id="@+id/navigation_pay"
+            android:icon="@drawable/pay"
+            android:title="@string/pay" />
 
 
 

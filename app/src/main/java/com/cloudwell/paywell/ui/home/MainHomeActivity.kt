@@ -111,11 +111,11 @@ class MainHomeActivity : BaseActivity() {
                     return@setOnNavigationItemSelectedListener true
                 }
 
-//                R.id.navigation_pay-> {
-//                    title=resources.getString(R.string.pay)
-//                    loadFragment(PaymentsMainFragment())
-//                    return@setOnNavigationItemSelectedListener true
-//                }
+                R.id.navigation_pay-> {
+                    title=resources.getString(R.string.pay)
+                    loadFragment(PaymentsMainFragment())
+                    return@setOnNavigationItemSelectedListener true
+                }
 //
 //                R.id.navigation_cards-> {
 //
