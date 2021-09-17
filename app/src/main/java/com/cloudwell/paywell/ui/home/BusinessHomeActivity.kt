@@ -2,21 +2,16 @@ package com.cloudwell.paywell.ui.home
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.res.ColorStateList
-import android.graphics.Color
 import android.graphics.Rect
-import android.graphics.drawable.DrawableWrapper
 import android.os.Build
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
-import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.BaseActivity
@@ -27,18 +22,18 @@ import com.cloudwell.paywell.ui.budget.fragment.BudgetMainFragment
 import com.cloudwell.paywell.ui.cards.fragment.CardsFragment
 import com.cloudwell.paywell.ui.dashboard.DashboardFragment
 import com.cloudwell.paywell.ui.scan.ScanLandingActivity
+import com.cloudwell.paywell.ui.scan.fragment.ScanMainFeg
 import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardMainFragment
 import com.cloudwell.paywell.uiBusiness.cards.fragment.BusinessCardMenuFragment
 import com.cloudwell.paywell.uiCommon.pay.fragment.PaymentsMainFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import jp.wasabeef.blurry.Blurry
-import kotlinx.android.synthetic.main.activity_main_home.*
 import kotlinx.android.synthetic.main.budget_marchent_item.*
-import kotlinx.android.synthetic.main.fab_layout.*
+import kotlinx.android.synthetic.main.business_main_home.*
+import kotlinx.android.synthetic.main.fab_layout_business.*
 
 
-class MainHomeActivity : BaseActivity() {
+class BusinessHomeActivity : BaseActivity() {
 
     var notificationsBadge : View?  = null
 
@@ -67,7 +62,7 @@ class MainHomeActivity : BaseActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_home)
+        setContentView(R.layout.business_main_home)
 
         val sharePreference : Preference = Preference.getInstance(this)
         userType = sharePreference.getData(getString(R.string.userType))
@@ -223,7 +218,6 @@ class MainHomeActivity : BaseActivity() {
         //fab.setCanceledOnTouchOutside()
 
         fab1!!.setOnClickListener {
-          //  Toast.makeText(this, "fab 1", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, ScanLandingActivity :: class.java)
             startActivity(intent)
             hideFAB()
@@ -287,6 +281,48 @@ class MainHomeActivity : BaseActivity() {
 
     }
 
+
+
+
+//
+//    @SuppressLint("Range")
+//    private fun expandFAB() {
+//       // framerootLayout?.alpha = 0.1f
+//        FAB_Status = true
+//        mFab!!.startAnimation(AnimationUtils.loadAnimation(applicationContext, R.anim.fab_rotate))
+//        //floatting button background after click
+//        mFab!!.background = application.getDrawable(R.drawable.fab_border)
+//        mFab!!.setImageResource(R.drawable.add_ic)
+//
+//
+//      //  rootLayout!!.background = resources.getDrawable(R.drawable.half_moon)
+//
+//        //Floating Action Button 1
+//        val layoutParams = fab1!!.layoutParams as FrameLayout.LayoutParams
+//        layoutParams.rightMargin += (fab1!!.width * 1.7).toInt()
+//        layoutParams.bottomMargin += (fab1!!.height * 0.8).toInt()
+//        fab1!!.layoutParams = layoutParams
+//        fab1!!.startAnimation(show_fab_1)
+//        fab1!!.isClickable = true
+//
+//        //Floating Action Button 2
+//        val layoutParams2 = fab2!!.layoutParams as FrameLayout.LayoutParams
+//        layoutParams2.rightMargin += (fab2!!.width * 0.0).toInt()
+//        layoutParams2.bottomMargin += (fab2!!.height * 1.5).toInt()
+//        fab2!!.layoutParams = layoutParams2
+//        fab2!!.startAnimation(show_fab_2)
+//        fab2!!.isClickable = true
+//
+//        //Floating Action Button 3
+//        val layoutParams3 = fab3!!.layoutParams as FrameLayout.LayoutParams
+//        layoutParams3.leftMargin+= (fab3!!.width * 1.7).toInt()
+//        layoutParams3.bottomMargin += (fab3!!.height * 0.8).toInt()
+//        fab3!!.layoutParams = layoutParams3
+//        fab3!!.startAnimation(show_fab_3)
+//        fab3!!.isClickable = true
+//
+//        setBlur()
+//    }
 
 
 
@@ -356,13 +392,13 @@ class MainHomeActivity : BaseActivity() {
         fab1!!.startAnimation(hide_fab_1)
         fab1!!.isClickable = false
 
-        //Floating Action Button 2
-        val layoutParams2 = fab2!!.layoutParams as FrameLayout.LayoutParams
-        layoutParams2.rightMargin -= (fab2!!.width * 1).toInt()
-        layoutParams2.bottomMargin -= (fab2!!.height * 1.2).toInt()
-        fab2!!.layoutParams = layoutParams2
-        fab2!!.startAnimation(hide_fab_2)
-        fab2!!.isClickable = false
+//        //Floating Action Button 2
+//        val layoutParams2 = fab2!!.layoutParams as FrameLayout.LayoutParams
+//        layoutParams2.rightMargin -= (fab2!!.width * 0.0).toInt()
+//        layoutParams2.bottomMargin -= (fab2!!.height * 1.5).toInt()
+//        fab2!!.layoutParams = layoutParams2
+//        fab2!!.startAnimation(hide_fab_2)
+//        fab2!!.isClickable = false
 
         //Floating Action Button 3
         val layoutParams3 = fab3!!.layoutParams as FrameLayout.LayoutParams

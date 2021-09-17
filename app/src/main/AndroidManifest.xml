@@ -34,64 +34,69 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/FullScreen"
+        android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup"
         tools:targetApi="m">
-        <activity android:name=".uiCommon.contact.PhoneContact"/>
+        <activity
+            android:name=".ui.scan.ScanLandingActivity"
+            android:exported="true" />
+        <activity android:name=".uiCommon.contact.PhoneContact" />
         <activity android:name=".uiCommon.contact.ContactActivity" />
         <activity android:name=".base.BusTricketBaseActivity" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.busTransactionLog.BusTransactionLogActivity" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.busTransportList.BusHosttActivity" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.cancelList.CancelListActivity" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.cencel.BusCancelActiivty" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.cencel.BusTicketCancelOtpActivity" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.menu.BusTicketMenuActivity" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.otp.OtpActivity" />
+        <activity android:name=".ui.ticket.busticketNew.busTransactionLog.BusTransactionLogActivity" />
+        <activity android:name=".ui.ticket.busticketNew.busTransportList.BusHosttActivity" />
+        <activity android:name=".ui.ticket.busticketNew.cancelList.CancelListActivity" />
+        <activity android:name=".ui.ticket.busticketNew.cencel.BusCancelActiivty" />
+        <activity android:name=".ui.ticket.busticketNew.cencel.BusTicketCancelOtpActivity" />
+        <activity android:name=".ui.ticket.busticketNew.menu.BusTicketMenuActivity" />
+        <activity android:name=".ui.ticket.busticketNew.otp.OtpActivity" />
         <activity
-            android:name="com.cloudwell.paywell.ui.ticket.busticketNew.search.BusCitySearchActivity"
+            android:name=".ui.ticket.busticketNew.search.BusCitySearchActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.busticketNew.transportSelect.TransportSelectActivity" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.airticket.flightDetails1.BaggageAndPoliciesActiivty" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.airticket.passengerAdd.AddPassengerActivity" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.airticket.flightSearch.FlightSearchViewActivity" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.airticket.flightDetails1.FlightDetails1Activity" />
-        <activity android:name="com.cloudwell.paywell.ui.ticket.airticket.flightDetails2.FlightDetails2Activity" />
+        <activity android:name=".ui.ticket.busticketNew.transportSelect.TransportSelectActivity" />
+        <activity android:name=".ui.ticket.airticket.flightDetails1.BaggageAndPoliciesActiivty" />
+        <activity android:name=".ui.ticket.airticket.passengerAdd.AddPassengerActivity" />
+        <activity android:name=".ui.ticket.airticket.flightSearch.FlightSearchViewActivity" />
+        <activity android:name=".ui.ticket.airticket.flightDetails1.FlightDetails1Activity" />
+        <activity android:name=".ui.ticket.airticket.flightDetails2.FlightDetails2Activity" />
         <activity
-            android:name="com.cloudwell.paywell.ui.ticket.airticket.airportSearch.search.AirportsSearchActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="com.cloudwell.paywell.ui.ticket.airticket.base.AirTricketBaseActivity"
+            android:name=".ui.ticket.airticket.airportSearch.search.AirportsSearchActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.cloudwell.paywell.ui.ticket.airticket.ticketCencel.TicketCancelActivity"
+            android:name=".ui.ticket.airticket.base.AirTricketBaseActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.cloudwell.paywell.ui.ticket.airticket.issueTicket.IssueTicketRequestActivity"
+            android:name=".ui.ticket.airticket.ticketCencel.TicketCancelActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.cloudwell.paywell.ui.ticket.airticket.menu.AirTicketMenuActivity"
+            android:name=".ui.ticket.airticket.issueTicket.IssueTicketRequestActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.cloudwell.paywell.ui.ticket.airticket.AirTicketMainActivity"
+            android:name=".ui.ticket.airticket.menu.AirTicketMenuActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.cloudwell.paywell.ui.ticket.airticket.transationLog.AirThicketTranslationLogActivity"
+            android:name=".ui.ticket.airticket.AirTicketMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.ticket.airticket.transationLog.AirThicketTranslationLogActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".prepspversion.ui.registration_Login.PAuthenticationHostActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.cloudwell.paywell.ui.ticket.airticket.bookingCencel.BookingCancelActivity"
+            android:name=".ui.ticket.airticket.bookingCencel.BookingCancelActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".prepspversion.PrePSPsplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity> <!-- Pre________________________k______________PSP -->
         <!--
             Regular Version Pre
@@ -184,6 +189,9 @@
             android:name=".ui.home.MainHomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".ui.home.BusinessHomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".ui.registration.PassportVerificationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -217,7 +225,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data

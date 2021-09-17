@@ -1,0 +1,68 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/fab_layout"
+    android:layout_gravity="bottom"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/fab_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:drawableTop="@drawable/fab_scan"
+        android:text="@string/scan"
+        android:layout_marginBottom="@dimen/_30dp"
+        android:textAlignment="center"
+        android:textColor="@color/keypad_text_clr"
+        android:visibility="invisible"
+        app:fabSize="mini"
+        android:textSize="@dimen/_10sp"
+        tools:ignore="ContentDescription" />
+
+
+
+    <TextView
+        android:drawableTop="@drawable/fab_pay"
+        android:text="@string/pay"
+        android:textColor="@color/keypad_text_clr"
+        android:textAlignment="center"
+        android:id="@+id/fab_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:visibility="invisible"
+        android:layout_marginBottom="@dimen/_30dp"
+        app:fabSize="mini"
+        android:textSize="@dimen/_10sp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/fab_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:drawableTop="@drawable/pay_card"
+        android:text="@string/card"
+        android:textAlignment="center"
+        android:textColor="@color/keypad_text_clr"
+        android:visibility="invisible"
+        app:fabSize="mini"
+        android:layout_marginBottom="@dimen/_30dp"
+        android:textSize="@dimen/_10sp"
+        tools:ignore="ContentDescription"/>
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/fab_bg"-->
+<!--        android:layout_gravity="bottom|center"-->
+<!--        android:background="@color/white_2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="170dp"-->
+<!--        tools:ignore="ContentDescription" />-->
+
+
+
+</FrameLayout>

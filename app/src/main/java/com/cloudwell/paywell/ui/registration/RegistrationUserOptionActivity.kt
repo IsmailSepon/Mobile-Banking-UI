@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.cloudwell.paywell.R
 import com.cloudwell.paywell.base.Preference
+import com.cloudwell.paywell.ui.home.BusinessHomeActivity
 import com.cloudwell.paywell.ui.home.MainHomeActivity
 import kotlinx.android.synthetic.main.activity_registration_user_option.*
 
@@ -40,7 +41,7 @@ class RegistrationUserOptionActivity : AppCompatActivity() {
         business_account.setOnClickListener(View.OnClickListener {
 
             setUserType("businessAccount")
-            startActivity(Intent(applicationContext, MainHomeActivity::class.java))
+            startActivity(Intent(applicationContext, BusinessHomeActivity::class.java))
 
 
 
