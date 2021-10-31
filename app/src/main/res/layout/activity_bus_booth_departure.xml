@@ -295,26 +295,37 @@
                             android:theme="@style/BusEditInputLayout">
 
 
-
                             <EditText
                                 android:paddingTop="@dimen/_10"
                                 android:id="@+id/etEmail"
                                 android:hint="@string/email"
                                 android:textColorHint="@color/common_clr"
-                                android:inputType="textEmailAddress"
                                 android:textSize="@dimen/_14sp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/common_et_bg"
-                                android:ems="13"
-                                style="@style/edittext_style"
                                 android:drawablePadding="@dimen/_10dp"
-                                android:lines="1"
-                                android:digits="1234567890"
-                                android:drawableStart="@drawable/mail_bus"
+                                style="@style/edittext_style"
+                                android:drawableStart="@drawable/location_bus"
                                 android:fontFamily="@font/roboto_regular"
-                                android:textColor="@color/keypad_text_clr"
-                                tools:ignore="Autofill,MissingConstraints" />
+                                android:textColor="@color/keypad_text_clr" />
+<!--                            <EditText-->
+<!--                                android:paddingTop="@dimen/_10"-->
+<!--                                android:id="@+id/etEmail"-->
+<!--                                android:hint="@string/email"-->
+<!--                                android:textColorHint="@color/common_clr"-->
+<!--                                android:textSize="@dimen/_12sp"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:background="@drawable/common_et_bg"-->
+<!--                                style="@style/edittext_style"-->
+<!--                                android:drawablePadding="@dimen/_10dp"-->
+<!--                                android:lines="1"-->
+<!--                                android:digits="1234567890"-->
+<!--                                android:drawableStart="@drawable/mail_bus"-->
+<!--                                android:fontFamily="@font/roboto_regular"-->
+<!--                                android:textColor="@color/keypad_text_clr"-->
+<!--                                tools:ignore="Autofill,MissingConstraints" />-->
 
 
 <!--                            <com.cloudwell.paywell.customView.clearableEditText.ClearableEditText-->

@@ -226,8 +226,7 @@ class BudgetMainFragment : Fragment() {
         // Setting Adapter
         sliderAdapter = BudgetAdapter(requireContext())
         sliderAdapter.setSelectedItem(0)
-        rvHorizontalPicker.adapter = sliderAdapter.apply {
-            setData(slidedata)
+        rvHorizontalPicker.adapter = sliderAdapter.apply { setData(slidedata)
             callback = object : BudgetAdapter.Callback {
                 override fun onItemClicked(view: View) {
                     rvHorizontalPicker.smoothScrollToPosition(

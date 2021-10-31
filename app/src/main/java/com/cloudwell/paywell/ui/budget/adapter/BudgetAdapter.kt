@@ -20,11 +20,7 @@ class BudgetAdapter (mContext: Context) : RecyclerView.Adapter<SliderItemViewHol
     var callback: Callback? = null
 
 
-    val clickListener = object : View.OnClickListener {
-        override fun onClick(v: View?) {
-            v?.let { callback?.onItemClicked(it) }
-        }
-    }
+    val clickListener = View.OnClickListener { v -> v?.let { callback?.onItemClicked(it) } }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderItemViewHolder {
         val itemView: View = LayoutInflater.from(mContext).inflate(R.layout.budget_slider_item, parent, false)
@@ -68,7 +64,7 @@ class BudgetAdapter (mContext: Context) : RecyclerView.Adapter<SliderItemViewHol
         notifyDataSetChanged()
     }
 
-    interface Callback {
+    interface   Callback {
         fun onItemClicked(view: View)
     }
 }
